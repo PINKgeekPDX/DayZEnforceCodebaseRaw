@@ -1,0 +1,702 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_remote_detonator_8c" kind="file" language="C++">
+    <compoundname>RemoteDetonator.c</compoundname>
+    <innerclass refid="class_remote_detonator_trigger" prot="public">RemoteDetonatorTrigger</innerclass>
+    <innerclass refid="class_replace_detonator_item_lambda" prot="public">ReplaceDetonatorItemLambda</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ERemoteDetonatorLEDState</name>
+        <enumvalue id="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5caac132f2982b98bcaa3445e535a03ff75" prot="public">
+          <name>OFF</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5ca3b759690471ed29ecd243a8f36b93f60" prot="public">
+          <name>LIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="1" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="2" bodyend="5"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_remote_detonator_8c_1adf72e683d0e8204badf106e8eb73528d" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5c" kindref="member">ERemoteDetonatorLEDState</ref></type>
+        <definition>enum ERemoteDetonatorLEDState COLOR_LED_OFF</definition>
+        <argsstring></argsstring>
+        <name>COLOR_LED_OFF</name>
+        <initializer>= &quot;#(argb,8,8,3)color(0,0,0,1.0,co)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="9" column="28"/>
+      </memberdef>
+      <memberdef kind="variable" id="_remote_detonator_8c_1a8cd6eb0a2120545ca73485ca2f2e4caf" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>const string COLOR_LED_LIT</definition>
+        <argsstring></argsstring>
+        <name>COLOR_LED_LIT</name>
+        <initializer>= &quot;#(argb,8,8,3)color(1,0,0,1.0,co)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="10" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_remote_detonator_8c_1ae7a43677ec37fcc590f7c8a742c8d7ee" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>const string SELECTION_NAME_LED</definition>
+        <argsstring></argsstring>
+        <name>SELECTION_NAME_LED</name>
+        <initializer>= &quot;LED&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="11" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_remote_detonator_8c_1aed561a71a49c7343f5f5330123fd3e2d" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5c" kindref="member">ERemoteDetonatorLEDState</ref></type>
+        <definition>protected ERemoteDetonatorLEDState m_LastLEDState</definition>
+        <argsstring></argsstring>
+        <name>m_LastLEDState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="13" column="36" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_remote_detonator_8c_1a733cecb3ff8420b07d62ad835be26b14" prot="public" static="no" mutable="no">
+        <type>protected const <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>protected const string ANIM_PHASE_TRIGGER</definition>
+        <argsstring></argsstring>
+        <name>ANIM_PHASE_TRIGGER</name>
+        <initializer>= &quot;trigger&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="221" column="24" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_remote_detonator_8c_1a10a4f64a2b6cfd664c461f89bfcf26d9" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool m_LED</definition>
+        <argsstring></argsstring>
+        <name>m_LED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="223" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_remote_detonator_8c_1adbcefdb70c262c7c278ebcdfabf56086" prot="public" static="no" mutable="no">
+        <type>protected ref <ref refid="class_remotely_activated_item_behaviour" kindref="compound">RemotelyActivatedItemBehaviour</ref></type>
+        <definition>protected ref RemotelyActivatedItemBehaviour m_RAIB</definition>
+        <argsstring></argsstring>
+        <name>m_RAIB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="224" column="46" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_remote_detonator_8c_1a4288cb6ccdd9e611aa99c9bec81ddced" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool IsKit</definition>
+        <argsstring>()</argsstring>
+        <name>IsKit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="15" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1a2853848773e2d13674b78a087991f369" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateLED</definition>
+        <argsstring>(ERemoteDetonatorLEDState pState, bool pForced=false)</argsstring>
+        <name>UpdateLED</name>
+        <param>
+          <type><ref refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5c" kindref="member">ERemoteDetonatorLEDState</ref></type>
+          <declname>pState</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pForced</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="20" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="20" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1afa39b7c4d3d085ef8514a87c32b81a4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SetActions</definition>
+        <argsstring>()</argsstring>
+        <name>SetActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="37" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="37" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1a39646fdabc350c98a2e907027b643331" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_remote_detonator_trigger" kindref="compound">RemoteDetonatorTrigger</ref> RemoteDetonator</type>
+        <definition>RemoteDetonatorTrigger RemoteDetonator RemoteDetonatorReceiver</definition>
+        <argsstring>()</argsstring>
+        <name>RemoteDetonatorReceiver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="37" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="220" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1aa93a153ba3a314384d9aacaad825ca69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RemoteDetonatorReceiver::RemoteDetonatorTrigger</definition>
+        <argsstring>()</argsstring>
+        <name>RemoteDetonatorTrigger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="226" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="226" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1ae7c049223bf94c82aa39d85f1e70cb96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void RemoteDetonatorReceiver::OnVariablesSynchronized</definition>
+        <argsstring>()</argsstring>
+        <name>OnVariablesSynchronized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="243" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="243" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1a535ae6a53e08114dca25f7cbd7def55a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void RemoteDetonatorReceiver::EEItemLocationChanged</definition>
+        <argsstring>(notnull InventoryLocation oldLoc, notnull InventoryLocation newLoc)</argsstring>
+        <name>EEItemLocationChanged</name>
+        <param>
+          <type>notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>oldLoc</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>newLoc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="255" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="255" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1a55d6d4bbacba95ae8279431507bb30bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="class_remotely_activated_item_behaviour" kindref="compound">RemotelyActivatedItemBehaviour</ref></type>
+        <definition>override RemotelyActivatedItemBehaviour RemoteDetonatorReceiver::GetRemotelyActivatedItemBehaviour</definition>
+        <argsstring>()</argsstring>
+        <name>GetRemotelyActivatedItemBehaviour</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="265" column="41" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="265" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1a5a01e45ac3dbde5b58c4c16242e2e961" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void RemoteDetonatorReceiver::OnCEUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>OnCEUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="270" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="270" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1abb374b5a73484ab12042f3776811d0be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void RemoteDetonatorReceiver::PairRemote</definition>
+        <argsstring>(notnull EntityAI trigger)</argsstring>
+        <name>PairRemote</name>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>trigger</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="287" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="287" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1aa0525bdb455cfadfc657d180c1a77d11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void RemoteDetonatorReceiver::UnpairRemote</definition>
+        <argsstring>()</argsstring>
+        <name>UnpairRemote</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="292" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="292" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1ac03b8faf21665d7257172ff0961ff524" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnActivatedByItem</definition>
+        <argsstring>(notnull ItemBase item)</argsstring>
+        <name>OnActivatedByItem</name>
+        <param>
+          <type>notnull <ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Called when this item is activated by other. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="298" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="298" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1a8b0826da6500cc4fc50bc87b0c9f919f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RemoteDetonatorReceiver::SetControlledDevice</definition>
+        <argsstring>(EntityAI pDevice)</argsstring>
+        <name>SetControlledDevice</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>pDevice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="313" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="313" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1a39d80b90385537e45e785244f40c4b74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool RemoteDetonatorReceiver::IsConnected</definition>
+        <argsstring>()</argsstring>
+        <name>IsConnected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="318" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="318" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1a76028261bcd581a8ea6c5d53ee1ada7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+        <definition>EntityAI RemoteDetonatorReceiver::GetControlledDevice</definition>
+        <argsstring>()</argsstring>
+        <name>GetControlledDevice</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="323" column="10" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="323" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1a376aa3cd3ed22e092023bbe840b20ff7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_remote_detonator_trigger" kindref="compound">RemoteDetonatorTrigger</ref></type>
+        <definition>static RemoteDetonatorTrigger RemoteDetonatorReceiver::SpawnInPlayerHands</definition>
+        <argsstring>(notnull EntityAI pEntity)</argsstring>
+        <name>SpawnInPlayerHands</name>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>pEntity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>item replaced, use different IK</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="328" column="31" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="328" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1a20762ee29c209b5835c4f0d0816b33f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void RemoteDetonatorReceiver::OnAnimationPhaseStarted</definition>
+        <argsstring>(string animSource, float phase)</argsstring>
+        <name>OnAnimationPhaseStarted</name>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>animSource</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>phase</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="357" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="357" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1a9ad76a420042dadc6ab67b7aa821a407" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnWasDetached</definition>
+        <argsstring>(EntityAI parent, int slot_id)</argsstring>
+        <name>OnWasDetached</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>slot_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="230" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="230" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="_remote_detonator_8c_1a4de4d414d0cbf15100ab71ec84ca25f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void EEKilled</definition>
+        <argsstring>(Object killer)</argsstring>
+        <name>EEKilled</name>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>killer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" line="235" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c" bodystart="235" bodyend="240"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5c" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5c" kindref="member">ERemoteDetonatorLEDState</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5caac132f2982b98bcaa3445e535a03ff75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5caac132f2982b98bcaa3445e535a03ff75" kindref="member">OFF</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="4" refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5ca3b759690471ed29ecd243a8f36b93f60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5ca3b759690471ed29ecd243a8f36b93f60" kindref="member">LIT</ref>,</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">RemoteDetonator<sp/>:<sp/><ref refid="class_inventory___base" kindref="compound">Inventory_Base</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9" refid="_remote_detonator_8c_1adf72e683d0e8204badf106e8eb73528d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_land___underground___panel_8c_1a0e4c29fb12e34a79e4d04c204c43b6c8" kindref="member">COLOR_LED_OFF</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#(argb,8,8,3)color(0,0,0,1.0,co)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="10" refid="_remote_detonator_8c_1a8cd6eb0a2120545ca73485ca2f2e4caf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_remote_detonator_8c_1a8cd6eb0a2120545ca73485ca2f2e4caf" kindref="member">COLOR_LED_LIT</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#(argb,8,8,3)color(1,0,0,1.0,co)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11" refid="_remote_detonator_8c_1ae7a43677ec37fcc590f7c8a742c8d7ee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_remote_detonator_8c_1ae7a43677ec37fcc590f7c8a742c8d7ee" kindref="member">SELECTION_NAME_LED</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;LED&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="_remote_detonator_8c_1aed561a71a49c7343f5f5330123fd3e2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5c" kindref="member">ERemoteDetonatorLEDState</ref><sp/><ref refid="_remote_detonator_8c_1aed561a71a49c7343f5f5330123fd3e2d" kindref="member">m_LastLEDState</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15" refid="_remote_detonator_8c_1a4288cb6ccdd9e611aa99c9bec81ddced" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_remote_detonator_8c_1a4288cb6ccdd9e611aa99c9bec81ddced" kindref="member">IsKit</ref>()</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20" refid="_remote_detonator_8c_1a2853848773e2d13674b78a087991f369" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_land___underground___panel_8c_1a9c06000e6e147be16d105290657fd5a2" kindref="member">UpdateLED</ref>(<ref refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5c" kindref="member">ERemoteDetonatorLEDState</ref><sp/>pState,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>pForced<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>selectionIdx<sp/>=<sp/>GetHiddenSelectionIndex(<ref refid="_remote_detonator_8c_1ae7a43677ec37fcc590f7c8a742c8d7ee" kindref="member">SELECTION_NAME_LED</ref>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(pState)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5c" kindref="member">ERemoteDetonatorLEDState</ref>.LIT:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetObjectTexture(selectionIdx,<sp/><ref refid="_remote_detonator_8c_1a8cd6eb0a2120545ca73485ca2f2e4caf" kindref="member">COLOR_LED_LIT</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetObjectTexture(selectionIdx,<sp/><ref refid="_land___underground___panel_8c_1a0e4c29fb12e34a79e4d04c204c43b6c8" kindref="member">COLOR_LED_OFF</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_remote_detonator_8c_1aed561a71a49c7343f5f5330123fd3e2d" kindref="member">m_LastLEDState</ref><sp/>=<sp/>pState;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetSynchDirty();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="_remote_detonator_8c_1a39646fdabc350c98a2e907027b643331" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_inventory___base_1ad80815bc032e707768f0b716d175b1f1" kindref="member">SetActions</ref>()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.SetActions();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a033d077df58807906c4dad3101d8768c" kindref="member">AddAction</ref>(<ref refid="_action_attach_explosives_trigger_8c_1a131e5484a00674753a108b14330d8b3b" kindref="member">ActionAttachExplosivesTrigger</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a033d077df58807906c4dad3101d8768c" kindref="member">AddAction</ref>(<ref refid="_action_disarm_explosive_with_remote_detonator_unpaired_8c_1a17283c12d8d8c358d8aa433194914aa1" kindref="member">ActionDisarmExplosiveWithRemoteDetonatorUnpaired</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_remote_detonator_trigger" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_remote_detonator_trigger" kindref="compound">RemoteDetonatorTrigger</ref><sp/>:<sp/>RemoteDetonator</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48" refid="class_remote_detonator_trigger_1a0dea8f6eff163db844cdeff115a94069" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger_1a0dea8f6eff163db844cdeff115a94069" kindref="member">ANIM_PHASE_TRIGGER</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;trigger&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="class_remote_detonator_trigger_1ae211c7648ebeda6aa3b19f95a56f547a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger_1ae211c7648ebeda6aa3b19f95a56f547a" kindref="member">m_LED</ref>;</highlight></codeline>
+<codeline lineno="51" refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>ref<sp/><ref refid="class_remotely_activated_item_behaviour" kindref="compound">RemotelyActivatedItemBehaviour</ref><sp/><ref refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" kindref="member">m_RAIB</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="class_remote_detonator_trigger_1ade3cc3be976c016e06b334bd66255e0e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger_1ade3cc3be976c016e06b334bd66255e0e" kindref="member">RemoteDetonatorTrigger</ref>()</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" kindref="member">m_RAIB</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_remotely_activated_item_behaviour" kindref="compound">RemotelyActivatedItemBehaviour</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" kindref="member">m_RAIB</ref>.<ref refid="class_remotely_activated_item_behaviour_1a427bc552c627c34f890fd26b845d798d" kindref="member">SetTrigger</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RegisterNetSyncVariableInt(</highlight><highlight class="stringliteral">&quot;m_RAIB.m_PairDeviceNetIdLow&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RegisterNetSyncVariableInt(</highlight><highlight class="stringliteral">&quot;m_RAIB.m_PairDeviceNetIdHigh&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RegisterNetSyncVariableInt(</highlight><highlight class="stringliteral">&quot;m_LastLEDState&quot;</highlight><highlight class="normal">,<sp/>0,<sp/><ref refid="class_enum_tools" kindref="compound">EnumTools</ref>.<ref refid="class_enum_tools_1a5bcf3e903f3baa8dc2a339918058321f" kindref="member">GetEnumSize</ref>(<ref refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5c" kindref="member">ERemoteDetonatorLEDState</ref>));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_remote_detonator_8c_1a2853848773e2d13674b78a087991f369" kindref="member">UpdateLED</ref>(<ref refid="_remote_detonator_8c_1aed561a71a49c7343f5f5330123fd3e2d" kindref="member">m_LastLEDState</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="class_remote_detonator_trigger_1ae36a8cc7aa40cbd51c478909f1176521" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger_1ae36a8cc7aa40cbd51c478909f1176521" kindref="member">IsKit</ref>()</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="class_remote_detonator_trigger_1af44d067fb3813ef60d4857b22eea5ea6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger_1af44d067fb3813ef60d4857b22eea5ea6" kindref="member">OnVariablesSynchronized</ref>()</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnVariablesSynchronized();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" kindref="member">m_RAIB</ref>)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" kindref="member">m_RAIB</ref>.<ref refid="class_remotely_activated_item_behaviour_1a0a88bdc33948908917b0b0646527f0d5" kindref="member">OnVariableSynchronized</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_remote_detonator_8c_1a2853848773e2d13674b78a087991f369" kindref="member">UpdateLED</ref>(<ref refid="_remote_detonator_8c_1aed561a71a49c7343f5f5330123fd3e2d" kindref="member">m_LastLEDState</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82" refid="class_remote_detonator_trigger_1a0429acc6bfe38099bee6ab53899bb311" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger_1a0429acc6bfe38099bee6ab53899bb311" kindref="member">EEItemLocationChanged</ref>(notnull<sp/><ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref><sp/>oldLoc,<sp/>notnull<sp/><ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref><sp/>newLoc)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.EEItemLocationChanged(oldLoc,<sp/>newLoc);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" kindref="member">m_RAIB</ref>)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" kindref="member">m_RAIB</ref>.<ref refid="class_remotely_activated_item_behaviour_1a34d2aaca3482c187a1e595afce587897" kindref="member">Pair</ref>();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92" refid="class_remote_detonator_trigger_1a60c11d5fcb7d25f4e247592168fddcbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/><ref refid="class_remotely_activated_item_behaviour" kindref="compound">RemotelyActivatedItemBehaviour</ref><sp/><ref refid="class_remote_detonator_trigger_1a60c11d5fcb7d25f4e247592168fddcbb" kindref="member">GetRemotelyActivatedItemBehaviour</ref>()</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" kindref="member">m_RAIB</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97" refid="class_remote_detonator_trigger_1a982192e82479c2c56f4cf15a6c4b920c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger_1a982192e82479c2c56f4cf15a6c4b920c" kindref="member">OnCEUpdate</ref>()</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnCEUpdate();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!IsRuined()<sp/>&amp;&amp;<sp/><ref refid="class_remote_detonator_trigger_1aeb80ded4576b5e1d4e59be0cb2cdeee0" kindref="member">IsConnected</ref>()<sp/>&amp;&amp;<sp/><ref refid="class_remote_detonator_trigger_1a27bea22618c37d4aa459fe9a27d79880" kindref="member">GetControlledDevice</ref>())</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1a21d8662c860e105943718b2da59349e7" kindref="member">DistanceSq</ref>(<ref refid="_underground_area_loader_8c_1af4b5180d61f839c99de2d15fdcda4568" kindref="member">GetPosition</ref>(),<sp/><ref refid="class_remote_detonator_trigger_1a27bea22618c37d4aa459fe9a27d79880" kindref="member">GetControlledDevice</ref>().<ref refid="_underground_area_loader_8c_1af4b5180d61f839c99de2d15fdcda4568" kindref="member">GetPosition</ref>())<sp/>&lt;=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga1ea52907ba49a5706b41108910975de7" kindref="member">SqrFloat</ref>(<ref refid="class_u_a_max_distances" kindref="compound">UAMaxDistances</ref>.<ref refid="class_u_a_max_distances_1a8202368c9d2455ac296422c0fafb55f5" kindref="member">EXPLOSIVE_REMOTE_ACTIVATION</ref>))</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_remote_detonator_8c_1a2853848773e2d13674b78a087991f369" kindref="member">UpdateLED</ref>(<ref refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5c" kindref="member">ERemoteDetonatorLEDState</ref>.LIT);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_remote_detonator_8c_1a2853848773e2d13674b78a087991f369" kindref="member">UpdateLED</ref>(<ref refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5c" kindref="member">ERemoteDetonatorLEDState</ref>.OFF);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114" refid="class_remote_detonator_trigger_1ae4e86f7b7af1691678b20af34de62a42" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger_1ae4e86f7b7af1691678b20af34de62a42" kindref="member">PairRemote</ref>(notnull<sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>trigger)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" kindref="member">m_RAIB</ref>.<ref refid="class_remotely_activated_item_behaviour_1a34d2aaca3482c187a1e595afce587897" kindref="member">Pair</ref>(trigger);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119" refid="class_remote_detonator_trigger_1ab2d03a9fb1b97ebd43711c9fa00780e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger_1ab2d03a9fb1b97ebd43711c9fa00780e3" kindref="member">UnpairRemote</ref>()</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_remote_detonator_8c_1a2853848773e2d13674b78a087991f369" kindref="member">UpdateLED</ref>(<ref refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5c" kindref="member">ERemoteDetonatorLEDState</ref>.OFF);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" kindref="member">m_RAIB</ref>.<ref refid="class_remotely_activated_item_behaviour_1a348985aa8f60c193a6a51d3c1af3efb0" kindref="member">Unpair</ref>();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125" refid="class_remote_detonator_trigger_1a4b844759bab54fb3a8e1210525e1ab92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger_1a4b844759bab54fb3a8e1210525e1ab92" kindref="member">OnActivatedByItem</ref>(notnull<sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>item)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsServer())</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" kindref="member">m_RAIB</ref>.<ref refid="class_remotely_activated_item_behaviour_1a504e9506cf4236eba096b3f492b236a4" kindref="member">IsPaired</ref>()<sp/>&amp;&amp;<sp/>!IsRuined())</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>device<sp/>=<sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref>.Cast(<ref refid="class_remote_detonator_trigger_1a27bea22618c37d4aa459fe9a27d79880" kindref="member">GetControlledDevice</ref>());</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(device<sp/>&amp;&amp;<sp/><ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1a21d8662c860e105943718b2da59349e7" kindref="member">DistanceSq</ref>(<ref refid="_underground_area_loader_8c_1af4b5180d61f839c99de2d15fdcda4568" kindref="member">GetPosition</ref>(),<sp/>device.GetPosition())<sp/>&lt;=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga1ea52907ba49a5706b41108910975de7" kindref="member">SqrFloat</ref>(<ref refid="class_u_a_max_distances" kindref="compound">UAMaxDistances</ref>.<ref refid="class_u_a_max_distances_1a8202368c9d2455ac296422c0fafb55f5" kindref="member">EXPLOSIVE_REMOTE_ACTIVATION</ref>))</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device.OnActivatedByItem(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140" refid="class_remote_detonator_trigger_1a689375b46efa4ad09afa1c3051d62370" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger_1a689375b46efa4ad09afa1c3051d62370" kindref="member">SetControlledDevice</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>pDevice)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" kindref="member">m_RAIB</ref>.<ref refid="class_remotely_activated_item_behaviour_1a34d2aaca3482c187a1e595afce587897" kindref="member">Pair</ref>(pDevice);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="class_remote_detonator_trigger_1aeb80ded4576b5e1d4e59be0cb2cdeee0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger_1aeb80ded4576b5e1d4e59be0cb2cdeee0" kindref="member">IsConnected</ref>()</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" kindref="member">m_RAIB</ref>.<ref refid="class_remotely_activated_item_behaviour_1a504e9506cf4236eba096b3f492b236a4" kindref="member">IsPaired</ref>();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150" refid="class_remote_detonator_trigger_1a27bea22618c37d4aa459fe9a27d79880" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/><ref refid="class_remote_detonator_trigger_1a27bea22618c37d4aa459fe9a27d79880" kindref="member">GetControlledDevice</ref>()</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" kindref="member">m_RAIB</ref>.<ref refid="class_remotely_activated_item_behaviour_1a87a07217c82311b127a73c2dcf1fcf93" kindref="member">GetPairDevice</ref>();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="155" refid="class_remote_detonator_trigger_1a88ff33b30e7fed8dadda899de61bf577" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger" kindref="compound">RemoteDetonatorTrigger</ref><sp/><ref refid="class_remote_detonator_trigger_1a88ff33b30e7fed8dadda899de61bf577" kindref="member">SpawnInPlayerHands</ref>(notnull<sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>pEntity)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>type<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;RemoteDetonatorTrigger&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_remote_detonator_trigger" kindref="compound">RemoteDetonatorTrigger</ref><sp/>rdt;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player<sp/>=<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref>.Cast(pEntity);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(player)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>inHandsItem<sp/>=<sp/>player.GetItemInHands();</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(inHandsItem)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_replace_item_with_new_lambda_base" kindref="compound">ReplaceItemWithNewLambdaBase</ref><sp/>lambda<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_replace_detonator_item_lambda" kindref="compound">ReplaceDetonatorItemLambda</ref>(inHandsItem,<sp/>type);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MiscGameplayFunctions.TurnItemIntoItemEx(player,<sp/>lambda);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rdt<sp/>=<sp/><ref refid="class_remote_detonator_trigger" kindref="compound">RemoteDetonatorTrigger</ref>.Cast(player.GetItemInHands());</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rdt<sp/>=<sp/><ref refid="class_remote_detonator_trigger" kindref="compound">RemoteDetonatorTrigger</ref>.Cast(player.GetHumanInventory().CreateInHands(type));</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(player.GetItemInHands())</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>player.GetItemAccessor().OnItemInHandsChanged();</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rdt;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="184" refid="class_remote_detonator_trigger_1aaa0bc4d8d09d677f1a4b09f0f9d9ee15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger_1aaa0bc4d8d09d677f1a4b09f0f9d9ee15" kindref="member">OnAnimationPhaseStarted</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>animSource,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>phase)</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(animSource<sp/>==<sp/><ref refid="class_remote_detonator_trigger_1a0dea8f6eff163db844cdeff115a94069" kindref="member">ANIM_PHASE_TRIGGER</ref>)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(phase<sp/>&gt;<sp/>0.01)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_remote_detonator_8c_1a2853848773e2d13674b78a087991f369" kindref="member">UpdateLED</ref>(<ref refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5c" kindref="member">ERemoteDetonatorLEDState</ref>.OFF);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="195" refid="class_remote_detonator_trigger_1a1bae0bd1e79706152a34cce78b2ce2a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_remote_detonator_trigger_1a1bae0bd1e79706152a34cce78b2ce2a6" kindref="member">SetActions</ref>()</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.SetActions();</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a119172381c56c8bb0a629326e9998abd" kindref="member">RemoveAction</ref>(<ref refid="_action_attach_explosives_trigger_8c_1a131e5484a00674753a108b14330d8b3b" kindref="member">ActionAttachExplosivesTrigger</ref>);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a033d077df58807906c4dad3101d8768c" kindref="member">AddAction</ref>(<ref refid="class_action_attach_on_trap" kindref="compound">ActionAttachOnTrap</ref>);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a033d077df58807906c4dad3101d8768c" kindref="member">AddAction</ref>(<ref refid="_action_disarm_explosive_with_remote_detonator_8c_1a54a2b727c4ba4d595aee6d22c48b27a1" kindref="member">ActionDisarmExplosiveWithRemoteDetonator</ref>);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a033d077df58807906c4dad3101d8768c" kindref="member">AddAction</ref>(<ref refid="class_action_trigger_remotely" kindref="compound">ActionTriggerRemotely</ref>);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DIAG_DEVELOPER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_modifier_base_8c_1afd9a46dacf9365e51745eec480db6c79" kindref="member">GetDebugText</ref>()</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>debug_output;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>debug_output<sp/>+=<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.<ref refid="group___strings_1gaec7e49a1dcfd0bc429834f29bc0d35c1" kindref="member">Format</ref>(</highlight><highlight class="stringliteral">&quot;low<sp/>net<sp/>id:<sp/>%1\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" kindref="member">m_RAIB</ref>.<ref refid="class_remotely_activated_item_behaviour_1aeb955b06d962134a18df43d6a6924080" kindref="member">GetPairDeviceNetIdLow</ref>());</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>debug_output<sp/>+=<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.<ref refid="group___strings_1gaec7e49a1dcfd0bc429834f29bc0d35c1" kindref="member">Format</ref>(</highlight><highlight class="stringliteral">&quot;high<sp/>net<sp/>id:<sp/>%1\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" kindref="member">m_RAIB</ref>.<ref refid="class_remotely_activated_item_behaviour_1adacc320adf82b24cfa8f0164c56101c4" kindref="member">GetPairDeviceNetIdHigh</ref>());</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>debug_output<sp/>+=<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.<ref refid="group___strings_1gaec7e49a1dcfd0bc429834f29bc0d35c1" kindref="member">Format</ref>(</highlight><highlight class="stringliteral">&quot;pair<sp/>device:<sp/>%1\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_remote_detonator_trigger_1a29130edbe6fb90fe950fa088b7461eff" kindref="member">m_RAIB</ref>.<ref refid="class_remotely_activated_item_behaviour_1a87a07217c82311b127a73c2dcf1fcf93" kindref="member">GetPairDevice</ref>());</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>debug_output;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_remote_detonator_8c_1a39646fdabc350c98a2e907027b643331" kindref="member">RemoteDetonatorReceiver</ref><sp/>:<sp/>RemoteDetonator</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_remote_detonator_8c_1a39646fdabc350c98a2e907027b643331" kindref="member">RemoteDetonatorReceiver</ref>()</highlight></codeline>
+<codeline lineno="221" refid="_remote_detonator_8c_1a733cecb3ff8420b07d62ad835be26b14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_land___underground___panel_8c_1a9c06000e6e147be16d105290657fd5a2" kindref="member">UpdateLED</ref>(<ref refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5c" kindref="member">ERemoteDetonatorLEDState</ref>.OFF,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="223" refid="_remote_detonator_8c_1a10a4f64a2b6cfd664c461f89bfcf26d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="224" refid="_remote_detonator_8c_1adbcefdb70c262c7c278ebcdfabf56086" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_remote_detonator_8c_1a4288cb6ccdd9e611aa99c9bec81ddced" kindref="member">IsKit</ref>()</highlight></codeline>
+<codeline lineno="226" refid="_remote_detonator_8c_1aa93a153ba3a314384d9aacaad825ca69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="230" refid="_remote_detonator_8c_1a9ad76a420042dadc6ab67b7aa821a407" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_remote_detonator_8c_1a9ad76a420042dadc6ab67b7aa821a407" kindref="member">OnWasDetached</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>parent,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>slot_id)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_land___underground___panel_8c_1a9c06000e6e147be16d105290657fd5a2" kindref="member">UpdateLED</ref>(<ref refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5c" kindref="member">ERemoteDetonatorLEDState</ref>.OFF);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="235" refid="_remote_detonator_8c_1a4de4d414d0cbf15100ab71ec84ca25f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_explosives_base_8c_1a4de4d414d0cbf15100ab71ec84ca25f7" kindref="member">EEKilled</ref>(<ref refid="class_object" kindref="compound">Object</ref><sp/>killer)</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.EEKilled(killer);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_land___underground___panel_8c_1a9c06000e6e147be16d105290657fd5a2" kindref="member">UpdateLED</ref>(<ref refid="_remote_detonator_8c_1a7804fd4e8640651942c36a208aa12c5c" kindref="member">ERemoteDetonatorLEDState</ref>.OFF,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_advanced_communication_8c_1afa39b7c4d3d085ef8514a87c32b81a4d" kindref="member">SetActions</ref>()</highlight></codeline>
+<codeline lineno="243" refid="_remote_detonator_8c_1ae7c049223bf94c82aa39d85f1e70cb96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.SetActions();</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a119172381c56c8bb0a629326e9998abd" kindref="member">RemoveAction</ref>(<ref refid="_action_attach_explosives_trigger_8c_1a131e5484a00674753a108b14330d8b3b" kindref="member">ActionAttachExplosivesTrigger</ref>);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a119172381c56c8bb0a629326e9998abd" kindref="member">RemoveAction</ref>(<ref refid="_action_disarm_explosive_with_remote_detonator_unpaired_8c_1a17283c12d8d8c358d8aa433194914aa1" kindref="member">ActionDisarmExplosiveWithRemoteDetonatorUnpaired</ref>);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251" refid="class_replace_detonator_item_lambda" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_replace_detonator_item_lambda" kindref="compound">ReplaceDetonatorItemLambda</ref><sp/>:<sp/><ref refid="class_replace_item_with_new_lambda_base" kindref="compound">ReplaceItemWithNewLambdaBase</ref></highlight></codeline>
+<codeline lineno="252"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="253" refid="class_replace_detonator_item_lambda_1af9cbf9dc2c3ee21cdf138e26b7e8ae43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_replace_detonator_item_lambda_1af9cbf9dc2c3ee21cdf138e26b7e8ae43" kindref="member">CopyOldPropertiesToNew</ref>(notnull<sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>old_item,<sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>new_item)</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="255" refid="_remote_detonator_8c_1a535ae6a53e08114dca25f7cbd7def55a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.CopyOldPropertiesToNew(old_item,<sp/>new_item);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MiscGameplayFunctions.TransferItemProperties(old_item,<sp/>new_item);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ExplosivesBase/RemoteDetonator.c"/>
+  </compounddef>
+</doxygen>

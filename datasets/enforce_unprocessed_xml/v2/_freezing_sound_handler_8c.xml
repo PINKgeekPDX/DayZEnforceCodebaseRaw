@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_freezing_sound_handler_8c" kind="file" language="C++">
+    <compoundname>FreezingSoundHandler.c</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">class<sp/>FreezingSoundHandlerBase<sp/>extends<sp/>SoundHandlerBase</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/>override<sp/>void<sp/>Init()</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Id<sp/>=<sp/>eSoundHandlers.FREEZING;</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">//---------------------------</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">//<sp/>Client</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">//---------------------------</highlight></codeline>
+<codeline lineno="14"><highlight class="comment">class<sp/>FreezingSoundHandlerClient<sp/>extends<sp/>FreezingSoundHandlerBase</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/>const<sp/>float<sp/>SOUND_INTERVALS_LIGHT_MIN<sp/>=<sp/>5;<sp/><sp/>const<sp/>float<sp/>SOUND_INTERVALS_LIGHT_MAX<sp/>=<sp/>20;</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/>float<sp/>m_SoundTime;</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/>EffectSound<sp/>m_Sound;</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/>ref<sp/>HumanMovementState<sp/><sp/>hms<sp/>=<sp/>new<sp/>HumanMovementState();</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/>override<sp/>void<sp/>Update()</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>m_Player.GetShakeLevel()<sp/>&gt;<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ProcessSound();</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>ProcessSound()</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Player.GetMovementState(hms);</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(hms.m_iMovement<sp/>==<sp/>DayZPlayerConstants.MOVEMENTIDX_IDLE)</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//return;</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>GetGame().GetTime()<sp/>&gt;<sp/>m_SoundTime<sp/>)</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float<sp/>offset_time<sp/>=<sp/>Math.RandomFloatInclusive(SOUND_INTERVALS_LIGHT_MIN,<sp/>SOUND_INTERVALS_LIGHT_MAX)<sp/>*<sp/>1000;</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_SoundTime<sp/>=<sp/>GetGame().GetTime()<sp/>+<sp/>offset_time;</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PlaySound();</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>PlaySound()</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//Print(&quot;-------------<sp/>freezing<sp/><sp/>--------------&quot;);</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Player.PlaySoundEvent(EPlayerSoundEventID.FREEZING);</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"></highlight></codeline>
+<codeline lineno="51"><highlight class="comment"></highlight></codeline>
+<codeline lineno="52"><highlight class="comment">//---------------------------</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">//<sp/>Server</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">//---------------------------</highlight></codeline>
+<codeline lineno="55"><highlight class="comment">class<sp/>FreezingSoundHandlerServer<sp/>extends<sp/>HungerSoundHandlerBase</highlight></codeline>
+<codeline lineno="56"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="comment">}*/</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/SoundHandlers/FreezingSoundHandler.c"/>
+  </compounddef>
+</doxygen>

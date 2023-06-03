@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_plugin_door_ruler_8c" kind="file" language="C++">
+    <compoundname>PluginDoorRuler.c</compoundname>
+    <innerclass refid="class_plugin_base" prot="public">PluginBase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">class<sp/></highlight><highlight class="normal">PluginDoorRuler<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_plugin_base" kindref="compound">PluginBase</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/>PluginDeveloper<sp/><ref refid="class_plugin_base_1aab70d851921e76ecbf63617a2b1e7476" kindref="member">m_ModuleDeveloper</ref>;</highlight></codeline>
+<codeline lineno="4" refid="class_plugin_base_1ac4b08bfcc18cfb53bb2a655282fac500" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/><ref refid="class_plugin_base_1ac4b08bfcc18cfb53bb2a655282fac500" kindref="member">m_Ruler</ref>;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="class_timer" kindref="compound">Timer</ref><sp/><ref refid="class_plugin_base_1a8af631c4b23a88419d07bd9ea389183d" kindref="member">m_Timer</ref>;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_plugin_base_1ad16078cf30f8d06d9d25adb44e692fe9" kindref="member">m_Initialized</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="8" refid="class_plugin_base_1a3085a585429510f9563e959875745adc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_plugin_base_1a3085a585429510f9563e959875745adc" kindref="member">CheckInit</ref>()</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>FreeDebugCamera.GetInstance().IsActive()<sp/>)<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_plugin_base_1a58d432cd98f1c40ddd4344d2e54a8fda" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14" refid="class_plugin_base_1a58d432cd98f1c40ddd4344d2e54a8fda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_plugin_base_1a58d432cd98f1c40ddd4344d2e54a8fda" kindref="member">Init</ref>()</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_Ruler)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Ruler.Delete();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_ui_hint_panel_8c_1a2b24e7702c647888fe97110686cd2330" kindref="member">m_Initialized</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Ruler<sp/>=<sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref>.Cast(<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().CreateObject(</highlight><highlight class="stringliteral">&quot;DoorTestCamera&quot;</highlight><highlight class="normal">,<sp/>FreeDebugCamera.GetInstance().GetPosition(),<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="comment">/*ai*/</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23" refid="class_plugin_base_1ae1cd17b89a389878d63d340f2f850216" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_plugin_base_1ae1cd17b89a389878d63d340f2f850216" kindref="member">OnUpdate</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>delta_time)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="_ui_hint_panel_8c_1a2b24e7702c647888fe97110686cd2330" kindref="member">m_Initialized</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!FreeDebugCamera.GetInstance().IsActive())<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!m_Ruler)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>cam_pos<sp/>=<sp/>FreeDebugCamera.GetInstance().GetPosition();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>ruler_pos<sp/>=<sp/>m_Ruler.GetPosition();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>camera_dir<sp/>=<sp/>FreeDebugCamera.GetInstance().GetDirection();<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>camera_dir.<ref refid="classvector_1a77831ca9c077a8dbd1b0aae7ba2a5d3d" kindref="member">Normalize</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Ruler.SetPosition(FreeDebugCamera.GetInstance().GetPosition()<sp/>+<sp/>(<sp/>camera_dir<sp/>*<sp/>2)<sp/>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Ruler.SetAngles(FreeDebugCamera.GetInstance().GetAngles());</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginDoorRuler.c"/>
+  </compounddef>
+</doxygen>

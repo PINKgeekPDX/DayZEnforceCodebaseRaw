@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="4___world_2_entities_2_item_base_2_weapon_attachments_2_attachments_8c" kind="file" language="C++">
+    <compoundname>Attachments.c</compoundname>
+    <innerclass refid="class_inventory___base" prot="public">Inventory_Base</innerclass>
+    <innerclass refid="class_a_k74___wood_bttstck" prot="public">AK74_WoodBttstck</innerclass>
+    <innerclass refid="class_a_k_s74_u___bttstck" prot="public">AKS74U_Bttstck</innerclass>
+    <innerclass refid="class_a_k___folding_bttstck" prot="public">AK_FoldingBttstck</innerclass>
+    <innerclass refid="class_a_k___plastic_bttstck" prot="public">AK_PlasticBttstck</innerclass>
+    <innerclass refid="class_a_k___wood_bttstck" prot="public">AK_WoodBttstck</innerclass>
+    <innerclass refid="class_fal___folding_bttstck" prot="public">Fal_FoldingBttstck</innerclass>
+    <innerclass refid="class_fal___oe_bttstck" prot="public">Fal_OeBttstck</innerclass>
+    <innerclass refid="class_ghillie_att___color_base" prot="public">GhillieAtt_ColorBase</innerclass>
+    <innerclass refid="class_groza___lower_receiver" prot="public">Groza_LowerReceiver</innerclass>
+    <innerclass refid="class_m249___bipod" prot="public">M249_Bipod</innerclass>
+    <innerclass refid="class_m4___c_q_b_bttstck" prot="public">M4_CQBBttstck</innerclass>
+    <innerclass refid="class_m4___m_p_bttstck" prot="public">M4_MPBttstck</innerclass>
+    <innerclass refid="class_m4___o_e_bttstck" prot="public">M4_OEBttstck</innerclass>
+    <innerclass refid="class_m_p5k___stock_bttstck" prot="public">MP5k_StockBttstck</innerclass>
+    <innerclass refid="class_saiga___bttstck" prot="public">Saiga_Bttstck</innerclass>
+    <innerclass refid="class_p_p19___bttstck" prot="public">PP19_Bttstck</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">class<sp/></highlight><highlight class="normal">ButtstockBase<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_inventory___base" kindref="compound">Inventory_Base</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_inventory___base_1a6662a7a3ff91d1b618770ef14df7b700" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_inventory___base_1a6662a7a3ff91d1b618770ef14df7b700" kindref="member">OnWasAttached</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>parent,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>slot_id)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnWasAttached(parent,<sp/>slot_id);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>parent.IsWeapon()<sp/>)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parent.SetButtstockAttached(</highlight><highlight class="keyword">true</highlight><highlight class="normal">,slot_id);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="13" refid="class_inventory___base_1a4110d5de31da78d90b9e1a2ac83e4e1c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_inventory___base_1a4110d5de31da78d90b9e1a2ac83e4e1c" kindref="member">OnWasDetached</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>parent,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>slot_id)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnWasDetached(parent,<sp/>slot_id);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>parent.IsWeapon()<sp/>)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parent.SetButtstockAttached(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_a_k74___wood_bttstck" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_a_k74___wood_bttstck" kindref="compound">AK74_WoodBttstck</ref><sp/>:<sp/>ButtstockBase<sp/>{};</highlight></codeline>
+<codeline lineno="25" refid="class_a_k_s74_u___bttstck" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_a_k_s74_u___bttstck" kindref="compound">AKS74U_Bttstck</ref><sp/>:<sp/>ButtstockBase<sp/>{};</highlight></codeline>
+<codeline lineno="26" refid="class_a_k___folding_bttstck" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_a_k___folding_bttstck" kindref="compound">AK_FoldingBttstck</ref><sp/>:<sp/>ButtstockBase<sp/>{};</highlight></codeline>
+<codeline lineno="27" refid="class_a_k___plastic_bttstck" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_a_k___plastic_bttstck" kindref="compound">AK_PlasticBttstck</ref><sp/>:<sp/>ButtstockBase<sp/>{};</highlight></codeline>
+<codeline lineno="28" refid="class_a_k___wood_bttstck" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_a_k___wood_bttstck" kindref="compound">AK_WoodBttstck</ref><sp/>:<sp/>ButtstockBase<sp/>{};</highlight></codeline>
+<codeline lineno="29" refid="class_fal___folding_bttstck" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_fal___folding_bttstck" kindref="compound">Fal_FoldingBttstck</ref><sp/>:<sp/>ButtstockBase<sp/>{};</highlight></codeline>
+<codeline lineno="30" refid="class_fal___oe_bttstck" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_fal___oe_bttstck" kindref="compound">Fal_OeBttstck</ref><sp/>:<sp/>ButtstockBase<sp/>{};</highlight></codeline>
+<codeline lineno="31" refid="class_ghillie_att___color_base" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ghillie_att___color_base" kindref="compound">GhillieAtt_ColorBase</ref><sp/>:<sp/>ButtstockBase<sp/>{};</highlight></codeline>
+<codeline lineno="32" refid="class_groza___lower_receiver" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_groza___lower_receiver" kindref="compound">Groza_LowerReceiver</ref><sp/>:<sp/>ButtstockBase<sp/>{};</highlight></codeline>
+<codeline lineno="33" refid="class_m249___bipod" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m249___bipod" kindref="compound">M249_Bipod</ref><sp/>:<sp/>ButtstockBase<sp/>{};</highlight></codeline>
+<codeline lineno="34" refid="class_m4___c_q_b_bttstck" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m4___c_q_b_bttstck" kindref="compound">M4_CQBBttstck</ref><sp/>:<sp/>ButtstockBase<sp/>{};</highlight></codeline>
+<codeline lineno="35" refid="class_m4___m_p_bttstck" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m4___m_p_bttstck" kindref="compound">M4_MPBttstck</ref><sp/>:<sp/>ButtstockBase<sp/>{};</highlight></codeline>
+<codeline lineno="36" refid="class_m4___o_e_bttstck" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m4___o_e_bttstck" kindref="compound">M4_OEBttstck</ref><sp/>:<sp/>ButtstockBase<sp/>{};</highlight></codeline>
+<codeline lineno="37" refid="class_m_p5k___stock_bttstck" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_m_p5k___stock_bttstck" kindref="compound">MP5k_StockBttstck</ref><sp/>:<sp/>ButtstockBase<sp/>{};</highlight></codeline>
+<codeline lineno="38" refid="class_saiga___bttstck" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_saiga___bttstck" kindref="compound">Saiga_Bttstck</ref><sp/>:<sp/>ButtstockBase<sp/>{};</highlight></codeline>
+<codeline lineno="39" refid="class_p_p19___bttstck" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_p_p19___bttstck" kindref="compound">PP19_Bttstck</ref><sp/>:<sp/>ButtstockBase<sp/>{};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/WeaponAttachments/Attachments.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_state_c_b_8c" kind="file" language="C++">
+    <compoundname>StateCB.c</compoundname>
+    <innerclass refid="class_human_command_action_callback" prot="public">HumanCommandActionCallback</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_human_command_action_callback" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">SymptomCB<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_human_command_action_callback" kindref="compound">HumanCommandActionCallback</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//int<sp/>m_SymptomUID;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_human_command_action_callback_1a2072bd58b5d0669307f4873fb95ebbb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_human_command_action_callback_1a2072bd58b5d0669307f4873fb95ebbb5" kindref="member">m_RunTime</ref>;</highlight></codeline>
+<codeline lineno="5" refid="class_human_command_action_callback_1a15ac5affbbba04625f957693bfc0ed05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_human_command_action_callback_1a15ac5affbbba04625f957693bfc0ed05" kindref="member">m_StartingTime</ref>;</highlight></codeline>
+<codeline lineno="6" refid="class_human_command_action_callback_1aeac77d56c3ffad8d409c065d8b3f2e99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/><ref refid="class_human_command_action_callback_1aeac77d56c3ffad8d409c065d8b3f2e99" kindref="member">m_Player</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="8" refid="class_human_command_action_callback_1ab0ff7f2af33867203b391eaf24ac5607" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_human_command_action_callback_1ab0ff7f2af33867203b391eaf24ac5607" kindref="member">OnFinish</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>pCanceled)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref><sp/>&amp;&amp;<sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>.GetSymptomManager())</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>.GetSymptomManager().OnAnimationFinished();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17" refid="class_human_command_action_callback_1a7607d5fdaea9c3e1d83a4016181b7091" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_human_command_action_callback_1a7607d5fdaea9c3e1d83a4016181b7091" kindref="member">Init</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>run_time,<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="human_8c_1a7521158a3ddfe9572eef984b25938727" kindref="member">EnableCancelCondition</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_RunTime<sp/>=<sp/>run_time<sp/>*<sp/>1000;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_StartingTime<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1aaef5e82614e886a86023cbdc7e85ca47" kindref="member">GetTime</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref><sp/>=<sp/>player;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref><sp/>&amp;&amp;<sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>.GetSymptomManager())</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>.GetSymptomManager().OnAnimationStarted();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30" refid="class_human_command_action_callback_1a261473719214b400ac06bf3a6b31fa11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_human_command_action_callback_1a261473719214b400ac06bf3a6b31fa11" kindref="member">CancelCondition</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(m_RunTime<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>(<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="_notification_system_8c_1a8a5888c845f10608a75d9bfd5009089e" kindref="member">GetTime</ref>()<sp/>&gt;<sp/>m_StartingTime<sp/>+<sp/>m_RunTime))</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="class_human_command_action_callback_1ab7627c1ed330d7c116c27000687af7e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_human_command_action_callback_1ab7627c1ed330d7c116c27000687af7e5" kindref="member">IsSymptomCallback</ref>()</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateCB.c"/>
+  </compounddef>
+</doxygen>

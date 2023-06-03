@@ -1,0 +1,740 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_car_8c" kind="file" language="C++">
+    <compoundname>Car.c</compoundname>
+    <innerclass refid="class_transport" prot="public">Transport</innerclass>
+    <innerclass refid="class_car_controller" prot="public">CarController</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_car_8c_1a5df5796eb04de56ecab7e255085b76bf" prot="public" static="no" strong="no">
+        <type></type>
+        <name>CarSoundCtrl</name>
+        <enumvalue id="_car_8c_1a5df5796eb04de56ecab7e255085b76bfa92c3c18ecdc80cdb068c54b0a44009dc" prot="public">
+          <name>ENGINE</name>
+          <briefdescription>
+<para>indicates if engine is ON </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_car_8c_1a5df5796eb04de56ecab7e255085b76bfa5589c9323a606449d8551a9a9dd399d0" prot="public">
+          <name>RPM</name>
+          <briefdescription>
+<para>engine&apos;s RPM </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_car_8c_1a5df5796eb04de56ecab7e255085b76bfa1fb3554200c1173d24e97e9d32283ead" prot="public">
+          <name>SPEED</name>
+          <briefdescription>
+<para>speed of the car in km/h </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_car_8c_1a5df5796eb04de56ecab7e255085b76bfa77803bb69e8eaba2052987cd83cf2d35" prot="public">
+          <name>DOORS</name>
+          <briefdescription>
+<para>indicates if doors are open </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_car_8c_1a5df5796eb04de56ecab7e255085b76bfade5dc3e0dbd007d995ed3e37bde5ce7e" prot="public">
+          <name>PLAYER</name>
+          <briefdescription>
+<para>indicates if driver is controlled by player </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Car&apos;s sound controller list. (native, do not change or extend) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="3" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" bodystart="4" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="enum" id="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>CarFluid</name>
+        <enumvalue id="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea8bda58832a68157abbcdcbb92f2e797c" prot="public">
+          <name>FUEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea6a10c29c017118a747a3f8b75b636420" prot="public">
+          <name>OIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea8b23c50cc938e0b366df8d8eeeb1bf9f" prot="public">
+          <name>BRAKE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3eabfdedce56cd3007f426d72b322e08f61" prot="public">
+          <name>COOLANT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea7021d2502c85204390cb42e75882b9d6" prot="public">
+          <name>USER1</name>
+          <briefdescription>
+<para>reserved for user / modding support </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea8705079f0e13eb223392c68f6f1fcc76" prot="public">
+          <name>USER2</name>
+          <briefdescription>
+<para>reserved for user / modding support </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3eacefee1d627824eef0a1342df0619b6b9" prot="public">
+          <name>USER3</name>
+          <briefdescription>
+<para>reserved for user / modding support </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea45cb8d0c757977e8fa4bb529e7483b6e" prot="public">
+          <name>USER4</name>
+          <briefdescription>
+<para>reserved for user / modding support </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Type of vehicle&apos;s fluid. (native, do not change or extend) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="18" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" bodystart="19" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="enum" id="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" prot="public" static="no" strong="no">
+        <type></type>
+        <name>CarGearboxType</name>
+        <enumvalue id="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0a506e8dd29460ea318b68d035f679b01b" prot="public">
+          <name>MANUAL</name>
+          <briefdescription>
+<para>classic manual transmission with friction plates between engine and gearbox </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0a0a831c2bc18e8354fe3e30ec0f3cdcda" prot="public">
+          <name>AUTOMATIC</name>
+          <briefdescription>
+<para>automatic transmission with torque converter between engine and gearbox </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumerated gearbox types. (native, do not change or extend) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="34" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="enum" id="_car_8c_1a0a634b2934eb4b736fe4d024586a7c45" prot="public" static="no" strong="no">
+        <type></type>
+        <name>CarAutomaticGearboxMode</name>
+        <enumvalue id="_car_8c_1a0a634b2934eb4b736fe4d024586a7c45a82f05f38f6a17b117cdd2b83227912c6" prot="public">
+          <name>P</name>
+          <briefdescription>
+<para>park </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_car_8c_1a0a634b2934eb4b736fe4d024586a7c45a1784b1a3d7cbd43c45ff82c72d05e4ae" prot="public">
+          <name>R</name>
+          <briefdescription>
+<para>reverse </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_car_8c_1a0a634b2934eb4b736fe4d024586a7c45a2c63acbe79d9f41ba6bb7766e9c37702" prot="public">
+          <name>N</name>
+          <briefdescription>
+<para>neutral </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_car_8c_1a0a634b2934eb4b736fe4d024586a7c45a77a6b11f9898c052926f1d49765861e8" prot="public">
+          <name>D</name>
+          <briefdescription>
+<para>drive </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumerated automatic gearbox modes. (native, do not change or extend) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="68" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" bodystart="69" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_car_8c_1aa30eb9282a08c2fc085d4304c3c07467" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>enum CarGearboxType REVERSE</definition>
+        <argsstring></argsstring>
+        <name>REVERSE</name>
+        <briefdescription>
+<para>Enumerated vehicle&apos;s gears. (native, do not change or extend) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="45" column="8"/>
+      </memberdef>
+      <memberdef kind="variable" id="_car_8c_1af90a50e41ee751d29b456615e0039b26" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>enum CarGearboxType NEUTRAL</definition>
+        <argsstring></argsstring>
+        <name>NEUTRAL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="46" column="8"/>
+      </memberdef>
+      <memberdef kind="variable" id="_car_8c_1ab389c83c7858103858a35c23ab0d3425" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>FIRST</definition>
+        <argsstring></argsstring>
+        <name>FIRST</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="47" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Recipes/Recipes/PluginRecipesManagerBase.c" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_car_8c_1a350a1cfb0b27583f94fc4e525f2b3783" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>SECOND</definition>
+        <argsstring></argsstring>
+        <name>SECOND</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="48" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Recipes/Recipes/PluginRecipesManagerBase.c" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_car_8c_1a89cac2a98045d0387522c66a463c4acf" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>enum CarGearboxType THIRD</definition>
+        <argsstring></argsstring>
+        <name>THIRD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="49" column="6"/>
+      </memberdef>
+      <memberdef kind="variable" id="_car_8c_1a39df6567343ac4b4e473b9d418d44a2a" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>enum CarGearboxType FOURTH</definition>
+        <argsstring></argsstring>
+        <name>FOURTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="50" column="7"/>
+      </memberdef>
+      <memberdef kind="variable" id="_car_8c_1a471351878aa1e38edbb4f3ee93bafbdd" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>enum CarGearboxType FIFTH</definition>
+        <argsstring></argsstring>
+        <name>FIFTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="51" column="6"/>
+      </memberdef>
+      <memberdef kind="variable" id="_car_8c_1a6caf9ea3f90e7b994de6342932bb2b56" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>enum CarGearboxType SIXTH</definition>
+        <argsstring></argsstring>
+        <name>SIXTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="52" column="6"/>
+      </memberdef>
+      <memberdef kind="variable" id="_car_8c_1a606bd74aa8e1860e30f92efb8b3491b8" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>enum CarGearboxType SEVENTH</definition>
+        <argsstring></argsstring>
+        <name>SEVENTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="53" column="8"/>
+      </memberdef>
+      <memberdef kind="variable" id="_car_8c_1a3196c3e0c5dfbe1fc874805b09d2e41d" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>enum CarGearboxType EIGTH</definition>
+        <argsstring></argsstring>
+        <name>EIGTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="54" column="6"/>
+      </memberdef>
+      <memberdef kind="variable" id="_car_8c_1a3d8e5897937dbe357beba62a4d9b32ce" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>enum CarGearboxType NINTH</definition>
+        <argsstring></argsstring>
+        <name>NINTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="55" column="6"/>
+      </memberdef>
+      <memberdef kind="variable" id="_car_8c_1ac5620579e2aab50a4c89f9357fbce6de" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>enum CarGearboxType TENTH</definition>
+        <argsstring></argsstring>
+        <name>TENTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="56" column="6"/>
+      </memberdef>
+      <memberdef kind="variable" id="_car_8c_1a02080b6dca4894f3218302bff4493832" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>enum CarGearboxType ELEVENTH</definition>
+        <argsstring></argsstring>
+        <name>ELEVENTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="57" column="9"/>
+      </memberdef>
+      <memberdef kind="variable" id="_car_8c_1adef498d9b19c0fbc43a274d6c1bbe9ff" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>enum CarGearboxType TWELFTH</definition>
+        <argsstring></argsstring>
+        <name>TWELFTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="58" column="8"/>
+      </memberdef>
+      <memberdef kind="variable" id="_car_8c_1a184285c8ef8c80c404aaaa604f834a62" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>enum CarGearboxType THIRTEENTH</definition>
+        <argsstring></argsstring>
+        <name>THIRTEENTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="59" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="_car_8c_1af47deee04a88796af4368c616534af87" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>enum CarGearboxType FOURTEENTH</definition>
+        <argsstring></argsstring>
+        <name>FOURTEENTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="60" column="11"/>
+      </memberdef>
+      <memberdef kind="variable" id="_car_8c_1a4c7bac4ca5fd52cebb4ad714f73fc371" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>enum CarGearboxType FIFTEENTH</definition>
+        <argsstring></argsstring>
+        <name>FIFTEENTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="61" column="10"/>
+      </memberdef>
+      <memberdef kind="variable" id="_car_8c_1a4679f969bc4966a6c58ac6e78a31f8b2" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></type>
+        <definition>enum CarGearboxType SIXTEENTH</definition>
+        <argsstring></argsstring>
+        <name>SIXTEENTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c" line="63" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="3" refid="_car_8c_1a5df5796eb04de56ecab7e255085b76bf" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_car_8c_1a5df5796eb04de56ecab7e255085b76bf" kindref="member">CarSoundCtrl</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>simulation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="_car_8c_1a5df5796eb04de56ecab7e255085b76bfa92c3c18ecdc80cdb068c54b0a44009dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a5df5796eb04de56ecab7e255085b76bfa92c3c18ecdc80cdb068c54b0a44009dc" kindref="member">ENGINE</ref>,<sp/></highlight></codeline>
+<codeline lineno="7" refid="_car_8c_1a5df5796eb04de56ecab7e255085b76bfa5589c9323a606449d8551a9a9dd399d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a5df5796eb04de56ecab7e255085b76bfa5589c9323a606449d8551a9a9dd399d0" kindref="member">RPM</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="8" refid="_car_8c_1a5df5796eb04de56ecab7e255085b76bfa1fb3554200c1173d24e97e9d32283ead" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a5df5796eb04de56ecab7e255085b76bfa1fb3554200c1173d24e97e9d32283ead" kindref="member">SPEED</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>miscellaneous</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="_car_8c_1a5df5796eb04de56ecab7e255085b76bfa77803bb69e8eaba2052987cd83cf2d35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a5df5796eb04de56ecab7e255085b76bfa77803bb69e8eaba2052987cd83cf2d35" kindref="member">DOORS</ref>,<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a5df5796eb04de56ecab7e255085b76bfade5dc3e0dbd007d995ed3e37bde5ce7e" kindref="member">PLAYER</ref><sp/></highlight></codeline>
+<codeline lineno="13" refid="_car_8c_1a5df5796eb04de56ecab7e255085b76bfade5dc3e0dbd007d995ed3e37bde5ce7e" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3e" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3e" kindref="member">CarFluid</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20" refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea8bda58832a68157abbcdcbb92f2e797c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea8bda58832a68157abbcdcbb92f2e797c" kindref="member">FUEL</ref>,</highlight></codeline>
+<codeline lineno="21" refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea6a10c29c017118a747a3f8b75b636420" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea6a10c29c017118a747a3f8b75b636420" kindref="member">OIL</ref>,</highlight></codeline>
+<codeline lineno="22" refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea8b23c50cc938e0b366df8d8eeeb1bf9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea8b23c50cc938e0b366df8d8eeeb1bf9f" kindref="member">BRAKE</ref>,</highlight></codeline>
+<codeline lineno="23" refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3eabfdedce56cd3007f426d72b322e08f61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3eabfdedce56cd3007f426d72b322e08f61" kindref="member">COOLANT</ref>,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea7021d2502c85204390cb42e75882b9d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea7021d2502c85204390cb42e75882b9d6" kindref="member">USER1</ref>,<sp/></highlight></codeline>
+<codeline lineno="26" refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea8705079f0e13eb223392c68f6f1fcc76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea8705079f0e13eb223392c68f6f1fcc76" kindref="member">USER2</ref>,<sp/></highlight></codeline>
+<codeline lineno="27" refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3eacefee1d627824eef0a1342df0619b6b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3eacefee1d627824eef0a1342df0619b6b9" kindref="member">USER3</ref>,<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea45cb8d0c757977e8fa4bb529e7483b6e" kindref="member">USER4</ref><sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3ea45cb8d0c757977e8fa4bb529e7483b6e" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36" refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0a506e8dd29460ea318b68d035f679b01b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0a506e8dd29460ea318b68d035f679b01b" kindref="member">MANUAL</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0a0a831c2bc18e8354fe3e30ec0f3cdcda" kindref="member">AUTOMATIC</ref><sp/></highlight></codeline>
+<codeline lineno="38" refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0a0a831c2bc18e8354fe3e30ec0f3cdcda" refkind="member"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>CarGear</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45" refid="_car_8c_1aa30eb9282a08c2fc085d4304c3c07467" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1aa30eb9282a08c2fc085d4304c3c07467" kindref="member">REVERSE</ref>,</highlight></codeline>
+<codeline lineno="46" refid="_car_8c_1af90a50e41ee751d29b456615e0039b26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1af90a50e41ee751d29b456615e0039b26" kindref="member">NEUTRAL</ref>,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1ab389c83c7858103858a35c23ab0d3425" kindref="member">FIRST</ref>,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a350a1cfb0b27583f94fc4e525f2b3783" kindref="member">SECOND</ref>,</highlight></codeline>
+<codeline lineno="49" refid="_car_8c_1a89cac2a98045d0387522c66a463c4acf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a89cac2a98045d0387522c66a463c4acf" kindref="member">THIRD</ref>,</highlight></codeline>
+<codeline lineno="50" refid="_car_8c_1a39df6567343ac4b4e473b9d418d44a2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a39df6567343ac4b4e473b9d418d44a2a" kindref="member">FOURTH</ref>,</highlight></codeline>
+<codeline lineno="51" refid="_car_8c_1a471351878aa1e38edbb4f3ee93bafbdd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a471351878aa1e38edbb4f3ee93bafbdd" kindref="member">FIFTH</ref>,</highlight></codeline>
+<codeline lineno="52" refid="_car_8c_1a6caf9ea3f90e7b994de6342932bb2b56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a6caf9ea3f90e7b994de6342932bb2b56" kindref="member">SIXTH</ref>,</highlight></codeline>
+<codeline lineno="53" refid="_car_8c_1a606bd74aa8e1860e30f92efb8b3491b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a606bd74aa8e1860e30f92efb8b3491b8" kindref="member">SEVENTH</ref>,</highlight></codeline>
+<codeline lineno="54" refid="_car_8c_1a3196c3e0c5dfbe1fc874805b09d2e41d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a3196c3e0c5dfbe1fc874805b09d2e41d" kindref="member">EIGTH</ref>,</highlight></codeline>
+<codeline lineno="55" refid="_car_8c_1a3d8e5897937dbe357beba62a4d9b32ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a3d8e5897937dbe357beba62a4d9b32ce" kindref="member">NINTH</ref>,</highlight></codeline>
+<codeline lineno="56" refid="_car_8c_1ac5620579e2aab50a4c89f9357fbce6de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1ac5620579e2aab50a4c89f9357fbce6de" kindref="member">TENTH</ref>,</highlight></codeline>
+<codeline lineno="57" refid="_car_8c_1a02080b6dca4894f3218302bff4493832" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a02080b6dca4894f3218302bff4493832" kindref="member">ELEVENTH</ref>,</highlight></codeline>
+<codeline lineno="58" refid="_car_8c_1adef498d9b19c0fbc43a274d6c1bbe9ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1adef498d9b19c0fbc43a274d6c1bbe9ff" kindref="member">TWELFTH</ref>,</highlight></codeline>
+<codeline lineno="59" refid="_car_8c_1a184285c8ef8c80c404aaaa604f834a62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a184285c8ef8c80c404aaaa604f834a62" kindref="member">THIRTEENTH</ref>,</highlight></codeline>
+<codeline lineno="60" refid="_car_8c_1af47deee04a88796af4368c616534af87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1af47deee04a88796af4368c616534af87" kindref="member">FOURTEENTH</ref>,</highlight></codeline>
+<codeline lineno="61" refid="_car_8c_1a4c7bac4ca5fd52cebb4ad714f73fc371" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a4c7bac4ca5fd52cebb4ad714f73fc371" kindref="member">FIFTEENTH</ref>,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a4679f969bc4966a6c58ac6e78a31f8b2" kindref="member">SIXTEENTH</ref></highlight></codeline>
+<codeline lineno="63" refid="_car_8c_1a4679f969bc4966a6c58ac6e78a31f8b2" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="_car_8c_1a0a634b2934eb4b736fe4d024586a7c45" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_car_8c_1a0a634b2934eb4b736fe4d024586a7c45" kindref="member">CarAutomaticGearboxMode</ref></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70" refid="_car_8c_1a0a634b2934eb4b736fe4d024586a7c45a82f05f38f6a17b117cdd2b83227912c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a0a634b2934eb4b736fe4d024586a7c45a82f05f38f6a17b117cdd2b83227912c6" kindref="member">P</ref>,<sp/></highlight></codeline>
+<codeline lineno="71" refid="_car_8c_1a0a634b2934eb4b736fe4d024586a7c45a1784b1a3d7cbd43c45ff82c72d05e4ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a0a634b2934eb4b736fe4d024586a7c45a1784b1a3d7cbd43c45ff82c72d05e4ae" kindref="member">R</ref>,<sp/></highlight></codeline>
+<codeline lineno="72" refid="_car_8c_1a0a634b2934eb4b736fe4d024586a7c45a2c63acbe79d9f41ba6bb7766e9c37702" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a0a634b2934eb4b736fe4d024586a7c45a2c63acbe79d9f41ba6bb7766e9c37702" kindref="member">N</ref>,<sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_car_8c_1a0a634b2934eb4b736fe4d024586a7c45a77a6b11f9898c052926f1d49765861e8" kindref="member">D</ref><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="_car_8c_1a0a634b2934eb4b736fe4d024586a7c45a77a6b11f9898c052926f1d49765861e8" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="class_transport" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">Car<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_transport" kindref="compound">Transport</ref></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="82" refid="class_transport_1a7d2ecabac5adbcb9a23e20657b624c08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/><ref refid="class_car_controller" kindref="compound">CarController</ref><sp/><ref refid="class_transport_1a7d2ecabac5adbcb9a23e20657b624c08" kindref="member">GetController</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85" refid="class_transport_1abc8ed14a1acb29a64730cd32db69e34f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transport_1abc8ed14a1acb29a64730cd32db69e34f" kindref="member">GetSpeedometer</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88" refid="class_transport_1a4a5f739ae1d537cbeaf85a7822f8a99a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a4a5f739ae1d537cbeaf85a7822f8a99a" kindref="member">GetSpeedometerAbsolute</ref>()</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gadf8820d46eee5033af2e12212c22b16e" kindref="member">AbsFloat</ref>(<ref refid="class_transport_1abc8ed14a1acb29a64730cd32db69e34f" kindref="member">GetSpeedometer</ref>());</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="class_transport_1ab7463c8bd3c95e6a622c2599738caf1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_transport_1ab7463c8bd3c95e6a622c2599738caf1f" kindref="member">IsAreaAtDoorFree</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currentSeat,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxAllowedObjHeight<sp/>=<sp/>0.5,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>horizontalExtents<sp/>=<sp/>0.5,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>playerHeight<sp/>=<sp/>1.7<sp/>)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>transform[4];</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>extents;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>extents[0]<sp/>=<sp/>horizontalExtents;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>extents[1]<sp/>=<sp/>playerHeight;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>extents[2]<sp/>=<sp/>horizontalExtents;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>speed<sp/>=<sp/><ref refid="class_transport_1a4a5f739ae1d537cbeaf85a7822f8a99a" kindref="member">GetSpeedometerAbsolute</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(speed<sp/>&gt;<sp/>8)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>extents[2]<sp/>=<sp/>extents[2]<sp/>*<sp/>6;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(speed<sp/>&gt;<sp/>8)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>extents[0]<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_transport_1ab7463c8bd3c95e6a622c2599738caf1f" kindref="member">IsAreaAtDoorFree</ref>(<sp/>currentSeat,<sp/>maxAllowedObjHeight,<sp/>extents,<sp/>transform<sp/>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112" refid="class_transport_1ae32dae79c114378ae05cf90bd97319c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/><ref refid="group___diag_menu_1ga6eaf263a07e0b8a8895ed494afceed7d" kindref="member">Shape</ref><sp/><ref refid="class_transport_1ae32dae79c114378ae05cf90bd97319c8" kindref="member">DebugFreeAreaAtDoor</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currentSeat,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxAllowedObjHeight<sp/>=<sp/>0.5,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>horizontalExtents<sp/>=<sp/>0.5,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>playerHeight<sp/>=<sp/>1.7<sp/>)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>color<sp/>=<sp/><ref refid="proto_8c_1a117bd706d35f6f2ae3f5db263b778704" kindref="member">ARGB</ref>(20,<sp/>0,<sp/>255,<sp/>0);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>transform[4];</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>extents;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>extents[0]<sp/>=<sp/>horizontalExtents;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>extents[1]<sp/>=<sp/>playerHeight;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>extents[2]<sp/>=<sp/>horizontalExtents;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>speed<sp/>=<sp/><ref refid="class_transport_1a4a5f739ae1d537cbeaf85a7822f8a99a" kindref="member">GetSpeedometerAbsolute</ref>();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(speed<sp/>&gt;<sp/>8)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>extents[2]<sp/>=<sp/>extents[2]<sp/>*<sp/>6;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(speed<sp/>&gt;<sp/>8)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>extents[0]<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_transport_1ab7463c8bd3c95e6a622c2599738caf1f" kindref="member">IsAreaAtDoorFree</ref>(<sp/>currentSeat,<sp/>maxAllowedObjHeight,<sp/>extents,<sp/>transform<sp/>))</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color<sp/>=<sp/><ref refid="proto_8c_1a117bd706d35f6f2ae3f5db263b778704" kindref="member">ARGB</ref>(20,<sp/>255,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___diag_menu_1ga6eaf263a07e0b8a8895ed494afceed7d" kindref="member">Shape</ref><sp/>shape<sp/>=<sp/><ref refid="class_debug" kindref="compound">Debug</ref>.<ref refid="class_debug_1a541bc3d8e091df322f3b75e82753d098" kindref="member">DrawBox</ref>(-extents<sp/>*<sp/>0.5,<sp/>extents<sp/>*<sp/>0.5,<sp/>color);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shape.SetMatrix(transform);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>shape;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140" refid="class_transport_1ad8d8442a43993ed2acfaadc7e7801581" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_transport_1ad8d8442a43993ed2acfaadc7e7801581" kindref="member">GetHideIconMask</ref>()</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EInventoryIconVisibility.HIDE_VICINITY;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="comment">//<sp/>controls</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="class_transport_1aefe1e4fb7b0b8939da45d4bbdd20bd34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transport_1aefe1e4fb7b0b8939da45d4bbdd20bd34" kindref="member">GetSteering</ref>();</highlight></codeline>
+<codeline lineno="156" refid="class_transport_1a9715dc75f347cd1cba16b7d0879bf049" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a9715dc75f347cd1cba16b7d0879bf049" kindref="member">SetSteering</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>in,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>analog<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="class_transport_1a3cf6e4b07be2eb0ef9a4223b5d316049" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a3cf6e4b07be2eb0ef9a4223b5d316049" kindref="member">GetThrustTurbo</ref>();</highlight></codeline>
+<codeline lineno="161" refid="class_transport_1a3d1f83ee6bf709a7e7bde83422de2c7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a3d1f83ee6bf709a7e7bde83422de2c7e" kindref="member">GetThrustGentle</ref>();</highlight></codeline>
+<codeline lineno="163" refid="class_transport_1a9872be0e33b222e483ccabede80747a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a9872be0e33b222e483ccabede80747a0" kindref="member">GetThrust</ref>();</highlight></codeline>
+<codeline lineno="171" refid="class_transport_1a033a134dab6b801ae30ef7d4efe563d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a033a134dab6b801ae30ef7d4efe563d3" kindref="member">SetThrust</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>in,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gentle<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>turbo<sp/>=<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="class_transport_1a92483eb57b7aff7cb1b5a5d95f9a6c85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a92483eb57b7aff7cb1b5a5d95f9a6c85" kindref="member">GetBrake</ref>();</highlight></codeline>
+<codeline lineno="181" refid="class_transport_1a6121e961e2f5fbb3ca284a3016010930" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a6121e961e2f5fbb3ca284a3016010930" kindref="member">SetBrake</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>in,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>panic<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>gentle<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="184" refid="class_transport_1a15d634f595095aead16ffbe99be9b4a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a15d634f595095aead16ffbe99be9b4a7" kindref="member">GetHandbrake</ref>();</highlight></codeline>
+<codeline lineno="190" refid="class_transport_1a5e80100de43649bd934a1263c0d02905" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a5e80100de43649bd934a1263c0d02905" kindref="member">SetHandbrake</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>in<sp/>);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="195" refid="class_transport_1ae1ce6cbb350512f90287770c4c4d846a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1ae1ce6cbb350512f90287770c4c4d846a" kindref="member">SetBrakesActivateWithoutDriver</ref>(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>activate<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="198" refid="class_transport_1aa3be565a9ac12d79dd1fdd442ae9cc38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transport_1aa3be565a9ac12d79dd1fdd442ae9cc38" kindref="member">GetClutch</ref>();</highlight></codeline>
+<codeline lineno="202" refid="class_transport_1af6508d6d921ed44fab465fa2550e81c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1af6508d6d921ed44fab465fa2550e81c7" kindref="member">SetClutchState</ref>(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>in<sp/>);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205" refid="class_transport_1ac8842ce1f22a9f12dd2d919656d6366c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_transport_1ac8842ce1f22a9f12dd2d919656d6366c" kindref="member">GetGear</ref>();</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="class_transport_1a272cce191f4f62e735171152e4b55c1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a272cce191f4f62e735171152e4b55c1e" kindref="member">ShiftUp</ref>();</highlight></codeline>
+<codeline lineno="208" refid="class_transport_1a2564a0430be41d35e72e582aed1081b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a2564a0430be41d35e72e582aed1081b5" kindref="member">ShiftTo</ref>(<sp/>CarGear<sp/>gear<sp/>);</highlight></codeline>
+<codeline lineno="209" refid="class_transport_1a4299c972238a203d6a91e145d51170a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a4299c972238a203d6a91e145d51170a1" kindref="member">ShiftDown</ref>();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="comment">//<sp/>fluids</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221" refid="class_transport_1ad07e8225810b7e59e9cc49f6b3545feb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transport_1ad07e8225810b7e59e9cc49f6b3545feb" kindref="member">GetFluidCapacity</ref>(<sp/><ref refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3e" kindref="member">CarFluid</ref><sp/>fluid<sp/>);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229" refid="class_transport_1abe5bd6c44a4ffcfb0d090ac7b8ca454f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transport_1abe5bd6c44a4ffcfb0d090ac7b8ca454f" kindref="member">GetFluidFraction</ref>(<sp/><ref refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3e" kindref="member">CarFluid</ref><sp/>fluid<sp/>);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="class_transport_1a55fdabb6316e0a10b399384a9e897968" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a55fdabb6316e0a10b399384a9e897968" kindref="member">Leak</ref>(<sp/><ref refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3e" kindref="member">CarFluid</ref><sp/>fluid,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>amount<sp/>);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="class_transport_1abc5c5c31ab2831029597f0ef50cbb193" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1abc5c5c31ab2831029597f0ef50cbb193" kindref="member">LeakAll</ref>(<sp/><ref refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3e" kindref="member">CarFluid</ref><sp/>fluid<sp/>);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238" refid="class_transport_1a3bd58e45ff97e500b75de515819e32ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a3bd58e45ff97e500b75de515819e32ec" kindref="member">Fill</ref>(<sp/><ref refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3e" kindref="member">CarFluid</ref><sp/>fluid,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>amount<sp/>);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248" refid="class_transport_1aff56d635c8fd2675b3f7ae2f2e24093a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1aff56d635c8fd2675b3f7ae2f2e24093a" kindref="member">OnFluidChanged</ref>(<sp/><ref refid="_car_8c_1a7e3ece2c12d3089c67bc1cc511b5fd3e" kindref="member">CarFluid</ref><sp/>fluid,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>newValue,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>oldValue<sp/>)<sp/>{}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="comment">//<sp/>engine</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256" refid="class_transport_1a75558225c98447eefc66ad47dc5d5a8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a75558225c98447eefc66ad47dc5d5a8f" kindref="member">EngineGetRPMMin</ref>();</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="259" refid="class_transport_1a5952b12a158004fa4bf4e9dcb8798ddd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a5952b12a158004fa4bf4e9dcb8798ddd" kindref="member">EngineGetRPMIdle</ref>();</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="262" refid="class_transport_1ad3330b88e5bdd9dfef9f75a8c4ef01f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transport_1ad3330b88e5bdd9dfef9f75a8c4ef01f7" kindref="member">EngineGetRPMMax</ref>();</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="class_transport_1ae6446cfc342cb0523b96cc6f9d25dd9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transport_1ae6446cfc342cb0523b96cc6f9d25dd9d" kindref="member">EngineGetRPMRedline</ref>();</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="class_transport_1a3e21da5acdffebe35da7ed2515174204" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a3e21da5acdffebe35da7ed2515174204" kindref="member">EngineGetRPM</ref>();</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271" refid="class_transport_1a606436df62e66142ba4121ac8a3d69b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a606436df62e66142ba4121ac8a3d69b3" kindref="member">EngineIsOn</ref>();</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274" refid="class_transport_1a70a5aec053545a38b511e103449db52b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a70a5aec053545a38b511e103449db52b" kindref="member">EngineStart</ref>();</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281" refid="class_transport_1ae39510278c7ce10a0a34fec79ddb2fc6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_transport_1ae39510278c7ce10a0a34fec79ddb2fc6" kindref="member">OnBeforeEngineStart</ref>()</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>engine<sp/>can<sp/>start<sp/>by<sp/>default</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288" refid="class_transport_1af0255db797cbabe221705dd29353b602" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1af0255db797cbabe221705dd29353b602" kindref="member">OnEngineStart</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291" refid="class_transport_1a852e823d244484ca398c97c8e3c48303" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a852e823d244484ca398c97c8e3c48303" kindref="member">EngineStop</ref>();</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294" refid="class_transport_1a3636972715aec329ad08d66577e43b78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a3636972715aec329ad08d66577e43b78" kindref="member">OnEngineStop</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297" refid="class_transport_1af11c477549e178e030ba20d8e74cc411" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/><ref refid="class_transport_1af11c477549e178e030ba20d8e74cc411" kindref="member">GetEnginePos</ref>();</highlight></codeline>
+<codeline lineno="299" refid="class_transport_1a2b7bb1fe19c176170f3536343a25d9a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a2b7bb1fe19c176170f3536343a25d9a6" kindref="member">SetEnginePos</ref>(<ref refid="classvector" kindref="compound">vector</ref><sp/>pos);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight><highlight class="comment">//<sp/>gearbox</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308" refid="class_transport_1af34ed6e137b6c8e8227c292e7c591567" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_transport_1af34ed6e137b6c8e8227c292e7c591567" kindref="member">GetGearsCount</ref>();</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311" refid="class_transport_1ac9c5ada8fd6b829a1392b95d0fc6bc80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/><ref refid="_car_8c_1aaf3a87b80cdbede35a29dc49909ac6c0" kindref="member">CarGearboxType</ref><sp/><ref refid="class_transport_1ac9c5ada8fd6b829a1392b95d0fc6bc80" kindref="member">GearboxGetType</ref>();</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314" refid="class_transport_1a689d83525b6ede8cd92a739d1ae70809" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/><ref refid="_car_8c_1a0a634b2934eb4b736fe4d024586a7c45" kindref="member">CarAutomaticGearboxMode</ref><sp/><ref refid="class_transport_1a689d83525b6ede8cd92a739d1ae70809" kindref="member">GearboxGetMode</ref>();</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322" refid="class_transport_1ae3145c4b9840cae0204585703dd6f102" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1ae3145c4b9840cae0204585703dd6f102" kindref="member">OnGearChanged</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>newGear,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>oldGear<sp/>)</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight><highlight class="comment">//<sp/>wheels</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332" refid="class_transport_1a7c320b7c39ac489750a2be587da4bda9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a7c320b7c39ac489750a2be587da4bda9" kindref="member">WheelIsAnyLocked</ref>();</highlight></codeline>
+<codeline lineno="338" refid="class_transport_1ab00a450447b6b32d19ae37b9aa636936" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_transport_1ab00a450447b6b32d19ae37b9aa636936" kindref="member">WheelIsLocked</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wheelIdx<sp/>);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"></highlight><highlight class="comment">//<sp/>events</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354" refid="class_transport_1ab8418127ee84bef9a3839302a5e708bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1ab8418127ee84bef9a3839302a5e708bd" kindref="member">OnContact</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>zoneName,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>localPos,<sp/><ref refid="class_i_entity" kindref="compound">IEntity</ref><sp/>other,<sp/><ref refid="class_contact" kindref="compound">Contact</ref><sp/>data<sp/>)<sp/>{}</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364" refid="class_transport_1a06d2cbb8d64b5ff50cf5d59eeafe76eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a06d2cbb8d64b5ff50cf5d59eeafe76eb" kindref="member">OnSound</ref>(<sp/><ref refid="_car_8c_1a5df5796eb04de56ecab7e255085b76bf" kindref="member">CarSoundCtrl</ref><sp/>ctrl,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>oldValue<sp/>)</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>just<sp/>use<sp/>the<sp/>computed<sp/>value<sp/>by<sp/>the<sp/>game<sp/>code</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>oldValue;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378" refid="class_transport_1a1daea56cb1ced6927f8766374fc132a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a1daea56cb1ced6927f8766374fc132a5" kindref="member">OnInput</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt<sp/>)<sp/>{}</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384" refid="class_transport_1a2a678b81fe0629d098c1a404f3a099fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a2a678b81fe0629d098c1a404f3a099fd" kindref="member">OnUpdate</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt<sp/>)<sp/>{}</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>implemented<sp/>only<sp/>in<sp/>internal<sp/>configuration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="389" refid="class_transport_1ada47780343b42afcc2898a96d22416eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1ada47780343b42afcc2898a96d22416eb" kindref="member">ForcePosition</ref>(<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>pos<sp/>);</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>implemented<sp/>only<sp/>in<sp/>internal<sp/>configuration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="391" refid="class_transport_1a80ed7e6b755e19f2f3a8fd51b2650e13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transport_1a80ed7e6b755e19f2f3a8fd51b2650e13" kindref="member">ForceDirection</ref>(<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>dir<sp/>);</highlight></codeline>
+<codeline lineno="392"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="397" refid="class_car_controller" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_car_controller" kindref="compound">CarController</ref></highlight></codeline>
+<codeline lineno="398"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="399" refid="class_car_controller_1a8c31ad9f271e8157269d482e824ac806" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_car_controller_1a8c31ad9f271e8157269d482e824ac806" kindref="member">CarController</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="400" refid="class_car_controller_1a6cdbc49e08ffb526a73d13a5f5184352" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_car_controller_1a6cdbc49e08ffb526a73d13a5f5184352" kindref="member">~CarController</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="403" refid="class_car_controller_1a1ef47f3f501e66beb3ac810e82f0efb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_car_controller_1a1ef47f3f501e66beb3ac810e82f0efb2" kindref="member">GetSteering</ref>();</highlight></codeline>
+<codeline lineno="410" refid="class_car_controller_1a5e1e337783b150d3fcd07f739928a2e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_car_controller_1a5e1e337783b150d3fcd07f739928a2e5" kindref="member">SetSteering</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>in,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>analog<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="413" refid="class_car_controller_1a5c54444830db6a25591624f2d19dcd05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_car_controller_1a5c54444830db6a25591624f2d19dcd05" kindref="member">GetThrustTurbo</ref>();</highlight></codeline>
+<codeline lineno="415" refid="class_car_controller_1adeacda7e1cae9f5bf49b099ff83c8b7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_car_controller_1adeacda7e1cae9f5bf49b099ff83c8b7f" kindref="member">GetThrustGentle</ref>();</highlight></codeline>
+<codeline lineno="417" refid="class_car_controller_1a1b8f68a91536cffe887f443287b6967f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_car_controller_1a1b8f68a91536cffe887f443287b6967f" kindref="member">GetThrust</ref>();</highlight></codeline>
+<codeline lineno="425" refid="class_car_controller_1adcae171b02d90659e5af20f50502e221" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_car_controller_1adcae171b02d90659e5af20f50502e221" kindref="member">SetThrust</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>in,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gentle<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>turbo<sp/>=<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="428" refid="class_car_controller_1ad49625668e5faa37154796e2d6a988b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_car_controller_1ad49625668e5faa37154796e2d6a988b9" kindref="member">GetBrake</ref>();</highlight></codeline>
+<codeline lineno="435" refid="class_car_controller_1ae061ea1a745c5a6d120f5bc7c1fdb677" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_car_controller_1ae061ea1a745c5a6d120f5bc7c1fdb677" kindref="member">SetBrake</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>in,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>panic<sp/>=<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight></codeline>
+<codeline lineno="438" refid="class_car_controller_1adf74fba8fcf9fe187ddf6ee2bd701ee2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_car_controller_1adf74fba8fcf9fe187ddf6ee2bd701ee2" kindref="member">GetGear</ref>();</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440" refid="class_car_controller_1a3896647e1194f76c59403dae7507d3dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_car_controller_1a3896647e1194f76c59403dae7507d3dc" kindref="member">ShiftUp</ref>();</highlight></codeline>
+<codeline lineno="441" refid="class_car_controller_1adcc2bef86771cb5fa7569e5e634329f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_car_controller_1adcc2bef86771cb5fa7569e5e634329f2" kindref="member">ShiftTo</ref>(<sp/>CarGear<sp/>gear<sp/>);</highlight></codeline>
+<codeline lineno="442" refid="class_car_controller_1a4a69236df1ad31a21cba67f3b14b580e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_car_controller_1a4a69236df1ad31a21cba67f3b14b580e" kindref="member">ShiftDown</ref>();</highlight></codeline>
+<codeline lineno="443"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Vehicles/Car.c"/>
+  </compounddef>
+</doxygen>

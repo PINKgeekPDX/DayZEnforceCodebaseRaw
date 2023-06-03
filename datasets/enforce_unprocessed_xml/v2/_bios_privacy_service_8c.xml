@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_bios_privacy_service_8c" kind="file" language="C++">
+    <compoundname>BiosPrivacyService.c</compoundname>
+    <innerclass refid="class_bios_privacy_permission_result" prot="public">BiosPrivacyPermissionResult</innerclass>
+    <innerclass refid="class_bios_privacy_uid_result" prot="public">BiosPrivacyUidResult</innerclass>
+    <innerclass refid="class_bios_privacy_service" prot="public">BiosPrivacyService</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_bios_privacy_service_8c_1a4c78f4ecb246c3812488500c977b330c" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EBiosPrivacyPermission</name>
+        <enumvalue id="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6aaed9d76200107fcb140be8cfc668b36a" prot="public">
+          <name>COMMUNICATE_VOICE</name>
+          <briefdescription>
+<para>Xbox: represents CommunicateUsingVoice permissions, see Xbox Docs. </para>
+          </briefdescription>
+          <detaileddescription>
+<para>Xbox: represents XPRIVILEGE_COMMUNICATION_VOICE_INGAME privilege, see Xbox Docs. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6a657b6b291ffd034637f2d3574da4af93" prot="public">
+          <name>COMMUNICATE_TEXT</name>
+          <briefdescription>
+<para>Xbox: represents CommunicateUsingText permissions, see Xbox Docs. </para>
+          </briefdescription>
+          <detaileddescription>
+<para>Xbox: represents XPRIVILEGE_COMMUNICATIONS privilege, see Xbox Docs. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_bios_privacy_service_8c_1a4c78f4ecb246c3812488500c977b330cab20cb3b3d56bc489e9505f9520ffc72e" prot="public">
+          <name>VIEW_PROFILE</name>
+          <briefdescription>
+<para>Xbox: represents ViewTargetProfile permissions, see Xbox Docs. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_bios_privacy_service_8c_1a4c78f4ecb246c3812488500c977b330cabb0189b475da28e7b404fd6cb0be25ae" prot="public">
+          <name>VIEW_PRESENCE</name>
+          <briefdescription>
+<para>Xbox: represents ViewTargetPresence permissions, see Xbox Docs. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>EBiosPrivacyPermission represents possible privacy permissions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>See individual values for platform support and meaning. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPrivacyService.c" line="5" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPrivacyService.c" bodystart="6" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="enum" id="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EBiosPrivacyPrivilege</name>
+        <enumvalue id="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6aaed9d76200107fcb140be8cfc668b36a" prot="public">
+          <name>COMMUNICATE_VOICE</name>
+          <briefdescription>
+<para>Xbox: represents CommunicateUsingVoice permissions, see Xbox Docs. </para>
+          </briefdescription>
+          <detaileddescription>
+<para>Xbox: represents XPRIVILEGE_COMMUNICATION_VOICE_INGAME privilege, see Xbox Docs. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6a657b6b291ffd034637f2d3574da4af93" prot="public">
+          <name>COMMUNICATE_TEXT</name>
+          <briefdescription>
+<para>Xbox: represents CommunicateUsingText permissions, see Xbox Docs. </para>
+          </briefdescription>
+          <detaileddescription>
+<para>Xbox: represents XPRIVILEGE_COMMUNICATIONS privilege, see Xbox Docs. </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6a0a6e9d0845bd5450b45ddca4b2d3c942" prot="public">
+          <name>MULTIPLAYER_GAMEPLAY</name>
+          <briefdescription>
+<para>Xbox: represents XPRIVILEGE_MULTIPLAYER_SESSIONS privilege, see Xbox Docs. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6a78eb707ee0b35b23ae34e58d9a3a8c5c" prot="public">
+          <name>MULTIPLAYER_LOBBY</name>
+          <briefdescription>
+<para>Xbox: represents XPRIVILEGE_MULTIPLAYER_PARTIES privilege, see Xbox Docs. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>EBiosPrivacyPrivilege represents possible privacy privileges. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>See individual values for platform support and meaning. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPrivacyService.c" line="17" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPrivacyService.c" bodystart="18" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_bios_privacy_service_8c_1a9cb97065130feccbe3cee34b78edc3f8" prot="public" static="no">
+        <type><ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_bios_privacy_permission_result" kindref="compound">BiosPrivacyPermissionResult</ref> &gt;</type>
+        <definition>typedef array&lt;ref BiosPrivacyPermissionResult&gt; BiosPrivacyPermissionResultArray</definition>
+        <argsstring></argsstring>
+        <name>BiosPrivacyPermissionResultArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPrivacyService.c" line="39" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPrivacyService.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_bios_privacy_service_8c_1a1629868bf3e6bbbe5397b2a19c768f22" prot="public" static="no">
+        <type><ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_bios_privacy_uid_result" kindref="compound">BiosPrivacyUidResult</ref> &gt;</type>
+        <definition>typedef array&lt;ref BiosPrivacyUidResult&gt; BiosPrivacyUidResultArray</definition>
+        <argsstring></argsstring>
+        <name>BiosPrivacyUidResultArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPrivacyService.c" line="49" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPrivacyService.c" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="_bios_privacy_service_8c_1a4c78f4ecb246c3812488500c977b330c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_bios_privacy_service_8c_1a4c78f4ecb246c3812488500c977b330c" kindref="member">EBiosPrivacyPermission</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7" refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6aaed9d76200107fcb140be8cfc668b36a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6aaed9d76200107fcb140be8cfc668b36a" kindref="member">COMMUNICATE_VOICE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="8" refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6a657b6b291ffd034637f2d3574da4af93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6a657b6b291ffd034637f2d3574da4af93" kindref="member">COMMUNICATE_TEXT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9" refid="_bios_privacy_service_8c_1a4c78f4ecb246c3812488500c977b330cab20cb3b3d56bc489e9505f9520ffc72e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_bios_privacy_service_8c_1a4c78f4ecb246c3812488500c977b330cab20cb3b3d56bc489e9505f9520ffc72e" kindref="member">VIEW_PROFILE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="10" refid="_bios_privacy_service_8c_1a4c78f4ecb246c3812488500c977b330cabb0189b475da28e7b404fd6cb0be25ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_bios_privacy_service_8c_1a4c78f4ecb246c3812488500c977b330cabb0189b475da28e7b404fd6cb0be25ae" kindref="member">VIEW_PRESENCE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6" kindref="member">EBiosPrivacyPrivilege</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6aaed9d76200107fcb140be8cfc668b36a" kindref="member">COMMUNICATE_VOICE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6a657b6b291ffd034637f2d3574da4af93" kindref="member">COMMUNICATE_TEXT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21" refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6a0a6e9d0845bd5450b45ddca4b2d3c942" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6a0a6e9d0845bd5450b45ddca4b2d3c942" kindref="member">MULTIPLAYER_GAMEPLAY</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22" refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6a78eb707ee0b35b23ae34e58d9a3a8c5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6a78eb707ee0b35b23ae34e58d9a3a8c5c" kindref="member">MULTIPLAYER_LOBBY</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_bios_privacy_permission_result" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_bios_privacy_permission_result" kindref="compound">BiosPrivacyPermissionResult</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29" refid="class_bios_privacy_permission_result_1a459b062c0f332bf961ac6b707f960b16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_bios_privacy_service_8c_1a4c78f4ecb246c3812488500c977b330c" kindref="member">EBiosPrivacyPermission</ref><sp/><sp/><ref refid="class_bios_privacy_permission_result_1a459b062c0f332bf961ac6b707f960b16" kindref="member">m_Permission</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30" refid="class_bios_privacy_permission_result_1af786948bfe437fa8bf7996efd00de041" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_bios_privacy_permission_result_1af786948bfe437fa8bf7996efd00de041" kindref="member">m_IsAllowed</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32" refid="class_bios_privacy_permission_result_1a29166d446768f6b80d71235d4688bcb6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_bios_privacy_permission_result_1a29166d446768f6b80d71235d4688bcb6" kindref="member">Compare</ref>(<sp/><ref refid="class_bios_privacy_permission_result" kindref="compound">BiosPrivacyPermissionResult</ref><sp/>a,<sp/><ref refid="class_bios_privacy_permission_result" kindref="compound">BiosPrivacyPermissionResult</ref><sp/>b<sp/>)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>a.<ref refid="class_bios_privacy_permission_result_1a459b062c0f332bf961ac6b707f960b16" kindref="member">m_Permission</ref><sp/>==<sp/>b.<ref refid="class_bios_privacy_permission_result_1a459b062c0f332bf961ac6b707f960b16" kindref="member">m_Permission</ref><sp/>&amp;&amp;<sp/>a.<ref refid="class_bios_privacy_permission_result_1af786948bfe437fa8bf7996efd00de041" kindref="member">m_IsAllowed</ref><sp/>==<sp/>b.<ref refid="class_bios_privacy_permission_result_1af786948bfe437fa8bf7996efd00de041" kindref="member">m_IsAllowed</ref><sp/>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="_bios_privacy_service_8c_1a9cb97065130feccbe3cee34b78edc3f8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ref BiosPrivacyPermissionResult&gt;</ref><sp/><ref refid="_bios_privacy_service_8c_1a9cb97065130feccbe3cee34b78edc3f8" kindref="member">BiosPrivacyPermissionResultArray</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="class_bios_privacy_uid_result" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_bios_privacy_uid_result" kindref="compound">BiosPrivacyUidResult</ref></highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45" refid="class_bios_privacy_uid_result_1a0ad10d791629e9a029d8301dc658bc87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_bios_privacy_uid_result_1a0ad10d791629e9a029d8301dc658bc87" kindref="member">m_Uid</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="class_bios_privacy_uid_result_1a120a4ee08b0393bc19ef3faf726e0fd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="classarray" kindref="compound">BiosPrivacyPermissionResultArray</ref><sp/><sp/><sp/><sp/><ref refid="class_bios_privacy_uid_result_1a120a4ee08b0393bc19ef3faf726e0fd3" kindref="member">m_Results</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="_bios_privacy_service_8c_1a1629868bf3e6bbbe5397b2a19c768f22" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ref BiosPrivacyUidResult&gt;</ref><sp/><ref refid="_bios_privacy_service_8c_1a1629868bf3e6bbbe5397b2a19c768f22" kindref="member">BiosPrivacyUidResultArray</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_bios_privacy_service" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_bios_privacy_service" kindref="compound">BiosPrivacyService</ref></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="class_bios_privacy_service_1aca726a6e1be53ada1e3149d9cbf1e1cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref><sp/><ref refid="class_bios_privacy_service_1aca726a6e1be53ada1e3149d9cbf1e1cb" kindref="member">GetPermissionsAsync</ref>(<ref refid="classarray" kindref="compound">array&lt;string&gt;</ref><sp/>uid_list,<sp/><ref refid="classarray" kindref="compound">array&lt;EBiosPrivacyPermission&gt;</ref><sp/>permission_list);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="class_bios_privacy_service_1ae498744933365c56503f74a0784c062d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref><sp/><ref refid="class_bios_privacy_service_1ae498744933365c56503f74a0784c062d" kindref="member">GetPrivilegeAsync</ref>(<ref refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6" kindref="member">EBiosPrivacyPrivilege</ref><sp/>privilege,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>try_resolution);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="class_bios_privacy_service_1a2736adb86bb51e4f66029b42356c5286" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bios_privacy_service_1a2736adb86bb51e4f66029b42356c5286" kindref="member">OnPermissions</ref>(<ref refid="classarray" kindref="compound">BiosPrivacyUidResultArray</ref><sp/>result_list,<sp/><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref><sp/>error)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result_list<sp/>==<sp/>null)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;biapi<sp/>privacy<sp/>error:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>error);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_online_services" kindref="compound">OnlineServices</ref>.<ref refid="class_online_services_1a1f73b418cea8d41844854fd8bdcca9c4" kindref="member">OnPermissionsAsync</ref>(<sp/>result_list,<sp/>error<sp/>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="class_bios_privacy_service_1a00d20a9660b1df3f40d157da4bae87c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bios_privacy_service_1a00d20a9660b1df3f40d157da4bae87c9" kindref="member">OnPrivilege</ref>(<ref refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6" kindref="member">EBiosPrivacyPrivilege</ref><sp/>privilege,<sp/><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref><sp/>error)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<sp/>privilege<sp/>)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6" kindref="member">EBiosPrivacyPrivilege</ref>.MULTIPLAYER_GAMEPLAY:</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_online_services" kindref="compound">OnlineServices</ref>.<ref refid="class_online_services_1aeaaca2a74f886df6387e1024ddfb6515" kindref="member">OnLoadMPPrivilege</ref>(<sp/>error<sp/>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6" kindref="member">EBiosPrivacyPrivilege</ref>.COMMUNICATE_VOICE:</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_online_services" kindref="compound">OnlineServices</ref>.<ref refid="class_online_services_1ab9d2f25a44c5258875991e109f6ba963" kindref="member">OnLoadVoicePrivilege</ref>(<sp/>error<sp/>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPrivacyService.c"/>
+  </compounddef>
+</doxygen>

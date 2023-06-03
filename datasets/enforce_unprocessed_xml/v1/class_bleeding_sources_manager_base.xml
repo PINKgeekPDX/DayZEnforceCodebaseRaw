@@ -1,0 +1,2016 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_bleeding_sources_manager_base" kind="class" language="C++" prot="public">
+    <compoundname>BleedingSourcesManagerBase</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1a5d5e7474aace1e01fd483257a92824bb" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, ref <ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1a301d95dfdab75e9e999bc3ead545a325" kindref="member">BleedingSource</ref> &gt;</type>
+        <definition>ref map&lt;int, ref BleedingSource&gt; BleedingSourcesManagerBase::m_BleedingSources</definition>
+        <argsstring></argsstring>
+        <name>m_BleedingSources</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_BleedingSources</qualifiedname>
+        <initializer>= new <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt;<ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, ref <ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1a301d95dfdab75e9e999bc3ead545a325" kindref="member">BleedingSource</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="3" column="9" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1ab4759ec7f0ca39d0747c4a4892925933" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="classstring" kindref="compound">string</ref>, ref <ref refid="class_bleeding_source_zone" kindref="compound">BleedingSourceZone</ref> &gt;</type>
+        <definition>ref map&lt;string, ref BleedingSourceZone&gt; BleedingSourcesManagerBase::m_BleedingSourceZone</definition>
+        <argsstring></argsstring>
+        <name>m_BleedingSourceZone</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_BleedingSourceZone</qualifiedname>
+        <initializer>= new <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt;<ref refid="classstring" kindref="compound">string</ref>, ref <ref refid="class_bleeding_source_zone" kindref="compound">BleedingSourceZone</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="4" column="9" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1a6c7440d28251890f2a2df45abe988fa0" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt;</type>
+        <definition>ref map&lt;int, int&gt; BleedingSourcesManagerBase::m_BleedingSourcesByLocation</definition>
+        <argsstring></argsstring>
+        <name>m_BleedingSourcesByLocation</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_BleedingSourcesByLocation</qualifiedname>
+        <initializer>= new <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt;<ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="5" column="9" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1ac807c280f8ec7c51d597e5dc8da24bcb" prot="private" static="no" mutable="no">
+        <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+        <definition>ItemBase BleedingSourcesManagerBase::m_Item</definition>
+        <argsstring></argsstring>
+        <name>m_Item</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_Item</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="8" column="10" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1a6e51b93ec2951277b7ec47d598b2e6f4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+        <definition>PlayerBase BleedingSourcesManagerBase::m_Player</definition>
+        <argsstring></argsstring>
+        <name>m_Player</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_Player</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="9" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1aabde288129ffe22c08fc9bc3139f4f62" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, <ref refid="classstring" kindref="compound">string</ref> &gt;</type>
+        <definition>ref map&lt;int, string&gt; BleedingSourcesManagerBase::m_BitToFireGeom</definition>
+        <argsstring></argsstring>
+        <name>m_BitToFireGeom</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_BitToFireGeom</qualifiedname>
+        <initializer>= new <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt;<ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, <ref refid="classstring" kindref="compound">string</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="11" column="9" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1abd80bcbb24d5dd749d3d059eae5fef03" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected int BleedingSourcesManagerBase::m_Bit</definition>
+        <argsstring></argsstring>
+        <name>m_Bit</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_Bit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="12" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1a882f29c40b724829db0c6e62883306f7" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int BleedingSourcesManagerBase::m_BitOffset</definition>
+        <argsstring></argsstring>
+        <name>m_BitOffset</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_BitOffset</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="13" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1a6eab729d82d366164e3db3b991ec0061" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int BleedingSourcesManagerBase::m_BleedingBits</definition>
+        <argsstring></argsstring>
+        <name>m_BleedingBits</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_BleedingBits</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="4" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1a15d25923c8f329216b056704df67dffd" prot="private" static="no" mutable="no">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool BleedingSourcesManagerBase::m_ShowDiag</definition>
+        <argsstring></argsstring>
+        <name>m_ShowDiag</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_ShowDiag</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="5" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1abdc386416eafeec9d65c7cf4e2482d8e" prot="private" static="no" mutable="no">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool BleedingSourcesManagerBase::m_ShowingDiag</definition>
+        <argsstring></argsstring>
+        <name>m_ShowingDiag</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_ShowingDiag</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="6" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1a11ef3993bd48851be6e9277fce633c2a" prot="private" static="no" mutable="no">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool BleedingSourcesManagerBase::m_ShowingDiagDraw</definition>
+        <argsstring></argsstring>
+        <name>m_ShowingDiagDraw</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_ShowingDiagDraw</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="7" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1ade10a184e2b4e9dbc70bd41d89ee3982" prot="private" static="no" mutable="no">
+        <type><ref refid="group___diag_menu_1ga6eaf263a07e0b8a8895ed494afceed7d" kindref="member">Shape</ref></type>
+        <definition>Shape BleedingSourcesManagerBase::m_Point</definition>
+        <argsstring></argsstring>
+        <name>m_Point</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_Point</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="8" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1a5c5c7e3be32b30e7e2b4f4f0705789f1" prot="private" static="no" mutable="no">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool BleedingSourcesManagerBase::m_EnableHitIndication</definition>
+        <argsstring></argsstring>
+        <name>m_EnableHitIndication</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_EnableHitIndication</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="9" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1a99664bf93584bdfe543d327c28117e73" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>const float BleedingSourcesManagerBase::TICK_INTERVAL_SEC</definition>
+        <argsstring></argsstring>
+        <name>TICK_INTERVAL_SEC</name>
+        <qualifiedname>BleedingSourcesManagerBase::TICK_INTERVAL_SEC</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="3" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1a04481830a7bdaa63213411fb85a213f9" prot="private" static="no" mutable="no">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float BleedingSourcesManagerBase::m_Tick</definition>
+        <argsstring></argsstring>
+        <name>m_Tick</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_Tick</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="4" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1a25bd64a5c458dd227a7a264ece1c5146" prot="private" static="no" mutable="no">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool BleedingSourcesManagerBase::m_DisableBloodLoss</definition>
+        <argsstring></argsstring>
+        <name>m_DisableBloodLoss</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_DisableBloodLoss</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="5" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1a5ee4716e4fb070fd57471a26063dba30" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt;</type>
+        <definition>ref array&lt;int&gt; BleedingSourcesManagerBase::m_DeleteList</definition>
+        <argsstring></argsstring>
+        <name>m_DeleteList</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_DeleteList</qualifiedname>
+        <initializer>= new <ref refid="classarray" kindref="compound">array</ref>&lt;<ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="6" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1af240cd609fe6770c91c4c088d5575405" prot="private" static="no" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int BleedingSourcesManagerBase::STORAGE_VERSION</definition>
+        <argsstring></argsstring>
+        <name>STORAGE_VERSION</name>
+        <qualifiedname>BleedingSourcesManagerBase::STORAGE_VERSION</qualifiedname>
+        <initializer>= 103</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="8" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1a1fe5c07ff56ee39b093c98902cd216c1" prot="private" static="yes" mutable="no">
+        <type>ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt;</type>
+        <definition>ref map&lt;int, int&gt; BleedingSourcesManagerBase::m_BleedingSourcesZonesMaskByLocation</definition>
+        <argsstring></argsstring>
+        <name>m_BleedingSourcesZonesMaskByLocation</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_BleedingSourcesZonesMaskByLocation</qualifiedname>
+        <initializer>= new <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt;<ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="6" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bleeding_sources_manager_base_1a7b5670407955cd76453d9190fbc24b43" prot="private" static="yes" mutable="no">
+        <type>ref set&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt;</type>
+        <definition>ref set&lt;int&gt; BleedingSourcesManagerBase::m_BleedingSourcesLocationsList</definition>
+        <argsstring></argsstring>
+        <name>m_BleedingSourcesLocationsList</name>
+        <qualifiedname>BleedingSourcesManagerBase::m_BleedingSourcesLocationsList</qualifiedname>
+        <initializer>= new set&lt;<ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="7" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a86ccae3000644b11d9c791d275433317" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::BleedingSourcesManagerBase</definition>
+        <argsstring>(PlayerBase player)</argsstring>
+        <name>BleedingSourcesManagerBase</name>
+        <qualifiedname>BleedingSourcesManagerBase::BleedingSourcesManagerBase</qualifiedname>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="15" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1af6ef4feb46e4afb7c70f597e0a8744c8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void BleedingSourcesManagerBase::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>BleedingSourcesManagerBase::Init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="21" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="21" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a8e9c0ed03a66a601a2241236f2d64465" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void BleedingSourcesManagerBase::SetItem</definition>
+        <argsstring>(ItemBase item)</argsstring>
+        <name>SetItem</name>
+        <qualifiedname>BleedingSourcesManagerBase::SetItem</qualifiedname>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="64" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1ab26dba924c8a47be9ee2ab9a893737f2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>set&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt;</type>
+        <definition>set&lt; int &gt; BleedingSourcesManagerBase::GetBleedingSourcesLocations</definition>
+        <argsstring>()</argsstring>
+        <name>GetBleedingSourcesLocations</name>
+        <qualifiedname>BleedingSourcesManagerBase::GetBleedingSourcesLocations</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="70" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a0badf6023d78baa44f4dc61419787101" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int BleedingSourcesManagerBase::GetBleedingSourceBitsByInvLocation</definition>
+        <argsstring>(int inv_location)</argsstring>
+        <name>GetBleedingSourceBitsByInvLocation</name>
+        <qualifiedname>BleedingSourcesManagerBase::GetBleedingSourceBitsByInvLocation</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>inv_location</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="77" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="77" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a3a1fe0325565940dc3aa0c48dd07ab34" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int BleedingSourcesManagerBase::GetFreeBleedingSourceBitsByInvLocation</definition>
+        <argsstring>(int inv_location)</argsstring>
+        <name>GetFreeBleedingSourceBitsByInvLocation</name>
+        <qualifiedname>BleedingSourcesManagerBase::GetFreeBleedingSourceBitsByInvLocation</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>inv_location</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="88" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="88" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a062ec48e1e86e9b3542b921fc58001f3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool BleedingSourcesManagerBase::IsBleedingSourceActive</definition>
+        <argsstring>(string name)</argsstring>
+        <name>IsBleedingSourceActive</name>
+        <qualifiedname>BleedingSourcesManagerBase::IsBleedingSourceActive</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="98" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="98" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1aa2b1be4a1423c708b1960f15ffcf44cd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected int BleedingSourcesManagerBase::GetBitFromSelectionID</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetBitFromSelectionID</name>
+        <qualifiedname>BleedingSourcesManagerBase::GetBitFromSelectionID</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="107" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="107" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1ad1e4286226f23045da2082dfe664b0a8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="class_bleeding_source_zone" kindref="compound">BleedingSourceZone</ref></type>
+        <definition>protected BleedingSourceZone BleedingSourcesManagerBase::GetBleedingSourceMeta</definition>
+        <argsstring>(int bit)</argsstring>
+        <name>GetBleedingSourceMeta</name>
+        <qualifiedname>BleedingSourcesManagerBase::GetBleedingSourceMeta</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="127" column="30" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="127" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a4275ada26cb15d8b7a90e394a95f9dff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int BleedingSourcesManagerBase::GetRegisteredSourcesCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetRegisteredSourcesCount</name>
+        <qualifiedname>BleedingSourcesManagerBase::GetRegisteredSourcesCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="132" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="132" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a67f4ec0edde2103be84ce6a6f5f57218" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void BleedingSourcesManagerBase::RegisterBleedingZoneEx</definition>
+        <argsstring>(string name, int max_time, string bone=&quot;&quot;, vector orientation=&quot;0 0 0&quot;, vector offset=&quot;0 0 0&quot;, float flow_modifier=1, string particle_name=&quot;BleedingSourceEffect&quot;, int inv_location=0)</argsstring>
+        <name>RegisterBleedingZoneEx</name>
+        <qualifiedname>BleedingSourcesManagerBase::RegisterBleedingZoneEx</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>max_time</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>bone</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>orientation</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>offset</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>flow_modifier</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>particle_name</declname>
+          <defval>&quot;BleedingSourceEffect&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>inv_location</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="137" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="137" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a71a96839a735f8196c8ecd4356bbdecd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void BleedingSourcesManagerBase::RegisterBleedingZone</definition>
+        <argsstring>(string name, int max_time, string bone=&quot;&quot;, vector orientation=&quot;0 0 0&quot;, vector offset=&quot;0 0 0&quot;, float flow_modifier=1, string particle_name=&quot;BleedingSourceEffect&quot;)</argsstring>
+        <name>RegisterBleedingZone</name>
+        <qualifiedname>BleedingSourcesManagerBase::RegisterBleedingZone</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>max_time</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>bone</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>orientation</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>offset</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>flow_modifier</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>particle_name</declname>
+          <defval>&quot;BleedingSourceEffect&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="165" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="165" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a7f5c08b213a0ff1f139b97ad36f89b77" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::RemoveAllSources</definition>
+        <argsstring>()</argsstring>
+        <name>RemoveAllSources</name>
+        <qualifiedname>BleedingSourcesManagerBase::RemoveAllSources</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="170" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="170" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a7189b536feab7bbe183bba709165bf88" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected int BleedingSourcesManagerBase::GetBitFromSelectionName</definition>
+        <argsstring>(string name)</argsstring>
+        <name>GetBitFromSelectionName</name>
+        <qualifiedname>BleedingSourcesManagerBase::GetBitFromSelectionName</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="180" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="180" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1ac3ef4d0049879112503880a87a305a65" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>protected string BleedingSourcesManagerBase::GetSelectionNameFromBit</definition>
+        <argsstring>(int bit)</argsstring>
+        <name>GetSelectionNameFromBit</name>
+        <qualifiedname>BleedingSourcesManagerBase::GetSelectionNameFromBit</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="189" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="189" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a4b41d776f47c3ef1388fcc121a46ba59" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool BleedingSourcesManagerBase::AttemptAddBleedingSource</definition>
+        <argsstring>(int component)</argsstring>
+        <name>AttemptAddBleedingSource</name>
+        <qualifiedname>BleedingSourcesManagerBase::AttemptAddBleedingSource</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>component</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="194" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="194" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a7eb44252372ebcb9e625b7592929ec1b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool BleedingSourcesManagerBase::AttemptAddBleedingSourceBySelection</definition>
+        <argsstring>(string selection_name)</argsstring>
+        <name>AttemptAddBleedingSourceBySelection</name>
+        <qualifiedname>BleedingSourcesManagerBase::AttemptAddBleedingSourceBySelection</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>selection_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="212" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="212" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a22d1c46468ecfc27bbe35305d20e5b3a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool BleedingSourcesManagerBase::AttemptAddBleedingSourceDirectly</definition>
+        <argsstring>(int bit, eBleedingSourceType type=eBleedingSourceType.NORMAL, int context=0)</argsstring>
+        <name>AttemptAddBleedingSourceDirectly</name>
+        <qualifiedname>BleedingSourcesManagerBase::AttemptAddBleedingSourceDirectly</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>bit</declname>
+        </param>
+        <param>
+          <type><ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1aeba8c9bb130127e78cbffdff6a08cb3f" kindref="member">eBleedingSourceType</ref></type>
+          <declname>type</declname>
+          <defval><ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1aeba8c9bb130127e78cbffdff6a08cb3fa50d1448013c6f17125caee18aa418af7" kindref="member">eBleedingSourceType.NORMAL</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>context</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="231" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="231" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1afac7f9f7db6fdd0f63f0c728cbbd5491" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool BleedingSourcesManagerBase::CanAddBleedingSource</definition>
+        <argsstring>(int bit)</argsstring>
+        <name>CanAddBleedingSource</name>
+        <qualifiedname>BleedingSourcesManagerBase::CanAddBleedingSource</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="242" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="242" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a5fb2938b4a66289a172ee44eb11af179" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void BleedingSourcesManagerBase::AddBleedingSourceEx</definition>
+        <argsstring>(int bit, eBleedingSourceType type=eBleedingSourceType.NORMAL, int context=0)</argsstring>
+        <name>AddBleedingSourceEx</name>
+        <qualifiedname>BleedingSourcesManagerBase::AddBleedingSourceEx</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>bit</declname>
+        </param>
+        <param>
+          <type><ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1aeba8c9bb130127e78cbffdff6a08cb3f" kindref="member">eBleedingSourceType</ref></type>
+          <declname>type</declname>
+          <defval><ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1aeba8c9bb130127e78cbffdff6a08cb3fa50d1448013c6f17125caee18aa418af7" kindref="member">eBleedingSourceType.NORMAL</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>context</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="248" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="248" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1ad3c28ceb92346804296c593f41f3fe71" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void BleedingSourcesManagerBase::AddBleedingSource</definition>
+        <argsstring>(int bit)</argsstring>
+        <name>AddBleedingSource</name>
+        <qualifiedname>BleedingSourcesManagerBase::AddBleedingSource</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="254" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="254" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a16a522c09c63bb265f014d9c8d08bdb5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int BleedingSourcesManagerBase::GetBleedingSourceActiveTime</definition>
+        <argsstring>(int bit)</argsstring>
+        <name>GetBleedingSourceActiveTime</name>
+        <qualifiedname>BleedingSourcesManagerBase::GetBleedingSourceActiveTime</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="271" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="271" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a6563be9d1c0ea78f298b26541a969adf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::SetBleedingSourceActiveTime</definition>
+        <argsstring>(int bit, int time)</argsstring>
+        <name>SetBleedingSourceActiveTime</name>
+        <qualifiedname>BleedingSourcesManagerBase::SetBleedingSourceActiveTime</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>bit</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="281" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="281" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1aca2fec9c1bc33542b6039c8b375b891b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::SetBleedingSourceType</definition>
+        <argsstring>(int bit, eBleedingSourceType type)</argsstring>
+        <name>SetBleedingSourceType</name>
+        <qualifiedname>BleedingSourcesManagerBase::SetBleedingSourceType</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>bit</declname>
+        </param>
+        <param>
+          <type><ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1aeba8c9bb130127e78cbffdff6a08cb3f" kindref="member">eBleedingSourceType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="289" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="289" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a51d0d544261b55c3dc854ba49b8716fd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1aeba8c9bb130127e78cbffdff6a08cb3f" kindref="member">eBleedingSourceType</ref></type>
+        <definition>eBleedingSourceType BleedingSourcesManagerBase::GetBleedingSourceType</definition>
+        <argsstring>(int bit)</argsstring>
+        <name>GetBleedingSourceType</name>
+        <qualifiedname>BleedingSourcesManagerBase::GetBleedingSourceType</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="296" column="21" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="296" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1ac6bdbd0c8fd70f1c377f7a0634d1326f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool BleedingSourcesManagerBase::RemoveBleedingSource</definition>
+        <argsstring>(int bit)</argsstring>
+        <name>RemoveBleedingSource</name>
+        <qualifiedname>BleedingSourcesManagerBase::RemoveBleedingSource</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="305" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="305" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1ad92af0f056b7e9d72a1fc0aa229041f2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int BleedingSourcesManagerBase::GetBleedingSourcesCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetBleedingSourcesCount</name>
+        <qualifiedname>BleedingSourcesManagerBase::GetBleedingSourcesCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="319" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="319" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a66fb355a823abd7a2b39489731bdf19d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void BleedingSourcesManagerBase::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>BleedingSourcesManagerBase::Init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="11" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="11" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1aa2d3211e209975dc7e665bf8dbbb4e0b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void BleedingSourcesManagerBase::RegisterBleedingZoneEx</definition>
+        <argsstring>(string name, int max_time, string bone=&quot;&quot;, vector orientation=&quot;0 0 0&quot;, vector offset=&quot;0 0 0&quot;, float flow_modifier=1, string particle_name=&quot;BleedingSourceEffect&quot;, int inv_location=0)</argsstring>
+        <name>RegisterBleedingZoneEx</name>
+        <qualifiedname>BleedingSourcesManagerBase::RegisterBleedingZoneEx</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>max_time</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>bone</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>orientation</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>offset</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>flow_modifier</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>particle_name</declname>
+          <defval>&quot;BleedingSourceEffect&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>inv_location</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="22" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="22" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a12d6b9dcb70f6f8655eb7f16491e570e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::OnVariablesSynchronized</definition>
+        <argsstring>(int current_bits)</argsstring>
+        <name>OnVariablesSynchronized</name>
+        <qualifiedname>BleedingSourcesManagerBase::OnVariablesSynchronized</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>current_bits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="33" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="33" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1afdc88f3bd896f193544bc6b22c0416ac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::Reload</definition>
+        <argsstring>()</argsstring>
+        <name>Reload</name>
+        <qualifiedname>BleedingSourcesManagerBase::Reload</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="50" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="50" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1ab61cb7f09609aec39f08808b4016fd9b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::OnBleedingBitsUpdate</definition>
+        <argsstring>(int old_mask, int new_mask)</argsstring>
+        <name>OnBleedingBitsUpdate</name>
+        <qualifiedname>BleedingSourcesManagerBase::OnBleedingBitsUpdate</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>old_mask</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>new_mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="69" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="69" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a14689995b305422ea2845eec83219214" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int BleedingSourcesManagerBase::GetBleedingSourceCountRemote</definition>
+        <argsstring>()</argsstring>
+        <name>GetBleedingSourceCountRemote</name>
+        <qualifiedname>BleedingSourcesManagerBase::GetBleedingSourceCountRemote</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="95" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="95" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1aa8e75ca4c1b912fc92a39082f512bfef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::SetDiag</definition>
+        <argsstring>(bool value)</argsstring>
+        <name>SetDiag</name>
+        <qualifiedname>BleedingSourcesManagerBase::SetDiag</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="113" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="113" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1ac679eaf664976327b403626b83b3a166" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::OnUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>OnUpdate</name>
+        <qualifiedname>BleedingSourcesManagerBase::OnUpdate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="144" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="144" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1ae97cb7963f1c6e6d1701c8db8035f12e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::DisplayDebug</definition>
+        <argsstring>()</argsstring>
+        <name>DisplayDebug</name>
+        <qualifiedname>BleedingSourcesManagerBase::DisplayDebug</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="162" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="162" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a5280c85d10357606a3c6b14b2da67486" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::CleanDebug</definition>
+        <argsstring>()</argsstring>
+        <name>CleanDebug</name>
+        <qualifiedname>BleedingSourcesManagerBase::CleanDebug</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="197" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="197" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a98d58a4432185ef79709a91e1db83591" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::DisplayVisualDebug</definition>
+        <argsstring>()</argsstring>
+        <name>DisplayVisualDebug</name>
+        <qualifiedname>BleedingSourcesManagerBase::DisplayVisualDebug</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="207" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="207" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a618b668e8b54be4e6de365271a09da3d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::CleanVisualDebug</definition>
+        <argsstring>()</argsstring>
+        <name>CleanVisualDebug</name>
+        <qualifiedname>BleedingSourcesManagerBase::CleanVisualDebug</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" line="237" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerRemote.c" bodystart="237" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a8b1897cb8f4be7aea8691dfbcf03f9ed" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="class_bleeding_source_zone" kindref="compound">BleedingSourceZone</ref></type>
+        <definition>protected BleedingSourceZone BleedingSourcesManagerBase::GetBleedingSourceZone</definition>
+        <argsstring>(int bit)</argsstring>
+        <name>GetBleedingSourceZone</name>
+        <qualifiedname>BleedingSourcesManagerBase::GetBleedingSourceZone</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="10" column="30" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a1c3a83676b915eb2872e740a510ea43c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int BleedingSourcesManagerBase::GetStorageVersion</definition>
+        <argsstring>()</argsstring>
+        <name>GetStorageVersion</name>
+        <qualifiedname>BleedingSourcesManagerBase::GetStorageVersion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="15" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1adc02d349d745595f2852786f5276855a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::RequestDeletion</definition>
+        <argsstring>(int bit)</argsstring>
+        <name>RequestDeletion</name>
+        <qualifiedname>BleedingSourcesManagerBase::RequestDeletion</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="20" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a2ab83ae193dfc6003ef11b32edcd5954" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void BleedingSourcesManagerBase::AddBleedingSource</definition>
+        <argsstring>(int bit)</argsstring>
+        <name>AddBleedingSource</name>
+        <qualifiedname>BleedingSourcesManagerBase::AddBleedingSource</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="25" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="25" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1ad1f17bb00c0bebe7d74d3fd927ac4194" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override protected bool BleedingSourcesManagerBase::RemoveBleedingSource</definition>
+        <argsstring>(int bit)</argsstring>
+        <name>RemoveBleedingSource</name>
+        <qualifiedname>BleedingSourcesManagerBase::RemoveBleedingSource</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>bit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="31" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="31" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a8ed240c35d8f686d0cd64f689dee423d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::RemoveAnyBleedingSource</definition>
+        <argsstring>()</argsstring>
+        <name>RemoveAnyBleedingSource</name>
+        <qualifiedname>BleedingSourcesManagerBase::RemoveAnyBleedingSource</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="64" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="64" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a2a5e4e3709e2af2f110d4de59d46b2d1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::RemoveMostSignificantBleedingSource</definition>
+        <argsstring>()</argsstring>
+        <name>RemoveMostSignificantBleedingSource</name>
+        <qualifiedname>BleedingSourcesManagerBase::RemoveMostSignificantBleedingSource</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="72" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="72" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1adf119ff3b88394dba724e222cd918cd6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::RemoveMostSignificantBleedingSourceEx</definition>
+        <argsstring>(ItemBase item)</argsstring>
+        <name>RemoveMostSignificantBleedingSourceEx</name>
+        <qualifiedname>BleedingSourcesManagerBase::RemoveMostSignificantBleedingSourceEx</qualifiedname>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="79" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="79" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a452c265ba26116005a206c6976f60334" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int BleedingSourcesManagerBase::GetMostSignificantBleedingSource</definition>
+        <argsstring>()</argsstring>
+        <name>GetMostSignificantBleedingSource</name>
+        <qualifiedname>BleedingSourcesManagerBase::GetMostSignificantBleedingSource</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="85" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="85" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a36162bc15b696f8558986232d2fc9059" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::OnTick</definition>
+        <argsstring>(float delta_time)</argsstring>
+        <name>OnTick</name>
+        <qualifiedname>BleedingSourcesManagerBase::OnTick</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>delta_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="115" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="115" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1af3246e9a21b7ec1a01f0727825abcdf5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::ActivateAllBS</definition>
+        <argsstring>()</argsstring>
+        <name>ActivateAllBS</name>
+        <qualifiedname>BleedingSourcesManagerBase::ActivateAllBS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="137" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="137" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a873417e1eebefed3696e8e2fba56d6e3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::ProcessHit</definition>
+        <argsstring>(float damage, EntityAI source, int component, string zone, string ammo, vector modelPos)</argsstring>
+        <name>ProcessHit</name>
+        <qualifiedname>BleedingSourcesManagerBase::ProcessHit</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>damage</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>component</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>zone</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>ammo</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>modelPos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="150" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="150" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a07de25bda7ec66ee3851eefbebf24b21" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::DebugActivateBleedingSource</definition>
+        <argsstring>(int source)</argsstring>
+        <name>DebugActivateBleedingSource</name>
+        <qualifiedname>BleedingSourcesManagerBase::DebugActivateBleedingSource</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="177" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="177" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a11e9cf9c1873fb9a92fd36105d41899b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::SetBloodLoss</definition>
+        <argsstring>(bool status)</argsstring>
+        <name>SetBloodLoss</name>
+        <qualifiedname>BleedingSourcesManagerBase::SetBloodLoss</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="191" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="191" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a4838d40bd8894978707b2b7854440bfb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::OnStoreSave</definition>
+        <argsstring>(ParamsWriteContext ctx)</argsstring>
+        <name>OnStoreSave</name>
+        <qualifiedname>BleedingSourcesManagerBase::OnStoreSave</qualifiedname>
+        <param>
+          <type><ref refid="gameplay_8c_1af1d1033fca2ebd02f4ba61051b6341c4" kindref="member">ParamsWriteContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="196" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="196" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1ac5b42f3429e16dc6350ee1baf8dcc537" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool BleedingSourcesManagerBase::OnStoreLoad</definition>
+        <argsstring>(ParamsReadContext ctx, int version)</argsstring>
+        <name>OnStoreLoad</name>
+        <qualifiedname>BleedingSourcesManagerBase::OnStoreLoad</qualifiedname>
+        <param>
+          <type><ref refid="gameplay_8c_1a4ff67286551fc6c18504752a277c8bc1" kindref="member">ParamsReadContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="218" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="218" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bleeding_sources_manager_base_1a98f9b5a1223e5745f7872a2e3dc89c97" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BleedingSourcesManagerBase::~BleedingSourcesManagerServer</definition>
+        <argsstring>()</argsstring>
+        <name>~BleedingSourcesManagerServer</name>
+        <qualifiedname>BleedingSourcesManagerBase::~BleedingSourcesManagerServer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" line="261" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerServer.c" bodystart="261" bodyend="265"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="19">
+        <label>AbstractWave</label>
+        <link refid="class_abstract_wave"/>
+      </node>
+      <node id="1">
+        <label>BleedingSourcesManagerBase</label>
+        <link refid="class_bleeding_sources_manager_base"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_Item</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>m_Player</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_DisableBloodLoss</edgelabel>
+          <edgelabel>m_EnableHitIndication</edgelabel>
+          <edgelabel>m_ShowDiag</edgelabel>
+          <edgelabel>m_ShowingDiag</edgelabel>
+          <edgelabel>m_ShowingDiagDraw</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>TICK_INTERVAL_SEC</edgelabel>
+          <edgelabel>m_Tick</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>m_DeleteList</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>BlowtorchLight</label>
+        <link refid="class_blowtorch_light"/>
+        <childnode refid="22" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Class</label>
+        <link refid="class_class"/>
+      </node>
+      <node id="15">
+        <label>Effect</label>
+      </node>
+      <node id="14">
+        <label>EffectSound</label>
+        <link refid="class_effect_sound"/>
+        <childnode refid="15" relation="private-inheritance">
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>Event_OnSoundFadeInStopped</edgelabel>
+          <edgelabel>Event_OnSoundFadeOutStarted</edgelabel>
+          <edgelabel>Event_OnSoundWaveEnded</edgelabel>
+          <edgelabel>Event_OnSoundWaveStarted</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>m_SoundParams</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>m_SoundObjectBuilder</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>m_SoundWaveObject</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_SoundParent</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_SoundSetName</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_SetEnvVariables</edgelabel>
+          <edgelabel>m_SoundAutodestroy</edgelabel>
+          <edgelabel>m_SoundLoop</edgelabel>
+          <edgelabel>m_SoundWaveIsPlaying</edgelabel>
+          <edgelabel>m_SoundWaveStarting</edgelabel>
+          <edgelabel>m_SoundWaveStopping</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_SoundFadeInDuration</edgelabel>
+          <edgelabel>m_SoundFadeOutDuration</edgelabel>
+          <edgelabel>m_SoundFadeOutInitVolume</edgelabel>
+          <edgelabel>m_SoundFadeOutStartTime</edgelabel>
+          <edgelabel>m_SoundWaveLenght</edgelabel>
+          <edgelabel>m_SoundWaveTime</edgelabel>
+          <edgelabel>m_SoundWaveVolume</edgelabel>
+          <edgelabel>m_SoundWaveVolumeMax</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>EntityAI</label>
+        <link refid="class_entity_a_i"/>
+        <childnode refid="30" relation="usage">
+          <edgelabel>m_ContinuousActions</edgelabel>
+          <edgelabel>m_InteractActions</edgelabel>
+          <edgelabel>m_SingleUseActions</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>SOUND_CONTACT_SKIP</edgelabel>
+          <edgelabel>m_SoundContactTickTime</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>m_SoundImpactTable</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_ActionsInitialize</edgelabel>
+          <edgelabel>m_IsMeleeWeapon</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>m_OnItemAddedToHands</edgelabel>
+          <edgelabel>m_OnItemRemovedFromHands</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>GardenBase</label>
+        <link refid="class_garden_base"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_ClutterCutter</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ItemBase</label>
+        <link refid="class_item_base"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>MAX_PLACEMENT_HEIGHT_DIFF</edgelabel>
+          <edgelabel>PARAM_COOKING_EQUIP_MAX_TEMP</edgelabel>
+          <edgelabel>PARAM_COOKING_EQUIP_TEMP_INCREASE</edgelabel>
+          <edgelabel>PARAM_COOKING_TEMP_THRESHOLD</edgelabel>
+          <edgelabel>PARAM_COOKING_TIME_INC_COEF</edgelabel>
+          <edgelabel>RANDOM_SPARK_INTERVAL</edgelabel>
+          <edgelabel>SPOIL_AFTER_MATURITY_TIME</edgelabel>
+          <edgelabel>m_BaitCatchProb</edgelabel>
+          <edgelabel>m_BlinkingStatusLightInterval</edgelabel>
+          <edgelabel>m_ChargeEnergyPerSecond</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>ANIMATION_DEPLOYED</edgelabel>
+          <edgelabel>ANIM_PHASE_FLAME</edgelabel>
+          <edgelabel>ATTACHED_CLIPS_STATES</edgelabel>
+          <edgelabel>CHARGED_AND_READY_SOUND</edgelabel>
+          <edgelabel>CHARGING_SOUND</edgelabel>
+          <edgelabel>DEFAULT_MATERIAL</edgelabel>
+          <edgelabel>DIRECT_COOKING_SLOT_NAME</edgelabel>
+          <edgelabel>FLAME_BUTANE_OFF</edgelabel>
+          <edgelabel>FLAME_BUTANE_ON</edgelabel>
+          <edgelabel>GAS_LIGHT_MATERIAL_OFF</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Slots</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_AlignCatchTimer</edgelabel>
+          <edgelabel>m_ChargingTimer</edgelabel>
+          <edgelabel>m_CheckRainTimer</edgelabel>
+          <edgelabel>m_DeleteDryPlantTimer</edgelabel>
+          <edgelabel>m_GrowthTimer</edgelabel>
+          <edgelabel>m_InfestationTimer</edgelabel>
+          <edgelabel>m_PrevTimer</edgelabel>
+          <edgelabel>m_SoundLoopStartTimer</edgelabel>
+          <edgelabel>m_SparkEvent</edgelabel>
+          <edgelabel>m_SpoilAfterFullMaturityTimer</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_BaitNeeded</edgelabel>
+          <edgelabel>m_BlinkingStatusLightIsOn</edgelabel>
+          <edgelabel>m_CanCatch</edgelabel>
+          <edgelabel>m_DeployedRegularly</edgelabel>
+          <edgelabel>m_EvaluateDeployment</edgelabel>
+          <edgelabel>m_ForceIntoHands</edgelabel>
+          <edgelabel>m_HasBase</edgelabel>
+          <edgelabel>m_HasCrops</edgelabel>
+          <edgelabel>m_IsActive</edgelabel>
+          <edgelabel>m_IsBeingPacked</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>m_GardenBase</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_ChargedAlarm</edgelabel>
+          <edgelabel>m_ChargingSound</edgelabel>
+          <edgelabel>m_DeployLoopSound</edgelabel>
+          <edgelabel>m_EngineLoop</edgelabel>
+          <edgelabel>m_EngineStart</edgelabel>
+          <edgelabel>m_EngineStop</edgelabel>
+          <edgelabel>m_MountSound</edgelabel>
+          <edgelabel>m_Sound</edgelabel>
+          <edgelabel>m_SoundBurningLoop</edgelabel>
+          <edgelabel>m_SoundEffectCooking</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>m_HybridAttachments</edgelabel>
+          <edgelabel>m_Mountables</edgelabel>
+          <edgelabel>m_ShowAnimationsWhenPacked</edgelabel>
+          <edgelabel>m_ShowAnimationsWhenPitched</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>m_Light</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>m_NoteContents</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>m_Particle</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_Catch</edgelabel>
+          <edgelabel>m_CookingEquipment</edgelabel>
+          <edgelabel>m_SparkPlug</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>m_UTSource</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>m_UTSSettings</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>m_UTSLEngine</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>m_HalfExtents</edgelabel>
+          <edgelabel>m_LightLocalOrientation</edgelabel>
+          <edgelabel>m_LightLocalPosition</edgelabel>
+          <edgelabel>m_PreyPos</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_ClutterCutter</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>m_Bait</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Object</label>
+        <link refid="class_object"/>
+      </node>
+      <node id="24">
+        <label>Particle</label>
+        <link refid="class_particle"/>
+        <childnode refid="25" relation="private-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_Lifetime</edgelabel>
+          <edgelabel>m_MaxOriInterval</edgelabel>
+          <edgelabel>m_MaxOriWiggle</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_ForceOrientationRelativeToWorld</edgelabel>
+          <edgelabel>m_IsRepeat</edgelabel>
+          <edgelabel>m_MarkedForDeletion</edgelabel>
+          <edgelabel>m_WiggleProcessing</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>m_DefaultOri</edgelabel>
+          <edgelabel>m_DefaultPos</edgelabel>
+          <edgelabel>m_DefaultWorldOri</edgelabel>
+          <edgelabel>m_DefaultWorldPos</edgelabel>
+          <edgelabel>m_GlobalPosPreviousFrame</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_RandomizeOri</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_ParentObject</edgelabel>
+          <edgelabel>m_ParticleEffect</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>ParticleBase</label>
+      </node>
+      <node id="34">
+        <label>PlayerBase</label>
+        <link refid="class_player_base"/>
+        <childnode refid="35" relation="usage">
+          <edgelabel>m_PersonalLight</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_PersonalLightDisabledByDebug</edgelabel>
+          <edgelabel>m_PersonalLightEnabledOnCurrentServer</edgelabel>
+          <edgelabel>m_PersonalLightIsSwitchedOn</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>PointLightBase</label>
+        <link refid="class_point_light_base"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_DefaultBrightness</edgelabel>
+          <edgelabel>m_DefaultRadius</edgelabel>
+          <edgelabel>m_FireBrightness</edgelabel>
+          <edgelabel>m_FireRadius</edgelabel>
+          <edgelabel>m_FireplaceBrightness</edgelabel>
+          <edgelabel>m_FireplaceRadius</edgelabel>
+          <edgelabel>m_FlareBrightness</edgelabel>
+          <edgelabel>m_FlareRadius</edgelabel>
+          <edgelabel>m_Lifetime</edgelabel>
+          <edgelabel>m_RoadflareBrightness</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_MemoryPoint</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>ScriptInvoker</label>
+        <link refid="class_script_invoker"/>
+      </node>
+      <node id="35">
+        <label>ScriptedLightBase</label>
+        <link refid="class_scripted_light_base"/>
+      </node>
+      <node id="31">
+        <label>SoundLookupTable</label>
+        <link refid="class_sound_lookup_table"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_parameterName</edgelabel>
+          <edgelabel>m_tableCategoryName</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>SoundObjectBuilder</label>
+        <link refid="class_sound_object_builder"/>
+      </node>
+      <node id="17">
+        <label>SoundParams</label>
+        <link refid="class_sound_params"/>
+      </node>
+      <node id="11">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+      <node id="27">
+        <label>UniversalTemperatureSource</label>
+        <link refid="class_universal_temperature_source"/>
+        <childnode refid="11" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>UniversalTemperatureSourceLambdaBase</label>
+        <link refid="class_universal_temperature_source_lambda_base"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>HEAT_THROUGH_AIR_COEF</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>UniversalTemperatureSourceLambdaEngine</label>
+        <link refid="class_universal_temperature_source_lambda_engine"/>
+        <childnode refid="33" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>UniversalTemperatureSourceSettings</label>
+        <link refid="class_universal_temperature_source_settings"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_RangeFull</edgelabel>
+          <edgelabel>m_RangeMax</edgelabel>
+          <edgelabel>m_TemperatureCap</edgelabel>
+          <edgelabel>m_TemperatureMax</edgelabel>
+          <edgelabel>m_TemperatureMin</edgelabel>
+          <edgelabel>m_UpdateInterval</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_AffectStat</edgelabel>
+          <edgelabel>m_ManualUpdate</edgelabel>
+          <edgelabel>m_Updateable</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>m_Position</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>m_Parent</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Widget</label>
+        <link refid="class_widget"/>
+      </node>
+      <node id="23">
+        <label>WrittenNoteData</label>
+        <link refid="class_written_note_data"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_Paper</edgelabel>
+          <edgelabel>m_WritingImplement</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_SimpleText</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>array</label>
+        <link refid="classarray"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>array&lt; Widget &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>array&lt; int &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>array&lt; ref Slot &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>array&lt; string &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>bool</label>
+        <link refid="classbool"/>
+      </node>
+      <node id="3">
+        <label>float</label>
+        <link refid="classfloat"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>LOWEST</edgelabel>
+          <edgelabel>MAX</edgelabel>
+          <edgelabel>MIN</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string</label>
+        <link refid="classstring"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>Empty</edgelabel>
+        </childnode>
+      </node>
+      <node id="26">
+        <label>vector</label>
+        <link refid="classvector"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>Aside</edgelabel>
+          <edgelabel>Forward</edgelabel>
+          <edgelabel>Up</edgelabel>
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" line="1" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/BleedingSources/BleedingSourcesManagerBase.c" bodystart="2" bodyend="332"/>
+    <listofallmembers>
+      <member refid="class_bleeding_sources_manager_base_1af3246e9a21b7ec1a01f0727825abcdf5" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>ActivateAllBS</name></member>
+      <member refid="class_bleeding_sources_manager_base_1ad3c28ceb92346804296c593f41f3fe71" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>AddBleedingSource</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a2ab83ae193dfc6003ef11b32edcd5954" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>AddBleedingSource</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a5fb2938b4a66289a172ee44eb11af179" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>AddBleedingSourceEx</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a4b41d776f47c3ef1388fcc121a46ba59" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>AttemptAddBleedingSource</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a7eb44252372ebcb9e625b7592929ec1b" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>AttemptAddBleedingSourceBySelection</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a22d1c46468ecfc27bbe35305d20e5b3a" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>AttemptAddBleedingSourceDirectly</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a86ccae3000644b11d9c791d275433317" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>BleedingSourcesManagerBase</name></member>
+      <member refid="class_bleeding_sources_manager_base_1afac7f9f7db6fdd0f63f0c728cbbd5491" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>CanAddBleedingSource</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a5280c85d10357606a3c6b14b2da67486" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>CleanDebug</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a618b668e8b54be4e6de365271a09da3d" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>CleanVisualDebug</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a07de25bda7ec66ee3851eefbebf24b21" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>DebugActivateBleedingSource</name></member>
+      <member refid="class_bleeding_sources_manager_base_1ae97cb7963f1c6e6d1701c8db8035f12e" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>DisplayDebug</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a98d58a4432185ef79709a91e1db83591" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>DisplayVisualDebug</name></member>
+      <member refid="class_bleeding_sources_manager_base_1aa2b1be4a1423c708b1960f15ffcf44cd" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>GetBitFromSelectionID</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a7189b536feab7bbe183bba709165bf88" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>GetBitFromSelectionName</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a16a522c09c63bb265f014d9c8d08bdb5" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>GetBleedingSourceActiveTime</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a0badf6023d78baa44f4dc61419787101" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>GetBleedingSourceBitsByInvLocation</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a14689995b305422ea2845eec83219214" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>GetBleedingSourceCountRemote</name></member>
+      <member refid="class_bleeding_sources_manager_base_1ad1e4286226f23045da2082dfe664b0a8" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>GetBleedingSourceMeta</name></member>
+      <member refid="class_bleeding_sources_manager_base_1ad92af0f056b7e9d72a1fc0aa229041f2" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>GetBleedingSourcesCount</name></member>
+      <member refid="class_bleeding_sources_manager_base_1ab26dba924c8a47be9ee2ab9a893737f2" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>GetBleedingSourcesLocations</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a51d0d544261b55c3dc854ba49b8716fd" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>GetBleedingSourceType</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a8b1897cb8f4be7aea8691dfbcf03f9ed" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>GetBleedingSourceZone</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a3a1fe0325565940dc3aa0c48dd07ab34" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>GetFreeBleedingSourceBitsByInvLocation</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a452c265ba26116005a206c6976f60334" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>GetMostSignificantBleedingSource</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a4275ada26cb15d8b7a90e394a95f9dff" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>GetRegisteredSourcesCount</name></member>
+      <member refid="class_bleeding_sources_manager_base_1ac3ef4d0049879112503880a87a305a65" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>GetSelectionNameFromBit</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a1c3a83676b915eb2872e740a510ea43c" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>GetStorageVersion</name></member>
+      <member refid="class_bleeding_sources_manager_base_1af6ef4feb46e4afb7c70f597e0a8744c8" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>Init</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a66fb355a823abd7a2b39489731bdf19d" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>Init</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a062ec48e1e86e9b3542b921fc58001f3" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>IsBleedingSourceActive</name></member>
+      <member refid="class_bleeding_sources_manager_base_1abd80bcbb24d5dd749d3d059eae5fef03" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_Bit</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a882f29c40b724829db0c6e62883306f7" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_BitOffset</name></member>
+      <member refid="class_bleeding_sources_manager_base_1aabde288129ffe22c08fc9bc3139f4f62" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_BitToFireGeom</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a6eab729d82d366164e3db3b991ec0061" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_BleedingBits</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a5d5e7474aace1e01fd483257a92824bb" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_BleedingSources</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a6c7440d28251890f2a2df45abe988fa0" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_BleedingSourcesByLocation</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a7b5670407955cd76453d9190fbc24b43" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_BleedingSourcesLocationsList</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a1fe5c07ff56ee39b093c98902cd216c1" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_BleedingSourcesZonesMaskByLocation</name></member>
+      <member refid="class_bleeding_sources_manager_base_1ab4759ec7f0ca39d0747c4a4892925933" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_BleedingSourceZone</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a5ee4716e4fb070fd57471a26063dba30" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_DeleteList</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a25bd64a5c458dd227a7a264ece1c5146" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_DisableBloodLoss</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a5c5c7e3be32b30e7e2b4f4f0705789f1" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_EnableHitIndication</name></member>
+      <member refid="class_bleeding_sources_manager_base_1ac807c280f8ec7c51d597e5dc8da24bcb" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_Item</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a6e51b93ec2951277b7ec47d598b2e6f4" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_Player</name></member>
+      <member refid="class_bleeding_sources_manager_base_1ade10a184e2b4e9dbc70bd41d89ee3982" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_Point</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a15d25923c8f329216b056704df67dffd" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_ShowDiag</name></member>
+      <member refid="class_bleeding_sources_manager_base_1abdc386416eafeec9d65c7cf4e2482d8e" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_ShowingDiag</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a11ef3993bd48851be6e9277fce633c2a" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_ShowingDiagDraw</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a04481830a7bdaa63213411fb85a213f9" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>m_Tick</name></member>
+      <member refid="class_bleeding_sources_manager_base_1ab61cb7f09609aec39f08808b4016fd9b" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>OnBleedingBitsUpdate</name></member>
+      <member refid="class_bleeding_sources_manager_base_1ac5b42f3429e16dc6350ee1baf8dcc537" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>OnStoreLoad</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a4838d40bd8894978707b2b7854440bfb" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>OnStoreSave</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a36162bc15b696f8558986232d2fc9059" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>OnTick</name></member>
+      <member refid="class_bleeding_sources_manager_base_1ac679eaf664976327b403626b83b3a166" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>OnUpdate</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a12d6b9dcb70f6f8655eb7f16491e570e" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>OnVariablesSynchronized</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a873417e1eebefed3696e8e2fba56d6e3" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>ProcessHit</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a71a96839a735f8196c8ecd4356bbdecd" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>RegisterBleedingZone</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a67f4ec0edde2103be84ce6a6f5f57218" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>RegisterBleedingZoneEx</name></member>
+      <member refid="class_bleeding_sources_manager_base_1aa2d3211e209975dc7e665bf8dbbb4e0b" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>RegisterBleedingZoneEx</name></member>
+      <member refid="class_bleeding_sources_manager_base_1afdc88f3bd896f193544bc6b22c0416ac" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>Reload</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a7f5c08b213a0ff1f139b97ad36f89b77" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>RemoveAllSources</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a8ed240c35d8f686d0cd64f689dee423d" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>RemoveAnyBleedingSource</name></member>
+      <member refid="class_bleeding_sources_manager_base_1ac6bdbd0c8fd70f1c377f7a0634d1326f" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>RemoveBleedingSource</name></member>
+      <member refid="class_bleeding_sources_manager_base_1ad1f17bb00c0bebe7d74d3fd927ac4194" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>RemoveBleedingSource</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a2a5e4e3709e2af2f110d4de59d46b2d1" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>RemoveMostSignificantBleedingSource</name></member>
+      <member refid="class_bleeding_sources_manager_base_1adf119ff3b88394dba724e222cd918cd6" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>RemoveMostSignificantBleedingSourceEx</name></member>
+      <member refid="class_bleeding_sources_manager_base_1adc02d349d745595f2852786f5276855a" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>RequestDeletion</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a6563be9d1c0ea78f298b26541a969adf" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>SetBleedingSourceActiveTime</name></member>
+      <member refid="class_bleeding_sources_manager_base_1aca2fec9c1bc33542b6039c8b375b891b" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>SetBleedingSourceType</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a11e9cf9c1873fb9a92fd36105d41899b" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>SetBloodLoss</name></member>
+      <member refid="class_bleeding_sources_manager_base_1aa8e75ca4c1b912fc92a39082f512bfef" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>SetDiag</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a8e9c0ed03a66a601a2241236f2d64465" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>SetItem</name></member>
+      <member refid="class_bleeding_sources_manager_base_1af240cd609fe6770c91c4c088d5575405" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>STORAGE_VERSION</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a99664bf93584bdfe543d327c28117e73" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>TICK_INTERVAL_SEC</name></member>
+      <member refid="class_bleeding_sources_manager_base_1a98f9b5a1223e5745f7872a2e3dc89c97" prot="private" virt="non-virtual"><scope>BleedingSourcesManagerBase</scope><name>~BleedingSourcesManagerServer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

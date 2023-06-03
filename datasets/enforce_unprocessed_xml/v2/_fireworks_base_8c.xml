@@ -1,0 +1,554 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_fireworks_base_8c" kind="file" language="C++">
+    <compoundname>FireworksBase.c</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EFireworksState</name>
+        <enumvalue id="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdda88ec7d5086d2469ba843c7fcceade8a6" prot="public">
+          <name>DEFAULT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbddacb62afe71d71fd70c35d135c45713767" prot="public">
+          <name>PLACED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbddabfa7bee6b9b30412e9bac9876b51fc32" prot="public">
+          <name>IGNITED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdda474a78665486aa3bf180bd018812bc9d" prot="public">
+          <name>FIRING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbddadbd1812bee789fbf3548cf79d3f2b400" prot="public">
+          <name>FINISHED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="2" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="3" bodyend="9"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_fireworks_base_8c_1ac7fd61887648804599636bd27dd2be99" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" kindref="member">EFireworksState</ref></type>
+        <definition>enum EFireworksState m_State</definition>
+        <argsstring></argsstring>
+        <name>m_State</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="13" column="35"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fireworks_base_8c_1a70a4ebd892e89a49f3b9872ab017691d" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" kindref="member">EFireworksState</ref></type>
+        <definition>protected EFireworksState m_StatePrev</definition>
+        <argsstring></argsstring>
+        <name>m_StatePrev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="14" column="28" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fireworks_base_8c_1a34191fe7d52062a285fbfa2488d5b9cd" prot="public" static="no" mutable="no">
+        <type>protected ref <ref refid="class_timer" kindref="compound">Timer</ref></type>
+        <definition>protected ref Timer m_TimerEvent</definition>
+        <argsstring></argsstring>
+        <name>m_TimerEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="15" column="21" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_fireworks_base_8c_1a946d4591ba680ece00dedfb711cee62d" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected int m_RandomSeed</definition>
+        <argsstring></argsstring>
+        <name>m_RandomSeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="16" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_fireworks_base_8c_1adb430aa2db2c80551bfcf67f6fc21e94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FireworksBase</definition>
+        <argsstring>()</argsstring>
+        <name>FireworksBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="18" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="18" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="_fireworks_base_8c_1a619b8813fa2383350e7279314acc80a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void EEOnCECreate</definition>
+        <argsstring>()</argsstring>
+        <name>EEOnCECreate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="23" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="_fireworks_base_8c_1a2865dcd0243804f3b1b93c982130e8c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+<para>Launched from &apos;DayZGame.DeferredInit&apos; to make earlier access, use, and updates impossible (downside of a non-static system) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>pre-init arrays</para>
+<para>pre-init arrays</para>
+<para>pre-init arrays</para>
+<para>pre-init arrays</para>
+<para>pre-init arrays</para>
+<para>pre-init arrays</para>
+<para>pre-init arrays</para>
+<para>pre-init arrays</para>
+<para>pre-init arrays</para>
+<para>pre-init arrays</para>
+<para>pre-init arrays</para>
+<para>pre-init arrays</para>
+<para>pre-init arrays</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="28" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DayZGame.c" bodystart="122" bodyend="144" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" declline="28" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="_fireworks_base_8c_1ad3f5adfd7e65559879d82e997b1916a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void SetActions</definition>
+        <argsstring>()</argsstring>
+        <name>SetActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="32" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="32" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="_fireworks_base_8c_1ab82ea3929dacabea878b0247abacd5c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool HasFlammableMaterial</definition>
+        <argsstring>()</argsstring>
+        <name>HasFlammableMaterial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="41" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="_fireworks_base_8c_1a248505b421b043333eb5c74a12bafce9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float GetMaxAllowedWetness</definition>
+        <argsstring>()</argsstring>
+        <name>GetMaxAllowedWetness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="46" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="_fireworks_base_8c_1a35c5beb2dc0bce73b65b53b6f50ada7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected <ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" kindref="member">EFireworksState</ref></type>
+        <definition>protected EFireworksState GetState</definition>
+        <argsstring>()</argsstring>
+        <name>GetState</name>
+        <briefdescription>
+<para>returns one of STATE_... </para>
+        </briefdescription>
+        <detaileddescription>
+<para>returns the state of climb (enum value of ClimbStates); </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="51" column="27" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="_fireworks_base_8c_1ac30dc16a9bdff4f0b851b9b9f6fb8c8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void SetState</definition>
+        <argsstring>(EFireworksState state)</argsstring>
+        <name>SetState</name>
+        <param>
+          <type><ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" kindref="member">EFireworksState</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="56" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="56" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="_fireworks_base_8c_1ac0ca2132aead65a7721791530b3d6094" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void OnStateChangedServer</definition>
+        <argsstring>(EFireworksState currentState)</argsstring>
+        <name>OnStateChangedServer</name>
+        <param>
+          <type><ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" kindref="member">EFireworksState</ref></type>
+          <declname>currentState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="67" column="16" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" declline="67" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="_fireworks_base_8c_1a721ebb21922c892b5cd54108663df3d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void OnStateChangedClient</definition>
+        <argsstring>(EFireworksState currentState)</argsstring>
+        <name>OnStateChangedClient</name>
+        <param>
+          <type><ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" kindref="member">EFireworksState</ref></type>
+          <declname>currentState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="68" column="16" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" declline="68" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="_fireworks_base_8c_1aa6015ef050c0f2ad57b87d6d7a0f58dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void OnInventoryEnter</definition>
+        <argsstring>(Man player)</argsstring>
+        <name>OnInventoryEnter</name>
+        <param>
+          <type>Man</type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="71" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="71" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="_fireworks_base_8c_1a5d7082117a9fb6269161b3b210808d24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void OnInventoryExit</definition>
+        <argsstring>(Man player)</argsstring>
+        <name>OnInventoryExit</name>
+        <param>
+          <type>Man</type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="79" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="79" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="_fireworks_base_8c_1ade5c006396a27b7cb6231dc2e4cf9dad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void StandUp</definition>
+        <argsstring>()</argsstring>
+        <name>StandUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="87" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="87" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="_fireworks_base_8c_1ae4a166ce8ca52121d8e4183c8bf8a654" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void OnIgnitedThis</definition>
+        <argsstring>(EntityAI fire_source)</argsstring>
+        <name>OnIgnitedThis</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>fire_source</declname>
+        </param>
+        <briefdescription>
+<para>Executed on Server when some item ignited this one. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="96" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="_fireworks_base_8c_1ac57d4de72a43858aa7a36bd05c14f8e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override protected bool CanBeIgnitedBy</definition>
+        <argsstring>(EntityAI igniter=NULL)</argsstring>
+        <name>CanBeIgnitedBy</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>igniter</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="102" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="102" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="_fireworks_base_8c_1a0b1b7794e859e108e37f85f3f3e3318d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void OnEventServer</definition>
+        <argsstring>(int type)</argsstring>
+        <name>OnEventServer</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Called periodically after the entity gets ignited. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="122" column="16" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" declline="122" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="_fireworks_base_8c_1abac914db346d0be88bc01c33039aac21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float GetEventDelay</definition>
+        <argsstring>()</argsstring>
+        <name>GetEventDelay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="124" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="_fireworks_base_8c_1afcea92190019bb5383cb0a9ef8043a50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void OnVariablesSynchronized</definition>
+        <argsstring>()</argsstring>
+        <name>OnVariablesSynchronized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" line="129" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c" bodystart="129" bodyend="138"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" kindref="member">EFireworksState</ref></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="4" refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdda88ec7d5086d2469ba843c7fcceade8a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdda88ec7d5086d2469ba843c7fcceade8a6" kindref="member">DEFAULT</ref>,</highlight></codeline>
+<codeline lineno="5" refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbddacb62afe71d71fd70c35d135c45713767" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbddacb62afe71d71fd70c35d135c45713767" kindref="member">PLACED</ref>,</highlight></codeline>
+<codeline lineno="6" refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbddabfa7bee6b9b30412e9bac9876b51fc32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbddabfa7bee6b9b30412e9bac9876b51fc32" kindref="member">IGNITED</ref>,</highlight></codeline>
+<codeline lineno="7" refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdda474a78665486aa3bf180bd018812bc9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdda474a78665486aa3bf180bd018812bc9d" kindref="member">FIRING</ref>,</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbddadbd1812bee789fbf3548cf79d3f2b400" kindref="member">FINISHED</ref></highlight></codeline>
+<codeline lineno="9" refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbddadbd1812bee789fbf3548cf79d3f2b400" refkind="member"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_fireworks_base_8c_1adb430aa2db2c80551bfcf67f6fc21e94" kindref="member">FireworksBase</ref>:<sp/><ref refid="class_inventory___base" kindref="compound">Inventory_Base</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13" refid="_fireworks_base_8c_1ac7fd61887648804599636bd27dd2be99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><sp/><ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" kindref="member">EFireworksState</ref><sp/><ref refid="class_inventory___base_1a6f0c61ae43c196849f24b6691d9f13d5" kindref="member">m_State</ref>;</highlight></codeline>
+<codeline lineno="14" refid="_fireworks_base_8c_1a70a4ebd892e89a49f3b9872ab017691d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><sp/><ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" kindref="member">EFireworksState</ref><sp/><ref refid="_clock_base_8c_1a362765a6feacdb9db4425ecb7d8be399" kindref="member">m_StatePrev</ref>;</highlight></codeline>
+<codeline lineno="15" refid="_fireworks_base_8c_1a34191fe7d52062a285fbfa2488d5b9cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>ref<sp/><ref refid="class_timer" kindref="compound">Timer</ref><sp/><ref refid="_fireworks_base_8c_1a34191fe7d52062a285fbfa2488d5b9cd" kindref="member">m_TimerEvent</ref>;</highlight></codeline>
+<codeline lineno="16" refid="_fireworks_base_8c_1a946d4591ba680ece00dedfb711cee62d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_fireworks_base_8c_1a946d4591ba680ece00dedfb711cee62d" kindref="member">m_RandomSeed</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="_fireworks_base_8c_1adb430aa2db2c80551bfcf67f6fc21e94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fireworks_base_8c_1adb430aa2db2c80551bfcf67f6fc21e94" kindref="member">FireworksBase</ref>()</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_game_8c_1a8045e088b31fe0754fb20cb0a5ff0dc9" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23" refid="_fireworks_base_8c_1a619b8813fa2383350e7279314acc80a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_item_base_8c_1af41c95ad24f0a5c4de509063c469cb6b" kindref="member">EEOnCECreate</ref>()</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_fireworks_base_8c_1ade5c006396a27b7cb6231dc2e4cf9dad" kindref="member">StandUp</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_day_z_game_8c_1a8045e088b31fe0754fb20cb0a5ff0dc9" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32" refid="_fireworks_base_8c_1ad3f5adfd7e65559879d82e997b1916a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_inventory___base_1ad80815bc032e707768f0b716d175b1f1" kindref="member">SetActions</ref>()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.SetActions();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a033d077df58807906c4dad3101d8768c" kindref="member">AddAction</ref>(<ref refid="class_action_toggle_place_object" kindref="compound">ActionTogglePlaceObject</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a033d077df58807906c4dad3101d8768c" kindref="member">AddAction</ref>(<ref refid="_action_deploy_object_8c_1a1eb6c584b29789b9c360df2d769c22a8" kindref="member">ActionDeployObject</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a033d077df58807906c4dad3101d8768c" kindref="member">AddAction</ref>(<ref refid="_action_light_item_on_fire_8c_1aec11b7d56a7b004bdb4df567f38ea29f" kindref="member">ActionLightItemOnFire</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="_fireworks_base_8c_1ab82ea3929dacabea878b0247abacd5c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_fireworks_base_8c_1ab82ea3929dacabea878b0247abacd5c8" kindref="member">HasFlammableMaterial</ref>()</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="_fireworks_base_8c_1a248505b421b043333eb5c74a12bafce9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_fireworks_base_8c_1a248505b421b043333eb5c74a12bafce9" kindref="member">GetMaxAllowedWetness</ref>()</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.1;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="_fireworks_base_8c_1a35c5beb2dc0bce73b65b53b6f50ada7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" kindref="member">EFireworksState</ref><sp/><ref refid="class_inventory___base_1ab2d29f1100dbebcf9499825c744f3f4b" kindref="member">GetState</ref>()</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_inventory___base_1a6f0c61ae43c196849f24b6691d9f13d5" kindref="member">m_State</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="_fireworks_base_8c_1ac30dc16a9bdff4f0b851b9b9f6fb8c8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_inventory___base_1a13729b5326e35f654f27b9d09de31695" kindref="member">SetState</ref>(<ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" kindref="member">EFireworksState</ref><sp/>state)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(state<sp/>!=<sp/><ref refid="_clock_base_8c_1a362765a6feacdb9db4425ecb7d8be399" kindref="member">m_StatePrev</ref><sp/>&amp;&amp;<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsServer())</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stamina_handler_8c_1aff669510956ec2c2cc6c60ed37ca7d63" kindref="member">m_State</ref><sp/>=<sp/>state;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetSynchDirty();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_fireworks_base_8c_1ac0ca2132aead65a7721791530b3d6094" kindref="member">OnStateChangedServer</ref>(state);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_clock_base_8c_1a362765a6feacdb9db4425ecb7d8be399" kindref="member">m_StatePrev</ref><sp/>=<sp/>state;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67" refid="_fireworks_base_8c_1ac0ca2132aead65a7721791530b3d6094" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fireworks_base_8c_1ac0ca2132aead65a7721791530b3d6094" kindref="member">OnStateChangedServer</ref>(<ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" kindref="member">EFireworksState</ref><sp/>currentState);</highlight></codeline>
+<codeline lineno="68" refid="_fireworks_base_8c_1a721ebb21922c892b5cd54108663df3d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fireworks_base_8c_1a721ebb21922c892b5cd54108663df3d1" kindref="member">OnStateChangedClient</ref>(<ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" kindref="member">EFireworksState</ref><sp/>currentState);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="_fireworks_base_8c_1aa6015ef050c0f2ad57b87d6d7a0f58dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_item_base_8c_1a71b84f6068407d79560f58ed9d86ad52" kindref="member">OnInventoryEnter</ref>(Man<sp/>player)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_inventory___base_1ab2d29f1100dbebcf9499825c744f3f4b" kindref="member">GetState</ref>()<sp/>==<sp/><ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" kindref="member">EFireworksState</ref>.PLACED)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_inventory___base_1a13729b5326e35f654f27b9d09de31695" kindref="member">SetState</ref>(<ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" kindref="member">EFireworksState</ref>.DEFAULT);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79" refid="_fireworks_base_8c_1a5d7082117a9fb6269161b3b210808d24" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_item_base_8c_1abd721cf3b0ba4ed2044b444e8cf00dd8" kindref="member">OnInventoryExit</ref>(Man<sp/>player)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnInventoryExit(player);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="_item_base_8c_1aeb128a0043149f05889bd0e7e21eeb09" kindref="member">IsBeingPlaced</ref>())</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_fireworks_base_8c_1ade5c006396a27b7cb6231dc2e4cf9dad" kindref="member">StandUp</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87" refid="_fireworks_base_8c_1ade5c006396a27b7cb6231dc2e4cf9dad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fireworks_base_8c_1ade5c006396a27b7cb6231dc2e4cf9dad" kindref="member">StandUp</ref>()</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!IsRuined())</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetOrientation(<ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1a6f6d5246e38b34f79fa2741a7e72d7e7" kindref="member">Zero</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96" refid="_fireworks_base_8c_1ae4a166ce8ca52121d8e4183c8bf8a654" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fireworks_base_8c_1ae4a166ce8ca52121d8e4183c8bf8a654" kindref="member">OnIgnitedThis</ref>(<sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>fire_source)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_inventory___base_1a13729b5326e35f654f27b9d09de31695" kindref="member">SetState</ref>(<ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" kindref="member">EFireworksState</ref>.IGNITED);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Checkes<sp/>if<sp/>Torch<sp/>can<sp/>be<sp/>ignited</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="_fireworks_base_8c_1ac57d4de72a43858aa7a36bd05c14f8e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_fireworks_base_8c_1ac57d4de72a43858aa7a36bd05c14f8e0" kindref="member">CanBeIgnitedBy</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>igniter<sp/>=<sp/>NULL)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_item_base_8c_1afb6c609b79756536ab1ab097a7f0e805" kindref="member">GetWet</ref>()<sp/>&gt;=<sp/><ref refid="_fireworks_base_8c_1a248505b421b043333eb5c74a12bafce9" kindref="member">GetMaxAllowedWetness</ref>())</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(MiscGameplayFunctions.IsUnderRoofEx(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>60))</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((<ref refid="class_inventory___base_1ab2d29f1100dbebcf9499825c744f3f4b" kindref="member">GetState</ref>()<sp/>&lt;=<sp/><ref refid="_fireworks_base_8c_1a99a024998ac536510fcc22b1af41dbdd" kindref="member">EFireworksState</ref>.PLACED)<sp/>&amp;&amp;<sp/><ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1a69fa0e44e84719ecd8f98b99fddf1d92" kindref="member">Dot</ref>(<ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1ac187fd4c6a90da92d88737f963b03d6d" kindref="member">Up</ref>,GetDirectionUp())<sp/>&gt;<sp/>0.95)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122" refid="_fireworks_base_8c_1a0b1b7794e859e108e37f85f3f3e3318d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fireworks_base_8c_1a0b1b7794e859e108e37f85f3f3e3318d" kindref="member">OnEventServer</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="124" refid="_fireworks_base_8c_1abac914db346d0be88bc01c33039aac21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_fireworks_base_8c_1abac914db346d0be88bc01c33039aac21" kindref="member">GetEventDelay</ref>()</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129" refid="_fireworks_base_8c_1afcea92190019bb5383cb0a9ef8043a50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_inventory___base_1a8fcce0543c647867bc5ac384d135e5e3" kindref="member">OnVariablesSynchronized</ref>()</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;new<sp/>state<sp/>client:<sp/>&quot;<sp/>+<sp/>m_State);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnVariablesSynchronized();</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_stamina_handler_8c_1aff669510956ec2c2cc6c60ed37ca7d63" kindref="member">m_State</ref><sp/>!=<sp/><ref refid="_clock_base_8c_1a362765a6feacdb9db4425ecb7d8be399" kindref="member">m_StatePrev</ref>)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_fireworks_base_8c_1a721ebb21922c892b5cd54108663df3d1" kindref="member">OnStateChangedClient</ref>(<ref refid="_stamina_handler_8c_1aff669510956ec2c2cc6c60ed37ca7d63" kindref="member">m_State</ref>);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_clock_base_8c_1a362765a6feacdb9db4425ecb7d8be399" kindref="member">m_StatePrev</ref><sp/>=<sp/><ref refid="class_inventory___base_1a6f0c61ae43c196849f24b6691d9f13d5" kindref="member">m_State</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>DEVELOPER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fireplace_base_8c_1add7373fc8492b0821fd03c0692256f5c" kindref="member">GetDebugButtonNames</ref>(out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>button1,<sp/>out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>button2,<sp/>out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>button3,<sp/>out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>button4)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>button1<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Ignite&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fireplace_base_8c_1a46c79f6a4908c367de361cddfae5dd0a" kindref="member">OnDebugButtonPressServer</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>button_index)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(button_index<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_fireworks_base_8c_1ae4a166ce8ca52121d8e4183c8bf8a654" kindref="member">OnIgnitedThis</ref>(null);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/FireworksBase.c"/>
+  </compounddef>
+</doxygen>

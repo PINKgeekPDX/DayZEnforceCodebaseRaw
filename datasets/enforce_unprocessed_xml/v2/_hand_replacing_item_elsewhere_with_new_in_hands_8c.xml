@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_hand_replacing_item_elsewhere_with_new_in_hands_8c" kind="file" language="C++">
+    <compoundname>HandReplacingItemElsewhereWithNewInHands.c</compoundname>
+    <innerclass refid="class_hand_state_base" prot="public">HandStateBase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">class<sp/></highlight><highlight class="normal">HandStartReplacingItemElsewhereWithNewInHands<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base" kindref="compound">HandStateBase</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_hand_state_base_1a44800ae6ed6e98dab906651442598cd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base_1a44800ae6ed6e98dab906651442598cd7" kindref="member">HandStartReplacingItemElsewhereWithNewInHands</ref><sp/>(Man<sp/>player<sp/>=<sp/>NULL,<sp/><ref refid="class_hand_state_base" kindref="compound">HandStateBase</ref><sp/>parent<sp/>=<sp/>NULL)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_hand_state_base_1a25901bba506525c68e8ce3dc24951dfa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base_1a25901bba506525c68e8ce3dc24951dfa" kindref="member">OnEntry</ref><sp/>(<ref refid="class_hand_event_base" kindref="compound">HandEventBase</ref><sp/>e)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnEntry(e);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Man<sp/>player<sp/>=<sp/>e.m_Player;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_hand_event_replace_with_new_base" kindref="compound">HandEventReplaceWithNewBase</ref><sp/>edr<sp/>=<sp/><ref refid="class_hand_event_replace_with_new_base" kindref="compound">HandEventReplaceWithNewBase</ref>.Cast(e);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(edr)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_hand_f_s_m_8c_1a4d1ced2805a0b33fc2d7a5ae1300b53b" kindref="member">hndDebugPrint</ref>(</highlight><highlight class="stringliteral">&quot;[hndfsm]<sp/>HandStartReplacingItemElsewhereWithNewInHands<sp/>about<sp/>to<sp/>execute<sp/>lambda&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_human_inventory_with_f_s_m" kindref="compound">HumanInventoryWithFSM</ref><sp/>inv<sp/>=<sp/><ref refid="class_human_inventory_with_f_s_m" kindref="compound">HumanInventoryWithFSM</ref>.Cast(player.GetInventory());</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>edr.m_Lambda.Execute(inv);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1ga786b160dafbe15abb829786ba345cb15" kindref="member">Error</ref>(</highlight><highlight class="stringliteral">&quot;[hndfsm]<sp/>HandStartReplacingItemElsewhereWithNewInHands<sp/>-<sp/>not<sp/>a<sp/>HandEvenReplaceWithNewBase<sp/>event&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_hand_state_base_1ace52a1cbadf14159675e7f07dac94fbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base_1ace52a1cbadf14159675e7f07dac94fbf" kindref="member">OnAbort</ref><sp/>(<ref refid="class_hand_event_base" kindref="compound">HandEventBase</ref><sp/>e)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnAbort(e);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_hand_state_base_1a0d62c16ce9a8651b693296fb4438c1ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base_1a0d62c16ce9a8651b693296fb4438c1ac" kindref="member">OnExit</ref><sp/>(<ref refid="class_hand_event_base" kindref="compound">HandEventBase</ref><sp/>e)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnExit(e);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_hand_state_base_1ad664f17138c75d0abd8cd184ae7be4c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base_1ad664f17138c75d0abd8cd184ae7be4c7" kindref="member">IsWaitingForActionFinish</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">HandReplacingItemElsewhereWithNewInHands<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base" kindref="compound">HandStateBase</ref></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40" refid="class_hand_state_base_1a37ba4a7d0858c9c0412253efe0e7cdb7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/>HandStartReplacingItemElsewhereWithNewInHands<sp/><ref refid="class_hand_state_base_1a37ba4a7d0858c9c0412253efe0e7cdb7" kindref="member">m_Replacing</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="class_hand_state_base_1ac7a8c1bad0159ca74094c2538dfa8c9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base_1ac7a8c1bad0159ca74094c2538dfa8c9f" kindref="member">HandReplacingItemElsewhereWithNewInHands</ref><sp/>(Man<sp/>player<sp/>=<sp/>NULL,<sp/><ref refid="class_hand_state_base" kindref="compound">HandStateBase</ref><sp/>parent<sp/>=<sp/>NULL)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>setup<sp/>nested<sp/>state<sp/>machine</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Replacing<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base_1a44800ae6ed6e98dab906651442598cd7" kindref="member">HandStartReplacingItemElsewhereWithNewInHands</ref>(player,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>events:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_hand_event_base" kindref="compound">HandEventBase</ref><sp/>_fin_<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>HandEventHumanCommandActionFinished;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_FSM<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_hand_f_s_m" kindref="compound">HandFSM</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>@NOTE:<sp/>set<sp/>owner<sp/>of<sp/>the<sp/>submachine<sp/>fsm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_FSM.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_hand_f_s_m_8c_1ababd3ce5e02c0ab66d634bd26911a833" kindref="member">HandTransition</ref>(<sp/><sp/><sp/>m_Replacing,<sp/>_fin_,<sp/><sp/><sp/><sp/><sp/>NULL<sp/>));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_FSM.SetInitialState(m_Replacing);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HandReplacingItemElsewhereWithNewInHands.c"/>
+  </compounddef>
+</doxygen>

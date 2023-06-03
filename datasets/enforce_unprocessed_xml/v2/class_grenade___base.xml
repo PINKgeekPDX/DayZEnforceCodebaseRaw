@@ -1,0 +1,880 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_grenade___base" kind="class" language="C++" prot="public">
+    <compoundname>Grenade_Base</compoundname>
+    <basecompoundref prot="private" virt="non-virtual">ExplosivesBase</basecompoundref>
+    <derivedcompoundref refid="class_grenade___chem_gas" prot="private" virt="non-virtual">Grenade_ChemGas</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_grenade___base_1a8aeacc2f86bfc293e3d3754ef514ce9e" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>const float Grenade_Base::FX_RANGE_MAX_MULT</definition>
+        <argsstring></argsstring>
+        <name>FX_RANGE_MAX_MULT</name>
+        <qualifiedname>Grenade_Base::FX_RANGE_MAX_MULT</qualifiedname>
+        <initializer>= 1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/FlashGrenade.c" line="3" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/FlashGrenade.c" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grenade___base_1a68bed8cc15842a2387377bcbc3cd2ac0" prot="private" static="no" mutable="no">
+        <type>protected const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected const float Grenade_Base::DEFAULT_FUSE_DELAY</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_FUSE_DELAY</name>
+        <qualifiedname>Grenade_Base::DEFAULT_FUSE_DELAY</qualifiedname>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="32" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grenade___base_1aeb846b1e5e6701b3e39314fc958ba096" prot="private" static="no" mutable="no">
+        <type>protected ref <ref refid="class_timer" kindref="compound">Timer</ref></type>
+        <definition>protected ref Timer Grenade_Base::m_FuseTimer</definition>
+        <argsstring></argsstring>
+        <name>m_FuseTimer</name>
+        <qualifiedname>Grenade_Base::m_FuseTimer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="34" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grenade___base_1a48a1329d405fa336370581eb4bc2dafe" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float Grenade_Base::m_FuseDelay</definition>
+        <argsstring></argsstring>
+        <name>m_FuseDelay</name>
+        <qualifiedname>Grenade_Base::m_FuseDelay</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="35" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grenade___base_1ad26954a91322f4dac8e99468b00949b5" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float Grenade_Base::m_RemainingFuseTime</definition>
+        <argsstring></argsstring>
+        <name>m_RemainingFuseTime</name>
+        <qualifiedname>Grenade_Base::m_RemainingFuseTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="36" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grenade___base_1a1760c2637245dbba092532be54731d7b" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool Grenade_Base::m_Pinned</definition>
+        <argsstring></argsstring>
+        <name>m_Pinned</name>
+        <qualifiedname>Grenade_Base::m_Pinned</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="38" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grenade___base_1ab359d392ffc01f5a152ce357b9e11395" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool Grenade_Base::m_Pinnable</definition>
+        <argsstring></argsstring>
+        <name>m_Pinnable</name>
+        <qualifiedname>Grenade_Base::m_Pinnable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="39" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_grenade___base_1a7db7df96d2ecbc1dc79143d9cf068bf1" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="_grenade___base_8c_1a497ffefd024532deb5ec5dcabf022a31" kindref="member">EGrenadeType</ref></type>
+        <definition>protected EGrenadeType Grenade_Base::m_GrenadeType</definition>
+        <argsstring></argsstring>
+        <name>m_GrenadeType</name>
+        <qualifiedname>Grenade_Base::m_GrenadeType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="42" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_grenade___base_1ae0300f057d616ed00dd66c87eda6b0f8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Grenade_Base::OnExplosionEffects</definition>
+        <argsstring>(Object source, Object directHit, int componentIndex, string surface, vector pos, vector surfNormal, float energyFactor, float explosionFactor, bool isWater, string ammoType)</argsstring>
+        <name>OnExplosionEffects</name>
+        <qualifiedname>Grenade_Base::OnExplosionEffects</qualifiedname>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>directHit</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>componentIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>surface</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>surfNormal</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>energyFactor</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>explosionFactor</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>isWater</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>ammoType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>values less than 1.0 make no sense</para>
+<para>removes possible obstacles made by items around the grenade(or on the same position)</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/FlashGrenade.c" line="5" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/FlashGrenade.c" bodystart="5" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a66f44c868f7e82e82f3282f9a5f18c90" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grenade_Base::FlashGrenade</definition>
+        <argsstring>()</argsstring>
+        <name>FlashGrenade</name>
+        <qualifiedname>Grenade_Base::FlashGrenade</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/FlashGrenade.c" line="79" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/FlashGrenade.c" bodystart="79" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a147492972e5b490de5fa0be1abf6cafd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected override void</type>
+        <definition>protected override void Grenade_Base::CreateLight</definition>
+        <argsstring>()</argsstring>
+        <name>CreateLight</name>
+        <qualifiedname>Grenade_Base::CreateLight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/FlashGrenade.c" line="87" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/FlashGrenade.c" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1ae80396817555e7d9c4f663a2f03b16f9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grenade_Base::~FlashGrenade</definition>
+        <argsstring>()</argsstring>
+        <name>~FlashGrenade</name>
+        <qualifiedname>Grenade_Base::~FlashGrenade</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/FlashGrenade.c" line="92" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/FlashGrenade.c" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1ae94a1c000836e69e10668c187f23b9dc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grenade_Base::M67Grenade</definition>
+        <argsstring>()</argsstring>
+        <name>M67Grenade</name>
+        <qualifiedname>Grenade_Base::M67Grenade</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/M67Grenade.c" line="3" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/M67Grenade.c" bodystart="3" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a9453b8900a649ef201835b2ad36a91de" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grenade_Base::~M67Grenade</definition>
+        <argsstring>()</argsstring>
+        <name>~M67Grenade</name>
+        <qualifiedname>Grenade_Base::~M67Grenade</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/M67Grenade.c" line="10" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/M67Grenade.c" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a1d5a60376c800ea9ce0cfcdff117192b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grenade_Base::RGD5Grenade</definition>
+        <argsstring>()</argsstring>
+        <name>RGD5Grenade</name>
+        <qualifiedname>Grenade_Base::RGD5Grenade</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/RGD5Grenade.c" line="3" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/RGD5Grenade.c" bodystart="3" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a7b76a221226efb30b624e5953999256a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grenade_Base::~RGD5Grenade</definition>
+        <argsstring>()</argsstring>
+        <name>~RGD5Grenade</name>
+        <qualifiedname>Grenade_Base::~RGD5Grenade</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/RGD5Grenade.c" line="10" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/RGD5Grenade.c" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1ab498e346dd75e74f85822cee7c5f775f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grenade_Base::Pin</definition>
+        <argsstring>()</argsstring>
+        <name>Pin</name>
+        <qualifiedname>Grenade_Base::Pin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="44" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="44" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1ac141433a10d1881c8e61e5838fb0acd3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grenade_Base::Unpin</definition>
+        <argsstring>()</argsstring>
+        <name>Unpin</name>
+        <qualifiedname>Grenade_Base::Unpin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="52" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="52" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1adc8216a7a9b73e5eadcd7a3fc0345b45" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Grenade_Base::OnActivatedByTripWire</definition>
+        <argsstring>()</argsstring>
+        <name>OnActivatedByTripWire</name>
+        <qualifiedname>Grenade_Base::OnActivatedByTripWire</qualifiedname>
+        <briefdescription>
+<para>DEPRECATED use OnActivatedByItem. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="61" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a7f54df1ffa4b33d262c164802a76e605" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Grenade_Base::OnActivatedByItem</definition>
+        <argsstring>(notnull ItemBase item)</argsstring>
+        <name>OnActivatedByItem</name>
+        <qualifiedname>Grenade_Base::OnActivatedByItem</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="63" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="63" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a7f75718007e12a2d8339b327d160241e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool Grenade_Base::IsPinned</definition>
+        <argsstring>()</argsstring>
+        <name>IsPinned</name>
+        <qualifiedname>Grenade_Base::IsPinned</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="74" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a692c5fe4a6f600dc848eb464dfaf9d40" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool Grenade_Base::IsPinnable</definition>
+        <argsstring>()</argsstring>
+        <name>IsPinnable</name>
+        <qualifiedname>Grenade_Base::IsPinnable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>cannot be pinned once the fuse has started</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="79" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="79" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1ab2314ca7e932a58bd7d6c52210d2312c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grenade_Base::ActivateImmediate</definition>
+        <argsstring>()</argsstring>
+        <name>ActivateImmediate</name>
+        <qualifiedname>Grenade_Base::ActivateImmediate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="90" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a1f3eab2b426f5af8c8f0c243ed87eacd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grenade_Base::ActivateRandomTime</definition>
+        <argsstring>()</argsstring>
+        <name>ActivateRandomTime</name>
+        <qualifiedname>Grenade_Base::ActivateRandomTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>to millis</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="95" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="95" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a7d0b19fcd1f0370e0eb74af553684155" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grenade_Base::SetPinnable</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>SetPinnable</name>
+        <qualifiedname>Grenade_Base::SetPinnable</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="102" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a45227878978b0c3fc68d2749be4a7059" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grenade_Base::SetFuseDelay</definition>
+        <argsstring>(float delay)</argsstring>
+        <name>SetFuseDelay</name>
+        <qualifiedname>Grenade_Base::SetFuseDelay</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>delay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="107" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="107" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a7b01bb40742122b3e4ce77c808687c26" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grenade_Base::SetGrenadeType</definition>
+        <argsstring>(EGrenadeType type)</argsstring>
+        <name>SetGrenadeType</name>
+        <qualifiedname>Grenade_Base::SetGrenadeType</qualifiedname>
+        <param>
+          <type><ref refid="_grenade___base_8c_1a497ffefd024532deb5ec5dcabf022a31" kindref="member">EGrenadeType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="112" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="112" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1ab075a69158169e4f8fe2310724190b6c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_grenade___base_8c_1a497ffefd024532deb5ec5dcabf022a31" kindref="member">EGrenadeType</ref></type>
+        <definition>EGrenadeType Grenade_Base::GetGrenadeType</definition>
+        <argsstring>()</argsstring>
+        <name>GetGrenadeType</name>
+        <qualifiedname>Grenade_Base::GetGrenadeType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="117" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="117" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1adacff8a1291a867168f1e0fa009554a8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void Grenade_Base::Activate</definition>
+        <argsstring>()</argsstring>
+        <name>Activate</name>
+        <qualifiedname>Grenade_Base::Activate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>run only the remaining part (already unpinned and pinned)</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="122" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="122" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a4b802ac4a38591f58782ee53cce8c436" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void Grenade_Base::Deactivate</definition>
+        <argsstring>()</argsstring>
+        <name>Deactivate</name>
+        <qualifiedname>Grenade_Base::Deactivate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="141" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="141" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a9a9cc59af76fe1fa2b70bae6ab3b5188" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected override void</type>
+        <definition>protected override void Grenade_Base::InitiateExplosion</definition>
+        <argsstring>()</argsstring>
+        <name>InitiateExplosion</name>
+        <qualifiedname>Grenade_Base::InitiateExplosion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="151" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="151" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a702eef06b9e802eda227ba475fad9acc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void Grenade_Base::ExplodeGrenade</definition>
+        <argsstring>(EGrenadeType grenade_type)</argsstring>
+        <name>ExplodeGrenade</name>
+        <qualifiedname>Grenade_Base::ExplodeGrenade</qualifiedname>
+        <param>
+          <type><ref refid="_grenade___base_8c_1a497ffefd024532deb5ec5dcabf022a31" kindref="member">EGrenadeType</ref></type>
+          <declname>grenade_type</declname>
+        </param>
+        <briefdescription>
+<para>DEPRECATED - for backward compatibility only. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="171" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="171" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a2426d347f836723580f3762be373218d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void Grenade_Base::OnPin</definition>
+        <argsstring>()</argsstring>
+        <name>OnPin</name>
+        <qualifiedname>Grenade_Base::OnPin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="176" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="176" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a3e89c05835eaa29ed4437a65915f5d42" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void Grenade_Base::OnUnpin</definition>
+        <argsstring>()</argsstring>
+        <name>OnUnpin</name>
+        <qualifiedname>Grenade_Base::OnUnpin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="188" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="188" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1aa27a4d32af17b80de0bc33a96d055d44" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void Grenade_Base::OnActivateStarted</definition>
+        <argsstring>()</argsstring>
+        <name>OnActivateStarted</name>
+        <qualifiedname>Grenade_Base::OnActivateStarted</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="200" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a4a93434bb84b104acf5837772f8d0a52" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void Grenade_Base::OnActivateFinished</definition>
+        <argsstring>()</argsstring>
+        <name>OnActivateFinished</name>
+        <qualifiedname>Grenade_Base::OnActivateFinished</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="201" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="201" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a9ace456e06340a94188bc0c3acc4edc8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void Grenade_Base::OnActivateImmediate</definition>
+        <argsstring>()</argsstring>
+        <name>OnActivateImmediate</name>
+        <qualifiedname>Grenade_Base::OnActivateImmediate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="210" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="210" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1aa753bf6243c989d1539278590a60db54" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void Grenade_Base::OnDeactivate</definition>
+        <argsstring>()</argsstring>
+        <name>OnDeactivate</name>
+        <qualifiedname>Grenade_Base::OnDeactivate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="219" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a7fa730f9ec242c692e56fb61dafafcf3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Grenade_Base::OnStoreSave</definition>
+        <argsstring>(ParamsWriteContext ctx)</argsstring>
+        <name>OnStoreSave</name>
+        <qualifiedname>Grenade_Base::OnStoreSave</qualifiedname>
+        <param>
+          <type><ref refid="gameplay_8c_1af1d1033fca2ebd02f4ba61051b6341c4" kindref="member">ParamsWriteContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="221" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="221" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a0118d5144b6ff5d231d2ab5685987556" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool Grenade_Base::OnStoreLoad</definition>
+        <argsstring>(ParamsReadContext ctx, int version)</argsstring>
+        <name>OnStoreLoad</name>
+        <qualifiedname>Grenade_Base::OnStoreLoad</qualifiedname>
+        <param>
+          <type><ref refid="gameplay_8c_1a4ff67286551fc6c18504752a277c8bc1" kindref="member">ParamsReadContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="231" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="231" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a5f140d6ff94c4c50ccf42e7406003099" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool Grenade_Base::CanBeArmed</definition>
+        <argsstring>()</argsstring>
+        <name>CanBeArmed</name>
+        <qualifiedname>Grenade_Base::CanBeArmed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="250" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="250" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a356672610ec91590c5537feaf490a2b0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool Grenade_Base::CanBeDisarmed</definition>
+        <argsstring>()</argsstring>
+        <name>CanBeDisarmed</name>
+        <qualifiedname>Grenade_Base::CanBeDisarmed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="255" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="255" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a34f45d927b649ae24c8afdf725a8a035" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool Grenade_Base::CanExplodeInFire</definition>
+        <argsstring>()</argsstring>
+        <name>CanExplodeInFire</name>
+        <qualifiedname>Grenade_Base::CanExplodeInFire</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="260" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="260" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a28fb15170a3ff55fe0637afdf4d91a53" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Grenade_Base::SetActions</definition>
+        <argsstring>()</argsstring>
+        <name>SetActions</name>
+        <qualifiedname>Grenade_Base::SetActions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="265" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="265" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1a6b205078954b3af62a244c063139001e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Grenade_Base::EEItemLocationChanged</definition>
+        <argsstring>(notnull InventoryLocation oldLoc, notnull InventoryLocation newLoc)</argsstring>
+        <name>EEItemLocationChanged</name>
+        <qualifiedname>Grenade_Base::EEItemLocationChanged</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>oldLoc</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>newLoc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>activate grenade when it leaves player hands (safety handle released)</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="273" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="273" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1af15501db6809786116f66083bb906292" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Grenade_Base::OnWasAttached</definition>
+        <argsstring>(EntityAI parent, int slot_id)</argsstring>
+        <name>OnWasAttached</name>
+        <qualifiedname>Grenade_Base::OnWasAttached</qualifiedname>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>slot_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="284" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="284" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="class_grenade___base_1af831f7ff01fcd73560aa2277fc381ec3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Grenade_Base::Grenade_Base</definition>
+        <argsstring>()</argsstring>
+        <name>Grenade_Base</name>
+        <qualifiedname>Grenade_Base::Grenade_Base</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" line="294" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Grenade_Base.c" bodystart="294" bodyend="305"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ExplosivesBase</label>
+      </node>
+      <node id="1">
+        <label>Grenade_Base</label>
+        <link refid="class_grenade___base"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Grenade_ChemGas</label>
+        <link refid="class_grenade___chem_gas"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ExplosivesBase</label>
+      </node>
+      <node id="1">
+        <label>Grenade_Base</label>
+        <link refid="class_grenade___base"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>DEFAULT_FUSE_DELAY</edgelabel>
+          <edgelabel>FX_RANGE_MAX_MULT</edgelabel>
+          <edgelabel>m_FuseDelay</edgelabel>
+          <edgelabel>m_RemainingFuseTime</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_FuseTimer</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Pinnable</edgelabel>
+          <edgelabel>m_Pinned</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+      <node id="5">
+        <label>bool</label>
+        <link refid="classbool"/>
+      </node>
+      <node id="3">
+        <label>float</label>
+        <link refid="classfloat"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>LOWEST</edgelabel>
+          <edgelabel>MAX</edgelabel>
+          <edgelabel>MIN</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/FlashGrenade.c" line="1" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Grenade_Base/FlashGrenade.c" bodystart="2" bodyend="93"/>
+    <listofallmembers>
+      <member refid="class_grenade___base_1adacff8a1291a867168f1e0fa009554a8" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>Activate</name></member>
+      <member refid="class_grenade___base_1ab2314ca7e932a58bd7d6c52210d2312c" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>ActivateImmediate</name></member>
+      <member refid="class_grenade___base_1a1f3eab2b426f5af8c8f0c243ed87eacd" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>ActivateRandomTime</name></member>
+      <member refid="class_grenade___base_1a5f140d6ff94c4c50ccf42e7406003099" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>CanBeArmed</name></member>
+      <member refid="class_grenade___base_1a356672610ec91590c5537feaf490a2b0" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>CanBeDisarmed</name></member>
+      <member refid="class_grenade___base_1a34f45d927b649ae24c8afdf725a8a035" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>CanExplodeInFire</name></member>
+      <member refid="class_grenade___base_1a147492972e5b490de5fa0be1abf6cafd" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>CreateLight</name></member>
+      <member refid="class_grenade___base_1a4b802ac4a38591f58782ee53cce8c436" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>Deactivate</name></member>
+      <member refid="class_grenade___base_1a68bed8cc15842a2387377bcbc3cd2ac0" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>DEFAULT_FUSE_DELAY</name></member>
+      <member refid="class_grenade___base_1a6b205078954b3af62a244c063139001e" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>EEItemLocationChanged</name></member>
+      <member refid="class_grenade___base_1a702eef06b9e802eda227ba475fad9acc" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>ExplodeGrenade</name></member>
+      <member refid="class_grenade___base_1a66f44c868f7e82e82f3282f9a5f18c90" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>FlashGrenade</name></member>
+      <member refid="class_grenade___base_1a8aeacc2f86bfc293e3d3754ef514ce9e" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>FX_RANGE_MAX_MULT</name></member>
+      <member refid="class_grenade___base_1ab075a69158169e4f8fe2310724190b6c" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>GetGrenadeType</name></member>
+      <member refid="class_grenade___base_1af831f7ff01fcd73560aa2277fc381ec3" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>Grenade_Base</name></member>
+      <member refid="class_grenade___base_1a9a9cc59af76fe1fa2b70bae6ab3b5188" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>InitiateExplosion</name></member>
+      <member refid="class_grenade___base_1a692c5fe4a6f600dc848eb464dfaf9d40" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>IsPinnable</name></member>
+      <member refid="class_grenade___base_1a7f75718007e12a2d8339b327d160241e" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>IsPinned</name></member>
+      <member refid="class_grenade___base_1ae94a1c000836e69e10668c187f23b9dc" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>M67Grenade</name></member>
+      <member refid="class_grenade___base_1a48a1329d405fa336370581eb4bc2dafe" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>m_FuseDelay</name></member>
+      <member refid="class_grenade___base_1aeb846b1e5e6701b3e39314fc958ba096" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>m_FuseTimer</name></member>
+      <member refid="class_grenade___base_1a7db7df96d2ecbc1dc79143d9cf068bf1" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>m_GrenadeType</name></member>
+      <member refid="class_grenade___base_1ab359d392ffc01f5a152ce357b9e11395" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>m_Pinnable</name></member>
+      <member refid="class_grenade___base_1a1760c2637245dbba092532be54731d7b" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>m_Pinned</name></member>
+      <member refid="class_grenade___base_1ad26954a91322f4dac8e99468b00949b5" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>m_RemainingFuseTime</name></member>
+      <member refid="class_grenade___base_1a7f54df1ffa4b33d262c164802a76e605" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>OnActivatedByItem</name></member>
+      <member refid="class_grenade___base_1adc8216a7a9b73e5eadcd7a3fc0345b45" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>OnActivatedByTripWire</name></member>
+      <member refid="class_grenade___base_1a4a93434bb84b104acf5837772f8d0a52" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>OnActivateFinished</name></member>
+      <member refid="class_grenade___base_1a9ace456e06340a94188bc0c3acc4edc8" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>OnActivateImmediate</name></member>
+      <member refid="class_grenade___base_1aa27a4d32af17b80de0bc33a96d055d44" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>OnActivateStarted</name></member>
+      <member refid="class_grenade___base_1aa753bf6243c989d1539278590a60db54" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>OnDeactivate</name></member>
+      <member refid="class_grenade___base_1ae0300f057d616ed00dd66c87eda6b0f8" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>OnExplosionEffects</name></member>
+      <member refid="class_grenade___base_1a2426d347f836723580f3762be373218d" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>OnPin</name></member>
+      <member refid="class_grenade___base_1a0118d5144b6ff5d231d2ab5685987556" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>OnStoreLoad</name></member>
+      <member refid="class_grenade___base_1a7fa730f9ec242c692e56fb61dafafcf3" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>OnStoreSave</name></member>
+      <member refid="class_grenade___base_1a3e89c05835eaa29ed4437a65915f5d42" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>OnUnpin</name></member>
+      <member refid="class_grenade___base_1af15501db6809786116f66083bb906292" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>OnWasAttached</name></member>
+      <member refid="class_grenade___base_1ab498e346dd75e74f85822cee7c5f775f" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>Pin</name></member>
+      <member refid="class_grenade___base_1a1d5a60376c800ea9ce0cfcdff117192b" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>RGD5Grenade</name></member>
+      <member refid="class_grenade___base_1a28fb15170a3ff55fe0637afdf4d91a53" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>SetActions</name></member>
+      <member refid="class_grenade___base_1a45227878978b0c3fc68d2749be4a7059" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>SetFuseDelay</name></member>
+      <member refid="class_grenade___base_1a7b01bb40742122b3e4ce77c808687c26" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>SetGrenadeType</name></member>
+      <member refid="class_grenade___base_1a7d0b19fcd1f0370e0eb74af553684155" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>SetPinnable</name></member>
+      <member refid="class_grenade___base_1ac141433a10d1881c8e61e5838fb0acd3" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>Unpin</name></member>
+      <member refid="class_grenade___base_1ae80396817555e7d9c4f663a2f03b16f9" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>~FlashGrenade</name></member>
+      <member refid="class_grenade___base_1a9453b8900a649ef201835b2ad36a91de" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>~M67Grenade</name></member>
+      <member refid="class_grenade___base_1a7b76a221226efb30b624e5953999256a" prot="private" virt="non-virtual"><scope>Grenade_Base</scope><name>~RGD5Grenade</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

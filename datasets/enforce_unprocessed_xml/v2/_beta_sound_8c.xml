@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_beta_sound_8c" kind="file" language="C++">
+    <compoundname>BetaSound.c</compoundname>
+    <innerclass refid="class_beta_sound" prot="public">BetaSound</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_beta_sound" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_beta_sound" kindref="compound">BetaSound</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_beta_sound_1aa76a563c6d07ec5f6fa7271dcf5b2415" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>SoundOnVehicle<sp/><ref refid="class_beta_sound_1aa76a563c6d07ec5f6fa7271dcf5b2415" kindref="member">SaySound</ref>(<ref refid="class_object" kindref="compound">Object</ref><sp/>source,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><sp/>sound_name,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>distance,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>looped)<sp/><sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_female<sp/>=<sp/>source.ConfigGetBool(</highlight><highlight class="stringliteral">&quot;woman&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>path_class<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;CfgActionSounds<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>sound_name;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>path_sound<sp/>=<sp/>path_class<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>sounds&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//is<sp/>the<sp/>action<sp/>sound<sp/>class<sp/>defined<sp/>?<sp/>if<sp/>not,<sp/>try<sp/>to<sp/>play<sp/>it<sp/>as<sp/>a<sp/>regular<sp/>sound</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="_day_z_game_8c_1a92f5918ec5d632d5159c9d1f52fe7758" kindref="member">GetDayZGame</ref>().ConfigIsExisting(path_sound)<sp/>)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>path_sound_female<sp/>=<sp/>path_class<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;_female&quot;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>sounds&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(is_female<sp/>&amp;&amp;<sp/><ref refid="_day_z_game_8c_1a92f5918ec5d632d5159c9d1f52fe7758" kindref="member">GetDayZGame</ref>().ConfigIsExisting(path_sound_female))</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>path_sound<sp/>=<sp/>path_sound_female;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a7cc2a75cac35759a1bdffa796ff0aa65" kindref="member">ConfigGetTextArray</ref>(path_sound,<ref refid="class_cached_objects_arrays" kindref="compound">CachedObjectsArrays</ref>.<ref refid="class_cached_objects_arrays_1a0cd2c080d9ad88af995a8a9dee50b7ff" kindref="member">ARRAY_STRING</ref>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rnd_index<sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gac34f9f8daa0e311b6a6b40cc21d38226" kindref="member">RandomInt</ref>(0,<ref refid="class_cached_objects_arrays" kindref="compound">CachedObjectsArrays</ref>.<ref refid="class_cached_objects_arrays_1a0cd2c080d9ad88af995a8a9dee50b7ff" kindref="member">ARRAY_STRING</ref>.Count());</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>sound_class<sp/>=<sp/><ref refid="class_cached_objects_arrays" kindref="compound">CachedObjectsArrays</ref>.<ref refid="class_cached_objects_arrays_1a0cd2c080d9ad88af995a8a9dee50b7ff" kindref="member">ARRAY_STRING</ref>.Get(rnd_index);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SoundOnVehicle<sp/>sound_object<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1aeac4d782890f7a54770a9e3b7011e81a" kindref="member">CreateSoundOnObject</ref>(source,<sp/>sound_class,<sp/>distance,<sp/>looped);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sound_object;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1aeac4d782890f7a54770a9e3b7011e81a" kindref="member">CreateSoundOnObject</ref>(source,<sp/>sound_name,<sp/>distance,<sp/>looped);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/BetaSound.c"/>
+  </compounddef>
+</doxygen>

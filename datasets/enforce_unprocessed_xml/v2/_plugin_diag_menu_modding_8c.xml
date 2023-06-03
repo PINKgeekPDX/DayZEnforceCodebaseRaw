@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_plugin_diag_menu_modding_8c" kind="file" language="C++">
+    <compoundname>PluginDiagMenuModding.c</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DOXYGEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>MODDING_TEST</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DIAG_DEVELOPER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DOXYGEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">PluginDiagMenuModded<sp/></highlight><highlight class="comment">//<sp/>Just<sp/>to<sp/>not<sp/>have<sp/>it<sp/>show<sp/>up<sp/>for<sp/>the<sp/>regular<sp/>entry...<sp/>Doxygen<sp/>doesn&apos;t<sp/>know<sp/>about<sp/>modding</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">#else</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">modded<sp/>class<sp/><ref refid="class_plugin_diag_menu" kindref="compound">PluginDiagMenu</ref></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">#endif</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>m_ModdedDiagsExampleRootMenu<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;BI<sp/>-<sp/>DiagsModdingExample&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>m_ModdedDiagsExampleSubMenu<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Example<sp/>Sub<sp/>Menu&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_ModdedDiagsExampleRootMenuID;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_ModdedDiagsExampleBoolID;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_ModdedDiagsExampleSubMenuID;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_ModdedDiagsExampleRangeID;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//---------------------------------------------</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>RegisterModdedDiagsIDs()</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.RegisterModdedDiagsIDs();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_ModdedDiagsExampleRootMenuID<sp/>=<sp/>GetModdedDiagID();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_ModdedDiagsExampleBoolID<sp/>=<sp/>GetModdedDiagID();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_ModdedDiagsExampleSubMenuID<sp/>=<sp/>GetModdedDiagID();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_ModdedDiagsExampleRangeID<sp/>=<sp/>GetModdedDiagID();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//---------------------------------------------</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>RegisterModdedDiags()</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.RegisterModdedDiags();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Register<sp/>the<sp/>root<sp/>menu<sp/>of<sp/>your<sp/>mod<sp/>under<sp/>the<sp/>ModdedRootMenu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Then<sp/>register<sp/>all<sp/>following<sp/>menus<sp/>and<sp/>items<sp/>under<sp/>this<sp/>menu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>can<sp/>not<sp/>be<sp/>enforced,<sp/>but<sp/>it<sp/>will<sp/>help<sp/>keep<sp/>things<sp/>clean</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Including<sp/>being<sp/>able<sp/>to<sp/>easily<sp/>identify<sp/>where<sp/>a<sp/>debug<sp/>is<sp/>coming<sp/>from</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>So<sp/>that<sp/>reports<sp/>of<sp/>a<sp/>broken<sp/>debug<sp/>can<sp/>be<sp/>sent<sp/>to<sp/>the<sp/>correct<sp/>developer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>you<sp/>have<sp/>multiple<sp/>mods,<sp/>you<sp/>might<sp/>even<sp/>want<sp/>to<sp/>consider<sp/>to<sp/>create<sp/>a<sp/>root<sp/>menu<sp/>with<sp/>your<sp/>developer<sp/>name</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>And<sp/>then<sp/>put<sp/>the<sp/>mod<sp/>menus<sp/>as<sp/>a<sp/>submenu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>To<sp/>prevent<sp/>someone<sp/>running<sp/>a<sp/>lot<sp/>of<sp/>mods<sp/>from<sp/>having<sp/>an<sp/>overflooded<sp/>menu<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DiagMenu.MenuExists(...)<sp/>could<sp/>serve<sp/>to<sp/>help<sp/>to<sp/>identify<sp/>if<sp/>the<sp/>root<sp/>menu<sp/>already<sp/>exists<sp/>when<sp/>using<sp/>this<sp/>format</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>So<sp/>that<sp/>the<sp/>multiple<sp/>mods<sp/>can<sp/>know<sp/>if<sp/>they<sp/>still<sp/>have<sp/>to<sp/>register<sp/>your<sp/>root<sp/>menu<sp/>or<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_diag_menu" kindref="compound">DiagMenu</ref>.<ref refid="group___diag_menu_1gaa1f950968fa88878750fcf452d8c7e3b" kindref="member">RegisterMenu</ref>(m_ModdedDiagsExampleRootMenuID,<sp/>m_ModdedDiagsExampleRootMenu,<sp/>GetModdedRootMenu());</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_diag_menu" kindref="compound">DiagMenu</ref>.<ref refid="group___diag_menu_1ga1a1f7e3663aa5268d6da3bab0c082ac9" kindref="member">RegisterBool</ref>(m_ModdedDiagsExampleBoolID,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Modded<sp/>Example<sp/>Bool&quot;</highlight><highlight class="normal">,<sp/>m_ModdedDiagsExampleRootMenuID);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>sub<sp/>menu<sp/>inside<sp/>the<sp/>root<sp/>of<sp/>the<sp/>mod<sp/>menu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>curly<sp/>braces<sp/>are<sp/>simply<sp/>for<sp/>readability</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_diag_menu" kindref="compound">DiagMenu</ref>.<ref refid="group___diag_menu_1gaa1f950968fa88878750fcf452d8c7e3b" kindref="member">RegisterMenu</ref>(m_ModdedDiagsExampleSubMenuID,<sp/>m_ModdedDiagsExampleSubMenu,<sp/>m_ModdedDiagsExampleRootMenuID);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_diag_menu" kindref="compound">DiagMenu</ref>.<ref refid="group___diag_menu_1ga501f33976ec3be3a1328ef191a251a41" kindref="member">RegisterRange</ref>(m_ModdedDiagsExampleRangeID,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Modded<sp/>Example<sp/>Range&quot;</highlight><highlight class="normal">,<sp/>m_ModdedDiagsExampleSubMenuID,<sp/></highlight><highlight class="stringliteral">&quot;3<sp/>9<sp/>6<sp/>3&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DOXYGEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">DummyDoxygenClass</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_IgnoreThisVariable;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DOXYGEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">PluginDiagMenuClientModded<sp/></highlight><highlight class="comment">//<sp/>Just<sp/>to<sp/>not<sp/>have<sp/>it<sp/>show<sp/>up<sp/>for<sp/>the<sp/>regular<sp/>entry...<sp/>Doxygen<sp/>doesn&apos;t<sp/>know<sp/>about<sp/>modding</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal">#else</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">modded<sp/>class<sp/><ref refid="class_plugin_diag_menu_client" kindref="compound">PluginDiagMenuClient</ref></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">#endif</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>BindCallbacks()</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.BindCallbacks();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_diag_menu" kindref="compound">DiagMenu</ref>.<ref refid="group___diag_menu_1gaa3cf2195fa4de6d950d3deb2bd163a7f" kindref="member">BindCallback</ref>(m_ModdedDiagsExampleBoolID,<sp/>CBModdedDiadIDsExampleBool);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_diag_menu" kindref="compound">DiagMenu</ref>.<ref refid="group___diag_menu_1gaa3cf2195fa4de6d950d3deb2bd163a7f" kindref="member">BindCallback</ref>(m_ModdedDiagsExampleRangeID,<sp/>CBModdedDiadIDsExampleRange);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CBModdedDiadIDsExampleBool(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enabled)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;CBModdedDiadIDsExampleBool:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>enabled);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CBModdedDiadIDsExampleRange(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;CBModdedDiadIDsExampleRange:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>value);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="comment">//@}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDiagMenu/PluginDiagMenuModding.c"/>
+  </compounddef>
+</doxygen>

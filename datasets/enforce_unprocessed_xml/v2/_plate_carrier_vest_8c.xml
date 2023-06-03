@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_plate_carrier_vest_8c" kind="file" language="C++">
+    <compoundname>PlateCarrierVest.c</compoundname>
+    <innerclass refid="class_plate_carrier_vest" prot="public">PlateCarrierVest</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_plate_carrier_vest" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_plate_carrier_vest" kindref="compound">PlateCarrierVest</ref>:<sp/><ref refid="class_vest___base" kindref="compound">Vest_Base</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_plate_carrier_vest_1aa16affaf030bb99cfe91f7b94f939796" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_plate_carrier_vest_1aa16affaf030bb99cfe91f7b94f939796" kindref="member">OnWasAttached</ref>(<sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>parent,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>slot_id<sp/>)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnWasAttached(<sp/>parent,<sp/>slot_id<sp/>);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsServer()<sp/>&amp;&amp;<sp/>parent.IsInherited(<sp/><ref refid="class_day_z_infected" kindref="compound">DayZInfected</ref><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>coef<sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga3a1cf1e09030a73e70d718ee2862cac0" kindref="member">RandomFloatInclusive</ref>(<sp/>0.2,<sp/>0.4<sp/>);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetHealth01(<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>coef);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Debug<sp/>menu<sp/>Spawn<sp/>Ground<sp/>Special</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_plate_carrier_vest_1affe11521222b4571de6a864b9b0e6ef4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_plate_carrier_vest_1affe11521222b4571de6a864b9b0e6ef4" kindref="member">OnDebugSpawn</ref>()</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>entity;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_class" kindref="compound">Class</ref>.<ref refid="group___enforce_1ga253ceb932745ea74ca4a4d3d9e8c12d7" kindref="member">CastTo</ref>(entity,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">)<sp/>)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entity.GetInventory().CreateInInventory(<sp/></highlight><highlight class="stringliteral">&quot;PlateCarrierPouches&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entity.GetInventory().CreateInInventory(<sp/></highlight><highlight class="stringliteral">&quot;PlateCarrierHolster&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/Clothing/PlateCarrierVest.c"/>
+  </compounddef>
+</doxygen>

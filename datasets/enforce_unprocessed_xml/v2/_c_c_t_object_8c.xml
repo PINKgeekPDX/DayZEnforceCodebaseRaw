@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_c_c_t_object_8c" kind="file" language="C++">
+    <compoundname>CCTObject.c</compoundname>
+    <innerclass refid="class_c_c_t_object" prot="public">CCTObject</innerclass>
+    <innerclass refid="class_c_c_t_parent" prot="public">CCTParent</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_c_c_t_object" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_c_t_object" kindref="compound">CCTObject</ref><sp/>:<sp/><ref refid="class_c_c_t_base" kindref="compound">CCTBase</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_c_c_t_object_1aadc594a446eaae61eae6db0c6d932610" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_c_c_t_object_1aadc594a446eaae61eae6db0c6d932610" kindref="member">m_MaximalActionDistanceSq</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="5" refid="class_c_c_t_object_1a474ffee8125356d3f05389142f84fe23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_c_t_object_1a474ffee8125356d3f05389142f84fe23" kindref="member">CCTObject</ref><sp/>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maximal_target_distance<sp/>=<sp/><ref refid="class_u_a_max_distances" kindref="compound">UAMaxDistances</ref>.<ref refid="class_u_a_max_distances_1aef260d89bc0f791bc7c313cae73f8450" kindref="member">DEFAULT</ref><sp/>)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_c_t_object_1aadc594a446eaae61eae6db0c6d932610" kindref="member">m_MaximalActionDistanceSq</ref><sp/>=<sp/>maximal_target_distance<sp/>*<sp/>maximal_target_distance;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="10" refid="class_c_c_t_object_1a474b4f12f4a2fb27cf0eed77c3586f66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_c_c_t_object_1a474b4f12f4a2fb27cf0eed77c3586f66" kindref="member">Can</ref>(<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player,<sp/><ref refid="_action_targets_8c_1a2ab3de6f698cb230ae0c129e3e01b341" kindref="member">ActionTarget</ref><sp/>target<sp/>)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>targetObject<sp/>=<sp/>target.GetObject();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!targetObject<sp/>||<sp/>!player<sp/>)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>playerHeadPos;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MiscGameplayFunctions.GetHeadBonePos(player,<sp/>playerHeadPos);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>distanceRoot<sp/>=<sp/><ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1a21d8662c860e105943718b2da59349e7" kindref="member">DistanceSq</ref>(targetObject.GetPosition(),<sp/>player.GetPosition());</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>distanceHead<sp/>=<sp/><ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1a21d8662c860e105943718b2da59349e7" kindref="member">DistanceSq</ref>(targetObject.GetPosition(),<sp/>playerHeadPos);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>distanceRoot<sp/>&lt;=<sp/><ref refid="class_c_c_t_object_1aadc594a446eaae61eae6db0c6d932610" kindref="member">m_MaximalActionDistanceSq</ref><sp/>||<sp/>distanceHead<sp/>&lt;=<sp/><ref refid="class_c_c_t_object_1aadc594a446eaae61eae6db0c6d932610" kindref="member">m_MaximalActionDistanceSq</ref><sp/>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_c_c_t_parent" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_c_t_parent" kindref="compound">CCTParent</ref><sp/>:<sp/><ref refid="class_c_c_t_base" kindref="compound">CCTBase</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28" refid="class_c_c_t_parent_1a15ef4de3e04bc973b27a09ece17b1107" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_c_c_t_parent_1a15ef4de3e04bc973b27a09ece17b1107" kindref="member">m_MaximalActionDistanceSq</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30" refid="class_c_c_t_parent_1ad951b69b306ebc49547320ca755090c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_c_t_parent_1ad951b69b306ebc49547320ca755090c2" kindref="member">CCTParent</ref><sp/>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maximal_target_distance<sp/>=<sp/><ref refid="class_u_a_max_distances" kindref="compound">UAMaxDistances</ref>.<ref refid="class_u_a_max_distances_1aef260d89bc0f791bc7c313cae73f8450" kindref="member">DEFAULT</ref><sp/>)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_c_t_parent_1a15ef4de3e04bc973b27a09ece17b1107" kindref="member">m_MaximalActionDistanceSq</ref><sp/>=<sp/>maximal_target_distance<sp/>*<sp/>maximal_target_distance;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="class_c_c_t_parent_1a4c2ad48a490d7669cafcf68d1ae39ff7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_c_c_t_parent_1a4c2ad48a490d7669cafcf68d1ae39ff7" kindref="member">Can</ref>(<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player,<sp/><ref refid="_action_targets_8c_1a2ab3de6f698cb230ae0c129e3e01b341" kindref="member">ActionTarget</ref><sp/>target<sp/>)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>targetParent<sp/>=<sp/>target.GetParent();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!targetParent<sp/>||<sp/>!player<sp/>)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>playerHeadPos;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MiscGameplayFunctions.GetHeadBonePos(player,<sp/>playerHeadPos);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>distanceRoot<sp/>=<sp/><ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1a21d8662c860e105943718b2da59349e7" kindref="member">DistanceSq</ref>(targetParent.GetPosition(),<sp/>player.GetPosition());</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>distanceHead<sp/>=<sp/><ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1a21d8662c860e105943718b2da59349e7" kindref="member">DistanceSq</ref>(targetParent.GetPosition(),<sp/>playerHeadPos);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/>distanceRoot<sp/>&lt;=<sp/><ref refid="class_c_c_t_parent_1a15ef4de3e04bc973b27a09ece17b1107" kindref="member">m_MaximalActionDistanceSq</ref><sp/>||<sp/>distanceHead<sp/>&lt;=<sp/><ref refid="class_c_c_t_parent_1a15ef4de3e04bc973b27a09ece17b1107" kindref="member">m_MaximalActionDistanceSq</ref><sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/UserActionsComponent/TargetConditionsComponents/CCTObject.c"/>
+  </compounddef>
+</doxygen>

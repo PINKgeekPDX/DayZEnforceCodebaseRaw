@@ -1,0 +1,359 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_day_z_physics_8c" kind="file" language="C++">
+    <compoundname>DayZPhysics.c</compoundname>
+    <innerclass refid="class_raycast_r_v_params" prot="public">RaycastRVParams</innerclass>
+    <innerclass refid="class_raycast_r_v_result" prot="public">RaycastRVResult</innerclass>
+    <innerclass refid="class_collision_overlap_callback" prot="public">CollisionOverlapCallback</innerclass>
+    <innerclass refid="class_day_z_physics" prot="public">DayZPhysics</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3a" prot="public" static="no" strong="no">
+        <type></type>
+        <name>PhxInteractionLayers</name>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aafc24505d887d19c4bf63c00ec3134834" prot="public">
+          <name>NOCOLLISION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aad20935afa9af8d1f162c113cfbbf111d" prot="public">
+          <name>DEFAULT</name>
+          <initializer>=  1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa1ae565a2eb1b9ddd41f0cefc3f33a087" prot="public">
+          <name>BUILDING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa762041e95dc7b081aaf6b0019dca8586" prot="public">
+          <name>CHARACTER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aada30f0dfe7c99ccb74e83ba77c5c118d" prot="public">
+          <name>VEHICLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa34cb6e132dc8c920ea4899c94a47e156" prot="public">
+          <name>DYNAMICITEM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa100debd57cb88f2e4bd13b780fcabfcb" prot="public">
+          <name>DYNAMICITEM_NOCHAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aaa40171ea8c0980e35c7ad0ee529c8cfa" prot="public">
+          <name>ROADWAY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aac2053b3830bd5273a2c24c014d6abc61" prot="public">
+          <name>VEHICLE_NOTERRAIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa416166834c71f523dcfaa6bee6f3418f" prot="public">
+          <name>CHARACTER_NO_GRAVITY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa9753af6c5def70f247fe2a41c4d2082a" prot="public">
+          <name>FIREGEOM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aaf5a83949bd019169467f675ef8c60ef9" prot="public">
+          <name>DOOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa6dd34476b864b389cb28b655222b1858" prot="public">
+          <name>RAGDOLL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa44021f1a52edc2c884a544a38c672a56" prot="public">
+          <name>WATERLAYER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa58c2bc22908015ec088d6cb81dd3112f" prot="public">
+          <name>TERRAIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa61fe741a013aba041eb9a4a3d55e46bc" prot="public">
+          <name>GHOST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aabfac00358e0647fc33e06e78543f44d8" prot="public">
+          <name>WORLDBOUNDS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aac9c04652d7bde83489037a941f229e65" prot="public">
+          <name>FENCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa9c74caa56a3c05723eb1dbad44bc9bc3" prot="public">
+          <name>AI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa6b82657907572c302a95f00c7b5b51dc" prot="public">
+          <name>AI_NO_COLLISION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa0972cd715c6aa0be3d4ec31461b9933d" prot="public">
+          <name>AI_COMPLEX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aaaa60e119b1b1f70feca0c15be782a0fc" prot="public">
+          <name>TINYCAPSULE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa16be61c7643c97ef03953cad704f0345" prot="public">
+          <name>TRIGGER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa0ce2fcefb8d2bbd1b045c2130074778a" prot="public">
+          <name>TRIGGER_NOTERRAIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa1e31c1d3e8d0acd75fe8a066c2b01396" prot="public">
+          <name>ITEM_SMALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa01f4dcc45340182711ad5c949bfa440b" prot="public">
+          <name>ITEM_LARGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aada31f516cdf218b68b790fb31e8a6956" prot="public">
+          <name>CAMERA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa5937389a60030a604f0efdf5e3927325" prot="public">
+          <name>TEMP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/DayZPhysics.c" line="1" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/DayZPhysics.c" bodystart="2" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3a" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3a" kindref="member">PhxInteractionLayers</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aafc24505d887d19c4bf63c00ec3134834" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aafc24505d887d19c4bf63c00ec3134834" kindref="member">NOCOLLISION</ref>,</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aad20935afa9af8d1f162c113cfbbf111d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aad20935afa9af8d1f162c113cfbbf111d" kindref="member">DEFAULT</ref>,</highlight></codeline>
+<codeline lineno="6" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa1ae565a2eb1b9ddd41f0cefc3f33a087" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa1ae565a2eb1b9ddd41f0cefc3f33a087" kindref="member">BUILDING</ref>,</highlight></codeline>
+<codeline lineno="7" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa762041e95dc7b081aaf6b0019dca8586" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa762041e95dc7b081aaf6b0019dca8586" kindref="member">CHARACTER</ref>,</highlight></codeline>
+<codeline lineno="8" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aada30f0dfe7c99ccb74e83ba77c5c118d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aada30f0dfe7c99ccb74e83ba77c5c118d" kindref="member">VEHICLE</ref>,</highlight></codeline>
+<codeline lineno="9" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa34cb6e132dc8c920ea4899c94a47e156" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa34cb6e132dc8c920ea4899c94a47e156" kindref="member">DYNAMICITEM</ref>,</highlight></codeline>
+<codeline lineno="10" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa100debd57cb88f2e4bd13b780fcabfcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa100debd57cb88f2e4bd13b780fcabfcb" kindref="member">DYNAMICITEM_NOCHAR</ref>,</highlight></codeline>
+<codeline lineno="11" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aaa40171ea8c0980e35c7ad0ee529c8cfa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aaa40171ea8c0980e35c7ad0ee529c8cfa" kindref="member">ROADWAY</ref>,</highlight></codeline>
+<codeline lineno="12" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aac2053b3830bd5273a2c24c014d6abc61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aac2053b3830bd5273a2c24c014d6abc61" kindref="member">VEHICLE_NOTERRAIN</ref>,</highlight></codeline>
+<codeline lineno="13" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa416166834c71f523dcfaa6bee6f3418f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa416166834c71f523dcfaa6bee6f3418f" kindref="member">CHARACTER_NO_GRAVITY</ref>,</highlight></codeline>
+<codeline lineno="14" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa9753af6c5def70f247fe2a41c4d2082a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa9753af6c5def70f247fe2a41c4d2082a" kindref="member">FIREGEOM</ref>,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aaf5a83949bd019169467f675ef8c60ef9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aaf5a83949bd019169467f675ef8c60ef9" kindref="member">DOOR</ref>,</highlight></codeline>
+<codeline lineno="17" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa6dd34476b864b389cb28b655222b1858" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa6dd34476b864b389cb28b655222b1858" kindref="member">RAGDOLL</ref>,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa44021f1a52edc2c884a544a38c672a56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa44021f1a52edc2c884a544a38c672a56" kindref="member">WATERLAYER</ref>,</highlight></codeline>
+<codeline lineno="20" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa58c2bc22908015ec088d6cb81dd3112f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa58c2bc22908015ec088d6cb81dd3112f" kindref="member">TERRAIN</ref>,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa61fe741a013aba041eb9a4a3d55e46bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa61fe741a013aba041eb9a4a3d55e46bc" kindref="member">GHOST</ref>,</highlight></codeline>
+<codeline lineno="23" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aabfac00358e0647fc33e06e78543f44d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aabfac00358e0647fc33e06e78543f44d8" kindref="member">WORLDBOUNDS</ref>,</highlight></codeline>
+<codeline lineno="24" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aac9c04652d7bde83489037a941f229e65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aac9c04652d7bde83489037a941f229e65" kindref="member">FENCE</ref>,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa9c74caa56a3c05723eb1dbad44bc9bc3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa9c74caa56a3c05723eb1dbad44bc9bc3" kindref="member">AI</ref>,</highlight></codeline>
+<codeline lineno="27" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa6b82657907572c302a95f00c7b5b51dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa6b82657907572c302a95f00c7b5b51dc" kindref="member">AI_NO_COLLISION</ref>,</highlight></codeline>
+<codeline lineno="28" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa0972cd715c6aa0be3d4ec31461b9933d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa0972cd715c6aa0be3d4ec31461b9933d" kindref="member">AI_COMPLEX</ref>,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aaaa60e119b1b1f70feca0c15be782a0fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aaaa60e119b1b1f70feca0c15be782a0fc" kindref="member">TINYCAPSULE</ref>,</highlight></codeline>
+<codeline lineno="31" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa16be61c7643c97ef03953cad704f0345" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa16be61c7643c97ef03953cad704f0345" kindref="member">TRIGGER</ref>,</highlight></codeline>
+<codeline lineno="32" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa0ce2fcefb8d2bbd1b045c2130074778a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa0ce2fcefb8d2bbd1b045c2130074778a" kindref="member">TRIGGER_NOTERRAIN</ref>,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa1e31c1d3e8d0acd75fe8a066c2b01396" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa1e31c1d3e8d0acd75fe8a066c2b01396" kindref="member">ITEM_SMALL</ref>,</highlight></codeline>
+<codeline lineno="35" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa01f4dcc45340182711ad5c949bfa440b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa01f4dcc45340182711ad5c949bfa440b" kindref="member">ITEM_LARGE</ref>,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aada31f516cdf218b68b790fb31e8a6956" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aada31f516cdf218b68b790fb31e8a6956" kindref="member">CAMERA</ref>,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa5937389a60030a604f0efdf5e3927325" kindref="member">TEMP</ref></highlight></codeline>
+<codeline lineno="40" refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3aa5937389a60030a604f0efdf5e3927325" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_raycast_r_v_params" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_raycast_r_v_params" kindref="compound">RaycastRVParams</ref></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48" refid="class_raycast_r_v_params_1a910dbea4f2f13f5d36ae62c2d8342d61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/><ref refid="class_raycast_r_v_params_1a910dbea4f2f13f5d36ae62c2d8342d61" kindref="member">begPos</ref>;<sp/></highlight></codeline>
+<codeline lineno="49" refid="class_raycast_r_v_params_1a0ccc6e8bf71791f5fdd65f48e80fbc6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/><ref refid="class_raycast_r_v_params_1a0ccc6e8bf71791f5fdd65f48e80fbc6e" kindref="member">endPos</ref>;<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_raycast_r_v_params_1ad7c936745c7f8521b19036dc6a9ed945" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_object" kindref="compound">Object</ref><sp/><ref refid="class_raycast_r_v_params_1ad7c936745c7f8521b19036dc6a9ed945" kindref="member">ignore</ref>;<sp/></highlight></codeline>
+<codeline lineno="52" refid="class_raycast_r_v_params_1a690cf062af81fd33677683905d9e992e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_object" kindref="compound">Object</ref><sp/><ref refid="class_raycast_r_v_params_1a690cf062af81fd33677683905d9e992e" kindref="member">with</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_raycast_r_v_params_1a8d1936df4c82f8b0b19987eb9d38a840" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_raycast_r_v_params_1a8d1936df4c82f8b0b19987eb9d38a840" kindref="member">radius</ref>;<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="class_raycast_r_v_params_1af093c590a8f6e3610e50dde845edeaeb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___debug_shape_1ga51f3cfd13ef7752ddd89ea32bcccd7d5" kindref="member">CollisionFlags</ref><sp/><ref refid="class_raycast_r_v_params_1af093c590a8f6e3610e50dde845edeaeb" kindref="member">flags</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="class_raycast_r_v_params_1accefb54bff7ed8a8b5ba1c03d0288162" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_raycast_r_v_params_1accefb54bff7ed8a8b5ba1c03d0288162" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="class_raycast_r_v_params_1a40efde4f9492cf0c339f43ffa32c526b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_raycast_r_v_params_1a40efde4f9492cf0c339f43ffa32c526b" kindref="member">sorted</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="class_raycast_r_v_params_1a1ff9ebd0e27ebbdb8e81bc86cd52af0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_raycast_r_v_params_1a1ff9ebd0e27ebbdb8e81bc86cd52af0c" kindref="member">groundOnly</ref>;<sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="class_raycast_r_v_params_1a968fa329bdea6f459b57d6ced4cc9b40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_raycast_r_v_params_1a968fa329bdea6f459b57d6ced4cc9b40" kindref="member">RaycastRVParams</ref>(<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>vBeg,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>vEnd,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>pIgnore<sp/>=<sp/>null,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fRadius<sp/>=<sp/>0.0<sp/>)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_raycast_r_v_params_1a910dbea4f2f13f5d36ae62c2d8342d61" kindref="member">begPos</ref><sp/>=<sp/>vBeg;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_raycast_r_v_params_1a0ccc6e8bf71791f5fdd65f48e80fbc6e" kindref="member">endPos</ref><sp/>=<sp/>vEnd;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_raycast_r_v_params_1ad7c936745c7f8521b19036dc6a9ed945" kindref="member">ignore</ref><sp/>=<sp/>pIgnore;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_raycast_r_v_params_1a8d1936df4c82f8b0b19987eb9d38a840" kindref="member">radius</ref><sp/>=<sp/>fRadius;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>default<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_raycast_r_v_params_1a690cf062af81fd33677683905d9e992e" kindref="member">with</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>null;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_raycast_r_v_params_1af093c590a8f6e3610e50dde845edeaeb" kindref="member">flags</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="group___debug_shape_1ga51f3cfd13ef7752ddd89ea32bcccd7d5" kindref="member">CollisionFlags</ref>.NEARESTCONTACT;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_raycast_r_v_params_1accefb54bff7ed8a8b5ba1c03d0288162" kindref="member">type</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>ObjIntersectView;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_raycast_r_v_params_1a40efde4f9492cf0c339f43ffa32c526b" kindref="member">sorted</ref><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_raycast_r_v_params_1a1ff9ebd0e27ebbdb8e81bc86cd52af0c" kindref="member">groundOnly</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="class_raycast_r_v_result" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_raycast_r_v_result" kindref="compound">RaycastRVResult</ref></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97" refid="class_raycast_r_v_result_1a1795177279faf6e9a70e7b634434e130" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_object" kindref="compound">Object</ref><sp/><ref refid="class_raycast_r_v_result_1a1795177279faf6e9a70e7b634434e130" kindref="member">obj</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98" refid="class_raycast_r_v_result_1aded30757f6fb51d698c90fa3b658d19a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_object" kindref="compound">Object</ref><sp/><ref refid="class_raycast_r_v_result_1aded30757f6fb51d698c90fa3b658d19a" kindref="member">parent</ref>;<sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="class_raycast_r_v_result_1ac1c723af4f810b332d2ba5a75c42e602" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/><ref refid="class_raycast_r_v_result_1ac1c723af4f810b332d2ba5a75c42e602" kindref="member">pos</ref>;<sp/></highlight></codeline>
+<codeline lineno="101" refid="class_raycast_r_v_result_1a6dfd45977f09ef44698bb8a0463d9f0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/><ref refid="class_raycast_r_v_result_1a6dfd45977f09ef44698bb8a0463d9f0d" kindref="member">dir</ref>;<sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="class_raycast_r_v_result_1a73baec36d6f4fc5fd44337db1d91f682" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_raycast_r_v_result_1a73baec36d6f4fc5fd44337db1d91f682" kindref="member">hierLevel</ref>;<sp/></highlight></codeline>
+<codeline lineno="104" refid="class_raycast_r_v_result_1a25a74015deb3038af2ce88fd459241bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_raycast_r_v_result_1a25a74015deb3038af2ce88fd459241bc" kindref="member">component</ref>;<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106" refid="class_raycast_r_v_result_1a535b0cfde9b9986ad2767770c8168e33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_raycast_r_v_result_1a535b0cfde9b9986ad2767770c8168e33" kindref="member">entry</ref>;<sp/></highlight></codeline>
+<codeline lineno="107" refid="class_raycast_r_v_result_1a6955e140356677270b6ad416a5406d18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_raycast_r_v_result_1a6955e140356677270b6ad416a5406d18" kindref="member">exit</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="class_collision_overlap_callback" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_collision_overlap_callback" kindref="compound">CollisionOverlapCallback</ref><sp/>:<sp/><ref refid="class_managed" kindref="compound">Managed</ref></highlight></codeline>
+<codeline lineno="111"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112" refid="class_collision_overlap_callback_1a1d8d7c2f0f2462a4b9322b598d6922b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_collision_overlap_callback_1a1d8d7c2f0f2462a4b9322b598d6922b7" kindref="member">OnContact</ref>(<ref refid="class_i_entity" kindref="compound">IEntity</ref><sp/>other,<sp/><ref refid="class_contact" kindref="compound">Contact</ref><sp/>contact)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="class_day_z_physics" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_day_z_physics" kindref="compound">DayZPhysics</ref></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120" refid="class_day_z_physics_1adba68e71cdc9701289b2ed26d37aa8b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_day_z_physics_1adba68e71cdc9701289b2ed26d37aa8b6" kindref="member">DayZPhysics</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="121" refid="class_day_z_physics_1ad7f6b02b8ed9a81157c47c2f478534bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_day_z_physics_1ad7f6b02b8ed9a81157c47c2f478534bf" kindref="member">~DayZPhysics</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="194" refid="class_day_z_physics_1a5b2f27b170cdb66f30cd9e3210bda40f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_physics_1a5b2f27b170cdb66f30cd9e3210bda40f" kindref="member">RaycastRV</ref>(<ref refid="classvector" kindref="compound">vector</ref><sp/>begPos,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>endPos,<sp/>out<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>contactPos,<sp/>out<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>contactDir,<sp/>out<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>contactComponent,<sp/></highlight><highlight class="comment">/*out*/</highlight><highlight class="normal"><sp/>set&lt;Object&gt;<sp/>results<sp/>=<sp/>NULL,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>with<sp/>=<sp/>NULL,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>ignore<sp/>=<sp/>NULL,<sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sorted<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ground_only<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iType<sp/>=<sp/>ObjIntersectView,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>radius<sp/>=<sp/>0.0,<sp/><ref refid="group___debug_shape_1ga51f3cfd13ef7752ddd89ea32bcccd7d5" kindref="member">CollisionFlags</ref><sp/>flags<sp/>=<sp/><ref refid="group___debug_shape_1ga51f3cfd13ef7752ddd89ea32bcccd7d5" kindref="member">CollisionFlags</ref>.NEARESTCONTACT);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//I<sp/>am<sp/>so<sp/>sorry<sp/>about<sp/>this,<sp/>I<sp/>am<sp/>unable<sp/>to<sp/>change<sp/>RaycastRV<sp/>above<sp/>without<sp/>breaking<sp/>rest<sp/>of<sp/>DZ</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//proto<sp/>static<sp/>bool<sp/>RaycastRVExt(vector<sp/>begPos,<sp/>vector<sp/>endPos,<sp/>out<sp/>vector<sp/>contactPos,<sp/>out<sp/>vector<sp/>contactDir,<sp/>out<sp/>int<sp/>contactComponent,<sp/>/*out*/<sp/>array&lt;string&gt;<sp/>resultSurfaces<sp/>=<sp/>NULL,<sp/>/*out*/<sp/>array&lt;Object&gt;<sp/>resultObjects<sp/>=<sp/>NULL,<sp/>Object<sp/>with<sp/>=<sp/>NULL,<sp/>Object<sp/>ignore<sp/>=<sp/>NULL,<sp/><sp/>bool<sp/>sorted<sp/>=<sp/>false,<sp/><sp/>bool<sp/>ground_only<sp/>=<sp/>false,<sp/><sp/>int<sp/>iType<sp/>=<sp/>ObjIntersectView,<sp/>float<sp/>radius<sp/>=<sp/>0.0,<sp/>CollisionFlags<sp/>flags<sp/>=<sp/>CollisionFlags.NEARESTCONTACT);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="199" refid="class_day_z_physics_1a04f386505ff99238a87a24731665df3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_physics_1a04f386505ff99238a87a24731665df3e" kindref="member">GetHitSurface</ref>(<ref refid="class_object" kindref="compound">Object</ref><sp/>other,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>begPos,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>endPos,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>surface);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201" refid="class_day_z_physics_1aebf9250c5ced81e09a1bd2aa923b7c42" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_physics_1aebf9250c5ced81e09a1bd2aa923b7c42" kindref="member">RaycastRVProxy</ref>(<sp/>notnull<sp/><ref refid="class_raycast_r_v_params" kindref="compound">RaycastRVParams</ref><sp/>in,<sp/>out<sp/>notnull<sp/><ref refid="classarray" kindref="compound">array&lt; ref RaycastRVResult&gt;</ref><sp/>results,<sp/><ref refid="classarray" kindref="compound">array&lt; Object &gt;</ref><sp/>excluded<sp/>=<sp/>null<sp/>);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204" refid="class_day_z_physics_1ac3d59bfe53ca68ae361735a40f548de2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_physics_1ac3d59bfe53ca68ae361735a40f548de2" kindref="member">RayCastBullet</ref>(<ref refid="classvector" kindref="compound">vector</ref><sp/>begPos,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>endPos,<sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3a" kindref="member">PhxInteractionLayers</ref><sp/>layerMask,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>ignoreObj,<sp/>out<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>hitObject,<sp/>out<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>hitPosition,<sp/>out<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>hitNormal,<sp/>out<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>hitFraction);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206" refid="class_day_z_physics_1ac3c34bacb523f0817cf683da70454121" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_physics_1ac3c34bacb523f0817cf683da70454121" kindref="member">SphereCastBullet</ref>(<ref refid="classvector" kindref="compound">vector</ref><sp/>begPos,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>endPos,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>radius,<sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3a" kindref="member">PhxInteractionLayers</ref><sp/>layerMask,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>ignoreObj,<sp/>out<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>hitObject,<sp/>out<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>hitPosition,<sp/>out<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>hitNormal,<sp/>out<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>hitFraction);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209" refid="class_day_z_physics_1a493d44626eaaffb05c558a0eebb36f02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_physics_1a493d44626eaaffb05c558a0eebb36f02" kindref="member">GeometryOverlapBullet</ref>(<ref refid="classvector" kindref="compound">vector</ref><sp/>transform[4],<sp/><ref refid="group___physics_1ga9ca13b27dc56ce2e9000b2559caac2a6" kindref="member">dGeom</ref><sp/>geometry,<sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3a" kindref="member">PhxInteractionLayers</ref><sp/>layerMask,<sp/>notnull<sp/><ref refid="class_collision_overlap_callback" kindref="compound">CollisionOverlapCallback</ref><sp/>callback);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="class_day_z_physics_1ab64b98517d5806561eae3975bfc6e436" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_physics_1ab64b98517d5806561eae3975bfc6e436" kindref="member">EntityOverlapBullet</ref>(<ref refid="classvector" kindref="compound">vector</ref><sp/>transform[4],<sp/><ref refid="class_i_entity" kindref="compound">IEntity</ref><sp/>entity,<sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3a" kindref="member">PhxInteractionLayers</ref><sp/>layerMask,<sp/>notnull<sp/><ref refid="class_collision_overlap_callback" kindref="compound">CollisionOverlapCallback</ref><sp/>callback);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="213" refid="class_day_z_physics_1a0c36d5e5b719d0d98c1e79d76f78092d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_physics_1a0c36d5e5b719d0d98c1e79d76f78092d" kindref="member">SphereOverlapBullet</ref>(<ref refid="classvector" kindref="compound">vector</ref><sp/>position,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>radius,<sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3a" kindref="member">PhxInteractionLayers</ref><sp/>layerMask,<sp/>notnull<sp/><ref refid="class_collision_overlap_callback" kindref="compound">CollisionOverlapCallback</ref><sp/>callback);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="215" refid="class_day_z_physics_1ac71bf36c9fa04c806ae7185d2aa3aee4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_physics_1ac71bf36c9fa04c806ae7185d2aa3aee4" kindref="member">CylinderOverlapBullet</ref>(<ref refid="classvector" kindref="compound">vector</ref><sp/>transform[4],<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>extents,<sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3a" kindref="member">PhxInteractionLayers</ref><sp/>layerMask,<sp/>notnull<sp/><ref refid="class_collision_overlap_callback" kindref="compound">CollisionOverlapCallback</ref><sp/>callback);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217" refid="class_day_z_physics_1aba3e365a0fb4557e52ff5f951d49c732" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_physics_1aba3e365a0fb4557e52ff5f951d49c732" kindref="member">CapsuleOverlapBullet</ref>(<ref refid="classvector" kindref="compound">vector</ref><sp/>transform[4],<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>radius,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>height,<sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3a" kindref="member">PhxInteractionLayers</ref><sp/>layerMask,<sp/>notnull<sp/><ref refid="class_collision_overlap_callback" kindref="compound">CollisionOverlapCallback</ref><sp/>callback);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219" refid="class_day_z_physics_1aa8bb9f2c4aa121a166b2df5c176a471c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_physics_1aa8bb9f2c4aa121a166b2df5c176a471c" kindref="member">BoxOverlapBullet</ref>(<ref refid="classvector" kindref="compound">vector</ref><sp/>transform[4],<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>extents,<sp/><ref refid="_day_z_physics_8c_1a726c859fa381777c5894cba896f7db3a" kindref="member">PhxInteractionLayers</ref><sp/>layerMask,<sp/>notnull<sp/><ref refid="class_collision_overlap_callback" kindref="compound">CollisionOverlapCallback</ref><sp/>callback);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/DayZPhysics.c"/>
+  </compounddef>
+</doxygen>

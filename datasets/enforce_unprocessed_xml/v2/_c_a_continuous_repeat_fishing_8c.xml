@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_c_a_continuous_repeat_fishing_8c" kind="file" language="C++">
+    <compoundname>CAContinuousRepeatFishing.c</compoundname>
+    <innerclass refid="class_c_a_continuous_repeat_fishing" prot="public">CAContinuousRepeatFishing</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_c_a_continuous_repeat_fishing" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_a_continuous_repeat_fishing" kindref="compound">CAContinuousRepeatFishing</ref><sp/>:<sp/><ref refid="class_c_a_continuous_repeat" kindref="compound">CAContinuousRepeat</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_c_a_continuous_repeat_fishing_1abcf16ec85f94877935fcff693475a3f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_a_continuous_repeat_fishing_1abcf16ec85f94877935fcff693475a3f6" kindref="member">CAContinuousRepeatFishing</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>time_to_complete_action<sp/>)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_continuous_repeat_1a3be70007854ac9157242dd7902894d61" kindref="member">m_DefaultTimeToComplete</ref><sp/>=<sp/>time_to_complete_action;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="8" refid="class_c_a_continuous_repeat_fishing_1a5ad618b27cbd6bf9d3a1561b9b257a20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_a_continuous_repeat_fishing_1a5ad618b27cbd6bf9d3a1561b9b257a20" kindref="member">Execute</ref>(<sp/><ref refid="class_action_data" kindref="compound">ActionData</ref><sp/>action_data<sp/>)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;CAContinuousRepeatFishing<sp/>|<sp/>Execute&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!action_data.<ref refid="class_action_data_1a219946226b0958a6dfaf2c880ff576e9" kindref="member">m_Player</ref><sp/>)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;CAContinuousRepeatFishing<sp/>|<sp/>UA_ERROR&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group___u_a_i_ds_1ga27cc3557ea5e3394f26701d52a0ce245" kindref="member">UA_ERROR</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_c_a_continuous_repeat_1a2ba103c4c63c06fe1745126433871084" kindref="member">m_TimeElpased</ref><sp/>&lt;<sp/><ref refid="class_c_a_continuous_repeat_1a8483a097e99d63a969b07209d2144726" kindref="member">m_TimeToComplete</ref><sp/>)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_continuous_repeat_1a2ba103c4c63c06fe1745126433871084" kindref="member">m_TimeElpased</ref><sp/>+=<sp/>action_data.<ref refid="class_action_data_1a219946226b0958a6dfaf2c880ff576e9" kindref="member">m_Player</ref>.GetDeltaT();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_continuous_repeat_1ac14eb300ecac92e14e9146f14f7c1691" kindref="member">m_TotalTimeElpased</ref><sp/>+=<sp/>action_data.<ref refid="class_action_data_1a219946226b0958a6dfaf2c880ff576e9" kindref="member">m_Player</ref>.GetDeltaT();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;CAContinuousRepeatFishing<sp/>|<sp/>Execute<sp/>|<sp/>m_TimeElpased:<sp/>&quot;<sp/>+<sp/>m_TimeElpased);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group___u_a_i_ds_1gaec2990f2dd7ed9f35d980856442b881b" kindref="member">UA_PROCESSING</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_continuous_repeat_1a1adfea8d4ceab3ed608f723cc350bd4e" kindref="member">m_SpentUnits</ref>.param1<sp/>=<sp/><ref refid="class_c_a_continuous_repeat_1a2ba103c4c63c06fe1745126433871084" kindref="member">m_TimeElpased</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_base_1a15caa3f387f97bbe79d18e4269dec382" kindref="member">SetACData</ref>(<ref refid="class_c_a_continuous_repeat_1a1adfea8d4ceab3ed608f723cc350bd4e" kindref="member">m_SpentUnits</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_continuous_repeat_1a2ba103c4c63c06fe1745126433871084" kindref="member">m_TimeElpased</ref><sp/>=<sp/><ref refid="class_c_a_continuous_repeat_1a8483a097e99d63a969b07209d2144726" kindref="member">m_TimeToComplete</ref><sp/>-<sp/><ref refid="class_c_a_continuous_repeat_1a2ba103c4c63c06fe1745126433871084" kindref="member">m_TimeElpased</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_continuous_base_1a0ed880c4a0919f099c2891277df04d26" kindref="member">OnCompletePogress</ref>(action_data);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_fishing_action_data" kindref="compound">FishingActionData</ref><sp/>fad<sp/>=<sp/><ref refid="class_fishing_action_data" kindref="compound">FishingActionData</ref>.Cast(action_data);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fad<sp/>&amp;&amp;<sp/>fad.<ref refid="class_fishing_action_data_1a1b866a5711730b94bdd54f684af03b73" kindref="member">m_FishingResult</ref><sp/>!=<sp/>-1)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;CAContinuousRepeatFishing<sp/>|<sp/>UA_FINISHED&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group___u_a_i_ds_1ga1549e547ab5d53897a986482bf8fafe5" kindref="member">UA_FINISHED</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;CAContinuousRepeatFishing<sp/>|<sp/>UA_PROCESSING&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="group___u_a_i_ds_1gaec2990f2dd7ed9f35d980856442b881b" kindref="member">UA_PROCESSING</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/UserActionsComponent/ActionComponents/CAContinuousRepeatFishing.c"/>
+  </compounddef>
+</doxygen>

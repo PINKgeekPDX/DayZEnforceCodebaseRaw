@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_bios_package_service" kind="class" language="C++" prot="public">
+    <compoundname>BiosPackageService</compoundname>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_bios_package_service_1a815783b84181ed288e99a4d56df4a747" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+        <definition>proto native EBiosError BiosPackageService::CheckUpdateAsync</definition>
+        <argsstring>()</argsstring>
+        <name>CheckUpdateAsync</name>
+        <qualifiedname>BiosPackageService::CheckUpdateAsync</qualifiedname>
+        <briefdescription>
+<para>Async check if exist new update. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>EBiosError indicating if the async operation is pending. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPackageService.c" line="18" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_package_service_1af8ff1b0b46a9d12dd77cb6d550806991" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+        <definition>proto native EBiosError BiosPackageService::PromptUpdateAsync</definition>
+        <argsstring>()</argsstring>
+        <name>PromptUpdateAsync</name>
+        <qualifiedname>BiosPackageService::PromptUpdateAsync</qualifiedname>
+        <briefdescription>
+<para>Prompt user to accept update with system GUI. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>EBiosError indicating if the async operation is pending. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPackageService.c" line="25" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_package_service_1a8eb99267203a3a9c2fafea570ccc8644" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+        <definition>proto native EBiosError BiosPackageService::ShowStoreAsync</definition>
+        <argsstring>()</argsstring>
+        <name>ShowStoreAsync</name>
+        <qualifiedname>BiosPackageService::ShowStoreAsync</qualifiedname>
+        <briefdescription>
+<para>Show store for current title (system GUI). Only on Xbox. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>EBiosError indicating if the async operation is pending. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPackageService.c" line="32" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_package_service_1a5b8d097cbd03264e31c27f4e9b2fd16d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosPackageService::OnCheckUpdate</definition>
+        <argsstring>(BiosCheckUpdateResult checkUpdateResult, EBiosError error)</argsstring>
+        <name>OnCheckUpdate</name>
+        <qualifiedname>BiosPackageService::OnCheckUpdate</qualifiedname>
+        <param>
+          <type><ref refid="class_bios_check_update_result" kindref="compound">BiosCheckUpdateResult</ref></type>
+          <declname>checkUpdateResult</declname>
+        </param>
+        <param>
+          <type><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Callback function for <ref refid="class_bios_package_service_1a815783b84181ed288e99a4d56df4a747" kindref="member">CheckUpdateAsync()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>checkUpdateResult</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>contain information about availability of new update and if it is mandatory. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indicating success or fail of the async operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPackageService.c" line="39" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPackageService.c" bodystart="39" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_package_service_1a49cc851fc4c77a12dc08ea6df2eee44b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosPackageService::OnPromptUpdate</definition>
+        <argsstring>(EBiosError error)</argsstring>
+        <name>OnPromptUpdate</name>
+        <qualifiedname>BiosPackageService::OnPromptUpdate</qualifiedname>
+        <param>
+          <type><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Callback function for <ref refid="class_bios_package_service_1af8ff1b0b46a9d12dd77cb6d550806991" kindref="member">PromptUpdateAsync()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Show system UI with update. On Xbox, game suspend after accept update.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indicating success or fail of the async operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPackageService.c" line="55" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPackageService.c" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_package_service_1a1f605b6ab91d88be550bff5e23c8d52b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosPackageService::OnShowStore</definition>
+        <argsstring>(EBiosError error)</argsstring>
+        <name>OnShowStore</name>
+        <qualifiedname>BiosPackageService::OnShowStore</qualifiedname>
+        <param>
+          <type><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Callback function for <ref refid="class_bios_package_service_1a8eb99267203a3a9c2fafea570ccc8644" kindref="member">ShowStoreAsync()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indicating success or fail of the async operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPackageService.c" line="65" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPackageService.c" bodystart="65" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPackageService.c" line="12" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPackageService.c" bodystart="13" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_bios_package_service_1a815783b84181ed288e99a4d56df4a747" prot="private" virt="non-virtual"><scope>BiosPackageService</scope><name>CheckUpdateAsync</name></member>
+      <member refid="class_bios_package_service_1a5b8d097cbd03264e31c27f4e9b2fd16d" prot="private" virt="non-virtual"><scope>BiosPackageService</scope><name>OnCheckUpdate</name></member>
+      <member refid="class_bios_package_service_1a49cc851fc4c77a12dc08ea6df2eee44b" prot="private" virt="non-virtual"><scope>BiosPackageService</scope><name>OnPromptUpdate</name></member>
+      <member refid="class_bios_package_service_1a1f605b6ab91d88be550bff5e23c8d52b" prot="private" virt="non-virtual"><scope>BiosPackageService</scope><name>OnShowStore</name></member>
+      <member refid="class_bios_package_service_1af8ff1b0b46a9d12dd77cb6d550806991" prot="private" virt="non-virtual"><scope>BiosPackageService</scope><name>PromptUpdateAsync</name></member>
+      <member refid="class_bios_package_service_1a8eb99267203a3a9c2fafea570ccc8644" prot="private" virt="non-virtual"><scope>BiosPackageService</scope><name>ShowStoreAsync</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

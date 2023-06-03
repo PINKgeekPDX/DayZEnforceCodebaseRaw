@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_backend_api_8c" kind="file" language="C++">
+    <compoundname>BackendApi.c</compoundname>
+    <innerclass refid="class_backend_callback" prot="public">BackendCallback</innerclass>
+    <innerclass refid="class_backend_api" prot="public">BackendApi</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaa" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EBackendError</name>
+        <enumvalue id="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa4db7c7265340c8ea21b25ed222f03d3a" prot="public">
+          <name>EBERR_OK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaae1bc77620cfbbace116f8998838b5b05" prot="public">
+          <name>EBERR_UNKNOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa41c3c308e4ba02cb31782d8d06e381b3" prot="public">
+          <name>EBERR_DISABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa0d5b059b9c24712194f37571215d3e5e" prot="public">
+          <name>EBERR_INVALID_STATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaacc639c5ae19dc628093e3ca0ff4024df" prot="public">
+          <name>EBERR_BUSY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa99b3eaf0ec12bfac00d353cb4d474b1f" prot="public">
+          <name>EBERR_ALREADY_OFFLINE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa2692b9e9691d9090a157ec2291744eca" prot="public">
+          <name>EBERR_ALREADY_ONLINE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa6af9f60fbaffb0332906c266e1b76fd9" prot="public">
+          <name>EBERR_ALREADY_REQUESTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaae37aa63b4aefdebf0323cdb33a99f6d5" prot="public">
+          <name>EBERR_LOGIN_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa62e0d3980f0d5d250ee76707c506351c" prot="public">
+          <name>EBERR_AUTH_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa06c74ad8c9c506f6ac2dd296f860793b" prot="public">
+          <name>EBERR_LOGIN_SUCCESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaacc7c12c5223976d787313db777aed55a" prot="public">
+          <name>EBERR_AUTH_SUCCESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaae766ef1f66e0e6f6d05b018a3fd8f7a6" prot="public">
+          <name>EBERR_CONFIGURATION_GET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa65ed84144e8ad4f651eb891b3a800086" prot="public">
+          <name>EBERR_CEPROFILE_GET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa5fb5246dc4c7ba6c91b4100dda85f876" prot="public">
+          <name>EBERR_CHARACTER_GET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa0fd705c6b4e570fcb9a85446d00085af" prot="public">
+          <name>EBERR_CHARACTER_UPDATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Backend error. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/BackendApi.c" line="6" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/BackendApi.c" bodystart="7" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="enum" id="_backend_api_8c_1a2c8ca67b2fdeeac6cdfe5cfc731b5322" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EBackendRequest</name>
+        <enumvalue id="_backend_api_8c_1a2c8ca67b2fdeeac6cdfe5cfc731b5322a9379de3225ab82f6112c5a3e850b9c62" prot="public">
+          <name>EBREQ_USER_Login</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1a2c8ca67b2fdeeac6cdfe5cfc731b5322aaf6357a60d09f04ce8fe4b01ac3c5ab1" prot="public">
+          <name>EBREQ_USER_Auth</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Backend request. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/BackendApi.c" line="27" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/BackendApi.c" bodystart="28" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="enum" id="_backend_api_8c_1a3b20d6edc106a6601cf27f0a94dd2a08" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EBackendCredentials</name>
+        <enumvalue id="_backend_api_8c_1a3b20d6edc106a6601cf27f0a94dd2a08a78d963d43380b0ee88ed27f0f920682a" prot="public">
+          <name>EBCRED_NAME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1a3b20d6edc106a6601cf27f0a94dd2a08a521de95ce66c9a137b1323feb7fe1c11" prot="public">
+          <name>EBCRED_PWD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_backend_api_8c_1a3b20d6edc106a6601cf27f0a94dd2a08a9d85c48c863bb1ffa1fe7fc45dcd199d" prot="public">
+          <name>EBCRED_BASEURI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Credential parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/BackendApi.c" line="75" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/BackendApi.c" bodystart="76" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_backend_api_8c_1af8e845bcaec374800fd047ee6503afcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="class_backend_api" kindref="compound">BackendApi</ref></type>
+        <definition>proto native BackendApi GetBackendApi</definition>
+        <argsstring>()</argsstring>
+        <name>GetBackendApi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/BackendApi.c" line="265" column="25" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/BackendApi.c" declline="265" declcolumn="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6" refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaa" kindref="member">EBackendError</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8" refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa4db7c7265340c8ea21b25ed222f03d3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa4db7c7265340c8ea21b25ed222f03d3a" kindref="member">EBERR_OK</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>all<sp/>OK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaae1bc77620cfbbace116f8998838b5b05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaae1bc77620cfbbace116f8998838b5b05" kindref="member">EBERR_UNKNOWN</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>unknown<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa41c3c308e4ba02cb31782d8d06e381b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa41c3c308e4ba02cb31782d8d06e381b3" kindref="member">EBERR_DISABLED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>backend<sp/>is<sp/>disabled</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa0d5b059b9c24712194f37571215d3e5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa0d5b059b9c24712194f37571215d3e5e" kindref="member">EBERR_INVALID_STATE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>called<sp/>request<sp/>from<sp/>state<sp/>where<sp/>it<sp/>is<sp/>not<sp/>possible<sp/>(ie.<sp/>reading<sp/>data<sp/>before<sp/>logon<sp/>and<sp/>such)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaacc639c5ae19dc628093e3ca0ff4024df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaacc639c5ae19dc628093e3ca0ff4024df" kindref="member">EBERR_BUSY</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>request<sp/>can<sp/>be<sp/>called<sp/>-<sp/>login/<sp/>auth<sp/>in<sp/>process</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa99b3eaf0ec12bfac00d353cb4d474b1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa99b3eaf0ec12bfac00d353cb4d474b1f" kindref="member">EBERR_ALREADY_OFFLINE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>state<sp/>is<sp/>already<sp/>active</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa2692b9e9691d9090a157ec2291744eca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa2692b9e9691d9090a157ec2291744eca" kindref="member">EBERR_ALREADY_ONLINE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>state<sp/>is<sp/>already<sp/>active</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa6af9f60fbaffb0332906c266e1b76fd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa6af9f60fbaffb0332906c266e1b76fd9" kindref="member">EBERR_ALREADY_REQUESTED</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>state<sp/>already<sp/>requested<sp/>once!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaae37aa63b4aefdebf0323cdb33a99f6d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaae37aa63b4aefdebf0323cdb33a99f6d5" kindref="member">EBERR_LOGIN_FAILED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>failed<sp/>to<sp/>logon</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa62e0d3980f0d5d250ee76707c506351c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa62e0d3980f0d5d250ee76707c506351c" kindref="member">EBERR_AUTH_FAILED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>failed<sp/>to<sp/>authenticate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa06c74ad8c9c506f6ac2dd296f860793b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa06c74ad8c9c506f6ac2dd296f860793b" kindref="member">EBERR_LOGIN_SUCCESS</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>logon<sp/>successfull</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaacc7c12c5223976d787313db777aed55a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaacc7c12c5223976d787313db777aed55a" kindref="member">EBERR_AUTH_SUCCESS</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>authenticate<sp/>successfull</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaae766ef1f66e0e6f6d05b018a3fd8f7a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaae766ef1f66e0e6f6d05b018a3fd8f7a6" kindref="member">EBERR_CONFIGURATION_GET</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>configuration<sp/>received</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa65ed84144e8ad4f651eb891b3a800086" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa65ed84144e8ad4f651eb891b3a800086" kindref="member">EBERR_CEPROFILE_GET</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CE<sp/>profile<sp/>configuration<sp/>received</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa5fb5246dc4c7ba6c91b4100dda85f876" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa5fb5246dc4c7ba6c91b4100dda85f876" kindref="member">EBERR_CHARACTER_GET</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>character<sp/>data<sp/>receieved</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa0fd705c6b4e570fcb9a85446d00085af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaaa0fd705c6b4e570fcb9a85446d00085af" kindref="member">EBERR_CHARACTER_UPDATE</ref>,<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>character<sp/>update<sp/>done</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="_backend_api_8c_1a2c8ca67b2fdeeac6cdfe5cfc731b5322" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_backend_api_8c_1a2c8ca67b2fdeeac6cdfe5cfc731b5322" kindref="member">EBackendRequest</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>game<sp/>api</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_GAME_Test,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>environment<sp/>test<sp/>-<sp/>dummy<sp/>data<sp/>read</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_GAME_World,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>static<sp/>world<sp/>configuration<sp/>read</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_GAME_CEProfile,</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_GAME_CharacterGet,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>character<sp/>data<sp/>read</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_GAME_CharacterUpdate,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>character<sp/>data<sp/>update</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>BACKENDAPI_DEV_CHARACTER</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_GAME_DevCharacterGet,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>dev<sp/>character<sp/>data<sp/>read</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_GAME_DevCharacterUpdate,<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>dev<sp/>character<sp/>data<sp/>update</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_GAME_Heartbeat,*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>user<sp/>api<sp/>request<sp/>&lt;&gt;<sp/>response</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="_backend_api_8c_1a2c8ca67b2fdeeac6cdfe5cfc731b5322a9379de3225ab82f6112c5a3e850b9c62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1a2c8ca67b2fdeeac6cdfe5cfc731b5322a9379de3225ab82f6112c5a3e850b9c62" kindref="member">EBREQ_USER_Login</ref>,</highlight></codeline>
+<codeline lineno="42" refid="_backend_api_8c_1a2c8ca67b2fdeeac6cdfe5cfc731b5322aaf6357a60d09f04ce8fe4b01ac3c5ab1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1a2c8ca67b2fdeeac6cdfe5cfc731b5322aaf6357a60d09f04ce8fe4b01ac3c5ab1" kindref="member">EBREQ_USER_Auth</ref>,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>lobby<sp/>api<sp/>request<sp/>&lt;&gt;<sp/>response</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_LOBBY_RoomsRegister,</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_LOBBY_RoomsJoin,</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_LOBBY_RoomsAcceptPlayer,</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_LOBBY_RoomsHeartBeat,</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_LOBBY_RoomsUpdate,</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_LOBBY_RoomsRemovePlayer,</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_LOBBY_RoomsSearch,</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_LOBBY_RoomsGetByIds,</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_LOBBY_RoomsGetByHostIds,</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_LOBBY_GetActiveScenarios,</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>storage<sp/>api<sp/>request<sp/>&lt;&gt;<sp/>response</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_STORAGE_GetFileTempURL,</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_STORAGE_GetFileTempURLS2S,</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_STORAGE_GetFile,</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_STORAGE_DeleteFile,</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_STORAGE_GetFileS2S,</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_STORAGE_DeleteFileS2S,</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_STORAGE_PatchFileS2S,</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_STORAGE_Upload,</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_STORAGE_UploadS2S,</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_STORAGE_UploadZip,</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_STORAGE_UploadZipS2S,</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_STORAGE_Limits,</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_STORAGE_LimitsS2S,</highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>feedback<sp/>request<sp/>&lt;&gt;<sp/>response</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>#if<sp/>ONLINE_SLACKAPI</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EBREQ_SLACKAPI_PostMessage,</highlight></codeline>
+<codeline lineno="71"><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>#endif*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>};<sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="_backend_api_8c_1a3b20d6edc106a6601cf27f0a94dd2a08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_backend_api_8c_1a3b20d6edc106a6601cf27f0a94dd2a08" kindref="member">EBackendCredentials</ref></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77" refid="_backend_api_8c_1a3b20d6edc106a6601cf27f0a94dd2a08a78d963d43380b0ee88ed27f0f920682a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1a3b20d6edc106a6601cf27f0a94dd2a08a78d963d43380b0ee88ed27f0f920682a" kindref="member">EBCRED_NAME</ref>,</highlight></codeline>
+<codeline lineno="78" refid="_backend_api_8c_1a3b20d6edc106a6601cf27f0a94dd2a08a521de95ce66c9a137b1323feb7fe1c11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1a3b20d6edc106a6601cf27f0a94dd2a08a521de95ce66c9a137b1323feb7fe1c11" kindref="member">EBCRED_PWD</ref>,</highlight></codeline>
+<codeline lineno="79" refid="_backend_api_8c_1a3b20d6edc106a6601cf27f0a94dd2a08a9d85c48c863bb1ffa1fe7fc45dcd199d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_backend_api_8c_1a3b20d6edc106a6601cf27f0a94dd2a08a9d85c48c863bb1ffa1fe7fc45dcd199d" kindref="member">EBCRED_BASEURI</ref>,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Callback<sp/>interface<sp/>for<sp/>backend<sp/>-<sp/>must<sp/>exist<sp/>for<sp/>the<sp/>duration<sp/>of<sp/>request!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="class_backend_callback" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_backend_callback" kindref="compound">BackendCallback</ref><sp/>:<sp/><ref refid="class_managed" kindref="compound">Managed</ref></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92" refid="class_backend_callback_1a5358e5e641e4f07a32887d3ed5cc6eb1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_backend_callback_1a5358e5e641e4f07a32887d3ed5cc6eb1" kindref="member">OnDataReceive</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>data,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size<sp/>)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;[BackendCallback]<sp/>Data<sp/>received,<sp/>size=&quot;</highlight><highlight class="normal"><sp/>+<sp/>size);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(data);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="class_backend_callback_1a927315575a8d1baa30d8bc524809c376" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_backend_callback_1a927315575a8d1baa30d8bc524809c376" kindref="member">OnError</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>code<sp/>)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;[BackendCallback]<sp/>OnError:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="_backend_api_8c_1af8e845bcaec374800fd047ee6503afcb" kindref="member">GetBackendApi</ref>().GetErrorCode(code));</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="class_backend_callback_1a90b71c1ffda5383e225b0a278081f354" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_backend_callback_1a90b71c1ffda5383e225b0a278081f354" kindref="member">OnSuccess</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>code<sp/>)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;[BackendCallback]<sp/>OnSuccess()&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="class_backend_callback_1a258418b65dc5b4b9af830117d1d3f2ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_backend_callback_1a258418b65dc5b4b9af830117d1d3f2ba" kindref="member">OnTimeout</ref>()</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;[BackendCallback]<sp/>OnTimeout&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Backend<sp/>API<sp/>access</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="class_backend_api" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_backend_api" kindref="compound">BackendApi</ref></highlight></codeline>
+<codeline lineno="130"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131" refid="class_backend_api_1abaa4ce0dab90b50754a01d9a52917383" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1abaa4ce0dab90b50754a01d9a52917383" kindref="member">BackendApi</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="132" refid="class_backend_api_1acd4cf5ae4b13b9d8c90d342ee250c967" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1acd4cf5ae4b13b9d8c90d342ee250c967" kindref="member">~BackendApi</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137" refid="class_backend_api_1a58124d2211ea7e00a72daf0c1e93d6ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1a58124d2211ea7e00a72daf0c1e93d6ca" kindref="member">Initiate</ref>();</highlight></codeline>
+<codeline lineno="141" refid="class_backend_api_1a88fd1e3fe24f846c6d18dd1d724d9129" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1a88fd1e3fe24f846c6d18dd1d724d9129" kindref="member">Shutdown</ref>();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="class_backend_api_1a32ab295d4bc08fc2bad5d3ecf71edce1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1a32ab295d4bc08fc2bad5d3ecf71edce1" kindref="member">IsDisconnected</ref>();</highlight></codeline>
+<codeline lineno="151" refid="class_backend_api_1af831afcb32d4ab37daea3f94c1534412" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1af831afcb32d4ab37daea3f94c1534412" kindref="member">IsRuntime</ref>();</highlight></codeline>
+<codeline lineno="155" refid="class_backend_api_1ab09d777687a418dea555a621e838fdfb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1ab09d777687a418dea555a621e838fdfb" kindref="member">IsBusy</ref>();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="159" refid="class_backend_api_1afa7561dd8d56b70ed9f7e47efd33c975" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1afa7561dd8d56b70ed9f7e47efd33c975" kindref="member">GetErrorCode</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>code<sp/>)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>code<sp/>==<sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaa" kindref="member">EBackendError</ref>.EBERR_OK<sp/>)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;OK&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>code<sp/>==<sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaa" kindref="member">EBackendError</ref>.EBERR_UNKNOWN<sp/>)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Offline&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>code<sp/>==<sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaa" kindref="member">EBackendError</ref>.EBERR_DISABLED<sp/>)</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Communication<sp/>Disabled&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>code<sp/>==<sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaa" kindref="member">EBackendError</ref>.EBERR_INVALID_STATE<sp/>)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Cannot<sp/>be<sp/>called<sp/>from<sp/>current<sp/>state&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>code<sp/>==<sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaa" kindref="member">EBackendError</ref>.EBERR_BUSY<sp/>)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Busy<sp/>processing<sp/>requests&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>code<sp/>==<sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaa" kindref="member">EBackendError</ref>.EBERR_ALREADY_OFFLINE<sp/>)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Already<sp/>disconnected&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>code<sp/>==<sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaa" kindref="member">EBackendError</ref>.EBERR_ALREADY_ONLINE<sp/>)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Already<sp/>connected&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>code<sp/>==<sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaa" kindref="member">EBackendError</ref>.EBERR_LOGIN_FAILED<sp/>)</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>logon&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>code<sp/>==<sp/><ref refid="_backend_api_8c_1ac172886b7966991e5f32d7e502e9fbaa" kindref="member">EBackendError</ref>.EBERR_AUTH_FAILED<sp/>)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>Authenticate&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;*&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="190" refid="class_backend_api_1a0c7f27af203f0baf146720bae1ca6822" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1a0c7f27af203f0baf146720bae1ca6822" kindref="member">OnCannotInitiate</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>code<sp/>)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;!!!<sp/>[Backend]<sp/>Cannot<sp/>Initiate:<sp/>&quot;</highlight><highlight class="normal">+<sp/><ref refid="class_backend_api_1afa7561dd8d56b70ed9f7e47efd33c975" kindref="member">GetErrorCode</ref>(code));</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="198" refid="class_backend_api_1a70de65fb75e71b1e41e0095f863d0ded" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1a70de65fb75e71b1e41e0095f863d0ded" kindref="member">OnCannotShutdown</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>code<sp/>)</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;!!!<sp/>[Backend]<sp/>Cannot<sp/>Shutdown:<sp/>&quot;</highlight><highlight class="normal">+<sp/><ref refid="class_backend_api_1afa7561dd8d56b70ed9f7e47efd33c975" kindref="member">GetErrorCode</ref>(code));</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206" refid="class_backend_api_1a1f6c74105d00abe07c42453f29799619" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1a1f6c74105d00abe07c42453f29799619" kindref="member">OnSuccess</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>step<sp/>)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(<sp/></highlight><highlight class="stringliteral">&quot;[Backend]<sp/>Successfully<sp/>Solicited:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>step<sp/>);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="214" refid="class_backend_api_1ab94114ac8d8f5532e2af52157454085d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1ab94114ac8d8f5532e2af52157454085d" kindref="member">OnFail</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>step<sp/>)</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(<sp/></highlight><highlight class="stringliteral">&quot;[Backend]<sp/>Failed<sp/>to<sp/>Proceed:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>step<sp/>);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="class_backend_api_1a6cc233b146cdf7df89da12e6a6ee61ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1a6cc233b146cdf7df89da12e6a6ee61ae" kindref="member">Request</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>request,<sp/><ref refid="class_backend_callback" kindref="compound">BackendCallback</ref><sp/>cb,<sp/><ref refid="class_json_api_struct" kindref="compound">JsonApiStruct</ref><sp/>dataObject<sp/>);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="class_backend_api_1a07e683a2175b2b247f6871d9bda4d67a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1a07e683a2175b2b247f6871d9bda4d67a" kindref="member">PlayerRequest</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>request,<sp/><ref refid="class_backend_callback" kindref="compound">BackendCallback</ref><sp/>cb,<sp/><ref refid="class_json_api_struct" kindref="compound">JsonApiStruct</ref><sp/>dataObject,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iPlayerId<sp/>);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242" refid="class_backend_api_1a9c3f1c64b04720bc816647c6d854ba85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1a9c3f1c64b04720bc816647c6d854ba85" kindref="member">FeedbackMessage</ref>(<sp/><ref refid="class_backend_callback" kindref="compound">BackendCallback</ref><sp/>cb,<sp/><ref refid="class_json_api_struct" kindref="compound">JsonApiStruct</ref><sp/>dataObject,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>message<sp/>);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249" refid="class_backend_api_1aba896f432f23bc4d14579d04e2ea99b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1aba896f432f23bc4d14579d04e2ea99b4" kindref="member">SetCredentialsItem</ref>(<sp/><ref refid="_backend_api_8c_1a3b20d6edc106a6601cf27f0a94dd2a08" kindref="member">EBackendCredentials</ref><sp/>item,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>str<sp/>);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255" refid="class_backend_api_1a0039eb521574abf9d4c21f83ae607969" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1a0039eb521574abf9d4c21f83ae607969" kindref="member">GetCredentialsItem</ref>(<sp/><ref refid="_backend_api_8c_1a3b20d6edc106a6601cf27f0a94dd2a08" kindref="member">EBackendCredentials</ref><sp/>item<sp/>);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260" refid="class_backend_api_1a30d2cfccdf01354c9deb71d28126a10a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_backend_api_1a30d2cfccdf01354c9deb71d28126a10a" kindref="member">VerifyCredentials</ref>();</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="_backend_api_8c_1af8e845bcaec374800fd047ee6503afcb" refkind="member"><highlight class="normal">proto<sp/>native<sp/><ref refid="class_backend_api" kindref="compound">BackendApi</ref><sp/><ref refid="_backend_api_8c_1af8e845bcaec374800fd047ee6503afcb" kindref="member">GetBackendApi</ref>();</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/BackendApi.c"/>
+  </compounddef>
+</doxygen>

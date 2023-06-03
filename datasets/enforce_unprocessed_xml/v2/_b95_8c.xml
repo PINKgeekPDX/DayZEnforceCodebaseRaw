@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_b95_8c" kind="file" language="C++">
+    <compoundname>B95.c</compoundname>
+    <innerclass refid="class_b95__base" prot="public">B95_base</innerclass>
+    <innerclass refid="class_b95" prot="public">B95</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_b95__base" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_b95__base" kindref="compound">B95_base</ref><sp/>:<sp/><ref refid="class_double_barrel___base" kindref="compound">DoubleBarrel_Base</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_b95__base_1a99aa2e25b16020b2b6d6328ec564ab50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/><ref refid="class_recoil_base" kindref="compound">RecoilBase</ref><sp/><ref refid="class_b95__base_1a99aa2e25b16020b2b6d6328ec564ab50" kindref="member">SpawnRecoilObject</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_b95_recoil" kindref="compound">B95Recoil</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Debug<sp/>menu<sp/>Spawn<sp/>Ground<sp/>Special</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_b95__base_1a3e605e4b864ae815cd0a1d66abef7ab4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b95__base_1a3e605e4b864ae815cd0a1d66abef7ab4" kindref="member">OnDebugSpawn</ref>()</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnDebugSpawn();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_game_inventory" kindref="compound">GameInventory</ref><sp/>inventory<sp/>=<sp/>GetInventory();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inventory.<ref refid="class_game_inventory_1a46ee7e7823f708ee45285ec153432f0b" kindref="member">CreateInInventory</ref>(<sp/></highlight><highlight class="stringliteral">&quot;HuntingOptic&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>entity;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_class" kindref="compound">Class</ref>.<ref refid="group___enforce_1ga253ceb932745ea74ca4a4d3d9e8c12d7" kindref="member">CastTo</ref>(entity,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">)<sp/>)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entity.SpawnEntityOnGroundPos(</highlight><highlight class="stringliteral">&quot;Ammo_308Win&quot;</highlight><highlight class="normal">,<sp/>entity.GetPosition());</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26" refid="class_b95" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_b95" kindref="compound">B95</ref><sp/>:<sp/><ref refid="class_b95__base" kindref="compound">B95_base</ref><sp/>{};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SawedoffB95<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_b95__base" kindref="compound">B95_base</ref><sp/>{};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Rifle/B95.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,988 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_entity" kind="class" language="C++" prot="public">
+    <compoundname>Entity</compoundname>
+    <derivedcompoundref refid="class_flare_simulation" prot="private" virt="non-virtual">FlareSimulation</derivedcompoundref>
+    <derivedcompoundref refid="class_smoke_simulation" prot="private" virt="non-virtual">SmokeSimulation</derivedcompoundref>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_entity_1a87f40f7c9a65679ea03c104620572cb9" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="class_camera" kindref="compound">Camera</ref></type>
+        <definition>static proto native Camera Entity::GetCurrentCamera</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrentCamera</name>
+        <qualifiedname>Entity::GetCurrentCamera</qualifiedname>
+        <briefdescription>
+<para>Returns active <ref refid="class_camera" kindref="compound">Camera</ref> instance (note: player&apos;s camera is not <ref refid="class_camera" kindref="compound">Camera</ref> instance - thus it return null) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="class_camera" kindref="compound">Camera</ref> <computeroutput>active</computeroutput> <ref refid="class_camera" kindref="compound">Camera</ref> instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/Camera.c" line="7" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a6e267dff296c95cb4417609eb562ba43" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>static proto native float Entity::GetCurrentFOV</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrentFOV</name>
+        <qualifiedname>Entity::GetCurrentFOV</qualifiedname>
+        <briefdescription>
+<para>Returns FOV of current camera object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>float <computeroutput>FOV</computeroutput> of current camera object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/Camera.c" line="13" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a20417fad6cd47ed35a59d2af08a3b107" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>static proto native void Entity::InterpolateTo</definition>
+        <argsstring>(Camera targetCamera, float time, int type)</argsstring>
+        <name>InterpolateTo</name>
+        <qualifiedname>Entity::InterpolateTo</qualifiedname>
+        <param>
+          <type><ref refid="class_camera" kindref="compound">Camera</ref></type>
+          <declname>targetCamera</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Interpolation between camera instances (current camera becomes targetCamera at the end of interpolation) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>targetCamera</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>to</computeroutput> which camera we want to interpolate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>true</computeroutput> interpolation time </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>0</computeroutput> = without dynamics 1 = first half - acceleration, second half deceleration 2 = first third - acceleration, second third - linear movement, last third - deceleration </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/Camera.c" line="24" column="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_entity_1a02a4bf9644dc2e4f9dd71788db9b9942" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetNearPlane</definition>
+        <argsstring>(float nearPlane)</argsstring>
+        <name>SetNearPlane</name>
+        <qualifiedname>Entity::SetNearPlane</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>nearPlane</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set near plane of camera <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nearPlane</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>clamped internally to 0.01m </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/Camera.c" line="30" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a29faf3b292a97eaa473b2e4161e76713" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float Entity::GetNearPlane</definition>
+        <argsstring>()</argsstring>
+        <name>GetNearPlane</name>
+        <qualifiedname>Entity::GetNearPlane</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>get near plane of camera </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/Camera.c" line="35" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1ad352d8e3c476612f842f9697a1021e9c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetActive</definition>
+        <argsstring>(bool active)</argsstring>
+        <name>SetActive</name>
+        <qualifiedname>Entity::SetActive</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>active</declname>
+        </param>
+        <briefdescription>
+<para>Sets this camera as active. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/Camera.c" line="40" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a3597be9105cd229ae8d407015538d749" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Entity::IsActive</definition>
+        <argsstring>()</argsstring>
+        <name>IsActive</name>
+        <qualifiedname>Entity::IsActive</qualifiedname>
+        <briefdescription>
+<para>Is this camera active? </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>bool <computeroutput>true</computeroutput> if this camera is active </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/Camera.c" line="46" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a06662668cf8fc7f902b62d992164238e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetFOV</definition>
+        <argsstring>(float fov)</argsstring>
+        <name>SetFOV</name>
+        <qualifiedname>Entity::SetFOV</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>fov</declname>
+        </param>
+        <briefdescription>
+<para>Field of View settings. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fov</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>FOV</computeroutput> angle in radians </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/Camera.c" line="52" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a81ec6c8233830c1e305d81984c886d32" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetFocus</definition>
+        <argsstring>(float distance, float blur)</argsstring>
+        <name>SetFocus</name>
+        <qualifiedname>Entity::SetFocus</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>distance</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>blur</declname>
+        </param>
+        <briefdescription>
+<para>Depth of Field settings. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>DOF</computeroutput> distance parameter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>blur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>DOF</computeroutput> blur parameter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/Camera.c" line="59" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a8fd525b4293537f06db2907e80e5f045" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::LookAt</definition>
+        <argsstring>(vector targetPos)</argsstring>
+        <name>LookAt</name>
+        <qualifiedname>Entity::LookAt</qualifiedname>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>targetPos</declname>
+        </param>
+        <briefdescription>
+<para>Orientation change by lookAt point. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>targetPos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>where</computeroutput> to look at </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/Camera.c" line="65" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1af8b9d80b2940b766ea5055dbd069f67f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetLightType</definition>
+        <argsstring>(int pType)</argsstring>
+        <name>SetLightType</name>
+        <qualifiedname>Entity::SetLightType</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>pType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="13" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a48f99cad0b2035586d5f8600fc099494" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int Entity::GetLightType</definition>
+        <argsstring>()</argsstring>
+        <name>GetLightType</name>
+        <qualifiedname>Entity::GetLightType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="14" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1accb637c4f094c310d606cbb877da168b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetEnabled</definition>
+        <argsstring>(bool pState)</argsstring>
+        <name>SetEnabled</name>
+        <qualifiedname>Entity::SetEnabled</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="16" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a0a9dacf0081cdf2fb05d234e3ff4263a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Entity::IsEnabled</definition>
+        <argsstring>()</argsstring>
+        <name>IsEnabled</name>
+        <qualifiedname>Entity::IsEnabled</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="17" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1acc9fec02aecb91f7d1d19985cafe2e47" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetCastShadow</definition>
+        <argsstring>(bool pState)</argsstring>
+        <name>SetCastShadow</name>
+        <qualifiedname>Entity::SetCastShadow</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="19" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a29c03688298197e018815d3f63bcce5f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Entity::GetCastShadow</definition>
+        <argsstring>()</argsstring>
+        <name>GetCastShadow</name>
+        <qualifiedname>Entity::GetCastShadow</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="20" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1ab85044bfd033b785fec3c940b9395909" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Entity::EnableSpecular</definition>
+        <argsstring>(bool pState)</argsstring>
+        <name>EnableSpecular</name>
+        <qualifiedname>Entity::EnableSpecular</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="22" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a835a2c47dbe152f0bc03f5924beac36f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Entity::EnableLinear</definition>
+        <argsstring>(bool pState)</argsstring>
+        <name>EnableLinear</name>
+        <qualifiedname>Entity::EnableLinear</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="23" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a647ecb4c26cab3f6e279b874e6ea1f4e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetPulseCoef</definition>
+        <argsstring>(float pState)</argsstring>
+        <name>SetPulseCoef</name>
+        <qualifiedname>Entity::SetPulseCoef</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="25" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a41568a7db454de60d25dd6992e0365e2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetVisibleDuringDaylight</definition>
+        <argsstring>(bool pState)</argsstring>
+        <name>SetVisibleDuringDaylight</name>
+        <qualifiedname>Entity::SetVisibleDuringDaylight</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="27" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1ad56a1632baf98d697a45121ec71359bb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Entity::IsVisibleDuringDaylight</definition>
+        <argsstring>()</argsstring>
+        <name>IsVisibleDuringDaylight</name>
+        <qualifiedname>Entity::IsVisibleDuringDaylight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="28" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1adf201ddddaacf97d6f2a58066d5bb0f5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetRadius</definition>
+        <argsstring>(float pValue)</argsstring>
+        <name>SetRadius</name>
+        <qualifiedname>Entity::SetRadius</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="30" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a281cd123ec896f5774955a4ef7dc01f5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float Entity::GetRadius</definition>
+        <argsstring>()</argsstring>
+        <name>GetRadius</name>
+        <qualifiedname>Entity::GetRadius</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="31" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a1ef32c066925af862d65fa5e72d66ece" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::EnableHeatHaze</definition>
+        <argsstring>(bool pState)</argsstring>
+        <name>EnableHeatHaze</name>
+        <qualifiedname>Entity::EnableHeatHaze</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="36" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1aab036704fec0783a29ec93cfd42d2433" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetHeatHazeRadius</definition>
+        <argsstring>(float pValue)</argsstring>
+        <name>SetHeatHazeRadius</name>
+        <qualifiedname>Entity::SetHeatHazeRadius</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="38" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a3d37fdf03ecc72ec3b4fb628269816ba" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float Entity::GetHeatHazeRadius</definition>
+        <argsstring>()</argsstring>
+        <name>GetHeatHazeRadius</name>
+        <qualifiedname>Entity::GetHeatHazeRadius</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="39" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1ac35a8c9538edd94fda20a59c10d22a05" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetHeatHazePower</definition>
+        <argsstring>(float pValue)</argsstring>
+        <name>SetHeatHazePower</name>
+        <qualifiedname>Entity::SetHeatHazePower</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="41" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a76db2dd20faba83e35c31eb0d36f94bd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float Entity::GetHeatHazePower</definition>
+        <argsstring>()</argsstring>
+        <name>GetHeatHazePower</name>
+        <qualifiedname>Entity::GetHeatHazePower</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="42" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1ac96295a2d4662eb0ec28025e77da6215" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetDiffuseColor</definition>
+        <argsstring>(float pRed, float pGreen, float pBlue)</argsstring>
+        <name>SetDiffuseColor</name>
+        <qualifiedname>Entity::SetDiffuseColor</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pRed</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pGreen</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pBlue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="47" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a893d2be81d63c6f4527b545ed4751d1a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetDiffuseColorV</definition>
+        <argsstring>(vector pColorVector)</argsstring>
+        <name>SetDiffuseColorV</name>
+        <qualifiedname>Entity::SetDiffuseColorV</qualifiedname>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>pColorVector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="48" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a05f0e972b2b27748aa024c957df36fa2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetDiffuseAlpha</definition>
+        <argsstring>(float pAlpha)</argsstring>
+        <name>SetDiffuseAlpha</name>
+        <qualifiedname>Entity::SetDiffuseAlpha</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pAlpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="49" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a8e580cfa6b76f2d35f404b163fde5e3f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>proto native vector Entity::GetDiffuseColorV</definition>
+        <argsstring>()</argsstring>
+        <name>GetDiffuseColorV</name>
+        <qualifiedname>Entity::GetDiffuseColorV</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="50" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a136d5511ff8fe6842eb5767695546d87" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float Entity::GetDiffuseAlpha</definition>
+        <argsstring>()</argsstring>
+        <name>GetDiffuseAlpha</name>
+        <qualifiedname>Entity::GetDiffuseAlpha</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="51" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a935bf724a54f4ee3ea6e9ab03714bb23" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetAmbientColor</definition>
+        <argsstring>(float pRed, float pGreen, float pBlue)</argsstring>
+        <name>SetAmbientColor</name>
+        <qualifiedname>Entity::SetAmbientColor</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pRed</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pGreen</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pBlue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="53" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1abd43fd41a678feb899c8f71da7dab79f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetAmbientColorV</definition>
+        <argsstring>(vector pColorVector)</argsstring>
+        <name>SetAmbientColorV</name>
+        <qualifiedname>Entity::SetAmbientColorV</qualifiedname>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>pColorVector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="54" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a662d9312bf8b10d4b5a51ce718592bea" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetAmbientAlpha</definition>
+        <argsstring>(float pAlpha)</argsstring>
+        <name>SetAmbientAlpha</name>
+        <qualifiedname>Entity::SetAmbientAlpha</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pAlpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="55" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1aeae195961c9cd9aacf9b48b96642e426" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>proto native vector Entity::GetAmbientColorV</definition>
+        <argsstring>()</argsstring>
+        <name>GetAmbientColorV</name>
+        <qualifiedname>Entity::GetAmbientColorV</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="56" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1aca59bfd468b0371705ea44f9d7789241" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float Entity::GetAmbientAlpha</definition>
+        <argsstring>()</argsstring>
+        <name>GetAmbientAlpha</name>
+        <qualifiedname>Entity::GetAmbientAlpha</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="57" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a82012e485945cc12405156c2c691dc53" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetBrightness</definition>
+        <argsstring>(float pValue)</argsstring>
+        <name>SetBrightness</name>
+        <qualifiedname>Entity::SetBrightness</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="59" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a86a5d32df574e928289113c55e63b58a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float Entity::GetBrightness</definition>
+        <argsstring>()</argsstring>
+        <name>GetBrightness</name>
+        <qualifiedname>Entity::GetBrightness</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="60" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1ae5f8f7f5e5d4de36b2127917d46032bd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetFlareVisible</definition>
+        <argsstring>(bool pState)</argsstring>
+        <name>SetFlareVisible</name>
+        <qualifiedname>Entity::SetFlareVisible</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="65" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1aaf835cee6a26936f4e90f6ed52a3ceb0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Entity::IsFlareVisible</definition>
+        <argsstring>()</argsstring>
+        <name>IsFlareVisible</name>
+        <qualifiedname>Entity::IsFlareVisible</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="66" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a093ee2f5327c33287701e886a751530b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetFlareRelPosition</definition>
+        <argsstring>(vector pPosition)</argsstring>
+        <name>SetFlareRelPosition</name>
+        <qualifiedname>Entity::SetFlareRelPosition</qualifiedname>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>pPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="67" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a517b4f3f1ed015cfc99b00516e1ccb50" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>proto native vector Entity::GetFlareRelPosition</definition>
+        <argsstring>()</argsstring>
+        <name>GetFlareRelPosition</name>
+        <qualifiedname>Entity::GetFlareRelPosition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="68" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a099fa9e93446b6cf388188b386567d0a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Entity::SetSpotLightAngle</definition>
+        <argsstring>(float pValue)</argsstring>
+        <name>SetSpotLightAngle</name>
+        <qualifiedname>Entity::SetSpotLightAngle</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="73" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1a90c9c7e1d1b1b63a16c299997f813499" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float Entity::GetSpotLightAngle</definition>
+        <argsstring>()</argsstring>
+        <name>GetSpotLightAngle</name>
+        <qualifiedname>Entity::GetSpotLightAngle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/EntityLightSource.c" line="74" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_1aca9b0e0586a62e7319ed5538b82ed114" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float Entity::GetSoundLength</definition>
+        <argsstring>()</argsstring>
+        <name>GetSoundLength</name>
+        <qualifiedname>Entity::GetSoundLength</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/SoundOnVehicle.c" line="3" column="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Entity</label>
+        <link refid="class_entity"/>
+      </node>
+      <node id="2">
+        <label>FlareSimulation</label>
+        <link refid="class_flare_simulation"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>FlareSimulation_Green</label>
+        <link refid="class_flare_simulation___green"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SmokeSimulation</label>
+        <link refid="class_smoke_simulation"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>SmokeSimulation_Green</label>
+        <link refid="class_smoke_simulation___green"/>
+        <childnode refid="4" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>SmokeSimulation_White</label>
+        <link refid="class_smoke_simulation___white"/>
+        <childnode refid="4" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/Camera.c" line="1" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/Camera.c" bodystart="2" bodyend="66"/>
+    <listofallmembers>
+      <member refid="class_entity_1a1ef32c066925af862d65fa5e72d66ece" prot="private" virt="non-virtual"><scope>Entity</scope><name>EnableHeatHaze</name></member>
+      <member refid="class_entity_1a835a2c47dbe152f0bc03f5924beac36f" prot="private" virt="non-virtual"><scope>Entity</scope><name>EnableLinear</name></member>
+      <member refid="class_entity_1ab85044bfd033b785fec3c940b9395909" prot="private" virt="non-virtual"><scope>Entity</scope><name>EnableSpecular</name></member>
+      <member refid="class_entity_1aca59bfd468b0371705ea44f9d7789241" prot="private" virt="non-virtual"><scope>Entity</scope><name>GetAmbientAlpha</name></member>
+      <member refid="class_entity_1aeae195961c9cd9aacf9b48b96642e426" prot="private" virt="non-virtual"><scope>Entity</scope><name>GetAmbientColorV</name></member>
+      <member refid="class_entity_1a86a5d32df574e928289113c55e63b58a" prot="private" virt="non-virtual"><scope>Entity</scope><name>GetBrightness</name></member>
+      <member refid="class_entity_1a29c03688298197e018815d3f63bcce5f" prot="private" virt="non-virtual"><scope>Entity</scope><name>GetCastShadow</name></member>
+      <member refid="class_entity_1a87f40f7c9a65679ea03c104620572cb9" prot="private" virt="non-virtual"><scope>Entity</scope><name>GetCurrentCamera</name></member>
+      <member refid="class_entity_1a6e267dff296c95cb4417609eb562ba43" prot="private" virt="non-virtual"><scope>Entity</scope><name>GetCurrentFOV</name></member>
+      <member refid="class_entity_1a136d5511ff8fe6842eb5767695546d87" prot="private" virt="non-virtual"><scope>Entity</scope><name>GetDiffuseAlpha</name></member>
+      <member refid="class_entity_1a8e580cfa6b76f2d35f404b163fde5e3f" prot="private" virt="non-virtual"><scope>Entity</scope><name>GetDiffuseColorV</name></member>
+      <member refid="class_entity_1a517b4f3f1ed015cfc99b00516e1ccb50" prot="private" virt="non-virtual"><scope>Entity</scope><name>GetFlareRelPosition</name></member>
+      <member refid="class_entity_1a76db2dd20faba83e35c31eb0d36f94bd" prot="private" virt="non-virtual"><scope>Entity</scope><name>GetHeatHazePower</name></member>
+      <member refid="class_entity_1a3d37fdf03ecc72ec3b4fb628269816ba" prot="private" virt="non-virtual"><scope>Entity</scope><name>GetHeatHazeRadius</name></member>
+      <member refid="class_entity_1a48f99cad0b2035586d5f8600fc099494" prot="private" virt="non-virtual"><scope>Entity</scope><name>GetLightType</name></member>
+      <member refid="class_entity_1a29faf3b292a97eaa473b2e4161e76713" prot="private" virt="non-virtual"><scope>Entity</scope><name>GetNearPlane</name></member>
+      <member refid="class_entity_1a281cd123ec896f5774955a4ef7dc01f5" prot="private" virt="non-virtual"><scope>Entity</scope><name>GetRadius</name></member>
+      <member refid="class_entity_1aca9b0e0586a62e7319ed5538b82ed114" prot="private" virt="non-virtual"><scope>Entity</scope><name>GetSoundLength</name></member>
+      <member refid="class_entity_1a90c9c7e1d1b1b63a16c299997f813499" prot="private" virt="non-virtual"><scope>Entity</scope><name>GetSpotLightAngle</name></member>
+      <member refid="class_entity_1a20417fad6cd47ed35a59d2af08a3b107" prot="private" virt="non-virtual"><scope>Entity</scope><name>InterpolateTo</name></member>
+      <member refid="class_entity_1a3597be9105cd229ae8d407015538d749" prot="private" virt="non-virtual"><scope>Entity</scope><name>IsActive</name></member>
+      <member refid="class_entity_1a0a9dacf0081cdf2fb05d234e3ff4263a" prot="private" virt="non-virtual"><scope>Entity</scope><name>IsEnabled</name></member>
+      <member refid="class_entity_1aaf835cee6a26936f4e90f6ed52a3ceb0" prot="private" virt="non-virtual"><scope>Entity</scope><name>IsFlareVisible</name></member>
+      <member refid="class_entity_1ad56a1632baf98d697a45121ec71359bb" prot="private" virt="non-virtual"><scope>Entity</scope><name>IsVisibleDuringDaylight</name></member>
+      <member refid="class_entity_1a8fd525b4293537f06db2907e80e5f045" prot="private" virt="non-virtual"><scope>Entity</scope><name>LookAt</name></member>
+      <member refid="class_entity_1ad352d8e3c476612f842f9697a1021e9c" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetActive</name></member>
+      <member refid="class_entity_1a662d9312bf8b10d4b5a51ce718592bea" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetAmbientAlpha</name></member>
+      <member refid="class_entity_1a935bf724a54f4ee3ea6e9ab03714bb23" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetAmbientColor</name></member>
+      <member refid="class_entity_1abd43fd41a678feb899c8f71da7dab79f" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetAmbientColorV</name></member>
+      <member refid="class_entity_1a82012e485945cc12405156c2c691dc53" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetBrightness</name></member>
+      <member refid="class_entity_1acc9fec02aecb91f7d1d19985cafe2e47" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetCastShadow</name></member>
+      <member refid="class_entity_1a05f0e972b2b27748aa024c957df36fa2" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetDiffuseAlpha</name></member>
+      <member refid="class_entity_1ac96295a2d4662eb0ec28025e77da6215" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetDiffuseColor</name></member>
+      <member refid="class_entity_1a893d2be81d63c6f4527b545ed4751d1a" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetDiffuseColorV</name></member>
+      <member refid="class_entity_1accb637c4f094c310d606cbb877da168b" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetEnabled</name></member>
+      <member refid="class_entity_1a093ee2f5327c33287701e886a751530b" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetFlareRelPosition</name></member>
+      <member refid="class_entity_1ae5f8f7f5e5d4de36b2127917d46032bd" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetFlareVisible</name></member>
+      <member refid="class_entity_1a81ec6c8233830c1e305d81984c886d32" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetFocus</name></member>
+      <member refid="class_entity_1a06662668cf8fc7f902b62d992164238e" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetFOV</name></member>
+      <member refid="class_entity_1ac35a8c9538edd94fda20a59c10d22a05" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetHeatHazePower</name></member>
+      <member refid="class_entity_1aab036704fec0783a29ec93cfd42d2433" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetHeatHazeRadius</name></member>
+      <member refid="class_entity_1af8b9d80b2940b766ea5055dbd069f67f" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetLightType</name></member>
+      <member refid="class_entity_1a02a4bf9644dc2e4f9dd71788db9b9942" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetNearPlane</name></member>
+      <member refid="class_entity_1a647ecb4c26cab3f6e279b874e6ea1f4e" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetPulseCoef</name></member>
+      <member refid="class_entity_1adf201ddddaacf97d6f2a58066d5bb0f5" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetRadius</name></member>
+      <member refid="class_entity_1a099fa9e93446b6cf388188b386567d0a" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetSpotLightAngle</name></member>
+      <member refid="class_entity_1a41568a7db454de60d25dd6992e0365e2" prot="private" virt="non-virtual"><scope>Entity</scope><name>SetVisibleDuringDaylight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

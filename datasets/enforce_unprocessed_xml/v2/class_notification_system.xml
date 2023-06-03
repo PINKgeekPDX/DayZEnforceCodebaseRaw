@@ -1,0 +1,787 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_notification_system" kind="class" language="C++" prot="public">
+    <compoundname>NotificationSystem</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_notification_system_1ab5a00ea7e797bc6798e507516af874d6" prot="private" static="yes" mutable="no">
+        <type>protected const <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>protected const string NotificationSystem::JSON_FILE_PATH</definition>
+        <argsstring></argsstring>
+        <name>JSON_FILE_PATH</name>
+        <qualifiedname>NotificationSystem::JSON_FILE_PATH</qualifiedname>
+        <initializer>= &quot;Scripts/<ref refid="_json_data_contaminated_area_8c_1a2cfb9787941bf75eaaecaa2b07b56459" kindref="member">Data</ref>/notifications.json&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="59" column="30" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_notification_system_1ac129cd2c54317d2f5263c3d5c519e17c" prot="private" static="yes" mutable="no">
+        <type>protected const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected const int NotificationSystem::MAX_NOTIFICATIONS</definition>
+        <argsstring></argsstring>
+        <name>MAX_NOTIFICATIONS</name>
+        <qualifiedname>NotificationSystem::MAX_NOTIFICATIONS</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="60" column="27" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_notification_system_1a965295e193b080aec761f91b9dcee6fb" prot="private" static="yes" mutable="no">
+        <type>protected ref <ref refid="class_notification_system" kindref="compound">NotificationSystem</ref></type>
+        <definition>protected ref NotificationSystem NotificationSystem::m_Instance</definition>
+        <argsstring></argsstring>
+        <name>m_Instance</name>
+        <qualifiedname>NotificationSystem::m_Instance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="62" column="40" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_notification_system_1a47e99473c0951cd0293de412b3d51d53" prot="private" static="no" mutable="no">
+        <type>protected ref <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="_notification_system_8c_1a3a6ae2002a635ead1502f028ad39c2b5" kindref="member">NotificationRuntimeData</ref> &gt;</type>
+        <definition>protected ref array&lt;ref NotificationRuntimeData&gt; NotificationSystem::m_TimeArray</definition>
+        <argsstring></argsstring>
+        <name>m_TimeArray</name>
+        <qualifiedname>NotificationSystem::m_TimeArray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="64" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_notification_system_1a27f580b7fec776eb9f08ecce29b444df" prot="private" static="no" mutable="no">
+        <type>protected ref <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="_notification_system_8c_1a3a6ae2002a635ead1502f028ad39c2b5" kindref="member">NotificationRuntimeData</ref> &gt;</type>
+        <definition>protected ref array&lt;ref NotificationRuntimeData&gt; NotificationSystem::m_DeferredArray</definition>
+        <argsstring></argsstring>
+        <name>m_DeferredArray</name>
+        <qualifiedname>NotificationSystem::m_DeferredArray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="65" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_notification_system_1ac091ea48d83274601ebb9c2b588fc3d6" prot="private" static="no" mutable="no">
+        <type>protected ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="_notification_system_8c_1a25a31a4bdc02a0d0adb743e26dd14ba9" kindref="member">NotificationType</ref>, ref <ref refid="class_notification_data" kindref="compound">NotificationData</ref> &gt;</type>
+        <definition>protected ref map&lt;NotificationType, ref NotificationData&gt; NotificationSystem::m_DataArray</definition>
+        <argsstring></argsstring>
+        <name>m_DataArray</name>
+        <qualifiedname>NotificationSystem::m_DataArray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="66" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_notification_system_1a049cdb213c55d938468f91a71a93b68a" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref></type>
+        <definition>ref ScriptInvoker NotificationSystem::m_OnNotificationAdded</definition>
+        <argsstring></argsstring>
+        <name>m_OnNotificationAdded</name>
+        <qualifiedname>NotificationSystem::m_OnNotificationAdded</qualifiedname>
+        <initializer>= new <ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="68" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_notification_system_1a0cf680af9cab781cb36938fe3c1c53c2" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref></type>
+        <definition>ref ScriptInvoker NotificationSystem::m_OnNotificationRemoved</definition>
+        <argsstring></argsstring>
+        <name>m_OnNotificationRemoved</name>
+        <qualifiedname>NotificationSystem::m_OnNotificationRemoved</qualifiedname>
+        <initializer>= new <ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="69" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_notification_system_1a99adcc78382f0c548d62498ad66f1d18" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NotificationSystem::InitInstance</definition>
+        <argsstring>()</argsstring>
+        <name>InitInstance</name>
+        <qualifiedname>NotificationSystem::InitInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="71" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="71" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_notification_system_1aa8b1653edd65689745953f32c2f206bf" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NotificationSystem::CleanupInstance</definition>
+        <argsstring>()</argsstring>
+        <name>CleanupInstance</name>
+        <qualifiedname>NotificationSystem::CleanupInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="80" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_notification_system_1a9b7970e6156b05338dcd79020b95f798" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_notification_system" kindref="compound">NotificationSystem</ref></type>
+        <definition>static NotificationSystem NotificationSystem::GetInstance</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstance</name>
+        <qualifiedname>NotificationSystem::GetInstance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="85" column="27" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_notification_system_1a3e6bc3f389d05081eff4c46a85e4c0e7" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NotificationSystem::SendNotificationToPlayerExtended</definition>
+        <argsstring>(Man player, float show_time, string title_text, string detail_text=&quot;&quot;, string icon=&quot;&quot;)</argsstring>
+        <name>SendNotificationToPlayerExtended</name>
+        <qualifiedname>NotificationSystem::SendNotificationToPlayerExtended</qualifiedname>
+        <param>
+          <type>Man</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>show_time</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>title_text</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>detail_text</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>icon</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Send custom notification to player from server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the target player to send notification to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>show_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>amount of time this notification is displayed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title_text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the title text that is displayed in the notification </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>detail_text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>additional text that can be added to the notification under the title - will not display additional text if not set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>icon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the icon that is displayed in the notification - will use default icon if not set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="106" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="106" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_notification_system_1af38241f43138ced69a912cbc0cf36b28" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NotificationSystem::SendNotificationToPlayerIdentityExtended</definition>
+        <argsstring>(PlayerIdentity player, float show_time, string title_text, string detail_text=&quot;&quot;, string icon=&quot;&quot;)</argsstring>
+        <name>SendNotificationToPlayerIdentityExtended</name>
+        <qualifiedname>NotificationSystem::SendNotificationToPlayerIdentityExtended</qualifiedname>
+        <param>
+          <type><ref refid="class_player_identity" kindref="compound">PlayerIdentity</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>show_time</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>title_text</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>detail_text</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>icon</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Send custom notification to player identity from server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the target player to send notification to - if null, will send to all players </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>show_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>amount of time this notification is displayed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title_text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the title text that is displayed in the notification </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>detail_text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>additional text that can be added to the notification under the title - will not display additional text if not set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>icon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the icon that is displayed in the notification - will use default icon if not set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="122" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="122" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_notification_system_1a1c7d6fb167abfdbdd4eb31f8715ebdf4" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NotificationSystem::SendNotificationToPlayer</definition>
+        <argsstring>(Man player, NotificationType type, float show_time, string detail_text=&quot;&quot;)</argsstring>
+        <name>SendNotificationToPlayer</name>
+        <qualifiedname>NotificationSystem::SendNotificationToPlayer</qualifiedname>
+        <param>
+          <type>Man</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="_notification_system_8c_1a25a31a4bdc02a0d0adb743e26dd14ba9" kindref="member">NotificationType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>show_time</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>detail_text</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Send notification from default types to player from server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the target player to send notification to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of notification to send - these can be viewed in /Scripts/Data/Notifications.json </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>show_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>amount of time this notification is displayed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>detail_text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>additional text that can be added to the notification under the title - will not display additional text if not set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="141" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="141" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_notification_system_1ac63f365098df3610099b710a80b939f9" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NotificationSystem::SendNotificationToPlayerIdentity</definition>
+        <argsstring>(PlayerIdentity player, NotificationType type, float show_time, string detail_text=&quot;&quot;)</argsstring>
+        <name>SendNotificationToPlayerIdentity</name>
+        <qualifiedname>NotificationSystem::SendNotificationToPlayerIdentity</qualifiedname>
+        <param>
+          <type><ref refid="class_player_identity" kindref="compound">PlayerIdentity</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="_notification_system_8c_1a25a31a4bdc02a0d0adb743e26dd14ba9" kindref="member">NotificationType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>show_time</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>detail_text</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Send notification from default types to player identity from server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>player</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the target player to send notification to - if null, will send to all players </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of notification to send - these can be viewed in /Scripts/Data/Notifications.json </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>show_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>amount of time this notification is displayed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>detail_text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>additional text that can be added to the notification under the title - will not display additional text if not set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="156" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="156" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_notification_system_1ae7e705691ea84eaf201e629d1643d7c4" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NotificationSystem::AddNotification</definition>
+        <argsstring>(NotificationType type, float show_time, string detail_text=&quot;&quot;)</argsstring>
+        <name>AddNotification</name>
+        <qualifiedname>NotificationSystem::AddNotification</qualifiedname>
+        <param>
+          <type><ref refid="_notification_system_8c_1a25a31a4bdc02a0d0adb743e26dd14ba9" kindref="member">NotificationType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>show_time</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>detail_text</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Send notification from default types to local player. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of notification to send - these can be viewed in /Scripts/Data/Notifications.json </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>show_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>amount of time this notification is displayed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>detail_text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>additional text that can be added to the notification under the title - will not display additional text if not set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="173" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="173" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="class_notification_system_1a8801348912f09d638199bf0596cbe7d8" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NotificationSystem::AddNotificationExtended</definition>
+        <argsstring>(float show_time, string title_text, string detail_text=&quot;&quot;, string icon=&quot;&quot;)</argsstring>
+        <name>AddNotificationExtended</name>
+        <qualifiedname>NotificationSystem::AddNotificationExtended</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>show_time</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>title_text</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>detail_text</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>icon</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Send custom notification from to local player. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>show_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>amount of time this notification is displayed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title_text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the title text that is displayed in the notification </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>detail_text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>additional text that can be added to the notification under the title - will not display additional text if not set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>icon</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the icon that is displayed in the notification - will use default icon if not set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="197" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="197" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="class_notification_system_1af5398c705e25a566eed46024a86fdb71" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NotificationSystem::Update</definition>
+        <argsstring>(float timeslice)</argsstring>
+        <name>Update</name>
+        <qualifiedname>NotificationSystem::Update</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>timeslice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="217" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="217" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="class_notification_system_1a07f1bafadece3a8c6d114a987924c408" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void NotificationSystem::LoadNotificationData</definition>
+        <argsstring>()</argsstring>
+        <name>LoadNotificationData</name>
+        <qualifiedname>NotificationSystem::LoadNotificationData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="258" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="258" bodyend="288"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_notification_system_1adf618ab8cfabc3d79cbc3f35c26621fa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void NotificationSystem::NotificationSystem</definition>
+        <argsstring>()</argsstring>
+        <name>NotificationSystem</name>
+        <qualifiedname>NotificationSystem::NotificationSystem</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="90" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="90" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_notification_system_1aa3167112d04099cca93084c8331ed90a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="class_notification_data" kindref="compound">NotificationData</ref></type>
+        <definition>protected NotificationData NotificationSystem::GetNotificationData</definition>
+        <argsstring>(NotificationType type)</argsstring>
+        <name>GetNotificationData</name>
+        <qualifiedname>NotificationSystem::GetNotificationData</qualifiedname>
+        <param>
+          <type><ref refid="_notification_system_8c_1a25a31a4bdc02a0d0adb743e26dd14ba9" kindref="member">NotificationType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="248" column="28" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="248" bodyend="256"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6">
+        <label>Class</label>
+        <link refid="class_class"/>
+      </node>
+      <node id="1">
+        <label>NotificationSystem</label>
+        <link refid="class_notification_system"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>JSON_FILE_PATH</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_DeferredArray</edgelabel>
+          <edgelabel>m_TimeArray</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_OnNotificationAdded</edgelabel>
+          <edgelabel>m_OnNotificationRemoved</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Object</label>
+        <link refid="class_object"/>
+      </node>
+      <node id="9">
+        <label>ScriptInvoker</label>
+        <link refid="class_script_invoker"/>
+      </node>
+      <node id="7">
+        <label>Widget</label>
+        <link refid="class_widget"/>
+      </node>
+      <node id="5">
+        <label>array</label>
+        <link refid="classarray"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>array&lt; Widget &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>array&lt; ref NotificationRuntimeData &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+        <link refid="classstring"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>Empty</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" line="57" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Notifications/NotificationSystem.c" bodystart="58" bodyend="289"/>
+    <listofallmembers>
+      <member refid="class_notification_system_1ae7e705691ea84eaf201e629d1643d7c4" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>AddNotification</name></member>
+      <member refid="class_notification_system_1a8801348912f09d638199bf0596cbe7d8" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>AddNotificationExtended</name></member>
+      <member refid="class_notification_system_1aa8b1653edd65689745953f32c2f206bf" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>CleanupInstance</name></member>
+      <member refid="class_notification_system_1a9b7970e6156b05338dcd79020b95f798" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>GetInstance</name></member>
+      <member refid="class_notification_system_1aa3167112d04099cca93084c8331ed90a" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>GetNotificationData</name></member>
+      <member refid="class_notification_system_1a99adcc78382f0c548d62498ad66f1d18" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>InitInstance</name></member>
+      <member refid="class_notification_system_1ab5a00ea7e797bc6798e507516af874d6" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>JSON_FILE_PATH</name></member>
+      <member refid="class_notification_system_1a07f1bafadece3a8c6d114a987924c408" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>LoadNotificationData</name></member>
+      <member refid="class_notification_system_1ac091ea48d83274601ebb9c2b588fc3d6" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>m_DataArray</name></member>
+      <member refid="class_notification_system_1a27f580b7fec776eb9f08ecce29b444df" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>m_DeferredArray</name></member>
+      <member refid="class_notification_system_1a965295e193b080aec761f91b9dcee6fb" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>m_Instance</name></member>
+      <member refid="class_notification_system_1a049cdb213c55d938468f91a71a93b68a" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>m_OnNotificationAdded</name></member>
+      <member refid="class_notification_system_1a0cf680af9cab781cb36938fe3c1c53c2" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>m_OnNotificationRemoved</name></member>
+      <member refid="class_notification_system_1a47e99473c0951cd0293de412b3d51d53" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>m_TimeArray</name></member>
+      <member refid="class_notification_system_1ac129cd2c54317d2f5263c3d5c519e17c" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>MAX_NOTIFICATIONS</name></member>
+      <member refid="class_notification_system_1adf618ab8cfabc3d79cbc3f35c26621fa" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>NotificationSystem</name></member>
+      <member refid="class_notification_system_1a1c7d6fb167abfdbdd4eb31f8715ebdf4" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>SendNotificationToPlayer</name></member>
+      <member refid="class_notification_system_1a3e6bc3f389d05081eff4c46a85e4c0e7" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>SendNotificationToPlayerExtended</name></member>
+      <member refid="class_notification_system_1ac63f365098df3610099b710a80b939f9" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>SendNotificationToPlayerIdentity</name></member>
+      <member refid="class_notification_system_1af38241f43138ced69a912cbc0cf36b28" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>SendNotificationToPlayerIdentityExtended</name></member>
+      <member refid="class_notification_system_1af5398c705e25a566eed46024a86fdb71" prot="private" virt="non-virtual"><scope>NotificationSystem</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

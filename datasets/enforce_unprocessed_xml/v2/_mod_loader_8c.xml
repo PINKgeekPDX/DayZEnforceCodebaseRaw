@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_mod_loader_8c" kind="file" language="C++">
+    <compoundname>ModLoader.c</compoundname>
+    <innerclass refid="class_mod_loader" prot="public">ModLoader</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_mod_loader" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mod_loader" kindref="compound">ModLoader</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_mod_loader_1a731aa8c4425e04fea65b0195035485f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mod_loader_1a731aa8c4425e04fea65b0195035485f3" kindref="member">m_Loaded</ref>;</highlight></codeline>
+<codeline lineno="4" refid="class_mod_loader_1a796bd47f58b65da341f106353f9790e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ref<sp/><ref refid="classarray" kindref="compound">array&lt;ref ModStructure&gt;</ref><sp/><sp/><sp/><sp/><ref refid="class_mod_loader_1a796bd47f58b65da341f106353f9790e4" kindref="member">m_Mods</ref>;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="6" refid="class_mod_loader_1ac189ee3125a1dd7fb8f49ba9155e0a39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ref ModStructure&gt;</ref><sp/><ref refid="class_mod_loader_1ac189ee3125a1dd7fb8f49ba9155e0a39" kindref="member">GetMods</ref>()</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if(<sp/>!m_Loaded<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mod_loader_1a6ad3eef0471fb25b51ade163cc125f08" kindref="member">LoadMods</ref>();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_mod_loader_1a796bd47f58b65da341f106353f9790e4" kindref="member">m_Mods</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="13" refid="class_mod_loader_1a6ad3eef0471fb25b51ade163cc125f08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mod_loader_1a6ad3eef0471fb25b51ade163cc125f08" kindref="member">LoadMods</ref>()</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mod_loader_1a796bd47f58b65da341f106353f9790e4" kindref="member">m_Mods</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ref ModStructure&gt;</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mod_count<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1aca38b9a2b4a3fee55c9e4dfc64df2a3b" kindref="member">ConfigGetChildrenCount</ref>(<sp/></highlight><highlight class="stringliteral">&quot;CfgMods&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>2;<sp/>i<sp/>&lt;<sp/>mod_count;<sp/>i++<sp/>)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>mod_name;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a03909ec186a2f1d7c5c649a80f4819b6" kindref="member">ConfigGetChildName</ref>(<sp/></highlight><highlight class="stringliteral">&quot;CfgMods&quot;</highlight><highlight class="normal">,<sp/>i,<sp/>mod_name<sp/>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mod_loader_1a796bd47f58b65da341f106353f9790e4" kindref="member">m_Mods</ref>.Insert(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_mod_structure" kindref="compound">ModStructure</ref>(<sp/>i,<sp/></highlight><highlight class="stringliteral">&quot;CfgMods<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>mod_name<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Client/Mods/ModLoader.c"/>
+  </compounddef>
+</doxygen>

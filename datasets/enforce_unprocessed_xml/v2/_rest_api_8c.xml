@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_rest_api_8c" kind="file" language="C++">
+    <compoundname>RestApi.c</compoundname>
+    <innerclass refid="class_rest_callback" prot="public">RestCallback</innerclass>
+    <innerclass refid="class_rest_context" prot="public">RestContext</innerclass>
+    <innerclass refid="class_rest_api" prot="public">RestApi</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ERestResultState</name>
+        <enumvalue id="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8acfa2cd8a07a4de2d7f4fc5e3236f0105" prot="public">
+          <name>EREST_EMPTY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a64744d215061970c33b8a0ebe19d1364" prot="public">
+          <name>EREST_PENDING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a1462af25953577a8ccf7c10edcfee04b" prot="public">
+          <name>EREST_FEEDING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8ae9870baa7b1be7add9511c6694fccdb2" prot="public">
+          <name>EREST_SUCCESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a3e7d8f30aa4f466b5eeea10cd27fd6fd" prot="public">
+          <name>EREST_PROCESSED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8aa76702ccb5eb05f7f09900ac62050de8" prot="public">
+          <name>EREST_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a20b5767b64aecdd5e32df229e05879cc" prot="public">
+          <name>EREST_ERROR_CLIENTERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a6729d31fe306e10cbe7e20dea36e2640" prot="public">
+          <name>EREST_ERROR_SERVERERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a47fcfea43bd28cc7bb6e7d3c04c7d6c9" prot="public">
+          <name>EREST_ERROR_APPERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a93bbc522e94001aa28e5b5bca9ef75a5" prot="public">
+          <name>EREST_ERROR_TIMEOUT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8ae9fcf121ecb6a2da4661dcc19ed7450c" prot="public">
+          <name>EREST_ERROR_NOTIMPLEMENTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a7c6bc6aed483b81c168b4ebd0db6f029" prot="public">
+          <name>EREST_ERROR_UNKNOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/RestApi.c" line="8" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/RestApi.c" bodystart="9" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="enum" id="_rest_api_8c_1ae343a028e59cd4464e1d2ae4a900594d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ERestOption</name>
+        <enumvalue id="_rest_api_8c_1ae343a028e59cd4464e1d2ae4a900594dabf2acfc1536f608fd733057c780aa726" prot="public">
+          <name>ERESTOPTION_UNKNOWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_rest_api_8c_1ae343a028e59cd4464e1d2ae4a900594da7b2a2df995f476c9cdfb13f3aaccf330" prot="public">
+          <name>ERESTOPTION_READOPERATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_rest_api_8c_1ae343a028e59cd4464e1d2ae4a900594dac7a1b14d452153b0e38a102d83c48d13" prot="public">
+          <name>ERESTOPTION_CONNECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/RestApi.c" line="28" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/RestApi.c" bodystart="29" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_rest_api_8c_1ae4789e7b6cc16554fc993ccfc91fc37f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="class_rest_api" kindref="compound">RestApi</ref></type>
+        <definition>proto native RestApi CreateRestApi</definition>
+        <argsstring>()</argsstring>
+        <name>CreateRestApi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/RestApi.c" line="181" column="22" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/RestApi.c" declline="181" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="function" id="_rest_api_8c_1a502d66d4a66af2180494f8dd6d1582e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void DestroyRestApi</definition>
+        <argsstring>()</argsstring>
+        <name>DestroyRestApi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/RestApi.c" line="182" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/RestApi.c" declline="182" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="_rest_api_8c_1a1762bbdd8985efdedf4e8a9caa204f2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="class_rest_api" kindref="compound">RestApi</ref></type>
+        <definition>proto native RestApi GetRestApi</definition>
+        <argsstring>()</argsstring>
+        <name>GetRestApi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/RestApi.c" line="183" column="22" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/RestApi.c" declline="183" declcolumn="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>states,<sp/>(result<sp/>+<sp/>error)<sp/>codes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>defined<sp/>in<sp/>C++</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8" kindref="member">ERestResultState</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10" refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8acfa2cd8a07a4de2d7f4fc5e3236f0105" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8acfa2cd8a07a4de2d7f4fc5e3236f0105" kindref="member">EREST_EMPTY</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>not<sp/>initialized</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a64744d215061970c33b8a0ebe19d1364" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a64744d215061970c33b8a0ebe19d1364" kindref="member">EREST_PENDING</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>awaiting<sp/>processing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a1462af25953577a8ccf7c10edcfee04b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a1462af25953577a8ccf7c10edcfee04b" kindref="member">EREST_FEEDING</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>awaiting<sp/>incoming<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8ae9870baa7b1be7add9511c6694fccdb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8ae9870baa7b1be7add9511c6694fccdb2" kindref="member">EREST_SUCCESS</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>result<sp/>and/<sp/>or<sp/>data<sp/>are<sp/>ready<sp/>(success),<sp/>awaiting<sp/>data<sp/>processing<sp/>to<sp/>be<sp/>finished<sp/>(no<sp/>longer<sp/>blocking<sp/>queue<sp/>processing)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a3e7d8f30aa4f466b5eeea10cd27fd6fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a3e7d8f30aa4f466b5eeea10cd27fd6fd" kindref="member">EREST_PROCESSED</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>finished<sp/>(either<sp/>successfully<sp/>or<sp/>with<sp/>failure)<sp/>and<sp/>eill<sp/>be<sp/>removed<sp/>ASAP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8aa76702ccb5eb05f7f09900ac62050de8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8aa76702ccb5eb05f7f09900ac62050de8" kindref="member">EREST_ERROR</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(state<sp/>&gt;=<sp/>EREST_ERROR)<sp/>==<sp/>error<sp/>happened</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a20b5767b64aecdd5e32df229e05879cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a20b5767b64aecdd5e32df229e05879cc" kindref="member">EREST_ERROR_CLIENTERROR</ref>,<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>(EREST_ERROR<sp/>==<sp/>EREST_ERROR_CLIENTERROR)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a6729d31fe306e10cbe7e20dea36e2640" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a6729d31fe306e10cbe7e20dea36e2640" kindref="member">EREST_ERROR_SERVERERROR</ref>,</highlight></codeline>
+<codeline lineno="19" refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a47fcfea43bd28cc7bb6e7d3c04c7d6c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a47fcfea43bd28cc7bb6e7d3c04c7d6c9" kindref="member">EREST_ERROR_APPERROR</ref>,</highlight></codeline>
+<codeline lineno="20" refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a93bbc522e94001aa28e5b5bca9ef75a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a93bbc522e94001aa28e5b5bca9ef75a5" kindref="member">EREST_ERROR_TIMEOUT</ref>,</highlight></codeline>
+<codeline lineno="21" refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8ae9fcf121ecb6a2da4661dcc19ed7450c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8ae9fcf121ecb6a2da4661dcc19ed7450c" kindref="member">EREST_ERROR_NOTIMPLEMENTED</ref>,</highlight></codeline>
+<codeline lineno="22" refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a7c6bc6aed483b81c168b4ebd0db6f029" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_rest_api_8c_1abdc876112575b6c724f21a24fd6b47b8a7c6bc6aed483b81c168b4ebd0db6f029" kindref="member">EREST_ERROR_UNKNOWN</ref>,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>options</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>defined<sp/>in<sp/>C++</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="_rest_api_8c_1ae343a028e59cd4464e1d2ae4a900594d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_rest_api_8c_1ae343a028e59cd4464e1d2ae4a900594d" kindref="member">ERestOption</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30" refid="_rest_api_8c_1ae343a028e59cd4464e1d2ae4a900594dabf2acfc1536f608fd733057c780aa726" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_rest_api_8c_1ae343a028e59cd4464e1d2ae4a900594dabf2acfc1536f608fd733057c780aa726" kindref="member">ERESTOPTION_UNKNOWN</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>invalid<sp/>option</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="_rest_api_8c_1ae343a028e59cd4464e1d2ae4a900594da7b2a2df995f476c9cdfb13f3aaccf330" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_rest_api_8c_1ae343a028e59cd4464e1d2ae4a900594da7b2a2df995f476c9cdfb13f3aaccf330" kindref="member">ERESTOPTION_READOPERATION</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>operation<sp/>timeout<sp/>(default<sp/>10sec)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="_rest_api_8c_1ae343a028e59cd4464e1d2ae4a900594dac7a1b14d452153b0e38a102d83c48d13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_rest_api_8c_1ae343a028e59cd4464e1d2ae4a900594dac7a1b14d452153b0e38a102d83c48d13" kindref="member">ERESTOPTION_CONNECTION</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>connection<sp/>timeout<sp/>(default<sp/>10sec)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>note:<sp/>limit<sp/>for<sp/>timeout<sp/>is<sp/>between<sp/>&lt;3<sp/>..<sp/>120&gt;<sp/>seconds,<sp/>you<sp/>cannot<sp/>exceed<sp/>this<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>object<sp/>to<sp/>be<sp/>used<sp/>from<sp/>script<sp/>for<sp/>result<sp/>binding</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>[Example:]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>RestCallback<sp/>cbx1<sp/>=<sp/>new<sp/>RestCallback;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>RestContext<sp/>ctx<sp/>=<sp/>GetRestApi().GetRestContext(&quot;http://somethingsomewhere.com/path/&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>ctx.GET(cbx1,&quot;RequestPath?Argument=Something&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>Event<sp/>are<sp/>then<sp/>called<sp/>upon<sp/>RestCallback()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_rest_callback" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rest_callback" kindref="compound">RestCallback</ref><sp/>:<sp/><ref refid="class_managed" kindref="compound">Managed</ref></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55" refid="class_rest_callback_1a440838c53f5083c0140e1375e629d43e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rest_callback_1a440838c53f5083c0140e1375e629d43e" kindref="member">OnError</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>errorCode<sp/>)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>override<sp/>this<sp/>with<sp/>your<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;<sp/>!!!<sp/>OnError()<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_rest_callback_1a84cf07f1fa8109b03f0f574b9f1dd63b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rest_callback_1a84cf07f1fa8109b03f0f574b9f1dd63b" kindref="member">OnTimeout</ref>()</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>override<sp/>this<sp/>with<sp/>your<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;<sp/>!!!<sp/>OnTimeout()<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="class_rest_callback_1ae8e78f31f40b27c826d58b43df5dbe26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rest_callback_1ae8e78f31f40b27c826d58b43df5dbe26" kindref="member">OnSuccess</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>data,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dataSize<sp/>)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>override<sp/>this<sp/>with<sp/>your<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;<sp/>!!!<sp/>OnSuccess()<sp/>size=&quot;</highlight><highlight class="normal"><sp/>+<sp/>dataSize<sp/>);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>dataSize<sp/>&gt;<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(data);<sp/></highlight><highlight class="comment">//<sp/>!!!<sp/>NOTE:<sp/>Print()<sp/>will<sp/>not<sp/>output<sp/>string<sp/>longer<sp/>than<sp/>1024b,<sp/>check<sp/>your<sp/>dataSize<sp/>!!!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="class_rest_callback_1a1adf34aae0fa9b700b94ae450b1dce75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rest_callback_1a1adf34aae0fa9b700b94ae450b1dce75" kindref="member">OnFileCreated</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fileName,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dataSize<sp/>)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>override<sp/>this<sp/>with<sp/>your<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;<sp/>!!!<sp/>OnFileCreated()<sp/>file=&quot;</highlight><highlight class="normal"><sp/>+<sp/>fileName<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>size=&quot;</highlight><highlight class="normal"><sp/>+<sp/>dataSize<sp/>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">//<sp/>context<sp/>API<sp/>and<sp/>request<sp/>API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="class_rest_context" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rest_context" kindref="compound">RestContext</ref></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97" refid="class_rest_context_1a090197f70127da0e71e9fbed7200c5d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rest_context_1a090197f70127da0e71e9fbed7200c5d9" kindref="member">RestContext</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="98" refid="class_rest_context_1ac14298f639d9a737607da06265feebb1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rest_context_1ac14298f639d9a737607da06265feebb1" kindref="member">~RestContext</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103" refid="class_rest_context_1a72d1c166ea7cf65d82f7bceae6643d20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_rest_context_1a72d1c166ea7cf65d82f7bceae6643d20" kindref="member">GET</ref>(<sp/><ref refid="class_rest_callback" kindref="compound">RestCallback</ref><sp/>cb,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>request<sp/>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="class_rest_context_1a4e03f954d011635c46e8c028fe9680db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_rest_context_1a4e03f954d011635c46e8c028fe9680db" kindref="member">GET_now</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>request<sp/>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="class_rest_context_1a3e5669f2cee5d2863deb4b4c21c2e6cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_rest_context_1a3e5669f2cee5d2863deb4b4c21c2e6cf" kindref="member">FILE</ref>(<sp/><ref refid="class_rest_callback" kindref="compound">RestCallback</ref><sp/>cb,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>request,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>filename<sp/>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="class_rest_context_1a990912b4c2bd3c2d045941751408d436" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_rest_context_1a990912b4c2bd3c2d045941751408d436" kindref="member">FILE_now</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>request,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>filename<sp/>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="class_rest_context_1afa3f7d59a41b2f74fec6fc552f46e2e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_rest_context_1afa3f7d59a41b2f74fec6fc552f46e2e7" kindref="member">POST</ref>(<sp/><ref refid="class_rest_callback" kindref="compound">RestCallback</ref><sp/>cb,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>request,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>data<sp/>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="class_rest_context_1a50eef4f6ae05a2c46d45bcc03230b1a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_rest_context_1a50eef4f6ae05a2c46d45bcc03230b1a9" kindref="member">POST_now</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>request,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>data<sp/>);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="class_rest_context_1ad1389a1f0c8bdcfd5672bb9007ff4b3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rest_context_1ad1389a1f0c8bdcfd5672bb9007ff4b3e" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="class_rest_context_1aa634ccc7268386b66e2debc119954cbe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rest_context_1aa634ccc7268386b66e2debc119954cbe" kindref="member">SetHeader</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>value<sp/>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RestApi<sp/>core<sp/>for<sp/>context<sp/>create/<sp/>access<sp/>+<sp/>debug<sp/>features</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="class_rest_api" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_rest_api" kindref="compound">RestApi</ref></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="149" refid="class_rest_api_1ad1928057ed44b97bd806055aedc9dfb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rest_api_1ad1928057ed44b97bd806055aedc9dfb5" kindref="member">RestApi</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="150" refid="class_rest_api_1a5ea98639b878fec61e13dc04a46de20c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rest_api_1a5ea98639b878fec61e13dc04a46de20c" kindref="member">~RestApi</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="class_rest_api_1a5ed69ab571e5cfb2818515124e8da157" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/><ref refid="class_rest_context" kindref="compound">RestContext</ref><sp/><ref refid="class_rest_api_1a5ed69ab571e5cfb2818515124e8da157" kindref="member">GetRestContext</ref>(<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>serverURL<sp/>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="160" refid="class_rest_api_1ae307edfa0eef77989d3287b2368a3dd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_rest_api_1ae307edfa0eef77989d3287b2368a3dd3" kindref="member">GetContextCount</ref>();</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="class_rest_api_1add278d86bdff10d12eb699e450130255" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rest_api_1add278d86bdff10d12eb699e450130255" kindref="member">EnableDebug</ref>(<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bEnable<sp/>);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="class_rest_api_1a2b8fca9d804f3691f41dbe0b8dd78480" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rest_api_1a2b8fca9d804f3691f41dbe0b8dd78480" kindref="member">DebugList</ref>();</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="class_rest_api_1aea79cbafbc4ae4aaaa5960b0aa7dc484" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_rest_api_1aea79cbafbc4ae4aaaa5960b0aa7dc484" kindref="member">SetOption</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>option,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value<sp/>);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="comment">//<sp/>-------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="comment">//<sp/>RestApi<sp/>create/<sp/>access<sp/>methods<sp/>out<sp/>of<sp/>Hive<sp/>initialization</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="_rest_api_8c_1ae4789e7b6cc16554fc993ccfc91fc37f" refkind="member"><highlight class="normal">proto<sp/>native<sp/><ref refid="class_rest_api" kindref="compound">RestApi</ref><sp/><ref refid="_rest_api_8c_1ae4789e7b6cc16554fc993ccfc91fc37f" kindref="member">CreateRestApi</ref>();</highlight></codeline>
+<codeline lineno="182" refid="_rest_api_8c_1a502d66d4a66af2180494f8dd6d1582e6" refkind="member"><highlight class="normal">proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_rest_api_8c_1a502d66d4a66af2180494f8dd6d1582e6" kindref="member">DestroyRestApi</ref>();</highlight></codeline>
+<codeline lineno="183" refid="_rest_api_8c_1a1762bbdd8985efdedf4e8a9caa204f2d" refkind="member"><highlight class="normal">proto<sp/>native<sp/><ref refid="class_rest_api" kindref="compound">RestApi</ref><sp/><ref refid="_rest_api_8c_1a1762bbdd8985efdedf4e8a9caa204f2d" kindref="member">GetRestApi</ref>();</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Http/RestApi.c"/>
+  </compounddef>
+</doxygen>

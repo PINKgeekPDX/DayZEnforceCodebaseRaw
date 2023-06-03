@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_content_d_l_c" kind="class" language="C++" prot="public">
+    <compoundname>ContentDLC</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_content_d_l_c_1aa4e85cca7510e11dc146aae668aecc33" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref></type>
+        <definition>ref ScriptInvoker ContentDLC::m_OnChange</definition>
+        <argsstring></argsstring>
+        <name>m_OnChange</name>
+        <qualifiedname>ContentDLC::m_OnChange</qualifiedname>
+        <initializer>= new <ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref>()</initializer>
+        <briefdescription>
+<para>void(EDLCId dlcId) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/ContentDLC.c" line="13" column="19" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/ContentDLC.c" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_content_d_l_c_1af1e50ac4ad0bca18e86b6d1b5d80d6a2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int ContentDLC::GetEntitlements</definition>
+        <argsstring>(out TIntArray dlcIdList)</argsstring>
+        <name>GetEntitlements</name>
+        <qualifiedname>ContentDLC::GetEntitlements</qualifiedname>
+        <param>
+          <type>out <ref refid="group___enforce_1ga62db042ecba76039a4391153a4660c2c" kindref="member">TIntArray</ref></type>
+          <declname>dlcIdList</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For getting current entitlements on device (console). Could be called after any entitlement change or before accessing locked content. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dlcIdList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>through this list is returned all installed DLC with valid license for current user </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>count of installed and valid DLCs. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/ContentDLC.c" line="21" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_content_d_l_c_1afc3faed11834b2308ef68ab8b02f51a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool ContentDLC::IsDLCInstalled</definition>
+        <argsstring>(EDLCId dlcId)</argsstring>
+        <name>IsDLCInstalled</name>
+        <qualifiedname>ContentDLC::IsDLCInstalled</qualifiedname>
+        <param>
+          <type><ref refid="_content_d_l_c_8c_1a488be099c7eb2aa1f15f1f1d3cb6e43f" kindref="member">EDLCId</ref></type>
+          <declname>dlcId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dlcId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of DLC </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>current state of availability of unlocking&apos; dlc. Only DLC with valid license return true. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/ContentDLC.c" line="27" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_content_d_l_c_1a8aaa30dcd69d1f86381dc5a16507ce71" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool ContentDLC::OwnsAllDLC</definition>
+        <argsstring>()</argsstring>
+        <name>OwnsAllDLC</name>
+        <qualifiedname>ContentDLC::OwnsAllDLC</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/ContentDLC.c" line="29" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/ContentDLC.c" bodystart="29" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_content_d_l_c_1a00ed057f9a18fbe4e386e99cb71c897c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ContentDLC::OnChange</definition>
+        <argsstring>(EDLCId dlcId)</argsstring>
+        <name>OnChange</name>
+        <qualifiedname>ContentDLC::OnChange</qualifiedname>
+        <param>
+          <type><ref refid="_content_d_l_c_8c_1a488be099c7eb2aa1f15f1f1d3cb6e43f" kindref="member">EDLCId</ref></type>
+          <declname>dlcId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called from engine for notifing script after any change in additional content (installed, lost license). There should be check for current state of entitlements. On Xbox should be problem with event lost license! (system bug) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dlcId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of DLC that was changed. Could be empty string if console does not report concrete DLC ID. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/ContentDLC.c" line="49" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/ContentDLC.c" bodystart="49" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_content_d_l_c" kindref="compound">ContentDLC</ref> is for query installed DLC (only as entitlement keys, not content) </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>ContentDLC</label>
+        <link refid="class_content_d_l_c"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_OnChange</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ScriptInvoker</label>
+        <link refid="class_script_invoker"/>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/ContentDLC.c" line="10" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/ContentDLC.c" bodystart="11" bodyend="53"/>
+    <listofallmembers>
+      <member refid="class_content_d_l_c_1af1e50ac4ad0bca18e86b6d1b5d80d6a2" prot="private" virt="non-virtual"><scope>ContentDLC</scope><name>GetEntitlements</name></member>
+      <member refid="class_content_d_l_c_1afc3faed11834b2308ef68ab8b02f51a4" prot="private" virt="non-virtual"><scope>ContentDLC</scope><name>IsDLCInstalled</name></member>
+      <member refid="class_content_d_l_c_1aa4e85cca7510e11dc146aae668aecc33" prot="private" virt="non-virtual"><scope>ContentDLC</scope><name>m_OnChange</name></member>
+      <member refid="class_content_d_l_c_1a00ed057f9a18fbe4e386e99cb71c897c" prot="private" virt="non-virtual"><scope>ContentDLC</scope><name>OnChange</name></member>
+      <member refid="class_content_d_l_c_1a8aaa30dcd69d1f86381dc5a16507ce71" prot="private" virt="non-virtual"><scope>ContentDLC</scope><name>OwnsAllDLC</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

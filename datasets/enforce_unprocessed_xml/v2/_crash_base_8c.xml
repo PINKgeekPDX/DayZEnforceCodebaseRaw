@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_crash_base_8c" kind="file" language="C++">
+    <compoundname>CrashBase.c</compoundname>
+    <innerclass refid="class_house" prot="public">House</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_house" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_crash_base" kindref="compound">CrashBase</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_house" kindref="compound">House</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_house_1aeb4551d7a7f0545bb9f88621d152fdaa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_particle" kindref="compound">Particle</ref><sp/><ref refid="class_house_1aeb4551d7a7f0545bb9f88621d152fdaa" kindref="member">m_ParticleEfx</ref>;</highlight></codeline>
+<codeline lineno="4" refid="class_house_1ae2c82f42e3db1e1ef574f5dd7b757299" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_Init<sp/>=<sp/><ref refid="_day_z_game_8c_1a8045e088b31fe0754fb20cb0a5ff0dc9" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="6" refid="class_house_1a987fb32094586c7dbaafbdfdad34e79c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_house_1a987fb32094586c7dbaafbdfdad34e79c" kindref="member">Init</ref>()</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_crash_sound_sets" kindref="compound">CrashSoundSets</ref>.<ref refid="class_crash_sound_sets_1a8c4c0100ec6d3523ce19609e2cf24f7e" kindref="member">RegisterSoundSet</ref>(</highlight><highlight class="stringliteral">&quot;HeliCrash_Distant_SoundSet&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_crash_sound_sets" kindref="compound">CrashSoundSets</ref>.<ref refid="class_crash_sound_sets_1a8c4c0100ec6d3523ce19609e2cf24f7e" kindref="member">RegisterSoundSet</ref>(</highlight><highlight class="stringliteral">&quot;SledgeCrash_Distant_SoundSet&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="13" refid="class_house_1a8f8f7c6b204bf313dfaf52ec1acc44ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_house_1a8f8f7c6b204bf313dfaf52ec1acc44ed" kindref="member">EEOnCECreate</ref>()</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.EEOnCECreate();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RequestSoundEvent();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19" refid="class_house_1a7dc6ad980191513c08be21ff69564ce4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_house_1a7dc6ad980191513c08be21ff69564ce4" kindref="member">RequestSoundEvent</ref>()</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Param3&lt;bool,<sp/>vector,<sp/>int&gt;<sp/>playSound<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Param3&lt;bool,<sp/>vector,<sp/>int&gt;(</highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/><ref refid="_underground_area_loader_8c_1af4b5180d61f839c99de2d15fdcda4568" kindref="member">GetPosition</ref>(),<sp/><ref refid="class_crash_base_1a1f96de4a372c4a4f39b5a0f57145e9c8" kindref="member">GetSoundSet</ref>().Hash());</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1ac23a43be6b3b9f4ad547f87224c955c2" kindref="member">RPCSingleParam</ref>(<sp/>null,<sp/><ref refid="_e_r_p_cs_8c_1a6ce2d98a3b8fbdba5b450abf2d6eab37" kindref="member">ERPCs</ref>.RPC_SOUND_HELICRASH,<sp/>playSound,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>needs<sp/>to<sp/>have<sp/>the<sp/>soundset<sp/>registered<sp/>in<sp/>CrashBase.Init()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_house_1af55a86ba3169fe4a4dd7fdac784aa141" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_house_1af55a86ba3169fe4a4dd7fdac784aa141" kindref="member">GetSoundSet</ref>()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;HeliCrash_Distant_SoundSet&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_house_1a0ba26723f95fe30b76cd4ac0cd6e6aaf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_house_1a0ba26723f95fe30b76cd4ac0cd6e6aaf" kindref="member">EEInit</ref>()</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.EEInit();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Setup<sp/>for<sp/>local<sp/>sound<sp/>tests</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>DEVELOPER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsMultiplayer()<sp/>)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_effect_sound" kindref="compound">EffectSound</ref><sp/>eff<sp/>=<sp/><ref refid="class_s_effect_manager" kindref="compound">SEffectManager</ref>.<ref refid="class_s_effect_manager_1aa05a7b24ec51456db8c32cf2e4b099ef" kindref="member">PlaySound</ref>(<sp/><ref refid="class_crash_base_1a1f96de4a372c4a4f39b5a0f57145e9c8" kindref="member">GetSoundSet</ref>(),<sp/><ref refid="_underground_area_loader_8c_1af4b5180d61f839c99de2d15fdcda4568" kindref="member">GetPosition</ref>(),<sp/>0.1,<sp/>0.1<sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>eff.<ref refid="class_effect_sound_1a2cc90aea49a8e5dfad08b37632ec21ee" kindref="member">SetAutodestroy</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_house_1ac4173a8bbda3f379688bc01952b4bc6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_house_1ac4173a8bbda3f379688bc01952b4bc6a" kindref="member">EEDelete</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>parent)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsDedicatedServer()<sp/>)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>m_ParticleEfx<sp/>)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_ParticleEfx.<ref refid="class_particle_1ae9d5642dc992c942c1ae2f221e064921" kindref="member">Stop</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Building/CrashBase.c"/>
+  </compounddef>
+</doxygen>

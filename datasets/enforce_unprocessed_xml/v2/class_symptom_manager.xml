@@ -1,0 +1,1196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_symptom_manager" kind="class" language="C++" prot="public">
+    <compoundname>SymptomManager</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_symptom_manager_1a1c4193499b764b96ca6e5229ec2a8271" prot="private" static="no" mutable="no">
+        <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+        <definition>PlayerBase SymptomManager::m_Player</definition>
+        <argsstring></argsstring>
+        <name>m_Player</name>
+        <qualifiedname>SymptomManager::m_Player</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="44" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_symptom_manager_1a5ff59bd92bdb64f5ce0d8d9238ef08b7" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, ref <ref refid="class_symptom_base" kindref="compound">SymptomBase</ref> &gt;</type>
+        <definition>ref map&lt;int, ref SymptomBase&gt; SymptomManager::m_AvailableSymptoms</definition>
+        <argsstring></argsstring>
+        <name>m_AvailableSymptoms</name>
+        <qualifiedname>SymptomManager::m_AvailableSymptoms</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="45" column="9" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_symptom_manager_1a349539793430c3f9eec64b99c544ff7f" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt;</type>
+        <definition>ref map&lt;int, int&gt; SymptomManager::m_ActiveSymptomTypes</definition>
+        <argsstring></argsstring>
+        <name>m_ActiveSymptomTypes</name>
+        <qualifiedname>SymptomManager::m_ActiveSymptomTypes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="46" column="9" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_symptom_manager_1a87e89a8c22b7325b398a5e7c4900daf1" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_symptom_base" kindref="compound">SymptomBase</ref> &gt;</type>
+        <definition>ref array&lt;ref SymptomBase&gt; SymptomManager::m_SymptomQueuePrimary</definition>
+        <argsstring></argsstring>
+        <name>m_SymptomQueuePrimary</name>
+        <qualifiedname>SymptomManager::m_SymptomQueuePrimary</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="48" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_symptom_manager_1a7b9378f066a5485081dcc470a546cf46" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_symptom_base" kindref="compound">SymptomBase</ref> &gt;</type>
+        <definition>ref array&lt;ref SymptomBase&gt; SymptomManager::m_SymptomQueueSecondary</definition>
+        <argsstring></argsstring>
+        <name>m_SymptomQueueSecondary</name>
+        <qualifiedname>SymptomManager::m_SymptomQueueSecondary</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="49" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_symptom_manager_1aec560b91d1ccd95f38bdd419d3cd601a" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, <ref refid="class_symptom_base" kindref="compound">SymptomBase</ref> &gt;</type>
+        <definition>ref map&lt;int , SymptomBase &gt; SymptomManager::m_SymptomsUIDs</definition>
+        <argsstring></argsstring>
+        <name>m_SymptomsUIDs</name>
+        <qualifiedname>SymptomManager::m_SymptomsUIDs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="51" column="9" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_symptom_manager_1a4e637a31329b11be2a6f9492d150bc56" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_param" kindref="compound">Param</ref> &gt;</type>
+        <definition>ref array&lt;ref Param&gt; SymptomManager::m_SymptomQueueServerDbg</definition>
+        <argsstring></argsstring>
+        <name>m_SymptomQueueServerDbg</name>
+        <qualifiedname>SymptomManager::m_SymptomQueueServerDbg</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="54" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_symptom_manager_1a5f989ac85f36f1ac550d56a2aa060437" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_param" kindref="compound">Param</ref> &gt;</type>
+        <definition>ref array&lt;ref Param&gt; SymptomManager::m_SymptomQueueServerDbgPrimary</definition>
+        <argsstring></argsstring>
+        <name>m_SymptomQueueServerDbgPrimary</name>
+        <qualifiedname>SymptomManager::m_SymptomQueueServerDbgPrimary</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="55" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_symptom_manager_1a8ad77014d54d00ee3dbe49b78c30a6fd" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_param" kindref="compound">Param</ref> &gt;</type>
+        <definition>ref array&lt;ref Param&gt; SymptomManager::m_SymptomQueueServerDbgSecondary</definition>
+        <argsstring></argsstring>
+        <name>m_SymptomQueueServerDbgSecondary</name>
+        <qualifiedname>SymptomManager::m_SymptomQueueServerDbgSecondary</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="56" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_symptom_manager_1afb3d8b82e90082b53a3c7aa594cb06ca" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="class_timer" kindref="compound">Timer</ref></type>
+        <definition>ref Timer SymptomManager::m_Timer</definition>
+        <argsstring></argsstring>
+        <name>m_Timer</name>
+        <qualifiedname>SymptomManager::m_Timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="58" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_symptom_manager_1a815a9b88560133b91d69b9f0bea66816" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int SymptomManager::m_ActiveSymptomIndexPrimary</definition>
+        <argsstring></argsstring>
+        <name>m_ActiveSymptomIndexPrimary</name>
+        <qualifiedname>SymptomManager::m_ActiveSymptomIndexPrimary</qualifiedname>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="60" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_symptom_manager_1a7e3e8fbe256bd263f71cc9d77b3bf9f0" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int SymptomManager::m_CurrentCommandID</definition>
+        <argsstring></argsstring>
+        <name>m_CurrentCommandID</name>
+        <qualifiedname>SymptomManager::m_CurrentCommandID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="61" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_symptom_manager_1a01fc0efd1bf31b8e3dee1aefb8bf056b" prot="private" static="no" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int SymptomManager::STORAGE_VERSION</definition>
+        <argsstring></argsstring>
+        <name>STORAGE_VERSION</name>
+        <qualifiedname>SymptomManager::STORAGE_VERSION</qualifiedname>
+        <initializer>= 121</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="63" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_symptom_manager_1aeb837ab23cbf4b94c3f193d1e3fdb2dc" prot="private" static="no" mutable="no">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool SymptomManager::m_ShowDebug</definition>
+        <argsstring></argsstring>
+        <name>m_ShowDebug</name>
+        <qualifiedname>SymptomManager::m_ShowDebug</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="65" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_symptom_manager_1a1c312ca0a021cf9fb346318d7e586e8d" prot="private" static="no" mutable="no">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool SymptomManager::m_ShowDebug2</definition>
+        <argsstring></argsstring>
+        <name>m_ShowDebug2</name>
+        <qualifiedname>SymptomManager::m_ShowDebug2</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="66" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_symptom_manager_1a33b0b6d0984f2aed003b29a09687d506" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="class_smpt_anim_meta_base" kindref="compound">SmptAnimMetaBase</ref></type>
+        <definition>ref SmptAnimMetaBase SymptomManager::m_AnimMeta</definition>
+        <argsstring></argsstring>
+        <name>m_AnimMeta</name>
+        <qualifiedname>SymptomManager::m_AnimMeta</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="68" column="22" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_symptom_manager_1a3c84f5334839f3337be298355eef1e67" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>SymptomManager::Init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="70" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="70" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a3485529e90cb2994e193278f7babe782" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int SymptomManager::GetStorageVersion</definition>
+        <argsstring>()</argsstring>
+        <name>GetStorageVersion</name>
+        <qualifiedname>SymptomManager::GetStorageVersion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="87" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a2feea7fed9d6c9fd2dece6c034a701c6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::AutoactivateSymptoms</definition>
+        <argsstring>()</argsstring>
+        <name>AutoactivateSymptoms</name>
+        <qualifiedname>SymptomManager::AutoactivateSymptoms</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="93" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="93" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a95759b2b371250fc0b5520c0d5826d33" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::SymptomManager</definition>
+        <argsstring>(PlayerBase player)</argsstring>
+        <name>SymptomManager</name>
+        <qualifiedname>SymptomManager::SymptomManager</qualifiedname>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="103" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="103" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a2e1515220fe571de829ccf4c92e1a0e0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::OnPlayerKilled</definition>
+        <argsstring>()</argsstring>
+        <name>OnPlayerKilled</name>
+        <qualifiedname>SymptomManager::OnPlayerKilled</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="118" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="118" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1ab8a8f23ada6d994ac699fac172bfd881" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_symptom_base" kindref="compound">SymptomBase</ref></type>
+        <definition>SymptomBase SymptomManager::GetSymptomByUID</definition>
+        <argsstring>(int SYMPTOM_uid)</argsstring>
+        <name>GetSymptomByUID</name>
+        <qualifiedname>SymptomManager::GetSymptomByUID</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>SYMPTOM_uid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="131" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="131" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a0fffbfadcfe1fd0d4c1ee0dd4ebbdc76" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::~SymptomManager</definition>
+        <argsstring>()</argsstring>
+        <name>~SymptomManager</name>
+        <qualifiedname>SymptomManager::~SymptomManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="137" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="137" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1ad8daca8cf37f0215e732857ae6cb9167" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+        <definition>PlayerBase SymptomManager::GetPlayer</definition>
+        <argsstring>()</argsstring>
+        <name>GetPlayer</name>
+        <qualifiedname>SymptomManager::GetPlayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="141" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="141" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1ac1306a13c2d037b99dc82f66a7b139aa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::RegisterSymptom</definition>
+        <argsstring>(SymptomBase Symptom)</argsstring>
+        <name>RegisterSymptom</name>
+        <qualifiedname>SymptomManager::RegisterSymptom</qualifiedname>
+        <param>
+          <type><ref refid="class_symptom_base" kindref="compound">SymptomBase</ref></type>
+          <declname>Symptom</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="146" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="146" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a88e060325a150d13c29278600c35a946" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::OnAnimationFinished</definition>
+        <argsstring>(eAnimFinishType type=eAnimFinishType.SUCCESS)</argsstring>
+        <name>OnAnimationFinished</name>
+        <qualifiedname>SymptomManager::OnAnimationFinished</qualifiedname>
+        <param>
+          <type><ref refid="_smpt_anim_meta_8c_1aec8a3e42bd6d4b8e23c7aa7b314015eb" kindref="member">eAnimFinishType</ref></type>
+          <declname>type</declname>
+          <defval><ref refid="_smpt_anim_meta_8c_1aec8a3e42bd6d4b8e23c7aa7b314015ebac7f69f7c9e5aea9b8f54cf02870e2bf8" kindref="member">eAnimFinishType.SUCCESS</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="161" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="161" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1ac62bbbcb2910118426c410f487f0d263" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::OnAnimationStarted</definition>
+        <argsstring>()</argsstring>
+        <name>OnAnimationStarted</name>
+        <qualifiedname>SymptomManager::OnAnimationStarted</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="169" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="169" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a4aa33aa51843aa3480e56906ac223b92" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int SymptomManager::CreateUniqueID</definition>
+        <argsstring>()</argsstring>
+        <name>CreateUniqueID</name>
+        <qualifiedname>SymptomManager::CreateUniqueID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="175" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="175" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a1ba2a2cf8ac87dd74510a3dc860db27e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool SymptomManager::IsUIDUsed</definition>
+        <argsstring>(int uid)</argsstring>
+        <name>IsUIDUsed</name>
+        <qualifiedname>SymptomManager::IsUIDUsed</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>uid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="182" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="182" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a5184c921851d7a91ae4611f76d1b882c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>string SymptomManager::GetSymptomName</definition>
+        <argsstring>(int symptom_id)</argsstring>
+        <name>GetSymptomName</name>
+        <qualifiedname>SymptomManager::GetSymptomName</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>symptom_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="187" column="8" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="187" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a8f708b7758605f4d79023f51b614df18" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_smpt_anim_meta_base" kindref="compound">SmptAnimMetaBase</ref></type>
+        <definition>SmptAnimMetaBase SymptomManager::SpawnAnimMetaObject</definition>
+        <argsstring>(int symptom_id)</argsstring>
+        <name>SpawnAnimMetaObject</name>
+        <qualifiedname>SymptomManager::SpawnAnimMetaObject</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>symptom_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="192" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="192" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1ab40e6278b93322cf9b1d2d48eda963e2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::RequestSymptomExit</definition>
+        <argsstring>(int SYMPTOM_uid)</argsstring>
+        <name>RequestSymptomExit</name>
+        <qualifiedname>SymptomManager::RequestSymptomExit</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>SYMPTOM_uid</declname>
+        </param>
+        <briefdescription>
+<para>Exits a specific Symptom with a given UID. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="198" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="198" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a46361c52a3dd10ea748d28da1a9acdff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool SymptomManager::IsSymptomPrimary</definition>
+        <argsstring>(int symptom_id)</argsstring>
+        <name>IsSymptomPrimary</name>
+        <qualifiedname>SymptomManager::IsSymptomPrimary</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>symptom_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="203" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="203" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a1a4cce2aba03d08040173e7f0705a1e7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::OnInputUserDataReceived</definition>
+        <argsstring>(ParamsReadContext ctx)</argsstring>
+        <name>OnInputUserDataReceived</name>
+        <qualifiedname>SymptomManager::OnInputUserDataReceived</qualifiedname>
+        <param>
+          <type><ref refid="gameplay_8c_1a4ff67286551fc6c18504752a277c8bc1" kindref="member">ParamsReadContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="208" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="208" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a45020ee8b60d451ceb3cb06a3cc25eab" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int SymptomManager::GetCurrentCommandID</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrentCommandID</name>
+        <qualifiedname>SymptomManager::GetCurrentCommandID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="212" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="212" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a6ca3bfb0fb641abde340a474601b560c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::OnTick</definition>
+        <argsstring>(float deltatime, int pCurrentCommandID, HumanMovementState movement_state)</argsstring>
+        <name>OnTick</name>
+        <qualifiedname>SymptomManager::OnTick</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>deltatime</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>pCurrentCommandID</declname>
+        </param>
+        <param>
+          <type><ref refid="class_human_movement_state" kindref="compound">HumanMovementState</ref></type>
+          <declname>movement_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="217" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="217" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a17541e881a9d3fa9b9aad80fdfce442c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::SetAnimation</definition>
+        <argsstring>(ParamsReadContext ctx)</argsstring>
+        <name>SetAnimation</name>
+        <qualifiedname>SymptomManager::SetAnimation</qualifiedname>
+        <param>
+          <type><ref refid="gameplay_8c_1a4ff67286551fc6c18504752a277c8bc1" kindref="member">ParamsReadContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="275" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="275" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a9fba779652620ccebdff5e3c9205e35c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::UpdateActiveSymptoms</definition>
+        <argsstring>(float deltatime)</argsstring>
+        <name>UpdateActiveSymptoms</name>
+        <qualifiedname>SymptomManager::UpdateActiveSymptoms</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>deltatime</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="296" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="296" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a5e5f2e5b80e283c195495175fd31d13a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::OnSymptomExit</definition>
+        <argsstring>(SymptomBase Symptom, int uid)</argsstring>
+        <name>OnSymptomExit</name>
+        <qualifiedname>SymptomManager::OnSymptomExit</qualifiedname>
+        <param>
+          <type><ref refid="class_symptom_base" kindref="compound">SymptomBase</ref></type>
+          <declname>Symptom</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>uid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="327" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="327" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a29dbc59714e29f48c8db7fd6f7f5bb36" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int SymptomManager::GetSymptomMaxCount</definition>
+        <argsstring>(int symptom_id)</argsstring>
+        <name>GetSymptomMaxCount</name>
+        <qualifiedname>SymptomManager::GetSymptomMaxCount</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>symptom_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="374" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="374" bodyend="377"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a09fb815ca4aa3413ffcc03dd3d9ab290" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int SymptomManager::GetSymptomCount</definition>
+        <argsstring>(int symptom_id)</argsstring>
+        <name>GetSymptomCount</name>
+        <qualifiedname>SymptomManager::GetSymptomCount</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>symptom_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="380" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="380" bodyend="386"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a7c2c684735278b0b11be3f53c40d3db3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::IncreaseSymptomCount</definition>
+        <argsstring>(int symptom_id)</argsstring>
+        <name>IncreaseSymptomCount</name>
+        <qualifiedname>SymptomManager::IncreaseSymptomCount</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>symptom_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="388" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="388" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a13b277d4e7e9fc0d856248f37a553269" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::DecreaseSymptomCount</definition>
+        <argsstring>(int symptom_id)</argsstring>
+        <name>DecreaseSymptomCount</name>
+        <qualifiedname>SymptomManager::DecreaseSymptomCount</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>symptom_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="400" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="400" bodyend="409"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a97e21133efafe2a5ee6074b3d2bd3b84" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_symptom_base" kindref="compound">SymptomBase</ref></type>
+        <definition>SymptomBase SymptomManager::SpawnSymptom</definition>
+        <argsstring>(int symptom_id, int uid=-1)</argsstring>
+        <name>SpawnSymptom</name>
+        <qualifiedname>SymptomManager::SpawnSymptom</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>symptom_id</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>uid</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="411" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="411" bodyend="434"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1abdb216d01854a3a3d587349db11553a5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::CleanUpPrimaryQueue</definition>
+        <argsstring>()</argsstring>
+        <name>CleanUpPrimaryQueue</name>
+        <qualifiedname>SymptomManager::CleanUpPrimaryQueue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="436" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="436" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a78f43bd7298b23c85e296c4e6bcbb049" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_symptom_base" kindref="compound">SymptomBase</ref></type>
+        <definition>SymptomBase SymptomManager::QueueUpPrimarySymptom</definition>
+        <argsstring>(int symptom_id, int uid=-1)</argsstring>
+        <name>QueueUpPrimarySymptom</name>
+        <qualifiedname>SymptomManager::QueueUpPrimarySymptom</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>symptom_id</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>uid</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="445" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="445" bodyend="473"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a27b3e46e6b9910a0ffee2904c7b9c33b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::QueueUpSecondarySymptom</definition>
+        <argsstring>(int symptom_id, int uid=-1)</argsstring>
+        <name>QueueUpSecondarySymptom</name>
+        <qualifiedname>SymptomManager::QueueUpSecondarySymptom</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>symptom_id</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>uid</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="475" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="475" bodyend="478"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a6668faa64618850bca56b548e1c86833" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_symptom_base" kindref="compound">SymptomBase</ref></type>
+        <definition>SymptomBase SymptomManager::QueueUpSecondarySymptomEx</definition>
+        <argsstring>(int symptom_id, int uid=-1)</argsstring>
+        <name>QueueUpSecondarySymptomEx</name>
+        <qualifiedname>SymptomManager::QueueUpSecondarySymptomEx</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>symptom_id</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>uid</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="480" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="480" bodyend="492"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a77477b2fa0b5db1898f985cb6d7ee18c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::RemoveSecondarySymptom</definition>
+        <argsstring>(int symptom_id)</argsstring>
+        <name>RemoveSecondarySymptom</name>
+        <qualifiedname>SymptomManager::RemoveSecondarySymptom</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>symptom_id</declname>
+        </param>
+        <briefdescription>
+<para>Removes a single Symptom. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="495" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="495" bodyend="505"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a61360399975ca5b6211184d4683895bd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_symptom_base" kindref="compound">SymptomBase</ref></type>
+        <definition>SymptomBase SymptomManager::GetCurrentPrimaryActiveSymptom</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrentPrimaryActiveSymptom</name>
+        <qualifiedname>SymptomManager::GetCurrentPrimaryActiveSymptom</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="507" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="507" bodyend="522"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1aa30b71548276eb18870e01e1a017b4ab" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int SymptomManager::FindFirstAvailableSymptomIndex</definition>
+        <argsstring>()</argsstring>
+        <name>FindFirstAvailableSymptomIndex</name>
+        <qualifiedname>SymptomManager::FindFirstAvailableSymptomIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="524" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="524" bodyend="534"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1ae59b592e92a8c0cb1a6c5a79d0043630" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int SymptomManager::ComparePriority</definition>
+        <argsstring>(int prio1, int prio2)</argsstring>
+        <name>ComparePriority</name>
+        <qualifiedname>SymptomManager::ComparePriority</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>prio1</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>prio2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="536" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="536" bodyend="547"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a58b48ccf0015dcf62ce40583914091af" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int SymptomManager::GetSymptomPriority</definition>
+        <argsstring>(int symptom_id)</argsstring>
+        <name>GetSymptomPriority</name>
+        <qualifiedname>SymptomManager::GetSymptomPriority</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>symptom_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="549" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="549" bodyend="552"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1aa4ecb3d55ce9b1cdade0dc0c44ecd8a3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::OnRPC</definition>
+        <argsstring>(int rpc_type, ParamsReadContext ctx)</argsstring>
+        <name>OnRPC</name>
+        <qualifiedname>SymptomManager::OnRPC</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>rpc_type</declname>
+        </param>
+        <param>
+          <type><ref refid="gameplay_8c_1a4ff67286551fc6c18504752a277c8bc1" kindref="member">ParamsReadContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="554" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="554" bodyend="585"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a34638af7d0daac19118e5b1844514aba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SymptomManager::OnStoreSave</definition>
+        <argsstring>(ParamsWriteContext ctx)</argsstring>
+        <name>OnStoreSave</name>
+        <qualifiedname>SymptomManager::OnStoreSave</qualifiedname>
+        <param>
+          <type><ref refid="gameplay_8c_1af1d1033fca2ebd02f4ba61051b6341c4" kindref="member">ParamsWriteContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="587" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="587" bodyend="608"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symptom_manager_1a689a402b5b1d38885cd6e24eee4695fb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool SymptomManager::OnStoreLoad</definition>
+        <argsstring>(ParamsReadContext ctx, int version)</argsstring>
+        <name>OnStoreLoad</name>
+        <qualifiedname>SymptomManager::OnStoreLoad</qualifiedname>
+        <param>
+          <type><ref refid="gameplay_8c_1a4ff67286551fc6c18504752a277c8bc1" kindref="member">ParamsReadContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="610" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="610" bodyend="635"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="8">
+        <label>Class</label>
+        <link refid="class_class"/>
+      </node>
+      <node id="6">
+        <label>Object</label>
+        <link refid="class_object"/>
+      </node>
+      <node id="2">
+        <label>PlayerBase</label>
+        <link refid="class_player_base"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_PersonalLight</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_PersonalLightDisabledByDebug</edgelabel>
+          <edgelabel>m_PersonalLightEnabledOnCurrentServer</edgelabel>
+          <edgelabel>m_PersonalLightIsSwitchedOn</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ScriptedLightBase</label>
+        <link refid="class_scripted_light_base"/>
+      </node>
+      <node id="14">
+        <label>SmptAnimMetaBase</label>
+        <link refid="class_smpt_anim_meta_base"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_Duration</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SymptomManager</label>
+        <link refid="class_symptom_manager"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_Player</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_SymptomQueuePrimary</edgelabel>
+          <edgelabel>m_SymptomQueueSecondary</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_SymptomQueueServerDbg</edgelabel>
+          <edgelabel>m_SymptomQueueServerDbgPrimary</edgelabel>
+          <edgelabel>m_SymptomQueueServerDbgSecondary</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>m_Timer</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_ShowDebug</edgelabel>
+          <edgelabel>m_ShowDebug2</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_AnimMeta</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+      <node id="10">
+        <label>Widget</label>
+        <link refid="class_widget"/>
+      </node>
+      <node id="7">
+        <label>array</label>
+        <link refid="classarray"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>array&lt; Widget &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>array&lt; ref Param &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>array&lt; ref SymptomBase &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>bool</label>
+        <link refid="classbool"/>
+      </node>
+      <node id="15">
+        <label>float</label>
+        <link refid="classfloat"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>LOWEST</edgelabel>
+          <edgelabel>MAX</edgelabel>
+          <edgelabel>MIN</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>string</label>
+        <link refid="classstring"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>Empty</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" line="42" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerSymptoms/StateManager.c" bodystart="43" bodyend="928"/>
+    <listofallmembers>
+      <member refid="class_symptom_manager_1a2feea7fed9d6c9fd2dece6c034a701c6" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>AutoactivateSymptoms</name></member>
+      <member refid="class_symptom_manager_1abdb216d01854a3a3d587349db11553a5" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>CleanUpPrimaryQueue</name></member>
+      <member refid="class_symptom_manager_1ae59b592e92a8c0cb1a6c5a79d0043630" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>ComparePriority</name></member>
+      <member refid="class_symptom_manager_1a4aa33aa51843aa3480e56906ac223b92" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>CreateUniqueID</name></member>
+      <member refid="class_symptom_manager_1a13b277d4e7e9fc0d856248f37a553269" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>DecreaseSymptomCount</name></member>
+      <member refid="class_symptom_manager_1aa30b71548276eb18870e01e1a017b4ab" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>FindFirstAvailableSymptomIndex</name></member>
+      <member refid="class_symptom_manager_1a45020ee8b60d451ceb3cb06a3cc25eab" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>GetCurrentCommandID</name></member>
+      <member refid="class_symptom_manager_1a61360399975ca5b6211184d4683895bd" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>GetCurrentPrimaryActiveSymptom</name></member>
+      <member refid="class_symptom_manager_1ad8daca8cf37f0215e732857ae6cb9167" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>GetPlayer</name></member>
+      <member refid="class_symptom_manager_1a3485529e90cb2994e193278f7babe782" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>GetStorageVersion</name></member>
+      <member refid="class_symptom_manager_1ab8a8f23ada6d994ac699fac172bfd881" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>GetSymptomByUID</name></member>
+      <member refid="class_symptom_manager_1a09fb815ca4aa3413ffcc03dd3d9ab290" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>GetSymptomCount</name></member>
+      <member refid="class_symptom_manager_1a29dbc59714e29f48c8db7fd6f7f5bb36" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>GetSymptomMaxCount</name></member>
+      <member refid="class_symptom_manager_1a5184c921851d7a91ae4611f76d1b882c" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>GetSymptomName</name></member>
+      <member refid="class_symptom_manager_1a58b48ccf0015dcf62ce40583914091af" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>GetSymptomPriority</name></member>
+      <member refid="class_symptom_manager_1a7c2c684735278b0b11be3f53c40d3db3" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>IncreaseSymptomCount</name></member>
+      <member refid="class_symptom_manager_1a3c84f5334839f3337be298355eef1e67" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>Init</name></member>
+      <member refid="class_symptom_manager_1a46361c52a3dd10ea748d28da1a9acdff" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>IsSymptomPrimary</name></member>
+      <member refid="class_symptom_manager_1a1ba2a2cf8ac87dd74510a3dc860db27e" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>IsUIDUsed</name></member>
+      <member refid="class_symptom_manager_1a815a9b88560133b91d69b9f0bea66816" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>m_ActiveSymptomIndexPrimary</name></member>
+      <member refid="class_symptom_manager_1a349539793430c3f9eec64b99c544ff7f" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>m_ActiveSymptomTypes</name></member>
+      <member refid="class_symptom_manager_1a33b0b6d0984f2aed003b29a09687d506" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>m_AnimMeta</name></member>
+      <member refid="class_symptom_manager_1a5ff59bd92bdb64f5ce0d8d9238ef08b7" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>m_AvailableSymptoms</name></member>
+      <member refid="class_symptom_manager_1a7e3e8fbe256bd263f71cc9d77b3bf9f0" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>m_CurrentCommandID</name></member>
+      <member refid="class_symptom_manager_1a1c4193499b764b96ca6e5229ec2a8271" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>m_Player</name></member>
+      <member refid="class_symptom_manager_1aeb837ab23cbf4b94c3f193d1e3fdb2dc" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>m_ShowDebug</name></member>
+      <member refid="class_symptom_manager_1a1c312ca0a021cf9fb346318d7e586e8d" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>m_ShowDebug2</name></member>
+      <member refid="class_symptom_manager_1a87e89a8c22b7325b398a5e7c4900daf1" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>m_SymptomQueuePrimary</name></member>
+      <member refid="class_symptom_manager_1a7b9378f066a5485081dcc470a546cf46" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>m_SymptomQueueSecondary</name></member>
+      <member refid="class_symptom_manager_1a4e637a31329b11be2a6f9492d150bc56" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>m_SymptomQueueServerDbg</name></member>
+      <member refid="class_symptom_manager_1a5f989ac85f36f1ac550d56a2aa060437" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>m_SymptomQueueServerDbgPrimary</name></member>
+      <member refid="class_symptom_manager_1a8ad77014d54d00ee3dbe49b78c30a6fd" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>m_SymptomQueueServerDbgSecondary</name></member>
+      <member refid="class_symptom_manager_1aec560b91d1ccd95f38bdd419d3cd601a" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>m_SymptomsUIDs</name></member>
+      <member refid="class_symptom_manager_1afb3d8b82e90082b53a3c7aa594cb06ca" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>m_Timer</name></member>
+      <member refid="class_symptom_manager_1a88e060325a150d13c29278600c35a946" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>OnAnimationFinished</name></member>
+      <member refid="class_symptom_manager_1ac62bbbcb2910118426c410f487f0d263" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>OnAnimationStarted</name></member>
+      <member refid="class_symptom_manager_1a1a4cce2aba03d08040173e7f0705a1e7" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>OnInputUserDataReceived</name></member>
+      <member refid="class_symptom_manager_1a2e1515220fe571de829ccf4c92e1a0e0" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>OnPlayerKilled</name></member>
+      <member refid="class_symptom_manager_1aa4ecb3d55ce9b1cdade0dc0c44ecd8a3" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>OnRPC</name></member>
+      <member refid="class_symptom_manager_1a689a402b5b1d38885cd6e24eee4695fb" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>OnStoreLoad</name></member>
+      <member refid="class_symptom_manager_1a34638af7d0daac19118e5b1844514aba" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>OnStoreSave</name></member>
+      <member refid="class_symptom_manager_1a5e5f2e5b80e283c195495175fd31d13a" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>OnSymptomExit</name></member>
+      <member refid="class_symptom_manager_1a6ca3bfb0fb641abde340a474601b560c" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>OnTick</name></member>
+      <member refid="class_symptom_manager_1a78f43bd7298b23c85e296c4e6bcbb049" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>QueueUpPrimarySymptom</name></member>
+      <member refid="class_symptom_manager_1a27b3e46e6b9910a0ffee2904c7b9c33b" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>QueueUpSecondarySymptom</name></member>
+      <member refid="class_symptom_manager_1a6668faa64618850bca56b548e1c86833" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>QueueUpSecondarySymptomEx</name></member>
+      <member refid="class_symptom_manager_1ac1306a13c2d037b99dc82f66a7b139aa" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>RegisterSymptom</name></member>
+      <member refid="class_symptom_manager_1a77477b2fa0b5db1898f985cb6d7ee18c" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>RemoveSecondarySymptom</name></member>
+      <member refid="class_symptom_manager_1ab40e6278b93322cf9b1d2d48eda963e2" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>RequestSymptomExit</name></member>
+      <member refid="class_symptom_manager_1a17541e881a9d3fa9b9aad80fdfce442c" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>SetAnimation</name></member>
+      <member refid="class_symptom_manager_1a8f708b7758605f4d79023f51b614df18" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>SpawnAnimMetaObject</name></member>
+      <member refid="class_symptom_manager_1a97e21133efafe2a5ee6074b3d2bd3b84" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>SpawnSymptom</name></member>
+      <member refid="class_symptom_manager_1a01fc0efd1bf31b8e3dee1aefb8bf056b" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>STORAGE_VERSION</name></member>
+      <member refid="class_symptom_manager_1a95759b2b371250fc0b5520c0d5826d33" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>SymptomManager</name></member>
+      <member refid="class_symptom_manager_1a9fba779652620ccebdff5e3c9205e35c" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>UpdateActiveSymptoms</name></member>
+      <member refid="class_symptom_manager_1a0fffbfadcfe1fd0d4c1ee0dd4ebbdc76" prot="private" virt="non-virtual"><scope>SymptomManager</scope><name>~SymptomManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

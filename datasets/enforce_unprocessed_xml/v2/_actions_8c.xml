@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_actions_8c" kind="file" language="C++">
+    <compoundname>Actions.c</compoundname>
+    <innerclass refid="class_weapon_action_base" prot="public">WeaponActionBase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_weapon_action_base" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_weapon_action_base" kindref="compound">WeaponActionBase</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9" refid="class_weapon_action_base_1a826dbd061f0eaed0c0a32ac95e065078" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_weapon_action_base_1a826dbd061f0eaed0c0a32ac95e065078" kindref="member">Action</ref><sp/>(<ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>e)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>FSM<sp/>Actions<sp/>/////////////////////////////////////////////////////////////////////////////////////////////////////////</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>fire</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">WeaponActionDryFire<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_weapon_action_base" kindref="compound">WeaponActionBase</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16" refid="class_weapon_action_base_1af8732bf0edafb7bac8775b41bec0479a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="class_weapon___base" kindref="compound">Weapon_Base</ref><sp/><ref refid="class_weapon_action_base_1af8732bf0edafb7bac8775b41bec0479a" kindref="member">m_weapon</ref>;</highlight></codeline>
+<codeline lineno="17" refid="class_weapon_action_base_1aa12586262deb890eae0c86a5114b5043" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_weapon_action_base_1aa12586262deb890eae0c86a5114b5043" kindref="member">WeaponActionDryFire</ref><sp/>(<ref refid="class_weapon___base" kindref="compound">Weapon_Base</ref><sp/>w<sp/>=<sp/>NULL)<sp/>{<sp/><ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref><sp/>=<sp/>w;<sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_weapon_action_base_1a9d3c38d51e9e3ed5d5c451b32d34f679" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_weapon_action_base_1a9d3c38d51e9e3ed5d5c451b32d34f679" kindref="member">Action</ref><sp/>(<ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>e)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;[wpnfsm]<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_object" kindref="compound">Object</ref>.GetDebugName(<ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>action=dry<sp/>fire&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mi<sp/>=<sp/><ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>.GetCurrentMuzzle();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>.DryFire(mi);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">WeaponActionDryDryFire<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_weapon_action_base" kindref="compound">WeaponActionBase</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="class_weapon___base" kindref="compound">Weapon_Base</ref><sp/><ref refid="class_weapon_action_base_1af8732bf0edafb7bac8775b41bec0479a" kindref="member">m_weapon</ref>;</highlight></codeline>
+<codeline lineno="29" refid="class_weapon_action_base_1a2375b911bb570d3c88d0ea0269cf45cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_weapon_action_base_1a2375b911bb570d3c88d0ea0269cf45cb" kindref="member">WeaponActionDryDryFire</ref><sp/>(<ref refid="class_weapon___base" kindref="compound">Weapon_Base</ref><sp/>w<sp/>=<sp/>NULL)<sp/>{<sp/><ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref><sp/>=<sp/>w;<sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_weapon_action_base_1a9d3c38d51e9e3ed5d5c451b32d34f679" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_weapon_action_base_1a9d3c38d51e9e3ed5d5c451b32d34f679" kindref="member">Action</ref><sp/>(<ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>e)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;[wpnfsm]<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_object" kindref="compound">Object</ref>.GetDebugName(<ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>action=dry<sp/>dry<sp/>fire&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mi<sp/>=<sp/><ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>.GetCurrentMuzzle();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>.DryDryFire(mi);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/Actions.c"/>
+  </compounddef>
+</doxygen>

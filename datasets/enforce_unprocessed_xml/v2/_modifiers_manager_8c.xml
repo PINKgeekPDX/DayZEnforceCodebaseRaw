@@ -1,0 +1,925 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_modifiers_manager_8c" kind="file" language="C++">
+    <compoundname>ModifiersManager.c</compoundname>
+    <innerclass refid="class_modifier_debug_obj" prot="public">ModifierDebugObj</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0" prot="public" static="no" strong="no">
+        <type></type>
+        <name>eModifierSyncIDs</name>
+        <enumvalue id="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a6bbb69c158b548462efc13f9bd1150eb" prot="public">
+          <name>MODIFIER_SYNC_WOUND_INFECT_1</name>
+          <initializer>= 0x00000001</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a9c029365a847a5717403862f5ed3dd75" prot="public">
+          <name>MODIFIER_SYNC_WOUND_INFECT_2</name>
+          <initializer>= 0x00000002</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0af7d282498d69f6d898c753e23df78482" prot="public">
+          <name>MODIFIER_SYNC_CONTAMINATION</name>
+          <initializer>= 0x00000004</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a41fd66f4372d61238530967c5b08db92" prot="public">
+          <name>MODIFIER_SYNC_CONTAMINATION2</name>
+          <initializer>= 0x00000008</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a855b985ef6b5085dc6154b928446209c" prot="public">
+          <name>MODIFIER_SYNC_ZONE_EXPOSURE</name>
+          <initializer>= 0x00000010</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0ab982a5d307d13ef3721f4030e73d4073" prot="public">
+          <name>MODIFIER_SYNC_DROWNING</name>
+          <initializer>= 0x00000020</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a274bc2cae8152d8b4007c1956a3354be" prot="public">
+          <name>MODIFIER_SYNC_FEVER</name>
+          <initializer>= 0x00000040</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a7264227ff44639b8960da234f6ee7135" prot="public">
+          <name>LAST_INDEX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="2" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="3" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="enum" id="_modifiers_manager_8c_1a91438892389b25e59441949d005ef1a2" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EActivationType</name>
+        <enumvalue id="_modifiers_manager_8c_1a91438892389b25e59441949d005ef1a2a8c1ab9fdf55f86d6cb4c1209e054ebe2" prot="public">
+          <name>TRIGGER_EVENT_OFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_modifiers_manager_8c_1a91438892389b25e59441949d005ef1a2a9fd288cf4c8806ee5d69d643ae576430" prot="public">
+          <name>TRIGGER_EVENT_ON_ACTIVATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_modifiers_manager_8c_1a91438892389b25e59441949d005ef1a2a6121bd9cb33dd766463812f5936c3035" prot="public">
+          <name>TRIGGER_EVENT_ON_CONNECT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="24" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="24" bodyend="29"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_modifiers_manager_8c_1ad7b192f22a83d324fbb2fc7fea14ad09" prot="public" static="no" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int DEFAULT_TICK_TIME_ACTIVE</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_TICK_TIME_ACTIVE</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="31" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_modifiers_manager_8c_1ac5b38c9a7d45b3576a7028958f9abcca" prot="public" static="no" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int DEFAULT_TICK_TIME_ACTIVE_SHORT</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_TICK_TIME_ACTIVE_SHORT</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="32" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_modifiers_manager_8c_1ab41b0cbf9fe485932fbffc19ea426bac" prot="public" static="no" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int DEFAULT_TICK_TIME_INACTIVE</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_TICK_TIME_INACTIVE</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="33" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_modifiers_manager_8c_1af38d7a2ebcfdc86567caa51ca9d70458" prot="public" static="no" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int DEFAULT_TICK_TIME_INACTIVE_LONG</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_TICK_TIME_INACTIVE_LONG</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="34" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_modifiers_manager_8c_1ac86fff4eb453898da6d2396e65aa0670" prot="public" static="no" mutable="no">
+        <type>class <ref refid="class_modifier_debug_obj" kindref="compound">ModifierDebugObj</ref></type>
+        <definition>class ModifierDebugObj m_Player</definition>
+        <argsstring></argsstring>
+        <name>m_Player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="74" column="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" prot="public" static="no" mutable="no">
+        <type>ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, ref <ref refid="class_modifier_base" kindref="compound">ModifierBase</ref> &gt;</type>
+        <definition>ref map&lt;int, ref ModifierBase&gt; m_ModifierList</definition>
+        <argsstring></argsstring>
+        <name>m_ModifierList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="75" column="9" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_modifiers_manager_8c_1ae06e8d93b8034c2d3b6139345d76178b" prot="public" static="no" mutable="no">
+        <type>ref <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_modifier_base" kindref="compound">ModifierBase</ref> &gt;</type>
+        <definition>ref array&lt; ref ModifierBase&gt; m_ModifierListArray</definition>
+        <argsstring></argsstring>
+        <name>m_ModifierListArray</name>
+        <initializer>= new <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_modifier_base" kindref="compound">ModifierBase</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="76" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_modifiers_manager_8c_1acf3cda73bc6fe5c0eae3e01c470fe3bd" prot="public" static="no" mutable="no">
+        <type>ref <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_param" kindref="compound">Param</ref> &gt;</type>
+        <definition>ref array&lt;ref Param&gt; m_ParamList</definition>
+        <argsstring></argsstring>
+        <name>m_ParamList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="77" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_modifiers_manager_8c_1a013e775b9f09d11160663fd33384e26d" prot="public" static="no" mutable="no">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool m_AllowModifierTick</definition>
+        <argsstring></argsstring>
+        <name>m_AllowModifierTick</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="78" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_modifiers_manager_8c_1a25a1f5ed25534a65e875f6fde47a1d13" prot="public" static="no" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int STORAGE_VERSION</definition>
+        <argsstring></argsstring>
+        <name>STORAGE_VERSION</name>
+        <initializer>= 121</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="79" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_modifiers_manager_8c_1ac135bf8a3162a3c2d85fa35fdbff1798" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ModifiersManager</definition>
+        <argsstring>(PlayerBase player)</argsstring>
+        <name>ModifiersManager</name>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="80" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="80" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="_modifiers_manager_8c_1a1e3b6d38df0786ccf7f938d60e386aae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+<para>Launched from &apos;DayZGame.DeferredInit&apos; to make earlier access, use, and updates impossible (downside of a non-static system) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="89" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="89" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="_modifiers_manager_8c_1a017e6dbd2f574154605cf1225a2346ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetModifiers</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>SetModifiers</name>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="148" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="148" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="_modifiers_manager_8c_1a1bf8b2dd2fbfe7e56a7301c85d3ba301" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int GetStorageVersion</definition>
+        <argsstring>()</argsstring>
+        <name>GetStorageVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="170" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="170" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="_modifiers_manager_8c_1a5404989687c2d7857ec77e70ddfeb09b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool IsModifiersEnable</definition>
+        <argsstring>()</argsstring>
+        <name>IsModifiersEnable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="175" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="175" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AddModifier</definition>
+        <argsstring>(ModifierBase modifier)</argsstring>
+        <name>AddModifier</name>
+        <param>
+          <type><ref refid="class_modifier_base" kindref="compound">ModifierBase</ref></type>
+          <declname>modifier</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="180" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="180" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="_modifiers_manager_8c_1ad7f4db664df3e9743e221be021501bc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool IsModifierActive</definition>
+        <argsstring>(eModifiers modifier_id)</argsstring>
+        <name>IsModifierActive</name>
+        <param>
+          <type><ref refid="e_modifiers_8c_1a38544df67f7f5b2fdf488d7705d7a582" kindref="member">eModifiers</ref></type>
+          <declname>modifier_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="195" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="195" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="_modifiers_manager_8c_1ab005f76d2b3219a0dc7bb5f84626cb99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnScheduledTick</definition>
+        <argsstring>(float delta_time)</argsstring>
+        <name>OnScheduledTick</name>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>delta_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="200" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="200" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="_modifiers_manager_8c_1a460dfb1cbcfb5303676f2be4177d7b0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeactivateAllModifiers</definition>
+        <argsstring>()</argsstring>
+        <name>DeactivateAllModifiers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="211" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="211" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="_modifiers_manager_8c_1a7fab632c47c8e18366c98a76669f7755" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ActivateModifier</definition>
+        <argsstring>(int modifier_id, bool triggerEvent=EActivationType.TRIGGER_EVENT_ON_ACTIVATION)</argsstring>
+        <name>ActivateModifier</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>modifier_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>triggerEvent</declname>
+          <defval><ref refid="_modifiers_manager_8c_1a91438892389b25e59441949d005ef1a2a9fd288cf4c8806ee5d69d643ae576430" kindref="member">EActivationType.TRIGGER_EVENT_ON_ACTIVATION</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="219" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="219" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="_modifiers_manager_8c_1a3b34513f708181c290fe5d51e7503a55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeactivateModifier</definition>
+        <argsstring>(int modifier_id, bool triggerEvent=true)</argsstring>
+        <name>DeactivateModifier</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>modifier_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>triggerEvent</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="224" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="224" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="_modifiers_manager_8c_1ad975050d7a080cca462e74c604f404a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnStoreSave</definition>
+        <argsstring>(ParamsWriteContext ctx)</argsstring>
+        <name>OnStoreSave</name>
+        <param>
+          <type><ref refid="gameplay_8c_1af1d1033fca2ebd02f4ba61051b6341c4" kindref="member">ParamsWriteContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="229" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="229" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="_modifiers_manager_8c_1ab8fb9b4105d97f4c7ba4bdd84d6c7de9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool OnStoreLoad</definition>
+        <argsstring>(ParamsReadContext ctx, int version)</argsstring>
+        <name>OnStoreLoad</name>
+        <param>
+          <type><ref refid="gameplay_8c_1a4ff67286551fc6c18504752a277c8bc1" kindref="member">ParamsReadContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="270" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="270" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="_modifiers_manager_8c_1a3bcb07a0b1090f652f92f928e7a221f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_modifier_base" kindref="compound">ModifierBase</ref></type>
+        <definition>ModifierBase GetModifier</definition>
+        <argsstring>(int modifier_id)</argsstring>
+        <name>GetModifier</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>modifier_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="312" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="312" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="_modifiers_manager_8c_1aaf6ee4d1f067be1038b7a662af6af1bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+        <definition>PlayerBase GetPlayer</definition>
+        <argsstring>()</argsstring>
+        <name>GetPlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="317" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="317" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="_modifiers_manager_8c_1ace1390f9fbca9fe44c2fdd0ab58441be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetModifierLock</definition>
+        <argsstring>(int modifier_id, bool state)</argsstring>
+        <name>SetModifierLock</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>modifier_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="322" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="322" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="_modifiers_manager_8c_1aa932baff2a2c61f8eff890bf464ea54d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool GetModifierLock</definition>
+        <argsstring>(int modifier_id)</argsstring>
+        <name>GetModifierLock</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>modifier_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="328" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="328" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="_modifiers_manager_8c_1a9b86f213498df61b4abc498f56d191fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbgGetModifiers</definition>
+        <argsstring>(array&lt; ref ModifierDebugObj &gt; modifiers)</argsstring>
+        <name>DbgGetModifiers</name>
+        <param>
+          <type><ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_modifier_debug_obj" kindref="compound">ModifierDebugObj</ref> &gt;</type>
+          <declname>modifiers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" line="333" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c" bodystart="333" bodyend="356"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//max<sp/>32<sp/>synced<sp/>modifiers<sp/>supported</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0" kindref="member">eModifierSyncIDs</ref><sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a6bbb69c158b548462efc13f9bd1150eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a6bbb69c158b548462efc13f9bd1150eb" kindref="member">MODIFIER_SYNC_WOUND_INFECT_1</ref><sp/><sp/><sp/><sp/>=<sp/>0x00000001,</highlight></codeline>
+<codeline lineno="6" refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a9c029365a847a5717403862f5ed3dd75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a9c029365a847a5717403862f5ed3dd75" kindref="member">MODIFIER_SYNC_WOUND_INFECT_2</ref><sp/><sp/><sp/><sp/>=<sp/>0x00000002,</highlight></codeline>
+<codeline lineno="7" refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0af7d282498d69f6d898c753e23df78482" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0af7d282498d69f6d898c753e23df78482" kindref="member">MODIFIER_SYNC_CONTAMINATION</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000004,</highlight><highlight class="comment">//stage1<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a41fd66f4372d61238530967c5b08db92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a41fd66f4372d61238530967c5b08db92" kindref="member">MODIFIER_SYNC_CONTAMINATION2</ref><sp/><sp/><sp/><sp/>=<sp/>0x00000008,</highlight><highlight class="comment">//stage2<sp/>and<sp/>stage3<sp/>share<sp/>the<sp/>same<sp/>sync<sp/>id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a855b985ef6b5085dc6154b928446209c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a855b985ef6b5085dc6154b928446209c" kindref="member">MODIFIER_SYNC_ZONE_EXPOSURE</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000010,</highlight></codeline>
+<codeline lineno="10" refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0ab982a5d307d13ef3721f4030e73d4073" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0ab982a5d307d13ef3721f4030e73d4073" kindref="member">MODIFIER_SYNC_DROWNING</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000020,</highlight></codeline>
+<codeline lineno="11" refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a274bc2cae8152d8b4007c1956a3354be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a274bc2cae8152d8b4007c1956a3354be" kindref="member">MODIFIER_SYNC_FEVER</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0x00000040,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//0x00000080,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//0x00000100,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//0x00000200,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//0x00000400,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//0x00000800,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//0x00001000,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a7264227ff44639b8960da234f6ee7135" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1a5c1716899a303fbac8533337fbc6ceb0a7264227ff44639b8960da234f6ee7135" kindref="member">LAST_INDEX</ref>,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="_modifiers_manager_8c_1a91438892389b25e59441949d005ef1a2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1a91438892389b25e59441949d005ef1a2" kindref="member">EActivationType</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="_modifiers_manager_8c_1a91438892389b25e59441949d005ef1a2a8c1ab9fdf55f86d6cb4c1209e054ebe2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1a91438892389b25e59441949d005ef1a2a8c1ab9fdf55f86d6cb4c1209e054ebe2" kindref="member">TRIGGER_EVENT_OFF</ref>,</highlight></codeline>
+<codeline lineno="27" refid="_modifiers_manager_8c_1a91438892389b25e59441949d005ef1a2a9fd288cf4c8806ee5d69d643ae576430" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1a91438892389b25e59441949d005ef1a2a9fd288cf4c8806ee5d69d643ae576430" kindref="member">TRIGGER_EVENT_ON_ACTIVATION</ref>,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1a91438892389b25e59441949d005ef1a2a6121bd9cb33dd766463812f5936c3035" kindref="member">TRIGGER_EVENT_ON_CONNECT</ref></highlight></codeline>
+<codeline lineno="29" refid="_modifiers_manager_8c_1a91438892389b25e59441949d005ef1a2a6121bd9cb33dd766463812f5936c3035" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="_modifiers_manager_8c_1ad7b192f22a83d324fbb2fc7fea14ad09" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1ad7b192f22a83d324fbb2fc7fea14ad09" kindref="member">DEFAULT_TICK_TIME_ACTIVE</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="32" refid="_modifiers_manager_8c_1ac5b38c9a7d45b3576a7028958f9abcca" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1ac5b38c9a7d45b3576a7028958f9abcca" kindref="member">DEFAULT_TICK_TIME_ACTIVE_SHORT</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="33" refid="_modifiers_manager_8c_1ab41b0cbf9fe485932fbffc19ea426bac" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1ab41b0cbf9fe485932fbffc19ea426bac" kindref="member">DEFAULT_TICK_TIME_INACTIVE</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="34" refid="_modifiers_manager_8c_1af38d7a2ebcfdc86567caa51ca9d70458" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1af38d7a2ebcfdc86567caa51ca9d70458" kindref="member">DEFAULT_TICK_TIME_INACTIVE_LONG</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_modifier_debug_obj" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_modifier_debug_obj" kindref="compound">ModifierDebugObj</ref></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38" refid="class_modifier_debug_obj_1a95a981d7c3232c9e965716229268a3c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><sp/><ref refid="class_modifier_debug_obj_1a95a981d7c3232c9e965716229268a3c4" kindref="member">m_Name</ref>;</highlight></codeline>
+<codeline lineno="39" refid="class_modifier_debug_obj_1aad8f05dbd47f8b959b2a6cb693a6b04a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_modifier_debug_obj_1aad8f05dbd47f8b959b2a6cb693a6b04a" kindref="member">m_ID</ref>;</highlight></codeline>
+<codeline lineno="40" refid="class_modifier_debug_obj_1af6ac3c1d0522d7bd51239de70199dc36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_modifier_debug_obj_1af6ac3c1d0522d7bd51239de70199dc36" kindref="member">m_IsActive</ref>;</highlight></codeline>
+<codeline lineno="41" refid="class_modifier_debug_obj_1a19d82b20973b9a6e5247d2b1f9ba11dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_modifier_debug_obj_1a19d82b20973b9a6e5247d2b1f9ba11dd" kindref="member">m_IsLocked</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="class_modifier_debug_obj_1a6bad50bab2b7f19f4ec74a5435a39c29" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_modifier_debug_obj_1a6bad50bab2b7f19f4ec74a5435a39c29" kindref="member">ModifierDebugObj</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_plugin_day_z_infected_debug_8c_1a8ccf841cb59e451791bcb2e1ac4f1edc" kindref="member">name</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>active,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>locked)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_modifier_debug_obj_1a95a981d7c3232c9e965716229268a3c4" kindref="member">m_Name</ref><sp/>=<sp/><ref refid="_plugin_day_z_infected_debug_8c_1a8ccf841cb59e451791bcb2e1ac4f1edc" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_modifier_debug_obj_1aad8f05dbd47f8b959b2a6cb693a6b04a" kindref="member">m_ID</ref><sp/>=<sp/>id;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_modifier_debug_obj_1af6ac3c1d0522d7bd51239de70199dc36" kindref="member">m_IsActive</ref><sp/>=<sp/>active;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_modifier_debug_obj_1a19d82b20973b9a6e5247d2b1f9ba11dd" kindref="member">m_IsLocked</ref><sp/>=<sp/>locked;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="class_modifier_debug_obj_1a789804ab524396b6cbc1730096cf5306" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_modifier_debug_obj_1a789804ab524396b6cbc1730096cf5306" kindref="member">GetName</ref>()</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_modifier_debug_obj_1a95a981d7c3232c9e965716229268a3c4" kindref="member">m_Name</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="class_modifier_debug_obj_1a95364b20f4b7eec6ab3945020a8c8694" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_modifier_debug_obj_1a95364b20f4b7eec6ab3945020a8c8694" kindref="member">GetID</ref>()</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_modifier_debug_obj_1aad8f05dbd47f8b959b2a6cb693a6b04a" kindref="member">m_ID</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="class_modifier_debug_obj_1afce64a49c9ecbbcfb489fa2f6613fe02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_modifier_debug_obj_1afce64a49c9ecbbcfb489fa2f6613fe02" kindref="member">IsActive</ref>()</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_modifier_debug_obj_1af6ac3c1d0522d7bd51239de70199dc36" kindref="member">m_IsActive</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="class_modifier_debug_obj_1ad90fe4165558cf37f145e97b0c002cac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_modifier_debug_obj_1ad90fe4165558cf37f145e97b0c002cac" kindref="member">IsLocked</ref>()</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_modifier_debug_obj_1a19d82b20973b9a6e5247d2b1f9ba11dd" kindref="member">m_IsLocked</ref>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_modifiers_manager_8c_1ac135bf8a3162a3c2d85fa35fdbff1798" kindref="member">ModifiersManager</ref></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74" refid="_modifiers_manager_8c_1ac86fff4eb453898da6d2396e65aa0670" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>;</highlight></codeline>
+<codeline lineno="75" refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map&lt;int, ref ModifierBase&gt;</ref><sp/><ref refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" kindref="member">m_ModifierList</ref>;</highlight></codeline>
+<codeline lineno="76" refid="_modifiers_manager_8c_1ae06e8d93b8034c2d3b6139345d76178b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="classarray" kindref="compound">array&lt; ref ModifierBase&gt;</ref><sp/><ref refid="_modifiers_manager_8c_1ae06e8d93b8034c2d3b6139345d76178b" kindref="member">m_ModifierListArray</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt; ref ModifierBase&gt;</ref>;</highlight></codeline>
+<codeline lineno="77" refid="_modifiers_manager_8c_1acf3cda73bc6fe5c0eae3e01c470fe3bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="classarray" kindref="compound">array&lt;ref Param&gt;</ref><sp/><ref refid="_modifiers_manager_8c_1acf3cda73bc6fe5c0eae3e01c470fe3bd" kindref="member">m_ParamList</ref>;</highlight></codeline>
+<codeline lineno="78" refid="_modifiers_manager_8c_1a013e775b9f09d11160663fd33384e26d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1a013e775b9f09d11160663fd33384e26d" kindref="member">m_AllowModifierTick</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79" refid="_modifiers_manager_8c_1a25a1f5ed25534a65e875f6fde47a1d13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1a25a1f5ed25534a65e875f6fde47a1d13" kindref="member">STORAGE_VERSION</ref><sp/>=<sp/>121;</highlight></codeline>
+<codeline lineno="80" refid="_modifiers_manager_8c_1ac135bf8a3162a3c2d85fa35fdbff1798" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1ac135bf8a3162a3c2d85fa35fdbff1798" kindref="member">ModifiersManager</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" kindref="member">m_ModifierList</ref><sp/><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map&lt;int, ref ModifierBase&gt;</ref>;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1acf3cda73bc6fe5c0eae3e01c470fe3bd" kindref="member">m_ParamList</ref><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ref Param&gt;</ref>;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>player;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_game_8c_1a8045e088b31fe0754fb20cb0a5ff0dc9" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="_modifiers_manager_8c_1a1e3b6d38df0786ccf7f938d60e386aae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_day_z_game_8c_1a8045e088b31fe0754fb20cb0a5ff0dc9" kindref="member">Init</ref>()</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>DEVELOPER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_test_disease_mdfr" kindref="compound">TestDiseaseMdfr</ref>);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_blood_regen_mdfr" kindref="compound">BloodRegenMdfr</ref>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//AddModifier(new<sp/>BoneRegen);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//AddModifier(new<sp/>Health);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_saline_mdfr" kindref="compound">SalineMdfr</ref>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_health_regen_mdfr" kindref="compound">HealthRegenMdfr</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_hunger_mdfr" kindref="compound">HungerMdfr</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//AddModifier(new<sp/>Shock);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_immune_system_mdfr" kindref="compound">ImmuneSystemMdfr</ref>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_stomach_mdfr" kindref="compound">StomachMdfr</ref>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_heat_comfort_mdfr" kindref="compound">HeatComfortMdfr</ref>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_thirst_mdfr" kindref="compound">ThirstMdfr</ref>);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_bleeding_check_mdfr" kindref="compound">BleedingCheckMdfr</ref>);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//AddModifier(new<sp/>Blinded);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//AddModifier(new<sp/>BrokenArms);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_broken_legs_mdfr" kindref="compound">BrokenLegsMdfr</ref>);<sp/></highlight><highlight class="comment">//<sp/>&lt;--<sp/>Broken<sp/>legs<sp/>are<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_vomit_stuffed_mdfr" kindref="compound">VomitStuffedMdfr</ref>);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_burning_mdfr" kindref="compound">BurningMdfr</ref>);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_fever_mdfr" kindref="compound">FeverMdfr</ref>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_heart_attack_mdfr" kindref="compound">HeartAttackMdfr</ref>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_hemolytic_reaction_mdfr" kindref="compound">HemolyticReactionMdfr</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_poisoning_mdfr" kindref="compound">PoisoningMdfr</ref>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_stuffed_stomach_mdfr" kindref="compound">StuffedStomachMdfr</ref>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//AddModifier(new<sp/>Tremor);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_unconsciousness_mdfr" kindref="compound">UnconsciousnessMdfr</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_shock_damage_mdfr" kindref="compound">ShockDamageMdfr</ref>);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_common_cold_mdfr" kindref="compound">CommonColdMdfr</ref>);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_cholera_mdfr" kindref="compound">CholeraMdfr</ref>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_influenza_mdfr" kindref="compound">InfluenzaMdfr</ref>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_salmonella_mdfr" kindref="compound">SalmonellaMdfr</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_brain_disease_mdfr" kindref="compound">BrainDiseaseMdfr</ref>);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_wet_mdfr" kindref="compound">WetMdfr</ref>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_immunity_boost" kindref="compound">ImmunityBoost</ref>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_antibiotics_mdfr" kindref="compound">AntibioticsMdfr</ref>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_toxicity_mdfr" kindref="compound">ToxicityMdfr</ref>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>BreathVapourMdfr);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_shock_mdfr" kindref="compound">ShockMdfr</ref>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_wound_infect_stage1_mdfr" kindref="compound">WoundInfectStage1Mdfr</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_wound_infect_stage2_mdfr" kindref="compound">WoundInfectStage2Mdfr</ref>);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_charcoal_mdfr" kindref="compound">CharcoalMdfr</ref>);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_morphine_mdfr" kindref="compound">MorphineMdfr</ref>);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_pain_killers_mdfr" kindref="compound">PainKillersMdfr</ref>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_epinephrine_mdfr" kindref="compound">EpinephrineMdfr</ref>);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_heat_buffer_mdfr" kindref="compound">HeatBufferMdfr</ref>);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_disinfection_mdfr" kindref="compound">DisinfectionMdfr</ref>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_fatigue_mdfr" kindref="compound">FatigueMdfr</ref>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_contamination_stage1_mdfr" kindref="compound">ContaminationStage1Mdfr</ref>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_contamination_stage2_mdfr" kindref="compound">ContaminationStage2Mdfr</ref>);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_contamination_stage3_mdfr" kindref="compound">ContaminationStage3Mdfr</ref>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_area_exposure_mdfr" kindref="compound">AreaExposureMdfr</ref>);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_mask_mdfr" kindref="compound">MaskMdfr</ref>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_flies_mdfr" kindref="compound">FliesMdfr</ref>);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_drowning_mdfr" kindref="compound">DrowningMdfr</ref>);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="_modifiers_manager_8c_1a017e6dbd2f574154605cf1225a2346ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_hud_debug_win_char_modifiers_8c_1a99fc4710840475be3b3590716d9322ed" kindref="member">SetModifiers</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_modifiers_manager_8c_1a013e775b9f09d11160663fd33384e26d" kindref="member">m_AllowModifierTick</ref><sp/>==<sp/>enable)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1a013e775b9f09d11160663fd33384e26d" kindref="member">m_AllowModifierTick</ref><sp/>=<sp/>enable;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>DIAG_DEVELOPER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifndef<sp/>SERVER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_diag_menu" kindref="compound">DiagMenu</ref>.<ref refid="group___diag_menu_1ga3338f89d22d3f3d5839afcdf1cf75443" kindref="member">SetValue</ref>(<ref refid="_e_diag_menu_i_ds_8c_1a85affb4d5021d4465be4205f8cd4e336" kindref="member">DiagMenuIDs</ref>.CHEATS_MODIFIERS,<sp/>enable);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!enable<sp/>)</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" kindref="member">m_ModifierList</ref>.Count();<sp/>i++)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" kindref="member">m_ModifierList</ref>.GetElement(i).ResetLastTickTime();</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="_modifiers_manager_8c_1a1bf8b2dd2fbfe7e56a7301c85d3ba301" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1a1bf8b2dd2fbfe7e56a7301c85d3ba301" kindref="member">GetStorageVersion</ref>()</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1a25a1f5ed25534a65e875f6fde47a1d13" kindref="member">STORAGE_VERSION</ref>;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="175" refid="_modifiers_manager_8c_1a5404989687c2d7857ec77e70ddfeb09b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1a5404989687c2d7857ec77e70ddfeb09b" kindref="member">IsModifiersEnable</ref>()</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1a013e775b9f09d11160663fd33384e26d" kindref="member">m_AllowModifierTick</ref>;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180" refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1ac8e46fec1ff64a9087ab456fe31ad660" kindref="member">AddModifier</ref>(<ref refid="class_modifier_base" kindref="compound">ModifierBase</ref><sp/>modifier)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>modifier.InitBase(<ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>,</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>modifier.GetModifierID();</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>&lt;<sp/>1)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1ga786b160dafbe15abb829786ba345cb15" kindref="member">Error</ref>(</highlight><highlight class="stringliteral">&quot;modifiers<sp/>ID<sp/>must<sp/>be<sp/>1<sp/>or<sp/>higher(for<sp/>debugging<sp/>reasons)&quot;</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>add<sp/>a<sp/>check<sp/>for<sp/>duplicity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" kindref="member">m_ModifierList</ref>.Insert(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>modifier);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ae06e8d93b8034c2d3b6139345d76178b" kindref="member">m_ModifierListArray</ref>.Insert(modifier);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="195" refid="_modifiers_manager_8c_1ad7f4db664df3e9743e221be021501bc3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="human_8c_1a1be6c7d1ba7c0082bfebaca4a21aa02f" kindref="member">IsModifierActive</ref>(<ref refid="e_modifiers_8c_1a38544df67f7f5b2fdf488d7705d7a582" kindref="member">eModifiers</ref><sp/>modifier_id)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" kindref="member">m_ModifierList</ref>.Get(modifier_id).IsActive();</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="_modifiers_manager_8c_1ab005f76d2b3219a0dc7bb5f84626cb99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_notifiers_manager_8c_1a46c3c8f3ace386a738439fd82902d04c" kindref="member">OnScheduledTick</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>delta_time)</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="_modifiers_manager_8c_1a013e775b9f09d11160663fd33384e26d" kindref="member">m_AllowModifierTick</ref>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal">(<ref refid="class_modifier_base" kindref="compound">ModifierBase</ref><sp/>m:<sp/><ref refid="_modifiers_manager_8c_1ae06e8d93b8034c2d3b6139345d76178b" kindref="member">m_ModifierListArray</ref>)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m.Tick(delta_time);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="211" refid="_modifiers_manager_8c_1a460dfb1cbcfb5303676f2be4177d7b0a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1a460dfb1cbcfb5303676f2be4177d7b0a" kindref="member">DeactivateAllModifiers</ref>()</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" kindref="member">m_ModifierList</ref>.Count();<sp/>i++)</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" kindref="member">m_ModifierList</ref>.GetElement(i).Deactivate();</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="219" refid="_modifiers_manager_8c_1a7fab632c47c8e18366c98a76669f7755" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1a7fab632c47c8e18366c98a76669f7755" kindref="member">ActivateModifier</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>modifier_id,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>triggerEvent<sp/>=<sp/><ref refid="_modifiers_manager_8c_1a91438892389b25e59441949d005ef1a2" kindref="member">EActivationType</ref>.TRIGGER_EVENT_ON_ACTIVATION)</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" kindref="member">m_ModifierList</ref>.Get(modifier_id).ActivateRequest(triggerEvent);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="_modifiers_manager_8c_1a3b34513f708181c290fe5d51e7503a55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1a3b34513f708181c290fe5d51e7503a55" kindref="member">DeactivateModifier</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>modifier_id,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>triggerEvent<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" kindref="member">m_ModifierList</ref>.Get(modifier_id).Deactivate(triggerEvent);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="229" refid="_modifiers_manager_8c_1ad975050d7a080cca462e74c604f404a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_modifier_base_8c_1ad975050d7a080cca462e74c604f404a2" kindref="member">OnStoreSave</ref>(<sp/><ref refid="class_serializer" kindref="compound">ParamsWriteContext</ref><sp/>ctx<sp/>)</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_cached_objects_arrays" kindref="compound">CachedObjectsArrays</ref>.<ref refid="class_cached_objects_arrays_1a814146c00e27ef7f4293303057d1e671" kindref="member">ARRAY_INT</ref>.Clear();</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>modifier_count;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_icon_8c_1a2970c38de5fbde060cc7a0ed546e674f" kindref="member">x</ref><sp/>=<sp/>0;<sp/><ref refid="_icon_8c_1a2970c38de5fbde060cc7a0ed546e674f" kindref="member">x</ref><sp/>&lt;<sp/><ref refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" kindref="member">m_ModifierList</ref>.Count();<sp/><ref refid="_icon_8c_1a2970c38de5fbde060cc7a0ed546e674f" kindref="member">x</ref>++)</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_modifier_base" kindref="compound">ModifierBase</ref><sp/>mdfr<sp/>=<sp/><ref refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" kindref="member">m_ModifierList</ref>.GetElement(<ref refid="_icon_8c_1a2970c38de5fbde060cc7a0ed546e674f" kindref="member">x</ref>);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>mdfr.IsActive()<sp/>&amp;&amp;<sp/>mdfr.IsPersistent()<sp/>)<sp/></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>modifier_count++;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//save<sp/>the<sp/>modifier<sp/>id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_cached_objects_arrays" kindref="compound">CachedObjectsArrays</ref>.<ref refid="class_cached_objects_arrays_1a814146c00e27ef7f4293303057d1e671" kindref="member">ARRAY_INT</ref>.Insert(<sp/>mdfr.GetModifierID()<sp/>);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>mdfr.IsTrackAttachedTime()<sp/>)</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//save<sp/>the<sp/>overall<sp/>attached<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_cached_objects_arrays" kindref="compound">CachedObjectsArrays</ref>.<ref refid="class_cached_objects_arrays_1a814146c00e27ef7f4293303057d1e671" kindref="member">ARRAY_INT</ref>.Insert(<sp/>mdfr.GetAttachedTime()<sp/>);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//write<sp/>the<sp/>count</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//CachedObjectsParams.PARAM1_INT.param1<sp/>=<sp/>modifier_count;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//PrintString(&quot;Saving<sp/>modifiers<sp/>count:<sp/>&quot;+<sp/>modifier_count);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx.<ref refid="class_serializer_1a3568bd9439217225013ea9906eb09a3f" kindref="member">Write</ref>(modifier_count);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//write<sp/>the<sp/>individual<sp/>modifiers<sp/>and<sp/>respective<sp/>attached<sp/>times</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_cached_objects_arrays" kindref="compound">CachedObjectsArrays</ref>.<ref refid="class_cached_objects_arrays_1a814146c00e27ef7f4293303057d1e671" kindref="member">ARRAY_INT</ref>.Count();<sp/>i++)</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>item<sp/>=<sp/><ref refid="class_cached_objects_arrays" kindref="compound">CachedObjectsArrays</ref>.<ref refid="class_cached_objects_arrays_1a814146c00e27ef7f4293303057d1e671" kindref="member">ARRAY_INT</ref>.Get(i);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//PrintString(<sp/>&quot;saving<sp/>item:<sp/>&quot;+item<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx.<ref refid="class_serializer_1a3568bd9439217225013ea9906eb09a3f" kindref="member">Write</ref>(item);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>z<sp/>=<sp/>0;<sp/>z<sp/>&lt;<sp/><ref refid="_modifiers_manager_8c_1acf3cda73bc6fe5c0eae3e01c470fe3bd" kindref="member">m_ParamList</ref>.Count();<sp/>z++)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1acf3cda73bc6fe5c0eae3e01c470fe3bd" kindref="member">m_ParamList</ref>.Get(z).Serialize(ctx);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270" refid="_modifiers_manager_8c_1ab8fb9b4105d97f4c7ba4bdd84d6c7de9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1ab8fb9b4105d97f4c7ba4bdd84d6c7de9" kindref="member">OnStoreLoad</ref>(<sp/><ref refid="class_serializer" kindref="compound">ParamsReadContext</ref><sp/>ctx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>version<sp/>)</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>modifier_count;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!ctx.<ref refid="class_serializer_1a9a38a9c5322133ee30fe87a3a4c0659e" kindref="member">Read</ref>(modifier_count))</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//PrintString(&quot;Loading<sp/>modifiers<sp/>count:<sp/>&quot;+<sp/>modifier_count);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>modifier_count;<sp/>i++)</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>modifier_id;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!ctx.<ref refid="class_serializer_1a9a38a9c5322133ee30fe87a3a4c0659e" kindref="member">Read</ref>(modifier_id))</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//PrintString(<sp/>&quot;loading<sp/>item:<sp/>&quot;+modifier_id<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//int<sp/>modifier_id<sp/>=<sp/>CachedObjectsParams.PARAM1_INT.param1;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_modifier_base" kindref="compound">ModifierBase</ref><sp/>modifier<sp/>=<sp/><ref refid="_modifiers_manager_8c_1a3bcb07a0b1090f652f92f928e7a221f5" kindref="member">GetModifier</ref>(modifier_id);</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>modifier<sp/>)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>modifier.IsTrackAttachedTime()<sp/>)</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>time;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!ctx.<ref refid="class_serializer_1a9a38a9c5322133ee30fe87a3a4c0659e" kindref="member">Read</ref>(time))</highlight><highlight class="comment">//get<sp/>the<sp/>attached<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>modifier.SetAttachedTime(<sp/>time<sp/>);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1a7fab632c47c8e18366c98a76669f7755" kindref="member">ActivateModifier</ref>(modifier_id,<sp/><ref refid="_modifiers_manager_8c_1a91438892389b25e59441949d005ef1a2" kindref="member">EActivationType</ref>.TRIGGER_EVENT_ON_CONNECT);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_debug" kindref="compound">Debug</ref>.<ref refid="class_debug_1a87dcfbb1acc79bc63ccc7af1476c913d" kindref="member">LogError</ref>(</highlight><highlight class="stringliteral">&quot;DB<sp/>loading:<sp/>non-existent<sp/>modifier<sp/>with<sp/>id:&quot;</highlight><highlight class="normal">+modifier_id.ToString());</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_icon_8c_1a2970c38de5fbde060cc7a0ed546e674f" kindref="member">x</ref><sp/>=<sp/>0;<sp/><ref refid="_icon_8c_1a2970c38de5fbde060cc7a0ed546e674f" kindref="member">x</ref><sp/>&lt;<sp/><ref refid="_modifiers_manager_8c_1acf3cda73bc6fe5c0eae3e01c470fe3bd" kindref="member">m_ParamList</ref>.Count();<sp/><ref refid="_icon_8c_1a2970c38de5fbde060cc7a0ed546e674f" kindref="member">x</ref>++)</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="_modifiers_manager_8c_1acf3cda73bc6fe5c0eae3e01c470fe3bd" kindref="member">m_ParamList</ref>.Get(<ref refid="_icon_8c_1a2970c38de5fbde060cc7a0ed546e674f" kindref="member">x</ref>).Deserializer(ctx))</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312" refid="_modifiers_manager_8c_1a3bcb07a0b1090f652f92f928e7a221f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_modifier_base" kindref="compound">ModifierBase</ref><sp/><ref refid="_modifiers_manager_8c_1a3bcb07a0b1090f652f92f928e7a221f5" kindref="member">GetModifier</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>modifier_id)</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" kindref="member">m_ModifierList</ref>.Get(modifier_id);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="317" refid="_modifiers_manager_8c_1aaf6ee4d1f067be1038b7a662af6af1bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/><ref refid="_modifier_base_8c_1aaf6ee4d1f067be1038b7a662af6af1bf" kindref="member">GetPlayer</ref>()</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322" refid="_modifiers_manager_8c_1ace1390f9fbca9fe44c2fdd0ab58441be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1ace1390f9fbca9fe44c2fdd0ab58441be" kindref="member">SetModifierLock</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>modifier_id,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>state)</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" kindref="member">m_ModifierList</ref>.Get(modifier_id).SetLock(state);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328" refid="_modifiers_manager_8c_1aa932baff2a2c61f8eff890bf464ea54d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1aa932baff2a2c61f8eff890bf464ea54d" kindref="member">GetModifierLock</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>modifier_id)</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" kindref="member">m_ModifierList</ref>.Get(modifier_id).IsLocked();</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333" refid="_modifiers_manager_8c_1a9b86f213498df61b4abc498f56d191fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1a9b86f213498df61b4abc498f56d191fd" kindref="member">DbgGetModifiers</ref>(<ref refid="classarray" kindref="compound">array&lt;ref ModifierDebugObj&gt;</ref><sp/>modifiers)</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>modifiers.Clear();</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;i<sp/>&lt;<sp/><ref refid="e_modifiers_8c_1a38544df67f7f5b2fdf488d7705d7a582" kindref="member">eModifiers</ref>.COUNT;<sp/>i++)</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" kindref="member">m_ModifierList</ref>.Contains(i))</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_modifier_base" kindref="compound">ModifierBase</ref><sp/>modifier<sp/>=<sp/><ref refid="_modifiers_manager_8c_1ad30167207c5f49bc30d8149cf0bc1835" kindref="member">m_ModifierList</ref>.Get(i);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>modifier_id<sp/>=<sp/>modifier.GetModifierID();</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>modifier_name<sp/>=<sp/>modifier.GetName();</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>active<sp/>=<sp/>modifier.IsActive();</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>debug_text<sp/>=<sp/>modifier.<ref refid="class_modifier_base_1a5dfa9cf87c973eff8151d41f064d22e4" kindref="member">GetDebugTextSimple</ref>();</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_locked<sp/>=<sp/>modifier.IsLocked();</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(active<sp/>&amp;&amp;<sp/>debug_text<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>modifier_name<sp/>+=</highlight><highlight class="stringliteral">&quot;<sp/>|<sp/>&quot;</highlight><highlight class="normal">+debug_text;<sp/></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_modifier_debug_obj" kindref="compound">ModifierDebugObj</ref><sp/>obj<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_modifier_debug_obj" kindref="compound">ModifierDebugObj</ref>(modifier_id,<sp/>modifier_name,<sp/>active,<sp/>is_locked);</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>modifiers.Insert(<sp/>obj<sp/>);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="357"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/ModifiersManager.c"/>
+  </compounddef>
+</doxygen>

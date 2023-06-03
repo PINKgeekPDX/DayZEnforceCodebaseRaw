@@ -1,0 +1,538 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_weapon_stable_state_8c" kind="file" language="C++">
+    <compoundname>WeaponStableState.c</compoundname>
+      <sectiondef kind="user-defined">
+      <header>Weapon state properties</header>
+      <description><para>Properties defining the state in several properties for other systems Override these to set them up</para>
+<para>Several systems depends on this: WeaponFSM.RandomizeFSMState, which picks out a suitable FSM state when attaching magazine through CE WeaponFSM.ValidateAndRepair, which will attempt to identify a desync and repair the FSM state if so</para>
+<para>@WARNING So it is important to set these up correctly to prevent any desync of weapon FSM and actual wepon state </para>
+</description>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1a1ad4854e0ffb19d0fb1ef1c0a2f02022" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool IsRepairEnabled</definition>
+        <argsstring>()</argsstring>
+        <name>IsRepairEnabled</name>
+        <briefdescription>
+<para>Whether WeaponFSM.ValidateAndRepair should be applied on this state @NOTE: This property was implemented at the same time as ValARep To have it disabled by default In case there are modders who created their own state But potentially did not set up their properties correctly As having ValARep run on an improper setup would result in horrible VME spam and desync @WARNING: When enabling repair, it is imperative that all properties are set up correctly. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="112" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1ae5a5d72bdc4fe3b43f7dd659bab6c9e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool HasBullet</definition>
+        <argsstring>()</argsstring>
+        <name>HasBullet</name>
+        <briefdescription>
+<para>Whether there is a bullet in the chamber @NOTE: This should only be false when it is empty So this is true when there is a bullet in the chamber Regardless of the bullet being loaded, firedout or jammed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="119" column="10" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="119" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1af9b68ed626f00e1471073b049b44368e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool HasMagazine</definition>
+        <argsstring>()</argsstring>
+        <name>HasMagazine</name>
+        <briefdescription>
+<para>Whether there is a magazine attached. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="122" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="122" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1ae0d1a50d3504207b5de70c8d79d134f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool IsJammed</definition>
+        <argsstring>()</argsstring>
+        <name>IsJammed</name>
+        <briefdescription>
+<para>Whether the gun is jammed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="125" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="125" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1a72828d64adb99c774bd27b96c8c2ed0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitMuzzleArray</definition>
+        <argsstring>()</argsstring>
+        <name>InitMuzzleArray</name>
+        <briefdescription>
+<para>Override with the filling of m_muzzleHasBullet. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="128" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="128" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1aa197540bba69806afc5e6dfa47f8abaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool IsSingleState</definition>
+        <argsstring>()</argsstring>
+        <name>IsSingleState</name>
+        <briefdescription>
+<para>Special one for when the weapon only has one singular state (like Magnum) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="131" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="131" bodyend="131"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Weapon state properties helpers</header>
+      <description><para>Several helpers for better access of certain properties </para>
+</description>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1ae2988b659d0ad648568bacac068a87df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38" kindref="member">MuzzleState</ref></type>
+        <definition>MuzzleState GetMuzzleState</definition>
+        <argsstring>(int idx)</argsstring>
+        <name>GetMuzzleState</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+<para>Get chamber state of the muzzle at index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="141" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="141" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1a2c54cd58c2016e282a662d32432a627a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int GetMuzzleStateCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetMuzzleStateCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="142" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="142" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1a462aeaa38513f789b9037a07f457bcad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool IsChamberValid</definition>
+        <argsstring>(int idx)</argsstring>
+        <name>IsChamberValid</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="143" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="143" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1ad02cadbbfe88b6fa28acd9649244d73c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool IsChamberFiredOut</definition>
+        <argsstring>(int idx)</argsstring>
+        <name>IsChamberFiredOut</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="144" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="144" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1ae62d9ebf7276af123ad0d441662bb599" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool IsChamberFull</definition>
+        <argsstring>(int idx)</argsstring>
+        <name>IsChamberFull</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="145" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="145" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1a8ac33ecbcbe67f0927aef4a6a31d3749" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ValidateMuzzleArray</definition>
+        <argsstring>()</argsstring>
+        <name>ValidateMuzzleArray</name>
+        <briefdescription>
+<para>Safety check and error message in case not set up correctly. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="150" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="150" bodyend="184"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38" prot="public" static="no" strong="no">
+        <type></type>
+        <name>MuzzleState</name>
+        <enumvalue id="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" prot="public">
+          <name>U</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+<para>UNKNOWN. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ab199e021998d49b1f09338d8b9b18ecb" prot="public">
+          <name>E</name>
+          <initializer>=  0</initializer>
+          <briefdescription>
+<para>EMPTY. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38af382a63cc3d6491bf26b59e66f46826d" prot="public">
+          <name>F</name>
+          <initializer>=  1</initializer>
+          <briefdescription>
+<para>FIRED. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38aef31cc6fe9479955961311ee18ac205f" prot="public">
+          <name>L</name>
+          <initializer>=  2</initializer>
+          <briefdescription>
+<para>LOADED. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="14" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="15" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_weapon_stable_state_8c_1a79ba4515ace3366212b4313c9757d95f" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38" kindref="member">MuzzleState</ref></type>
+        <definition>enum MuzzleState m_animState</definition>
+        <argsstring></argsstring>
+        <name>m_animState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="28" column="16"/>
+      </memberdef>
+      <memberdef kind="variable" id="_weapon_stable_state_8c_1a99c0c3c305a37383f835abc512f2be3f" prot="public" static="no" mutable="no">
+        <type>ref <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38" kindref="member">MuzzleState</ref> &gt;</type>
+        <definition>ref array&lt;MuzzleState&gt; m_muzzleHasBullet</definition>
+        <argsstring></argsstring>
+        <name>m_muzzleHasBullet</name>
+        <initializer>= new <ref refid="classarray" kindref="compound">array</ref>&lt;<ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38" kindref="member">MuzzleState</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="30" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_weapon_stable_state_8c_1ab9784c819cdb3364a2cc773c9275d002" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponStableState</definition>
+        <argsstring>(Weapon_Base w=NULL, WeaponStateBase parent=NULL, int anim_state=-1)</argsstring>
+        <name>WeaponStableState</name>
+        <param>
+          <type><ref refid="class_weapon___base" kindref="compound">Weapon_Base</ref></type>
+          <declname>w</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="class_weapon_state_base" kindref="compound">WeaponStateBase</ref></type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>anim_state</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="32" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="32" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1a47014499e6555065de53646aac9821f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SyncAnimState</definition>
+        <argsstring>()</argsstring>
+        <name>SyncAnimState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="39" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="39" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1a554194fbf83f198e8f8e9ecb7a31e330" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnEntry</definition>
+        <argsstring>(WeaponEventBase e)</argsstring>
+        <name>OnEntry</name>
+        <param>
+          <type><ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="70" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="70" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1abf66986e08676e65b1e4fbf3c5f69f48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnUpdate</definition>
+        <argsstring>(float dt)</argsstring>
+        <name>OnUpdate</name>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="77" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="77" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1aa40f8697dfa587f8adabc8640bc98ad8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnExit</definition>
+        <argsstring>(WeaponEventBase e)</argsstring>
+        <name>OnExit</name>
+        <param>
+          <type><ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="82" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="82" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1a8ce19f9cc6998a5eacdec013ddce60a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool IsIdle</definition>
+        <argsstring>()</argsstring>
+        <name>IsIdle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="88" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="_weapon_stable_state_8c_1a2755e768813b00535baf640d4fa0072b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int GetCurrentStateID</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrentStateID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" line="90" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c" bodystart="90" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38" kindref="member">MuzzleState</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17" refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref><sp/><sp/><sp/>=<sp/>-1,</highlight></codeline>
+<codeline lineno="19" refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ab199e021998d49b1f09338d8b9b18ecb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ab199e021998d49b1f09338d8b9b18ecb" kindref="member">E</ref><sp/><sp/><sp/>=<sp/><sp/>0,</highlight></codeline>
+<codeline lineno="21" refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38af382a63cc3d6491bf26b59e66f46826d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38af382a63cc3d6491bf26b59e66f46826d" kindref="member">F</ref><sp/><sp/><sp/>=<sp/><sp/>1,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38aef31cc6fe9479955961311ee18ac205f" kindref="member">L</ref><sp/><sp/><sp/>=<sp/><sp/>2</highlight></codeline>
+<codeline lineno="24" refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38aef31cc6fe9479955961311ee18ac205f" refkind="member"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_weapon_stable_state" kindref="compound">WeaponStableState</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_weapon_state_base" kindref="compound">WeaponStateBase</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28" refid="_weapon_stable_state_8c_1a79ba4515ace3366212b4313c9757d95f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_weapon_stable_state_8c_1a79ba4515ace3366212b4313c9757d95f" kindref="member">m_animState</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30" refid="_weapon_stable_state_8c_1a99c0c3c305a37383f835abc512f2be3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="classarray" kindref="compound">array&lt;MuzzleState&gt;</ref><sp/><ref refid="_weapon_stable_state_8c_1a99c0c3c305a37383f835abc512f2be3f" kindref="member">m_muzzleHasBullet</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;MuzzleState&gt;</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="_weapon_stable_state_8c_1ab9784c819cdb3364a2cc773c9275d002" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state" kindref="compound">WeaponStableState</ref>(<ref refid="class_weapon___base" kindref="compound">Weapon_Base</ref><sp/>w<sp/>=<sp/>NULL,<sp/><ref refid="class_weapon_state_base" kindref="compound">WeaponStateBase</ref><sp/>parent<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>anim_state<sp/>=<sp/>-1)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_weapon_stable_state_8c_1a79ba4515ace3366212b4313c9757d95f" kindref="member">m_animState</ref><sp/>=<sp/>anim_state;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_stable_state_1a3ec895a8ef12f28fbb3e1acb39c82369" kindref="member">InitMuzzleArray</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_weapon_stable_state_8c_1a8ac33ecbcbe67f0927aef4a6a31d3749" kindref="member">ValidateMuzzleArray</ref>();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="_weapon_stable_state_8c_1a47014499e6555065de53646aac9821f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_weapon_stable_state_8c_1a47014499e6555065de53646aac9821f9" kindref="member">SyncAnimState</ref>()</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>curr<sp/>=<sp/><ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>.GetWeaponAnimState();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(curr<sp/>!=<sp/><ref refid="_weapon_stable_state_8c_1a79ba4515ace3366212b4313c9757d95f" kindref="member">m_animState</ref>)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//fsmDebugSpam(&quot;[wpnfsm]<sp/>&quot;<sp/>+<sp/>Object.GetDebugName(m_weapon)<sp/>+<sp/>&quot;<sp/>synchronizing<sp/>anim<sp/>state:<sp/>&quot;<sp/>+<sp/>curr<sp/>+<sp/>&quot;<sp/>--&gt;<sp/>&quot;<sp/>+<sp/>m_animState);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref><sp/>p;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_class" kindref="compound">Class</ref>.<ref refid="group___enforce_1ga253ceb932745ea74ca4a4d3d9e8c12d7" kindref="member">CastTo</ref>(p,<sp/><ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>.GetHierarchyParent()))</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_human_command_weapons" kindref="compound">HumanCommandWeapons</ref><sp/>hcw<sp/>=<sp/>p.GetCommandModifier_Weapons();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hcw)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hcw.<ref refid="class_human_command_weapons_1ad6f1b89369275489b9f8da07bed03e13" kindref="member">SetInitState</ref>(<ref refid="_weapon_stable_state_8c_1a79ba4515ace3366212b4313c9757d95f" kindref="member">m_animState</ref>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>.SetWeaponAnimState(<ref refid="_weapon_stable_state_8c_1a79ba4515ace3366212b4313c9757d95f" kindref="member">m_animState</ref>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_h_f_s_m_base_8c_1a42ec7b4847da51d422f4b048151c94a1" kindref="member">fsmDebugSpam</ref>(</highlight><highlight class="stringliteral">&quot;[wpnfsm]<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_object" kindref="compound">Object</ref>.GetDebugName(<ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>state=&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>.GetCurrentState().Type()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>synchronized<sp/>anim<sp/>state:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">.EnumToString(<ref refid="_pistol___base_8c_1a01254921fa7633b3f421796d9b52d45f" kindref="member">PistolAnimState</ref>,<sp/>curr)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>--&gt;<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">.EnumToString(<ref refid="_pistol___base_8c_1a01254921fa7633b3f421796d9b52d45f" kindref="member">PistolAnimState</ref>,<sp/><ref refid="_weapon_stable_state_8c_1a79ba4515ace3366212b4313c9757d95f" kindref="member">m_animState</ref>));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Human<sp/>wpnOwner<sp/>=<sp/>Human.Cast(<ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>.GetHierarchyRootPlayer());</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_human_command_weapons" kindref="compound">HumanCommandWeapons</ref>.<ref refid="class_human_command_weapons_1a3b1db919cf19f0c7875fb1a9a922e5f2" kindref="member">StaticSetInitState</ref>(wpnOwner,<sp/><ref refid="_weapon_stable_state_8c_1a79ba4515ace3366212b4313c9757d95f" kindref="member">m_animState</ref>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>.SetWeaponAnimState(<ref refid="_weapon_stable_state_8c_1a79ba4515ace3366212b4313c9757d95f" kindref="member">m_animState</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_h_f_s_m_base_8c_1a42ec7b4847da51d422f4b048151c94a1" kindref="member">fsmDebugSpam</ref>(</highlight><highlight class="stringliteral">&quot;[wpnfsm]<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_object" kindref="compound">Object</ref>.GetDebugName(<ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>state=&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>.GetCurrentState().Type()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>synchronized<sp/>remote<sp/>anim<sp/>state:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">.EnumToString(<ref refid="_pistol___base_8c_1a01254921fa7633b3f421796d9b52d45f" kindref="member">PistolAnimState</ref>,<sp/>curr)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>--&gt;<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal">.EnumToString(<ref refid="_pistol___base_8c_1a01254921fa7633b3f421796d9b52d45f" kindref="member">PistolAnimState</ref>,<sp/><ref refid="_weapon_stable_state_8c_1a79ba4515ace3366212b4313c9757d95f" kindref="member">m_animState</ref>));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>.SetGroundAnimFrameIndex(<ref refid="_weapon_stable_state_8c_1a79ba4515ace3366212b4313c9757d95f" kindref="member">m_animState</ref>);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="_weapon_stable_state_8c_1a554194fbf83f198e8f8e9ecb7a31e330" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_single_shot_pistol___base_8c_1a3ed70c6f00023473563b38dd40750479" kindref="member">OnEntry</ref>(<ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>e)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.<ref refid="class_weapon_stable_state_1a4317e82e93379b1e0cdcb1112796367d" kindref="member">OnEntry</ref>(e);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>.SetJammed(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(e)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_weapon_stable_state_8c_1a47014499e6555065de53646aac9821f9" kindref="member">SyncAnimState</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77" refid="_weapon_stable_state_8c_1abf66986e08676e65b1e4fbf3c5f69f48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___tools_1gab414e48870421e21bf5553f4033493b0" kindref="member">OnUpdate</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnUpdate(dt);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_weapon_stable_state_8c_1a47014499e6555065de53646aac9821f9" kindref="member">SyncAnimState</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82" refid="_weapon_stable_state_8c_1aa40f8697dfa587f8adabc8640bc98ad8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a2b24124714481d5944daedea764ef07a" kindref="member">OnExit</ref>(<ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>e)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>.ResetWeaponAnimState();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnExit(e);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="_weapon_stable_state_8c_1a8ce19f9cc6998a5eacdec013ddce60a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_weapon_stable_state_8c_1a8ce19f9cc6998a5eacdec013ddce60a4" kindref="member">IsIdle</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="_weapon_stable_state_8c_1a2755e768813b00535baf640d4fa0072b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a71d886cf9e101812137133a25a5efc5d" kindref="member">GetCurrentStateID</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112" refid="_weapon_stable_state_8c_1a1ad4854e0ffb19d0fb1ef1c0a2f02022" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1ac25b31cf36d1dadc8120054f1eb43e5e" kindref="member">IsRepairEnabled</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119" refid="_weapon_stable_state_8c_1ae5a5d72bdc4fe3b43f7dd659bab6c9e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a4b66543cd3ec146ccb5bdf7da9b82be2" kindref="member">HasBullet</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122" refid="_weapon_stable_state_8c_1af9b68ed626f00e1471073b049b44368e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1ae6fd560194ec4459eb3731047b22d510" kindref="member">HasMagazine</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="125" refid="_weapon_stable_state_8c_1ae0d1a50d3504207b5de70c8d79d134f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a17fafa12bb56d472c515b8dc2a1669a8" kindref="member">IsJammed</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128" refid="_weapon_stable_state_8c_1a72828d64adb99c774bd27b96c8c2ed0a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a3ec895a8ef12f28fbb3e1acb39c82369" kindref="member">InitMuzzleArray</ref>()<sp/>{<sp/><ref refid="_weapon_stable_state_8c_1a99c0c3c305a37383f835abc512f2be3f" kindref="member">m_muzzleHasBullet</ref><sp/>=<sp/>{<sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38" kindref="member">MuzzleState</ref>.U<sp/>};<sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131" refid="_weapon_stable_state_8c_1aa197540bba69806afc5e6dfa47f8abaa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_weapon_stable_state_8c_1aa197540bba69806afc5e6dfa47f8abaa" kindref="member">IsSingleState</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141" refid="_weapon_stable_state_8c_1ae2988b659d0ad648568bacac068a87df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38" kindref="member">MuzzleState</ref><sp/><ref refid="_weapon_stable_state_8c_1ae2988b659d0ad648568bacac068a87df" kindref="member">GetMuzzleState</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_weapon_stable_state_8c_1a99c0c3c305a37383f835abc512f2be3f" kindref="member">m_muzzleHasBullet</ref>[idx];<sp/>}<sp/><sp/></highlight></codeline>
+<codeline lineno="142" refid="_weapon_stable_state_8c_1a2c54cd58c2016e282a662d32432a627a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_weapon_stable_state_8c_1a2c54cd58c2016e282a662d32432a627a" kindref="member">GetMuzzleStateCount</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_weapon_stable_state_8c_1a99c0c3c305a37383f835abc512f2be3f" kindref="member">m_muzzleHasBullet</ref>.Count();<sp/>}<sp/></highlight></codeline>
+<codeline lineno="143" refid="_weapon_stable_state_8c_1a462aeaa38513f789b9037a07f457bcad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_weapon_stable_state_8c_1a462aeaa38513f789b9037a07f457bcad" kindref="member">IsChamberValid</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_weapon_stable_state_8c_1a99c0c3c305a37383f835abc512f2be3f" kindref="member">m_muzzleHasBullet</ref>[idx]<sp/>!=<sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38" kindref="member">MuzzleState</ref>.U;<sp/>}</highlight></codeline>
+<codeline lineno="144" refid="_weapon_stable_state_8c_1ad02cadbbfe88b6fa28acd9649244d73c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_weapon_stable_state_8c_1ad02cadbbfe88b6fa28acd9649244d73c" kindref="member">IsChamberFiredOut</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_weapon_stable_state_8c_1a99c0c3c305a37383f835abc512f2be3f" kindref="member">m_muzzleHasBullet</ref>[idx]<sp/>==<sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38" kindref="member">MuzzleState</ref>.F;<sp/>}</highlight></codeline>
+<codeline lineno="145" refid="_weapon_stable_state_8c_1ae62d9ebf7276af123ad0d441662bb599" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_weapon_stable_state_8c_1ae62d9ebf7276af123ad0d441662bb599" kindref="member">IsChamberFull</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_weapon_stable_state_8c_1a99c0c3c305a37383f835abc512f2be3f" kindref="member">m_muzzleHasBullet</ref>[idx]<sp/>!=<sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38" kindref="member">MuzzleState</ref>.E;<sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150" refid="_weapon_stable_state_8c_1a8ac33ecbcbe67f0927aef4a6a31d3749" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_weapon_stable_state_8c_1a8ac33ecbcbe67f0927aef4a6a31d3749" kindref="member">ValidateMuzzleArray</ref>()</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>There<sp/>is<sp/>only<sp/>one</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_weapon_stable_state_8c_1aa197540bba69806afc5e6dfa47f8abaa" kindref="member">IsSingleState</ref>())</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>failed<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!failed)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(<ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38" kindref="member">MuzzleState</ref><sp/>state<sp/>:<sp/><ref refid="_weapon_stable_state_8c_1a99c0c3c305a37383f835abc512f2be3f" kindref="member">m_muzzleHasBullet</ref>)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>state<sp/>==<sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38" kindref="member">MuzzleState</ref>.U<sp/>)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>failed<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(failed)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1ga750f272dd3e344b461130dece1aea917" kindref="member">ErrorExSeverity</ref><sp/>severity<sp/>=<sp/><ref refid="group___debug_1ga750f272dd3e344b461130dece1aea917" kindref="member">ErrorExSeverity</ref>.ERROR;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>DEVELOPER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(DayZGame.m_IsPreviewSpawn)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>do<sp/>not<sp/>want<sp/>VMEs<sp/>when<sp/>spawning<sp/>the<sp/>item<sp/>in<sp/>order<sp/>to<sp/>visualize<sp/>it<sp/>for<sp/>preview<sp/>in<sp/>script<sp/>console</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>severity<sp/>=<sp/><ref refid="group___debug_1ga750f272dd3e344b461130dece1aea917" kindref="member">ErrorExSeverity</ref>.INFO;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_shape_1ga30f13400906443efe9fb79540dc674b5" kindref="member">ErrorEx</ref>(</highlight><highlight class="stringliteral">&quot;Muzzle<sp/>array<sp/>validation<sp/>has<sp/>failed.<sp/>Please<sp/>set<sp/>up<sp/>the<sp/>correct<sp/>muzzle<sp/>states<sp/>by<sp/>overriding<sp/>InitMuzzleArray.&quot;</highlight><highlight class="normal">,<sp/>severity);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FSM/States/WeaponStableState.c"/>
+  </compounddef>
+</doxygen>

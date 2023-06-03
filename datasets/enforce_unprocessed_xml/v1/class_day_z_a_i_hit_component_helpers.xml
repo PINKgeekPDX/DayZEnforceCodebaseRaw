@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_day_z_a_i_hit_component_helpers" kind="class" language="C++" prot="public">
+    <compoundname>DayZAIHitComponentHelpers</compoundname>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_day_z_a_i_hit_component_helpers_1ae1dc9c959de0e6214f40746974daaa9e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>DayZAIHitComponentHelpers::RegisterHitComponent</definition>
+        <argsstring>(array&lt; ref DayZAIHitComponent &gt; pHitComponents, string pName, float pWeight)</argsstring>
+        <name>RegisterHitComponent</name>
+        <qualifiedname>DayZAIHitComponentHelpers::RegisterHitComponent</qualifiedname>
+        <param>
+          <type><ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_day_z_a_i_hit_component" kindref="compound">DayZAIHitComponent</ref> &gt;</type>
+          <declname>pHitComponents</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>pName</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pWeight</declname>
+        </param>
+        <briefdescription>
+<para>Register Hit <ref refid="class_component" kindref="compound">Component</ref> for AI targeting. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Register Hit <ref refid="class_component" kindref="compound">Component</ref> for AI targeting to array defined on entity&apos;s Type (DayZPlayerType, DayZInfectedType, etc.) Uses component name from damage system (zone) and its weight.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pHitComponents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>array</computeroutput> that keeps registered compoenents </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>component</computeroutput> name (zone in Damage System) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pWeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>weight</computeroutput> of the component (probability) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/DayZAIHitComponents.c" line="21" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/DayZAIHitComponents.c" bodystart="21" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_day_z_a_i_hit_component_helpers_1aeb78fd553f03c4cb971bf948e69a9693" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static bool DayZAIHitComponentHelpers::SelectMostProbableHitComponent</definition>
+        <argsstring>(array&lt; ref DayZAIHitComponent &gt; pHitComponents, out string pHitComponent)</argsstring>
+        <name>SelectMostProbableHitComponent</name>
+        <qualifiedname>DayZAIHitComponentHelpers::SelectMostProbableHitComponent</qualifiedname>
+        <param>
+          <type><ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_day_z_a_i_hit_component" kindref="compound">DayZAIHitComponent</ref> &gt;</type>
+          <declname>pHitComponents</declname>
+        </param>
+        <param>
+          <type>out <ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>pHitComponent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/DayZAIHitComponents.c" line="40" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/DayZAIHitComponents.c" bodystart="40" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_day_z_a_i_hit_component_helpers_1ab7f8fbfbba9a2cfb6c96c93a9b793fa4" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>DayZAIHitComponentHelpers::SumOfWeights</definition>
+        <argsstring>(array&lt; ref DayZAIHitComponent &gt; pHitComponents)</argsstring>
+        <name>SumOfWeights</name>
+        <qualifiedname>DayZAIHitComponentHelpers::SumOfWeights</qualifiedname>
+        <param>
+          <type><ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_day_z_a_i_hit_component" kindref="compound">DayZAIHitComponent</ref> &gt;</type>
+          <declname>pHitComponents</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the sum of all entries in <ref refid="class_day_z_a_i_hit_component" kindref="compound">DayZAIHitComponent</ref> array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pHitComponents</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>array</computeroutput> that keeps registered compoenents</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Sum of weights of all entries in array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/DayZAIHitComponents.c" line="68" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/DayZAIHitComponents.c" bodystart="68" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/DayZAIHitComponents.c" line="8" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/DayZAIHitComponents.c" bodystart="9" bodyend="80"/>
+    <listofallmembers>
+      <member refid="class_day_z_a_i_hit_component_helpers_1ae1dc9c959de0e6214f40746974daaa9e" prot="private" virt="non-virtual"><scope>DayZAIHitComponentHelpers</scope><name>RegisterHitComponent</name></member>
+      <member refid="class_day_z_a_i_hit_component_helpers_1aeb78fd553f03c4cb971bf948e69a9693" prot="private" virt="non-virtual"><scope>DayZAIHitComponentHelpers</scope><name>SelectMostProbableHitComponent</name></member>
+      <member refid="class_day_z_a_i_hit_component_helpers_1ab7f8fbfbba9a2cfb6c96c93a9b793fa4" prot="private" virt="non-virtual"><scope>DayZAIHitComponentHelpers</scope><name>SumOfWeights</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_p_p_e_r_death_darkening_8c" kind="file" language="C++">
+    <compoundname>PPERDeathDarkening.c</compoundname>
+    <innerclass refid="class_p_p_e_requester___gameplay_base" prot="public">PPERequester_GameplayBase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">class<sp/></highlight><highlight class="normal">PPERequester_DeathDarkening<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_requester___gameplay_base" kindref="compound">PPERequester_GameplayBase</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_p_p_e_requester___gameplay_base_1a4fb9b6b5417896d138643972f931909c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_requester___gameplay_base_1a4fb9b6b5417896d138643972f931909c" kindref="member">m_Value</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="5" refid="class_p_p_e_requester___gameplay_base_1a60cdf9a9a952a4358dfb224d5d4011e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_requester___gameplay_base_1a60cdf9a9a952a4358dfb224d5d4011e6" kindref="member">OnStart</ref>(<ref refid="class_param" kindref="compound">Param</ref><sp/>par<sp/>=<sp/>null)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnStart();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___entity_attributes_1gaaea70e7c6201c28366a5107506d29d77" kindref="member">m_Value</ref><sp/>=<sp/>Param1&lt;float&gt;.Cast(par).param1;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;PPERequester_DeathDarkening<sp/>|<sp/>level:<sp/>&quot;<sp/>+<sp/>m_Value);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___entity_attributes_1gaaea70e7c6201c28366a5107506d29d77" kindref="member">m_Value</ref><sp/>=<sp/><ref refid="class_easing" kindref="compound">Easing</ref>.<ref refid="class_easing_1a6ce6453fb6289d18d7f1151efdd15fc2" kindref="member">EaseInCubic</ref>(<ref refid="group___entity_attributes_1gaaea70e7c6201c28366a5107506d29d77" kindref="member">m_Value</ref>);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___entity_attributes_1gaaea70e7c6201c28366a5107506d29d77" kindref="member">m_Value</ref><sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga1ac33c7be3c1e52ae6b70fe58c78266c" kindref="member">Lerp</ref>(0,-10,<ref refid="group___entity_attributes_1gaaea70e7c6201c28366a5107506d29d77" kindref="member">m_Value</ref>);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;PPERequester_DeathDarkening<sp/>|<sp/>value:<sp/>&quot;<sp/>+<sp/>value);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_request_platforms_base_8c_1a8db48939dbad620900fd941db199cb1b" kindref="member">SetTargetValueFloat</ref>(<ref refid="_p_p_e_constants_8c_1a9e272c9bdd16c16284f7871e266096e5" kindref="member">PPEExceptions</ref>.EXPOSURE,<ref refid="class_p_p_e_exposure_native" kindref="compound">PPEExposureNative</ref>.<ref refid="class_p_p_e_exposure_native_1a269525518aea2c0ac29c7d3d969a6a28" kindref="member">PARAM_INTENSITY</ref>,</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<ref refid="group___entity_attributes_1gaaea70e7c6201c28366a5107506d29d77" kindref="member">m_Value</ref>,<ref refid="class_p_p_e_exposure_native" kindref="compound">PPEExposureNative</ref>.<ref refid="class_p_p_e_exposure_native_1adc5280778aa0d6dd6470192bd2f8bf7c" kindref="member">L_0_DEATH</ref>,<ref refid="_p_p_e_constants_8c_1a055fe6645543d5aac6f214277f064eda" kindref="member">PPOperators</ref>.SET);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/Requesters/PPERDeathDarkening.c"/>
+  </compounddef>
+</doxygen>

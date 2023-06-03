@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_prepare_fish_8c" kind="file" language="C++">
+    <compoundname>PrepareFish.c</compoundname>
+    <innerclass refid="class_recipe_base" prot="public">RecipeBase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_prepare_fish" kindref="compound">PrepareFish</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_recipe_base" kindref="compound">RecipeBase</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="3" refid="class_recipe_base_1ac57012907715de1452f577c9693805bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_recipe_base_1ac57012907715de1452f577c9693805bc" kindref="member">Init</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_recipe_base_1a26f4744e99b76ecd22e386cedcf95bb7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_recipe_base_1a26f4744e99b76ecd22e386cedcf95bb7" kindref="member">CanDo</ref>(<ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>ingredients[],<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight><highlight class="comment">//final<sp/>check<sp/>for<sp/>recipe&apos;s<sp/>validity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_recipe_base_1a7a710eb8417a3bb99b41015d96e88a91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_recipe_base_1a7a710eb8417a3bb99b41015d96e88a91" kindref="member">Do</ref>(<ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>ingredients[],<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player,<ref refid="classarray" kindref="compound">array&lt;ItemBase&gt;</ref><sp/>results,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>specialty_weight)</highlight><highlight class="comment">//gets<sp/>called<sp/>upon<sp/>recipe&apos;s<sp/>completion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>ingredient<sp/>=<sp/>ingredients[0];</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i<sp/>&lt;<sp/>results.Count();<sp/>i++)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>item_result;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_class" kindref="compound">Class</ref>.<ref refid="group___enforce_1ga253ceb932745ea74ca4a4d3d9e8c12d7" kindref="member">CastTo</ref>(item_result,<sp/>results.Get(i));</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Trasnfer<sp/>current<sp/>food<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MiscGameplayFunctions.TransferItemProperties(ingredient,<sp/>item_result);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item_result.SetQuantityNormalized(<ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga892ecb1375c9b373969273223a5841f3" kindref="member">RandomFloat</ref>(0.8,1));</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_lifespan_8c_1a40fcf4bf90c76d2b2293d34e798bc531" kindref="member">PluginLifespan</ref><sp/>lifespan<sp/>=<sp/><ref refid="_plugin_lifespan_8c_1a40fcf4bf90c76d2b2293d34e798bc531" kindref="member">PluginLifespan</ref>.Cast(<sp/><ref refid="_plugin_manager_8c_1a35050f82bea320b7a5336fc549630eaf" kindref="member">GetPlugin</ref>(<sp/><ref refid="_plugin_lifespan_8c_1a40fcf4bf90c76d2b2293d34e798bc531" kindref="member">PluginLifespan</ref><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lifespan.UpdateBloodyHandsVisibility(<sp/>player,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Recipes/Recipes/PrepareFish.c"/>
+  </compounddef>
+</doxygen>

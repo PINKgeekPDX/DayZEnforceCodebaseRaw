@@ -1,0 +1,418 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_crossbow_8c" kind="file" language="C++">
+    <compoundname>Crossbow.c</compoundname>
+    <innerclass refid="class_weapon_stable_state" prot="public">WeaponStableState</innerclass>
+    <innerclass refid="class_crossbow___base" prot="public">Crossbow_Base</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_crossbow_8c_1ae1135a88cc1d6c6f4c015847bc38667a" prot="public" static="no" strong="no">
+        <type></type>
+        <name>XBAnimState</name>
+        <enumvalue id="_crossbow_8c_1ae1135a88cc1d6c6f4c015847bc38667aa5856753f59963480774438d2e9e3eddf" prot="public">
+          <name>uncocked</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>default weapon state, closed and discharged </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_crossbow_8c_1ae1135a88cc1d6c6f4c015847bc38667aab7ed9c6dac1de8bfb95788484c62fc6e" prot="public">
+          <name>cocked</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" line="1" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" bodystart="2" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="enum" id="_crossbow_8c_1ac73a681f7812b22f3c723c04fe58d193" prot="public" static="no" strong="no">
+        <type></type>
+        <name>XBStableStateID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" line="7" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" bodystart="8" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_crossbow_8c_1a6ce26a62afab55d7606ad4e92428b30c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>@ UNKNOWN</definition>
+        <argsstring></argsstring>
+        <name>UNKNOWN</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" line="18" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_crossbow_8c_1a8a3e262836e3d7a0bc36d7b9c6421ac6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>UncockedEmpty</definition>
+        <argsstring></argsstring>
+        <name>UncockedEmpty</name>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" line="19" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_crossbow_8c_1a9f0df85435ab4d7e6f2e78383b86f52b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>CockedEmpty</definition>
+        <argsstring></argsstring>
+        <name>CockedEmpty</name>
+        <initializer>=  2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" line="20" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_crossbow_8c_1a211f8e095b3b0e62b5e1fbc5ac330c15" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Loaded</definition>
+        <argsstring></argsstring>
+        <name>Loaded</name>
+        <initializer>=  3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" line="21" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_crossbow_8c_1ab8ceb2242345d76b191c714026ba1efe" prot="public" static="no" mutable="no">
+        <type>class XBCockedEmpty extends <ref refid="class_weapon_stable_state" kindref="compound">WeaponStableState</ref></type>
+        <definition>class XBCockedEmpty extends WeaponStableState OnEntry</definition>
+        <argsstring></argsstring>
+        <name>OnEntry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" line="36" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_crossbow_8c_1a76a0c65a7f1463663d0688d967fa2e4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="_crossbow_8c_1ac73a681f7812b22f3c723c04fe58d193" kindref="member">XBStableStateID</ref></type>
+        <definition>enum XBStableStateID OnEntry</definition>
+        <argsstring>(WeaponEventBase e)</argsstring>
+        <name>OnEntry</name>
+        <param>
+          <type><ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" line="1" column="0" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_crossbow_8c_1aa40f8697dfa587f8adabc8640bc98ad8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnExit</definition>
+        <argsstring>(WeaponEventBase e)</argsstring>
+        <name>OnExit</name>
+        <param>
+          <type><ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" line="18" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_crossbow_8c_1a8fba6d4213ebbe1820d719974f601736" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>override int GetCurrentStateID</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrentStateID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" line="19" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="_crossbow_8c_1ab49d3803bebd844c3f873106849df18a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool HasBullet</definition>
+        <argsstring>()</argsstring>
+        <name>HasBullet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" line="20" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="_crossbow_8c_1af2a2200b1debc914a8e34252c33e8dfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool HasMagazine</definition>
+        <argsstring>()</argsstring>
+        <name>HasMagazine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" line="21" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="_crossbow_8c_1aac14d196e64cad535c5aa50f0c954df3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool IsJammed</definition>
+        <argsstring>()</argsstring>
+        <name>IsJammed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" line="22" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="_crossbow_8c_1a5505b40857f04731ef377a6be07e9d8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool IsRepairEnabled</definition>
+        <argsstring>()</argsstring>
+        <name>IsRepairEnabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" line="23" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="_crossbow_8c_1aecb416b07a0879e66f05969cc59bd671" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void InitMuzzleArray</definition>
+        <argsstring>()</argsstring>
+        <name>InitMuzzleArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" line="24" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c" bodystart="24" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="_crossbow_8c_1a76a0c65a7f1463663d0688d967fa2e4f" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_crossbow_8c_1ae1135a88cc1d6c6f4c015847bc38667a" kindref="member">XBAnimState</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="_crossbow_8c_1ae1135a88cc1d6c6f4c015847bc38667aa5856753f59963480774438d2e9e3eddf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_crossbow_8c_1ae1135a88cc1d6c6f4c015847bc38667aa5856753f59963480774438d2e9e3eddf" kindref="member">uncocked</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="4" refid="_crossbow_8c_1ae1135a88cc1d6c6f4c015847bc38667aab7ed9c6dac1de8bfb95788484c62fc6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_crossbow_8c_1ae1135a88cc1d6c6f4c015847bc38667aab7ed9c6dac1de8bfb95788484c62fc6e" kindref="member">cocked</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="_crossbow_8c_1ac73a681f7812b22f3c723c04fe58d193" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_crossbow_8c_1ac73a681f7812b22f3c723c04fe58d193" kindref="member">XBStableStateID</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_crossbow_8c_1a6ce26a62afab55d7606ad4e92428b30c" kindref="member">UNKNOWN</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><sp/>0,</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_crossbow_8c_1a8a3e262836e3d7a0bc36d7b9c6421ac6" kindref="member">UncockedEmpty</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><sp/>1,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_crossbow_8c_1a9f0df85435ab4d7e6f2e78383b86f52b" kindref="member">CockedEmpty</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><sp/>2,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_crossbow_8c_1a211f8e095b3b0e62b5e1fbc5ac330c15" kindref="member">Loaded</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><sp/>3,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">XBUncockedEmpty<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state" kindref="compound">WeaponStableState</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_single_shot_pistol___base_8c_1a3ed70c6f00023473563b38dd40750479" kindref="member">OnEntry</ref><sp/>(<ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>e)<sp/>{<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_log_manager" kindref="compound">LogManager</ref>.<ref refid="class_log_manager_1a1936dba0ee4da1a581859d6603178326" kindref="member">IsWeaponLogEnable</ref>())<sp/>{<sp/><ref refid="4___world_2_entities_2_firearms_2_debug_8c_1a40adfc1e22a9b751658055847f9c4b83" kindref="member">wpnPrint</ref>(</highlight><highlight class="stringliteral">&quot;[wpnfsm]<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_object" kindref="compound">Object</ref>.GetDebugName(<ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>{<sp/>Uncocked<sp/>Empty<sp/>UE&quot;</highlight><highlight class="normal">);<sp/>}<sp/>super.OnEntry(e);<sp/>}</highlight></codeline>
+<codeline lineno="18" refid="_crossbow_8c_1aa40f8697dfa587f8adabc8640bc98ad8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a2b24124714481d5944daedea764ef07a" kindref="member">OnExit</ref><sp/>(<ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>e)<sp/>{<sp/>super.OnExit(e);<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_log_manager" kindref="compound">LogManager</ref>.<ref refid="class_log_manager_1a1936dba0ee4da1a581859d6603178326" kindref="member">IsWeaponLogEnable</ref>())<sp/>{<sp/><ref refid="4___world_2_entities_2_firearms_2_debug_8c_1a40adfc1e22a9b751658055847f9c4b83" kindref="member">wpnPrint</ref>(</highlight><highlight class="stringliteral">&quot;[wpnfsm]<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_object" kindref="compound">Object</ref>.GetDebugName(<ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>}<sp/>Uncocked<sp/>Empty<sp/>UE&quot;</highlight><highlight class="normal">);<sp/>}<sp/>}</highlight></codeline>
+<codeline lineno="19" refid="_crossbow_8c_1a8fba6d4213ebbe1820d719974f601736" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a71d886cf9e101812137133a25a5efc5d" kindref="member">GetCurrentStateID</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_crossbow_8c_1ac73a681f7812b22f3c723c04fe58d193" kindref="member">XBStableStateID</ref>.UncockedEmpty;<sp/>}</highlight></codeline>
+<codeline lineno="20" refid="_crossbow_8c_1a9f0df85435ab4d7e6f2e78383b86f52b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a4b66543cd3ec146ccb5bdf7da9b82be2" kindref="member">HasBullet</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="21" refid="_crossbow_8c_1af2a2200b1debc914a8e34252c33e8dfe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1ae6fd560194ec4459eb3731047b22d510" kindref="member">HasMagazine</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="22" refid="_crossbow_8c_1aac14d196e64cad535c5aa50f0c954df3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a17fafa12bb56d472c515b8dc2a1669a8" kindref="member">IsJammed</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="23" refid="_crossbow_8c_1a5505b40857f04731ef377a6be07e9d8c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1ac25b31cf36d1dadc8120054f1eb43e5e" kindref="member">IsRepairEnabled</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="24" refid="_crossbow_8c_1aecb416b07a0879e66f05969cc59bd671" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a3ec895a8ef12f28fbb3e1acb39c82369" kindref="member">InitMuzzleArray</ref><sp/>()<sp/>{<sp/><ref refid="_weapon_stable_state_8c_1a99c0c3c305a37383f835abc512f2be3f" kindref="member">m_muzzleHasBullet</ref><sp/>=<sp/>{<ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38" kindref="member">MuzzleState</ref>.E};<sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26" refid="class_weapon_stable_state" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">XBCockedEmpty<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state" kindref="compound">WeaponStableState</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28" refid="class_weapon_stable_state_1a4317e82e93379b1e0cdcb1112796367d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a4317e82e93379b1e0cdcb1112796367d" kindref="member">OnEntry</ref><sp/>(<ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>e)<sp/>{<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_log_manager" kindref="compound">LogManager</ref>.<ref refid="class_log_manager_1a1936dba0ee4da1a581859d6603178326" kindref="member">IsWeaponLogEnable</ref>())<sp/>{<sp/><ref refid="4___world_2_entities_2_firearms_2_debug_8c_1a40adfc1e22a9b751658055847f9c4b83" kindref="member">wpnPrint</ref>(</highlight><highlight class="stringliteral">&quot;[wpnfsm]<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_object" kindref="compound">Object</ref>.GetDebugName(<ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>{<sp/>Cocked<sp/>Empty<sp/>CE&quot;</highlight><highlight class="normal">);<sp/>}<sp/>super.OnEntry(e);<sp/>}</highlight></codeline>
+<codeline lineno="29" refid="class_weapon_stable_state_1a2b24124714481d5944daedea764ef07a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a2b24124714481d5944daedea764ef07a" kindref="member">OnExit</ref><sp/>(<ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>e)<sp/>{<sp/>super.OnExit(e);<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_log_manager" kindref="compound">LogManager</ref>.<ref refid="class_log_manager_1a1936dba0ee4da1a581859d6603178326" kindref="member">IsWeaponLogEnable</ref>())<sp/>{<sp/><ref refid="4___world_2_entities_2_firearms_2_debug_8c_1a40adfc1e22a9b751658055847f9c4b83" kindref="member">wpnPrint</ref>(</highlight><highlight class="stringliteral">&quot;[wpnfsm]<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_object" kindref="compound">Object</ref>.GetDebugName(<ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>}<sp/>Cocked<sp/>Empty<sp/>CE&quot;</highlight><highlight class="normal">);<sp/>}<sp/>}</highlight></codeline>
+<codeline lineno="30" refid="class_weapon_stable_state_1a71d886cf9e101812137133a25a5efc5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a71d886cf9e101812137133a25a5efc5d" kindref="member">GetCurrentStateID</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_crossbow_8c_1ac73a681f7812b22f3c723c04fe58d193" kindref="member">XBStableStateID</ref>.CockedEmpty;<sp/>}</highlight></codeline>
+<codeline lineno="31" refid="class_weapon_stable_state_1a4b66543cd3ec146ccb5bdf7da9b82be2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a4b66543cd3ec146ccb5bdf7da9b82be2" kindref="member">HasBullet</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="32" refid="class_weapon_stable_state_1ae6fd560194ec4459eb3731047b22d510" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1ae6fd560194ec4459eb3731047b22d510" kindref="member">HasMagazine</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="33" refid="class_weapon_stable_state_1a17fafa12bb56d472c515b8dc2a1669a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a17fafa12bb56d472c515b8dc2a1669a8" kindref="member">IsJammed</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="34" refid="class_weapon_stable_state_1ac25b31cf36d1dadc8120054f1eb43e5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1ac25b31cf36d1dadc8120054f1eb43e5e" kindref="member">IsRepairEnabled</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="35" refid="class_weapon_stable_state_1a3ec895a8ef12f28fbb3e1acb39c82369" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a3ec895a8ef12f28fbb3e1acb39c82369" kindref="member">InitMuzzleArray</ref><sp/>()<sp/>{<sp/><ref refid="_weapon_stable_state_8c_1a99c0c3c305a37383f835abc512f2be3f" kindref="member">m_muzzleHasBullet</ref><sp/>=<sp/>{<ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38" kindref="member">MuzzleState</ref>.E};<sp/>}</highlight></codeline>
+<codeline lineno="36" refid="_crossbow_8c_1ab8ceb2242345d76b191c714026ba1efe" refkind="member"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">XBLoaded<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state" kindref="compound">WeaponStableState</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39" refid="class_weapon_stable_state_1a4317e82e93379b1e0cdcb1112796367d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a4317e82e93379b1e0cdcb1112796367d" kindref="member">OnEntry</ref><sp/>(<ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>e)<sp/>{<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_log_manager" kindref="compound">LogManager</ref>.<ref refid="class_log_manager_1a1936dba0ee4da1a581859d6603178326" kindref="member">IsWeaponLogEnable</ref>())<sp/>{<sp/><ref refid="4___world_2_entities_2_firearms_2_debug_8c_1a40adfc1e22a9b751658055847f9c4b83" kindref="member">wpnPrint</ref>(</highlight><highlight class="stringliteral">&quot;[wpnfsm]<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_object" kindref="compound">Object</ref>.GetDebugName(<ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>{<sp/>Loaded<sp/>L&quot;</highlight><highlight class="normal">);<sp/>}<sp/>super.OnEntry(e);<sp/>}</highlight></codeline>
+<codeline lineno="40" refid="class_weapon_stable_state_1a2b24124714481d5944daedea764ef07a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a2b24124714481d5944daedea764ef07a" kindref="member">OnExit</ref><sp/>(<ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>e)<sp/>{<sp/>super.OnExit(e);<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_log_manager" kindref="compound">LogManager</ref>.<ref refid="class_log_manager_1a1936dba0ee4da1a581859d6603178326" kindref="member">IsWeaponLogEnable</ref>())<sp/>{<sp/><ref refid="4___world_2_entities_2_firearms_2_debug_8c_1a40adfc1e22a9b751658055847f9c4b83" kindref="member">wpnPrint</ref>(</highlight><highlight class="stringliteral">&quot;[wpnfsm]<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="class_object" kindref="compound">Object</ref>.GetDebugName(<ref refid="_guards_8c_1ad0af4429be0c56056dbf78f31157a010" kindref="member">m_weapon</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>}<sp/>Loaded<sp/>L&quot;</highlight><highlight class="normal">);<sp/>}<sp/>}</highlight></codeline>
+<codeline lineno="41" refid="class_weapon_stable_state_1a71d886cf9e101812137133a25a5efc5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a71d886cf9e101812137133a25a5efc5d" kindref="member">GetCurrentStateID</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_crossbow_8c_1ac73a681f7812b22f3c723c04fe58d193" kindref="member">XBStableStateID</ref>.Loaded;<sp/>}</highlight></codeline>
+<codeline lineno="42" refid="class_weapon_stable_state_1a4b66543cd3ec146ccb5bdf7da9b82be2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a4b66543cd3ec146ccb5bdf7da9b82be2" kindref="member">HasBullet</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="43" refid="class_weapon_stable_state_1ae6fd560194ec4459eb3731047b22d510" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1ae6fd560194ec4459eb3731047b22d510" kindref="member">HasMagazine</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="44" refid="class_weapon_stable_state_1a17fafa12bb56d472c515b8dc2a1669a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a17fafa12bb56d472c515b8dc2a1669a8" kindref="member">IsJammed</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="45" refid="class_weapon_stable_state_1ac25b31cf36d1dadc8120054f1eb43e5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1ac25b31cf36d1dadc8120054f1eb43e5e" kindref="member">IsRepairEnabled</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="46" refid="class_weapon_stable_state_1a3ec895a8ef12f28fbb3e1acb39c82369" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_weapon_stable_state_1a3ec895a8ef12f28fbb3e1acb39c82369" kindref="member">InitMuzzleArray</ref><sp/>()<sp/>{<sp/><ref refid="_weapon_stable_state_8c_1a99c0c3c305a37383f835abc512f2be3f" kindref="member">m_muzzleHasBullet</ref><sp/>=<sp/>{<ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38" kindref="member">MuzzleState</ref>.L};<sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_crossbow___base" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_crossbow___base" kindref="compound">Crossbow_Base</ref><sp/>:<sp/><ref refid="class_archery___base" kindref="compound">Archery_Base</ref></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55" refid="class_crossbow___base_1a41a07b8f73be7a044eb798c36095373b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_crossbow___base_1a41a07b8f73be7a044eb798c36095373b" kindref="member">Crossbow_Base</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="class_crossbow___base_1a259c8b7e1ef5484b3d92a972cef81ffa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/><ref refid="class_recoil_base" kindref="compound">RecoilBase</ref><sp/><ref refid="class_crossbow___base_1a259c8b7e1ef5484b3d92a972cef81ffa" kindref="member">SpawnRecoilObject</ref>()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_crossbow_recoil" kindref="compound">CrossbowRecoil</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="class_crossbow___base_1a07f91aea73b914a0ef09be8ba436121b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_crossbow___base_1a07f91aea73b914a0ef09be8ba436121b" kindref="member">InitStateMachine</ref>()</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>setup<sp/>abilities</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_abilities.Insert(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_ability_record" kindref="compound">AbilityRecord</ref>(<ref refid="human_8c_1a70aa34d22d03160ea5e3d5248cd37093" kindref="member">WeaponActions</ref>.MECHANISM,<sp/>WeaponActionMechanismTypes.MECHANISM_OPENED));</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_abilities.Insert(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_ability_record" kindref="compound">AbilityRecord</ref>(<ref refid="human_8c_1a70aa34d22d03160ea5e3d5248cd37093" kindref="member">WeaponActions</ref>.MECHANISM,<sp/>WeaponActionMechanismTypes.MECHANISM_SPECIAL));</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_abilities.Insert(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_ability_record" kindref="compound">AbilityRecord</ref>(<ref refid="human_8c_1a70aa34d22d03160ea5e3d5248cd37093" kindref="member">WeaponActions</ref>.CHAMBERING,<sp/><ref refid="human_8c_1a6a33c0b8bed2b0654c3a8b8edd8acc50" kindref="member">WeaponActionChamberingTypes</ref>.CHAMBERING_CROSSBOW_OPENED));</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_abilities.Insert(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_ability_record" kindref="compound">AbilityRecord</ref>(<ref refid="human_8c_1a70aa34d22d03160ea5e3d5248cd37093" kindref="member">WeaponActions</ref>.CHAMBERING,<sp/><ref refid="human_8c_1a6a33c0b8bed2b0654c3a8b8edd8acc50" kindref="member">WeaponActionChamberingTypes</ref>.CHAMBERING_CROSSBOW_CLOSED));</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_abilities.Insert(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_ability_record" kindref="compound">AbilityRecord</ref>(<ref refid="human_8c_1a70aa34d22d03160ea5e3d5248cd37093" kindref="member">WeaponActions</ref>.FIRE,<sp/><ref refid="human_8c_1afb47cd06a4c376f519f3881f5ebeec9a" kindref="member">WeaponActionFireTypes</ref>.FIRE_NORMAL));</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_abilities.Insert(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_ability_record" kindref="compound">AbilityRecord</ref>(<ref refid="human_8c_1a70aa34d22d03160ea5e3d5248cd37093" kindref="member">WeaponActions</ref>.FIRE,<sp/><ref refid="human_8c_1afb47cd06a4c376f519f3881f5ebeec9a" kindref="member">WeaponActionFireTypes</ref>.FIRE_UNCOCKED));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_abilities.Insert(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_ability_record" kindref="compound">AbilityRecord</ref>(<ref refid="human_8c_1a70aa34d22d03160ea5e3d5248cd37093" kindref="member">WeaponActions</ref>.FIRE,<sp/><ref refid="human_8c_1afb47cd06a4c376f519f3881f5ebeec9a" kindref="member">WeaponActionFireTypes</ref>.FIRE_COCKED));</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>setup<sp/>state<sp/>machine</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>basic<sp/>weapon<sp/>states</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_stable_state" kindref="compound">WeaponStableState</ref><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XBUncockedEmpty(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL,<sp/><ref refid="_crossbow_8c_1ae1135a88cc1d6c6f4c015847bc38667a" kindref="member">XBAnimState</ref>.uncocked);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_stable_state" kindref="compound">WeaponStableState</ref><sp/><ref refid="class_weapon___base_1a60e3aae0da8cf362d945270bb7bf3138" kindref="member">C</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XBCockedEmpty(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL,<sp/><ref refid="_crossbow_8c_1ae1135a88cc1d6c6f4c015847bc38667a" kindref="member">XBAnimState</ref>.cocked);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_stable_state" kindref="compound">WeaponStableState</ref><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38aef31cc6fe9479955961311ee18ac205f" kindref="member">L</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>XBLoaded(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL,<sp/><ref refid="_crossbow_8c_1ae1135a88cc1d6c6f4c015847bc38667a" kindref="member">XBAnimState</ref>.cocked);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>unstable<sp/>(intermediate)<sp/>states</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WeaponChargingStretch<sp/>Mech_U<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WeaponChargingStretch(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL,<sp/><ref refid="human_8c_1a70aa34d22d03160ea5e3d5248cd37093" kindref="member">WeaponActions</ref>.MECHANISM,<sp/>WeaponActionMechanismTypes.MECHANISM_OPENED);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WeaponEjectBullet<sp/>Mech_L<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WeaponEjectBullet(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL,<sp/><ref refid="human_8c_1a70aa34d22d03160ea5e3d5248cd37093" kindref="member">WeaponActions</ref>.MECHANISM,<sp/>WeaponActionMechanismTypes.MECHANISM_SPECIAL);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WeaponChambering<sp/>Chamber_U<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WeaponChambering(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL,<sp/><ref refid="human_8c_1a70aa34d22d03160ea5e3d5248cd37093" kindref="member">WeaponActions</ref>.CHAMBERING,<sp/><ref refid="human_8c_1a6a33c0b8bed2b0654c3a8b8edd8acc50" kindref="member">WeaponActionChamberingTypes</ref>.CHAMBERING_CROSSBOW_OPENED);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WeaponChambering<sp/>Chamber_C<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WeaponChambering(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL,<sp/><ref refid="human_8c_1a70aa34d22d03160ea5e3d5248cd37093" kindref="member">WeaponActions</ref>.CHAMBERING,<sp/><ref refid="human_8c_1a6a33c0b8bed2b0654c3a8b8edd8acc50" kindref="member">WeaponActionChamberingTypes</ref>.CHAMBERING_CROSSBOW_CLOSED);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//CrossbowReChambering<sp/>Chamber_L<sp/>=<sp/>new<sp/>CrossbowReChambering(this,<sp/>NULL,<sp/>WeaponActions.CHAMBERING,<sp/>WeaponActionChamberingTypes.CHAMBERING_ONEBULLET_CLOSED);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_state_base" kindref="compound">WeaponStateBase</ref><sp/>Trigger_U<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WeaponDryFire(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL,<sp/><ref refid="human_8c_1a70aa34d22d03160ea5e3d5248cd37093" kindref="member">WeaponActions</ref>.FIRE,<sp/><ref refid="human_8c_1afb47cd06a4c376f519f3881f5ebeec9a" kindref="member">WeaponActionFireTypes</ref>.FIRE_UNCOCKED);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_state_base" kindref="compound">WeaponStateBase</ref><sp/>Trigger_C<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WeaponDryFire(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL,<sp/><ref refid="human_8c_1a70aa34d22d03160ea5e3d5248cd37093" kindref="member">WeaponActions</ref>.FIRE,<sp/><ref refid="human_8c_1afb47cd06a4c376f519f3881f5ebeec9a" kindref="member">WeaponActionFireTypes</ref>.FIRE_COCKED);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_state_base" kindref="compound">WeaponStateBase</ref><sp/>Trigger_L<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WeaponFireLast(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL,<sp/><ref refid="human_8c_1a70aa34d22d03160ea5e3d5248cd37093" kindref="member">WeaponActions</ref>.FIRE,<sp/><ref refid="human_8c_1afb47cd06a4c376f519f3881f5ebeec9a" kindref="member">WeaponActionFireTypes</ref>.FIRE_NORMAL);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_state_base" kindref="compound">WeaponStateBase</ref><sp/>Unjam_J<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_weapon_unjamming" kindref="compound">WeaponUnjamming</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL,<sp/><ref refid="human_8c_1a70aa34d22d03160ea5e3d5248cd37093" kindref="member">WeaponActions</ref>.UNJAMMING,<sp/><ref refid="human_8c_1ae97094a3f94e0a3a6088f6fc8516a651" kindref="member">WeaponActionUnjammingTypes</ref>.UNJAMMING_START);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>events</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>__M__<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WeaponEventMechanism;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>__T__<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WeaponEventTrigger;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>__TJ_<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WeaponEventTriggerToJam;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>__L__<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WeaponEventLoad1Bullet;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>__U__<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WeaponEventUnjam;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>_fin_<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WeaponEventHumanCommandActionFinished;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>_abt_<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WeaponEventHumanCommandActionAborted;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon_event_base" kindref="compound">WeaponEventBase</ref><sp/>_dto_<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>WeaponEventDryFireTimeout;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_weapon_f_s_m" kindref="compound">WeaponFSM</ref>();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Charging</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><ref refid="class_weapon___base_1a60e3aae0da8cf362d945270bb7bf3138" kindref="member">C</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__M__,<sp/><sp/><ref refid="class_weapon___base_1a60e3aae0da8cf362d945270bb7bf3138" kindref="member">C</ref>));</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__M__,<sp/><sp/>Mech_U));</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Mech_U,<sp/><sp/><sp/><sp/><sp/><sp/>_fin_,<sp/><sp/><ref refid="class_weapon___base_1a60e3aae0da8cf362d945270bb7bf3138" kindref="member">C</ref>));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mech_U.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Mech_U.m_start,<sp/>_abt_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>));</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mech_U.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Mech_U.m_onCK,<sp/><sp/>_abt_,<sp/><sp/><ref refid="class_weapon___base_1a60e3aae0da8cf362d945270bb7bf3138" kindref="member">C</ref>));</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38aef31cc6fe9479955961311ee18ac205f" kindref="member">L</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__M__,<sp/><sp/>Mech_L));</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Mech_L,<sp/><sp/><sp/><sp/><sp/><sp/>_fin_,<sp/><sp/><ref refid="class_weapon___base_1a60e3aae0da8cf362d945270bb7bf3138" kindref="member">C</ref>));<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mech_L.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Mech_L.m_start,<sp/>_abt_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38aef31cc6fe9479955961311ee18ac205f" kindref="member">L</ref>));<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mech_L.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Mech_L.m_eject,<sp/>_abt_,<sp/><sp/><ref refid="class_weapon___base_1a60e3aae0da8cf362d945270bb7bf3138" kindref="member">C</ref>));</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mech_L.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Mech_L.m_hideB,<sp/>_abt_,<sp/><sp/><ref refid="class_weapon___base_1a60e3aae0da8cf362d945270bb7bf3138" kindref="member">C</ref>));</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Chamber<sp/>bolt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__L__,<sp/><sp/>Chamber_U));</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Chamber_U,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>_fin_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38aef31cc6fe9479955961311ee18ac205f" kindref="member">L</ref>));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Chamber_U.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Chamber_U.m_start,<sp/><sp/><sp/>_abt_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>));</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Chamber_U.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Chamber_U.m_onCK,<sp/><sp/><sp/><sp/>_abt_,<sp/><sp/><ref refid="class_weapon___base_1a60e3aae0da8cf362d945270bb7bf3138" kindref="member">C</ref>));</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Chamber_U.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Chamber_U.m_chamber,<sp/>_abt_,<sp/><sp/><ref refid="class_weapon___base_1a60e3aae0da8cf362d945270bb7bf3138" kindref="member">C</ref>));</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Chamber_U.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Chamber_U.m_w4t,<sp/><sp/><sp/><sp/><sp/>_abt_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38aef31cc6fe9479955961311ee18ac205f" kindref="member">L</ref>));</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><ref refid="class_weapon___base_1a60e3aae0da8cf362d945270bb7bf3138" kindref="member">C</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__L__,<sp/><sp/>Chamber_C));</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Chamber_C,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>_fin_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38aef31cc6fe9479955961311ee18ac205f" kindref="member">L</ref>));<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Chamber_C.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Chamber_C.m_start,<sp/><sp/><sp/>_abt_,<sp/><sp/><ref refid="class_weapon___base_1a60e3aae0da8cf362d945270bb7bf3138" kindref="member">C</ref>));</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Chamber_C.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Chamber_C.m_chamber,<sp/>_abt_,<sp/><sp/><ref refid="class_weapon___base_1a60e3aae0da8cf362d945270bb7bf3138" kindref="member">C</ref>));</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Chamber_C.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Chamber_C.m_w4t,<sp/><sp/><sp/><sp/><sp/>_abt_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38aef31cc6fe9479955961311ee18ac205f" kindref="member">L</ref>));</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><ref refid="class_weapon___base_1a60e3aae0da8cf362d945270bb7bf3138" kindref="member">C</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__T__,<sp/><sp/>Trigger_C));</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Trigger_C,<sp/><sp/><sp/>_fin_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>));</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Trigger_C,<sp/><sp/><sp/>_abt_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>));</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Trigger_C,<sp/><sp/><sp/>_dto_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>));</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Trigger_C,<sp/><sp/><sp/>_abt_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>));</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__T__,<sp/><sp/>Trigger_U));</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Trigger_U,<sp/><sp/><sp/>_fin_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>));</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Trigger_U,<sp/><sp/><sp/>_abt_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>));</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Trigger_U,<sp/><sp/><sp/>_dto_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>));</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Trigger_U,<sp/><sp/><sp/>_abt_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>));</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38aef31cc6fe9479955961311ee18ac205f" kindref="member">L</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>__T__,<sp/><sp/>Trigger_L));</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Trigger_L,<sp/><sp/><sp/>_fin_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>));</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Trigger_L,<sp/><sp/><sp/>_abt_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>));</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Trigger_L,<sp/><sp/><sp/>_dto_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>));</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.AddTransition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_weapon___base_8c_1aad9c748f817f5536f4f2bfd213b4afc1" kindref="member">WeaponTransition</ref>(<sp/><sp/>Trigger_L,<sp/><sp/><sp/>_abt_,<sp/><sp/><ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>));</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SelectionBulletHide();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i&lt;m_bulletSelectionIndex.Count();<sp/>i++)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_weapon___base_1a534c23899d340f4748037cc5e4f62f29" kindref="member">HideBullet</ref>(i);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EffectBulletHide(0);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetInitialState(<ref refid="_weapon_stable_state_8c_1a81850a19579d69fbd62d39a8f08a5f38ac461e84f27bbb236874e1011cd66031f" kindref="member">U</ref>);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_fsm.Start();</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="163" refid="class_crossbow___base_1a02ccbb048d1404f0d93c2042f3f6c154" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_crossbow___base_1a02ccbb048d1404f0d93c2042f3f6c154" kindref="member">GetChanceToJam</ref>()</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.0;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168" refid="class_crossbow___base_1a0f4166bcff4197d1bd2e48bfd966a1fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_crossbow___base_1a0f4166bcff4197d1bd2e48bfd966a1fe" kindref="member">OnDebugSpawn</ref>()</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnDebugSpawn();</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_game_inventory" kindref="compound">GameInventory</ref><sp/>inventory<sp/>=<sp/>GetInventory();</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inventory.<ref refid="class_game_inventory_1a46ee7e7823f708ee45285ec153432f0b" kindref="member">CreateInInventory</ref>(<sp/></highlight><highlight class="stringliteral">&quot;ACOGOptic_6x&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Crossbow<sp/>:<sp/><ref refid="class_crossbow___base" kindref="compound">Crossbow_Base</ref><sp/>{}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Crossbow_Autumn<sp/>:<sp/><ref refid="class_crossbow___base" kindref="compound">Crossbow_Base</ref><sp/>{}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Crossbow_Summer<sp/>:<sp/><ref refid="class_crossbow___base" kindref="compound">Crossbow_Base</ref><sp/>{}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Crossbow_Black<sp/>:<sp/><ref refid="class_crossbow___base" kindref="compound">Crossbow_Base</ref><sp/>{}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Crossbow_Wood<sp/>:<sp/><ref refid="class_crossbow___base" kindref="compound">Crossbow_Base</ref><sp/>{}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/Archery/Crossbow.c"/>
+  </compounddef>
+</doxygen>

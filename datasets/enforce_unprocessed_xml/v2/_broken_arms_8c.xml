@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_broken_arms_8c" kind="file" language="C++">
+    <compoundname>BrokenArms.c</compoundname>
+    <innerclass refid="class_broken_arms_mdfr" prot="public">BrokenArmsMdfr</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_broken_arms_mdfr" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_broken_arms_mdfr" kindref="compound">BrokenArmsMdfr</ref>:<sp/><ref refid="class_modifier_base" kindref="compound">ModifierBase</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_broken_arms_mdfr_1a32d2cbba6ac94b93a9a71906ff74178a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_broken_arms_mdfr_1a32d2cbba6ac94b93a9a71906ff74178a" kindref="member">HEALTHY_ARM</ref><sp/>=<sp/>80;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="5" refid="class_broken_arms_mdfr_1adb5e94285243f948008c688db6e720c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_broken_arms_mdfr_1adb5e94285243f948008c688db6e720c8" kindref="member">Init</ref>()</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifier_base_8c_1a04ae6d90cb75d3086c27e65cddd358a0" kindref="member">m_TrackActivatedTime</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_effect_8c_1a231c2447c3602426c9e06e6094bae8a8" kindref="member">m_ID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="e_modifiers_8c_1a38544df67f7f5b2fdf488d7705d7a582" kindref="member">eModifiers</ref>.MDF_BROKEN_ARMS;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifier_base_8c_1aad5f52b5eb22d81599e8a25ec6055d22" kindref="member">m_TickIntervalInactive</ref><sp/><sp/>=<sp/><ref refid="_modifiers_manager_8c_1ab41b0cbf9fe485932fbffc19ea426bac" kindref="member">DEFAULT_TICK_TIME_INACTIVE</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifier_base_8c_1aa9aa2d760c0099abe3d671d7c4c6368f" kindref="member">m_TickIntervalActive</ref><sp/><sp/><sp/><sp/>=<sp/><ref refid="_modifiers_manager_8c_1ad7b192f22a83d324fbb2fc7fea14ad09" kindref="member">DEFAULT_TICK_TIME_ACTIVE</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_broken_arms_mdfr_1ad8ab81b18497c6c2584d899d32f30adb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_broken_arms_mdfr_1ad8ab81b18497c6c2584d899d32f30adb" kindref="member">ActivateCondition</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>player.GetHealth(</highlight><highlight class="stringliteral">&quot;RightArm&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Health&quot;</highlight><highlight class="normal">)<sp/>&lt;=<sp/>0<sp/>||<sp/>player.GetHealth(</highlight><highlight class="stringliteral">&quot;LeftArm&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Health&quot;</highlight><highlight class="normal">)<sp/>&lt;=<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_broken_arms_mdfr_1a7d745f9ed145aa421b1d00609c3b2b32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_broken_arms_mdfr_1a7d745f9ed145aa421b1d00609c3b2b32" kindref="member">OnActivate</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>player.setBrokenLimbs(&quot;Arms&quot;,true);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_broken_arms_mdfr_1a4ab4196d103a31311c227aec92767dd8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_broken_arms_mdfr_1a4ab4196d103a31311c227aec92767dd8" kindref="member">OnDeactivate</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>player.setBrokenLimbs(&quot;Arms&quot;,false);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_broken_arms_mdfr_1aab7a5a3ad1d0c1236d34282957a2fdb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_broken_arms_mdfr_1aab7a5a3ad1d0c1236d34282957a2fdb9" kindref="member">DeactivateCondition</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>player.GetHealth(</highlight><highlight class="stringliteral">&quot;RightArm&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Health&quot;</highlight><highlight class="normal">)<sp/>&gt;=<sp/><ref refid="class_broken_arms_mdfr_1a32d2cbba6ac94b93a9a71906ff74178a" kindref="member">HEALTHY_ARM</ref><sp/>&amp;&amp;<sp/>player.GetHealth(</highlight><highlight class="stringliteral">&quot;LeftArm&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Health&quot;</highlight><highlight class="normal">)<sp/>&gt;=<sp/><ref refid="class_broken_arms_mdfr_1a32d2cbba6ac94b93a9a71906ff74178a" kindref="member">HEALTHY_ARM</ref><sp/>)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/BrokenArms.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,944 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_p_p_e_requester_bank_8c" kind="file" language="C++">
+    <compoundname>PPERequesterBank.c</compoundname>
+    <innerclass refid="class_managed" prot="public">Managed</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1aeb00b98c9c1c3fdd01f7e928f0dd6c2b" prot="public" static="yes" mutable="no">
+        <type>private ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, ref <ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref> &gt;</type>
+        <definition>private ref map&lt;int,ref PPERequesterBase&gt; m_Instances</definition>
+        <argsstring></argsstring>
+        <name>m_Instances</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="228" column="24" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a3a2bf64a45ae6b53f2a99ba7fd43ee1d" prot="public" static="yes" mutable="no">
+        <type>private <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>private bool m_Initialized</definition>
+        <argsstring></argsstring>
+        <name>m_Initialized</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="229" column="21" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a6c95c998c46169bcf848d604acfd8364" prot="public" static="yes" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int m_lastID</definition>
+        <argsstring></argsstring>
+        <name>m_lastID</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="231" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a9e7c0b2080f92c6a4c05c28f85d46046" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int INVALID</definition>
+        <argsstring></argsstring>
+        <name>INVALID</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="233" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a4918a03b0aa7eeb5c93b76c17758dafa" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_INVENTORYBLUR</definition>
+        <argsstring></argsstring>
+        <name>REQ_INVENTORYBLUR</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_InventoryBlur)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="234" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a0d89b602646e43a8e84fdfeec7f28aa8" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_CONTROLLERDISCONNECT</definition>
+        <argsstring></argsstring>
+        <name>REQ_CONTROLLERDISCONNECT</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_ControllerDisconnectBlur)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="235" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a1db7d475f852ef716731769d48a70ea8" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_GLASSESSPORTBLACK</definition>
+        <argsstring></argsstring>
+        <name>REQ_GLASSESSPORTBLACK</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_GlassesSportBlack)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="236" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1ae57c33173a955e365214fa4a5de6c841" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_GLASSESSPORTBLUE</definition>
+        <argsstring></argsstring>
+        <name>REQ_GLASSESSPORTBLUE</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_GlassesSportBlue)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="237" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1aec9d06cb6bcc9a8c491231ee215ec4e8" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_GLASSESSPORTGREEN</definition>
+        <argsstring></argsstring>
+        <name>REQ_GLASSESSPORTGREEN</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_GlassesSportGreen)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="238" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a6cb0feee92ef8f5eefdd3467fcdf3bd1" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_GLASSESSPORTORANGE</definition>
+        <argsstring></argsstring>
+        <name>REQ_GLASSESSPORTORANGE</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_GlassesSportOrange)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="239" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a57a33a80c1487d8b0a5d2d9f9a5d3e47" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_GLASSESAVIATOR</definition>
+        <argsstring></argsstring>
+        <name>REQ_GLASSESAVIATOR</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_GlassesAviator)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="240" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a4269791c802f856fb25f00aa6ce67396" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_GLASSESDESIGNER</definition>
+        <argsstring></argsstring>
+        <name>REQ_GLASSESDESIGNER</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_GlassesDesignerBlack)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="241" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a09a48c373eee0ec26f7462aa00c9f1a6" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_GLASSESTACTICAL</definition>
+        <argsstring></argsstring>
+        <name>REQ_GLASSESTACTICAL</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_TacticalGoggles)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="242" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a65e33d94fa6b2a49a11209251cbbf071" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_MOTOHELMETBLACK</definition>
+        <argsstring></argsstring>
+        <name>REQ_MOTOHELMETBLACK</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_MotoHelmetBlack)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="243" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1ad48ad7027ea81a441661581e624f0ce0" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_GLASSESWELDING</definition>
+        <argsstring></argsstring>
+        <name>REQ_GLASSESWELDING</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_WeldingMask)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="244" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a6cb8714f183c2283e554ab13e505d330" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_CAMERANV</definition>
+        <argsstring></argsstring>
+        <name>REQ_CAMERANV</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_CameraNV)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="245" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1adc435301e3993007773656f07af88e14" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_CAMERAADS</definition>
+        <argsstring></argsstring>
+        <name>REQ_CAMERAADS</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_CameraADS)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="246" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1ad000fc35416961871d1b6dd595ea466e" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_BLOODLOSS</definition>
+        <argsstring></argsstring>
+        <name>REQ_BLOODLOSS</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_BloodLoss)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="247" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1ab0dda76d2dcf54aa61febdcd5e6c73fc" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_DEATHEFFECTS</definition>
+        <argsstring></argsstring>
+        <name>REQ_DEATHEFFECTS</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_DeathDarkening)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="248" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1ab804b3cd198625ebbb875b376edfe840" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_UNCONEFFECTS</definition>
+        <argsstring></argsstring>
+        <name>REQ_UNCONEFFECTS</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_UnconEffects)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="249" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1ac4c7de18fdb13a82605328e0a39db7c3" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_TUNELVISSION</definition>
+        <argsstring></argsstring>
+        <name>REQ_TUNELVISSION</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_TunnelVisionEffects)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="250" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a44e56a8f8230c92bcb772f2796a80bfc" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_BURLAPSACK</definition>
+        <argsstring></argsstring>
+        <name>REQ_BURLAPSACK</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_BurlapSackEffects)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="251" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a37577d83e83fc6c63693d2f6c7dca741" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_INTROCHROMABB</definition>
+        <argsstring></argsstring>
+        <name>REQ_INTROCHROMABB</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_IntroChromAbb)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="252" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a71ed87e9257a0066ef933643ad063d22" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_FEVEREFFECTS</definition>
+        <argsstring></argsstring>
+        <name>REQ_FEVEREFFECTS</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_FeverEffects)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="253" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1adb4bd1da861100ed717c1285cf93a1e3" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_FLASHBANGEFFECTS</definition>
+        <argsstring></argsstring>
+        <name>REQ_FLASHBANGEFFECTS</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_FlashbangEffects)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="254" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a705a9b2af8f217f1adb76031429bd2ea" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_SHOCKHITEFFECTS</definition>
+        <argsstring></argsstring>
+        <name>REQ_SHOCKHITEFFECTS</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_ShockHitReaction)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="255" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a033bb73ced167b950e1aa74282a5cb83" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_HEALTHHITEFFECTS</definition>
+        <argsstring></argsstring>
+        <name>REQ_HEALTHHITEFFECTS</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_HealthHitReaction)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="256" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1adfade733d06363efd9751c02d21c4692" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_MENUEFFECTS</definition>
+        <argsstring></argsstring>
+        <name>REQ_MENUEFFECTS</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_MenuEffects)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="257" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a37a7ecc05796fcebeab67e1114b11661" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_CONTROLLERBLUR</definition>
+        <argsstring></argsstring>
+        <name>REQ_CONTROLLERBLUR</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_ControlsBlur)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="258" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1ae67ec1059a52beebd07e0707bf84f6ec" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_SERVERBROWSEREFFECTS</definition>
+        <argsstring></argsstring>
+        <name>REQ_SERVERBROWSEREFFECTS</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_ServerBrowserBlur)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="259" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1aa1e1d7f909a7a3a617ed1da24348a191" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_TUTORIALEFFECTS</definition>
+        <argsstring></argsstring>
+        <name>REQ_TUTORIALEFFECTS</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_TutorialMenu)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="260" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a4b6a720e7d856524e88c412846dbf206" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_CONTAMINATEDAREA</definition>
+        <argsstring></argsstring>
+        <name>REQ_CONTAMINATEDAREA</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_ContaminatedAreaTint)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="261" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1aef5943ece7433b3b18875bcfad2211b9" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_SPOOKYAREA</definition>
+        <argsstring></argsstring>
+        <name>REQ_SPOOKYAREA</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_SpookyAreaTint)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="262" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1ad8091b31e9ebee1cf6b96e05d1d83932" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_PAINBLUR</definition>
+        <argsstring></argsstring>
+        <name>REQ_PAINBLUR</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_PainBlur)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="263" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1ae232de7a20e666b96494b8a96efc53b5" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_UNDERGROUND</definition>
+        <argsstring></argsstring>
+        <name>REQ_UNDERGROUND</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERUndergroundAcco)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="264" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a8d17d78f648e201ad53debb824cbe10f" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int REQ_DROWNING</definition>
+        <argsstring></argsstring>
+        <name>REQ_DROWNING</name>
+        <initializer>= <ref refid="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" kindref="member">RegisterRequester</ref>(PPERequester_Drowning)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="265" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="265" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_requester_bank_8c_1a996cf6650ab1321b6e0d28660f4b5223" prot="public" static="yes" mutable="no">
+        <type>private ref <ref refid="_p_p_e_requester_bank_8c_1a42f2147f809a3835c6b3d3dd19b9bd48" kindref="member">PPERequesterRegistrations</ref></type>
+        <definition>private ref PPERequesterRegistrations m_Registrations</definition>
+        <argsstring></argsstring>
+        <name>m_Registrations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="267" column="46" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="267" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_p_p_e_requester_bank_8c_1a42f2147f809a3835c6b3d3dd19b9bd48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class PPERequesterBank extends <ref refid="class_managed" kindref="compound">Managed</ref></type>
+        <definition>class PPERequesterBank extends Managed PPERequesterRegistrations</definition>
+        <argsstring>()</argsstring>
+        <name>PPERequesterRegistrations</name>
+        <briefdescription>
+<para>Mod this, if you wish to register custom requesters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="4" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="227" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_requester_bank_8c_1a8aa4d0c5ec5becb82fe32cef6937f19c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void PPERequesterRegistrations::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="269" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="269" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_requester_bank_8c_1ad890ae70f4547014186c37e8bbc42699" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void PPERequesterRegistrations::Cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>Cleanup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="279" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="279" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_requester_bank_8c_1a36d871544620be27d50e9d38a04a9064" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref></type>
+        <definition>static PPERequesterBase PPERequesterRegistrations::GetRequester</definition>
+        <argsstring>(typename type)</argsstring>
+        <name>GetRequester</name>
+        <param>
+          <type><ref refid="classtypename" kindref="compound">typename</ref> type</type>
+        </param>
+        <briefdescription>
+<para>Returns an instance (singleton) of a requester based on typename. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>typename</computeroutput> Typename of the requester. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref></computeroutput> Requester singleton. </para>
+</simplesect>
+<simplesect kind="note"><para>Returns only already registered instances, does not register anything. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="294" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="294" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_requester_bank_8c_1aa335e276c02c8f7a01f426fe31e4668a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref></type>
+        <definition>static PPERequesterBase PPERequesterRegistrations::GetRequester</definition>
+        <argsstring>(int index)</argsstring>
+        <name>GetRequester</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Returns an instance (singleton) of a requester based on index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Index of the registered requester. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref></computeroutput> Requester singleton. </para>
+</simplesect>
+<simplesect kind="note"><para>Returns only already registered instances, does not register anything. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="327" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="327" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_requester_bank_8c_1a9edc1113d3c4c39e657ccfbc42f54462" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static int PPERequesterRegistrations::GetRequesterID</definition>
+        <argsstring>(typename type)</argsstring>
+        <name>GetRequesterID</name>
+        <param>
+          <type><ref refid="classtypename" kindref="compound">typename</ref> type</type>
+        </param>
+        <briefdescription>
+<para>Returns an ID of a requester type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>typename</computeroutput> Typename of the requester. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> Requester ID. </para>
+</simplesect>
+<simplesect kind="note"><para>Returns &apos;-1&apos; if not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="344" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="344" bodyend="363"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_requester_bank_8c_1ab1bb08cdd6a8e05e82c96256e6c55c9e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static PPERequesterRegistrations::GetRequesterTypename</definition>
+        <argsstring>(int index)</argsstring>
+        <name>GetRequesterTypename</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Returns a typename from a requester ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> ID of the requester. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>typename</computeroutput> Requester typename. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="370" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="370" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_requester_bank_8c_1a8a7e9e6dfc3c8811f04ed7a89c57f3bf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static int PPERequesterRegistrations::RegisterRequester</definition>
+        <argsstring>(typename type)</argsstring>
+        <name>RegisterRequester</name>
+        <param>
+          <type><ref refid="classtypename" kindref="compound">typename</ref> type</type>
+        </param>
+        <briefdescription>
+<para>Registers new requester type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Performed only on game start. New requesters can be registered in &apos;PPERequesterRegistrations&apos; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="390" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="390" bodyend="410"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_requester_bank_8c_1a6aec2b17d96479e1af51392b90e6468e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static bool PPERequesterRegistrations::VerifyRequester</definition>
+        <argsstring>(PPERequesterBase req)</argsstring>
+        <name>VerifyRequester</name>
+        <param>
+          <type><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref></type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+<para>Verifies the instance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" line="413" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c" bodystart="413" bodyend="433"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="_p_p_e_requester_bank_8c_1a42f2147f809a3835c6b3d3dd19b9bd48" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">PPERequesterBank<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_managed" kindref="compound">Managed</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6" refid="class_managed_1a33457f0e629415c0ffdeb57f17bcf9ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ref<sp/><ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map&lt;int,ref PPERequesterBase&gt;</ref><sp/><ref refid="class_managed_1a33457f0e629415c0ffdeb57f17bcf9ba" kindref="member">m_Instances</ref>;</highlight></codeline>
+<codeline lineno="7" refid="class_managed_1a179efe0e5658215dd7b410816a0a55e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_ui_hint_panel_8c_1a2b24e7702c647888fe97110686cd2330" kindref="member">m_Initialized</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9" refid="class_managed_1ac90ad14e1c0056ac0ba80fa5b990889d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a6c95c998c46169bcf848d604acfd8364" kindref="member">m_lastID</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="11" refid="class_managed_1a36866b80c0aaa1443bca4982d01e626a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="group___file_1ggab6d091fc42473756488e3ba6fda6c4aeaef2863a469df3ea6871d640e3669a2f2" kindref="member">INVALID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="12" refid="class_managed_1a8353c6357fe40278b6c62d2269d52432" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a4918a03b0aa7eeb5c93b76c17758dafa" kindref="member">REQ_INVENTORYBLUR</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_InventoryBlur);</highlight></codeline>
+<codeline lineno="13" refid="class_managed_1af096bd2aa6904c4f0639a3179ca5d02e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a0d89b602646e43a8e84fdfeec7f28aa8" kindref="member">REQ_CONTROLLERDISCONNECT</ref><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_ControllerDisconnectBlur);</highlight></codeline>
+<codeline lineno="14" refid="class_managed_1a13fe3ef3e28157de69832ec42caa9fa1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a1db7d475f852ef716731769d48a70ea8" kindref="member">REQ_GLASSESSPORTBLACK</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_GlassesSportBlack);</highlight></codeline>
+<codeline lineno="15" refid="class_managed_1af88ee1f585e1abaeaadd8ab91f7dab66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1ae57c33173a955e365214fa4a5de6c841" kindref="member">REQ_GLASSESSPORTBLUE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_GlassesSportBlue);</highlight></codeline>
+<codeline lineno="16" refid="class_managed_1a2e41979f4b595d5417797668cdc685b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1aec9d06cb6bcc9a8c491231ee215ec4e8" kindref="member">REQ_GLASSESSPORTGREEN</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_GlassesSportGreen);</highlight></codeline>
+<codeline lineno="17" refid="class_managed_1a17f31c7cfcb3eacedfd63bc1af1f97cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a6cb0feee92ef8f5eefdd3467fcdf3bd1" kindref="member">REQ_GLASSESSPORTORANGE</ref><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_GlassesSportOrange);</highlight></codeline>
+<codeline lineno="18" refid="class_managed_1a2032a2a57b3ed24318ff1a61e3a3ba7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a57a33a80c1487d8b0a5d2d9f9a5d3e47" kindref="member">REQ_GLASSESAVIATOR</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_GlassesAviator);</highlight></codeline>
+<codeline lineno="19" refid="class_managed_1ae6648225fbf9af1936c6a78ac972959f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a4269791c802f856fb25f00aa6ce67396" kindref="member">REQ_GLASSESDESIGNER</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_GlassesDesignerBlack);</highlight></codeline>
+<codeline lineno="20" refid="class_managed_1af8dd8ca4048bb8cd5d23ab7d208bc22a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a09a48c373eee0ec26f7462aa00c9f1a6" kindref="member">REQ_GLASSESTACTICAL</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_TacticalGoggles);</highlight></codeline>
+<codeline lineno="21" refid="class_managed_1a92caad4c3d83c23e43a406ab8ff4eb80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a65e33d94fa6b2a49a11209251cbbf071" kindref="member">REQ_MOTOHELMETBLACK</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_MotoHelmetBlack);</highlight></codeline>
+<codeline lineno="22" refid="class_managed_1a052822067fba57748441c4cbb59993d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1ad48ad7027ea81a441661581e624f0ce0" kindref="member">REQ_GLASSESWELDING</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_WeldingMask);</highlight></codeline>
+<codeline lineno="23" refid="class_managed_1ac2150bae5f8b198986ec3de02e574402" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a6cb8714f183c2283e554ab13e505d330" kindref="member">REQ_CAMERANV</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_CameraNV);</highlight></codeline>
+<codeline lineno="24" refid="class_managed_1a6fc7f0d368f076db251ddc6b4ece0b74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1adc435301e3993007773656f07af88e14" kindref="member">REQ_CAMERAADS</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_CameraADS);</highlight></codeline>
+<codeline lineno="25" refid="class_managed_1af656f35ddd0cdcad6737aab906d679b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1ad000fc35416961871d1b6dd595ea466e" kindref="member">REQ_BLOODLOSS</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_BloodLoss);</highlight></codeline>
+<codeline lineno="26" refid="class_managed_1a3075803a5483f1491894264959471061" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1ab0dda76d2dcf54aa61febdcd5e6c73fc" kindref="member">REQ_DEATHEFFECTS</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_DeathDarkening);</highlight></codeline>
+<codeline lineno="27" refid="class_managed_1a843cb2c9693420240871fc417844e818" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1ab804b3cd198625ebbb875b376edfe840" kindref="member">REQ_UNCONEFFECTS</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_UnconEffects);</highlight></codeline>
+<codeline lineno="28" refid="class_managed_1af355e1397c71cf48b44b79d99a6dd507" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1ac4c7de18fdb13a82605328e0a39db7c3" kindref="member">REQ_TUNELVISSION</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_TunnelVisionEffects);</highlight></codeline>
+<codeline lineno="29" refid="class_managed_1aa8aa0c1ce6a17bd32e8a5ae841b6d616" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a44e56a8f8230c92bcb772f2796a80bfc" kindref="member">REQ_BURLAPSACK</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_BurlapSackEffects);</highlight></codeline>
+<codeline lineno="30" refid="class_managed_1a3e0a19e697b97aa249faf3bdaccd1f2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a37577d83e83fc6c63693d2f6c7dca741" kindref="member">REQ_INTROCHROMABB</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_IntroChromAbb);</highlight></codeline>
+<codeline lineno="31" refid="class_managed_1a9f6e5d774456759c6fefd5874a76ec1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a71ed87e9257a0066ef933643ad063d22" kindref="member">REQ_FEVEREFFECTS</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_FeverEffects);</highlight></codeline>
+<codeline lineno="32" refid="class_managed_1a1d8c0b22c74e451f0d9645e2b9e3127c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1adb4bd1da861100ed717c1285cf93a1e3" kindref="member">REQ_FLASHBANGEFFECTS</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_FlashbangEffects);</highlight></codeline>
+<codeline lineno="33" refid="class_managed_1af6291008852efbed233072e29c449c6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a705a9b2af8f217f1adb76031429bd2ea" kindref="member">REQ_SHOCKHITEFFECTS</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_ShockHitReaction);</highlight></codeline>
+<codeline lineno="34" refid="class_managed_1ada077cf5719a782ebdeaa2676d26330c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a033bb73ced167b950e1aa74282a5cb83" kindref="member">REQ_HEALTHHITEFFECTS</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_HealthHitReaction);</highlight></codeline>
+<codeline lineno="35" refid="class_managed_1a19d9abb38ff50adc578d1ad57abc9b1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1adfade733d06363efd9751c02d21c4692" kindref="member">REQ_MENUEFFECTS</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_MenuEffects);</highlight></codeline>
+<codeline lineno="36" refid="class_managed_1aa9708519556f25d2944e7767415f97b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a37a7ecc05796fcebeab67e1114b11661" kindref="member">REQ_CONTROLLERBLUR</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_ControlsBlur);</highlight></codeline>
+<codeline lineno="37" refid="class_managed_1a12a7ac21bc26d001082a7c554c7e12a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1ae67ec1059a52beebd07e0707bf84f6ec" kindref="member">REQ_SERVERBROWSEREFFECTS</ref><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_ServerBrowserBlur);</highlight></codeline>
+<codeline lineno="38" refid="class_managed_1a19bc2b590403904b9fb3b8456d727544" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1aa1e1d7f909a7a3a617ed1da24348a191" kindref="member">REQ_TUTORIALEFFECTS</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_TutorialMenu);</highlight></codeline>
+<codeline lineno="39" refid="class_managed_1a74063836431edd52d37fde6fcad825f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a4b6a720e7d856524e88c412846dbf206" kindref="member">REQ_CONTAMINATEDAREA</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_ContaminatedAreaTint);</highlight></codeline>
+<codeline lineno="40" refid="class_managed_1a33f516ea69ca913ce3cc3641ab12bf85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1aef5943ece7433b3b18875bcfad2211b9" kindref="member">REQ_SPOOKYAREA</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_SpookyAreaTint);</highlight></codeline>
+<codeline lineno="41" refid="class_managed_1a9504f493db252d3f153bc08dc18ded88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1ad8091b31e9ebee1cf6b96e05d1d83932" kindref="member">REQ_PAINBLUR</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_PainBlur);</highlight></codeline>
+<codeline lineno="42" refid="class_managed_1ac34c57461122ff56c6488f49aef96476" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1ae232de7a20e666b96494b8a96efc53b5" kindref="member">REQ_UNDERGROUND</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERUndergroundAcco);</highlight></codeline>
+<codeline lineno="43" refid="class_managed_1a5e61b2475b0c10aee3bd82111f69f82c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a8d17d78f648e201ad53debb824cbe10f" kindref="member">REQ_DROWNING</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(PPERequester_Drowning);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="class_managed_1adf7c13067de8bdc882995ae45d9cd1c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ref<sp/><ref refid="_p_p_e_requester_bank_8c_1a42f2147f809a3835c6b3d3dd19b9bd48" kindref="member">PPERequesterRegistrations</ref><sp/><sp/><sp/><sp/><ref refid="class_managed_1adf7c13067de8bdc882995ae45d9cd1c0" kindref="member">m_Registrations</ref>;<sp/></highlight><highlight class="comment">//more<sp/>registrations<sp/>to<sp/>be<sp/>placed<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="class_managed_1a325c9a8c1ba18f0730129835c4934351" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_managed_1a325c9a8c1ba18f0730129835c4934351" kindref="member">Init</ref>()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_requester_bank_8c_1a996cf6650ab1321b6e0d28660f4b5223" kindref="member">m_Registrations</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a42f2147f809a3835c6b3d3dd19b9bd48" kindref="member">PPERequesterRegistrations</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="_p_p_e_requester_bank_8c_1aeb00b98c9c1c3fdd01f7e928f0dd6c2b" kindref="member">m_Instances</ref>)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_requester_bank_8c_1aeb00b98c9c1c3fdd01f7e928f0dd6c2b" kindref="member">m_Instances</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map&lt;int,ref PPERequesterBase&gt;</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_ui_hint_panel_8c_1a2b24e7702c647888fe97110686cd2330" kindref="member">m_Initialized</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="class_managed_1acd5ce8693104b8f35cde706be9e79cd0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_managed_1acd5ce8693104b8f35cde706be9e79cd0" kindref="member">Cleanup</ref>()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_ui_hint_panel_8c_1a2b24e7702c647888fe97110686cd2330" kindref="member">m_Initialized</ref>)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_managed_1adf7c13067de8bdc882995ae45d9cd1c0" kindref="member">m_Registrations</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_requester_bank_8c_1aeb00b98c9c1c3fdd01f7e928f0dd6c2b" kindref="member">m_Instances</ref>.Clear();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="class_managed_1ad52fbb03446ce0bd26bad8cd09ce0ea3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref><sp/><ref refid="class_managed_1ad52fbb03446ce0bd26bad8cd09ce0ea3" kindref="member">GetRequester</ref>(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>type)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!type)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1ga786b160dafbe15abb829786ba345cb15" kindref="member">Error</ref>(</highlight><highlight class="stringliteral">&quot;Requested<sp/>type<sp/>is<sp/>NULL!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>null;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref><sp/>temp;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref><sp/>ret;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="_p_p_e_requester_bank_8c_1aeb00b98c9c1c3fdd01f7e928f0dd6c2b" kindref="member">m_Instances</ref>.Count();<sp/>i++)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/><ref refid="_p_p_e_requester_bank_8c_1aeb00b98c9c1c3fdd01f7e928f0dd6c2b" kindref="member">m_Instances</ref>.GetElement(i);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temp.Type()<sp/>==<sp/>type)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_class" kindref="compound">Class</ref>.<ref refid="group___enforce_1ga253ceb932745ea74ca4a4d3d9e8c12d7" kindref="member">CastTo</ref>(ret,temp);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ret)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_debug" kindref="compound">Debug</ref>.<ref refid="class_debug_1ac759558b1dd4e820330546c994a9d840" kindref="member">Log</ref>(</highlight><highlight class="stringliteral">&quot;&apos;&quot;</highlight><highlight class="normal"><sp/>+<sp/>type.ToString()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>not<sp/>found<sp/>in<sp/>bank!<sp/>Register<sp/>first<sp/>in<sp/>&apos;RegisterRequester&apos;<sp/>method.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105" refid="class_managed_1a7818c288b67090150b6625d68372bab6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref><sp/><ref refid="class_managed_1a7818c288b67090150b6625d68372bab6" kindref="member">GetRequester</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref><sp/>ret<sp/>=<sp/><ref refid="_p_p_e_requester_bank_8c_1aeb00b98c9c1c3fdd01f7e928f0dd6c2b" kindref="member">m_Instances</ref>.Get(index);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ret)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_debug" kindref="compound">Debug</ref>.<ref refid="class_debug_1ac759558b1dd4e820330546c994a9d840" kindref="member">Log</ref>(</highlight><highlight class="stringliteral">&quot;Requester<sp/>idx<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>+<sp/>index<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>not<sp/>found<sp/>in<sp/>bank!<sp/>Register<sp/>first<sp/>in<sp/>&apos;RegisterRequester&apos;<sp/>method.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122" refid="class_managed_1a879a19fc7a2bf3ed788877963f49f273" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_managed_1a879a19fc7a2bf3ed788877963f49f273" kindref="member">GetRequesterID</ref>(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>type)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref><sp/>temp;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="_p_p_e_requester_bank_8c_1aeb00b98c9c1c3fdd01f7e928f0dd6c2b" kindref="member">m_Instances</ref>.Count();<sp/>i++)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/><ref refid="_p_p_e_requester_bank_8c_1aeb00b98c9c1c3fdd01f7e928f0dd6c2b" kindref="member">m_Instances</ref>.GetElement(i);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temp.Type()<sp/>==<sp/>type)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="_p_p_e_requester_bank_8c_1aeb00b98c9c1c3fdd01f7e928f0dd6c2b" kindref="member">m_Instances</ref>.GetKey(i);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ret<sp/>==<sp/>-1<sp/>)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_debug" kindref="compound">Debug</ref>.<ref refid="class_debug_1ac759558b1dd4e820330546c994a9d840" kindref="member">Log</ref>(</highlight><highlight class="stringliteral">&quot;Requester<sp/>instance<sp/>of<sp/>the<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>+<sp/>type.ToString()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>type<sp/>not<sp/>found<sp/>in<sp/>bank!<sp/>Register<sp/>first<sp/>in<sp/>&apos;RegisterRequester&apos;<sp/>method.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="148" refid="class_managed_1a3906ed854a232ec068038c668345aaa9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="class_managed_1a3906ed854a232ec068038c668345aaa9" kindref="member">GetRequesterTypename</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref><sp/>temp<sp/>=<sp/><ref refid="_p_p_e_requester_bank_8c_1aeb00b98c9c1c3fdd01f7e928f0dd6c2b" kindref="member">m_Instances</ref>.Get(index);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!temp<sp/>)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_debug" kindref="compound">Debug</ref>.<ref refid="class_debug_1ac759558b1dd4e820330546c994a9d840" kindref="member">Log</ref>(</highlight><highlight class="stringliteral">&quot;No<sp/>requester<sp/>exists<sp/>under<sp/>idx<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>+<sp/>index<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>in<sp/>bank!<sp/>Register<sp/>first<sp/>in<sp/>&apos;RegisterRequester&apos;<sp/>method.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/>temp.Type();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168" refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_managed_1aec216af0c4bc993506f8947e277ebfa6" kindref="member">RegisterRequester</ref>(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>type)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="_p_p_e_requester_bank_8c_1aeb00b98c9c1c3fdd01f7e928f0dd6c2b" kindref="member">m_Instances</ref>)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_requester_bank_8c_1aeb00b98c9c1c3fdd01f7e928f0dd6c2b" kindref="member">m_Instances</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map&lt;int,ref PPERequesterBase&gt;</ref>;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_underground_handler_client_8c_1ade8cc50e704147bfff87fd2a2ac32b1e" kindref="member">GetRequester</ref>(type)<sp/>!=<sp/>null<sp/>)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Error(&quot;Trying<sp/>to<sp/>register<sp/>an<sp/>already<sp/>existing<sp/>requester<sp/>type:<sp/>&quot;<sp/>+<sp/>type);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_debug" kindref="compound">Debug</ref>.<ref refid="class_debug_1ac759558b1dd4e820330546c994a9d840" kindref="member">Log</ref>(</highlight><highlight class="stringliteral">&quot;Trying<sp/>to<sp/>register<sp/>an<sp/>already<sp/>existing<sp/>requester<sp/>type:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>type);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_requester_bank_8c_1a6c95c998c46169bcf848d604acfd8364" kindref="member">m_lastID</ref>++;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref><sp/>req;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>req<sp/>=<sp/><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref>.Cast(type.Spawn());</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>req.<ref refid="class_p_p_e_requester_base_1addcc175c7121111a67261d880093f82d" kindref="member">SetRequesterIDX</ref>(<ref refid="_p_p_e_requester_bank_8c_1a6c95c998c46169bcf848d604acfd8364" kindref="member">m_lastID</ref>);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_requester_bank_8c_1aeb00b98c9c1c3fdd01f7e928f0dd6c2b" kindref="member">m_Instances</ref>.Set(<ref refid="_p_p_e_requester_bank_8c_1a6c95c998c46169bcf848d604acfd8364" kindref="member">m_lastID</ref>,req);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_managed_1ac90ad14e1c0056ac0ba80fa5b990889d" kindref="member">m_lastID</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="191" refid="class_managed_1afa979c318a6d2aa0af43e664341611f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_managed_1afa979c318a6d2aa0af43e664341611f2" kindref="member">VerifyRequester</ref>(<ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref><sp/>req)</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="_ui_hint_panel_8c_1a2b24e7702c647888fe97110686cd2330" kindref="member">m_Initialized</ref>)<sp/></highlight><highlight class="comment">//initial<sp/>registrations<sp/>are<sp/>fair<sp/>game</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref><sp/>temp;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="_p_p_e_requester_bank_8c_1aeb00b98c9c1c3fdd01f7e928f0dd6c2b" kindref="member">m_Instances</ref>.Count();<sp/>i++)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/><ref refid="_p_p_e_requester_bank_8c_1aeb00b98c9c1c3fdd01f7e928f0dd6c2b" kindref="member">m_Instances</ref>.GetElement(i);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(temp<sp/>==<sp/>req)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Error(&quot;Requester<sp/>instance<sp/>&quot;<sp/>+<sp/>req<sp/>+<sp/>&quot;<sp/>not<sp/>valid!<sp/>Please<sp/>use<sp/>registered<sp/>instances<sp/>from<sp/>PPERequesterBank.&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_debug" kindref="compound">Debug</ref>.<ref refid="class_debug_1ac759558b1dd4e820330546c994a9d840" kindref="member">Log</ref>(</highlight><highlight class="stringliteral">&quot;Requester<sp/>instance<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>+<sp/>req<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>not<sp/>valid!<sp/>Please<sp/>use<sp/>registered<sp/>instances<sp/>from<sp/>PPERequesterBank.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*static<sp/>void<sp/>DumpInstances()</highlight></codeline>
+<codeline lineno="214"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Print(&quot;DumpInstances&quot;);</highlight></codeline>
+<codeline lineno="216"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>m_Instances.Count();<sp/>i++)</highlight></codeline>
+<codeline lineno="217"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Print(m_Instances.GetKey(i));</highlight></codeline>
+<codeline lineno="219"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Print(m_Instances.GetElement(i));</highlight></codeline>
+<codeline lineno="220"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="comment"><sp/><sp/><sp/><sp/>}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_p_p_e_requester_bank_8c_1a42f2147f809a3835c6b3d3dd19b9bd48" kindref="member">PPERequesterRegistrations</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_managed" kindref="compound">Managed</ref></highlight></codeline>
+<codeline lineno="226"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_requester_bank_8c_1a42f2147f809a3835c6b3d3dd19b9bd48" kindref="member">PPERequesterRegistrations</ref>()</highlight></codeline>
+<codeline lineno="228" refid="_p_p_e_requester_bank_8c_1aeb00b98c9c1c3fdd01f7e928f0dd6c2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="229" refid="_p_p_e_requester_bank_8c_1a3a2bf64a45ae6b53f2a99ba7fd43ee1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//PPERequesterBank.RegisterRequester(TestReq);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="231" refid="_p_p_e_requester_bank_8c_1a6c95c998c46169bcf848d604acfd8364" refkind="member"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233" refid="_p_p_e_requester_bank_8c_1a9e7c0b2080f92c6a4c05c28f85d46046" refkind="member"><highlight class="normal"></highlight><highlight class="comment">/*modded<sp/>class<sp/>PPERequesterRegistrations<sp/>extends<sp/>Managed</highlight></codeline>
+<codeline lineno="234" refid="_p_p_e_requester_bank_8c_1a4918a03b0aa7eeb5c93b76c17758dafa" refkind="member"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="235" refid="_p_p_e_requester_bank_8c_1a0d89b602646e43a8e84fdfeec7f28aa8" refkind="member"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>PPERequesterRegistrations()</highlight></codeline>
+<codeline lineno="236" refid="_p_p_e_requester_bank_8c_1a1db7d475f852ef716731769d48a70ea8" refkind="member"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="237" refid="_p_p_e_requester_bank_8c_1ae57c33173a955e365214fa4a5de6c841" refkind="member"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PPERequesterBank.RegisterRequester(TestReq2);</highlight></codeline>
+<codeline lineno="238" refid="_p_p_e_requester_bank_8c_1aec9d06cb6bcc9a8c491231ee215ec4e8" refkind="member"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239" refid="_p_p_e_requester_bank_8c_1a6cb0feee92ef8f5eefdd3467fcdf3bd1" refkind="member"><highlight class="comment">}*/</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPERequesterBank.c"/>
+  </compounddef>
+</doxygen>

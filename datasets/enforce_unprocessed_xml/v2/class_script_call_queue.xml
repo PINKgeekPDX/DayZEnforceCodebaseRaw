@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_script_call_queue" kind="class" language="C++" prot="public">
+    <compoundname>ScriptCallQueue</compoundname>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_script_call_queue_1ae868e5e9c370259c5c4e1bb99f6e7e60" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void ScriptCallQueue::Tick</definition>
+        <argsstring>(float timeslice)</argsstring>
+        <name>Tick</name>
+        <qualifiedname>ScriptCallQueue::Tick</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>timeslice</declname>
+        </param>
+        <briefdescription>
+<para>executes calls on queue if their time is already elapsed, if &apos;repeat = false&apos; call is removed from queue </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="55" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_script_call_queue_1aa3b6f9bf12bd4762b836f733eec0f05d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void ScriptCallQueue::Call</definition>
+        <argsstring>(func fn, void param1=NULL, void param2=NULL, void param3=NULL, void param4=NULL, void param5=NULL, void param6=NULL, void param7=NULL, void param8=NULL, void param9=NULL)</argsstring>
+        <name>Call</name>
+        <qualifiedname>ScriptCallQueue::Call</qualifiedname>
+        <param>
+          <type><ref refid="classfunc" kindref="compound">func</ref></type>
+          <declname>fn</declname>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param1</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param2</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param3</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param4</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param5</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param6</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param7</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param8</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param9</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>adds call into the queue with given parameters and arguments (arguments are held in memory until the call is executed/removed or <ref refid="class_script_call_queue" kindref="compound">ScriptCallQueue</ref> is destroyed) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="57" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_script_call_queue_1aaae2b06b1c224d7fd6581fb8ed70e04a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void ScriptCallQueue::CallByName</definition>
+        <argsstring>(Class obj, string fnName, Param params=NULL)</argsstring>
+        <name>CallByName</name>
+        <qualifiedname>ScriptCallQueue::CallByName</qualifiedname>
+        <param>
+          <type><ref refid="class_class" kindref="compound">Class</ref></type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>fnName</declname>
+        </param>
+        <param>
+          <type><ref refid="class_param" kindref="compound">Param</ref></type>
+          <declname>params</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>adds call into the queue with given parameters and arguments (arguments are held in memory until the call is executed/removed or <ref refid="class_script_call_queue" kindref="compound">ScriptCallQueue</ref> is destroyed) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="59" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_script_call_queue_1abe764b22b6eee91d169f3f5996fe0c3d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void ScriptCallQueue::CallLater</definition>
+        <argsstring>(func fn, int delay=0, bool repeat=false, void param1=NULL, void param2=NULL, void param3=NULL, void param4=NULL, void param5=NULL, void param6=NULL, void param7=NULL, void param8=NULL, void param9=NULL)</argsstring>
+        <name>CallLater</name>
+        <qualifiedname>ScriptCallQueue::CallLater</qualifiedname>
+        <param>
+          <type><ref refid="classfunc" kindref="compound">func</ref></type>
+          <declname>fn</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>delay</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>repeat</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param1</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param2</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param3</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param4</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param5</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param6</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param7</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param8</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param9</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>adds call into the queue with given parameters and arguments (arguments are held in memory until the call is executed/removed or <ref refid="class_script_call_queue" kindref="compound">ScriptCallQueue</ref> is destroyed) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="61" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_script_call_queue_1a1e6ad53334296b858c7a13a643e543d7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void ScriptCallQueue::CallLaterByName</definition>
+        <argsstring>(Class obj, string fnName, int delay=0, bool repeat=false, Param params=NULL)</argsstring>
+        <name>CallLaterByName</name>
+        <qualifiedname>ScriptCallQueue::CallLaterByName</qualifiedname>
+        <param>
+          <type><ref refid="class_class" kindref="compound">Class</ref></type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>fnName</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>delay</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>repeat</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type><ref refid="class_param" kindref="compound">Param</ref></type>
+          <declname>params</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>adds call into the queue with given parameters and arguments (arguments are held in memory until the call is executed/removed or <ref refid="class_script_call_queue" kindref="compound">ScriptCallQueue</ref> is destroyed) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="63" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_script_call_queue_1a0666af43474c9f23138bc30a38696ab7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void ScriptCallQueue::Remove</definition>
+        <argsstring>(func fn)</argsstring>
+        <name>Remove</name>
+        <qualifiedname>ScriptCallQueue::Remove</qualifiedname>
+        <param>
+          <type><ref refid="classfunc" kindref="compound">func</ref></type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription>
+<para>remove specific call from queue </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="65" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_script_call_queue_1a3bc9fe2ae2ecc1f0260c9e8e5cbe35a9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto int ScriptCallQueue::GetRemainingTime</definition>
+        <argsstring>(func fn)</argsstring>
+        <name>GetRemainingTime</name>
+        <qualifiedname>ScriptCallQueue::GetRemainingTime</qualifiedname>
+        <param>
+          <type><ref refid="classfunc" kindref="compound">func</ref></type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription>
+<para>return Remaining time to the call execution (in miliseconds) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="67" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_script_call_queue_1a8613a0a8bfff457931bb0e42fe0625ff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void ScriptCallQueue::RemoveByName</definition>
+        <argsstring>(Class obj, string fnName)</argsstring>
+        <name>RemoveByName</name>
+        <qualifiedname>ScriptCallQueue::RemoveByName</qualifiedname>
+        <param>
+          <type><ref refid="class_class" kindref="compound">Class</ref></type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>fnName</declname>
+        </param>
+        <briefdescription>
+<para>remove specific call from queue </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="69" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_script_call_queue_1a295203eff0827405cec53252d7007f91" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto int ScriptCallQueue::GetRemainingTimeByName</definition>
+        <argsstring>(Class obj, string fnName)</argsstring>
+        <name>GetRemainingTimeByName</name>
+        <qualifiedname>ScriptCallQueue::GetRemainingTimeByName</qualifiedname>
+        <param>
+          <type><ref refid="class_class" kindref="compound">Class</ref></type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>fnName</declname>
+        </param>
+        <briefdescription>
+<para>return Remaining time to the call execution (in miliseconds) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="71" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_script_call_queue_1ab95bedfb649f087ddae57ee963f4660e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void ScriptCallQueue::Clear</definition>
+        <argsstring>()</argsstring>
+        <name>Clear</name>
+        <qualifiedname>ScriptCallQueue::Clear</qualifiedname>
+        <briefdescription>
+<para>remove all calls from queue </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="73" column="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_script_call_queue" kindref="compound">ScriptCallQueue</ref> <ref refid="class_class" kindref="compound">Class</ref> provide &quot;lazy&quot; calls - when we don&apos;t want to execute function immediately but later during frame update (used mainly in UI) <linebreak/>
+ usage: </para>
+    </briefdescription>
+    <detaileddescription>
+<para><programlisting><codeline><highlight class="keyword">class<sp/></highlight><highlight class="normal">Arkanoid<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>Game</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/>ref<sp/><ref refid="class_script_call_queue" kindref="compound">ScriptCallQueue</ref><sp/>m_CallQueue<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_script_call_queue" kindref="compound">ScriptCallQueue</ref>();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><ref refid="class_script_call_queue" kindref="compound">ScriptCallQueue</ref><sp/>GetCallQueue()<sp/>{<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_CallQueue;</highlight></codeline>
+<codeline><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___tools_1gab414e48870421e21bf5553f4033493b0" kindref="member">OnUpdate</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timeslice)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>m_CallQueue.Tick(timeslice);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/>...</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyObject</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_cnt<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Hello(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>p1,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>p2)</highlight></codeline>
+<codeline><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;Hello(<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>p1<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>,<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>p2<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Test()</highlight></codeline>
+<codeline><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(m_cnt);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>m_cnt++;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_cnt<sp/>&gt;<sp/>10)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_script_call_queue" kindref="compound">ScriptCallQueue</ref><sp/>queue<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a3301af2fa61873a778485aa575bc1ad6" kindref="member">GetCallQueue</ref>();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>queue.<ref refid="class_script_call_queue_1a0666af43474c9f23138bc30a38696ab7" kindref="member">Remove</ref>(Test);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Test(MyObject<sp/>obj)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><ref refid="class_script_call_queue" kindref="compound">ScriptCallQueue</ref><sp/>queue<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a3301af2fa61873a778485aa575bc1ad6" kindref="member">GetCallQueue</ref>();<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>queue.<ref refid="class_script_call_queue_1abe764b22b6eee91d169f3f5996fe0c3d" kindref="member">CallLater</ref>(obj.Hello,<sp/>5000,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>65,<sp/></highlight><highlight class="stringliteral">&quot;world&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>adds<sp/>call<sp/>&apos;obj.Hello(65,<sp/>&quot;world&quot;)&apos;<sp/>into<sp/>queue,<sp/>and<sp/>it<sp/>will<sp/>be<sp/>executed<sp/>once<sp/>after<sp/>5s</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/>queue.<ref refid="class_script_call_queue_1abe764b22b6eee91d169f3f5996fe0c3d" kindref="member">CallLater</ref>(obj.Test,<sp/>3000,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>adds<sp/>call<sp/>&apos;obj.Test()&apos;<sp/>into<sp/>queue,<sp/>and<sp/>it<sp/>will<sp/>be<sp/>executed<sp/>each<sp/>3s</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/>queue.<ref refid="class_script_call_queue_1aa3b6f9bf12bd4762b836f733eec0f05d" kindref="member">Call</ref>(obj.Hello,<sp/>72,<sp/></highlight><highlight class="stringliteral">&quot;world<sp/>2&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>adds<sp/>call<sp/>&apos;obj.Hello(72,<sp/>&quot;world<sp/>2&quot;)&apos;<sp/>into<sp/>queue,<sp/>and<sp/>it<sp/>will<sp/>be<sp/>executed<sp/>next<sp/>frame<sp/>(on<sp/>next<sp/>call<sp/>of<sp/>ScriptCallQueue.Tick)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="52" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" bodystart="53" bodyend="74"/>
+    <listofallmembers>
+      <member refid="class_script_call_queue_1aa3b6f9bf12bd4762b836f733eec0f05d" prot="private" virt="non-virtual"><scope>ScriptCallQueue</scope><name>Call</name></member>
+      <member refid="class_script_call_queue_1aaae2b06b1c224d7fd6581fb8ed70e04a" prot="private" virt="non-virtual"><scope>ScriptCallQueue</scope><name>CallByName</name></member>
+      <member refid="class_script_call_queue_1abe764b22b6eee91d169f3f5996fe0c3d" prot="private" virt="non-virtual"><scope>ScriptCallQueue</scope><name>CallLater</name></member>
+      <member refid="class_script_call_queue_1a1e6ad53334296b858c7a13a643e543d7" prot="private" virt="non-virtual"><scope>ScriptCallQueue</scope><name>CallLaterByName</name></member>
+      <member refid="class_script_call_queue_1ab95bedfb649f087ddae57ee963f4660e" prot="private" virt="non-virtual"><scope>ScriptCallQueue</scope><name>Clear</name></member>
+      <member refid="class_script_call_queue_1a3bc9fe2ae2ecc1f0260c9e8e5cbe35a9" prot="private" virt="non-virtual"><scope>ScriptCallQueue</scope><name>GetRemainingTime</name></member>
+      <member refid="class_script_call_queue_1a295203eff0827405cec53252d7007f91" prot="private" virt="non-virtual"><scope>ScriptCallQueue</scope><name>GetRemainingTimeByName</name></member>
+      <member refid="class_script_call_queue_1a0666af43474c9f23138bc30a38696ab7" prot="private" virt="non-virtual"><scope>ScriptCallQueue</scope><name>Remove</name></member>
+      <member refid="class_script_call_queue_1a8613a0a8bfff457931bb0e42fe0625ff" prot="private" virt="non-virtual"><scope>ScriptCallQueue</scope><name>RemoveByName</name></member>
+      <member refid="class_script_call_queue_1ae868e5e9c370259c5c4e1bb99f6e7e60" prot="private" virt="non-virtual"><scope>ScriptCallQueue</scope><name>Tick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

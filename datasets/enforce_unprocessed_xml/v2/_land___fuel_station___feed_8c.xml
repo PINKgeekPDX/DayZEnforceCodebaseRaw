@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_land___fuel_station___feed_8c" kind="file" language="C++">
+    <compoundname>Land_FuelStation_Feed.c</compoundname>
+    <innerclass refid="class_fuel_station" prot="public">FuelStation</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_fuel_station" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal">Land_FuelStation_Feed<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_fuel_station" kindref="compound">FuelStation</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_fuel_station_1ab85d0be6c7f50e0aec7f98ef7710e07f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fuel_station_1ab85d0be6c7f50e0aec7f98ef7710e07f" kindref="member">EEKilled</ref>(<ref refid="class_object" kindref="compound">Object</ref><sp/>killer)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.EEKilled(killer);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___land_mine_8c_1a26eb4b1cf52c5eef709d65fdb92f90f0" kindref="member">Explode</ref>(DT_EXPLOSION,<sp/></highlight><highlight class="stringliteral">&quot;LandFuelFeed_Ammo&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="10" refid="class_fuel_station_1a206ccc2d11277e6165557ab0849aa31b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_fuel_station_1a206ccc2d11277e6165557ab0849aa31b" kindref="member">OnExplosionEffects</ref>(<ref refid="class_object" kindref="compound">Object</ref><sp/>source,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>directHit,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>componentIndex,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>surface,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>pos,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>surfNormal,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>energyFactor,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>explosionFactor,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isWater,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ammoType)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsDedicatedServer()<sp/>)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>n<sp/>=<sp/>surfNormal.<ref refid="classvector_1aed751dee971a2a172f3052c68f607111" kindref="member">VectorToAngles</ref>()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>90<sp/>0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle" kindref="compound">Particle</ref><sp/>p1<sp/>=<sp/><ref refid="_particle_manager_8c_1a93ef360e8fc315d276eb8cc256dc3ef8" kindref="member">ParticleManager</ref>.GetInstance().PlayInWorld(<ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1ab400ecccbb0af3aa26433e1af67622aa" kindref="member">SMOKE_GENERIC_WRECK</ref>,<sp/>pos);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p1.SetOrientation(n);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle" kindref="compound">Particle</ref><sp/>p2<sp/>=<sp/><ref refid="_particle_manager_8c_1a93ef360e8fc315d276eb8cc256dc3ef8" kindref="member">ParticleManager</ref>.GetInstance().PlayInWorld(<ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a61d275eca73485fadef525e4d5ee8178" kindref="member">EXPLOSION_LANDMINE</ref>,<sp/>pos);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p2.SetOrientation(n);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle" kindref="compound">Particle</ref><sp/>p3<sp/>=<sp/><ref refid="_particle_manager_8c_1a93ef360e8fc315d276eb8cc256dc3ef8" kindref="member">ParticleManager</ref>.GetInstance().PlayInWorld(<ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a5dd1645f5f126bbf19f313d8e120dc5f" kindref="member">IMPACT_METAL_RICOCHET</ref>,<sp/>pos);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p3.SetOrientation(n);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle" kindref="compound">Particle</ref><sp/>p4<sp/>=<sp/><ref refid="_particle_manager_8c_1a93ef360e8fc315d276eb8cc256dc3ef8" kindref="member">ParticleManager</ref>.GetInstance().PlayInWorld(<ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a95b22a6555e8f8183144e3b7926c2fbf" kindref="member">IMPACT_GRAVEL_RICOCHET</ref>,<sp/>pos);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p4.SetOrientation(n);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30" refid="class_fuel_station_1af1fd2fc17313ac84c0a5678efca6a478" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_fuel_station_1af1fd2fc17313ac84c0a5678efca6a478" kindref="member">HasFuelToGive</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!IsRuined();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Building/Specific/Land_FuelStation_Feed.c"/>
+  </compounddef>
+</doxygen>

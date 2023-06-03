@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_immunity_boost_8c" kind="file" language="C++">
+    <compoundname>ImmunityBoost.c</compoundname>
+    <innerclass refid="class_immunity_boost" prot="public">ImmunityBoost</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_immunity_boost" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_immunity_boost" kindref="compound">ImmunityBoost</ref>:<sp/><ref refid="class_modifier_base" kindref="compound">ModifierBase</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_immunity_boost_1a694248faef2b7c2111588f1455f31821" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_immunity_boost_1a694248faef2b7c2111588f1455f31821" kindref="member">m_LastWaterLevel</ref>;</highlight></codeline>
+<codeline lineno="4" refid="class_immunity_boost_1a4bead5e99d9f490d73bf4f8f9ca5560a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="class_human_movement_state" kindref="compound">HumanMovementState</ref><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_immunity_boost_1a4bead5e99d9f490d73bf4f8f9ca5560a" kindref="member">m_MovementState</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_human_movement_state" kindref="compound">HumanMovementState</ref>();</highlight></codeline>
+<codeline lineno="5" refid="class_immunity_boost_1afa6c21fd00aade6d5ea5a623a0951f02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_immunity_boost_1afa6c21fd00aade6d5ea5a623a0951f02" kindref="member">m_RegenTime</ref>;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="7" refid="class_immunity_boost_1a28c510ff795fc9cce58ca8678fdec715" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_immunity_boost_1a28c510ff795fc9cce58ca8678fdec715" kindref="member">Init</ref>()</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifier_base_8c_1a04ae6d90cb75d3086c27e65cddd358a0" kindref="member">m_TrackActivatedTime</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifier_base_8c_1ae8326cd63358abd4d8bfa7c8538fecd4" kindref="member">m_IsPersistent</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_effect_8c_1a231c2447c3602426c9e06e6094bae8a8" kindref="member">m_ID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="e_modifiers_8c_1a38544df67f7f5b2fdf488d7705d7a582" kindref="member">eModifiers</ref>.MDF_IMMUNITYBOOST;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifier_base_8c_1aad5f52b5eb22d81599e8a25ec6055d22" kindref="member">m_TickIntervalInactive</ref><sp/><sp/>=<sp/><ref refid="_modifiers_manager_8c_1ab41b0cbf9fe485932fbffc19ea426bac" kindref="member">DEFAULT_TICK_TIME_INACTIVE</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifier_base_8c_1aa9aa2d760c0099abe3d671d7c4c6368f" kindref="member">m_TickIntervalActive</ref><sp/><sp/><sp/><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_immunity_boost_1afa6c21fd00aade6d5ea5a623a0951f02" kindref="member">m_RegenTime</ref><sp/>=<sp/><ref refid="class_player_constants" kindref="compound">PlayerConstants</ref>.<ref refid="class_player_constants_1a47f18d6b8f8f5a6a771ffa6eac062653" kindref="member">VITAMINS_LIFETIME_SECS</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_immunity_boost_1a9534cb4eee9854b183d1c30945d0e418" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_immunity_boost_1a9534cb4eee9854b183d1c30945d0e418" kindref="member">ActivateCondition</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22" refid="class_immunity_boost_1adc75f5f0248f38d8190291ec11aaac6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_immunity_boost_1adc75f5f0248f38d8190291ec11aaac6e" kindref="member">OnReconnect</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="human_8c_1ad88f589957281ee7efebbc581b18bef1" kindref="member">OnActivate</ref>(player);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="class_immunity_boost_1a00e6c233b6cfda3d1c1c65fb6826ea5f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_immunity_boost_1a00e6c233b6cfda3d1c1c65fb6826ea5f" kindref="member">GetDebugText</ref>()</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<ref refid="class_immunity_boost_1afa6c21fd00aade6d5ea5a623a0951f02" kindref="member">m_RegenTime</ref><sp/>-<sp/><ref refid="_modifier_base_8c_1a6d27673678a2b8c86ee597aa1ab6db0a" kindref="member">GetAttachedTime</ref>()).<ref refid="group___strings_1ga2aa07a41b8fd7270be668acdf9486a87" kindref="member">ToString</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32" refid="class_immunity_boost_1aa3b26961553cc21ccbd1f17ef833cb60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_immunity_boost_1aa3b26961553cc21ccbd1f17ef833cb60" kindref="member">OnActivate</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>player.SetImmunityBoosted(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>player.IncreaseHealingsCount();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>player.GetNotifiersManager()<sp/>)</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>player.GetNotifiersManager().ActivateByType(eNotifiers.NTF_PILLS);</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="class_immunity_boost_1ae2d9e1e3df1f2a007068e061469d4a3f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_immunity_boost_1ae2d9e1e3df1f2a007068e061469d4a3f" kindref="member">OnDeactivate</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>player.SetImmunityBoosted(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>player.DecreaseHealingsCount();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>player.GetNotifiersManager()<sp/>)</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>player.GetNotifiersManager().DeactivateByType(eNotifiers.NTF_PILLS);</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52" refid="class_immunity_boost_1a4a17ebdbd0f1f1e7b0f6864caa760e87" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_immunity_boost_1a4a17ebdbd0f1f1e7b0f6864caa760e87" kindref="member">DeactivateCondition</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>attached_time<sp/>=<sp/><ref refid="_modifier_base_8c_1a6d27673678a2b8c86ee597aa1ab6db0a" kindref="member">GetAttachedTime</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>attached_time<sp/>&gt;=<sp/><ref refid="class_immunity_boost_1afa6c21fd00aade6d5ea5a623a0951f02" kindref="member">m_RegenTime</ref><sp/>)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_immunity_boost_1a86a98e01500ff10c9f564b44cd57c534" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_immunity_boost_1a86a98e01500ff10c9f564b44cd57c534" kindref="member">OnTick</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaT)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/ImmunityBoost.c"/>
+  </compounddef>
+</doxygen>

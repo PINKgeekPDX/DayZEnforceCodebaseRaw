@@ -1,0 +1,1430 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_trigger" kind="class" language="C++" prot="public">
+    <compoundname>Trigger</compoundname>
+    <basecompoundref refid="class_trigger_events" prot="private" virt="non-virtual">TriggerEvents</basecompoundref>
+    <derivedcompoundref refid="class_barbed_wire_trigger" prot="private" virt="non-virtual">BarbedWireTrigger</derivedcompoundref>
+    <derivedcompoundref refid="class_cylinder_trigger" prot="private" virt="non-virtual">CylinderTrigger</derivedcompoundref>
+    <derivedcompoundref refid="class_man_trigger" prot="private" virt="non-virtual">ManTrigger</derivedcompoundref>
+    <derivedcompoundref refid="class_sphere_trigger" prot="private" virt="non-virtual">SphereTrigger</derivedcompoundref>
+    <derivedcompoundref refid="class_trap_trigger" prot="private" virt="non-virtual">TrapTrigger</derivedcompoundref>
+      <sectiondef kind="user-defined">
+      <header>IEntity events</header>
+      <description><para>Usage of <ref refid="class_i_entity" kindref="compound">IEntity</ref> events </para>
+</description>
+      <memberdef kind="function" id="class_trigger_1a3b5e57bdb2641d2ca823bb6208b6a00b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Trigger::EOnInit</definition>
+        <argsstring>(IEntity other, int extra)</argsstring>
+        <name>EOnInit</name>
+        <qualifiedname>Trigger::EOnInit</qualifiedname>
+        <param>
+          <type><ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>extra</declname>
+        </param>
+        <briefdescription>
+<para>Set the default extents of the <ref refid="class_trigger" kindref="compound">Trigger</ref> only once it is properly initialized. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="74" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1a527d119607c7973508e7f5b3df986a39" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Trigger::EOnFrame</definition>
+        <argsstring>(IEntity other, float timeSlice)</argsstring>
+        <name>EOnFrame</name>
+        <qualifiedname>Trigger::EOnFrame</qualifiedname>
+        <param>
+          <type><ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>timeSlice</declname>
+        </param>
+        <briefdescription>
+<para>When an <ref refid="class_object" kindref="compound">Object</ref> touches the <ref refid="class_trigger" kindref="compound">Trigger</ref>, we want to register it being inside the <ref refid="class_trigger" kindref="compound">Trigger</ref> -&gt; Replaced by EOnEnter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>We want to update the insiders every frame (or do we?) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="88" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1a5207935bc2a227058eca254ee8b2dc5a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Trigger::EOnEnter</definition>
+        <argsstring>(IEntity other, int extra)</argsstring>
+        <name>EOnEnter</name>
+        <qualifiedname>Trigger::EOnEnter</qualifiedname>
+        <param>
+          <type><ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>extra</declname>
+        </param>
+        <briefdescription>
+<para>When an <ref refid="class_object" kindref="compound">Object</ref> enters the trigger add it to Insiders. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="94" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="94" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1aeffe4809edf30896e673e4d225d86977" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Trigger::EOnLeave</definition>
+        <argsstring>(IEntity other, int extra)</argsstring>
+        <name>EOnLeave</name>
+        <qualifiedname>Trigger::EOnLeave</qualifiedname>
+        <param>
+          <type><ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>extra</declname>
+        </param>
+        <briefdescription>
+<para>When an <ref refid="class_object" kindref="compound">Object</ref> exits the trigger remove it from Insiders. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="102" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="102" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Trigger configuration</header>
+      <description><para>Basic configuration and data API </para>
+</description>
+      <memberdef kind="function" id="class_trigger_1a73c5812d3476cee4fa5d862ce9c03265" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trigger::SetExtents</definition>
+        <argsstring>(vector mins, vector maxs)</argsstring>
+        <name>SetExtents</name>
+        <qualifiedname>Trigger::SetExtents</qualifiedname>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>mins</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>maxs</declname>
+        </param>
+        <briefdescription>
+<para>Set the size of the <ref refid="class_trigger" kindref="compound">Trigger</ref>, avoid using SetCollisionBox directly. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="116" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="116" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1ac0113a4766b7ccb05c95dfba9b1691d6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float Trigger::GetRadius</definition>
+        <argsstring>(vector min, vector max)</argsstring>
+        <name>GetRadius</name>
+        <qualifiedname>Trigger::GetRadius</qualifiedname>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>max</declname>
+        </param>
+        <briefdescription>
+<para>Get the radius of the CollisionBox, simply left for backwards compatibility. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="122" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1ab0d09a74ffe58d8387b3d0cd26b5d4f3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref> &gt;</type>
+        <definition>array&lt; ref TriggerInsider &gt; Trigger::GetInsiders</definition>
+        <argsstring>()</argsstring>
+        <name>GetInsiders</name>
+        <qualifiedname>Trigger::GetInsiders</qualifiedname>
+        <briefdescription>
+<para>Get the current <ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref> array, left for backwards compatibility, moved down from <ref refid="class_man_trigger" kindref="compound">ManTrigger</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="128" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1a67b1b01bc101bdee11eb9f7b63d0418e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref></type>
+        <definition>TriggerInsider Trigger::GetInsiderForObject</definition>
+        <argsstring>(Object object)</argsstring>
+        <name>GetInsiderForObject</name>
+        <qualifiedname>Trigger::GetInsiderForObject</qualifiedname>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>Gets the <ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref> for the <ref refid="class_object" kindref="compound">Object</ref> if it exists. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="134" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="134" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1adc85c39c297f81bba799a0929c60d233" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int Trigger::GetInsiderIndexForObject</definition>
+        <argsstring>(Object object)</argsstring>
+        <name>GetInsiderIndexForObject</name>
+        <qualifiedname>Trigger::GetInsiderIndexForObject</qualifiedname>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>Gets the index in m_insiders for the <ref refid="class_object" kindref="compound">Object</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="149" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="149" bodyend="161"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>TriggerEvents, backwards compatibility calling</header>
+      <description><para>Implementation for backwards compatibility with old <ref refid="class_trigger" kindref="compound">Trigger</ref> system </para>
+</description>
+      <memberdef kind="function" id="class_trigger_1acc2f51a422ed0a42febd96a3e63ee9fb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void Trigger::OnEnterBeginEvent</definition>
+        <argsstring>(TriggerInsider insider)</argsstring>
+        <name>OnEnterBeginEvent</name>
+        <qualifiedname>Trigger::OnEnterBeginEvent</qualifiedname>
+        <param>
+          <type><ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref></type>
+          <declname>insider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="169" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="169" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1a40e04a844d77b3440acf6fe14dadb672" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void Trigger::OnLeaveBeginEvent</definition>
+        <argsstring>(TriggerInsider insider)</argsstring>
+        <name>OnLeaveBeginEvent</name>
+        <qualifiedname>Trigger::OnLeaveBeginEvent</qualifiedname>
+        <param>
+          <type><ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref></type>
+          <declname>insider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="175" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="175" bodyend="179"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>DEPRECATED Events</header>
+      <description><para>left for backwards compatibility </para>
+</description>
+      <memberdef kind="function" id="class_trigger_1a34b1d9e21f52a9ab93a9afad6b690c40" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trigger::OnEnter</definition>
+        <argsstring>(Object obj)</argsstring>
+        <name>OnEnter</name>
+        <qualifiedname>Trigger::OnEnter</qualifiedname>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="187" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="187" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1a105ef7c63cf5c9a12d822a6c3b1372a4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trigger::OnLeave</definition>
+        <argsstring>(Object obj)</argsstring>
+        <name>OnLeave</name>
+        <qualifiedname>Trigger::OnLeave</qualifiedname>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="189" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="189" bodyend="189"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>TriggerInsider conditions</header>
+      <description><para>Conditions applied to <ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref> for if it can be added or should be removed </para>
+</description>
+      <memberdef kind="function" id="class_trigger_1a28c2b1d8fc69c9d37143ce603f088d98" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool Trigger::CanAddObjectAsInsider</definition>
+        <argsstring>(Object object)</argsstring>
+        <name>CanAddObjectAsInsider</name>
+        <qualifiedname>Trigger::CanAddObjectAsInsider</qualifiedname>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>Condition whether an <ref refid="class_object" kindref="compound">Object</ref> can be added as <ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref> (checked before calling AddInsider) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="198" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="198" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1aa934d5c3842d4707a374f3376fc637d1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool Trigger::ShouldRemoveInsider</definition>
+        <argsstring>(TriggerInsider insider)</argsstring>
+        <name>ShouldRemoveInsider</name>
+        <qualifiedname>Trigger::ShouldRemoveInsider</qualifiedname>
+        <param>
+          <type><ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref></type>
+          <declname>insider</declname>
+        </param>
+        <briefdescription>
+<para>Condition whether a <ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref> should still be updated or not (checked in update loop and before adding) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="204" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="204" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1ad8a8f5ecc523c255ceb7308b5451557f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool Trigger::ShouldRemoveInsiderNoLeave</definition>
+        <argsstring>(TriggerInsider insider)</argsstring>
+        <name>ShouldRemoveInsiderNoLeave</name>
+        <qualifiedname>Trigger::ShouldRemoveInsiderNoLeave</qualifiedname>
+        <param>
+          <type><ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref></type>
+          <declname>insider</declname>
+        </param>
+        <briefdescription>
+<para>Condition whether a <ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref> should still be updated or not, skips OnLeaveEvent (checked in update loop and before adding) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="210" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="210" bodyend="213"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>TriggerInsider processing</header>
+      <description><para>Logic and processing of adding, removing and updating a <ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref> </para>
+</description>
+      <memberdef kind="function" id="class_trigger_1a1cc8a351984c46181140e977f6a68ff0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref></type>
+        <definition>protected TriggerInsider Trigger::CreateInsider</definition>
+        <argsstring>(Object obj)</argsstring>
+        <name>CreateInsider</name>
+        <qualifiedname>Trigger::CreateInsider</qualifiedname>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+<para>Used for easily overriding <ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref> creation without rewriting AddInsider. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="222" column="26" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="222" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1ac5e0cf7de5183fceb6c70b3a97ce1dbc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void Trigger::AddInsider</definition>
+        <argsstring>(Object obj)</argsstring>
+        <name>AddInsider</name>
+        <qualifiedname>Trigger::AddInsider</qualifiedname>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+<para>Adding of new <ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>DEBUG</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="228" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="228" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1aeacf66863701569fd249aeb5efa9ff4b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void Trigger::RemoveInsider</definition>
+        <argsstring>(TriggerInsider insider, int index=-1)</argsstring>
+        <name>RemoveInsider</name>
+        <qualifiedname>Trigger::RemoveInsider</qualifiedname>
+        <param>
+          <type><ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref></type>
+          <declname>insider</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>index</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Removing of <ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>DEBUG</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="268" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="268" bodyend="286"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1a8145c123176c90d5a77e6d90a60ff8db" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void Trigger::RemoveInsiderByObject</definition>
+        <argsstring>(Object object)</argsstring>
+        <name>RemoveInsiderByObject</name>
+        <qualifiedname>Trigger::RemoveInsiderByObject</qualifiedname>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>Removing of <ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref> through <ref refid="class_object" kindref="compound">Object</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="289" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="289" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1aa802406c59b7629de77d01483de206b3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void Trigger::UpdateInsiders</definition>
+        <argsstring>(int timeout)</argsstring>
+        <name>UpdateInsiders</name>
+        <qualifiedname>Trigger::UpdateInsiders</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Update the current <ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref> inside the <ref refid="class_trigger" kindref="compound">Trigger</ref>, timeout paramter is deprecated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>DEBUG</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="307" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="307" bodyend="354"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>DEBUGGING</header>
+      <description><para>General internal debugging functionality </para>
+</description>
+      <memberdef kind="function" id="class_trigger_1a8401a68e662676405515f769036c2911" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Trigger::OnRPC</definition>
+        <argsstring>(PlayerIdentity sender, int rpc_type, ParamsReadContext ctx)</argsstring>
+        <name>OnRPC</name>
+        <qualifiedname>Trigger::OnRPC</qualifiedname>
+        <param>
+          <type><ref refid="class_player_identity" kindref="compound">PlayerIdentity</ref></type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>rpc_type</declname>
+        </param>
+        <param>
+          <type><ref refid="gameplay_8c_1a4ff67286551fc6c18504752a277c8bc1" kindref="member">ParamsReadContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="361" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="361" bodyend="375"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_trigger_1a6411e2d9659f6c3f5ae5769395537d59" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected int Trigger::m_TriggerUpdateMs</definition>
+        <argsstring></argsstring>
+        <name>m_TriggerUpdateMs</name>
+        <qualifiedname>Trigger::m_TriggerUpdateMs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" line="1539" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" bodystart="1539" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trigger_1a3388fe98b42823ee701a095b22dc3b6d" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="class_hologram" kindref="compound">Hologram</ref></type>
+        <definition>protected Hologram Trigger::m_ParentObj</definition>
+        <argsstring></argsstring>
+        <name>m_ParentObj</name>
+        <qualifiedname>Trigger::m_ParentObj</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" line="1540" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" bodystart="1540" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trigger_1ab90ff732686994d4ad3b1265cb336f5d" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+        <definition>protected PlayerBase Trigger::m_Player</definition>
+        <argsstring></argsstring>
+        <name>m_Player</name>
+        <qualifiedname>Trigger::m_Player</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" line="1541" column="22" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" bodystart="1541" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trigger_1af065a727b27beff3163a8c5a6ab4f683" prot="private" static="no" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int Trigger::TIMEOUT</definition>
+        <argsstring></argsstring>
+        <name>TIMEOUT</name>
+        <qualifiedname>Trigger::TIMEOUT</qualifiedname>
+        <initializer>= 1000</initializer>
+        <briefdescription>
+<para>DEPRECATED. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="42" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_trigger_1a6f0193336632f78d90a9238f70a09a2b" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_trigger_insider" kindref="compound">TriggerInsider</ref> &gt;</type>
+        <definition>ref array&lt;ref TriggerInsider&gt; Trigger::m_insiders</definition>
+        <argsstring></argsstring>
+        <name>m_insiders</name>
+        <qualifiedname>Trigger::m_insiders</qualifiedname>
+        <briefdescription>
+<para>The objects and their metadata which are currently inside the <ref refid="class_trigger" kindref="compound">Trigger</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="44" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_trigger_1a1354c947b3d14165e3f54e2e08f3c5c0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Trigger::OnEnter</definition>
+        <argsstring>(Object obj)</argsstring>
+        <name>OnEnter</name>
+        <qualifiedname>Trigger::OnEnter</qualifiedname>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" line="1543" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" bodystart="1543" bodyend="1551"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1a0ed718ae619de0e86718228323026faf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Trigger::OnLeave</definition>
+        <argsstring>(Object obj)</argsstring>
+        <name>OnLeave</name>
+        <qualifiedname>Trigger::OnLeave</qualifiedname>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" line="1553" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" bodystart="1553" bodyend="1560"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1afa0ca870829418bce1e138202d6179ac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void Trigger::UpdateInsiders</definition>
+        <argsstring>(int timeout)</argsstring>
+        <name>UpdateInsiders</name>
+        <qualifiedname>Trigger::UpdateInsiders</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" line="1562" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" bodystart="1562" bodyend="1565"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1ab3da4dece0d3318f012659205865eb77" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trigger::SetParentObject</definition>
+        <argsstring>(Hologram projection)</argsstring>
+        <name>SetParentObject</name>
+        <qualifiedname>Trigger::SetParentObject</qualifiedname>
+        <param>
+          <type><ref refid="class_hologram" kindref="compound">Hologram</ref></type>
+          <declname>projection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" line="1567" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" bodystart="1567" bodyend="1570"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1a62ca3394c8aa08e7643b9b10a939fd00" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Trigger::SetParentOwner</definition>
+        <argsstring>(PlayerBase player)</argsstring>
+        <name>SetParentOwner</name>
+        <qualifiedname>Trigger::SetParentOwner</qualifiedname>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" line="1572" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" bodystart="1572" bodyend="1575"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1a1e0c22c899e6827397684dbaa81aec87" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void Trigger::Trigger</definition>
+        <argsstring>()</argsstring>
+        <name>Trigger</name>
+        <qualifiedname>Trigger::Trigger</qualifiedname>
+        <briefdescription>
+<para>ctor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="53" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="53" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_trigger_1a696028e1b44e980761adebe4c1705c8c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void Trigger::~Trigger</definition>
+        <argsstring>()</argsstring>
+        <name>~Trigger</name>
+        <qualifiedname>Trigger::~Trigger</qualifiedname>
+        <briefdescription>
+<para>dtor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" line="62" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/Trigger.c" bodystart="62" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Scripted <ref refid="class_trigger" kindref="compound">Trigger</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>BarbedWireTrigger</label>
+        <link refid="class_barbed_wire_trigger"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ConstructionBoxTrigger</label>
+        <link refid="class_construction_box_trigger"/>
+        <childnode refid="7" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>CylinderTrigger</label>
+        <link refid="class_cylinder_trigger"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>EffectTrigger</label>
+        <link refid="class_effect_trigger"/>
+        <childnode refid="5" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ManTrigger</label>
+        <link refid="class_man_trigger"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ScriptedEntity</label>
+        <link refid="class_scripted_entity"/>
+      </node>
+      <node id="9">
+        <label>SphereTrigger</label>
+        <link refid="class_sphere_trigger"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>TrapTrigger</label>
+        <link refid="class_trap_trigger"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Trigger</label>
+        <link refid="class_trigger"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>TriggerEvents</label>
+        <link refid="class_trigger_events"/>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="22">
+        <label>AbstractWave</label>
+        <link refid="class_abstract_wave"/>
+      </node>
+      <node id="24">
+        <label>BlowtorchLight</label>
+        <link refid="class_blowtorch_light"/>
+        <childnode refid="25" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Class</label>
+        <link refid="class_class"/>
+      </node>
+      <node id="18">
+        <label>Effect</label>
+      </node>
+      <node id="17">
+        <label>EffectSound</label>
+        <link refid="class_effect_sound"/>
+        <childnode refid="18" relation="private-inheritance">
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>Event_OnSoundFadeInStopped</edgelabel>
+          <edgelabel>Event_OnSoundFadeOutStarted</edgelabel>
+          <edgelabel>Event_OnSoundWaveEnded</edgelabel>
+          <edgelabel>Event_OnSoundWaveStarted</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>m_SoundParams</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>m_SoundObjectBuilder</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>m_SoundWaveObject</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_SoundParent</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_SoundSetName</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_SetEnvVariables</edgelabel>
+          <edgelabel>m_SoundAutodestroy</edgelabel>
+          <edgelabel>m_SoundLoop</edgelabel>
+          <edgelabel>m_SoundWaveIsPlaying</edgelabel>
+          <edgelabel>m_SoundWaveStarting</edgelabel>
+          <edgelabel>m_SoundWaveStopping</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_SoundFadeInDuration</edgelabel>
+          <edgelabel>m_SoundFadeOutDuration</edgelabel>
+          <edgelabel>m_SoundFadeOutInitVolume</edgelabel>
+          <edgelabel>m_SoundFadeOutStartTime</edgelabel>
+          <edgelabel>m_SoundWaveLenght</edgelabel>
+          <edgelabel>m_SoundWaveTime</edgelabel>
+          <edgelabel>m_SoundWaveVolume</edgelabel>
+          <edgelabel>m_SoundWaveVolumeMax</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>EntityAI</label>
+        <link refid="class_entity_a_i"/>
+        <childnode refid="33" relation="usage">
+          <edgelabel>m_ContinuousActions</edgelabel>
+          <edgelabel>m_InteractActions</edgelabel>
+          <edgelabel>m_SingleUseActions</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>SOUND_CONTACT_SKIP</edgelabel>
+          <edgelabel>m_SoundContactTickTime</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>m_SoundImpactTable</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_ActionsInitialize</edgelabel>
+          <edgelabel>m_IsMeleeWeapon</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>m_OnItemAddedToHands</edgelabel>
+          <edgelabel>m_OnItemRemovedFromHands</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>GardenBase</label>
+        <link refid="class_garden_base"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_ClutterCutter</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Hologram</label>
+        <link refid="class_hologram"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>ANIMATION_INVENTORY</edgelabel>
+          <edgelabel>ANIMATION_PLACING</edgelabel>
+          <edgelabel>SELECTION_INVENTORY</edgelabel>
+          <edgelabel>SELECTION_PLACING</edgelabel>
+          <edgelabel>SUFFIX_MATERIAL_DEPLOYABLE</edgelabel>
+          <edgelabel>SUFFIX_MATERIAL_POWERED</edgelabel>
+          <edgelabel>SUFFIX_MATERIAL_UNDEPLOYABLE</edgelabel>
+          <edgelabel>m_ProjectionTypename</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Parent</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>m_Projection</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>m_Player</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_AlignToTerrain</edgelabel>
+          <edgelabel>m_IsColliding</edgelabel>
+          <edgelabel>m_IsCollidingGPlot</edgelabel>
+          <edgelabel>m_IsCollidingPlayer</edgelabel>
+          <edgelabel>m_IsFloating</edgelabel>
+          <edgelabel>m_IsHidden</edgelabel>
+          <edgelabel>m_IsSlope</edgelabel>
+          <edgelabel>m_UpdatePosition</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>m_ContactDir</edgelabel>
+          <edgelabel>m_DefaultOrientation</edgelabel>
+          <edgelabel>m_FromAdjusted</edgelabel>
+          <edgelabel>m_Rotation</edgelabel>
+          <edgelabel>m_YawPitchRollLimit</edgelabel>
+          <edgelabel>m_y_p_r_previous</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>DEFAULT_MAX_PLACEMENT_HEIGHT_DIFF</edgelabel>
+          <edgelabel>DISTANCE_SMALL_PROJECTION</edgelabel>
+          <edgelabel>LARGE_PROJECTION_DISTANCE_LIMIT</edgelabel>
+          <edgelabel>LOOKING_TO_SKY</edgelabel>
+          <edgelabel>PROJECTION_TRANSITION_MAX</edgelabel>
+          <edgelabel>PROJECTION_TRANSITION_MIN</edgelabel>
+          <edgelabel>SMALL_PROJECTION_GROUND</edgelabel>
+          <edgelabel>SMALL_PROJECTION_RADIUS</edgelabel>
+          <edgelabel>m_SlopeTolerance</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>m_WatchtowerBlockedComponentNames</edgelabel>
+          <edgelabel>m_WatchtowerIgnoreComponentNames</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>ItemBase</label>
+        <link refid="class_item_base"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>MAX_PLACEMENT_HEIGHT_DIFF</edgelabel>
+          <edgelabel>PARAM_COOKING_EQUIP_MAX_TEMP</edgelabel>
+          <edgelabel>PARAM_COOKING_EQUIP_TEMP_INCREASE</edgelabel>
+          <edgelabel>PARAM_COOKING_TEMP_THRESHOLD</edgelabel>
+          <edgelabel>PARAM_COOKING_TIME_INC_COEF</edgelabel>
+          <edgelabel>RANDOM_SPARK_INTERVAL</edgelabel>
+          <edgelabel>SPOIL_AFTER_MATURITY_TIME</edgelabel>
+          <edgelabel>m_BaitCatchProb</edgelabel>
+          <edgelabel>m_BlinkingStatusLightInterval</edgelabel>
+          <edgelabel>m_ChargeEnergyPerSecond</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>ANIMATION_DEPLOYED</edgelabel>
+          <edgelabel>ANIM_PHASE_FLAME</edgelabel>
+          <edgelabel>ATTACHED_CLIPS_STATES</edgelabel>
+          <edgelabel>CHARGED_AND_READY_SOUND</edgelabel>
+          <edgelabel>CHARGING_SOUND</edgelabel>
+          <edgelabel>DEFAULT_MATERIAL</edgelabel>
+          <edgelabel>DIRECT_COOKING_SLOT_NAME</edgelabel>
+          <edgelabel>FLAME_BUTANE_OFF</edgelabel>
+          <edgelabel>FLAME_BUTANE_ON</edgelabel>
+          <edgelabel>GAS_LIGHT_MATERIAL_OFF</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Slots</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_AlignCatchTimer</edgelabel>
+          <edgelabel>m_ChargingTimer</edgelabel>
+          <edgelabel>m_CheckRainTimer</edgelabel>
+          <edgelabel>m_DeleteDryPlantTimer</edgelabel>
+          <edgelabel>m_GrowthTimer</edgelabel>
+          <edgelabel>m_InfestationTimer</edgelabel>
+          <edgelabel>m_PrevTimer</edgelabel>
+          <edgelabel>m_SoundLoopStartTimer</edgelabel>
+          <edgelabel>m_SparkEvent</edgelabel>
+          <edgelabel>m_SpoilAfterFullMaturityTimer</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_BaitNeeded</edgelabel>
+          <edgelabel>m_BlinkingStatusLightIsOn</edgelabel>
+          <edgelabel>m_CanCatch</edgelabel>
+          <edgelabel>m_DeployedRegularly</edgelabel>
+          <edgelabel>m_EvaluateDeployment</edgelabel>
+          <edgelabel>m_ForceIntoHands</edgelabel>
+          <edgelabel>m_HasBase</edgelabel>
+          <edgelabel>m_HasCrops</edgelabel>
+          <edgelabel>m_IsActive</edgelabel>
+          <edgelabel>m_IsBeingPacked</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>m_GardenBase</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>m_ChargedAlarm</edgelabel>
+          <edgelabel>m_ChargingSound</edgelabel>
+          <edgelabel>m_DeployLoopSound</edgelabel>
+          <edgelabel>m_EngineLoop</edgelabel>
+          <edgelabel>m_EngineStart</edgelabel>
+          <edgelabel>m_EngineStop</edgelabel>
+          <edgelabel>m_MountSound</edgelabel>
+          <edgelabel>m_Sound</edgelabel>
+          <edgelabel>m_SoundBurningLoop</edgelabel>
+          <edgelabel>m_SoundEffectCooking</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>m_HybridAttachments</edgelabel>
+          <edgelabel>m_Mountables</edgelabel>
+          <edgelabel>m_ShowAnimationsWhenPacked</edgelabel>
+          <edgelabel>m_ShowAnimationsWhenPitched</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>m_Light</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>m_NoteContents</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>m_Particle</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Catch</edgelabel>
+          <edgelabel>m_CookingEquipment</edgelabel>
+          <edgelabel>m_SparkPlug</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>m_UTSource</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>m_UTSSettings</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>m_UTSLEngine</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>m_HalfExtents</edgelabel>
+          <edgelabel>m_LightLocalOrientation</edgelabel>
+          <edgelabel>m_LightLocalPosition</edgelabel>
+          <edgelabel>m_PreyPos</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_ClutterCutter</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>m_Bait</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Object</label>
+        <link refid="class_object"/>
+      </node>
+      <node id="27">
+        <label>Particle</label>
+        <link refid="class_particle"/>
+        <childnode refid="28" relation="private-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_Lifetime</edgelabel>
+          <edgelabel>m_MaxOriInterval</edgelabel>
+          <edgelabel>m_MaxOriWiggle</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_ForceOrientationRelativeToWorld</edgelabel>
+          <edgelabel>m_IsRepeat</edgelabel>
+          <edgelabel>m_MarkedForDeletion</edgelabel>
+          <edgelabel>m_WiggleProcessing</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>m_DefaultOri</edgelabel>
+          <edgelabel>m_DefaultPos</edgelabel>
+          <edgelabel>m_DefaultWorldOri</edgelabel>
+          <edgelabel>m_DefaultWorldPos</edgelabel>
+          <edgelabel>m_GlobalPosPreviousFrame</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_RandomizeOri</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_ParentObject</edgelabel>
+          <edgelabel>m_ParticleEffect</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>ParticleBase</label>
+      </node>
+      <node id="37">
+        <label>PlayerBase</label>
+        <link refid="class_player_base"/>
+        <childnode refid="38" relation="usage">
+          <edgelabel>m_PersonalLight</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_PersonalLightDisabledByDebug</edgelabel>
+          <edgelabel>m_PersonalLightEnabledOnCurrentServer</edgelabel>
+          <edgelabel>m_PersonalLightIsSwitchedOn</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>PointLightBase</label>
+        <link refid="class_point_light_base"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_DefaultBrightness</edgelabel>
+          <edgelabel>m_DefaultRadius</edgelabel>
+          <edgelabel>m_FireBrightness</edgelabel>
+          <edgelabel>m_FireRadius</edgelabel>
+          <edgelabel>m_FireplaceBrightness</edgelabel>
+          <edgelabel>m_FireplaceRadius</edgelabel>
+          <edgelabel>m_FlareBrightness</edgelabel>
+          <edgelabel>m_FlareRadius</edgelabel>
+          <edgelabel>m_Lifetime</edgelabel>
+          <edgelabel>m_RoadflareBrightness</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_MemoryPoint</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>ScriptInvoker</label>
+        <link refid="class_script_invoker"/>
+      </node>
+      <node id="3">
+        <label>ScriptedEntity</label>
+        <link refid="class_scripted_entity"/>
+      </node>
+      <node id="38">
+        <label>ScriptedLightBase</label>
+        <link refid="class_scripted_light_base"/>
+      </node>
+      <node id="34">
+        <label>SoundLookupTable</label>
+        <link refid="class_sound_lookup_table"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_parameterName</edgelabel>
+          <edgelabel>m_tableCategoryName</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>SoundObjectBuilder</label>
+        <link refid="class_sound_object_builder"/>
+      </node>
+      <node id="20">
+        <label>SoundParams</label>
+        <link refid="class_sound_params"/>
+      </node>
+      <node id="14">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+      <node id="1">
+        <label>Trigger</label>
+        <link refid="class_trigger"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_ParentObj</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>m_Player</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>m_insiders</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>TriggerEvents</label>
+        <link refid="class_trigger_events"/>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>UniversalTemperatureSource</label>
+        <link refid="class_universal_temperature_source"/>
+        <childnode refid="14" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>UniversalTemperatureSourceLambdaBase</label>
+        <link refid="class_universal_temperature_source_lambda_base"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>HEAT_THROUGH_AIR_COEF</edgelabel>
+        </childnode>
+      </node>
+      <node id="35">
+        <label>UniversalTemperatureSourceLambdaEngine</label>
+        <link refid="class_universal_temperature_source_lambda_engine"/>
+        <childnode refid="36" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>UniversalTemperatureSourceSettings</label>
+        <link refid="class_universal_temperature_source_settings"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_RangeFull</edgelabel>
+          <edgelabel>m_RangeMax</edgelabel>
+          <edgelabel>m_TemperatureCap</edgelabel>
+          <edgelabel>m_TemperatureMax</edgelabel>
+          <edgelabel>m_TemperatureMin</edgelabel>
+          <edgelabel>m_UpdateInterval</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_AffectStat</edgelabel>
+          <edgelabel>m_ManualUpdate</edgelabel>
+          <edgelabel>m_Updateable</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>m_Position</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>m_Parent</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Widget</label>
+        <link refid="class_widget"/>
+      </node>
+      <node id="26">
+        <label>WrittenNoteData</label>
+        <link refid="class_written_note_data"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Paper</edgelabel>
+          <edgelabel>m_WritingImplement</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_SimpleText</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>array</label>
+        <link refid="classarray"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>array&lt; Widget &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="33">
+        <label>array&lt; int &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>array&lt; ref Slot &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="39">
+        <label>array&lt; ref TriggerInsider &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>array&lt; string &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>bool</label>
+        <link refid="classbool"/>
+      </node>
+      <node id="7">
+        <label>float</label>
+        <link refid="classfloat"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>LOWEST</edgelabel>
+          <edgelabel>MAX</edgelabel>
+          <edgelabel>MIN</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>string</label>
+        <link refid="classstring"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>Empty</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>vector</label>
+        <link refid="classvector"/>
+        <childnode refid="29" relation="usage">
+          <edgelabel>Aside</edgelabel>
+          <edgelabel>Forward</edgelabel>
+          <edgelabel>Up</edgelabel>
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" line="1537" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Hologram.c" bodystart="1538" bodyend="1576"/>
+    <listofallmembers>
+      <member refid="class_trigger_1ac5e0cf7de5183fceb6c70b3a97ce1dbc" prot="private" virt="non-virtual"><scope>Trigger</scope><name>AddInsider</name></member>
+      <member refid="class_trigger_1a28c2b1d8fc69c9d37143ce603f088d98" prot="private" virt="non-virtual"><scope>Trigger</scope><name>CanAddObjectAsInsider</name></member>
+      <member refid="class_trigger_1a1cc8a351984c46181140e977f6a68ff0" prot="private" virt="non-virtual"><scope>Trigger</scope><name>CreateInsider</name></member>
+      <member refid="class_trigger_events_1af21eec3d9ebc564c541c3d22b1b1adfd" prot="private" virt="non-virtual"><scope>Trigger</scope><name>Enter</name></member>
+      <member refid="class_trigger_1a5207935bc2a227058eca254ee8b2dc5a" prot="private" virt="non-virtual"><scope>Trigger</scope><name>EOnEnter</name></member>
+      <member refid="class_trigger_1a527d119607c7973508e7f5b3df986a39" prot="private" virt="non-virtual"><scope>Trigger</scope><name>EOnFrame</name></member>
+      <member refid="class_trigger_1a3b5e57bdb2641d2ca823bb6208b6a00b" prot="private" virt="non-virtual"><scope>Trigger</scope><name>EOnInit</name></member>
+      <member refid="class_trigger_1aeffe4809edf30896e673e4d225d86977" prot="private" virt="non-virtual"><scope>Trigger</scope><name>EOnLeave</name></member>
+      <member refid="class_trigger_1a67b1b01bc101bdee11eb9f7b63d0418e" prot="private" virt="non-virtual"><scope>Trigger</scope><name>GetInsiderForObject</name></member>
+      <member refid="class_trigger_1adc85c39c297f81bba799a0929c60d233" prot="private" virt="non-virtual"><scope>Trigger</scope><name>GetInsiderIndexForObject</name></member>
+      <member refid="class_trigger_1ab0d09a74ffe58d8387b3d0cd26b5d4f3" prot="private" virt="non-virtual"><scope>Trigger</scope><name>GetInsiders</name></member>
+      <member refid="class_trigger_1ac0113a4766b7ccb05c95dfba9b1691d6" prot="private" virt="non-virtual"><scope>Trigger</scope><name>GetRadius</name></member>
+      <member refid="class_trigger_events_1adc9b3e387e468c600f2f40c5cc5e8144" prot="private" virt="non-virtual"><scope>Trigger</scope><name>Leave</name></member>
+      <member refid="class_trigger_1a6f0193336632f78d90a9238f70a09a2b" prot="private" virt="non-virtual"><scope>Trigger</scope><name>m_insiders</name></member>
+      <member refid="class_trigger_1a3388fe98b42823ee701a095b22dc3b6d" prot="private" virt="non-virtual"><scope>Trigger</scope><name>m_ParentObj</name></member>
+      <member refid="class_trigger_1ab90ff732686994d4ad3b1265cb336f5d" prot="private" virt="non-virtual"><scope>Trigger</scope><name>m_Player</name></member>
+      <member refid="class_scripted_entity_1a4b82038565663cb919d6a09ae701f9e3" prot="private" virt="non-virtual"><scope>Trigger</scope><name>m_TriggerIndex</name></member>
+      <member refid="class_trigger_1a6411e2d9659f6c3f5ae5769395537d59" prot="private" virt="non-virtual"><scope>Trigger</scope><name>m_TriggerUpdateMs</name></member>
+      <member refid="class_trigger_1a1354c947b3d14165e3f54e2e08f3c5c0" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnEnter</name></member>
+      <member refid="class_trigger_1a34b1d9e21f52a9ab93a9afad6b690c40" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnEnter</name></member>
+      <member refid="class_trigger_1acc2f51a422ed0a42febd96a3e63ee9fb" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnEnterBeginEvent</name></member>
+      <member refid="class_trigger_events_1a7c410c82c63bd5898f744f1afd58fc52" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnEnterClientEvent</name></member>
+      <member refid="class_trigger_events_1a8e58080dea12fd43c8075f4e4247761b" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnEnterEndEvent</name></member>
+      <member refid="class_trigger_events_1a35b57ab1ed1aa2adb5352cc55f989bf3" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnEnterServerEvent</name></member>
+      <member refid="class_trigger_1a0ed718ae619de0e86718228323026faf" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnLeave</name></member>
+      <member refid="class_trigger_1a105ef7c63cf5c9a12d822a6c3b1372a4" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnLeave</name></member>
+      <member refid="class_trigger_1a40e04a844d77b3440acf6fe14dadb672" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnLeaveBeginEvent</name></member>
+      <member refid="class_trigger_events_1ac6b5174fc180f4a9f39c214ad6c3adcd" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnLeaveClientEvent</name></member>
+      <member refid="class_trigger_events_1aab26fcdc0c452d0d0e8e2c89dd002c6b" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnLeaveEndEvent</name></member>
+      <member refid="class_trigger_events_1a8b9927d2f603b1690a6049f734446eaf" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnLeaveServerEvent</name></member>
+      <member refid="class_trigger_1a8401a68e662676405515f769036c2911" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnRPC</name></member>
+      <member refid="class_trigger_events_1a29f01b67b29326b5d6bad54ba98ab28f" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnStayBeginEvent</name></member>
+      <member refid="class_trigger_events_1ae1e1cdc352da2094e1b408dd79ceb51f" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnStayClientEvent</name></member>
+      <member refid="class_trigger_events_1ad13d7421f84c4dad862050e12e864dae" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnStayEndEvent</name></member>
+      <member refid="class_trigger_events_1a77e2d1abb2a484778f18fa4327b63a05" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnStayFinishBeginEvent</name></member>
+      <member refid="class_trigger_events_1aeb045edc893075dfcde1ada6e26c8b2f" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnStayFinishClientEvent</name></member>
+      <member refid="class_trigger_events_1af9367f2b891eda5a077bfcdf20c9b876" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnStayFinishEndEvent</name></member>
+      <member refid="class_trigger_events_1a8511e0a863a795bd40aeaca3bccd89f3" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnStayFinishServerEvent</name></member>
+      <member refid="class_trigger_events_1a95cc8f4cc2223dd1f3e6ceba89bb6202" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnStayServerEvent</name></member>
+      <member refid="class_trigger_events_1ad3412bc17068c7cf0133fad3e33b41dc" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnStayStartBeginEvent</name></member>
+      <member refid="class_trigger_events_1a72e089767fea3c3c53a4c039893e05b3" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnStayStartClientEvent</name></member>
+      <member refid="class_trigger_events_1a5f748b3244867334cfdc9cef2b15ea63" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnStayStartEndEvent</name></member>
+      <member refid="class_trigger_events_1afbb153f11d3d3c7853fb83b7384a3c68" prot="private" virt="non-virtual"><scope>Trigger</scope><name>OnStayStartServerEvent</name></member>
+      <member refid="class_trigger_1aeacf66863701569fd249aeb5efa9ff4b" prot="private" virt="non-virtual"><scope>Trigger</scope><name>RemoveInsider</name></member>
+      <member refid="class_trigger_1a8145c123176c90d5a77e6d90a60ff8db" prot="private" virt="non-virtual"><scope>Trigger</scope><name>RemoveInsiderByObject</name></member>
+      <member refid="class_trigger_1a73c5812d3476cee4fa5d862ce9c03265" prot="private" virt="non-virtual"><scope>Trigger</scope><name>SetExtents</name></member>
+      <member refid="class_scripted_entity_1a3f78d07f65904a363d87672ee261b328" prot="private" virt="non-virtual"><scope>Trigger</scope><name>SetIndex</name></member>
+      <member refid="class_trigger_1ab3da4dece0d3318f012659205865eb77" prot="private" virt="non-virtual"><scope>Trigger</scope><name>SetParentObject</name></member>
+      <member refid="class_trigger_1a62ca3394c8aa08e7643b9b10a939fd00" prot="private" virt="non-virtual"><scope>Trigger</scope><name>SetParentOwner</name></member>
+      <member refid="class_trigger_1aa934d5c3842d4707a374f3376fc637d1" prot="private" virt="non-virtual"><scope>Trigger</scope><name>ShouldRemoveInsider</name></member>
+      <member refid="class_trigger_1ad8a8f5ecc523c255ceb7308b5451557f" prot="private" virt="non-virtual"><scope>Trigger</scope><name>ShouldRemoveInsiderNoLeave</name></member>
+      <member refid="class_trigger_events_1a5c5aa171d8c61c3e5a134818e1e6898b" prot="private" virt="non-virtual"><scope>Trigger</scope><name>Stay</name></member>
+      <member refid="class_trigger_events_1a6b8e7c21e0ddf931953cc4334e292d9e" prot="private" virt="non-virtual"><scope>Trigger</scope><name>StayFinish</name></member>
+      <member refid="class_trigger_events_1aa4d32f4393bda70ec59991ddabfb0b14" prot="private" virt="non-virtual"><scope>Trigger</scope><name>StayStart</name></member>
+      <member refid="class_trigger_1af065a727b27beff3163a8c5a6ab4f683" prot="private" virt="non-virtual"><scope>Trigger</scope><name>TIMEOUT</name></member>
+      <member refid="class_trigger_1a1e0c22c899e6827397684dbaa81aec87" prot="private" virt="non-virtual"><scope>Trigger</scope><name>Trigger</name></member>
+      <member refid="class_trigger_1afa0ca870829418bce1e138202d6179ac" prot="private" virt="non-virtual"><scope>Trigger</scope><name>UpdateInsiders</name></member>
+      <member refid="class_trigger_1aa802406c59b7629de77d01483de206b3" prot="private" virt="non-virtual"><scope>Trigger</scope><name>UpdateInsiders</name></member>
+      <member refid="class_trigger_1a696028e1b44e980761adebe4c1705c8c" prot="private" virt="non-virtual"><scope>Trigger</scope><name>~Trigger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

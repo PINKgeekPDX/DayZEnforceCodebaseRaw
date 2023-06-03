@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_day_z_player_implement_heading_8c" kind="file" language="C++">
+    <compoundname>DayZPlayerImplementHeading.c</compoundname>
+    <innerclass refid="class_day_z_player_implement_heading" prot="public">DayZPlayerImplementHeading</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="2"><highlight class="comment">DayZPlayerImplement</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">this<sp/>file<sp/>is<sp/>implemenation<sp/>of<sp/>dayzPlayer<sp/>in<sp/>script<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="comment">-<sp/>logic<sp/>of<sp/>movement<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="comment">-<sp/>camera<sp/>switching<sp/>logic</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_day_z_player_implement_heading" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_day_z_player_implement_heading" kindref="compound">DayZPlayerImplementHeading</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//-------------------------------------------------------------</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight></codeline>
+<codeline lineno="19" refid="class_day_z_player_implement_heading_1aa5b9371bb20bf4f0575ba520aacd4290" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_implement_heading_1aa5b9371bb20bf4f0575ba520aacd4290" kindref="member">ClampHeading</ref><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pDt,<sp/><ref refid="dayzplayer_8c_1acf0ef1f5cd4036a95f0b5c79edc16803" kindref="member">SDayZPlayerHeadingModel</ref><sp/>pModel,<sp/>out<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pLastHeadingDiff)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aDiff<sp/>=<sp/>pModel.m_fHeadingAngle<sp/>-<sp/>pModel.m_fOrientationAngle;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(aDiff<sp/>&lt;<sp/>-<ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gaf8c064b6b688407b9999ee677efd715d" kindref="member">PI</ref>)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aDiff<sp/>+=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga0582b8db17669551eef122dd64ca26be" kindref="member">PI2</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(aDiff<sp/>&gt;<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gaf8c064b6b688407b9999ee677efd715d" kindref="member">PI</ref>)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aDiff<sp/>-=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga0582b8db17669551eef122dd64ca26be" kindref="member">PI2</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print(&quot;Heading<sp/>model:<sp/>or:<sp/>&quot;<sp/>+<sp/>pModel.m_fOrientationAngle.ToString()<sp/>+<sp/>&quot;<sp/>head:&quot;<sp/>+<sp/>pModel.m_fHeadingAngle.ToString()<sp/>+<sp/>&quot;<sp/>dif:&quot;<sp/>+<sp/>aDiff.ToString());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pLastHeadingDiff<sp/>&lt;<sp/>-Math.PI_HALF<sp/>&amp;&amp;<sp/>aDiff<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aDiff<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>-<ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gaf8c064b6b688407b9999ee677efd715d" kindref="member">PI</ref><sp/>+<sp/>0.01;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pLastHeadingDiff<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>aDiff;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pModel.m_fHeadingAngle<sp/><sp/>=<sp/>pModel.m_fOrientationAngle<sp/>+<sp/>aDiff;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print(&quot;-APA-<sp/>:<sp/>or:<sp/>&quot;<sp/>+<sp/>pModel.m_fOrientationAngle.ToString()<sp/>+<sp/>&quot;<sp/>head:&quot;<sp/>+<sp/>pModel.m_fHeadingAngle.ToString()<sp/>+<sp/>&quot;<sp/>dif:&quot;<sp/>+<sp/>aDiff.ToString());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>modify<sp/>heading</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pLastHeadingDiff<sp/>&gt;<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga269369827474ef0bd280de6b8c73c464" kindref="member">PI_HALF</ref><sp/>&amp;&amp;<sp/>aDiff<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aDiff<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gaf8c064b6b688407b9999ee677efd715d" kindref="member">PI</ref><sp/>-<sp/>0.01;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pLastHeadingDiff<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>aDiff;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pModel.m_fHeadingAngle<sp/><sp/>=<sp/>pModel.m_fOrientationAngle<sp/>+<sp/>aDiff;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print(&quot;-APA-<sp/>:<sp/>or:<sp/>&quot;<sp/>+<sp/>pModel.m_fOrientationAngle.ToString()<sp/>+<sp/>&quot;<sp/>head:&quot;<sp/>+<sp/>pModel.m_fHeadingAngle.ToString()<sp/>+<sp/>&quot;<sp/>dif:&quot;<sp/>+<sp/>aDiff.ToString());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>modify<sp/>heading</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pLastHeadingDiff<sp/><sp/><sp/><sp/>=<sp/>aDiff;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print(&quot;Heading<sp/>model<sp/>diff<sp/>&quot;<sp/>+<sp/>aDiff.ToString());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//-------------------------------------------------------------</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_day_z_player_implement_heading_1a8562b06be9e3bc8b04829c52c06f4c09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_day_z_player_implement_heading_1a8562b06be9e3bc8b04829c52c06f4c09" kindref="member">CONST_ROTLIMIT</ref><sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gaf8c064b6b688407b9999ee677efd715d" kindref="member">PI</ref><sp/>*<sp/>0.95;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="class_day_z_player_implement_heading_1a7803f570fd6ead1fc19c321b0bcf1d74" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_implement_heading_1a7803f570fd6ead1fc19c321b0bcf1d74" kindref="member">RotateOrient</ref><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pDt,<sp/><ref refid="dayzplayer_8c_1acf0ef1f5cd4036a95f0b5c79edc16803" kindref="member">SDayZPlayerHeadingModel</ref><sp/>pModel,<sp/>out<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pLastHeadingDiff)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aDiff<sp/>=<sp/>pModel.m_fHeadingAngle<sp/>-<sp/>pModel.m_fOrientationAngle;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(aDiff<sp/>&lt;<sp/>-<ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gaf8c064b6b688407b9999ee677efd715d" kindref="member">PI</ref>)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aDiff<sp/>+=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga0582b8db17669551eef122dd64ca26be" kindref="member">PI2</ref>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(aDiff<sp/>&gt;<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gaf8c064b6b688407b9999ee677efd715d" kindref="member">PI</ref>)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aDiff<sp/>-=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga0582b8db17669551eef122dd64ca26be" kindref="member">PI2</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print(&quot;Heading<sp/>model:<sp/>or:<sp/>&quot;<sp/>+<sp/>pModel.m_fOrientationAngle.ToString()<sp/>+<sp/>&quot;<sp/>head:&quot;<sp/>+<sp/>pModel.m_fHeadingAngle.ToString()<sp/>+<sp/>&quot;<sp/>dif:&quot;<sp/>+<sp/>aDiff.ToString());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pLastHeadingDiff<sp/>&lt;<sp/>-Math.PI_HALF<sp/>&amp;&amp;<sp/>aDiff<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aDiff<sp/>-=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga0582b8db17669551eef122dd64ca26be" kindref="member">PI2</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pLastHeadingDiff<sp/>&gt;<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga269369827474ef0bd280de6b8c73c464" kindref="member">PI_HALF</ref><sp/>&amp;&amp;<sp/>aDiff<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aDiff<sp/>+=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga0582b8db17669551eef122dd64ca26be" kindref="member">PI2</ref>;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pLastHeadingDiff<sp/><sp/><sp/><sp/>=<sp/>aDiff;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(aDiff<sp/>&lt;<sp/>-<ref refid="class_day_z_player_implement_heading_1a8562b06be9e3bc8b04829c52c06f4c09" kindref="member">CONST_ROTLIMIT</ref>)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>character<sp/>is<sp/>somehow<sp/>stucked<sp/>(happens<sp/>in<sp/>prone<sp/>stance)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(aDiff<sp/>&lt;<sp/>-(<ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga269369827474ef0bd280de6b8c73c464" kindref="member">PI_HALF</ref><sp/>+<sp/><ref refid="class_day_z_player_implement_heading_1a8562b06be9e3bc8b04829c52c06f4c09" kindref="member">CONST_ROTLIMIT</ref>))</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pLastHeadingDiff<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pModel.m_fOrientationAngle<sp/>+=<sp/>aDiff<sp/>+<sp/><sp/><ref refid="class_day_z_player_implement_heading_1a8562b06be9e3bc8b04829c52c06f4c09" kindref="member">CONST_ROTLIMIT</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(aDiff<sp/>&gt;<sp/><ref refid="class_day_z_player_implement_heading_1a8562b06be9e3bc8b04829c52c06f4c09" kindref="member">CONST_ROTLIMIT</ref>)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>character<sp/>is<sp/>somehow<sp/>stucked<sp/>(happens<sp/>in<sp/>prone<sp/>stance)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(aDiff<sp/>&gt;<sp/>(<ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga269369827474ef0bd280de6b8c73c464" kindref="member">PI_HALF</ref><sp/>+<sp/><ref refid="class_day_z_player_implement_heading_1a8562b06be9e3bc8b04829c52c06f4c09" kindref="member">CONST_ROTLIMIT</ref>))</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pLastHeadingDiff<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pModel.m_fOrientationAngle<sp/>+=<sp/>aDiff<sp/>-<sp/><ref refid="class_day_z_player_implement_heading_1a8562b06be9e3bc8b04829c52c06f4c09" kindref="member">CONST_ROTLIMIT</ref>;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print(&quot;Heading<sp/>model<sp/>diff<sp/>&quot;<sp/>+<sp/>aDiff.ToString());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122" refid="class_day_z_player_implement_heading_1a2cdcbf4c90d5a87d64f4750065799b1c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_implement_heading_1a2cdcbf4c90d5a87d64f4750065799b1c" kindref="member">NoHeading</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pDt,<sp/><ref refid="dayzplayer_8c_1acf0ef1f5cd4036a95f0b5c79edc16803" kindref="member">SDayZPlayerHeadingModel</ref><sp/>pModel,<sp/>out<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pLastHeadingDiff)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pLastHeadingDiff<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pModel.m_fHeadingAngle<sp/>=<sp/>pModel.m_fOrientationAngle;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/DayZPlayerImplementHeading.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,510 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_liquid" kind="class" language="C++" prot="public">
+    <compoundname>Liquid</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_liquid_1acb28f2352d1b81486fff873377cba59f" prot="private" static="yes" mutable="no">
+        <type>ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, ref <ref refid="class_nutritional_profile" kindref="compound">NutritionalProfile</ref> &gt;</type>
+        <definition>ref map&lt;int, ref NutritionalProfile&gt; Liquid::m_AllLiquidsByType</definition>
+        <argsstring></argsstring>
+        <name>m_AllLiquidsByType</name>
+        <qualifiedname>Liquid::m_AllLiquidsByType</qualifiedname>
+        <initializer>= new <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt;<ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, ref <ref refid="class_nutritional_profile" kindref="compound">NutritionalProfile</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="3" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_liquid_1aa3eea643b98b9001434d604c73706a37" prot="private" static="yes" mutable="no">
+        <type>ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="classstring" kindref="compound">string</ref>, ref <ref refid="class_nutritional_profile" kindref="compound">NutritionalProfile</ref> &gt;</type>
+        <definition>ref map&lt;string, ref NutritionalProfile&gt; Liquid::m_AllLiquidsByName</definition>
+        <argsstring></argsstring>
+        <name>m_AllLiquidsByName</name>
+        <qualifiedname>Liquid::m_AllLiquidsByName</qualifiedname>
+        <initializer>= new <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt;<ref refid="classstring" kindref="compound">string</ref>, ref <ref refid="class_nutritional_profile" kindref="compound">NutritionalProfile</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="4" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_liquid_1aa4f6a0296ac2245529eedb07118256e7" prot="private" static="yes" mutable="no">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool Liquid::m_Init</definition>
+        <argsstring></argsstring>
+        <name>m_Init</name>
+        <qualifiedname>Liquid::m_Init</qualifiedname>
+        <initializer>= <ref refid="class_liquid_1a1ebab34d0bebb0150ea24f54f6cf3d5e" kindref="member">InitAllLiquids</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="6" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_liquid_1aec428b558c91acc948a2033758f30f31" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>static string Liquid::GetLiquidClassname</definition>
+        <argsstring>(int liquid_type)</argsstring>
+        <name>GetLiquidClassname</name>
+        <qualifiedname>Liquid::GetLiquidClassname</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>liquid_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="8" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="8" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1a1ebab34d0bebb0150ea24f54f6cf3d5e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static bool Liquid::InitAllLiquids</definition>
+        <argsstring>()</argsstring>
+        <name>InitAllLiquids</name>
+        <qualifiedname>Liquid::InitAllLiquids</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="19" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="19" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1a3b71f0bfb906b05c1e1ee98fe9278604" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Liquid::Transfer</definition>
+        <argsstring>(ItemBase source_ent, ItemBase target_ent, float quantity=-1)</argsstring>
+        <name>Transfer</name>
+        <qualifiedname>Liquid::Transfer</qualifiedname>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>source_ent</declname>
+        </param>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>target_ent</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>quantity</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="39" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="39" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1ae4feb09d06d7d018b0b1f3f67e187193" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static bool Liquid::CanTransfer</definition>
+        <argsstring>(ItemBase source_ent, ItemBase target_ent)</argsstring>
+        <name>CanTransfer</name>
+        <qualifiedname>Liquid::CanTransfer</qualifiedname>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>source_ent</declname>
+        </param>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>target_ent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="84" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="84" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1a9e5cc86b20bd1c0aef67057c66c42775" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Liquid::FillContainer</definition>
+        <argsstring>(ItemBase container, int liquid_type, float amount)</argsstring>
+        <name>FillContainer</name>
+        <qualifiedname>Liquid::FillContainer</qualifiedname>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>container</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>liquid_type</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="126" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="126" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1a56ac8aaa3efbd57bdefa37fdb2fb91d7" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Liquid::FillContainerEnviro</definition>
+        <argsstring>(ItemBase container, int liquid_type, float amount, bool inject_agents=false)</argsstring>
+        <name>FillContainerEnviro</name>
+        <qualifiedname>Liquid::FillContainerEnviro</qualifiedname>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>container</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>liquid_type</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>amount</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>inject_agents</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="138" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="138" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1abac69444e7428359a00dcb6e58c85031" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static bool Liquid::CanFillContainer</definition>
+        <argsstring>(ItemBase container, int liquid_type, bool ignore_fullness_check=false)</argsstring>
+        <name>CanFillContainer</name>
+        <qualifiedname>Liquid::CanFillContainer</qualifiedname>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>container</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>liquid_type</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>ignore_fullness_check</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="148" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="148" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1ace86f44324edaf244446cf01dd0df660" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>static private string Liquid::GetLiquidConfigProperty</definition>
+        <argsstring>(int liquid_type, string property_name, bool is_nutrition_property=false)</argsstring>
+        <name>GetLiquidConfigProperty</name>
+        <qualifiedname>Liquid::GetLiquidConfigProperty</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>liquid_type</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>property_name</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>is_nutrition_property</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="187" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="187" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1a4a8299080b7ed6feae23add78e4e260c" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_nutritional_profile" kindref="compound">NutritionalProfile</ref></type>
+        <definition>static NutritionalProfile Liquid::GetNutritionalProfileByType</definition>
+        <argsstring>(int liquid_type)</argsstring>
+        <name>GetNutritionalProfileByType</name>
+        <qualifiedname>Liquid::GetNutritionalProfileByType</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>liquid_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="217" column="27" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="217" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1ad324b19a1d242faa33b2cc478890fffe" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_nutritional_profile" kindref="compound">NutritionalProfile</ref></type>
+        <definition>static NutritionalProfile Liquid::GetNutritionalProfileByName</definition>
+        <argsstring>(string class_name)</argsstring>
+        <name>GetNutritionalProfileByName</name>
+        <qualifiedname>Liquid::GetNutritionalProfileByName</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>class_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="222" column="27" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="222" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1a63c6f95e72c5b3a0dab9b3865da91e5b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_nutritional_profile" kindref="compound">NutritionalProfile</ref></type>
+        <definition>static NutritionalProfile Liquid::SetUpNutritionalProfile</definition>
+        <argsstring>(int liquid_type, string liquid_class_name)</argsstring>
+        <name>SetUpNutritionalProfile</name>
+        <qualifiedname>Liquid::SetUpNutritionalProfile</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>liquid_type</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>liquid_class_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="227" column="27" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="227" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1a6c506e7096bee1dbb4c6338fe3fdaaec" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static int Liquid::GetAgents</definition>
+        <argsstring>(int liquid_type)</argsstring>
+        <name>GetAgents</name>
+        <qualifiedname>Liquid::GetAgents</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>liquid_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="241" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="241" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1a2944d3a3bc7029e4c2d9d1c96a80d10a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>static float Liquid::GetToxicity</definition>
+        <argsstring>(int liquid_type)</argsstring>
+        <name>GetToxicity</name>
+        <qualifiedname>Liquid::GetToxicity</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>liquid_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="246" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="246" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1a5961bbbca1f511aaa62e7aa7e4fcf029" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>static float Liquid::GetWaterContent</definition>
+        <argsstring>(int liquid_type)</argsstring>
+        <name>GetWaterContent</name>
+        <qualifiedname>Liquid::GetWaterContent</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>liquid_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="251" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="251" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1ab9f28e8eb877042825e1a7f1530b35c0" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>static float Liquid::GetEnergy</definition>
+        <argsstring>(int liquid_type)</argsstring>
+        <name>GetEnergy</name>
+        <qualifiedname>Liquid::GetEnergy</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>liquid_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="256" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="256" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1a08be166e0a54ae8781f87cbbd192db96" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>static float Liquid::GetNutritionalIndex</definition>
+        <argsstring>(int liquid_type)</argsstring>
+        <name>GetNutritionalIndex</name>
+        <qualifiedname>Liquid::GetNutritionalIndex</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>liquid_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="261" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="261" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1ac1233ec4a87407e853858a4d282d1f5f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>static string Liquid::GetName</definition>
+        <argsstring>(int liquid_type)</argsstring>
+        <name>GetName</name>
+        <qualifiedname>Liquid::GetName</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>liquid_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="266" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="266" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1a4d29e16ae9defd03ef0fe9b5c7478bb9" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>static float Liquid::GetFlammability</definition>
+        <argsstring>(int liquid_type)</argsstring>
+        <name>GetFlammability</name>
+        <qualifiedname>Liquid::GetFlammability</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>liquid_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="271" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="271" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1a52a2f8f01c1c72e05ee0d95ea195ad0f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>static float Liquid::GetFullness</definition>
+        <argsstring>(int liquid_type)</argsstring>
+        <name>GetFullness</name>
+        <qualifiedname>Liquid::GetFullness</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>liquid_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="276" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="276" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="class_liquid_1ae7768ab5b5c1a1fb1b27f27d49022465" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>static float Liquid::GetDigestibility</definition>
+        <argsstring>(int liquid_type)</argsstring>
+        <name>GetDigestibility</name>
+        <qualifiedname>Liquid::GetDigestibility</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>liquid_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="281" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="281" bodyend="284"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Liquid</label>
+        <link refid="class_liquid"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_Init</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>bool</label>
+        <link refid="classbool"/>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" line="1" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/Liquid.c" bodystart="2" bodyend="286"/>
+    <listofallmembers>
+      <member refid="class_liquid_1abac69444e7428359a00dcb6e58c85031" prot="private" virt="non-virtual"><scope>Liquid</scope><name>CanFillContainer</name></member>
+      <member refid="class_liquid_1ae4feb09d06d7d018b0b1f3f67e187193" prot="private" virt="non-virtual"><scope>Liquid</scope><name>CanTransfer</name></member>
+      <member refid="class_liquid_1a9e5cc86b20bd1c0aef67057c66c42775" prot="private" virt="non-virtual"><scope>Liquid</scope><name>FillContainer</name></member>
+      <member refid="class_liquid_1a56ac8aaa3efbd57bdefa37fdb2fb91d7" prot="private" virt="non-virtual"><scope>Liquid</scope><name>FillContainerEnviro</name></member>
+      <member refid="class_liquid_1a6c506e7096bee1dbb4c6338fe3fdaaec" prot="private" virt="non-virtual"><scope>Liquid</scope><name>GetAgents</name></member>
+      <member refid="class_liquid_1ae7768ab5b5c1a1fb1b27f27d49022465" prot="private" virt="non-virtual"><scope>Liquid</scope><name>GetDigestibility</name></member>
+      <member refid="class_liquid_1ab9f28e8eb877042825e1a7f1530b35c0" prot="private" virt="non-virtual"><scope>Liquid</scope><name>GetEnergy</name></member>
+      <member refid="class_liquid_1a4d29e16ae9defd03ef0fe9b5c7478bb9" prot="private" virt="non-virtual"><scope>Liquid</scope><name>GetFlammability</name></member>
+      <member refid="class_liquid_1a52a2f8f01c1c72e05ee0d95ea195ad0f" prot="private" virt="non-virtual"><scope>Liquid</scope><name>GetFullness</name></member>
+      <member refid="class_liquid_1aec428b558c91acc948a2033758f30f31" prot="private" virt="non-virtual"><scope>Liquid</scope><name>GetLiquidClassname</name></member>
+      <member refid="class_liquid_1ace86f44324edaf244446cf01dd0df660" prot="private" virt="non-virtual"><scope>Liquid</scope><name>GetLiquidConfigProperty</name></member>
+      <member refid="class_liquid_1ac1233ec4a87407e853858a4d282d1f5f" prot="private" virt="non-virtual"><scope>Liquid</scope><name>GetName</name></member>
+      <member refid="class_liquid_1a08be166e0a54ae8781f87cbbd192db96" prot="private" virt="non-virtual"><scope>Liquid</scope><name>GetNutritionalIndex</name></member>
+      <member refid="class_liquid_1ad324b19a1d242faa33b2cc478890fffe" prot="private" virt="non-virtual"><scope>Liquid</scope><name>GetNutritionalProfileByName</name></member>
+      <member refid="class_liquid_1a4a8299080b7ed6feae23add78e4e260c" prot="private" virt="non-virtual"><scope>Liquid</scope><name>GetNutritionalProfileByType</name></member>
+      <member refid="class_liquid_1a2944d3a3bc7029e4c2d9d1c96a80d10a" prot="private" virt="non-virtual"><scope>Liquid</scope><name>GetToxicity</name></member>
+      <member refid="class_liquid_1a5961bbbca1f511aaa62e7aa7e4fcf029" prot="private" virt="non-virtual"><scope>Liquid</scope><name>GetWaterContent</name></member>
+      <member refid="class_liquid_1a1ebab34d0bebb0150ea24f54f6cf3d5e" prot="private" virt="non-virtual"><scope>Liquid</scope><name>InitAllLiquids</name></member>
+      <member refid="class_liquid_1aa3eea643b98b9001434d604c73706a37" prot="private" virt="non-virtual"><scope>Liquid</scope><name>m_AllLiquidsByName</name></member>
+      <member refid="class_liquid_1acb28f2352d1b81486fff873377cba59f" prot="private" virt="non-virtual"><scope>Liquid</scope><name>m_AllLiquidsByType</name></member>
+      <member refid="class_liquid_1aa4f6a0296ac2245529eedb07118256e7" prot="private" virt="non-virtual"><scope>Liquid</scope><name>m_Init</name></member>
+      <member refid="class_liquid_1a63c6f95e72c5b3a0dab9b3865da91e5b" prot="private" virt="non-virtual"><scope>Liquid</scope><name>SetUpNutritionalProfile</name></member>
+      <member refid="class_liquid_1a3b71f0bfb906b05c1e1ee98fe9278604" prot="private" virt="non-virtual"><scope>Liquid</scope><name>Transfer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

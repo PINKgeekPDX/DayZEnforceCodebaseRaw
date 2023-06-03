@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_bleeding_8c" kind="file" language="C++">
+    <compoundname>Bleeding.c</compoundname>
+    <innerclass refid="class_bleeding_check_mdfr" prot="public">BleedingCheckMdfr</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//checks<sp/>for<sp/>critical<sp/>blood<sp/>level<sp/>and<sp/>kills<sp/>the<sp/>character<sp/>if<sp/>bellow</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="class_bleeding_check_mdfr" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_bleeding_check_mdfr" kindref="compound">BleedingCheckMdfr</ref>:<sp/><ref refid="class_modifier_base" kindref="compound">ModifierBase</ref></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="4" refid="class_bleeding_check_mdfr_1abb8d046be7d1364c631a610afa61a17d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_bleeding_check_mdfr_1abb8d046be7d1364c631a610afa61a17d" kindref="member">BLOOD_DECREMENT_PER_SEC</ref><sp/>=<sp/>-10;</highlight></codeline>
+<codeline lineno="5" refid="class_bleeding_check_mdfr_1a8b32ad1363222b32a3665767d2b68771" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>PluginAdminLog<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_bleeding_check_mdfr_1a8b32ad1363222b32a3665767d2b68771" kindref="member">m_AdminLog</ref>;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="7" refid="class_bleeding_check_mdfr_1a5dd17ae47c0e1e1958b1f91a359fb1b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bleeding_check_mdfr_1a5dd17ae47c0e1e1958b1f91a359fb1b7" kindref="member">Init</ref>()</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifier_base_8c_1a04ae6d90cb75d3086c27e65cddd358a0" kindref="member">m_TrackActivatedTime</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_effect_8c_1a231c2447c3602426c9e06e6094bae8a8" kindref="member">m_ID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="e_modifiers_8c_1a38544df67f7f5b2fdf488d7705d7a582" kindref="member">eModifiers</ref>.MDF_BLEEDING;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifier_base_8c_1aad5f52b5eb22d81599e8a25ec6055d22" kindref="member">m_TickIntervalInactive</ref><sp/><sp/>=<sp/><ref refid="_modifiers_manager_8c_1ab41b0cbf9fe485932fbffc19ea426bac" kindref="member">DEFAULT_TICK_TIME_INACTIVE</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifier_base_8c_1aa9aa2d760c0099abe3d671d7c4c6368f" kindref="member">m_TickIntervalActive</ref><sp/><sp/><sp/><sp/>=<sp/><ref refid="_modifiers_manager_8c_1ad7b192f22a83d324fbb2fc7fea14ad09" kindref="member">DEFAULT_TICK_TIME_ACTIVE</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsServer()<sp/>)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_bleeding_check_mdfr_1a8b32ad1363222b32a3665767d2b68771" kindref="member">m_AdminLog</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>PluginAdminLog.Cast(<sp/><ref refid="_plugin_manager_8c_1a35050f82bea320b7a5336fc549630eaf" kindref="member">GetPlugin</ref>(PluginAdminLog)<sp/>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifier_base_8c_1a13bf3a75b607c3eb20546dbb90db2f2f" kindref="member">DisableDeactivateCheck</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_bleeding_check_mdfr_1ac033325027b3914593cdf46e2ca168bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_bleeding_check_mdfr_1ac033325027b3914593cdf46e2ca168bf" kindref="member">ActivateCondition</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>blood<sp/>=<sp/>player.GetHealth(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Blood&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>blood<sp/>&lt;<sp/><ref refid="class_player_constants" kindref="compound">PlayerConstants</ref>.<ref refid="class_player_constants_1acf69470f04f4df6d6cf717667a019f0e" kindref="member">BLOOD_THRESHOLD_FATAL</ref><sp/>)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_bleeding_check_mdfr_1a32f9881d7f02283407bd3e6b9a132d36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bleeding_check_mdfr_1a32f9881d7f02283407bd3e6b9a132d36" kindref="member">OnActivate</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>player.SetHealth(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,-1000);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_bleeding_check_mdfr_1a8b32ad1363222b32a3665767d2b68771" kindref="member">m_AdminLog</ref><sp/>)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_bleeding_check_mdfr_1a8b32ad1363222b32a3665767d2b68771" kindref="member">m_AdminLog</ref>.BleedingOut(<sp/>player<sp/>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="class_bleeding_check_mdfr_1ad6fcbcd06f10faed4fc25f8afaf87eda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bleeding_check_mdfr_1ad6fcbcd06f10faed4fc25f8afaf87eda" kindref="member">OnDeactivate</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_bleeding_check_mdfr_1af7f570ba0c65e39deee7e8d042ddb764" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_bleeding_check_mdfr_1af7f570ba0c65e39deee7e8d042ddb764" kindref="member">DeactivateCondition</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_bleeding_check_mdfr_1a888b63ea671881f41d8d4952fd2fde8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bleeding_check_mdfr_1a888b63ea671881f41d8d4952fd2fde8b" kindref="member">OnTick</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaT)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Bleeding.c"/>
+  </compounddef>
+</doxygen>

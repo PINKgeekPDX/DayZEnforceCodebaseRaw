@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="2___game_lib_2tools_8c" kind="file" language="C++">
+    <compoundname>tools.c</compoundname>
+    <innerclass refid="class_script_call_queue" prot="public">ScriptCallQueue</innerclass>
+    <innerclass refid="class_script_invoker" prot="public">ScriptInvoker</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="2___game_lib_2tools_8c_1a9eeae0fc98c18c3b093591831c47477e" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EScriptInvokerInsertFlags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="129" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" bodystart="130" bodyend="145"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="2___game_lib_2tools_8c_1ac157bdf0b85a40d2619cbc8bc1ae5fe2" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="2___game_lib_2tools_8c_1a9eeae0fc98c18c3b093591831c47477e" kindref="member">EScriptInvokerInsertFlags</ref></type>
+        <definition>@ NONE</definition>
+        <argsstring></argsstring>
+        <name>NONE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="149" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" bodystart="0" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="2___game_lib_2tools_8c_1ab1502165095b653616f3f1047bbe1842" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="2___game_lib_2tools_8c_1a9eeae0fc98c18c3b093591831c47477e" kindref="member">EScriptInvokerInsertFlags</ref></type>
+        <definition>enum EScriptInvokerInsertFlags ALL</definition>
+        <argsstring></argsstring>
+        <name>ALL</name>
+        <briefdescription>
+<para>Default flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Don&apos;t use this if you want it to remove only the last insert instead of all of them </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="154" column="4"/>
+      </memberdef>
+      <memberdef kind="variable" id="2___game_lib_2tools_8c_1a4f7ca79ad6acd5a44908e1237a40adc7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>IMMEDIATE</definition>
+        <argsstring></argsstring>
+        <name>IMMEDIATE</name>
+        <briefdescription>
+<para>It gets added in immediately, which means that when called while an invoker is running, it will call this newly added call in the same run. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Default flag, as that is the original behaviour, although it might cause endless Insert chain now... (still better than undefined behaviour) </para>
+</simplesect>
+<simplesect kind="note"><para>In case of &quot;Possible endless Insert detected&quot; VME, either create an exit, remove the IMMEDIATE flag or make the insert UNIQUE </para>
+</simplesect>
+<simplesect kind="note"><para>The Endless Insert is detected by seeing if &quot;amount of calls &gt; initial size + 128&quot; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="7" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="2___game_lib_2tools_8c_1abf49ae9727101d1e98cf203e624bf40d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>UNIQUE</definition>
+        <argsstring></argsstring>
+        <name>UNIQUE</name>
+        <briefdescription>
+<para>Only one call to this instance+method is ever expected. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Will throw a VME when a second one is attempted to be added </para>
+</simplesect>
+<simplesect kind="note"><para>If it was already added without the flag, it will also throw a VME and keep the first of all previously inserted </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="13" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="2___game_lib_2tools_8c_1a5b0333a9ac0655d837396209ddb4ecb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="2___game_lib_2tools_8c_1a9eeae0fc98c18c3b093591831c47477e" kindref="member">EScriptInvokerInsertFlags</ref></type>
+        <definition>enum EScriptInvokerInsertFlags ScriptCaller</definition>
+        <argsstring>()</argsstring>
+        <name>ScriptCaller</name>
+        <briefdescription>
+<para>Designed to hold 1 valid call. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>ScriptCaller is meant to be created through Create </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="1" column="0" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" declline="1" declcolumn="0"/>
+      </memberdef>
+      <memberdef kind="function" id="2___game_lib_2tools_8c_1adc896c947bf32edb5745c2550dbbf604" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="2___game_lib_2tools_8c_1a5b0333a9ac0655d837396209ddb4ecb6" kindref="member">ScriptCaller</ref></type>
+        <definition>static proto ScriptCaller Create</definition>
+        <argsstring>(func fn)</argsstring>
+        <name>Create</name>
+        <param>
+          <type><ref refid="classfunc" kindref="compound">func</ref></type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription>
+<para>Creates a ScriptCaller. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="165" column="27" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" declline="165" declcolumn="27"/>
+      </memberdef>
+      <memberdef kind="function" id="2___game_lib_2tools_8c_1a5d94c6f7349c2aa6b7e09db9553f094c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void Init</definition>
+        <argsstring>(func fn)</argsstring>
+        <name>Init</name>
+        <param>
+          <type><ref refid="classfunc" kindref="compound">func</ref></type>
+          <declname>fn</declname>
+        </param>
+        <briefdescription>
+<para>Replaces the current registered func with the new one, throws errors if unsuccessful. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="167" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" declline="167" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="2___game_lib_2tools_8c_1a65f3ef8ad427baebf4857792d0173d2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void Invoke</definition>
+        <argsstring>(void param1=null, void param2=null, void param3=null, void param4=null, void param5=null, void param6=null, void param7=null, void param8=null, void param9=null)</argsstring>
+        <name>Invoke</name>
+        <param>
+          <type>void</type>
+          <declname>param1</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param2</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param3</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param4</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param5</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param6</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param7</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param8</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param9</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Invoke call on the registered func, throws errors if unsuccessful. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" line="169" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c" declline="169" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="2___game_lib_2tools_8c_1a5b0333a9ac0655d837396209ddb4ecb6" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_script_call_queue" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_script_call_queue" kindref="compound">ScriptCallQueue</ref></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55" refid="class_script_call_queue_1ae868e5e9c370259c5c4e1bb99f6e7e60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_script_call_queue_1ae868e5e9c370259c5c4e1bb99f6e7e60" kindref="member">Tick</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timeslice);</highlight></codeline>
+<codeline lineno="57" refid="class_script_call_queue_1aa3b6f9bf12bd4762b836f733eec0f05d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_script_call_queue_1aa3b6f9bf12bd4762b836f733eec0f05d" kindref="member">Call</ref>(<ref refid="classfunc" kindref="compound">func</ref><sp/>fn,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param1<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param2<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param3<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param4<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param5<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param6<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param7<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param8<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param9<sp/>=<sp/>NULL);</highlight></codeline>
+<codeline lineno="59" refid="class_script_call_queue_1aaae2b06b1c224d7fd6581fb8ed70e04a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_script_call_queue_1aaae2b06b1c224d7fd6581fb8ed70e04a" kindref="member">CallByName</ref>(<ref refid="class_class" kindref="compound">Class</ref><sp/>obj,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fnName<sp/>,<sp/><ref refid="class_param" kindref="compound">Param</ref><sp/>params<sp/>=<sp/>NULL);</highlight></codeline>
+<codeline lineno="61" refid="class_script_call_queue_1abe764b22b6eee91d169f3f5996fe0c3d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_script_call_queue_1abe764b22b6eee91d169f3f5996fe0c3d" kindref="member">CallLater</ref>(<ref refid="classfunc" kindref="compound">func</ref><sp/>fn,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>delay<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>repeat<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param1<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param2<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param3<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param4<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param5<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param6<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param7<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param8<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param9<sp/>=<sp/>NULL);<sp/><sp/></highlight></codeline>
+<codeline lineno="63" refid="class_script_call_queue_1a1e6ad53334296b858c7a13a643e543d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_script_call_queue_1a1e6ad53334296b858c7a13a643e543d7" kindref="member">CallLaterByName</ref>(<ref refid="class_class" kindref="compound">Class</ref><sp/>obj,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fnName,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>delay<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>repeat<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/><ref refid="class_param" kindref="compound">Param</ref><sp/>params<sp/>=<sp/>NULL);<sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="class_script_call_queue_1a0666af43474c9f23138bc30a38696ab7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_script_call_queue_1a0666af43474c9f23138bc30a38696ab7" kindref="member">Remove</ref>(<ref refid="classfunc" kindref="compound">func</ref><sp/>fn);</highlight></codeline>
+<codeline lineno="67" refid="class_script_call_queue_1a3bc9fe2ae2ecc1f0260c9e8e5cbe35a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_script_call_queue_1a3bc9fe2ae2ecc1f0260c9e8e5cbe35a9" kindref="member">GetRemainingTime</ref>(<ref refid="classfunc" kindref="compound">func</ref><sp/>fn);</highlight></codeline>
+<codeline lineno="69" refid="class_script_call_queue_1a8613a0a8bfff457931bb0e42fe0625ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_script_call_queue_1a8613a0a8bfff457931bb0e42fe0625ff" kindref="member">RemoveByName</ref>(<ref refid="class_class" kindref="compound">Class</ref><sp/>obj,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fnName);</highlight></codeline>
+<codeline lineno="71" refid="class_script_call_queue_1a295203eff0827405cec53252d7007f91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_script_call_queue_1a295203eff0827405cec53252d7007f91" kindref="member">GetRemainingTimeByName</ref>(<ref refid="class_class" kindref="compound">Class</ref><sp/>obj,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fnName);</highlight></codeline>
+<codeline lineno="73" refid="class_script_call_queue_1ab95bedfb649f087ddae57ee963f4660e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_script_call_queue_1ab95bedfb649f087ddae57ee963f4660e" kindref="member">Clear</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="class_script_invoker" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="118" refid="class_script_invoker_1a92afb05a0027c1949c5364a8e035e1c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_script_invoker_1a92afb05a0027c1949c5364a8e035e1c9" kindref="member">Invoke</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param1<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param2<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param3<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param4<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param5<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param6<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param7<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param8<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param9<sp/>=<sp/>NULL);</highlight></codeline>
+<codeline lineno="120" refid="class_script_invoker_1ad6e8fe06898a73a776c29ad671549f02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_script_invoker_1ad6e8fe06898a73a776c29ad671549f02" kindref="member">Insert</ref>(<ref refid="classfunc" kindref="compound">func</ref><sp/>fn,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/><ref refid="2___game_lib_2tools_8c_1a9eeae0fc98c18c3b093591831c47477e" kindref="member">EScriptInvokerInsertFlags</ref>.IMMEDIATE);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122" refid="class_script_invoker_1a23e1c0644225cd4bdc1cd1d3ac6c0796" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_script_invoker_1a23e1c0644225cd4bdc1cd1d3ac6c0796" kindref="member">Remove</ref>(<ref refid="classfunc" kindref="compound">func</ref><sp/>fn,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/>EScriptInvokerRemoveFlags.ALL);</highlight></codeline>
+<codeline lineno="124" refid="class_script_invoker_1a745b2668ff2b928ab99ca9d9d03d270f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_script_invoker_1a745b2668ff2b928ab99ca9d9d03d270f" kindref="member">Count</ref>(<ref refid="classfunc" kindref="compound">func</ref><sp/>fn);</highlight></codeline>
+<codeline lineno="126" refid="class_script_invoker_1a57356e0ea629b280f24b5fcbe488a528" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_script_invoker_1a57356e0ea629b280f24b5fcbe488a528" kindref="member">Clear</ref>();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="2___game_lib_2tools_8c_1a9eeae0fc98c18c3b093591831c47477e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="2___game_lib_2tools_8c_1a9eeae0fc98c18c3b093591831c47477e" kindref="member">EScriptInvokerInsertFlags</ref></highlight></codeline>
+<codeline lineno="130"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="2___game_lib_2tools_8c_1ac157bdf0b85a40d2619cbc8bc1ae5fe2" kindref="member">NONE</ref>,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="2___game_lib_2tools_8c_1a4f7ca79ad6acd5a44908e1237a40adc7" kindref="member">IMMEDIATE</ref>,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="2___game_lib_2tools_8c_1abf49ae9727101d1e98cf203e624bf40d" kindref="member">UNIQUE</ref>,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>EScriptInvokerRemoveFlags</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="2___game_lib_2tools_8c_1ac157bdf0b85a40d2619cbc8bc1ae5fe2" kindref="member">NONE</ref>,</highlight></codeline>
+<codeline lineno="154" refid="2___game_lib_2tools_8c_1ab1502165095b653616f3f1047bbe1842" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="2___game_lib_2tools_8c_1ab1502165095b653616f3f1047bbe1842" kindref="member">ALL</ref>,</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="2___game_lib_2tools_8c_1a5b0333a9ac0655d837396209ddb4ecb6" kindref="member">ScriptCaller</ref></highlight></codeline>
+<codeline lineno="161"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="2___game_lib_2tools_8c_1a5b0333a9ac0655d837396209ddb4ecb6" kindref="member">ScriptCaller</ref>();</highlight></codeline>
+<codeline lineno="165" refid="2___game_lib_2tools_8c_1adc896c947bf32edb5745c2550dbbf604" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>proto<sp/><ref refid="2___game_lib_2tools_8c_1a5b0333a9ac0655d837396209ddb4ecb6" kindref="member">ScriptCaller</ref><sp/><ref refid="group___debug_shape_1ga01f744a0b9ed95fc93c015ca4e1d03f4" kindref="member">Create</ref>(<ref refid="classfunc" kindref="compound">func</ref><sp/>fn);</highlight></codeline>
+<codeline lineno="167" refid="2___game_lib_2tools_8c_1a5d94c6f7349c2aa6b7e09db9553f094c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_day_z_game_8c_1a8045e088b31fe0754fb20cb0a5ff0dc9" kindref="member">Init</ref>(<ref refid="classfunc" kindref="compound">func</ref><sp/>fn);<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="169" refid="2___game_lib_2tools_8c_1a65f3ef8ad427baebf4857792d0173d2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="2___game_lib_2tools_8c_1a65f3ef8ad427baebf4857792d0173d2a" kindref="member">Invoke</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param1<sp/>=<sp/>null,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param2<sp/>=<sp/>null,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param3<sp/>=<sp/>null,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param4<sp/>=<sp/>null,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param5<sp/>=<sp/>null,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param6<sp/>=<sp/>null,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param7<sp/>=<sp/>null,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param8<sp/>=<sp/>null,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>param9<sp/>=<sp/>null);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/tools.c"/>
+  </compounddef>
+</doxygen>

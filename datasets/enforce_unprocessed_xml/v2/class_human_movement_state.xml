@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_human_movement_state" kind="class" language="C++" prot="public">
+    <compoundname>HumanMovementState</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_human_movement_state_1a36398d40d1ec07b3bc000471ba9690b7" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int HumanMovementState::m_CommandTypeId</definition>
+        <argsstring></argsstring>
+        <name>m_CommandTypeId</name>
+        <qualifiedname>HumanMovementState::m_CommandTypeId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="1116" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" bodystart="1116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_human_movement_state_1a1c4368d44b4e25696c9bb348f6e756c9" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int HumanMovementState::m_iStanceIdx</definition>
+        <argsstring></argsstring>
+        <name>m_iStanceIdx</name>
+        <qualifiedname>HumanMovementState::m_iStanceIdx</qualifiedname>
+        <briefdescription>
+<para>current command&apos;s id </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="1117" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" bodystart="1117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_human_movement_state_1a04b18fdc0228482ff96609c8fdf94e3d" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int HumanMovementState::m_iMovement</definition>
+        <argsstring></argsstring>
+        <name>m_iMovement</name>
+        <qualifiedname>HumanMovementState::m_iMovement</qualifiedname>
+        <briefdescription>
+<para>current stance (DayZPlayerConstants.STANCEIDX_ERECT, ...), only if the command has a stance </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="1118" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" bodystart="1118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_human_movement_state_1a547574e61606f8204c23a75c95b1624b" prot="private" static="no" mutable="no">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float HumanMovementState::m_fLeaning</definition>
+        <argsstring></argsstring>
+        <name>m_fLeaning</name>
+        <qualifiedname>HumanMovementState::m_fLeaning</qualifiedname>
+        <briefdescription>
+<para>current movement (0 idle, 1 walk, 2-run, 3-sprint), only if the command has a movement </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="1119" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" bodystart="1119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_human_movement_state_1a2ee8b7f4c3342a54c23ee947ba5c6391" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int HumanMovementState::m_LocalMovement</definition>
+        <argsstring></argsstring>
+        <name>m_LocalMovement</name>
+        <qualifiedname>HumanMovementState::m_LocalMovement</qualifiedname>
+        <initializer>= -1</initializer>
+        <briefdescription>
+<para>leaning state (not all commands need to have all movements) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="1121" column="4" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" bodystart="1121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_human_movement_state_1ae3192f3d65c9c9f122483f267c3a4229" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool HumanMovementState::IsRaised</definition>
+        <argsstring>()</argsstring>
+        <name>IsRaised</name>
+        <qualifiedname>HumanMovementState::IsRaised</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="1124" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" bodystart="1124" bodyend="1127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_movement_state_1a5a9c948bdbea2cc9ee70be86ba42274b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool HumanMovementState::IsRaisedInProne</definition>
+        <argsstring>()</argsstring>
+        <name>IsRaisedInProne</name>
+        <qualifiedname>HumanMovementState::IsRaisedInProne</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="1130" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" bodystart="1130" bodyend="1133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_movement_state_1a7231becf8bc378c0019205649c611382" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool HumanMovementState::IsInProne</definition>
+        <argsstring>()</argsstring>
+        <name>IsInProne</name>
+        <qualifiedname>HumanMovementState::IsInProne</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="1136" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" bodystart="1136" bodyend="1139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_movement_state_1a9097ee1918d58032b219917a41e4a4bc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool HumanMovementState::IsInRaisedProne</definition>
+        <argsstring>()</argsstring>
+        <name>IsInRaisedProne</name>
+        <qualifiedname>HumanMovementState::IsInRaisedProne</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="1142" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" bodystart="1142" bodyend="1145"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_movement_state_1a6219aed706f2905ec601dc1b47ce4b44" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool HumanMovementState::IsLeaning</definition>
+        <argsstring>()</argsstring>
+        <name>IsLeaning</name>
+        <qualifiedname>HumanMovementState::IsLeaning</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="1148" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" bodystart="1148" bodyend="1151"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HumanMovementState</label>
+        <link refid="class_human_movement_state"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_fLeaning</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>float</label>
+        <link refid="classfloat"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>LOWEST</edgelabel>
+          <edgelabel>MAX</edgelabel>
+          <edgelabel>MIN</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="1114" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" bodystart="1115" bodyend="1152"/>
+    <listofallmembers>
+      <member refid="class_human_movement_state_1a7231becf8bc378c0019205649c611382" prot="private" virt="non-virtual"><scope>HumanMovementState</scope><name>IsInProne</name></member>
+      <member refid="class_human_movement_state_1a9097ee1918d58032b219917a41e4a4bc" prot="private" virt="non-virtual"><scope>HumanMovementState</scope><name>IsInRaisedProne</name></member>
+      <member refid="class_human_movement_state_1a6219aed706f2905ec601dc1b47ce4b44" prot="private" virt="non-virtual"><scope>HumanMovementState</scope><name>IsLeaning</name></member>
+      <member refid="class_human_movement_state_1ae3192f3d65c9c9f122483f267c3a4229" prot="private" virt="non-virtual"><scope>HumanMovementState</scope><name>IsRaised</name></member>
+      <member refid="class_human_movement_state_1a5a9c948bdbea2cc9ee70be86ba42274b" prot="private" virt="non-virtual"><scope>HumanMovementState</scope><name>IsRaisedInProne</name></member>
+      <member refid="class_human_movement_state_1a36398d40d1ec07b3bc000471ba9690b7" prot="private" virt="non-virtual"><scope>HumanMovementState</scope><name>m_CommandTypeId</name></member>
+      <member refid="class_human_movement_state_1a547574e61606f8204c23a75c95b1624b" prot="private" virt="non-virtual"><scope>HumanMovementState</scope><name>m_fLeaning</name></member>
+      <member refid="class_human_movement_state_1a04b18fdc0228482ff96609c8fdf94e3d" prot="private" virt="non-virtual"><scope>HumanMovementState</scope><name>m_iMovement</name></member>
+      <member refid="class_human_movement_state_1a1c4368d44b4e25696c9bb348f6e756c9" prot="private" virt="non-virtual"><scope>HumanMovementState</scope><name>m_iStanceIdx</name></member>
+      <member refid="class_human_movement_state_1a2ee8b7f4c3342a54c23ee947ba5c6391" prot="private" virt="non-virtual"><scope>HumanMovementState</scope><name>m_LocalMovement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

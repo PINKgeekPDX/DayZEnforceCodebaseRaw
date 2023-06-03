@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="group___visual" kind="group">
+    <compoundname>Visual</compoundname>
+    <title>Visual objects</title>
+    <innergroup refid="group___mesh_object">Mesh object (XOB)</innergroup>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___visual_1gaa719f9454bb3e281613f6be3420576ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classvobject" kindref="compound">vobject</ref></type>
+        <definition>proto native vobject GetObject</definition>
+        <argsstring>(string name)</argsstring>
+        <name>GetObject</name>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Loads object from data, or gets it from cache. <ref refid="class_object" kindref="compound">Object</ref> must be released when not used. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnVisual.c" line="7" column="22" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnVisual.c" declline="7" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="function" id="group___visual_1gaf9e341a2578c4863da4c5cf0fd0da018" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void ReleaseObject</definition>
+        <argsstring>(vobject object, int flag=0)</argsstring>
+        <name>ReleaseObject</name>
+        <param>
+          <type><ref refid="classvobject" kindref="compound">vobject</ref></type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>flag</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Release object. When there are not any other references, object is stored into cache and ready to be victed if necessary. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_object" kindref="compound">Object</ref> handle </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If RF_RELEASE is used, the object is evicted immediatelly, if not used by anyone else </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnVisual.c" line="14" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnVisual.c" declline="14" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___visual_1ga73520db37d6569f7bb2331a0e5763065" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int GetNumAnimFrames</definition>
+        <argsstring>(vobject anim)</argsstring>
+        <name>GetNumAnimFrames</name>
+        <param>
+          <type><ref refid="classvobject" kindref="compound">vobject</ref></type>
+          <declname>anim</declname>
+        </param>
+        <briefdescription>
+<para>Returns number of frames, if the object is animation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnVisual.c" line="17" column="18" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnVisual.c" declline="17" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___visual_1gab14fcebec8247fe248db4653b253e42e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>proto string vtoa</definition>
+        <argsstring>(vobject vobj)</argsstring>
+        <name>vtoa</name>
+        <param>
+          <type><ref refid="classvobject" kindref="compound">vobject</ref></type>
+          <declname>vobj</declname>
+        </param>
+        <briefdescription>
+<para>Returns name of visual object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnVisual.c" line="20" column="14" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnVisual.c" declline="20" declcolumn="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

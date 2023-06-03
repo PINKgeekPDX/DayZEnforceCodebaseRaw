@@ -1,0 +1,773 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_injury_handler_8c" kind="file" language="C++">
+    <compoundname>InjuryHandler.c</compoundname>
+    <innerclass refid="class_injury_handler_thresholds" prot="public">InjuryHandlerThresholds</innerclass>
+    <innerclass refid="class_injury_anim_values" prot="public">InjuryAnimValues</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" prot="public" static="no" strong="no">
+        <type></type>
+        <name>eInjuryHandlerLevels</name>
+        <enumvalue id="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfaac64013c4790ae26aab86e76afd9de952" prot="public">
+          <name>PRISTINE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfaae0a44189ca6ba3d03d755c0621b2f9bf" prot="public">
+          <name>WORN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfaaa511233a495e23b11960850d5b86abe4" prot="public">
+          <name>DAMAGED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfaa58b3d3ed02142f09d5f86daef4ccb5fc" prot="public">
+          <name>BADLY_DAMAGED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfaa10acf7777823e1491dc0ede7d7f8238b" prot="public">
+          <name>RUINED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="18" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="19" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_injury_handler_8c_1af16452d2a3a19556405809c3583c1b5d" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref></type>
+        <definition>enum eInjuryHandlerLevels NONE</definition>
+        <argsstring></argsstring>
+        <name>NONE</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>MUST BE POW2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="30" column="6"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1a04c46539877eda0772ab95326319357a" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref></type>
+        <definition>enum eInjuryHandlerLevels MORPHINE</definition>
+        <argsstring></argsstring>
+        <name>MORPHINE</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="31" column="10"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1a5a8c34e719b7289e91096e8fa1c26608" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref></type>
+        <definition>enum eInjuryHandlerLevels PAIN_KILLERS_LVL0</definition>
+        <argsstring></argsstring>
+        <name>PAIN_KILLERS_LVL0</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="32" column="19"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1ad16d0042c6289c3cf0b32b17dc4fa073" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref></type>
+        <definition>enum eInjuryHandlerLevels PAIN_KILLERS_LVL1</definition>
+        <argsstring></argsstring>
+        <name>PAIN_KILLERS_LVL1</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="33" column="19"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1ab98e39572918d380fc9fa2ed1d484f22" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref></type>
+        <definition>enum eInjuryHandlerLevels BROKEN_LEGS</definition>
+        <argsstring></argsstring>
+        <name>BROKEN_LEGS</name>
+        <initializer>= 8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="34" column="13"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1afc96fa96849d35ad33787908ad99aa61" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref></type>
+        <definition>enum eInjuryHandlerLevels BROKEN_LEGS_SPLINT</definition>
+        <argsstring></argsstring>
+        <name>BROKEN_LEGS_SPLINT</name>
+        <initializer>= 16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="35" column="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1a8cac4f18c7e786bff4e9f626c363cff2" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref></type>
+        <definition>enum eInjuryHandlerLevels PRONE_ANIM_OVERRIDE</definition>
+        <argsstring></argsstring>
+        <name>PRONE_ANIM_OVERRIDE</name>
+        <initializer>= 32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="36" column="21"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1a859d24d134564f07697afe50c122f8ce" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref></type>
+        <definition>enum eInjuryHandlerLevels VALUE_CHECK_INTERVAL</definition>
+        <argsstring></argsstring>
+        <name>VALUE_CHECK_INTERVAL</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="42" column="34"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1a5252b3258826274dedbd2d371b18633f" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>const float SENSITIVTY_PERCENTAGE</definition>
+        <argsstring></argsstring>
+        <name>SENSITIVTY_PERCENTAGE</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="43" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1a08544e0c4316eb6cc41fcb5a91235c4d" prot="public" static="no" mutable="no">
+        <type>ref <ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref></type>
+        <definition>ref ScriptInvoker m_ChangedStateInvoker</definition>
+        <argsstring></argsstring>
+        <name>m_ChangedStateInvoker</name>
+        <initializer>= new <ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="45" column="19" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1ace85bb1c839a917298250690516e3275" prot="public" static="no" mutable="no">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float m_TimeSinceLastTick</definition>
+        <argsstring></argsstring>
+        <name>m_TimeSinceLastTick</name>
+        <initializer>= <ref refid="_injury_handler_8c_1a859d24d134564f07697afe50c122f8ce" kindref="member">VALUE_CHECK_INTERVAL</ref> + 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="47" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1a099de8fec53d5760db630724c0ed28a0" prot="public" static="no" mutable="no">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float m_LastUpdate</definition>
+        <argsstring></argsstring>
+        <name>m_LastUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="48" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1a43dd85902aef9af267fd4215f52a9186" prot="public" static="no" mutable="no">
+        <type><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref></type>
+        <definition>eInjuryHandlerLevels m_LastHealthUpdate</definition>
+        <argsstring></argsstring>
+        <name>m_LastHealthUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="49" column="22" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1a4d9b0280090f0265fc1914f3de2c4e98" prot="public" static="no" mutable="no">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float m_HealthMaxValue</definition>
+        <argsstring></argsstring>
+        <name>m_HealthMaxValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="50" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1a37495a7d404542b02363adc8c53a2ddb" prot="public" static="no" mutable="no">
+        <type>private <ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+        <definition>private PlayerBase m_Player</definition>
+        <argsstring></argsstring>
+        <name>m_Player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="53" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1a108eb72244b1f588155dd3d353a441a2" prot="public" static="no" mutable="no">
+        <type>private <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>private bool m_AnimationChange</definition>
+        <argsstring></argsstring>
+        <name>m_AnimationChange</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>owner </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="54" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1ae4ed464750878a62c3dc8986f0b528d0" prot="public" static="no" mutable="no">
+        <type>private <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>private bool m_InjuryAnimEnabled</definition>
+        <argsstring></argsstring>
+        <name>m_InjuryAnimEnabled</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="55" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1abff43faeaff2f6c4254513525ac89309" prot="public" static="no" mutable="no">
+        <type>private <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>private float m_InjuryAnimDamageValue</definition>
+        <argsstring></argsstring>
+        <name>m_InjuryAnimDamageValue</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="56" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_injury_handler_8c_1ae072a2155639222e9b56ef9a57322e20" prot="public" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int m_ForceInjuryAnimMask</definition>
+        <argsstring></argsstring>
+        <name>m_ForceInjuryAnimMask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="57" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_injury_handler_8c_1ac42ee6aa02a3fdeceac92d7cff3fa90e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InjuryAnimationHandler</definition>
+        <argsstring>(PlayerBase player)</argsstring>
+        <name>InjuryAnimationHandler</name>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="59" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="59" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="_injury_handler_8c_1acea0edb7d049bd91d8b22c9f10484ddf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool IsInjuryAnimEnabled</definition>
+        <argsstring>()</argsstring>
+        <name>IsInjuryAnimEnabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="65" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="_injury_handler_8c_1a6423575c04af57d40fb1fd0d41dcd979" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float GetInjuryAnimValue</definition>
+        <argsstring>()</argsstring>
+        <name>GetInjuryAnimValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="70" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="_injury_handler_8c_1a203e9530a666fb0c568325bb7671754b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref></type>
+        <definition>ScriptInvoker GetInvoker</definition>
+        <argsstring>()</argsstring>
+        <name>GetInvoker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="75" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="_injury_handler_8c_1a0944bb36335f2aac59b5d5a46566fa0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Update</definition>
+        <argsstring>(float deltaT)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>deltaT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="80" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="80" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="_injury_handler_8c_1a35e0e165ddb8668f9cbcb127fab6b80e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref></type>
+        <definition>eInjuryHandlerLevels GetOverrideLevel</definition>
+        <argsstring>(eInjuryHandlerLevels unchanged_level)</argsstring>
+        <name>GetOverrideLevel</name>
+        <param>
+          <type><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref></type>
+          <declname>unchanged_level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="100" column="22" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="100" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="_injury_handler_8c_1a55454243e27233ad8a5f05463b43ab81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CheckValue</definition>
+        <argsstring>(bool forceUpdate=false)</argsstring>
+        <name>CheckValue</name>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>forceUpdate</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="154" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="154" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="_injury_handler_8c_1a5d93abd5ef76fe12d8c87272f554270e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Synchronize</definition>
+        <argsstring>(eInjuryHandlerLevels level)</argsstring>
+        <name>Synchronize</name>
+        <param>
+          <type><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="173" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="173" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="_injury_handler_8c_1af6eacf744e3c284fe157d8cfa84b3dde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SendValue</definition>
+        <argsstring>(eInjuryHandlerLevels level)</argsstring>
+        <name>SendValue</name>
+        <param>
+          <type><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="180" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="180" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="_injury_handler_8c_1a60ac3dbd2aff898eda08c8f7240b1fe9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetInjuryCommandParams</definition>
+        <argsstring>(bool enable, eInjuryHandlerLevels level)</argsstring>
+        <name>SetInjuryCommandParams</name>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>enable</declname>
+        </param>
+        <param>
+          <type><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="185" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="185" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="_injury_handler_8c_1af59632837e3749858d41ea344c839c07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref></type>
+        <definition>eInjuryHandlerLevels GetInjuryLevel</definition>
+        <argsstring>(float health)</argsstring>
+        <name>GetInjuryLevel</name>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>health</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="192" column="22" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="192" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="_injury_handler_8c_1a32acce33ad3d8de56269030f647055b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float GetInjuryValue</definition>
+        <argsstring>(eInjuryHandlerLevels level)</argsstring>
+        <name>GetInjuryValue</name>
+        <param>
+          <type><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref></type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" line="218" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c" bodystart="218" bodyend="246"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_injury_handler_thresholds" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_injury_handler_thresholds" kindref="compound">InjuryHandlerThresholds</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_injury_handler_thresholds_1a26f7be0f4e5706868f2a70badb526c25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_injury_handler_thresholds_1a26f7be0f4e5706868f2a70badb526c25" kindref="member">WORN</ref><sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="4" refid="class_injury_handler_thresholds_1a74fcc9683970a186130e23871908dabc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_injury_handler_thresholds_1a74fcc9683970a186130e23871908dabc" kindref="member">DAMAGED</ref><sp/>=<sp/>0.3;</highlight></codeline>
+<codeline lineno="5" refid="class_injury_handler_thresholds_1aec447a688c15a878d093df827bd05511" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_injury_handler_thresholds_1aec447a688c15a878d093df827bd05511" kindref="member">BADLY_DAMAGED</ref><sp/>=<sp/>0.2;</highlight></codeline>
+<codeline lineno="6" refid="class_injury_handler_thresholds_1a5a44f31e65ae08570a71d4c55d6fe2f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_injury_handler_thresholds_1a5a44f31e65ae08570a71d4c55d6fe2f0" kindref="member">RUINED</ref><sp/>=<sp/>0.1;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_injury_anim_values" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_injury_anim_values" kindref="compound">InjuryAnimValues</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11" refid="class_injury_anim_values_1aa603ab94c2a0f6bbbab68d8f0bf6602b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_injury_anim_values_1aa603ab94c2a0f6bbbab68d8f0bf6602b" kindref="member">LVL0</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="12" refid="class_injury_anim_values_1a662fac7ba6de3ce25253d5de1fbf76cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_injury_anim_values_1a662fac7ba6de3ce25253d5de1fbf76cf" kindref="member">LVL1</ref><sp/>=<sp/>0.3;</highlight></codeline>
+<codeline lineno="13" refid="class_injury_anim_values_1abb5a078bb0c8eea25c9fae75648cbc73" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_injury_anim_values_1abb5a078bb0c8eea25c9fae75648cbc73" kindref="member">LVL2</ref><sp/>=<sp/>0.6;</highlight></codeline>
+<codeline lineno="14" refid="class_injury_anim_values_1ad8243b919477aa3995558f1ab762b11b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_injury_anim_values_1ad8243b919477aa3995558f1ab762b11b" kindref="member">LVL3</ref><sp/>=<sp/>0.8;</highlight></codeline>
+<codeline lineno="15" refid="class_injury_anim_values_1a646ac550ec3e8fe43b30b49e275ec997" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_injury_anim_values_1a646ac550ec3e8fe43b30b49e275ec997" kindref="member">LVL4</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20" refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfaac64013c4790ae26aab86e76afd9de952" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfaac64013c4790ae26aab86e76afd9de952" kindref="member">PRISTINE</ref>,</highlight></codeline>
+<codeline lineno="21" refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfaae0a44189ca6ba3d03d755c0621b2f9bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfaae0a44189ca6ba3d03d755c0621b2f9bf" kindref="member">WORN</ref>,</highlight></codeline>
+<codeline lineno="22" refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfaaa511233a495e23b11960850d5b86abe4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfaaa511233a495e23b11960850d5b86abe4" kindref="member">DAMAGED</ref>,</highlight></codeline>
+<codeline lineno="23" refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfaa58b3d3ed02142f09d5f86daef4ccb5fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfaa58b3d3ed02142f09d5f86daef4ccb5fc" kindref="member">BADLY_DAMAGED</ref>,</highlight></codeline>
+<codeline lineno="24" refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfaa10acf7777823e1491dc0ede7d7f8238b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfaa10acf7777823e1491dc0ede7d7f8238b" kindref="member">RUINED</ref>,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>eInjuryOverrides</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30" refid="_injury_handler_8c_1af16452d2a3a19556405809c3583c1b5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1af16452d2a3a19556405809c3583c1b5d" kindref="member">NONE</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="31" refid="_injury_handler_8c_1a04c46539877eda0772ab95326319357a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1a04c46539877eda0772ab95326319357a" kindref="member">MORPHINE</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="32" refid="_injury_handler_8c_1a5a8c34e719b7289e91096e8fa1c26608" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1a5a8c34e719b7289e91096e8fa1c26608" kindref="member">PAIN_KILLERS_LVL0</ref><sp/>=<sp/>2,</highlight></codeline>
+<codeline lineno="33" refid="_injury_handler_8c_1ad16d0042c6289c3cf0b32b17dc4fa073" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1ad16d0042c6289c3cf0b32b17dc4fa073" kindref="member">PAIN_KILLERS_LVL1</ref><sp/>=<sp/>4,</highlight></codeline>
+<codeline lineno="34" refid="_injury_handler_8c_1ab98e39572918d380fc9fa2ed1d484f22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1ab98e39572918d380fc9fa2ed1d484f22" kindref="member">BROKEN_LEGS</ref><sp/>=<sp/>8,<sp/></highlight><highlight class="comment">//New</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="_injury_handler_8c_1afc96fa96849d35ad33787908ad99aa61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1afc96fa96849d35ad33787908ad99aa61" kindref="member">BROKEN_LEGS_SPLINT</ref><sp/>=<sp/>16,<sp/></highlight><highlight class="comment">//New</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="_injury_handler_8c_1a8cac4f18c7e786bff4e9f626c363cff2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1a8cac4f18c7e786bff4e9f626c363cff2" kindref="member">PRONE_ANIM_OVERRIDE</ref><sp/>=<sp/>32,<sp/></highlight><highlight class="comment">//Prevent<sp/>non<sp/>pristine<sp/>animation<sp/>when<sp/>prone</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_injury_handler_8c_1ac42ee6aa02a3fdeceac92d7cff3fa90e" kindref="member">InjuryAnimationHandler</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="_injury_handler_8c_1a859d24d134564f07697afe50c122f8ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1a859d24d134564f07697afe50c122f8ce" kindref="member">VALUE_CHECK_INTERVAL</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="43" refid="_injury_handler_8c_1a5252b3258826274dedbd2d371b18633f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1a5252b3258826274dedbd2d371b18633f" kindref="member">SENSITIVTY_PERCENTAGE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1;<sp/></highlight><highlight class="comment">//how<sp/>much<sp/>the<sp/>value<sp/>needs<sp/>to<sp/>change<sp/>up/down<sp/>from<sp/>previous<sp/>update<sp/>to<sp/>trigger<sp/>a<sp/>new<sp/>update(in<sp/>percent)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="_injury_handler_8c_1a08544e0c4316eb6cc41fcb5a91235c4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref><sp/><ref refid="_injury_handler_8c_1a08544e0c4316eb6cc41fcb5a91235c4d" kindref="member">m_ChangedStateInvoker</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="_injury_handler_8c_1ace85bb1c839a917298250690516e3275" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1ace85bb1c839a917298250690516e3275" kindref="member">m_TimeSinceLastTick</ref><sp/>=<sp/><ref refid="_injury_handler_8c_1a859d24d134564f07697afe50c122f8ce" kindref="member">VALUE_CHECK_INTERVAL</ref><sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="48" refid="_injury_handler_8c_1a099de8fec53d5760db630724c0ed28a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1a099de8fec53d5760db630724c0ed28a0" kindref="member">m_LastUpdate</ref>;</highlight></codeline>
+<codeline lineno="49" refid="_injury_handler_8c_1a43dd85902aef9af267fd4215f52a9186" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref><sp/><ref refid="_injury_handler_8c_1a43dd85902aef9af267fd4215f52a9186" kindref="member">m_LastHealthUpdate</ref>;</highlight></codeline>
+<codeline lineno="50" refid="_injury_handler_8c_1a4d9b0280090f0265fc1914f3de2c4e98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1a4d9b0280090f0265fc1914f3de2c4e98" kindref="member">m_HealthMaxValue</ref>;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="_injury_handler_8c_1a37495a7d404542b02363adc8c53a2ddb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>;<sp/></highlight></codeline>
+<codeline lineno="54" refid="_injury_handler_8c_1a108eb72244b1f588155dd3d353a441a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1a108eb72244b1f588155dd3d353a441a2" kindref="member">m_AnimationChange</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55" refid="_injury_handler_8c_1ae4ed464750878a62c3dc8986f0b528d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1ae4ed464750878a62c3dc8986f0b528d0" kindref="member">m_InjuryAnimEnabled</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56" refid="_injury_handler_8c_1abff43faeaff2f6c4254513525ac89309" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1abff43faeaff2f6c4254513525ac89309" kindref="member">m_InjuryAnimDamageValue</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="57" refid="_injury_handler_8c_1ae072a2155639222e9b56ef9a57322e20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1ae072a2155639222e9b56ef9a57322e20" kindref="member">m_ForceInjuryAnimMask</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="_injury_handler_8c_1ac42ee6aa02a3fdeceac92d7cff3fa90e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1ac42ee6aa02a3fdeceac92d7cff3fa90e" kindref="member">InjuryAnimationHandler</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref><sp/>=<sp/>player;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1a4d9b0280090f0265fc1914f3de2c4e98" kindref="member">m_HealthMaxValue</ref><sp/>=<sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>.GetMaxHealth(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Health&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65" refid="_injury_handler_8c_1acea0edb7d049bd91d8b22c9f10484ddf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1acea0edb7d049bd91d8b22c9f10484ddf" kindref="member">IsInjuryAnimEnabled</ref>()</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1ae4ed464750878a62c3dc8986f0b528d0" kindref="member">m_InjuryAnimEnabled</ref>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="_injury_handler_8c_1a6423575c04af57d40fb1fd0d41dcd979" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1a6423575c04af57d40fb1fd0d41dcd979" kindref="member">GetInjuryAnimValue</ref>()</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1abff43faeaff2f6c4254513525ac89309" kindref="member">m_InjuryAnimDamageValue</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="_injury_handler_8c_1a203e9530a666fb0c568325bb7671754b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref><sp/><ref refid="_injury_handler_8c_1a203e9530a666fb0c568325bb7671754b" kindref="member">GetInvoker</ref>()</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1a08544e0c4316eb6cc41fcb5a91235c4d" kindref="member">m_ChangedStateInvoker</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80" refid="_injury_handler_8c_1a0944bb36335f2aac59b5d5a46566fa0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___widget_a_p_i_1ga70ac517aa5d3b3af95f61a2d560d811f" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaT)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_injury_handler_8c_1a108eb72244b1f588155dd3d353a441a2" kindref="member">m_AnimationChange</ref><sp/>)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>.GetCommandModifier_Additives().SetInjured(<ref refid="_injury_handler_8c_1abff43faeaff2f6c4254513525ac89309" kindref="member">m_InjuryAnimDamageValue</ref>,<sp/><ref refid="_injury_handler_8c_1ae4ed464750878a62c3dc8986f0b528d0" kindref="member">m_InjuryAnimEnabled</ref>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1a108eb72244b1f588155dd3d353a441a2" kindref="member">m_AnimationChange</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsClient()<sp/>)<sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1ace85bb1c839a917298250690516e3275" kindref="member">m_TimeSinceLastTick</ref><sp/>+=<sp/>deltaT;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_injury_handler_8c_1ace85bb1c839a917298250690516e3275" kindref="member">m_TimeSinceLastTick</ref><sp/>&gt;<sp/><ref refid="_injury_handler_8c_1a859d24d134564f07697afe50c122f8ce" kindref="member">VALUE_CHECK_INTERVAL</ref><sp/>)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1a55454243e27233ad8a5f05463b43ab81" kindref="member">CheckValue</ref>();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1ace85bb1c839a917298250690516e3275" kindref="member">m_TimeSinceLastTick</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="_injury_handler_8c_1a35e0e165ddb8668f9cbcb127fab6b80e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref><sp/><ref refid="_injury_handler_8c_1a35e0e165ddb8668f9cbcb127fab6b80e" kindref="member">GetOverrideLevel</ref>(<ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref><sp/>unchanged_level)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref><sp/>override_level<sp/>=<sp/>unchanged_level;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Whatever<sp/>the<sp/>case,<sp/>prone<sp/>will<sp/>always<sp/>use<sp/>PRISTINE<sp/>anim<sp/>level<sp/>as<sp/>alternative<sp/>anim<sp/>level(s)<sp/>are<sp/>not<sp/>interesting<sp/>gameplaywise</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_injury_handler_8c_1ae072a2155639222e9b56ef9a57322e20" kindref="member">m_ForceInjuryAnimMask</ref><sp/>&amp;<sp/>eInjuryOverrides.PRONE_ANIM_OVERRIDE<sp/>&amp;&amp;<sp/>override_level<sp/>&gt;<sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.PRISTINE<sp/>)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>override_level<sp/>=<sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.PRISTINE;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>override_level;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_injury_handler_8c_1ae072a2155639222e9b56ef9a57322e20" kindref="member">m_ForceInjuryAnimMask</ref><sp/>&amp;<sp/>eInjuryOverrides.MORPHINE<sp/>&amp;&amp;<sp/>override_level<sp/>&gt;<sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.PRISTINE<sp/>)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>override_level<sp/>=<sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.PRISTINE;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_injury_handler_8c_1ae072a2155639222e9b56ef9a57322e20" kindref="member">m_ForceInjuryAnimMask</ref><sp/>&amp;<sp/>eInjuryOverrides.PAIN_KILLERS_LVL1<sp/>&amp;&amp;<sp/>override_level<sp/>&gt;<sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.WORN<sp/>)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>override_level<sp/>=<sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.WORN;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_injury_handler_8c_1ae072a2155639222e9b56ef9a57322e20" kindref="member">m_ForceInjuryAnimMask</ref><sp/>&amp;<sp/>eInjuryOverrides.PAIN_KILLERS_LVL0<sp/>&amp;&amp;<sp/>override_level<sp/>&gt;<sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.DAMAGED<sp/>)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>override_level<sp/>=<sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.DAMAGED;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_injury_handler_8c_1ae072a2155639222e9b56ef9a57322e20" kindref="member">m_ForceInjuryAnimMask</ref><sp/>&amp;&amp;<sp/>override_level<sp/>&gt;<sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.DAMAGED<sp/>)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>override_level<sp/>=<sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.RUINED;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Broken<sp/>leg<sp/>overrides</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_injury_handler_8c_1ae072a2155639222e9b56ef9a57322e20" kindref="member">m_ForceInjuryAnimMask</ref><sp/>&amp;<sp/>eInjuryOverrides.BROKEN_LEGS_SPLINT<sp/>&amp;&amp;<sp/>override_level<sp/>&lt;<sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.DAMAGED<sp/>)</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>override_level<sp/>=<sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.DAMAGED;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_injury_handler_8c_1ae072a2155639222e9b56ef9a57322e20" kindref="member">m_ForceInjuryAnimMask</ref><sp/>&amp;<sp/>eInjuryOverrides.BROKEN_LEGS<sp/>&amp;&amp;<sp/>override_level<sp/>&lt;<sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.RUINED<sp/>)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Average<sp/>leg<sp/>health<sp/>used<sp/>to<sp/>determine<sp/>which<sp/>animation<sp/>to<sp/>use</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>avgLegHealth<sp/>=<sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>.GetHealth(</highlight><highlight class="stringliteral">&quot;RightLeg&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>+<sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>.GetHealth(</highlight><highlight class="stringliteral">&quot;LeftLeg&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>+<sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>.GetHealth(</highlight><highlight class="stringliteral">&quot;RightFoot&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>+<sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>.GetHealth(</highlight><highlight class="stringliteral">&quot;LeftFoot&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>avgLegHealth<sp/>*=<sp/>0.25;<sp/></highlight><highlight class="comment">//divide<sp/>by<sp/>4<sp/>to<sp/>make<sp/>the<sp/>average<sp/>leg<sp/>health;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(avgLegHealth<sp/>&lt;=<sp/><ref refid="class_player_constants" kindref="compound">PlayerConstants</ref>.<ref refid="class_player_constants_1af13da88356f970b45b96f68904a6215d" kindref="member">BROKEN_LEGS_LOW_HEALTH_THRESHOLD</ref>)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>override_level<sp/>=<sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.RUINED;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(avgLegHealth<sp/>&gt;=<sp/><ref refid="class_player_constants" kindref="compound">PlayerConstants</ref>.<ref refid="class_player_constants_1a0bcf1e7b40bf5b290dfdbba65aba8251" kindref="member">BROKEN_LEGS_HIGH_HEALTH_THRESHOLD</ref>)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>override_level<sp/>=<sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.WORN;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>override_level<sp/>=<sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.DAMAGED;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>override_level;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="154" refid="_injury_handler_8c_1a55454243e27233ad8a5f05463b43ab81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1a55454243e27233ad8a5f05463b43ab81" kindref="member">CheckValue</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>forceUpdate<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>health_current_normalized<sp/>=<sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>.GetHealth(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Health&quot;</highlight><highlight class="normal">)<sp/>/<sp/><ref refid="_injury_handler_8c_1a4d9b0280090f0265fc1914f3de2c4e98" kindref="member">m_HealthMaxValue</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref><sp/>injury_level<sp/>=<sp/><ref refid="_injury_handler_8c_1af59632837e3749858d41ea344c839c07" kindref="member">GetInjuryLevel</ref>(health_current_normalized);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_injury_handler_8c_1ae072a2155639222e9b56ef9a57322e20" kindref="member">m_ForceInjuryAnimMask</ref><sp/>)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>injury_level<sp/>=<sp/><ref refid="_injury_handler_8c_1a35e0e165ddb8668f9cbcb127fab6b80e" kindref="member">GetOverrideLevel</ref>(injury_level);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_injury_handler_8c_1a43dd85902aef9af267fd4215f52a9186" kindref="member">m_LastHealthUpdate</ref><sp/>!=<sp/>injury_level<sp/>||<sp/>forceUpdate<sp/>)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1af6eacf744e3c284fe157d8cfa84b3dde" kindref="member">SendValue</ref>(injury_level);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1a08544e0c4316eb6cc41fcb5a91235c4d" kindref="member">m_ChangedStateInvoker</ref>.<ref refid="class_script_invoker_1a92afb05a0027c1949c5364a8e035e1c9" kindref="member">Invoke</ref>(injury_level);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1a43dd85902aef9af267fd4215f52a9186" kindref="member">m_LastHealthUpdate</ref><sp/>=<sp/>injury_level;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_combination_lock_8c_1a9ca5b99b3550503ca7bad8418e133156" kindref="member">Synchronize</ref>(injury_level);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="173" refid="_injury_handler_8c_1a5d93abd5ef76fe12d8c87272f554270e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_combination_lock_8c_1a9ca5b99b3550503ca7bad8418e133156" kindref="member">Synchronize</ref>(<ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref><sp/>level)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>.m_HealthLevel<sp/>=<sp/>level;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;m_Player.m_HealthLevel:&quot;<sp/>+<sp/>m_Player.m_HealthLevel);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>.SetSynchDirty();</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="_injury_handler_8c_1af6eacf744e3c284fe157d8cfa84b3dde" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1af6eacf744e3c284fe157d8cfa84b3dde" kindref="member">SendValue</ref>(<ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref><sp/>level)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_day_z_player_sync_junctures" kindref="compound">DayZPlayerSyncJunctures</ref>.<ref refid="class_day_z_player_sync_junctures_1a4b34122ab81bd3a8bd9fdcec0326dfb3" kindref="member">SendInjury</ref>(<ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>level);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="185" refid="_injury_handler_8c_1a60ac3dbd2aff898eda08c8f7240b1fe9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1a60ac3dbd2aff898eda08c8f7240b1fe9" kindref="member">SetInjuryCommandParams</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable,<sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref><sp/>level)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1a108eb72244b1f588155dd3d353a441a2" kindref="member">m_AnimationChange</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1ae4ed464750878a62c3dc8986f0b528d0" kindref="member">m_InjuryAnimEnabled</ref><sp/>=<sp/>enable;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1abff43faeaff2f6c4254513525ac89309" kindref="member">m_InjuryAnimDamageValue</ref><sp/>=<sp/><ref refid="_injury_handler_8c_1a32acce33ad3d8de56269030f647055b9" kindref="member">GetInjuryValue</ref>(level);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="192" refid="_injury_handler_8c_1af59632837e3749858d41ea344c839c07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref><sp/><ref refid="_injury_handler_8c_1af59632837e3749858d41ea344c839c07" kindref="member">GetInjuryLevel</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>health)</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>health<sp/><sp/>&lt;<sp/><ref refid="class_injury_handler_thresholds" kindref="compound">InjuryHandlerThresholds</ref>.<ref refid="class_injury_handler_thresholds_1a5a44f31e65ae08570a71d4c55d6fe2f0" kindref="member">RUINED</ref><sp/>)<sp/></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.RUINED;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>health<sp/><sp/>&lt;<sp/><ref refid="class_injury_handler_thresholds" kindref="compound">InjuryHandlerThresholds</ref>.<ref refid="class_injury_handler_thresholds_1aec447a688c15a878d093df827bd05511" kindref="member">BADLY_DAMAGED</ref><sp/>)<sp/></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.BADLY_DAMAGED;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>health<sp/><sp/>&lt;<sp/><ref refid="class_injury_handler_thresholds" kindref="compound">InjuryHandlerThresholds</ref>.<ref refid="class_injury_handler_thresholds_1a74fcc9683970a186130e23871908dabc" kindref="member">DAMAGED</ref><sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.DAMAGED;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>health<sp/><sp/>&lt;<sp/><ref refid="class_injury_handler_thresholds" kindref="compound">InjuryHandlerThresholds</ref>.<ref refid="class_injury_handler_thresholds_1a26f7be0f4e5706868f2a70badb526c25" kindref="member">WORN</ref><sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.WORN;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.PRISTINE;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="218" refid="_injury_handler_8c_1a32acce33ad3d8de56269030f647055b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1a32acce33ad3d8de56269030f647055b9" kindref="member">GetInjuryValue</ref>(<ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref><sp/>level)</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<sp/>level<sp/>)</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.RUINED:</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_injury_anim_values" kindref="compound">InjuryAnimValues</ref>.<ref refid="class_injury_anim_values_1a646ac550ec3e8fe43b30b49e275ec997" kindref="member">LVL4</ref>;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.BADLY_DAMAGED:</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_injury_anim_values" kindref="compound">InjuryAnimValues</ref>.<ref refid="class_injury_anim_values_1ad8243b919477aa3995558f1ab762b11b" kindref="member">LVL3</ref>;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.DAMAGED:</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_injury_anim_values" kindref="compound">InjuryAnimValues</ref>.<ref refid="class_injury_anim_values_1abb5a078bb0c8eea25c9fae75648cbc73" kindref="member">LVL2</ref>;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.WORN:</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_injury_anim_values" kindref="compound">InjuryAnimValues</ref>.<ref refid="class_injury_anim_values_1a662fac7ba6de3ce25253d5de1fbf76cf" kindref="member">LVL1</ref>;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_injury_handler_8c_1aab851550e71abd27f52bf560e1b32bfa" kindref="member">eInjuryHandlerLevels</ref>.PRISTINE:</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_injury_anim_values" kindref="compound">InjuryAnimValues</ref>.<ref refid="class_injury_anim_values_1aa603ab94c2a0f6bbbab68d8f0bf6602b" kindref="member">LVL0</ref>;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1ga786b160dafbe15abb829786ba345cb15" kindref="member">Error</ref>(</highlight><highlight class="stringliteral">&quot;Undefined<sp/>Injury<sp/>level&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/InjuryHandler.c"/>
+  </compounddef>
+</doxygen>

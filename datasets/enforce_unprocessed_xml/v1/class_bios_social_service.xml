@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_bios_social_service" kind="class" language="C++" prot="public">
+    <compoundname>BiosSocialService</compoundname>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_bios_social_service_1ab39dc029f2dff09f6181a86f06f91cd6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+        <definition>proto native EBiosError BiosSocialService::ShowUserProfileAsync</definition>
+        <argsstring>(string uid_target)</argsstring>
+        <name>ShowUserProfileAsync</name>
+        <qualifiedname>BiosSocialService::ShowUserProfileAsync</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>uid_target</declname>
+        </param>
+        <briefdescription>
+<para>Display small system UI profile for the target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Xbox: The async result is returned in the OnPermissionsAsync callback.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uid_target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target user Uid&apos;s for which to display profile. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>EBiosError indicating if the async operation is pending. <linebreak/>
+ </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSocialService.c" line="32" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_social_service_1a1da630780fdb4edfc0dd2c714fecb8c2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+        <definition>proto native EBiosError BiosSocialService::GetFriendsAsync</definition>
+        <argsstring>()</argsstring>
+        <name>GetFriendsAsync</name>
+        <qualifiedname>BiosSocialService::GetFriendsAsync</qualifiedname>
+        <briefdescription>
+<para>Query for friends list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The async result is returned in the OnFriendsAsync callback.</para>
+<para><simplesect kind="return"><para>EBiosError indicating if the async operation is pending. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSocialService.c" line="40" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_social_service_1a51ea0ae9ab75f2a1b9d7bf12f7735ced" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosSocialService::OnUserProfileAsync</definition>
+        <argsstring>(EBiosError error)</argsstring>
+        <name>OnUserProfileAsync</name>
+        <qualifiedname>BiosSocialService::OnUserProfileAsync</qualifiedname>
+        <param>
+          <type><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Async callback for ShowUserProfileAsync. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error indicating success or fail of the async operation. Xbox: OK - the user displayed the fullscreen profile Xbox: CANCEL - the user closed the small profile. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSocialService.c" line="48" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSocialService.c" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_social_service_1a40353cc644d06cfef8bf0ff8a2e677c4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosSocialService::OnFriendsAsync</definition>
+        <argsstring>(BiosFriendInfoArray friend_list, EBiosError error)</argsstring>
+        <name>OnFriendsAsync</name>
+        <qualifiedname>BiosSocialService::OnFriendsAsync</qualifiedname>
+        <param>
+          <type><ref refid="_bios_social_service_8c_1a28fce51bcc968a7b375c0149e27c58af" kindref="member">BiosFriendInfoArray</ref></type>
+          <declname>friend_list</declname>
+        </param>
+        <param>
+          <type><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Async callback for GetFriendsAsync. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>friend_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of <ref refid="class_bios_friend_info" kindref="compound">BiosFriendInfo</ref> for each friend. NULL if failed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error indicating success or fail of the async operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSocialService.c" line="58" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSocialService.c" bodystart="58" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_bios_social_service" kindref="compound">BiosSocialService</ref> is used to query friend list and other social features for the current user. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Todo: report friend changes </para>
+    </detaileddescription>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSocialService.c" line="23" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSocialService.c" bodystart="24" bodyend="62"/>
+    <listofallmembers>
+      <member refid="class_bios_social_service_1a1da630780fdb4edfc0dd2c714fecb8c2" prot="private" virt="non-virtual"><scope>BiosSocialService</scope><name>GetFriendsAsync</name></member>
+      <member refid="class_bios_social_service_1a40353cc644d06cfef8bf0ff8a2e677c4" prot="private" virt="non-virtual"><scope>BiosSocialService</scope><name>OnFriendsAsync</name></member>
+      <member refid="class_bios_social_service_1a51ea0ae9ab75f2a1b9d7bf12f7735ced" prot="private" virt="non-virtual"><scope>BiosSocialService</scope><name>OnUserProfileAsync</name></member>
+      <member refid="class_bios_social_service_1ab39dc029f2dff09f6181a86f06f91cd6" prot="private" virt="non-virtual"><scope>BiosSocialService</scope><name>ShowUserProfileAsync</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="group___light" kind="group">
+    <compoundname>Light</compoundname>
+    <title>Light API</title>
+    <innergroup refid="group___world_trace">Trace&amp;Visibility API</innergroup>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___light_1gadc3ec8293e6a97ebe43f0196b9a7f638" prot="public" static="no" strong="no">
+        <type></type>
+        <name>LightType</name>
+        <enumvalue id="group___light_1ggadc3ec8293e6a97ebe43f0196b9a7f638a15108ccafa3232b9067f889b6156f565" prot="public">
+          <name>POINT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___light_1ggadc3ec8293e6a97ebe43f0196b9a7f638a072651f3f47e0c7f8d4ce21719f0a57c" prot="public">
+          <name>SPOT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___light_1ggadc3ec8293e6a97ebe43f0196b9a7f638ac1fbb1e261b4d7aab1e57e564a486fb0" prot="public">
+          <name>DIRECTIONAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___light_1ggadc3ec8293e6a97ebe43f0196b9a7f638a01eaec024a78f1d2e73b59e5d281251e" prot="public">
+          <name>AMBIENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="121" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" bodystart="122" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___light_1gace01d340b1da85787dd2732051859928" prot="public" static="no" strong="no">
+        <type></type>
+        <name>LightFlags</name>
+        <enumvalue id="group___light_1ggace01d340b1da85787dd2732051859928a2a0042993d92af2a1ccb19d71796f755" prot="public">
+          <name>DYNAMIC</name>
+          <briefdescription>
+<para>Dynamic objects are included in the query. </para>
+          </briefdescription>
+          <detaileddescription>
+<para>Dynamic light. There is limit 512 dynamic lights per world and 32 per camera view. They are faster when moving and changing shape. Also they are always attached to owner entity </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___light_1ggace01d340b1da85787dd2732051859928aaad233af6cd05e2cdc79ecb71f2f9051" prot="public">
+          <name>CASTSHADOW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___light_1ggace01d340b1da85787dd2732051859928adeee0554b2ec74cbea99ec48afc9988a" prot="public">
+          <name>CHEAP</name>
+          <briefdescription>
+<para>for cheaper dynamic lights, like muzzle flashes (might use cheaper rendering method) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="129" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" bodystart="130" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___light_1ga4e60b25c6ebf5fbcb8a187210a77a5f9" prot="public" static="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>[]</type>
+        <definition>typedef int [] HLIGHT</definition>
+        <argsstring></argsstring>
+        <name>HLIGHT</name>
+        <briefdescription>
+<para>Light handle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="119" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___light_1gad454bd187311ad81b369e99ae89575c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="group___light_1ga4e60b25c6ebf5fbcb8a187210a77a5f9" kindref="member">HLIGHT</ref></type>
+        <definition>proto HLIGHT AddLight</definition>
+        <argsstring>(IEntity owner, LightType type, LightFlags flags, float radius, vector color)</argsstring>
+        <name>AddLight</name>
+        <param>
+          <type><ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>owner</declname>
+        </param>
+        <param>
+          <type><ref refid="group___light_1gadc3ec8293e6a97ebe43f0196b9a7f638" kindref="member">LightType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="group___light_1gace01d340b1da85787dd2732051859928" kindref="member">LightFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>radius</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>creates light </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="145" column="14" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" declline="145" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group___light_1ga29cf42e0916651368c737d60d320c375" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool RemoveLight</definition>
+        <argsstring>(HLIGHT light)</argsstring>
+        <name>RemoveLight</name>
+        <param>
+          <type><ref refid="group___light_1ga4e60b25c6ebf5fbcb8a187210a77a5f9" kindref="member">HLIGHT</ref></type>
+          <declname>light</declname>
+        </param>
+        <briefdescription>
+<para>removes light </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="147" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" declline="147" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___light_1gaca646bb1f90384cde9293ccd6b3685b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool SetLightEx</definition>
+        <argsstring>(HLIGHT light, float radius, vector color)</argsstring>
+        <name>SetLightEx</name>
+        <param>
+          <type><ref refid="group___light_1ga4e60b25c6ebf5fbcb8a187210a77a5f9" kindref="member">HLIGHT</ref></type>
+          <declname>light</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>radius</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="148" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" declline="148" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___light_1ga8e6fa559f2598ad39d5200dae753f67f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool SetLightTexture</definition>
+        <argsstring>(HLIGHT light, string cubemap)</argsstring>
+        <name>SetLightTexture</name>
+        <param>
+          <type><ref refid="group___light_1ga4e60b25c6ebf5fbcb8a187210a77a5f9" kindref="member">HLIGHT</ref></type>
+          <declname>light</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>cubemap</declname>
+        </param>
+        <briefdescription>
+<para>sets lookup texture for projection lights </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="150" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" declline="150" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___light_1ga61c7d93cd9abcf6da76215fc02d5a666" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int SetLightFlags</definition>
+        <argsstring>(HLIGHT light, LightFlags flags)</argsstring>
+        <name>SetLightFlags</name>
+        <param>
+          <type><ref refid="group___light_1ga4e60b25c6ebf5fbcb8a187210a77a5f9" kindref="member">HLIGHT</ref></type>
+          <declname>light</declname>
+        </param>
+        <param>
+          <type><ref refid="group___light_1gace01d340b1da85787dd2732051859928" kindref="member">LightFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="151" column="18" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" declline="151" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___light_1ga0b25d2a326ea4a3043f564446ca8c83e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int ClearLightFlags</definition>
+        <argsstring>(HLIGHT light, LightFlags flags)</argsstring>
+        <name>ClearLightFlags</name>
+        <param>
+          <type><ref refid="group___light_1ga4e60b25c6ebf5fbcb8a187210a77a5f9" kindref="member">HLIGHT</ref></type>
+          <declname>light</declname>
+        </param>
+        <param>
+          <type><ref refid="group___light_1gace01d340b1da85787dd2732051859928" kindref="member">LightFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="152" column="18" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" declline="152" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___light_1ga68f54f84b345b1020a7276b4dab25022" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool SetLightCone</definition>
+        <argsstring>(HLIGHT light, float cone)</argsstring>
+        <name>SetLightCone</name>
+        <param>
+          <type><ref refid="group___light_1ga4e60b25c6ebf5fbcb8a187210a77a5f9" kindref="member">HLIGHT</ref></type>
+          <declname>light</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>cone</declname>
+        </param>
+        <briefdescription>
+<para>Sets light cone in degrees (for LightType.SPOT). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="154" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" declline="154" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___light_1gac47d2faf820692944d3a59e7e5170c92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float GetSceneHDRMul</definition>
+        <argsstring>(int camera)</argsstring>
+        <name>GetSceneHDRMul</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>scene multiplicator of light (based on measured scene light levels) - preexposure of light </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="159" column="20" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" declline="159" declcolumn="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

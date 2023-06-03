@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_worlds_menu_8c" kind="file" language="C++">
+    <compoundname>WorldsMenu.c</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifdef<sp/>GAME_TEMPLATE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">[<ref refid="group___entity_attributes_1gaf2b8419071cbf8297088af388d37d6a4" kindref="member">EditorAttribute</ref>(</highlight><highlight class="stringliteral">&quot;box&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;GameLib/Scripted&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Worlds<sp/>menu&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;-0.25<sp/>-0.25<sp/>-0.25&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;0.25<sp/>0.25<sp/>0.25&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;255<sp/>0<sp/>0<sp/>255&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">WorldsMenuClass</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">WorldsMenuClass<sp/>WorldsMenuSource;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">WorldsMenu:<sp/>GenericEntity</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_DbgListSelection<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_WorldsCount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>DEFAULT_WORLD<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;worlds/default.ent&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="classarray" kindref="compound">array&lt;string&gt;</ref><sp/>m_DbgOptions<sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/>ImageWidget<sp/>m_MouseWidget;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WorldsMenu(<ref refid="class_i_entity_source" kindref="compound">IEntitySource</ref><sp/>src,<sp/><ref refid="class_i_entity" kindref="compound">IEntity</ref><sp/>parent)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_shape_1gaa9ba3114af4e5ecafd82fcdfd3c196b1" kindref="member">SetFlags</ref>(<ref refid="group___entity_attributes_1gacda3452546886b2b713c62c4a07fd52a" kindref="member">EntityFlags</ref>.ACTIVE,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetEventMask(<ref refid="group___entity_attributes_1gaa29339063b04471895b3cb38b17cdb13" kindref="member">EntityEvent</ref>.POSTFRAME);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_class" kindref="compound">Class</ref>.<ref refid="group___enforce_1ga253ceb932745ea74ca4a4d3d9e8c12d7" kindref="member">CastTo</ref>(m_MouseWidget,<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().GetWorkspace().CreateWidgets(</highlight><highlight class="stringliteral">&quot;gui/layouts/mouse.layout&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_MouseWidget.SetSort(1024);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___widget_a_p_i_1gaec557629309e73f0612d9004d0bcbc38" kindref="member">SetCursorWidget</ref>(m_MouseWidget);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LoadWorlds();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>~WorldsMenu()</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>m_MouseWidget;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;string&gt;</ref><sp/>GetWorldList()</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_DbgOptions;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>EOnPostFrame(<ref refid="class_i_entity" kindref="compound">IEntity</ref><sp/>other,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>extra)<sp/></highlight><highlight class="comment">//EntityEvent.POSTFRAME</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InputManager<sp/>im<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().GetInputManager();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>im.ActivateContext(</highlight><highlight class="stringliteral">&quot;MenuContext&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>menuSelect<sp/>=<sp/>im.GetActionTriggered(</highlight><highlight class="stringliteral">&quot;MenuSelect&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>menuBack<sp/>=<sp/>im.GetActionTriggered(</highlight><highlight class="stringliteral">&quot;MenuBack&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_dbg_u_i" kindref="compound">DbgUI</ref>.<ref refid="group___debug_u_i_1ga30728517ca5abc300d5f8059d0c95ae2" kindref="member">Begin</ref>(</highlight><highlight class="stringliteral">&quot;Load<sp/>world&quot;</highlight><highlight class="normal">,<sp/>400,<sp/>100);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_dbg_u_i" kindref="compound">DbgUI</ref>.<ref refid="group___debug_u_i_1ga80e4034966bbd572ab75cb074f9be584" kindref="member">Text</ref>(</highlight><highlight class="stringliteral">&quot;Select<sp/>world<sp/>to<sp/>load<sp/>from<sp/>worlds<sp/>directory&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_DbgOptions.Count()<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_dbg_u_i" kindref="compound">DbgUI</ref>.<ref refid="group___debug_u_i_1ga10794dda38cf2ea91b76affeed49df0f" kindref="member">List</ref>(</highlight><highlight class="stringliteral">&quot;Worlds&quot;</highlight><highlight class="normal">,<sp/>m_DbgListSelection,<sp/>m_DbgOptions);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_dbg_u_i" kindref="compound">DbgUI</ref>.<ref refid="group___debug_u_i_1ga4eda226c94d8197bb8733379ecb4ffb4" kindref="member">Button</ref>(</highlight><highlight class="stringliteral">&quot;Start&quot;</highlight><highlight class="normal">)<sp/>||<sp/>menuSelect)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>worldToLoad<sp/>=<sp/>m_DbgOptions.Get(m_DbgListSelection);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().SetWorldFile(worldToLoad,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_dbg_u_i" kindref="compound">DbgUI</ref>.<ref refid="group___debug_u_i_1ga4eda226c94d8197bb8733379ecb4ffb4" kindref="member">Button</ref>(</highlight><highlight class="stringliteral">&quot;Exit&quot;</highlight><highlight class="normal">)<sp/>||<sp/>menuBack)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().RequestClose();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_dbg_u_i" kindref="compound">DbgUI</ref>.<ref refid="group___debug_u_i_1ga20434f1c0eaa5719d0084d6e0b55c8ad" kindref="member">End</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LoadWorlds()</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fileName;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___file_1gab6d091fc42473756488e3ba6fda6c4ae" kindref="member">FileAttr</ref><sp/>fileAttr;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___file_1gaaad5e57bdb7ceaa9258923e8d5b3e1a8" kindref="member">FindFileHandle</ref><sp/>worlds<sp/>=<sp/><ref refid="group___file_1ga597c0e25e59fbf30bb1b6ba3033881c3" kindref="member">FindFile</ref>(</highlight><highlight class="stringliteral">&quot;worlds/*.ent&quot;</highlight><highlight class="normal">,<sp/>fileName,<sp/>fileAttr,<sp/>0);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!worlds)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InsertWorldToList(fileName);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(<ref refid="group___file_1ga6b229504b64c75b270ad1d6b49d50306" kindref="member">FindNextFile</ref>(worlds,<sp/>fileName,<sp/>fileAttr))</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InsertWorldToList(fileName);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___file_1ga273536d6ccbab4f12a3b5b9da21e98df" kindref="member">CloseFindFile</ref>(worlds);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_WorldsCount<sp/>=<sp/>m_DbgOptions.Count();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InsertWorldToList(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>fileName)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref><sp/>=<sp/><ref refid="group___enforce_1ga7a883b203754a93b0812b058ca80effd" kindref="member">String</ref>(</highlight><highlight class="stringliteral">&quot;worlds/&quot;</highlight><highlight class="normal"><sp/>+<sp/>fileName);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref><sp/>!=<sp/>DEFAULT_WORLD)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_DbgOptions.Insert(<ref refid="group___enforce_1ga7a883b203754a93b0812b058ca80effd" kindref="member">String</ref>(<ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/2_GameLib/entities/WorldsMenu.c"/>
+  </compounddef>
+</doxygen>

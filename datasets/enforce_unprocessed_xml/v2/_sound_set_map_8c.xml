@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_sound_set_map_8c" kind="file" language="C++">
+    <compoundname>SoundSetMap.c</compoundname>
+    <innerclass refid="class_sound_set_map" prot="public">SoundSetMap</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_sound_set_map" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sound_set_map" kindref="compound">SoundSetMap</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_sound_set_map_1a26e6053d3ce88ac0cbe1545a354b318f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map&lt;int, string&gt;</ref><sp/><ref refid="class_sound_set_map_1a26e6053d3ce88ac0cbe1545a354b318f" kindref="member">m_SoundSetMapIDByID</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map&lt;int, string&gt;</ref>;</highlight></codeline>
+<codeline lineno="4" refid="class_sound_set_map_1a429836a9d5b5643abdd3691f2128dbdd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map&lt;string, int&gt;</ref><sp/><ref refid="class_sound_set_map_1a429836a9d5b5643abdd3691f2128dbdd" kindref="member">m_SoundSetMapIDByName</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map&lt;string, int&gt;</ref>;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="6" refid="class_sound_set_map_1a6da1a56bb8d4d7f014de7590e5932ed2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sound_set_map_1a6da1a56bb8d4d7f014de7590e5932ed2" kindref="member">Init</ref>()</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;CfgSoundSets&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>soundCount<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1aca38b9a2b4a3fee55c9e4dfc64df2a3b" kindref="member">ConfigGetChildrenCount</ref>(<ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>soundCount;<sp/>i++)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>soundClassName;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a03909ec186a2f1d7c5c649a80f4819b6" kindref="member">ConfigGetChildName</ref>(<ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>,<sp/>i,<sp/>soundClassName);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sound_set_map_1a26e6053d3ce88ac0cbe1545a354b318f" kindref="member">m_SoundSetMapIDByID</ref>.Insert(i,soundClassName);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sound_set_map_1a429836a9d5b5643abdd3691f2128dbdd" kindref="member">m_SoundSetMapIDByName</ref>.Insert(soundClassName,i);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//PrintString(soundClassName);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22" refid="class_sound_set_map_1ad1e4af813825c1fcf3aa29f750a5345e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_sound_set_map_1ad1e4af813825c1fcf3aa29f750a5345e" kindref="member">GetSoundSetName</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_sound_set_map_1a26e6053d3ce88ac0cbe1545a354b318f" kindref="member">m_SoundSetMapIDByID</ref>.Get(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="class_sound_set_map_1a031fc0de5f1c547c48e002b9cdbad1c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_sound_set_map_1a031fc0de5f1c547c48e002b9cdbad1c6" kindref="member">GetSoundSetID</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_plugin_day_z_infected_debug_8c_1a8ccf841cb59e451791bcb2e1ac4f1edc" kindref="member">name</ref>)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_sound_set_map_1a429836a9d5b5643abdd3691f2128dbdd" kindref="member">m_SoundSetMapIDByName</ref>.Get(<ref refid="_plugin_day_z_infected_debug_8c_1a8ccf841cb59e451791bcb2e1ac4f1edc" kindref="member">name</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/SoundSetMap.c"/>
+  </compounddef>
+</doxygen>

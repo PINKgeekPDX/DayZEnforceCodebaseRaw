@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_hemolytic_reaction_8c" kind="file" language="C++">
+    <compoundname>HemolyticReaction.c</compoundname>
+    <innerclass refid="class_hemolytic_reaction_mdfr" prot="public">HemolyticReactionMdfr</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_hemolytic_reaction_mdfr" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_hemolytic_reaction_mdfr" kindref="compound">HemolyticReactionMdfr</ref>:<sp/><ref refid="class_modifier_base" kindref="compound">ModifierBase</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_hemolytic_reaction_mdfr_1a4a353105ad07550bce0c1a621c1b0e19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_hemolytic_reaction_mdfr_1a4a353105ad07550bce0c1a621c1b0e19" kindref="member">m_RunningTime</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="5" refid="class_hemolytic_reaction_mdfr_1a1962bbec52e2f24c8686fc52e4553b54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hemolytic_reaction_mdfr_1a1962bbec52e2f24c8686fc52e4553b54" kindref="member">Init</ref>()</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifier_base_8c_1a04ae6d90cb75d3086c27e65cddd358a0" kindref="member">m_TrackActivatedTime</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_effect_8c_1a231c2447c3602426c9e06e6094bae8a8" kindref="member">m_ID</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="e_modifiers_8c_1a38544df67f7f5b2fdf488d7705d7a582" kindref="member">eModifiers</ref>.MDF_HEMOLYTIC_REACTION;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifier_base_8c_1aad5f52b5eb22d81599e8a25ec6055d22" kindref="member">m_TickIntervalInactive</ref><sp/><sp/>=<sp/><ref refid="_modifiers_manager_8c_1ab41b0cbf9fe485932fbffc19ea426bac" kindref="member">DEFAULT_TICK_TIME_INACTIVE</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifier_base_8c_1aa9aa2d760c0099abe3d671d7c4c6368f" kindref="member">m_TickIntervalActive</ref><sp/><sp/><sp/><sp/>=<sp/><ref refid="_modifiers_manager_8c_1ad7b192f22a83d324fbb2fc7fea14ad09" kindref="member">DEFAULT_TICK_TIME_ACTIVE</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifier_base_8c_1ae8326cd63358abd4d8bfa7c8538fecd4" kindref="member">m_IsPersistent</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_hemolytic_reaction_mdfr_1a4a353105ad07550bce0c1a621c1b0e19" kindref="member">m_RunningTime</ref><sp/>=<sp/><ref refid="class_hemolytic_reaction_mdfr_1a0716afe8560ba25197cd83d32710e1fe" kindref="member">CalculateRunTime</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_modifier_base_8c_1a771f17acf34676182be64e41430920e6" kindref="member">DisableActivateCheck</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16" refid="class_hemolytic_reaction_mdfr_1a15a14a74325ac5fbac646bba27a79cb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_hemolytic_reaction_mdfr_1a15a14a74325ac5fbac646bba27a79cb9" kindref="member">ActivateCondition</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_hemolytic_reaction_mdfr_1a8a173720a505f9d13a16314ddd67f172" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hemolytic_reaction_mdfr_1a8a173720a505f9d13a16314ddd67f172" kindref="member">OnActivate</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>player.IncreaseDiseaseCount();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_hemolytic_reaction_mdfr_1aec14f5773e140f5bb090c82ac7c94faa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hemolytic_reaction_mdfr_1aec14f5773e140f5bb090c82ac7c94faa" kindref="member">OnDeactivate</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>player.DecreaseDiseaseCount();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_hemolytic_reaction_mdfr_1a85d386fed363dfef630e622a929b8df8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hemolytic_reaction_mdfr_1a85d386fed363dfef630e622a929b8df8" kindref="member">OnReconnect</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="human_8c_1ad88f589957281ee7efebbc581b18bef1" kindref="member">OnActivate</ref>(player);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_hemolytic_reaction_mdfr_1af1814ce2c8c491660dcc1fea95e0d82a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_hemolytic_reaction_mdfr_1af1814ce2c8c491660dcc1fea95e0d82a" kindref="member">DeactivateCondition</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>attached_time<sp/>=<sp/><ref refid="_modifier_base_8c_1a6d27673678a2b8c86ee597aa1ab6db0a" kindref="member">GetAttachedTime</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(attached_time<sp/>&gt;<sp/><ref refid="class_hemolytic_reaction_mdfr_1a4a353105ad07550bce0c1a621c1b0e19" kindref="member">m_RunningTime</ref><sp/>)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_hemolytic_reaction_mdfr_1abda99a756953ea95c71a448201f695b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hemolytic_reaction_mdfr_1abda99a756953ea95c71a448201f695b0" kindref="member">OnTick</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>deltaT)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>player.AddHealth(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Blood&quot;</highlight><highlight class="normal">,-<ref refid="class_player_constants" kindref="compound">PlayerConstants</ref>.<ref refid="class_player_constants_1a8ac293e392aa00b8ce58a07cc7f633ef" kindref="member">HEMOLYTIC_BLOOD_DRAIN_PER_SEC</ref><sp/>*<sp/>deltaT);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="class_hemolytic_reaction_mdfr_1a0716afe8560ba25197cd83d32710e1fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_hemolytic_reaction_mdfr_1a0716afe8560ba25197cd83d32710e1fe" kindref="member">CalculateRunTime</ref>()</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>time<sp/>=<sp/><ref refid="class_player_constants" kindref="compound">PlayerConstants</ref>.<ref refid="class_player_constants_1ab86eb223762afa6573cb05a59a6d510a" kindref="member">HEMOLYTIC_BLOODLOSS_AMOUNT</ref><sp/>/<sp/><ref refid="class_player_constants" kindref="compound">PlayerConstants</ref>.<ref refid="class_player_constants_1a028cc2f02b655eeb56b4c28d6aa62453" kindref="member">SALINE_BLOOD_REGEN_PER_SEC</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>time;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/HemolyticReaction.c"/>
+  </compounddef>
+</doxygen>

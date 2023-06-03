@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_c_c_t_surface_8c" kind="file" language="C++">
+    <compoundname>CCTSurface.c</compoundname>
+    <innerclass refid="class_c_c_t_surface" prot="public">CCTSurface</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_c_c_t_surface" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_c_t_surface" kindref="compound">CCTSurface</ref><sp/>:<sp/><ref refid="class_c_c_t_base" kindref="compound">CCTBase</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_c_c_t_surface_1a717601f07ef30bb9b7c17eaaa09a6c71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_c_c_t_surface_1a717601f07ef30bb9b7c17eaaa09a6c71" kindref="member">m_MaximalActionDistanceSq</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="5" refid="class_c_c_t_surface_1afbebef8d4300de8a42b0a66fef303932" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_c_t_surface_1afbebef8d4300de8a42b0a66fef303932" kindref="member">CCTSurface</ref><sp/>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maximal_target_distance<sp/>=<sp/><ref refid="class_u_a_max_distances" kindref="compound">UAMaxDistances</ref>.<ref refid="class_u_a_max_distances_1aef260d89bc0f791bc7c313cae73f8450" kindref="member">DEFAULT</ref><sp/>)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_c_t_surface_1a717601f07ef30bb9b7c17eaaa09a6c71" kindref="member">m_MaximalActionDistanceSq</ref><sp/>=<sp/>maximal_target_distance<sp/>*<sp/>maximal_target_distance;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="10" refid="class_c_c_t_surface_1a865867effbe2d64d29c94eda68f852bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_c_c_t_surface_1a865867effbe2d64d29c94eda68f852bb" kindref="member">Can</ref>(<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player,<sp/><ref refid="_action_targets_8c_1a2ab3de6f698cb230ae0c129e3e01b341" kindref="member">ActionTarget</ref><sp/>target<sp/>)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>!target<sp/>||<sp/>(target<sp/>&amp;&amp;<sp/>target.GetObject())<sp/>)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsServer()<sp/>&amp;&amp;<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsMultiplayer()<sp/>)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>hit_pos<sp/>=<sp/>target.GetCursorHitPos();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hit_pos<sp/>==<sp/><ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1a6f6d5246e38b34f79fa2741a7e72d7e7" kindref="member">Zero</ref>)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(<sp/><ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1a21d8662c860e105943718b2da59349e7" kindref="member">DistanceSq</ref>(hit_pos,<sp/>player.GetPosition())<sp/>&lt;=<sp/><ref refid="class_c_c_t_surface_1a717601f07ef30bb9b7c17eaaa09a6c71" kindref="member">m_MaximalActionDistanceSq</ref><sp/>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/UserActionsComponent/TargetConditionsComponents/CCTSurface.c"/>
+  </compounddef>
+</doxygen>

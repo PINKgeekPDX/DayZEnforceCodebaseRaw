@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_action_eat_meat_8c" kind="file" language="C++">
+    <compoundname>ActionEatMeat.c</compoundname>
+    <innerclass refid="class_action_eat_meat_c_b" prot="public">ActionEatMeatCB</innerclass>
+    <innerclass refid="class_action_eat_meat" prot="public">ActionEatMeat</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_action_eat_meat_c_b" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_action_eat_meat_c_b" kindref="compound">ActionEatMeatCB</ref><sp/>:<sp/><ref refid="class_action_continuous_base_c_b" kindref="compound">ActionContinuousBaseCB</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_action_eat_meat_c_b_1a0d660e68e15f5747d918bb8fb7bab258" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_eat_meat_c_b_1a0d660e68e15f5747d918bb8fb7bab258" kindref="member">CreateActionComponent</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_action_base_c_b_1ab8c5796aa8f98fa679639b14db60813f" kindref="member">m_ActionData</ref>.<ref refid="class_action_data_1a82934edb9e2ee84d9c8a45aa66242075" kindref="member">m_ActionComponent</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_a_continuous_quantity_edible" kindref="compound">CAContinuousQuantityEdible</ref>(<ref refid="class_u_a_quantity_consumed" kindref="compound">UAQuantityConsumed</ref>.<ref refid="class_u_a_quantity_consumed_1a807372892ea701da6212dd0fb88217d1" kindref="member">EAT_NORMAL</ref>,<ref refid="class_u_a_time_spent" kindref="compound">UATimeSpent</ref>.<ref refid="class_u_a_time_spent_1ae9be680b44eb066fac15f2ab9d03aa6c" kindref="member">DEFAULT</ref>);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_action_eat_meat" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_action_eat_meat" kindref="compound">ActionEatMeat</ref>:<sp/><ref refid="class_action_eat_big" kindref="compound">ActionEatBig</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11" refid="class_action_eat_meat_1a5a1d4625fe020d0b21da45ca6dda890b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_eat_meat_1a5a1d4625fe020d0b21da45ca6dda890b" kindref="member">ActionEatMeat</ref>()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_animated_action_base_1a7bce84f3ceb181aacfabdfb000c56461" kindref="member">m_CallbackClass</ref><sp/>=<sp/><ref refid="class_action_eat_meat_c_b" kindref="compound">ActionEatMeatCB</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16" refid="class_action_eat_meat_1a5fa4b68d89ae55f15c5beff815292bbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_eat_meat_1a5fa4b68d89ae55f15c5beff815292bbb" kindref="member">ApplyModifiers</ref>(<sp/><ref refid="class_action_data" kindref="compound">ActionData</ref><sp/>action_data<sp/>)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_edible___base" kindref="compound">Edible_Base</ref><sp/>food_item<sp/>=<sp/><ref refid="class_edible___base" kindref="compound">Edible_Base</ref>.Cast(<sp/>action_data.<ref refid="class_action_data_1adbe781e3bcf840ec9eeaa2d0d005eb6f" kindref="member">m_MainItem</ref><sp/>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>food_item<sp/>)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>food_item.<ref refid="class_edible___base_1a92398dacbe4bab76f8b0604042fdb3ca" kindref="member">IsMeat</ref>()<sp/>&amp;&amp;<sp/>food_item.IsFoodRaw()<sp/>)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_lifespan_8c_1a40fcf4bf90c76d2b2293d34e798bc531" kindref="member">PluginLifespan</ref><sp/>module_lifespan<sp/>=<sp/><ref refid="_plugin_lifespan_8c_1a40fcf4bf90c76d2b2293d34e798bc531" kindref="member">PluginLifespan</ref>.Cast(<sp/><ref refid="_plugin_manager_8c_1a35050f82bea320b7a5336fc549630eaf" kindref="member">GetPlugin</ref>(<sp/><ref refid="_plugin_lifespan_8c_1a40fcf4bf90c76d2b2293d34e798bc531" kindref="member">PluginLifespan</ref><sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>module_lifespan<sp/>)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>module_lifespan.UpdateBloodyHandsVisibility(<sp/>action_data.<ref refid="class_action_data_1a219946226b0958a6dfaf2c880ff576e9" kindref="member">m_Player</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/UserActionsComponent/Actions/Continuous/ActionEatMeat.c"/>
+  </compounddef>
+</doxygen>

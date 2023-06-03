@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_day_z_a_i_hit_components_8c" kind="file" language="C++">
+    <compoundname>DayZAIHitComponents.c</compoundname>
+    <innerclass refid="class_day_z_a_i_hit_component" prot="public">DayZAIHitComponent</innerclass>
+    <innerclass refid="class_day_z_a_i_hit_component_helpers" prot="public">DayZAIHitComponentHelpers</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="class_day_z_a_i_hit_component" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_day_z_a_i_hit_component" kindref="compound">DayZAIHitComponent</ref></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="4" refid="class_day_z_a_i_hit_component_1aa27c031cbb0559641eacab795dec98c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_day_z_a_i_hit_component_1aa27c031cbb0559641eacab795dec98c5" kindref="member">m_Name</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="5" refid="class_day_z_a_i_hit_component_1a0c2041f461fc57b98e9e21d22f7ad1e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_day_z_a_i_hit_component_1a0c2041f461fc57b98e9e21d22f7ad1e5" kindref="member">m_Weight</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_day_z_a_i_hit_component_helpers" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_day_z_a_i_hit_component_helpers" kindref="compound">DayZAIHitComponentHelpers</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21" refid="class_day_z_a_i_hit_component_helpers_1ae1dc9c959de0e6214f40746974daaa9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_day_z_a_i_hit_component_helpers_1ae1dc9c959de0e6214f40746974daaa9e" kindref="member">RegisterHitComponent</ref>(<ref refid="classarray" kindref="compound">array&lt;ref DayZAIHitComponent&gt;</ref><sp/>pHitComponents,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>pName,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pWeight)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_day_z_a_i_hit_component" kindref="compound">DayZAIHitComponent</ref><sp/>newComponent<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_day_z_a_i_hit_component" kindref="compound">DayZAIHitComponent</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newComponent.<ref refid="class_day_z_a_i_hit_component_1aa27c031cbb0559641eacab795dec98c5" kindref="member">m_Name</ref><sp/>=<sp/>pName;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newComponent.<ref refid="class_day_z_a_i_hit_component_1a0c2041f461fc57b98e9e21d22f7ad1e5" kindref="member">m_Weight</ref><sp/>=<sp/>pWeight;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pHitComponents.Insert(newComponent);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="class_day_z_a_i_hit_component_helpers_1aeb78fd553f03c4cb971bf948e69a9693" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_day_z_a_i_hit_component_helpers_1aeb78fd553f03c4cb971bf948e69a9693" kindref="member">SelectMostProbableHitComponent</ref>(<ref refid="classarray" kindref="compound">array&lt;ref DayZAIHitComponent&gt;</ref><sp/>pHitComponents,<sp/>out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>pHitComponent)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>weights<sp/>=<sp/><ref refid="class_day_z_a_i_hit_component_helpers_1ab7f8fbfbba9a2cfb6c96c93a9b793fa4" kindref="member">SumOfWeights</ref>(pHitComponents);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rnd<sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gac34f9f8daa0e311b6a6b40cc21d38226" kindref="member">RandomInt</ref>(0,<sp/>weights);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>pHitComponents.Count();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_day_z_a_i_hit_component" kindref="compound">DayZAIHitComponent</ref><sp/>hitComp<sp/>=<sp/>pHitComponents.Get(i);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rnd<sp/>-=<sp/>hitComp.<ref refid="class_day_z_a_i_hit_component_1a0c2041f461fc57b98e9e21d22f7ad1e5" kindref="member">m_Weight</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rnd<sp/>&lt;=<sp/>0)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pHitComponent<sp/>=<sp/>hitComp.<ref refid="class_day_z_a_i_hit_component_1aa27c031cbb0559641eacab795dec98c5" kindref="member">m_Name</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="class_day_z_a_i_hit_component_helpers_1ab7f8fbfbba9a2cfb6c96c93a9b793fa4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_day_z_a_i_hit_component_helpers_1ab7f8fbfbba9a2cfb6c96c93a9b793fa4" kindref="member">SumOfWeights</ref>(<ref refid="classarray" kindref="compound">array&lt;ref DayZAIHitComponent&gt;</ref><sp/>pHitComponents)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sum<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>pHitComponents.Count();<sp/>++i<sp/>)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_day_z_a_i_hit_component" kindref="compound">DayZAIHitComponent</ref><sp/>hitComp<sp/>=<sp/>pHitComponents.Get(i);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>+=<sp/>hitComp.<ref refid="class_day_z_a_i_hit_component_1a0c2041f461fc57b98e9e21d22f7ad1e5" kindref="member">m_Weight</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sum;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Entities/DayZAIHitComponents.c"/>
+  </compounddef>
+</doxygen>

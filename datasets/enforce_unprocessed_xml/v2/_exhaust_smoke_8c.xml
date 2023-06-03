@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_exhaust_smoke_8c" kind="file" language="C++">
+    <compoundname>ExhaustSmoke.c</compoundname>
+    <innerclass refid="class_eff_exhaust_smoke" prot="public">EffExhaustSmoke</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_eff_exhaust_smoke" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_eff_exhaust_smoke" kindref="compound">EffExhaustSmoke</ref><sp/>:<sp/><ref refid="class_eff_vehicle_smoke" kindref="compound">EffVehicleSmoke</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_eff_exhaust_smoke_1a90775798c9e1ce0193d043ee9fdf8237" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_eff_exhaust_smoke_1a90775798c9e1ce0193d043ee9fdf8237" kindref="member">SetParticleStateLight</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_eff_vehicle_smoke_1a3e95fc1ceb09f4ca6276c87f6184a4f4" kindref="member">SetParticleState</ref>(<sp/><ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a96a4ede16d6f13ea5881d1cba24f9144" kindref="member">HATCHBACK_EXHAUST_SMOKE</ref><sp/>);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Car<sp/>parent<sp/>=<sp/>Car.Cast(<sp/><ref refid="_effect_8c_1afdae536cdae285f8eef4528d43370317" kindref="member">GetAttachmentParent</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle" kindref="compound">Particle</ref><sp/>p<sp/>=<sp/><ref refid="class_effect_particle_1a04d219bb00f70fc4d2fdf208cb41c422" kindref="member">GetParticle</ref>();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>parent<sp/>&amp;&amp;<sp/>p<sp/>)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>speed<sp/>=<sp/>parent.GetSpeedometerAbsolute();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lifetime_scale;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(speed<sp/>&lt;<sp/>100)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lifetime_scale<sp/>=<sp/>(100<sp/>-<sp/>speed)<sp/>/<sp/>100;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lifetime_scale<sp/>=<sp/>0.1;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>birthrate_scale<sp/>=<sp/>1<sp/>+<sp/>(speed<sp/>*<sp/>0.1<sp/>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="class_particle_1a38df6525eaefe981022979f439b9f9d7" kindref="member">ScaleParticleParamFromOriginal</ref>(<sp/><ref refid="group___particle_effect_1gae0fed29d09aa06a8ca33de9f2b039e4b" kindref="member">EmitorParam</ref>.LIFETIME,<sp/>lifetime_scale<sp/>);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="class_particle_1a38df6525eaefe981022979f439b9f9d7" kindref="member">ScaleParticleParamFromOriginal</ref>(<sp/><ref refid="group___particle_effect_1gae0fed29d09aa06a8ca33de9f2b039e4b" kindref="member">EmitorParam</ref>.LIFETIME_RND,<sp/>lifetime_scale<sp/>);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="class_particle_1a38df6525eaefe981022979f439b9f9d7" kindref="member">ScaleParticleParamFromOriginal</ref>(<sp/><ref refid="group___particle_effect_1gae0fed29d09aa06a8ca33de9f2b039e4b" kindref="member">EmitorParam</ref>.BIRTH_RATE,<sp/>birthrate_scale<sp/>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="class_particle_1a38df6525eaefe981022979f439b9f9d7" kindref="member">ScaleParticleParamFromOriginal</ref>(<sp/><ref refid="group___particle_effect_1gae0fed29d09aa06a8ca33de9f2b039e4b" kindref="member">EmitorParam</ref>.BIRTH_RATE_RND,<sp/>birthrate_scale<sp/>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Effects/EffectParticle/VehicleSmoke/ExhaustSmoke.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,483 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="group___system" kind="group">
+    <compoundname>System</compoundname>
+    <title>System</title>
+    <innergroup refid="group___keyboard">Keyboard input API</innergroup>
+    <innergroup refid="group___mouse">Mouse API</innergroup>
+    <innergroup refid="group___gamepad">API</innergroup>
+    <innergroup refid="group___file">FileIO API</innergroup>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="group___system_1gafbd1f04e1781e8136dee40ac5096959c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>DIRECTORIES</definition>
+        <argsstring></argsstring>
+        <name>DIRECTORIES</name>
+        <briefdescription>
+<para>Looks for files in fs directories only. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" line="0" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" bodystart="0" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___system_1gad223f70d82f02b4461a44f8f50d65f20" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ARCHIVES</definition>
+        <argsstring></argsstring>
+        <name>ARCHIVES</name>
+        <briefdescription>
+<para>Looks for files in archive only. (.pak) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" line="1" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group___system_1gaaff03f45544854747fa5e7821e84252e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ALL</definition>
+        <argsstring></argsstring>
+        <name>ALL</name>
+        <briefdescription>
+<para>&lt;Looks in archives and fs directories. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Looks in archives and fs directories. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" line="2" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___system_1ga1c51f4cf66e7eda260b3be1e954c716b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void GetHourMinuteSecond</definition>
+        <argsstring>(out int hour, out int minute, out int second)</argsstring>
+        <name>GetHourMinuteSecond</name>
+        <param>
+          <type>out <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>hour</declname>
+        </param>
+        <param>
+          <type>out <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>minute</declname>
+        </param>
+        <param>
+          <type>out <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>second</declname>
+        </param>
+        <briefdescription>
+<para>Returns world time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">hour</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Hour </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">minute</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Minute </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">second</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Second </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>void</computeroutput> <programlisting><codeline><highlight class="normal">int<sp/>hour<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>minute<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>second<sp/>=<sp/>0;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">GetHourMinuteSecondUTC(hour,<sp/>minute,<sp/>second);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Print(hour);</highlight></codeline>
+<codeline><highlight class="normal">Print(minute);</highlight></codeline>
+<codeline><highlight class="normal">Print(second);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>hour<sp/>=<sp/>16</highlight></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>minute<sp/>=<sp/>38</highlight></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>second<sp/>=<sp/>7</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" line="28" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" declline="28" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___system_1ga0e49fa1e0a61e5eda193b3b45100ec54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void GetYearMonthDay</definition>
+        <argsstring>(out int year, out int month, out int day)</argsstring>
+        <name>GetYearMonthDay</name>
+        <param>
+          <type>out <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>year</declname>
+        </param>
+        <param>
+          <type>out <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>month</declname>
+        </param>
+        <param>
+          <type>out <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>day</declname>
+        </param>
+        <briefdescription>
+<para>Returns world date. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">year</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Year </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">month</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Month </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">day</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Day </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>void</computeroutput> <programlisting><codeline><highlight class="normal">int<sp/>year<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>month<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>day<sp/>=<sp/>0;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">GetYearMonthDay(year,<sp/>month,<sp/>day);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Print(year);</highlight></codeline>
+<codeline><highlight class="normal">Print(month);</highlight></codeline>
+<codeline><highlight class="normal">Print(day);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>year<sp/>=<sp/>2015</highlight></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>month<sp/>=<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>day<sp/>=<sp/>24</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" line="52" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" declline="52" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___system_1gaa6d85e4ef8781c19cd4caef0e7dd2ea3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void GetHourMinuteSecondUTC</definition>
+        <argsstring>(out int hour, out int minute, out int second)</argsstring>
+        <name>GetHourMinuteSecondUTC</name>
+        <param>
+          <type>out <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>hour</declname>
+        </param>
+        <param>
+          <type>out <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>minute</declname>
+        </param>
+        <param>
+          <type>out <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>second</declname>
+        </param>
+        <briefdescription>
+<para>Returns UTC world time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">hour</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Hour </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">minute</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Minute </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">second</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Second </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>void</computeroutput> <programlisting><codeline><highlight class="normal">int<sp/>hour<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>minute<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>second<sp/>=<sp/>0;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">GetHourMinuteSecondUTC(hour,<sp/>minute,<sp/>second);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Print(hour);</highlight></codeline>
+<codeline><highlight class="normal">Print(minute);</highlight></codeline>
+<codeline><highlight class="normal">Print(second);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>hour<sp/>=<sp/>15</highlight></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>minute<sp/>=<sp/>38</highlight></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>second<sp/>=<sp/>7</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" line="76" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" declline="76" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___system_1ga1792163f2e3b17a7147de5d1f8f2ecd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void GetYearMonthDayUTC</definition>
+        <argsstring>(out int year, out int month, out int day)</argsstring>
+        <name>GetYearMonthDayUTC</name>
+        <param>
+          <type>out <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>year</declname>
+        </param>
+        <param>
+          <type>out <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>month</declname>
+        </param>
+        <param>
+          <type>out <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>day</declname>
+        </param>
+        <briefdescription>
+<para>Returns UTC world date. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">year</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Year </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">month</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Month </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">day</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Day </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>void</computeroutput> <programlisting><codeline><highlight class="normal">int<sp/>year<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>month<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">int<sp/>day<sp/>=<sp/>0;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">GetYearMonthDayUTC(year,<sp/>month,<sp/>day);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Print(year);</highlight></codeline>
+<codeline><highlight class="normal">Print(month);</highlight></codeline>
+<codeline><highlight class="normal">Print(day);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>year<sp/>=<sp/>2015</highlight></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>month<sp/>=<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>day<sp/>=<sp/>24</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" line="100" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" declline="100" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___system_1ga1e43ddf230eb730514c429fad39831ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>proto string GetProfileName</definition>
+        <argsstring>()</argsstring>
+        <name>GetProfileName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" line="102" column="14" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" declline="102" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group___system_1ga8e707f1905abdc22747618b8b178b3c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>proto string GetMachineName</definition>
+        <argsstring>()</argsstring>
+        <name>GetMachineName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" line="103" column="14" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" declline="103" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group___system_1ga165d903cc1999e2e5ac3ee07c34e27d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int TickCount</definition>
+        <argsstring>(int prev)</argsstring>
+        <name>TickCount</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>prev</declname>
+        </param>
+        <briefdescription>
+<para>performance counter. Returns number of CPU ticks between &apos;prev&apos; and &apos;now&apos; </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" line="106" column="18" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" declline="106" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___system_1gaf0fe89e75a35b22cbc5f46cb6c0357c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void MemoryValidation</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>MemoryValidation</name>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Switches memory validation (huge slowdown! Use with care only for certain section of code!) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Enable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>void</computeroutput> <programlisting><codeline><highlight class="normal">???</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" line="116" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" declline="116" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___system_1gad7348dce86a327765755d084ff96f22a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto bool GetCLIParam</definition>
+        <argsstring>(string param, out string val)</argsstring>
+        <name>GetCLIParam</name>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>out <ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Returns command line argument. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of a command line argument </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> value of the param or empty string if the param hasn&apos;t been found </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if param is present, False if hasn&apos;t been found <programlisting><codeline><highlight class="normal">string<sp/>param;</highlight></codeline>
+<codeline><highlight class="normal">GetCLIParam(&quot;world&quot;,<sp/>param);<sp/>//<sp/>return<sp/>a<sp/>value<sp/>when<sp/>program<sp/>executed<sp/>with<sp/>param<sp/>-world<sp/>something</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" line="128" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" declline="128" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___system_1ga7b18b38eaf689dea76594dd5e43a1352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool IsCLIParam</definition>
+        <argsstring>(string param)</argsstring>
+        <name>IsCLIParam</name>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+<para>Returns if command line argument is present. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of a command line argument </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if param is present, False if hasn&apos;t been found <programlisting><codeline><highlight class="normal">if<sp/>(IsCLIParam(&quot;verbose&quot;))<sp/>//<sp/>Prints<sp/>&quot;something&quot;<sp/>when<sp/>program<sp/>executed<sp/>with<sp/>param<sp/>-verbose</highlight></codeline>
+<codeline><highlight class="normal">{<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Print(&quot;something&quot;);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" line="141" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnSystem.c" declline="141" declcolumn="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

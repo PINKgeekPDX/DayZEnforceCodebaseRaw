@@ -1,0 +1,452 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_damage_system_8c" kind="file" language="C++">
+    <compoundname>DamageSystem.c</compoundname>
+    <innerclass refid="class_total_damage_result" prot="public">TotalDamageResult</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_damage_system_8c_1afce48e0416f4e1a1a8c79629bbbf602d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>DamageType</name>
+        <briefdescription>
+<para>exposed from C++ (do not change) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" line="10" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" bodystart="11" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_damage_system_8c_1ac5ac676500295f8bdcae572b780e9234" prot="public" static="no">
+        <type><ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="classstring" kindref="compound">string</ref>, ref <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="classstring" kindref="compound">string</ref> &gt; &gt;</type>
+        <definition>typedef map&lt;string,ref array&lt;string&gt; &gt; DamageZoneMap</definition>
+        <argsstring></argsstring>
+        <name>DamageZoneMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" line="140" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_damage_system_8c_1aca6cc3f8e32a50a9006c06429553268e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>CLOSE_COMBAT</definition>
+        <argsstring></argsstring>
+        <name>CLOSE_COMBAT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" line="0" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" bodystart="0" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_damage_system_8c_1a19403d3a6fe583c24a88be10785fe4b1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>FIRE_ARM</definition>
+        <argsstring></argsstring>
+        <name>FIRE_ARM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" line="1" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_damage_system_8c_1a2777a6a860740aea7706a3534e077c05" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>EXPLOSION</definition>
+        <argsstring></argsstring>
+        <name>EXPLOSION</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" line="2" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_damage_system_8c_1aecb010098b2074bd8fd463ada046f8b3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>STUN</definition>
+        <argsstring></argsstring>
+        <name>STUN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" line="3" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_damage_system_8c_1adb36c4e2bb36018570c94f4e1ad0f19c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>CUSTOM</definition>
+        <argsstring></argsstring>
+        <name>CUSTOM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" line="4" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_damage_system_8c_1a4622b34c3e3570db0847721c2eaf137e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="_damage_system_8c_1afce48e0416f4e1a1a8c79629bbbf602d" kindref="member">DamageType</ref></type>
+        <definition>enum DamageType CloseCombatDamage</definition>
+        <argsstring>(EntityAI source, Object targetObject, int targetComponentIndex, string ammoTypeName, vector worldPos, int directDamageFlags=ProcessDirectDamageFlags.ALL_TRANSFER)</argsstring>
+        <name>CloseCombatDamage</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>targetObject</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>targetComponentIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>ammoTypeName</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>worldPos</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>directDamageFlags</declname>
+          <defval><ref refid="_object_8c_1a7c82db51c2d4066267b3629a8ecda141ace50812ca1541ec0ddd0ecc453983d39" kindref="member">ProcessDirectDamageFlags.ALL_TRANSFER</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" line="1" column="0" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" declline="1" declcolumn="0"/>
+      </memberdef>
+      <memberdef kind="function" id="_damage_system_8c_1a236e526e86b519b25de2cb90369b3138" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>static proto native void CloseCombatDamageName</definition>
+        <argsstring>(EntityAI source, Object targetObject, string targetComponentName, string ammoTypeName, vector worldPos, int directDamageFlags=ProcessDirectDamageFlags.ALL_TRANSFER)</argsstring>
+        <name>CloseCombatDamageName</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>targetObject</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>targetComponentName</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>ammoTypeName</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>worldPos</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>directDamageFlags</declname>
+          <defval><ref refid="_object_8c_1a7c82db51c2d4066267b3629a8ecda141ace50812ca1541ec0ddd0ecc453983d39" kindref="member">ProcessDirectDamageFlags.ALL_TRANSFER</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" line="23" column="26" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" declline="23" declcolumn="26"/>
+      </memberdef>
+      <memberdef kind="function" id="_damage_system_8c_1a74ad94e72361920b478f99908f0835a0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>static proto native void ExplosionDamage</definition>
+        <argsstring>(EntityAI source, Object directHitObject, string ammoTypeName, vector worldPos, int damageType)</argsstring>
+        <name>ExplosionDamage</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>directHitObject</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>ammoTypeName</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>worldPos</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>damageType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" line="25" column="26" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" declline="25" declcolumn="26"/>
+      </memberdef>
+      <memberdef kind="function" id="_damage_system_8c_1a436f7f8fc36fbf4455c56b4ce08b8b67" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static bool GetDamageZoneMap</definition>
+        <argsstring>(EntityAI entity, out DamageZoneMap zoneMap)</argsstring>
+        <name>GetDamageZoneMap</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type>out <ref refid="_damage_system_8c_1ac5ac676500295f8bdcae572b780e9234" kindref="member">DamageZoneMap</ref></type>
+          <declname>zoneMap</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" line="27" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" bodystart="27" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="_damage_system_8c_1a77c203dfcd1e78753ce2fbb285ba5183" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static bool GetDamageZoneFromComponentName</definition>
+        <argsstring>(notnull EntityAI entity, string component, out string damageZone)</argsstring>
+        <name>GetDamageZoneFromComponentName</name>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>component</declname>
+        </param>
+        <param>
+          <type>out <ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>damageZone</declname>
+        </param>
+        <briefdescription>
+<para>Returns damage zone to which the named component belongs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" line="76" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" bodystart="76" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="_damage_system_8c_1a73b4c33aa80a63885b11ce9f18ebf3d2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static bool GetComponentNamesFromDamageZone</definition>
+        <argsstring>(notnull EntityAI entity, string damageZone, out array&lt; string &gt; componentNames)</argsstring>
+        <name>GetComponentNamesFromDamageZone</name>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>damageZone</declname>
+        </param>
+        <param>
+          <type>out <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="classstring" kindref="compound">string</ref> &gt;</type>
+          <declname>componentNames</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" line="104" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" bodystart="104" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="_damage_system_8c_1a17be887e076ebefc161fb2b1e551ea92" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>static string GetDamageDisplayName</definition>
+        <argsstring>(EntityAI entity, string zone)</argsstring>
+        <name>GetDamageDisplayName</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>zone</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" line="131" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c" bodystart="131" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="_damage_system_8c_1a4622b34c3e3570db0847721c2eaf137e" refkind="member"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_total_damage_result" kindref="compound">TotalDamageResult</ref>:<sp/><ref refid="class_managed" kindref="compound">Managed</ref></highlight></codeline>
+<codeline lineno="2" refid="_damage_system_8c_1a2777a6a860740aea7706a3534e077c05" refkind="member"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_total_damage_result_1a940858fc3298ca3b89b97f2cc2dbc409" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_total_damage_result_1a940858fc3298ca3b89b97f2cc2dbc409" kindref="member">GetDamage</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>zoneName,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>healthType);</highlight></codeline>
+<codeline lineno="4" refid="class_total_damage_result_1abe1b4d0aba94fc3370e40de8a57a769d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_total_damage_result_1abe1b4d0aba94fc3370e40de8a57a769d" kindref="member">GetHighestDamage</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>healthType);</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="_damage_system_8c_1afce48e0416f4e1a1a8c79629bbbf602d" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_damage_system_8c_1afce48e0416f4e1a1a8c79629bbbf602d" kindref="member">DamageType</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_damage_system_8c_1aca6cc3f8e32a50a9006c06429553268e" kindref="member">CLOSE_COMBAT</ref>,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_damage_system_8c_1a19403d3a6fe583c24a88be10785fe4b1" kindref="member">FIRE_ARM</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_damage_system_8c_1a2777a6a860740aea7706a3534e077c05" kindref="member">EXPLOSION</ref>,</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_damage_system_8c_1aecb010098b2074bd8fd463ada046f8b3" kindref="member">STUN</ref>,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_damage_system_8c_1adb36c4e2bb36018570c94f4e1ad0f19c" kindref="member">CUSTOM</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//-----------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">DamageSystem</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_damage_system_8c_1a4622b34c3e3570db0847721c2eaf137e" kindref="member">CloseCombatDamage</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>source,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>targetObject,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>targetComponentIndex,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ammoTypeName,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>worldPos,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>directDamageFlags<sp/>=<sp/><ref refid="_object_8c_1a7c82db51c2d4066267b3629a8ecda141" kindref="member">ProcessDirectDamageFlags</ref>.ALL_TRANSFER);</highlight></codeline>
+<codeline lineno="23" refid="_damage_system_8c_1a236e526e86b519b25de2cb90369b3138" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_damage_system_8c_1a236e526e86b519b25de2cb90369b3138" kindref="member">CloseCombatDamageName</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>source,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>targetObject,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>targetComponentName,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ammoTypeName,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>worldPos,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>directDamageFlags<sp/>=<sp/><ref refid="_object_8c_1a7c82db51c2d4066267b3629a8ecda141" kindref="member">ProcessDirectDamageFlags</ref>.ALL_TRANSFER);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="_damage_system_8c_1a74ad94e72361920b478f99908f0835a0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_damage_system_8c_1a74ad94e72361920b478f99908f0835a0" kindref="member">ExplosionDamage</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>source,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>directHitObject,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ammoTypeName,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>worldPos,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>damageType);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="_damage_system_8c_1a436f7f8fc36fbf4455c56b4ce08b8b67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_damage_system_8c_1a436f7f8fc36fbf4455c56b4ce08b8b67" kindref="member">GetDamageZoneMap</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>entity,<sp/>out<sp/><ref refid="_damage_system_8c_1ac5ac676500295f8bdcae572b780e9234" kindref="member">DamageZoneMap</ref><sp/>zoneMap)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>path_base;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(entity.IsWeapon())</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>path_base<sp/>=<sp/><ref refid="group___menu_i_d_1gade71505908fa8ae2b1f0da309770c68a" kindref="member">CFG_WEAPONSPATH</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(entity.IsMagazine())</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>path_base<sp/>=<sp/><ref refid="group___menu_i_d_1gaffa280014cd9af91abe74b767cf2a45b" kindref="member">CFG_MAGAZINESPATH</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>path_base<sp/>=<sp/><ref refid="group___menu_i_d_1ga4eefa6610d914e19744cb7e377171479" kindref="member">CFG_VEHICLESPATH</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>path_base<sp/>=<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.<ref refid="group___strings_1gaec7e49a1dcfd0bc429834f29bc0d35c1" kindref="member">Format</ref>(</highlight><highlight class="stringliteral">&quot;%1<sp/>%2<sp/>DamageSystem<sp/>DamageZones&quot;</highlight><highlight class="normal">,<sp/>path_base,<sp/>entity.GetType());</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().ConfigIsExisting(path_base))</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>zone;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;string&gt;</ref><sp/>zone_names<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;string&gt;</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;string&gt;</ref><sp/>component_names;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entity.GetDamageZones(zone_names);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>zone_names.Count();<sp/>i++)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>component_names<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;string&gt;</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zone<sp/>=<sp/>zone_names.Get(i);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref><sp/>=<sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.<ref refid="group___strings_1gaec7e49a1dcfd0bc429834f29bc0d35c1" kindref="member">Format</ref>(</highlight><highlight class="stringliteral">&quot;%1<sp/>%2<sp/>componentNames<sp/>&quot;</highlight><highlight class="normal">,<sp/>path_base,<sp/>zone);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().ConfigIsExisting(<ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>))</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a7cc2a75cac35759a1bdffa796ff0aa65" kindref="member">ConfigGetTextArray</ref>(<ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>,component_names);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zoneMap.Insert(zone,component_names);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76" refid="_damage_system_8c_1a77c203dfcd1e78753ce2fbb285ba5183" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><ref refid="_damage_system_8c_1a77c203dfcd1e78753ce2fbb285ba5183" kindref="member">GetDamageZoneFromComponentName</ref>(notnull<sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>entity,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_is_box_colliding_geometry_proxy_classes_8c_1af773dec082e0ba8221810d6fe6f5b67b" kindref="member">component</ref>,<sp/>out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>damageZone)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_damage_system_8c_1ac5ac676500295f8bdcae572b780e9234" kindref="member">DamageZoneMap</ref><sp/>zoneMap<sp/>=<sp/>entity.GetEntityDamageZoneMap();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;array&lt;string&gt;</ref>&gt;<sp/>components;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>components<sp/>=<sp/>zoneMap.GetValueArray();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>components.Count();<sp/>i++)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;string&gt;</ref><sp/>inner<sp/>=<sp/>components.Get(i);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>inner.Count();<sp/>j++)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>innerComponentName<sp/>=<sp/>inner.Get(j);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>innerComponentName.<ref refid="group___strings_1gaf7bcbd43039fc0ff5a8f7a96d4586a54" kindref="member">ToLower</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//We<sp/>don&apos;t<sp/>have<sp/>a<sp/>component<sp/>name,<sp/>no<sp/>need<sp/>to<sp/>proceed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>innerComponentName<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(innerComponentName<sp/>==<sp/><ref refid="_is_box_colliding_geometry_proxy_classes_8c_1af773dec082e0ba8221810d6fe6f5b67b" kindref="member">component</ref>)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>damageZone<sp/>=<sp/>zoneMap.GetKey(i);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>damageZone<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104" refid="_damage_system_8c_1a73b4c33aa80a63885b11ce9f18ebf3d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_damage_system_8c_1a73b4c33aa80a63885b11ce9f18ebf3d2" kindref="member">GetComponentNamesFromDamageZone</ref>(notnull<sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>entity,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>damageZone,<sp/>out<sp/><ref refid="classarray" kindref="compound">array&lt;string&gt;</ref><sp/>componentNames)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(entity.IsWeapon())</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref><sp/>=<sp/><ref refid="group___menu_i_d_1gade71505908fa8ae2b1f0da309770c68a" kindref="member">CFG_WEAPONSPATH</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(entity.IsMagazine())</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref><sp/>=<sp/><ref refid="group___menu_i_d_1gaffa280014cd9af91abe74b767cf2a45b" kindref="member">CFG_MAGAZINESPATH</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref><sp/>=<sp/><ref refid="group___menu_i_d_1ga4eefa6610d914e19744cb7e377171479" kindref="member">CFG_VEHICLESPATH</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref><sp/>=<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.<ref refid="group___strings_1gaec7e49a1dcfd0bc429834f29bc0d35c1" kindref="member">Format</ref>(</highlight><highlight class="stringliteral">&quot;%1<sp/>%2<sp/>DamageSystem<sp/>DamageZones<sp/>%3<sp/>componentNames&quot;</highlight><highlight class="normal">,<sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>,<sp/>entity.GetType(),<sp/>damageZone);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().ConfigIsExisting(<ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>))</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a7cc2a75cac35759a1bdffa796ff0aa65" kindref="member">ConfigGetTextArray</ref>(<ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>,componentNames);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="131" refid="_damage_system_8c_1a17be887e076ebefc161fb2b1e551ea92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_damage_system_8c_1a17be887e076ebefc161fb2b1e551ea92" kindref="member">GetDamageDisplayName</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>entity,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>zone)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>component_name;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entity.GetEntityDamageDisplayNameMap().Find(zone.<ref refid="group___strings_1ga91035ed8b0f7e79fd215c36ddcf83bef" kindref="member">Hash</ref>(),<sp/>component_name);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>component_name<sp/>=<sp/><ref refid="class_widget" kindref="compound">Widget</ref>.TranslateString(component_name);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>component_name;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="_damage_system_8c_1ac5ac676500295f8bdcae572b780e9234" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map&lt;string,ref array&lt;string&gt;</ref>&gt;<sp/><ref refid="_damage_system_8c_1ac5ac676500295f8bdcae572b780e9234" kindref="member">DamageZoneMap</ref>;<sp/></highlight><highlight class="comment">//&lt;zone_name,&lt;components&gt;&gt;</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/DamageSystem.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_bios_lobby_service" kind="class" language="C++" prot="public">
+    <compoundname>BiosLobbyService</compoundname>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_bios_lobby_service_1a4d6f459cb9cdfcda8acf9b483255dd75" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+        <definition>proto native EBiosError BiosLobbyService::GetServers</definition>
+        <argsstring>(GetServersInput inputValues)</argsstring>
+        <name>GetServers</name>
+        <qualifiedname>BiosLobbyService::GetServers</qualifiedname>
+        <param>
+          <type><ref refid="class_get_servers_input" kindref="compound">GetServersInput</ref></type>
+          <declname>inputValues</declname>
+        </param>
+        <briefdescription>
+<para>Query game servers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The async result is returned in the OnDoneAsync callback. Expected errors: BAD_PARAMETER - if atleast one of the permissions is not supported on the current platform, or atleast one of the input arrays is NULL.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inputValues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>input structure </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosLobbyService.c" line="491" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_lobby_service_1a1ac38c750fc932daafbca0c0c5f67189" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+        <definition>proto native EBiosError BiosLobbyService::GetFirstServerWithEmptySlot</definition>
+        <argsstring>(GetFirstServerWithEmptySlotInput inputValues)</argsstring>
+        <name>GetFirstServerWithEmptySlot</name>
+        <qualifiedname>BiosLobbyService::GetFirstServerWithEmptySlot</qualifiedname>
+        <param>
+          <type><ref refid="class_get_first_server_with_empty_slot_input" kindref="compound">GetFirstServerWithEmptySlotInput</ref></type>
+          <declname>inputValues</declname>
+        </param>
+        <briefdescription>
+<para>First 1st free server. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The async result is returned in the OnGetFirstServerWithEmptySlot callback. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosLobbyService.c" line="498" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_lobby_service_1a64614f4e3a2f8ca03f162f954ffce0e4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void BiosLobbyService::AddServerFavorite</definition>
+        <argsstring>(string ipAddress, int port, int steamQueryPort)</argsstring>
+        <name>AddServerFavorite</name>
+        <qualifiedname>BiosLobbyService::AddServerFavorite</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>ipAddress</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>steamQueryPort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosLobbyService.c" line="500" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_lobby_service_1a1c037a9b00aa850cd7af82526e46c5ff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void BiosLobbyService::RemoveServerFavorite</definition>
+        <argsstring>(string ipAddress, int port, int steamQueryPort)</argsstring>
+        <name>RemoveServerFavorite</name>
+        <qualifiedname>BiosLobbyService::RemoveServerFavorite</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>ipAddress</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>steamQueryPort</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosLobbyService.c" line="501" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_lobby_service_1a468d7225e9a1205fc9cf5e7206d331f9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void BiosLobbyService::GetFavoriteServers</definition>
+        <argsstring>(TStringArray favServers)</argsstring>
+        <name>GetFavoriteServers</name>
+        <qualifiedname>BiosLobbyService::GetFavoriteServers</qualifiedname>
+        <param>
+          <type><ref refid="group___enforce_1ga28845e68ed8329715e29aded7542ca15" kindref="member">TStringArray</ref></type>
+          <declname>favServers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosLobbyService.c" line="502" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_lobby_service_1aed2959140881bd2b948f89fb5f6fe6c1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void BiosLobbyService::GetCachedFavoriteServerInfo</definition>
+        <argsstring>(array&lt; ref CachedServerInfo &gt; favServersInfoCache)</argsstring>
+        <name>GetCachedFavoriteServerInfo</name>
+        <qualifiedname>BiosLobbyService::GetCachedFavoriteServerInfo</qualifiedname>
+        <param>
+          <type><ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="_bios_lobby_service_8c_1a96eed73e4c63e7961e6ff6ac935dc1bb" kindref="member">CachedServerInfo</ref> &gt;</type>
+          <declname>favServersInfoCache</declname>
+        </param>
+        <briefdescription>
+<para>Get cached info about favorited servers (ONLY ON WINDOWS) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>favServersInfoCache</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>gets populated with data with format: key = Query End Point, value.param1 = Server Name, value.param2 = Connection Port </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosLobbyService.c" line="508" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_lobby_service_1ae1888f2378be4ac2f35b0c1a32956ca9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+        <definition>proto native EBiosError BiosLobbyService::GetServerModList</definition>
+        <argsstring>(string serverId)</argsstring>
+        <name>GetServerModList</name>
+        <qualifiedname>BiosLobbyService::GetServerModList</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>serverId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Async function to retrieve info about mods for specific server (only for PC) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>serverId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>have to be an id returned by callbacks issued by last call to GetServers if GetServers is used another time the id&apos;s must be upated </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosLobbyService.c" line="513" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_lobby_service_1a7e72a9ac58ab5aaa6b538ea0edb4e8a9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosLobbyService::OnDoneAsync</definition>
+        <argsstring>(GetServersResult result_list, EBiosError error, string response)</argsstring>
+        <name>OnDoneAsync</name>
+        <qualifiedname>BiosLobbyService::OnDoneAsync</qualifiedname>
+        <param>
+          <type><ref refid="class_get_servers_result" kindref="compound">GetServersResult</ref></type>
+          <declname>result_list</declname>
+        </param>
+        <param>
+          <type><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+<para>Async callback for GetServers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>result_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>result object </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error indicating success or fail of the async operation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>for debugging - this is the data returned by the server; or an empty string ;) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosLobbyService.c" line="522" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosLobbyService.c" bodystart="522" bodyend="529"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_lobby_service_1acb47c074bca2cdabb6226aecc8157ae6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosLobbyService::OnGetFirstServerWithEmptySlot</definition>
+        <argsstring>(GetFirstServerWithEmptySlotResult result_list, EBiosError error)</argsstring>
+        <name>OnGetFirstServerWithEmptySlot</name>
+        <qualifiedname>BiosLobbyService::OnGetFirstServerWithEmptySlot</qualifiedname>
+        <param>
+          <type><ref refid="class_get_first_server_with_empty_slot_result" kindref="compound">GetFirstServerWithEmptySlotResult</ref></type>
+          <declname>result_list</declname>
+        </param>
+        <param>
+          <type><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosLobbyService.c" line="531" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosLobbyService.c" bodystart="531" bodyend="534"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_lobby_service_1af7c4fbbf6d20a87a7d425eec62872375" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosLobbyService::OnServerModList</definition>
+        <argsstring>(GetServerModListResult result_list, EBiosError error)</argsstring>
+        <name>OnServerModList</name>
+        <qualifiedname>BiosLobbyService::OnServerModList</qualifiedname>
+        <param>
+          <type><ref refid="class_get_server_mod_list_result" kindref="compound">GetServerModListResult</ref></type>
+          <declname>result_list</declname>
+        </param>
+        <param>
+          <type><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Async callback for GetServerModList. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosLobbyService.c" line="537" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosLobbyService.c" bodystart="537" bodyend="540"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosLobbyService.c" line="479" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosLobbyService.c" bodystart="480" bodyend="541"/>
+    <listofallmembers>
+      <member refid="class_bios_lobby_service_1a64614f4e3a2f8ca03f162f954ffce0e4" prot="private" virt="non-virtual"><scope>BiosLobbyService</scope><name>AddServerFavorite</name></member>
+      <member refid="class_bios_lobby_service_1aed2959140881bd2b948f89fb5f6fe6c1" prot="private" virt="non-virtual"><scope>BiosLobbyService</scope><name>GetCachedFavoriteServerInfo</name></member>
+      <member refid="class_bios_lobby_service_1a468d7225e9a1205fc9cf5e7206d331f9" prot="private" virt="non-virtual"><scope>BiosLobbyService</scope><name>GetFavoriteServers</name></member>
+      <member refid="class_bios_lobby_service_1a1ac38c750fc932daafbca0c0c5f67189" prot="private" virt="non-virtual"><scope>BiosLobbyService</scope><name>GetFirstServerWithEmptySlot</name></member>
+      <member refid="class_bios_lobby_service_1ae1888f2378be4ac2f35b0c1a32956ca9" prot="private" virt="non-virtual"><scope>BiosLobbyService</scope><name>GetServerModList</name></member>
+      <member refid="class_bios_lobby_service_1a4d6f459cb9cdfcda8acf9b483255dd75" prot="private" virt="non-virtual"><scope>BiosLobbyService</scope><name>GetServers</name></member>
+      <member refid="class_bios_lobby_service_1a7e72a9ac58ab5aaa6b538ea0edb4e8a9" prot="private" virt="non-virtual"><scope>BiosLobbyService</scope><name>OnDoneAsync</name></member>
+      <member refid="class_bios_lobby_service_1acb47c074bca2cdabb6226aecc8157ae6" prot="private" virt="non-virtual"><scope>BiosLobbyService</scope><name>OnGetFirstServerWithEmptySlot</name></member>
+      <member refid="class_bios_lobby_service_1af7c4fbbf6d20a87a7d425eec62872375" prot="private" virt="non-virtual"><scope>BiosLobbyService</scope><name>OnServerModList</name></member>
+      <member refid="class_bios_lobby_service_1a1c037a9b00aa850cd7af82526e46c5ff" prot="private" virt="non-virtual"><scope>BiosLobbyService</scope><name>RemoveServerFavorite</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

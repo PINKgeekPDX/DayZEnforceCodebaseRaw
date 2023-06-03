@@ -1,0 +1,1846 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="group___profiler" kind="group">
+    <compoundname>Profiler</compoundname>
+    <title>Enforce Script profiling API</title>
+    <innerclass refid="class_en_profiler" prot="public">EnProfiler</innerclass>
+      <sectiondef kind="user-defined">
+      <header>EnProfilerFlags</header>
+      <description><para>Set of functions to configure the currently active EnProfilerFlags </para>
+</description>
+      <memberdef kind="function" id="group___profiler_1gac57a49a615d3d88328452d10c56a71e7" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int EnProfiler::SetFlags</definition>
+        <argsstring>(int flags, bool sessionReset=true)</argsstring>
+        <name>SetFlags</name>
+        <qualifiedname>EnProfiler::SetFlags</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>sessionReset</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Override the currently used set of EnProfilerFlags across the API. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DEFAULT: EnProfilerFlags.ALL </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The combination of desired EnProfilerFlags to override the currently used set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sessionReset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> When set to false, no [SR] will trigger, regardless of situation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> The currently used set of EnProfilerFlags after the function call</para>
+</simplesect>
+<programlisting><codeline><highlight class="comment">//<sp/>No<sp/>RESET<sp/>flag,<sp/>[PD]<sp/>will<sp/>be<sp/>accumulated<sp/>across<sp/>frames</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>No<sp/>RECURSIVE<sp/>flag,<sp/>only<sp/>the<sp/>curently<sp/>profiled<sp/>module<sp/>will<sp/>be<sp/>sorted</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gac57a49a615d3d88328452d10c56a71e7" kindref="member">SetFlags</ref>(<ref refid="group___profiler_1gac0f96831a146438a1a7fde2cbde7df0d" kindref="member">EnProfilerFlags</ref>.NONE);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>RESET<sp/>flag,<sp/>[PD]<sp/>will<sp/>be<sp/>reset<sp/>after<sp/>sorting</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>No<sp/>RECURSIVE<sp/>flag,<sp/>only<sp/>the<sp/>curently<sp/>profiled<sp/>module<sp/>will<sp/>be<sp/>sorted</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gac57a49a615d3d88328452d10c56a71e7" kindref="member">SetFlags</ref>(<ref refid="group___profiler_1gac0f96831a146438a1a7fde2cbde7df0d" kindref="member">EnProfilerFlags</ref>.RESET);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>RESET<sp/>flag,<sp/>[PD]<sp/>will<sp/>be<sp/>reset<sp/>after<sp/>sorting</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>RECURSIVE<sp/>flag,<sp/>all<sp/>modules<sp/>will<sp/>be<sp/>sorted</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gac57a49a615d3d88328452d10c56a71e7" kindref="member">SetFlags</ref>(<ref refid="group___profiler_1gac0f96831a146438a1a7fde2cbde7df0d" kindref="member">EnProfilerFlags</ref>.ALL);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="223" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga6c9570dcd85723813e08767ec222c28d" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int EnProfiler::GetFlags</definition>
+        <argsstring>()</argsstring>
+        <name>GetFlags</name>
+        <qualifiedname>EnProfiler::GetFlags</qualifiedname>
+        <briefdescription>
+<para>Get the currently used flags across the API. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> The currently used set of EnProfilerFlags</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga6c9570dcd85723813e08767ec222c28d" kindref="member">GetFlags</ref>();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(flags<sp/>&amp;<sp/><ref refid="group___profiler_1gac0f96831a146438a1a7fde2cbde7df0d" kindref="member">EnProfilerFlags</ref>.RECURSIVE)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;Currently<sp/>profiling<sp/>all<sp/>modules.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="238" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1gad44da84472d55ee68d3d1472b65b9254" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static proto bool EnProfiler::IsFlagsSet</definition>
+        <argsstring>(int flags)</argsstring>
+        <name>IsFlagsSet</name>
+        <qualifiedname>EnProfiler::IsFlagsSet</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Check if the flags are set. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Is effectively the same as the code displayed in GetFlags example, but without the bitwise operation </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The combination of EnProfilerFlags to check if present </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> If the flags are set</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gad44da84472d55ee68d3d1472b65b9254" kindref="member">IsFlagsSet</ref>(<ref refid="group___profiler_1gac0f96831a146438a1a7fde2cbde7df0d" kindref="member">EnProfilerFlags</ref>.ALL))</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;Currently<sp/>all<sp/>flags<sp/>are<sp/>enabled.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gad44da84472d55ee68d3d1472b65b9254" kindref="member">IsFlagsSet</ref>(<ref refid="group___profiler_1gac0f96831a146438a1a7fde2cbde7df0d" kindref="member">EnProfilerFlags</ref>.RECURSIVE))</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;Currently<sp/>profiling<sp/>all<sp/>modules.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="258" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1gafac02272b73e02fce5f50b177ad799de" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int EnProfiler::AddFlags</definition>
+        <argsstring>(int flags, bool sessionReset=true)</argsstring>
+        <name>AddFlags</name>
+        <qualifiedname>EnProfiler::AddFlags</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>sessionReset</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Add flags to the currently used set of EnProfilerFlags across the API. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Simply a helper method to quickly add EnProfilerFlags </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The combination of desired EnProfilerFlags to be added to the currently used set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sessionReset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> When set to false, no [SR] will trigger, regardless of situation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> The currently used set of EnProfilerFlags after the function call</para>
+</simplesect>
+<programlisting><codeline><highlight class="comment">//<sp/>In<sp/>the<sp/>case<sp/>where<sp/>the<sp/>current<sp/>set<sp/>of<sp/>EnProfilerFlags<sp/>is<sp/>EnProfilerFlags.RESET</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gafac02272b73e02fce5f50b177ad799de" kindref="member">AddFlags</ref>(<ref refid="group___profiler_1gac0f96831a146438a1a7fde2cbde7df0d" kindref="member">EnProfilerFlags</ref>.RECURSIVE);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>resulting<sp/>set<sp/>of<sp/>flags<sp/>now<sp/>will<sp/>be<sp/>EnProfilerFlags.RESET<sp/>|<sp/>EnProfilerFlags.RECURSIVE</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>As<sp/>the<sp/>above<sp/>is<sp/>pretty<sp/>much<sp/>the<sp/>same<sp/>as<sp/>the<sp/>following</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>EnProfiler.SetFlags(EnProfiler.GetFlags()<sp/>|<sp/>EnProfilerFlags.RECURSIVE);</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>But<sp/>a<sp/>much<sp/>cleaner<sp/>and<sp/>faster<sp/>alternative<sp/>(bitwise<sp/>operations<sp/>in<sp/>script<sp/>is<sp/>~10x<sp/>slower<sp/>than<sp/>C++)</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="276" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1gad9d32f50bdb4786676d524dbcdc2581f" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int EnProfiler::RemoveFlags</definition>
+        <argsstring>(int flags, bool sessionReset=true)</argsstring>
+        <name>RemoveFlags</name>
+        <qualifiedname>EnProfiler::RemoveFlags</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>sessionReset</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Remove flags from the currently used set of EnProfilerFlags across the API. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Simply a helper method to quickly remove EnProfilerFlags </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The combination of desired EnProfilerFlags to be added to the currently used set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sessionReset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> When set to false, no [SR] will trigger, regardless of situation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> The currently used set of EnProfilerFlags after the function call</para>
+</simplesect>
+<programlisting><codeline><highlight class="comment">//<sp/>In<sp/>the<sp/>case<sp/>where<sp/>the<sp/>current<sp/>set<sp/>of<sp/>EnProfilerFlags<sp/>is<sp/>EnProfilerFlags.RESET</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gad9d32f50bdb4786676d524dbcdc2581f" kindref="member">RemoveFlags</ref>(<ref refid="group___profiler_1gac0f96831a146438a1a7fde2cbde7df0d" kindref="member">EnProfilerFlags</ref>.RESET);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>resulting<sp/>set<sp/>of<sp/>flags<sp/>now<sp/>will<sp/>be<sp/>EnProfilerFlags.NONE</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>As<sp/>the<sp/>above<sp/>is<sp/>pretty<sp/>much<sp/>the<sp/>same<sp/>as<sp/>the<sp/>following</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>EnProfiler.SetFlags(EnProfiler.GetFlags()<sp/>&amp;<sp/>~EnProfilerFlags.RECURSIVE);</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>But<sp/>a<sp/>much<sp/>cleaner<sp/>and<sp/>faster<sp/>alternative<sp/>(bitwise<sp/>operations<sp/>in<sp/>script<sp/>is<sp/>~10x<sp/>slower<sp/>than<sp/>C++)</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="294" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga6f7bdb767a198d8ab36cd1da78c41181" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int EnProfiler::ClearFlags</definition>
+        <argsstring>(bool sessionReset=true)</argsstring>
+        <name>ClearFlags</name>
+        <qualifiedname>EnProfiler::ClearFlags</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>sessionReset</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Remove all flags from the currently used set of EnProfilerFlags across the API. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Simply a helper method to quickly remove all EnProfilerFlags </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sessionReset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> When set to false, no [SR] will trigger, regardless of situation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> The currently used set of EnProfilerFlags after the function call</para>
+</simplesect>
+<programlisting><codeline><highlight class="comment">//<sp/>In<sp/>the<sp/>case<sp/>where<sp/>the<sp/>current<sp/>set<sp/>of<sp/>EnProfilerFlags<sp/>is<sp/>EnProfilerFlags.RESET</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga6f7bdb767a198d8ab36cd1da78c41181" kindref="member">ClearFlags</ref>();</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>resulting<sp/>set<sp/>of<sp/>flags<sp/>now<sp/>will<sp/>be<sp/>EnProfilerFlags.NONE</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>As<sp/>the<sp/>above<sp/>is<sp/>pretty<sp/>much<sp/>the<sp/>same<sp/>as<sp/>the<sp/>following</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>EnProfiler.SetFlags(EnProfilerFlags.NONE);</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>But<sp/>a<sp/>much<sp/>cleaner<sp/>and<sp/>implicit<sp/>alternative</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="311" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>EnProfilerModule</header>
+      <description><para>Set of functions to configure the currently profiled EnProfilerModule </para>
+</description>
+      <memberdef kind="function" id="group___profiler_1ga839d71359959bfff23f6865e068eebbc" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>static proto void EnProfiler::SetModule</definition>
+        <argsstring>(EnProfilerModule module, bool sessionReset=true)</argsstring>
+        <name>SetModule</name>
+        <qualifiedname>EnProfiler::SetModule</qualifiedname>
+        <param>
+          <type><ref refid="group___profiler_1gac73f1fe131229b7fbf9b86efe4b14dfa" kindref="member">EnProfilerModule</ref></type>
+          <declname>module</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>sessionReset</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Set the module to be profiled. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DEFAULT: EnProfilerModule.CORE </para>
+</simplesect>
+<simplesect kind="note"><para>When session reset is enabled, it will only reset the module which it is currently being set to, previous module data will be untouched </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>module</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>EnProfilerModule</computeroutput> The module to profile </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sessionReset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> When set to false, no [SR] will trigger, regardless of situation</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting><codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga839d71359959bfff23f6865e068eebbc" kindref="member">SetModule</ref>(<ref refid="group___profiler_1gac73f1fe131229b7fbf9b86efe4b14dfa" kindref="member">EnProfilerModule</ref>.WORLD);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="333" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga19b5f3d67312e4673c7c2f3a424884ac" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="group___profiler_1gac73f1fe131229b7fbf9b86efe4b14dfa" kindref="member">EnProfilerModule</ref></type>
+        <definition>static proto EnProfilerModule EnProfiler::GetModule</definition>
+        <argsstring>()</argsstring>
+        <name>GetModule</name>
+        <qualifiedname>EnProfiler::GetModule</qualifiedname>
+        <briefdescription>
+<para>Get the currently profiled module. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>EnProfilerModule</computeroutput> The currently profiled module</para>
+</simplesect>
+<programlisting><codeline><highlight class="normal"><ref refid="group___profiler_1gac73f1fe131229b7fbf9b86efe4b14dfa" kindref="member">EnProfilerModule</ref><sp/>module<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga19b5f3d67312e4673c7c2f3a424884ac" kindref="member">GetModule</ref>();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="343" column="31"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga8b4223e90e3f00f7fa0ad4f8aa581d87" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto owned <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>static proto owned string EnProfiler::ModuleToName</definition>
+        <argsstring>(EnProfilerModule module)</argsstring>
+        <name>ModuleToName</name>
+        <qualifiedname>EnProfiler::ModuleToName</qualifiedname>
+        <param>
+          <type><ref refid="group___profiler_1gac73f1fe131229b7fbf9b86efe4b14dfa" kindref="member">EnProfilerModule</ref></type>
+          <declname>module</declname>
+        </param>
+        <briefdescription>
+<para>Helper to convert EnProfilerModule to string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>module</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>EnProfilerModule</computeroutput> The module to get the name of </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>string</computeroutput> The name of the module</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>moduleName<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga8b4223e90e3f00f7fa0ad4f8aa581d87" kindref="member">ModuleToName</ref>(<ref refid="group___profiler_1gac73f1fe131229b7fbf9b86efe4b14dfa" kindref="member">EnProfilerModule</ref>.GAME);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="354" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1gac7c0a0010f4c997cff8f4cf13a3666dc" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static proto bool EnProfiler::NameToModule</definition>
+        <argsstring>(string moduleName, out EnProfilerModule module)</argsstring>
+        <name>NameToModule</name>
+        <qualifiedname>EnProfiler::NameToModule</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>moduleName</declname>
+        </param>
+        <param>
+          <type>out <ref refid="group___profiler_1gac73f1fe131229b7fbf9b86efe4b14dfa" kindref="member">EnProfilerModule</ref></type>
+          <declname>module</declname>
+        </param>
+        <briefdescription>
+<para>Convert string to EnProfilerModule. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>moduleName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> The name of the module </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>module</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>EnProfilerModule</computeroutput> The enum value of the module or EnProfilerModule.ERROR if not found </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the module was found</para>
+</simplesect>
+<programlisting><codeline><highlight class="comment">//<sp/>Get<sp/>the<sp/>name<sp/>of<sp/>the<sp/>module<sp/>of<sp/>the<sp/>current<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>nameOfCurrentModule<sp/>=<sp/><ref refid="_json_data_contaminated_area_8c_1a651a3c9de2e16ff0deca8d09dedbda58" kindref="member">Type</ref>().GetModule();</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group___profiler_1gac73f1fe131229b7fbf9b86efe4b14dfa" kindref="member">EnProfilerModule</ref><sp/>module;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Convert<sp/>it<sp/>to<sp/>the<sp/>enum<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gac7c0a0010f4c997cff8f4cf13a3666dc" kindref="member">NameToModule</ref>(nameOfCurrentModule,<sp/>module))</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga839d71359959bfff23f6865e068eebbc" kindref="member">SetModule</ref>(module);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group___debug_shape_1ga30f13400906443efe9fb79540dc674b5" kindref="member">ErrorEx</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.Format(</highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>find<sp/>EnProfilerModule:<sp/>%1&quot;</highlight><highlight class="normal">,<sp/>nameOfCurrentModule));</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="378" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1gaefe3425edfa569edba4db66e16ad2971" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>static proto void EnProfiler::SetInterval</definition>
+        <argsstring>(int interval, bool sessionReset=true)</argsstring>
+        <name>SetInterval</name>
+        <qualifiedname>EnProfiler::SetInterval</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>interval</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>sessionReset</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Set the interval for the [SD] to update. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DEFAULT: 0 </para>
+</simplesect>
+<simplesect kind="note"><para>[DM] has the following values: {0, 5, 10, 20, 30, 50, 60, 120, 144}; When an interval not part of this list is set, [DM] will be set to &quot;CUSTOM_INTERVAL&quot; </para>
+</simplesect>
+<simplesect kind="note"><para>Does not affect the gathering of [PD], this will happen continuously as the profiling is enabled </para>
+</simplesect>
+<simplesect kind="note"><para>This also delays the [SR] caused by EnProfilerFlags.RESET </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Amount of frames to wait before [SD] is updated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sessionReset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> When set to false, no [SR] will trigger, regardless of situation</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting><codeline><highlight class="comment">//<sp/>This<sp/>will<sp/>make<sp/>it<sp/>so<sp/>that<sp/>[SD]<sp/>is<sp/>updated<sp/>every<sp/>60<sp/>frames</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gaefe3425edfa569edba4db66e16ad2971" kindref="member">SetInterval</ref>(60);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="398" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga208a6a97a7215c0f641035c36063af1c" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int EnProfiler::GetInterval</definition>
+        <argsstring>()</argsstring>
+        <name>GetInterval</name>
+        <qualifiedname>EnProfiler::GetInterval</qualifiedname>
+        <briefdescription>
+<para>Get the currently set interval. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> The currently set interval</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currentInterval<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga208a6a97a7215c0f641035c36063af1c" kindref="member">GetInterval</ref>();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="408" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga746a5377837b561e2e3e646cf61590fa" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>static proto void EnProfiler::SetTimeResolution</definition>
+        <argsstring>(int resolution)</argsstring>
+        <name>SetTimeResolution</name>
+        <qualifiedname>EnProfiler::SetTimeResolution</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>resolution</declname>
+        </param>
+        <briefdescription>
+<para>Set the resolution of the fetched Time data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DEFAULT: 100000 </para>
+</simplesect>
+<simplesect kind="note"><para>[DM] has the following values: {100000, 1000000, 1, 10, 100, 1000, 10000}; These are the only values available, otherwise it will round up to one in the list </para>
+</simplesect>
+<simplesect kind="note"><para>Does not affect any data itself, only the fetching and displaying of it (therefore, no [SR] is ever triggered by this method) </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>resolution</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The nth resolution of a second</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting><codeline><highlight class="comment">//<sp/>Have<sp/>all<sp/>time<sp/>being<sp/>reported<sp/>in<sp/>1<sp/>second</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga746a5377837b561e2e3e646cf61590fa" kindref="member">SetTimeResolution</ref>(1);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Have<sp/>all<sp/>time<sp/>being<sp/>reported<sp/>in<sp/>1000th<sp/>of<sp/>a<sp/>second<sp/>(ms)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga746a5377837b561e2e3e646cf61590fa" kindref="member">SetTimeResolution</ref>(1000);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="427" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga016607dead7aaaf8e4b8bd399364d4ff" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int EnProfiler::GetTimeResolution</definition>
+        <argsstring>()</argsstring>
+        <name>GetTimeResolution</name>
+        <qualifiedname>EnProfiler::GetTimeResolution</qualifiedname>
+        <briefdescription>
+<para>Get the currently set time resolution. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> The currently set resolution</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currentTimeResolution<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga016607dead7aaaf8e4b8bd399364d4ff" kindref="member">GetTimeResolution</ref>();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="437" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga0982ec21af1dee5f7f0d85dbf92fb533" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>static proto void EnProfiler::EnableAverage</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>EnableAverage</name>
+        <qualifiedname>EnProfiler::EnableAverage</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Enable/disable returning calculated averages. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DEFAULT: false </para>
+</simplesect>
+<simplesect kind="note"><para>When EnProfilerFlags.RESET flag is not present, it will divide by the session frame </para>
+</simplesect>
+<simplesect kind="note"><para>When an interval is set, it will divide by the interval </para>
+</simplesect>
+<simplesect kind="note"><para>Does not affect any data itself, only the fetching and displaying of it (therefore, no [SR] is ever triggered by this method) </para>
+</simplesect>
+<simplesect kind="note"><para>[CI] will never be an average, it will always be the current count of the instance (allocations will be the value of how many times an instance is created) </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Whether to enable or disable</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting><codeline><highlight class="comment">//<sp/>For<sp/>example,<sp/>take<sp/>the<sp/>situation<sp/>where<sp/>we<sp/>only<sp/>reset<sp/>every<sp/>60<sp/>frames</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gafac02272b73e02fce5f50b177ad799de" kindref="member">AddFlags</ref>(<ref refid="group___profiler_1gac0f96831a146438a1a7fde2cbde7df0d" kindref="member">EnProfilerFlags</ref>.RESET);</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gaefe3425edfa569edba4db66e16ad2971" kindref="member">SetInterval</ref>(60);</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga0982ec21af1dee5f7f0d85dbf92fb533" kindref="member">EnableAverage</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>And<sp/>a<sp/>method<sp/>is<sp/>called<sp/>once<sp/>per<sp/>frame,<sp/>gathering<sp/>the<sp/>count<sp/>of<sp/>that<sp/>function<sp/>will<sp/>be<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Or<sp/>if<sp/>a<sp/>method<sp/>is<sp/>called<sp/>twice<sp/>per<sp/>frame,<sp/>gathering<sp/>the<sp/>count<sp/>of<sp/>that<sp/>function<sp/>will<sp/>be<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Or<sp/>if<sp/>a<sp/>method<sp/>is<sp/>3<sp/>times<sp/>every<sp/>3<sp/>frames,<sp/>gathering<sp/>the<sp/>count<sp/>of<sp/>that<sp/>function<sp/>will<sp/>be<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>So<sp/>you<sp/>get<sp/>the<sp/>average<sp/>amount<sp/>of<sp/>times<sp/>the<sp/>method<sp/>is<sp/>called<sp/>per<sp/>frame,<sp/>out<sp/>of<sp/>the<sp/>sample<sp/>of<sp/>60<sp/>frames</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="463" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1gaa430f4904fb0b7c401a5fd9ee6e05909" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static proto bool EnProfiler::IsAverage</definition>
+        <argsstring>()</argsstring>
+        <name>IsAverage</name>
+        <qualifiedname>EnProfiler::IsAverage</qualifiedname>
+        <briefdescription>
+<para>Check if returning of average data is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether returning of average data is enabled</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isDataAverage<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gaa430f4904fb0b7c401a5fd9ee6e05909" kindref="member">IsAverage</ref>();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="473" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1gad2428e22855d62b5f82a5d07bc5c017b" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>static proto void EnProfiler::Dump</definition>
+        <argsstring>()</argsstring>
+        <name>Dump</name>
+        <qualifiedname>EnProfiler::Dump</qualifiedname>
+        <briefdescription>
+<para>Print out [SD] to script log. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gad2428e22855d62b5f82a5d07bc5c017b" kindref="member">Dump</ref>();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="484" column="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Frame data</header>
+      <description><para>Set of functions to obtain information about frame counts </para>
+</description>
+      <memberdef kind="function" id="group___profiler_1gab611f451ebf3345c2921e10b59609501" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int EnProfiler::GetGameFrame</definition>
+        <argsstring>()</argsstring>
+        <name>GetGameFrame</name>
+        <qualifiedname>EnProfiler::GetGameFrame</qualifiedname>
+        <briefdescription>
+<para>Get the total amount of frames passed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> The total amount of frames passed</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>gameFrame<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gab611f451ebf3345c2921e10b59609501" kindref="member">GetGameFrame</ref>();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="501" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1gad6fe4ec8f5aea3444ca3d1e48f4cfe80" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int EnProfiler::GetSessionFrame</definition>
+        <argsstring>()</argsstring>
+        <name>GetSessionFrame</name>
+        <qualifiedname>EnProfiler::GetSessionFrame</qualifiedname>
+        <briefdescription>
+<para>Get the total amount of frames in this profiling session. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This will only differ from GetProfiledSessionFrames when there is an Interval set </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> The total amount of frames in this profiling session</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sessionFrame<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gad6fe4ec8f5aea3444ca3d1e48f4cfe80" kindref="member">GetSessionFrame</ref>();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="512" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga8d689a67c7b449943b937d7575b0bf0e" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int EnProfiler::GetTotalFrames</definition>
+        <argsstring>()</argsstring>
+        <name>GetTotalFrames</name>
+        <qualifiedname>EnProfiler::GetTotalFrames</qualifiedname>
+        <briefdescription>
+<para>Get the total amount of frames across all profiling session. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This will only differ from GetProfiledFrames when there was an Interval set at some point </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> The total amount of frames across all profiling session</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>totalFrames<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga8d689a67c7b449943b937d7575b0bf0e" kindref="member">GetTotalFrames</ref>();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="523" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga436c4058551ccdbeb946eea127b33364" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int EnProfiler::GetProfiledSessionFrames</definition>
+        <argsstring>()</argsstring>
+        <name>GetProfiledSessionFrames</name>
+        <qualifiedname>EnProfiler::GetProfiledSessionFrames</qualifiedname>
+        <briefdescription>
+<para>Get the total amount of frames profiled in this profiling session. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This will only differ from GetSessionFrame when there is an Interval set </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> The total amount of frames profiled in this profiling session</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>profiledSessionFrames<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga436c4058551ccdbeb946eea127b33364" kindref="member">GetProfiledSessionFrames</ref>();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="534" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1gaa45200ee847e8cddc3d3a3b5284d53e8" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int EnProfiler::GetProfiledFrames</definition>
+        <argsstring>()</argsstring>
+        <name>GetProfiledFrames</name>
+        <qualifiedname>EnProfiler::GetProfiledFrames</qualifiedname>
+        <briefdescription>
+<para>Get the total amount of frames profiled across all profiling session. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This will only differ from GetTotalFrames when there was an Interval set at some point </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> The total amount of frames profiled across all profiling session</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>totalProfiledFrames<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gaa45200ee847e8cddc3d3a3b5284d53e8" kindref="member">GetProfiledFrames</ref>();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="545" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Sorted data</header>
+      <description><para>Set of functions to obtain [SD] <simplesect kind="warning"><para>Data is appended to the array, it will not clear any previous data already existing in the array </para>
+</simplesect>
+<simplesect kind="note"><para>Read SortData as well for more information regarding [SD] </para>
+</simplesect>
+</para>
+</description>
+      <memberdef kind="function" id="group___profiler_1gac2d361fcf574dd93bde113bf53f0c8a5" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>static proto void EnProfiler::GetTimePerClass</definition>
+        <argsstring>(notnull out array&lt; ref EnProfilerTimeClassPair &gt; outArr, int count=int.MAX)</argsstring>
+        <name>GetTimePerClass</name>
+        <qualifiedname>EnProfiler::GetTimePerClass</qualifiedname>
+        <param>
+          <type>notnull out <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="group___profiler_1gaa4db64646fd836399342f3f74d5f7f67" kindref="member">EnProfilerTimeClassPair</ref> &gt;</type>
+          <declname>outArr</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>count</declname>
+          <defval><ref refid="_en_convert_8c_1af7dbda7167e22cb3417c16f78061ad80" kindref="member">int.MAX</ref></defval>
+        </param>
+        <briefdescription>
+<para>Obtain [SD] for Time Per <ref refid="class_class" kindref="compound">Class</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outArr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>array&lt;ref EnProfilerTimeClassPair&gt;</computeroutput> Array sorted by time consumed by a class </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The maximum amount of entries wanted</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting><codeline><highlight class="comment">//<sp/>In<sp/>this<sp/>example<sp/>the<sp/>array<sp/>will<sp/>be<sp/>filled<sp/>with<sp/>the<sp/>20<sp/>most<sp/>time<sp/>intensive<sp/>classes</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>there<sp/>are<sp/>less<sp/>than<sp/>20<sp/>classes<sp/>which<sp/>consumed<sp/>time,<sp/>it<sp/>will<sp/>output<sp/>that<sp/>number<sp/>of<sp/>classes<sp/>instead</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classarray" kindref="compound">array&lt;ref EnProfilerTimeClassPair&gt;</ref><sp/>timePerClass<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gac2d361fcf574dd93bde113bf53f0c8a5" kindref="member">GetTimePerClass</ref>(timePerClass,<sp/>20);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>this<sp/>example<sp/>the<sp/>array<sp/>will<sp/>be<sp/>filled<sp/>with<sp/>all<sp/>classes<sp/>sorted<sp/>by<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="classarray" kindref="compound">array&lt;ref EnProfilerTimeClassPair&gt;</ref><sp/>timePerClass2<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gac2d361fcf574dd93bde113bf53f0c8a5" kindref="member">GetTimePerClass</ref>(timePerClass2);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="574" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1gaad7c69de40f45bfddc1d89d48a13d93e" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>static proto void EnProfiler::GetAllocationsPerClass</definition>
+        <argsstring>(notnull out array&lt; ref EnProfilerCountClassPair &gt; outArr, int count=int.MAX)</argsstring>
+        <name>GetAllocationsPerClass</name>
+        <qualifiedname>EnProfiler::GetAllocationsPerClass</qualifiedname>
+        <param>
+          <type>notnull out <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="group___profiler_1ga483079ccaaa47623e8b85b2210664499" kindref="member">EnProfilerCountClassPair</ref> &gt;</type>
+          <declname>outArr</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>count</declname>
+          <defval><ref refid="_en_convert_8c_1af7dbda7167e22cb3417c16f78061ad80" kindref="member">int.MAX</ref></defval>
+        </param>
+        <briefdescription>
+<para>Obtain [SD] for Allocations Per <ref refid="class_class" kindref="compound">Class</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outArr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>array&lt;ref EnProfilerCountClassPair&gt;</computeroutput> Array sorted by number of allocations of a class </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The maximum amount of entries wanted</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting><codeline><highlight class="normal"><ref refid="classarray" kindref="compound">array&lt;ref EnProfilerCountClassPair&gt;</ref><sp/>allocPerClass<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gaad7c69de40f45bfddc1d89d48a13d93e" kindref="member">GetAllocationsPerClass</ref>(allocPerClass,<sp/>20);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="586" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga8b3f1777db5cbbf64f33827112afa168" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>static proto void EnProfiler::GetInstancesPerClass</definition>
+        <argsstring>(notnull out array&lt; ref EnProfilerCountClassPair &gt; outArr, int count=int.MAX)</argsstring>
+        <name>GetInstancesPerClass</name>
+        <qualifiedname>EnProfiler::GetInstancesPerClass</qualifiedname>
+        <param>
+          <type>notnull out <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="group___profiler_1ga483079ccaaa47623e8b85b2210664499" kindref="member">EnProfilerCountClassPair</ref> &gt;</type>
+          <declname>outArr</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>count</declname>
+          <defval><ref refid="_en_convert_8c_1af7dbda7167e22cb3417c16f78061ad80" kindref="member">int.MAX</ref></defval>
+        </param>
+        <briefdescription>
+<para>Obtain [SD] for Instances Per <ref refid="class_class" kindref="compound">Class</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outArr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>array&lt;ref EnProfilerCountClassPair&gt;</computeroutput> Array sorted by number of instances of a class </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The maximum amount of entries wanted</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting><codeline><highlight class="normal"><ref refid="classarray" kindref="compound">array&lt;ref EnProfilerCountClassPair&gt;</ref><sp/>instancesPerClass<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga8b3f1777db5cbbf64f33827112afa168" kindref="member">GetInstancesPerClass</ref>(instancesPerClass,<sp/>20);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="598" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga222fd1e956bb047a9a355e05a6150032" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>static proto void EnProfiler::GetTimePerFunc</definition>
+        <argsstring>(notnull out array&lt; ref EnProfilerTimeFuncPair &gt; outArr, int count=int.MAX)</argsstring>
+        <name>GetTimePerFunc</name>
+        <qualifiedname>EnProfiler::GetTimePerFunc</qualifiedname>
+        <param>
+          <type>notnull out <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="group___profiler_1ga37a1e0864ea98c1285601de9ce13cd11" kindref="member">EnProfilerTimeFuncPair</ref> &gt;</type>
+          <declname>outArr</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>count</declname>
+          <defval><ref refid="_en_convert_8c_1af7dbda7167e22cb3417c16f78061ad80" kindref="member">int.MAX</ref></defval>
+        </param>
+        <briefdescription>
+<para>Obtain [SD] for Time Per Function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outArr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>array&lt;ref EnProfilerTimeFuncPair&gt;</computeroutput> Array sorted by time consumed by a function </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The maximum amount of entries wanted</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting><codeline><highlight class="normal"><ref refid="classarray" kindref="compound">array&lt;ref EnProfilerTimeFuncPair&gt;</ref><sp/>timePerFunc<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga222fd1e956bb047a9a355e05a6150032" kindref="member">GetTimePerFunc</ref>(timePerFunc,<sp/>20);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="610" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga7957739c9f30d13ec39843f0bd26ea5f" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>static proto void EnProfiler::GetCountPerFunc</definition>
+        <argsstring>(notnull out array&lt; ref EnProfilerCountFuncPair &gt; outArr, int count=int.MAX)</argsstring>
+        <name>GetCountPerFunc</name>
+        <qualifiedname>EnProfiler::GetCountPerFunc</qualifiedname>
+        <param>
+          <type>notnull out <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="group___profiler_1ga2e3b5cbdac9fe4529e71109ebfdd2844" kindref="member">EnProfilerCountFuncPair</ref> &gt;</type>
+          <declname>outArr</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>count</declname>
+          <defval><ref refid="_en_convert_8c_1af7dbda7167e22cb3417c16f78061ad80" kindref="member">int.MAX</ref></defval>
+        </param>
+        <briefdescription>
+<para>Obtain [SD] for Count Per Function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outArr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>array&lt;ref EnProfilerCountFuncPair&gt;</computeroutput> Array sorted by amount of times a function was called </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The maximum amount of entries wanted</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting><codeline><highlight class="normal"><ref refid="classarray" kindref="compound">array&lt;ref EnProfilerCountFuncPair&gt;</ref><sp/>countPerFunc<sp/>=<sp/>{};</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga7957739c9f30d13ec39843f0bd26ea5f" kindref="member">GetCountPerFunc</ref>(countPerFunc,<sp/>20);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="622" column="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Specific data</header>
+      <description><para>Set of functions to obtain specific data </para>
+</description>
+      <memberdef kind="function" id="group___profiler_1ga668f41f4a5b23c04c719a7671d2e40d2" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>static proto float EnProfiler::GetTimeOfClass</definition>
+        <argsstring>(typename clss, bool immediate=false)</argsstring>
+        <name>GetTimeOfClass</name>
+        <qualifiedname>EnProfiler::GetTimeOfClass</qualifiedname>
+        <param>
+          <type><ref refid="classtypename" kindref="compound">typename</ref> clss</type>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>immediate</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Obtain [SD] or [PD] regarding the time a specific class consumed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clss</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>typename</computeroutput> Typename of desired class </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>immediate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> When true, it will pull from [SD], when false it will pull from [PD] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>float</computeroutput> Time consumed by the specified class</para>
+</simplesect>
+<programlisting><codeline><highlight class="comment">//<sp/>Consider<sp/>the<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">EPTHelperClass<sp/>clss<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>EPTHelperClass();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Some<sp/>functions<sp/>being<sp/>called<sp/>here...</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Gathering<sp/>of<sp/>data<sp/>can<sp/>be<sp/>done<sp/>through</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timeOfClass<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga668f41f4a5b23c04c719a7671d2e40d2" kindref="member">GetTimeOfClass</ref>(clss.Type(),<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Or<sp/>when<sp/>you<sp/>have<sp/>no<sp/>variable/reference</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timeOfClass2<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga668f41f4a5b23c04c719a7671d2e40d2" kindref="member">GetTimeOfClass</ref>(StaticGetType(EPTHelperClass),<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="652" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga4d288eea52288bf10269e3902baa09e4" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int EnProfiler::GetAllocationsOfClass</definition>
+        <argsstring>(typename clss, bool immediate=false)</argsstring>
+        <name>GetAllocationsOfClass</name>
+        <qualifiedname>EnProfiler::GetAllocationsOfClass</qualifiedname>
+        <param>
+          <type><ref refid="classtypename" kindref="compound">typename</ref> clss</type>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>immediate</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Obtain [SD] or [PD] regarding the allocations of a specific class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clss</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>typename</computeroutput> Typename of desired class </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>immediate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> When true, it will pull from [SD], when false it will pull from [PD] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> Allocations of the specified class</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>allocationsOfClass<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga4d288eea52288bf10269e3902baa09e4" kindref="member">GetAllocationsOfClass</ref>(StaticGetType(EPTHelperClass),<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="664" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1gab481d7552bd7a1eda3e61c4fe5aba02d" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int EnProfiler::GetInstancesOfClass</definition>
+        <argsstring>(typename clss, bool immediate=false)</argsstring>
+        <name>GetInstancesOfClass</name>
+        <qualifiedname>EnProfiler::GetInstancesOfClass</qualifiedname>
+        <param>
+          <type><ref refid="classtypename" kindref="compound">typename</ref> clss</type>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>immediate</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Obtain [SD] or [PD] regarding the [CI] of a specific class. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>clss</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>typename</computeroutput> Typename of desired class </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>immediate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> When true, it will pull from [SD], when false it will pull from [PD] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> [CI] of the specified class</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>instancesOfClass<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gab481d7552bd7a1eda3e61c4fe5aba02d" kindref="member">GetInstancesOfClass</ref>(StaticGetType(EPTHelperClass),<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="676" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga70e97a10a5362d48a972522140d73457" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>static proto float EnProfiler::GetTimeOfFunc</definition>
+        <argsstring>(string funct, typename clss, bool immediate=false)</argsstring>
+        <name>GetTimeOfFunc</name>
+        <qualifiedname>EnProfiler::GetTimeOfFunc</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>funct</declname>
+        </param>
+        <param>
+          <type><ref refid="classtypename" kindref="compound">typename</ref> clss</type>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>immediate</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Obtain [SD] or [PD] regarding the time consumed by a specific function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>funct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Function name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clss</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>typename</computeroutput> Typename of class the function belongs to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>immediate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> When true, it will pull from [SD], when false it will pull from [PD] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>float</computeroutput> Time consumed by the specified function or -1 when function was not found</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timeOfFunc<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga70e97a10a5362d48a972522140d73457" kindref="member">GetTimeOfFunc</ref>(</highlight><highlight class="stringliteral">&quot;StringFormat&quot;</highlight><highlight class="normal">,<sp/>StaticGetType(<ref refid="class_en_profiler_tests" kindref="compound">EnProfilerTests</ref>),<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="689" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1gab7360f6bdaa20c10a129c72715a45bc1" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>static proto float EnProfiler::GetTimeOfFuncG</definition>
+        <argsstring>(string funct, bool immediate, bool immediate=false)</argsstring>
+        <name>GetTimeOfFuncG</name>
+        <qualifiedname>EnProfiler::GetTimeOfFuncG</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>funct</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>immediate</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>immediate</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Obtain [SD] or [PD] regarding the time consumed by a specific global function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>funct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Function name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>immediate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> When true, it will pull from [SD], when false it will pull from [PD] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>float</computeroutput> Time consumed by the specified function or -1 when function was not found</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timeOfFunc<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gab7360f6bdaa20c10a129c72715a45bc1" kindref="member">GetTimeOfFuncG</ref>(</highlight><highlight class="stringliteral">&quot;ErrorEx&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="701" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga67536d2765cabbea4d0b94c13b65bc0e" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int EnProfiler::GetCountOfFunc</definition>
+        <argsstring>(string funct, typename clss, bool immediate=false)</argsstring>
+        <name>GetCountOfFunc</name>
+        <qualifiedname>EnProfiler::GetCountOfFunc</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>funct</declname>
+        </param>
+        <param>
+          <type><ref refid="classtypename" kindref="compound">typename</ref> clss</type>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>immediate</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Obtain [SD] or [PD] regarding the amount of times a specific function was called. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>funct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Function name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>clss</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>typename</computeroutput> Typename of class the function belongs to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>immediate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> When true, it will pull from [SD], when false it will pull from [PD] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> Amount of calls to the specified function or -1 when function was not found</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>callCountOfFunc<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga67536d2765cabbea4d0b94c13b65bc0e" kindref="member">GetCountOfFunc</ref>(</highlight><highlight class="stringliteral">&quot;StringFormat&quot;</highlight><highlight class="normal">,<sp/>StaticGetType(<ref refid="class_en_profiler_tests" kindref="compound">EnProfilerTests</ref>),<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="714" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1gaf2263eb58dd97a1c64eb4dce1818986a" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int EnProfiler::GetCountOfFuncG</definition>
+        <argsstring>(string funct, bool immediate=false)</argsstring>
+        <name>GetCountOfFuncG</name>
+        <qualifiedname>EnProfiler::GetCountOfFuncG</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>funct</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>immediate</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Obtain [SD] or [PD] regarding the amount of times a specific function was called. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>funct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Function name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>immediate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> When true, it will pull from [SD], when false it will pull from [PD] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> Amount of calls to the specified function or -1 when function was not found</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>callCountOfFunc<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gaf2263eb58dd97a1c64eb4dce1818986a" kindref="member">GetCountOfFuncG</ref>(</highlight><highlight class="stringliteral">&quot;ErrorEx&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="726" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Misc</header>
+      <description><para>Set of helper functions </para>
+</description>
+      <memberdef kind="function" id="group___profiler_1gac87a4099ad6b9224b7839fbc96304090" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static bool EnProfiler::RequestImmediateData</definition>
+        <argsstring>()</argsstring>
+        <name>RequestImmediateData</name>
+        <qualifiedname>EnProfiler::RequestImmediateData</qualifiedname>
+        <briefdescription>
+<para>Helper method to ascertain the profiler will record [PD] right after this call. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether it was enabled before or not</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>wasEnabled<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gac87a4099ad6b9224b7839fbc96304090" kindref="member">RequestImmediateData</ref>();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="745" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" bodystart="745" bodyend="757"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___profiler_1gac0f96831a146438a1a7fde2cbde7df0d" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EnProfilerFlags</name>
+        <enumvalue id="group___profiler_1gga48a53a9623c700db48ed6af2f10bb784a899caa602e4fff675b17cdbab33607ec" prot="public">
+          <name>NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>No flags. </para>
+          </briefdescription>
+          <detaileddescription>
+<para>No automatic destroying.</para>
+<para>Flags to pass to <ref refid="class_particle_source_1a28b58f26c4487d1f79a4edd2d7821713" kindref="member">ParticleSource.StopParticle</ref>.</para>
+<para>Plain Effect base.</para>
+<para>No flags, has value 0, so will count as false in conditions.</para>
+<para>No flags </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___profiler_1ggac0f96831a146438a1a7fde2cbde7df0da589b7d94a3d91d145720e2fed0eb3a05" prot="public">
+          <name>RESET</name>
+          <briefdescription>
+<para>When present, will reset [PD] on sorting, otherwise will accumulate on top of it. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___profiler_1ggac0f96831a146438a1a7fde2cbde7df0da575c658142d54e9459d7350bdefbd712" prot="public">
+          <name>RECURSIVE</name>
+          <briefdescription>
+<para>Whether to profile child modules. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___profiler_1ggac0f96831a146438a1a7fde2cbde7df0dab1d5eac4b1dca480c8056eaea7663b7a" prot="public">
+          <name>ALL</name>
+          <briefdescription>
+<para>All flags enabled. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flags that influences the behaviour of the <ref refid="class_en_profiler" kindref="compound">EnProfiler</ref> API, applied through ...Flags functions. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="8" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" bodystart="9" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___profiler_1gac73f1fe131229b7fbf9b86efe4b14dfa" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EnProfilerModule</name>
+        <enumvalue id="group___profiler_1ggac73f1fe131229b7fbf9b86efe4b14dfaa6fb62912f795482b5e8a28aded6b02e9" prot="public">
+          <name>CORE</name>
+          <briefdescription>
+<para>1_Core </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___profiler_1ggac73f1fe131229b7fbf9b86efe4b14dfaa7bac41f055b0f94da080e80cd31a8808" prot="public">
+          <name>GAMELIB</name>
+          <briefdescription>
+<para>2_GameLib </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___profiler_1ggac73f1fe131229b7fbf9b86efe4b14dfaad50cf309d7568040619ed26ee6835a84" prot="public">
+          <name>GAME</name>
+          <briefdescription>
+<para>3_Game </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___profiler_1ggac73f1fe131229b7fbf9b86efe4b14dfaa357719dc7a3d164341f129a11aa9ff3b" prot="public">
+          <name>WORLD</name>
+          <briefdescription>
+<para>4_World </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___profiler_1ggac73f1fe131229b7fbf9b86efe4b14dfaae92f6a2bb46918da226bb46c591605c8" prot="public">
+          <name>MISSION</name>
+          <briefdescription>
+<para>5_Mission </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___profiler_1ggac73f1fe131229b7fbf9b86efe4b14dfaaa061d3156235b8c6a30a8abc5842b18a" prot="public">
+          <name>MISSION_CUSTOM</name>
+          <briefdescription>
+<para>init.c </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___profiler_1ggac73f1fe131229b7fbf9b86efe4b14dfaa2fd6f336d08340583bd620a7f5694c90" prot="public">
+          <name>ERROR</name>
+          <briefdescription>
+<para>Can be returned from some methods. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Current base scripted modules. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="21" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" bodystart="22" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="enum" id="group___profiler_1ga48a53a9623c700db48ed6af2f10bb784" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EnProfilerEnabledFlags</name>
+        <enumvalue id="group___profiler_1gga48a53a9623c700db48ed6af2f10bb784a899caa602e4fff675b17cdbab33607ec" prot="public">
+          <name>NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+<para>No flags. </para>
+          </briefdescription>
+          <detaileddescription>
+<para>No automatic destroying.</para>
+<para>Flags to pass to <ref refid="class_particle_source_1a28b58f26c4487d1f79a4edd2d7821713" kindref="member">ParticleSource.StopParticle</ref>.</para>
+<para>Plain Effect base.</para>
+<para>No flags, has value 0, so will count as false in conditions.</para>
+<para>No flags </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___profiler_1gga48a53a9623c700db48ed6af2f10bb784a3ff81339cfc723dd10714c38227f6565" prot="public">
+          <name>DIAG</name>
+          <briefdescription>
+<para>Script profiling UI is enabled in WIN+ALT debug menu, when this is true, it will override SCRP. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___profiler_1gga48a53a9623c700db48ed6af2f10bb784a63263ee340bd72fbfae6322119a0cbb1" prot="public">
+          <name>SCRP</name>
+          <briefdescription>
+<para>It has been set to being always enabled through <ref refid="class_en_profiler" kindref="compound">EnProfiler</ref> (SCRipt Profiler) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___profiler_1gga48a53a9623c700db48ed6af2f10bb784ae1bb38e3c1c66915ccf32e21550105f8" prot="public">
+          <name>SCRC</name>
+          <briefdescription>
+<para>Whether profiling is currently truly happening (SCRipt Context) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>There are 3 states which can be toggled that governs whether script profiling is enabled or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The reason for this is because when it is enabled in debug menu, or through this API without &apos;immediate&apos;, it will only be enabled the next frame </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="43" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" bodystart="44" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___profiler_1gaa4db64646fd836399342f3f74d5f7f67" prot="public" static="no">
+        <type><ref refid="class_param2" kindref="compound">Param2</ref>&lt; <ref refid="classfloat" kindref="compound">float</ref>, <ref refid="classtypename" kindref="compound">typename</ref> &gt;</type>
+        <definition>typedef Param2&lt;float, typename&gt; EnProfilerTimeClassPair</definition>
+        <argsstring></argsstring>
+        <name>EnProfilerTimeClassPair</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="55" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___profiler_1ga483079ccaaa47623e8b85b2210664499" prot="public" static="no">
+        <type><ref refid="class_param2" kindref="compound">Param2</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, <ref refid="classtypename" kindref="compound">typename</ref> &gt;</type>
+        <definition>typedef Param2&lt;int, typename&gt; EnProfilerCountClassPair</definition>
+        <argsstring></argsstring>
+        <name>EnProfilerCountClassPair</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="56" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___profiler_1ga37a1e0864ea98c1285601de9ce13cd11" prot="public" static="no">
+        <type><ref refid="class_param2" kindref="compound">Param2</ref>&lt; <ref refid="classfloat" kindref="compound">float</ref>, <ref refid="classstring" kindref="compound">string</ref> &gt;</type>
+        <definition>typedef Param2&lt;float, string&gt; EnProfilerTimeFuncPair</definition>
+        <argsstring></argsstring>
+        <name>EnProfilerTimeFuncPair</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="58" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="group___profiler_1ga2e3b5cbdac9fe4529e71109ebfdd2844" prot="public" static="no">
+        <type><ref refid="class_param2" kindref="compound">Param2</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, <ref refid="classstring" kindref="compound">string</ref> &gt;</type>
+        <definition>typedef Param2&lt;int, string&gt; EnProfilerCountFuncPair</definition>
+        <argsstring></argsstring>
+        <name>EnProfilerCountFuncPair</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="59" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___profiler_1gac6341f9d1e58ee32fd2fed2df4e06a8e" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>static proto void EnProfiler::Enable</definition>
+        <argsstring>(bool enable, bool immediate=false, bool sessionReset=true)</argsstring>
+        <name>Enable</name>
+        <qualifiedname>EnProfiler::Enable</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>enable</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>immediate</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>sessionReset</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Enable the gathering of script profiling data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>DEFAULT: disabled (unless launched with &quot;-profile&quot;, then it is default enabled) </para>
+</simplesect>
+<simplesect kind="note"><para>This is separate from the one in [DM], so toggling it in [DM] will not affect this, and toggling it here will not affect [DM] </para>
+</simplesect>
+<simplesect kind="note"><para>It will ignore the call if trying to set the current state, except when &quot;immediate&quot; is used </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>enable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Whether to enable or disable, if it was previously not enabled, it will cause [SR] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="note"><para>Disabling does not cause [SR], so all data will stay intact </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>immediate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> When true will instantly start/stop profiling, otherwise it will apply it at the end of the frame (to have one stable point in time) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>Keep in mind that when using immediate, it will not be the data of the entire frame, which can skew data if not kept in mind <linebreak/>
+ </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sessionReset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> When set to false, no [SR] will trigger, regardless of situation</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting><codeline><highlight class="comment">//<sp/>Simple<sp/>enable,<sp/>will<sp/>start<sp/>profiling<sp/>the<sp/>next<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Will<sp/>cause<sp/>[SR]<sp/>if<sp/>!IsEnabledP()<sp/>before<sp/>this<sp/>call</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gac6341f9d1e58ee32fd2fed2df4e06a8e" kindref="member">Enable</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Immediate<sp/>enable,<sp/>will<sp/>start<sp/>profiling<sp/>immediately</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Will<sp/>cause<sp/>[SR]<sp/>if<sp/>!IsEnabledP()<sp/>before<sp/>this<sp/>call</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gac6341f9d1e58ee32fd2fed2df4e06a8e" kindref="member">Enable</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Immediate<sp/>disable,<sp/>will<sp/>stop<sp/>profiling<sp/>immediately</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Disabling<sp/>will<sp/>never<sp/>cause<sp/>[SR],<sp/>preserving<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gac6341f9d1e58ee32fd2fed2df4e06a8e" kindref="member">Enable</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Simple<sp/>disable,<sp/>will<sp/>not<sp/>profile<sp/>the<sp/>next<sp/>frame<sp/>(but<sp/>still<sp/>finish<sp/>profiling<sp/>the<sp/>current<sp/>one)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Disabling<sp/>will<sp/>never<sp/>cause<sp/>[SR],<sp/>preserving<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gac6341f9d1e58ee32fd2fed2df4e06a8e" kindref="member">Enable</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="103" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1gaf1e0c3e516190276fd27f2ce099a2ffe" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int EnProfiler::IsEnabled</definition>
+        <argsstring>()</argsstring>
+        <name>IsEnabled</name>
+        <qualifiedname>EnProfiler::IsEnabled</qualifiedname>
+        <briefdescription>
+<para>Return if script profiling is enabled. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Helper methods below </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> Flags regarding the current state</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>isScriptProfilingEnabled<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gaf1e0c3e516190276fd27f2ce099a2ffe" kindref="member">IsEnabled</ref>();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="114" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1gae6ec47e99adf0f96a850aa60304333da" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static bool EnProfiler::IsEnabledD</definition>
+        <argsstring>()</argsstring>
+        <name>IsEnabledD</name>
+        <qualifiedname>EnProfiler::IsEnabledD</qualifiedname>
+        <briefdescription>
+<para>Return if script profiling is enabled through [DM]. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether script profiling is enabled through [DM]</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isScriptProfilingDiagEnabled<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gae6ec47e99adf0f96a850aa60304333da" kindref="member">IsEnabledD</ref>();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="124" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1gaa96fdea7f75b52b508b694f6e6cd8174" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static bool EnProfiler::IsEnabledP</definition>
+        <argsstring>()</argsstring>
+        <name>IsEnabledP</name>
+        <qualifiedname>EnProfiler::IsEnabledP</qualifiedname>
+        <briefdescription>
+<para>Return if script profiling is enabled through <ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>When using &quot;-profile&quot; launch parameter, it will enable it through <ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>, so this will return true </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether script profiling is enabled through script profiler</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isScriptProfilingToggleEnabled<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gaa96fdea7f75b52b508b694f6e6cd8174" kindref="member">IsEnabledP</ref>();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="138" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" bodystart="138" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1gaaeef3e2b95850f426ebfafd23c476f80" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static bool EnProfiler::IsEnabledC</definition>
+        <argsstring>()</argsstring>
+        <name>IsEnabledC</name>
+        <qualifiedname>EnProfiler::IsEnabledC</qualifiedname>
+        <briefdescription>
+<para>Return if script profiling is actually turned on inside of the script context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>When using &quot;-profile&quot; launch parameter, it will enable it through <ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>, so this will return true </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether script is being profiled as of this moment</para>
+</simplesect>
+<programlisting><codeline><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isScriptProfilingEnabled<sp/>=<sp/><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1gaaeef3e2b95850f426ebfafd23c476f80" kindref="member">IsEnabledC</ref>();</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="152" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" bodystart="152" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga7b2ce2ca20353a7db73447cb291483b4" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>static proto void EnProfiler::SortData</definition>
+        <argsstring>()</argsstring>
+        <name>SortData</name>
+        <qualifiedname>EnProfiler::SortData</qualifiedname>
+        <briefdescription>
+<para>The internal sorting that happens at the end of the frame (so it is NOT necessary to call this manually) to supply Get...Per... functions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This will clear the previous [SD] and sort the [PD] currently available at this moment </para>
+</simplesect>
+<simplesect kind="note"><para>Flags apply to this </para>
+</simplesect>
+<simplesect kind="warning"><para>Keep in mind that EnProfilerFlags.RESET will clear all [PD] after this is called</para>
+</simplesect>
+<programlisting><codeline><highlight class="comment">//<sp/>Sorting<sp/>all<sp/>the<sp/>currently<sp/>available<sp/>[PD],<sp/>populating<sp/>[SD]</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga7b2ce2ca20353a7db73447cb291483b4" kindref="member">SortData</ref>();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>flag<sp/>EnProfilerFlags.RESET<sp/>is<sp/>enabled,<sp/>then<sp/>this<sp/>will<sp/>return<sp/>0<sp/>now<sp/>even<sp/>if<sp/>it<sp/>has<sp/>been<sp/>called,<sp/>as<sp/>[PD]<sp/>has<sp/>been<sp/>cleared</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>goes<sp/>for<sp/>any<sp/>Get...Of...<sp/>function<sp/>(Except<sp/>for<sp/>[CI],<sp/>the<sp/>counter<sp/>persists)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga70e97a10a5362d48a972522140d73457" kindref="member">GetTimeOfFunc</ref>(</highlight><highlight class="stringliteral">&quot;Sleep&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_en_profiler_tests" kindref="compound">EnProfilerTests</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="172" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___profiler_1ga96e089608657cf4ff346f9a4f70ccf04" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>static proto void EnProfiler::ResetSession</definition>
+        <argsstring>(bool fullReset=false)</argsstring>
+        <name>ResetSession</name>
+        <qualifiedname>EnProfiler::ResetSession</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>fullReset</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Perform [SR], clearing SessionFrame, ProfiledSessionFrames, [SD] and [PD] (except for [CI]) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Can also be triggered by a variety of other functions in this API </para>
+</simplesect>
+<simplesect kind="note"><para>When triggered by the other functions, it will call with fullReset = false </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fullReset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Whether to clear [PD] of all modules, when false it will only clear the [PD] according to current settings</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<programlisting><codeline><highlight class="comment">//<sp/>Considering<sp/>the<sp/>settings:<sp/>SetFlags(EnProfilerFlags.NONE)<sp/>and<sp/>SetModule(EnProfilerModule.GAME)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>following<sp/>call<sp/>will<sp/>only<sp/>clear<sp/>[PD]<sp/>of<sp/>3_Game</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga96e089608657cf4ff346f9a4f70ccf04" kindref="member">ResetSession</ref>();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Considering<sp/>the<sp/>settings:<sp/>SetFlags(EnProfilerFlags.RECURSIVE)<sp/>and<sp/>SetModule(EnProfilerModule.WORLD)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>following<sp/>call<sp/>will<sp/>clear<sp/>[PD]<sp/>of<sp/>3_Game,<sp/>4_World,<sp/>5_Mission<sp/>and<sp/>their<sp/>children</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga96e089608657cf4ff346f9a4f70ccf04" kindref="member">ResetSession</ref>();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>following<sp/>call<sp/>resets<sp/>[PD]<sp/>across<sp/>all<sp/>modules</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="class_en_profiler" kindref="compound">EnProfiler</ref>.<ref refid="group___profiler_1ga96e089608657cf4ff346f9a4f70ccf04" kindref="member">ResetSession</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnProfiler.c" line="193" column="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="warning"><para>Only available on developer and diag builds </para>
+</simplesect>
+</para>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

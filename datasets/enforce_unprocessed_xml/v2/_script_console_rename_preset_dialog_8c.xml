@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_script_console_rename_preset_dialog_8c" kind="file" language="C++">
+    <compoundname>ScriptConsoleRenamePresetDialog.c</compoundname>
+    <innerclass refid="class_u_i_scripted_menu" prot="public">UIScriptedMenu</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">class<sp/></highlight><highlight class="normal">ScriptConsoleRenamePresetDialog<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_u_i_scripted_menu" kindref="compound">UIScriptedMenu</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_u_i_scripted_menu_1a526d780d7a686842bba1249b8f063877" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_u_i_scripted_menu_1a526d780d7a686842bba1249b8f063877" kindref="member">ScriptConsoleRenamePresetDialog</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_u_i_scripted_menu_1ac96234eadbce1d268bbfbda6f7514c43" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_u_i_scripted_menu_1ac96234eadbce1d268bbfbda6f7514c43" kindref="member">~ScriptConsoleRenamePresetDialog</ref>()</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_u_i_scripted_menu_1aca76f7de94e43c81d67d6c5b672f4fbe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/><ref refid="class_widget" kindref="compound">Widget</ref><sp/><ref refid="class_u_i_scripted_menu_1aca76f7de94e43c81d67d6c5b672f4fbe" kindref="member">Init</ref>()</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>layoutRoot<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a9acfc7077cec18228fcafc8649054e66" kindref="member">GetWorkspace</ref>().<ref refid="group___widget_a_p_i_1ga28f2c34f1fa5af85b32e1a11ef6f6024" kindref="member">CreateWidgets</ref>(</highlight><highlight class="stringliteral">&quot;gui/layouts/script_console/script_console_dialog_preset.layout&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Editbox<sp/>=<sp/>EditBoxWidget.Cast(<sp/>layoutRoot.FindAnyWidget(</highlight><highlight class="stringliteral">&quot;PrimaryEditBox&quot;</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Label<sp/>=<sp/><ref refid="class_text_widget" kindref="compound">TextWidget</ref>.Cast(<sp/>layoutRoot.FindAnyWidget(</highlight><highlight class="stringliteral">&quot;WindowLabel&quot;</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Message<sp/>=<sp/><ref refid="class_text_widget" kindref="compound">TextWidget</ref>.Cast(<sp/>layoutRoot.FindAnyWidget(</highlight><highlight class="stringliteral">&quot;MessageText&quot;</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mission_base" kindref="compound">MissionBase</ref><sp/><ref refid="_display_status_8c_1ab3a3bb8e635420fd40ef3c99f863c5c8" kindref="member">mission</ref><sp/>=<sp/><ref refid="class_mission_base" kindref="compound">MissionBase</ref>.Cast(<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().GetMission()<sp/>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_u_i_scripted_menu" kindref="compound">UIScriptedMenu</ref><sp/>ui_menu<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a00980b6b66e736a4af85fe1a935fd25e" kindref="member">GetUIManager</ref>().<ref refid="class_u_i_manager_1a9eec3197925c4469ac05fcc46221b4f7" kindref="member">FindMenu</ref>(<ref refid="group___menu_i_d_1ga1f9c728143ed68225163b352c33f1fc4" kindref="member">MENU_SCRIPTCONSOLE</ref>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ui_menu<sp/>!=<sp/>NULL<sp/>)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ScriptConsole<sp/>scripted_console<sp/>=<sp/>ScriptConsole.Cast(<sp/>ui_menu<sp/>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Editbox.SetText(<sp/>scripted_console.GetCurrentPresetName()<sp/>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Label.SetText(</highlight><highlight class="stringliteral">&quot;RENAME<sp/>PRESET&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Message.SetText(<sp/>scripted_console.GetCurrentPresetName()<sp/>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>layoutRoot;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_u_i_scripted_menu_1ad1bfa3dda2895fad96fa25f720d5aff1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_u_i_scripted_menu_1ad1bfa3dda2895fad96fa25f720d5aff1" kindref="member">OnClick</ref>(<ref refid="class_widget" kindref="compound">Widget</ref><sp/>w,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_icon_8c_1a2970c38de5fbde060cc7a0ed546e674f" kindref="member">x</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_icon_8c_1acd41c12fe81446bff0920670641367de" kindref="member">y</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>button)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnClick(w,<sp/><ref refid="_icon_8c_1a2970c38de5fbde060cc7a0ed546e674f" kindref="member">x</ref>,<sp/><ref refid="_icon_8c_1acd41c12fe81446bff0920670641367de" kindref="member">y</ref>,<sp/>button);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(w.GetUserID()<sp/>==<sp/><ref refid="group___u_i_1gafd2ff576b89077f07ebac93270f2e24f" kindref="member">IDC_OK</ref>)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_u_i_scripted_menu" kindref="compound">UIScriptedMenu</ref><sp/>ui_menu<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a00980b6b66e736a4af85fe1a935fd25e" kindref="member">GetUIManager</ref>().<ref refid="class_u_i_manager_1a9eec3197925c4469ac05fcc46221b4f7" kindref="member">FindMenu</ref>(<ref refid="group___menu_i_d_1ga1f9c728143ed68225163b352c33f1fc4" kindref="member">MENU_SCRIPTCONSOLE</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>ui_menu<sp/>!=<sp/>NULL<sp/>)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ScriptConsole<sp/>scripted_console<sp/>=<sp/>ScriptConsole.Cast(<sp/>ui_menu<sp/>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scripted_console.<ref refid="class_u_i_scripted_menu_1ab45d575233c57866fad580e22e09d064" kindref="member">RenamePreset</ref>(<sp/>m_Editbox.GetText()<sp/>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_item_base_8c_1a604074e02bcee1dc8a5ab6bdbd2e2e84" kindref="member">Close</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(w.GetUserID()<sp/>==<sp/><ref refid="group___u_i_1gaba6e51e243f98a9ba264f292c46c8f2d" kindref="member">IDC_CANCEL</ref>)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_item_base_8c_1a604074e02bcee1dc8a5ab6bdbd2e2e84" kindref="member">Close</ref>();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>EditBoxWidget<sp/><ref refid="class_u_i_scripted_menu_1a22462c5f6a65a53bb56856a12a7e59f1" kindref="member">m_Editbox</ref>;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_text_widget" kindref="compound">TextWidget</ref><sp/><ref refid="class_u_i_scripted_menu_1a5eb6baf6310b69f6ef900e255dab6e34" kindref="member">m_Label</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_text_widget" kindref="compound">TextWidget</ref><sp/><ref refid="class_u_i_scripted_menu_1a2932c72770121707379cf755611b714a" kindref="member">m_Message</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/5_Mission/GUI/ScriptConsole/ScriptConsoleRenamePresetDialog.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_coolant_steam_8c" kind="file" language="C++">
+    <compoundname>CoolantSteam.c</compoundname>
+    <innerclass refid="class_eff_coolant_steam" prot="public">EffCoolantSteam</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_eff_coolant_steam" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_eff_coolant_steam" kindref="compound">EffCoolantSteam</ref><sp/>:<sp/><ref refid="class_eff_vehicle_smoke" kindref="compound">EffVehicleSmoke</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_eff_coolant_steam_1ab4e2f0b9e6307c4debb41f50fcd0fce6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_eff_coolant_steam_1ab4e2f0b9e6307c4debb41f50fcd0fce6" kindref="member">SetParticleStateLight</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_eff_vehicle_smoke_1a3e95fc1ceb09f4ca6276c87f6184a4f4" kindref="member">SetParticleState</ref>(<sp/><ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a803aaab9cb6913893e9159dd676e1bdb" kindref="member">HATCHBACK_COOLANT_OVERHEATING</ref><sp/>);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_eff_coolant_steam_1ac7a3de2217310c7a1714208e45720151" kindref="member">UpdateParticle</ref>();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9" refid="class_eff_coolant_steam_1a331153dde9b1b174a3480155b388a2c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_eff_coolant_steam_1a331153dde9b1b174a3480155b388a2c3" kindref="member">SetParticleStateHeavy</ref>()</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_eff_vehicle_smoke_1a3e95fc1ceb09f4ca6276c87f6184a4f4" kindref="member">SetParticleState</ref>(<sp/><ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a792d0c86435ce078fa06565a1a3bb7bd" kindref="member">HATCHBACK_COOLANT_OVERHEATED</ref><sp/>);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_eff_coolant_steam_1ac7a3de2217310c7a1714208e45720151" kindref="member">UpdateParticle</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15" refid="class_eff_coolant_steam_1ac7a3de2217310c7a1714208e45720151" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_eff_coolant_steam_1ac7a3de2217310c7a1714208e45720151" kindref="member">UpdateParticle</ref>()</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Car<sp/>parent<sp/>=<sp/>Car.Cast(<sp/><ref refid="_effect_8c_1afdae536cdae285f8eef4528d43370317" kindref="member">GetAttachmentParent</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle" kindref="compound">Particle</ref><sp/>p<sp/>=<sp/><ref refid="class_effect_particle_1a04d219bb00f70fc4d2fdf208cb41c422" kindref="member">GetParticle</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(parent<sp/>&amp;&amp;<sp/>p)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>speed<sp/>=<sp/>parent.GetSpeedometerAbsolute();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lifetime_scale<sp/>=<sp/>(100<sp/>-<sp/>speed)<sp/>/<sp/>100;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lifetime_scale<sp/>&lt;<sp/>0.1)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lifetime_scale<sp/>=<sp/>0.1;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>birthrate_scale<sp/>=<sp/>1<sp/>+<sp/>(speed<sp/>*<sp/>0.02<sp/>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>speed_scale<sp/>=<sp/>1<sp/>+<sp/>(speed<sp/>*<sp/>0.2<sp/>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(speed_scale<sp/>&gt;<sp/>10)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>speed_scale<sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>size_scale<sp/>=<sp/>1<sp/>+<sp/>(speed<sp/>*<sp/>0.05<sp/>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size_scale<sp/>&gt;<sp/>2.5)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size_scale<sp/>=<sp/>2.5;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>gravity_add<sp/>=<sp/>speed<sp/>*<sp/>0.005<sp/>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="class_particle_1a38df6525eaefe981022979f439b9f9d7" kindref="member">ScaleParticleParamFromOriginal</ref>(<sp/><ref refid="group___particle_effect_1gae0fed29d09aa06a8ca33de9f2b039e4b" kindref="member">EmitorParam</ref>.LIFETIME,<sp/>lifetime_scale<sp/>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="class_particle_1a38df6525eaefe981022979f439b9f9d7" kindref="member">ScaleParticleParamFromOriginal</ref>(<sp/><ref refid="group___particle_effect_1gae0fed29d09aa06a8ca33de9f2b039e4b" kindref="member">EmitorParam</ref>.LIFETIME_RND,<sp/>lifetime_scale<sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="class_particle_1a38df6525eaefe981022979f439b9f9d7" kindref="member">ScaleParticleParamFromOriginal</ref>(<sp/><ref refid="group___particle_effect_1gae0fed29d09aa06a8ca33de9f2b039e4b" kindref="member">EmitorParam</ref>.BIRTH_RATE,<sp/>birthrate_scale<sp/>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="class_particle_1a38df6525eaefe981022979f439b9f9d7" kindref="member">ScaleParticleParamFromOriginal</ref>(<sp/><ref refid="group___particle_effect_1gae0fed29d09aa06a8ca33de9f2b039e4b" kindref="member">EmitorParam</ref>.BIRTH_RATE_RND,<sp/>birthrate_scale<sp/>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="class_particle_1a38df6525eaefe981022979f439b9f9d7" kindref="member">ScaleParticleParamFromOriginal</ref>(<sp/><ref refid="group___particle_effect_1gae0fed29d09aa06a8ca33de9f2b039e4b" kindref="member">EmitorParam</ref>.VELOCITY,<sp/>speed_scale<sp/>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="class_particle_1a38df6525eaefe981022979f439b9f9d7" kindref="member">ScaleParticleParamFromOriginal</ref>(<sp/><ref refid="group___particle_effect_1gae0fed29d09aa06a8ca33de9f2b039e4b" kindref="member">EmitorParam</ref>.VELOCITY_RND,<sp/>speed_scale<sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="class_particle_1a38df6525eaefe981022979f439b9f9d7" kindref="member">ScaleParticleParamFromOriginal</ref>(<sp/><ref refid="group___particle_effect_1gae0fed29d09aa06a8ca33de9f2b039e4b" kindref="member">EmitorParam</ref>.SIZE,<sp/>size_scale<sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="class_particle_1a81afd18b1f20954965df94fb60d0eb0f" kindref="member">SetParticleParam</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(<sp/><ref refid="group___particle_effect_1gae0fed29d09aa06a8ca33de9f2b039e4b" kindref="member">EmitorParam</ref>.GRAVITY_SCALE,<sp/>gravity_add<sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Effects/EffectParticle/VehicleSmoke/CoolantSteam.c"/>
+  </compounddef>
+</doxygen>

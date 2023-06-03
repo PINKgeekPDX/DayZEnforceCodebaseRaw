@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_fatigue_mdfr" kind="class" language="C++" prot="public">
+    <compoundname>FatigueMdfr</compoundname>
+    <basecompoundref refid="class_modifier_base" prot="private" virt="non-virtual">ModifierBase</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_fatigue_mdfr_1af887f19ae257708a84fac3f1fc6c7305" prot="private" static="no" mutable="no">
+        <type>private <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>private float FatigueMdfr::m_Time</definition>
+        <argsstring></argsstring>
+        <name>m_Time</name>
+        <qualifiedname>FatigueMdfr::m_Time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" line="3" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fatigue_mdfr_1a3e289396a73e738a9b8233b49de3c241" prot="private" static="no" mutable="no">
+        <type>private <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>private float FatigueMdfr::m_NextEvent</definition>
+        <argsstring></argsstring>
+        <name>m_NextEvent</name>
+        <qualifiedname>FatigueMdfr::m_NextEvent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" line="4" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_fatigue_mdfr_1a37f83603026d419667574f6026311060" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>const float FatigueMdfr::FATIGUE_EVENT_INTERVAL_MIN</definition>
+        <argsstring></argsstring>
+        <name>FATIGUE_EVENT_INTERVAL_MIN</name>
+        <qualifiedname>FatigueMdfr::FATIGUE_EVENT_INTERVAL_MIN</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" line="6" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fatigue_mdfr_1a383f692ad52a1233801a3bd97c78409b" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>const float FatigueMdfr::FATIGUE_EVENT_INTERVAL_MAX</definition>
+        <argsstring></argsstring>
+        <name>FATIGUE_EVENT_INTERVAL_MAX</name>
+        <qualifiedname>FatigueMdfr::FATIGUE_EVENT_INTERVAL_MAX</qualifiedname>
+        <initializer>= 12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" line="7" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fatigue_mdfr_1ad33a5cc11febb95aa8d2576772f5e78d" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>const float FatigueMdfr::STAMINA_RECOVERY_MULTIPLIER</definition>
+        <argsstring></argsstring>
+        <name>STAMINA_RECOVERY_MULTIPLIER</name>
+        <qualifiedname>FatigueMdfr::STAMINA_RECOVERY_MULTIPLIER</qualifiedname>
+        <initializer>= 0.33</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" line="8" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_fatigue_mdfr_1a475a80b0c5947cc62788bc4581e4b69b" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>const float FatigueMdfr::STAMINA_DEPLETION_MULTIPLIER</definition>
+        <argsstring></argsstring>
+        <name>STAMINA_DEPLETION_MULTIPLIER</name>
+        <qualifiedname>FatigueMdfr::STAMINA_DEPLETION_MULTIPLIER</qualifiedname>
+        <initializer>= 1.33</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" line="9" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_fatigue_mdfr_1a8617118c1ae4b68707ce457c6bda9f1c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void FatigueMdfr::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>FatigueMdfr::Init</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" line="11" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" bodystart="11" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fatigue_mdfr_1afe1ceebd531f12508ea5101fd0b555a6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool FatigueMdfr::ActivateCondition</definition>
+        <argsstring>(PlayerBase player)</argsstring>
+        <name>ActivateCondition</name>
+        <qualifiedname>FatigueMdfr::ActivateCondition</qualifiedname>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" line="19" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fatigue_mdfr_1a0425db9178a4dce100d9c3f633d3a4a0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void FatigueMdfr::OnActivate</definition>
+        <argsstring>(PlayerBase player)</argsstring>
+        <name>OnActivate</name>
+        <qualifiedname>FatigueMdfr::OnActivate</qualifiedname>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" line="24" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" bodystart="24" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fatigue_mdfr_1ac680a45bc94f0a01d844419028082fe5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void FatigueMdfr::OnReconnect</definition>
+        <argsstring>(PlayerBase player)</argsstring>
+        <name>OnReconnect</name>
+        <qualifiedname>FatigueMdfr::OnReconnect</qualifiedname>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" line="36" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fatigue_mdfr_1a7a09c7bb9822ec652ecba8f9a4029891" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void FatigueMdfr::OnDeactivate</definition>
+        <argsstring>(PlayerBase player)</argsstring>
+        <name>OnDeactivate</name>
+        <qualifiedname>FatigueMdfr::OnDeactivate</qualifiedname>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" line="42" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" bodystart="42" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fatigue_mdfr_1a60522b754ce435caedee32f585da0231" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool FatigueMdfr::DeactivateCondition</definition>
+        <argsstring>(PlayerBase player)</argsstring>
+        <name>DeactivateCondition</name>
+        <qualifiedname>FatigueMdfr::DeactivateCondition</qualifiedname>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" line="50" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_fatigue_mdfr_1ac52ca3acf10e225852454b14cb5e627b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void FatigueMdfr::OnTick</definition>
+        <argsstring>(PlayerBase player, float deltaT)</argsstring>
+        <name>OnTick</name>
+        <qualifiedname>FatigueMdfr::OnTick</qualifiedname>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>deltaT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" line="55" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" bodystart="55" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>FatigueMdfr</label>
+        <link refid="class_fatigue_mdfr"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ModifierBase</label>
+        <link refid="class_modifier_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>FatigueMdfr</label>
+        <link refid="class_fatigue_mdfr"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>FATIGUE_EVENT_INTERVAL_MAX</edgelabel>
+          <edgelabel>FATIGUE_EVENT_INTERVAL_MIN</edgelabel>
+          <edgelabel>STAMINA_DEPLETION_MULTIPLIER</edgelabel>
+          <edgelabel>STAMINA_RECOVERY_MULTIPLIER</edgelabel>
+          <edgelabel>m_NextEvent</edgelabel>
+          <edgelabel>m_Time</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ModifierBase</label>
+        <link refid="class_modifier_base"/>
+      </node>
+      <node id="3">
+        <label>float</label>
+        <link refid="classfloat"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>LOWEST</edgelabel>
+          <edgelabel>MAX</edgelabel>
+          <edgelabel>MIN</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" line="1" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerModifiers/Modifiers/conditions/Fatigue.c" bodystart="2" bodyend="59"/>
+    <listofallmembers>
+      <member refid="class_fatigue_mdfr_1afe1ceebd531f12508ea5101fd0b555a6" prot="private" virt="non-virtual"><scope>FatigueMdfr</scope><name>ActivateCondition</name></member>
+      <member refid="class_fatigue_mdfr_1a60522b754ce435caedee32f585da0231" prot="private" virt="non-virtual"><scope>FatigueMdfr</scope><name>DeactivateCondition</name></member>
+      <member refid="class_fatigue_mdfr_1a383f692ad52a1233801a3bd97c78409b" prot="private" virt="non-virtual"><scope>FatigueMdfr</scope><name>FATIGUE_EVENT_INTERVAL_MAX</name></member>
+      <member refid="class_fatigue_mdfr_1a37f83603026d419667574f6026311060" prot="private" virt="non-virtual"><scope>FatigueMdfr</scope><name>FATIGUE_EVENT_INTERVAL_MIN</name></member>
+      <member refid="class_modifier_base_1a3782525036218139991f0432f47b2823" prot="private" virt="non-virtual"><scope>FatigueMdfr</scope><name>GetDebugText</name></member>
+      <member refid="class_modifier_base_1a5dfa9cf87c973eff8151d41f064d22e4" prot="private" virt="non-virtual"><scope>FatigueMdfr</scope><name>GetDebugTextSimple</name></member>
+      <member refid="class_fatigue_mdfr_1a8617118c1ae4b68707ce457c6bda9f1c" prot="private" virt="non-virtual"><scope>FatigueMdfr</scope><name>Init</name></member>
+      <member refid="class_fatigue_mdfr_1a3e289396a73e738a9b8233b49de3c241" prot="private" virt="non-virtual"><scope>FatigueMdfr</scope><name>m_NextEvent</name></member>
+      <member refid="class_fatigue_mdfr_1af887f19ae257708a84fac3f1fc6c7305" prot="private" virt="non-virtual"><scope>FatigueMdfr</scope><name>m_Time</name></member>
+      <member refid="class_fatigue_mdfr_1a0425db9178a4dce100d9c3f633d3a4a0" prot="private" virt="non-virtual"><scope>FatigueMdfr</scope><name>OnActivate</name></member>
+      <member refid="class_fatigue_mdfr_1a7a09c7bb9822ec652ecba8f9a4029891" prot="private" virt="non-virtual"><scope>FatigueMdfr</scope><name>OnDeactivate</name></member>
+      <member refid="class_fatigue_mdfr_1ac680a45bc94f0a01d844419028082fe5" prot="private" virt="non-virtual"><scope>FatigueMdfr</scope><name>OnReconnect</name></member>
+      <member refid="class_fatigue_mdfr_1ac52ca3acf10e225852454b14cb5e627b" prot="private" virt="non-virtual"><scope>FatigueMdfr</scope><name>OnTick</name></member>
+      <member refid="class_fatigue_mdfr_1a475a80b0c5947cc62788bc4581e4b69b" prot="private" virt="non-virtual"><scope>FatigueMdfr</scope><name>STAMINA_DEPLETION_MULTIPLIER</name></member>
+      <member refid="class_fatigue_mdfr_1ad33a5cc11febb95aa8d2576772f5e78d" prot="private" virt="non-virtual"><scope>FatigueMdfr</scope><name>STAMINA_RECOVERY_MULTIPLIER</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

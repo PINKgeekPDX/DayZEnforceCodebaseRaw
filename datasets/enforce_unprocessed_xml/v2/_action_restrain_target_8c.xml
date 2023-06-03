@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_action_restrain_target_8c" kind="file" language="C++">
+    <compoundname>ActionRestrainTarget.c</compoundname>
+    <innerclass refid="class_action_restrain_target_c_b" prot="public">ActionRestrainTargetCB</innerclass>
+    <innerclass refid="class_action_restrain_target" prot="public">ActionRestrainTarget</innerclass>
+    <innerclass refid="class_chained_drop_and_restrain_lambda" prot="public">ChainedDropAndRestrainLambda</innerclass>
+    <innerclass refid="class_surrender_data" prot="public">SurrenderData</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_action_restrain_target_8c_1af223fa7334cbd0cba046d5358ea1689e" prot="public" static="no" mutable="no">
+        <type><ref refid="class_chained_drop_and_restrain_lambda" kindref="compound">ChainedDropAndRestrainLambda</ref></type>
+        <definition>ChainedDropAndRestrainLambda m_TargetPlayer</definition>
+        <argsstring></argsstring>
+        <name>m_TargetPlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/UserActionsComponent/Actions/Continuous/ActionRestrainTarget.c" line="211" column="26"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_action_restrain_target_8c_1a29339e9eb37778362b096e1d4d6fcd0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RestrainTargetPlayerLambda</definition>
+        <argsstring>(EntityAI old_item, string new_item_type, PlayerBase player)</argsstring>
+        <name>RestrainTargetPlayerLambda</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>old_item</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>new_item_type</declname>
+        </param>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/UserActionsComponent/Actions/Continuous/ActionRestrainTarget.c" line="213" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/UserActionsComponent/Actions/Continuous/ActionRestrainTarget.c" bodystart="213" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="_action_restrain_target_8c_1a0ace8db94c2306c900b5339f2a4eb665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnSuccess</definition>
+        <argsstring>(EntityAI entity)</argsstring>
+        <name>OnSuccess</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>entity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/UserActionsComponent/Actions/Continuous/ActionRestrainTarget.c" line="222" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/UserActionsComponent/Actions/Continuous/ActionRestrainTarget.c" bodystart="222" bodyend="228"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_action_restrain_target_c_b" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_action_restrain_target_c_b" kindref="compound">ActionRestrainTargetCB</ref><sp/>:<sp/><ref refid="class_action_continuous_base_c_b" kindref="compound">ActionContinuousBaseCB</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_action_restrain_target_c_b_1a12a3c674190392d88beb4049d7296003" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_action_restrain_target_c_b_1a12a3c674190392d88beb4049d7296003" kindref="member">DEFAULT_RESTRAIN_TIME</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="5" refid="class_action_restrain_target_c_b_1a60abbe07c57903afd28233027cff7f4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_restrain_target_c_b_1a60abbe07c57903afd28233027cff7f4d" kindref="member">CreateActionComponent</ref>()</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>time<sp/>=<sp/><ref refid="class_action_restrain_target_c_b_1a12a3c674190392d88beb4049d7296003" kindref="member">DEFAULT_RESTRAIN_TIME</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_action_base_c_b_1ab8c5796aa8f98fa679639b14db60813f" kindref="member">m_ActionData</ref>.<ref refid="class_action_data_1adbe781e3bcf840ec9eeaa2d0d005eb6f" kindref="member">m_MainItem</ref>.ConfigIsExisting(</highlight><highlight class="stringliteral">&quot;RestrainTime&quot;</highlight><highlight class="normal">)<sp/>)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time<sp/>=<sp/><ref refid="class_action_base_c_b_1ab8c5796aa8f98fa679639b14db60813f" kindref="member">m_ActionData</ref>.<ref refid="class_action_data_1adbe781e3bcf840ec9eeaa2d0d005eb6f" kindref="member">m_MainItem</ref>.ConfigGetFloat(</highlight><highlight class="stringliteral">&quot;RestrainTime&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_action_base_c_b_1ab8c5796aa8f98fa679639b14db60813f" kindref="member">m_ActionData</ref>.<ref refid="class_action_data_1a219946226b0958a6dfaf2c880ff576e9" kindref="member">m_Player</ref>.IsQuickRestrain()<sp/>)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time<sp/>=<sp/><ref refid="group___emote_i_ds_1ga692dccfb9e58a77d15b61c5be3a7bd52" kindref="member">DEBUG_QUICK_UNRESTRAIN_TIME</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_action_base_c_b_1ab8c5796aa8f98fa679639b14db60813f" kindref="member">m_ActionData</ref>.<ref refid="class_action_data_1a82934edb9e2ee84d9c8a45aa66242075" kindref="member">m_ActionComponent</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_a_continuous_time" kindref="compound">CAContinuousTime</ref>(time);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_action_restrain_target" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_action_restrain_target" kindref="compound">ActionRestrainTarget</ref>:<sp/><ref refid="class_action_continuous_base" kindref="compound">ActionContinuousBase</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25" refid="class_action_restrain_target_1a32b83fee7aece5e1aa2ba221a094c96f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_restrain_target_1a32b83fee7aece5e1aa2ba221a094c96f" kindref="member">ActionRestrainTarget</ref>()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_animated_action_base_1a7bce84f3ceb181aacfabdfb000c56461" kindref="member">m_CallbackClass</ref><sp/>=<sp/><ref refid="class_action_restrain_target_c_b" kindref="compound">ActionRestrainTargetCB</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_animated_action_base_1a00487cccdebc5bf70af1b0c8d9ed3660" kindref="member">m_CommandUID</ref><sp/>=<sp/><ref refid="dayzplayer_8c_1a6fd289b7043f1412362529ab769d7881" kindref="member">DayZPlayerConstants</ref>.CMD_ACTIONFB_RESTRAINTARGET;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_action_base_8c_1adb7a179f0ce9195c7dc300367bbaf51a" kindref="member">m_FullBody</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_action_base_8c_1adc0813e96c27638edc8c57cfbaa30c25" kindref="member">m_StanceMask</ref><sp/>=<sp/><ref refid="dayzplayer_8c_1a6fd289b7043f1412362529ab769d7881" kindref="member">DayZPlayerConstants</ref>.STANCEMASK_ERECT<sp/>|<sp/><ref refid="dayzplayer_8c_1a6fd289b7043f1412362529ab769d7881" kindref="member">DayZPlayerConstants</ref>.STANCEMASK_CROUCH;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_action_base_8c_1a37c66588f056fd9eb9eb3a4c4890083d" kindref="member">m_SpecialtyWeight</ref><sp/>=<sp/><ref refid="class_u_a_soft_skills_weight" kindref="compound">UASoftSkillsWeight</ref>.<ref refid="class_u_a_soft_skills_weight_1aca0b0ad8f2753c2d1ba69ca1cf7baf55" kindref="member">PRECISE_LOW</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_action_base_8c_1acfd9461deb0a3259e0f775fead5961d3" kindref="member">m_Text</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#restrain&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="class_action_restrain_target_1abbb4c8d3cf19d230c95f472818fc1853" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_restrain_target_1abbb4c8d3cf19d230c95f472818fc1853" kindref="member">CreateConditionComponents</ref>()<sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_action_base_8c_1a81fd8dac008261b8f2062657a645b0d4" kindref="member">m_ConditionTarget</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_c_t_man" kindref="compound">CCTMan</ref>(<ref refid="class_u_a_max_distances" kindref="compound">UAMaxDistances</ref>.<ref refid="class_u_a_max_distances_1aef260d89bc0f791bc7c313cae73f8450" kindref="member">DEFAULT</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_action_base_8c_1a733279ad481ba700333db91fa140e910" kindref="member">m_ConditionItem</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_c_i_non_ruined" kindref="compound">CCINonRuined</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_action_restrain_target_1ad919c475ee5e4f456251abfe2d41ff8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_action_restrain_target_1ad919c475ee5e4f456251abfe2d41ff8d" kindref="member">ActionCondition</ref>(<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player,<sp/><ref refid="_action_targets_8c_1a2ab3de6f698cb230ae0c129e3e01b341" kindref="member">ActionTarget</ref><sp/>target,<sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>item<sp/>)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>other_player<sp/>=<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref>.Cast(target.GetObject());</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!other_player)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>player.GetInstanceType()<sp/>==<sp/><ref refid="dayzplayer_8c_1a6bf3172c861dd775de5c544fed868499" kindref="member">DayZPlayerInstanceType</ref>.INSTANCETYPE_SERVER<sp/>)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>other_player.CanBeRestrained();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!other_player.IsRestrained();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="class_action_restrain_target_1a3d7fb43ce72a0fd90392ae0c4d4a15f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_action_restrain_target_1a3d7fb43ce72a0fd90392ae0c4d4a15f1" kindref="member">GetStanceMask</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>player.IsPlayerInStance(<ref refid="dayzplayer_8c_1a6fd289b7043f1412362529ab769d7881" kindref="member">DayZPlayerConstants</ref>.STANCEMASK_CROUCH<sp/>|<sp/><ref refid="dayzplayer_8c_1a6fd289b7043f1412362529ab769d7881" kindref="member">DayZPlayerConstants</ref>.STANCEMASK_PRONE))</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dayzplayer_8c_1a6fd289b7043f1412362529ab769d7881" kindref="member">DayZPlayerConstants</ref>.STANCEMASK_CROUCH;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="dayzplayer_8c_1a6fd289b7043f1412362529ab769d7881" kindref="member">DayZPlayerConstants</ref>.STANCEMASK_ERECT;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="class_action_restrain_target_1a078ae82cd4ee6f05c177376e32e47a07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_action_restrain_target_1a078ae82cd4ee6f05c177376e32e47a07" kindref="member">ActionConditionContinue</ref>(<ref refid="class_action_data" kindref="compound">ActionData</ref><sp/>action_data)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>target_player<sp/>=<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref>.Cast(action_data.<ref refid="class_action_data_1a57bdca781ae4f1cfcb6574b0ace5d74d" kindref="member">m_Target</ref>.GetObject());</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsServer()<sp/>&amp;&amp;<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsMultiplayer()<sp/>)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>target_player.IsSurrendered()<sp/>||<sp/>!target_player.CanBeRestrained()<sp/>)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsServer()<sp/>)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_action_restrain_target_c_b" kindref="compound">ActionRestrainTargetCB</ref><sp/>callback<sp/>=<sp/><ref refid="class_action_restrain_target_c_b" kindref="compound">ActionRestrainTargetCB</ref>.Cast(action_data.<ref refid="class_action_data_1a3670327f6d411b07d3006af36d24510d" kindref="member">m_Callback</ref>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>callback.<ref refid="class_action_base_c_b_1a96e00aaa938e0cf04fec36ad2effe55b" kindref="member">GetActionComponentProgress</ref>()<sp/>&gt;<sp/>0.75<sp/>&amp;&amp;<sp/>!target_player.IsRestrainPrelocked()<sp/>)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_player.SetRestrainPrelocked(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1aedfacca42304fed9eff41cbb197f73a7" kindref="member">GetMission</ref>().<ref refid="class_mission_1a0757c5b60b56f88a05905b1b1ff72d21" kindref="member">IsPlayerDisconnecting</ref>(target_player);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91" refid="class_action_restrain_target_1a09e8673750507eed55fefcf98256cb83" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_restrain_target_1a09e8673750507eed55fefcf98256cb83" kindref="member">OnStartServer</ref>(<ref refid="class_action_data" kindref="compound">ActionData</ref><sp/>action_data)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>target_player<sp/>=<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref>.Cast(action_data.<ref refid="class_action_data_1a57bdca781ae4f1cfcb6574b0ace5d74d" kindref="member">m_Target</ref>.GetObject());</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>target_player.IsSurrendered()<sp/>)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SurrenderDataRestrain<sp/>sdr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SurrenderDataRestrain;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_player.EndSurrenderRequest(sdr);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>target_player.IsEmotePlaying()<sp/>)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_player.m_EmoteManager.ServerRequestEmoteCancel();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_player.SetRestrainStarted(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107" refid="class_action_restrain_target_1acf2489bf438a132a9b5638b54661e1b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_restrain_target_1acf2489bf438a132a9b5638b54661e1b4" kindref="member">OnEndServer</ref>(<ref refid="class_action_data" kindref="compound">ActionData</ref><sp/>action_data)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>target_player<sp/>=<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref>.Cast(action_data.<ref refid="class_action_data_1a57bdca781ae4f1cfcb6574b0ace5d74d" kindref="member">m_Target</ref>.GetObject());</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(target_player)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_player.SetRestrainStarted(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target_player.SetRestrainPrelocked(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="class_action_restrain_target_1a2ab00cd225c895ecbb0bce9984cc0feb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_restrain_target_1a2ab00cd225c895ecbb0bce9984cc0feb" kindref="member">OnFinishProgressServer</ref>(<sp/><ref refid="class_action_data" kindref="compound">ActionData</ref><sp/>action_data<sp/>)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>target_player<sp/>=<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref>.Cast(action_data.<ref refid="class_action_data_1a57bdca781ae4f1cfcb6574b0ace5d74d" kindref="member">m_Target</ref>.GetObject());</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>source_player<sp/>=<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref>.Cast(action_data.<ref refid="class_action_data_1a219946226b0958a6dfaf2c880ff576e9" kindref="member">m_Player</ref>);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_action_base_8c_1aa2fea7e8c6b90b7da2e125308f5fa1cc" kindref="member">CanReceiveAction</ref>(action_data.<ref refid="class_action_data_1a57bdca781ae4f1cfcb6574b0ace5d74d" kindref="member">m_Target</ref>)<sp/>&amp;&amp;<sp/>!target_player.IsRestrained())</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>item_in_hands_target<sp/>=<sp/>target_player.GetHumanInventory().GetEntityInHands();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>item_in_hands_source<sp/>=<sp/>source_player.GetHumanInventory().GetEntityInHands();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!item_in_hands_source<sp/>)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1ga786b160dafbe15abb829786ba345cb15" kindref="member">Error</ref>(</highlight><highlight class="stringliteral">&quot;Restraining<sp/>target<sp/>failed,<sp/>nothing<sp/>in<sp/>hands&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>new_item_name<sp/>=<sp/>MiscGameplayFunctions.ObtainRestrainItemTargetClassname(item_in_hands_source);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item_in_hands_target)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;Restraining<sp/>player<sp/>with<sp/>item<sp/>in<sp/>hands,<sp/>first<sp/>drop<sp/>&amp;<sp/>then<sp/>restrain&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_chained_drop_and_restrain_lambda" kindref="compound">ChainedDropAndRestrainLambda</ref><sp/>lambda2<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_chained_drop_and_restrain_lambda" kindref="compound">ChainedDropAndRestrainLambda</ref>(item_in_hands_target,<sp/>item_in_hands_target.GetType(),<sp/>target_player,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>source_player);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MiscGameplayFunctions.TurnItemInHandsIntoItemEx(target_player,<sp/>lambda2);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;Restraining<sp/>player<sp/>with<sp/>empty<sp/>hands&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_action_restrain_target_8c_1a29339e9eb37778362b096e1d4d6fcd0c" kindref="member">RestrainTargetPlayerLambda</ref><sp/>lambda<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_action_restrain_target_8c_1a29339e9eb37778362b096e1d4d6fcd0c" kindref="member">RestrainTargetPlayerLambda</ref>(item_in_hands_source,<sp/>new_item_name,<sp/>target_player);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>source_player.LocalReplaceItemInHandsWithNewElsewhere(lambda);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>action_data.<ref refid="class_action_data_1a219946226b0958a6dfaf2c880ff576e9" kindref="member">m_Player</ref>.GetSoftSkillsManager().AddSpecialty(<sp/><ref refid="_action_base_8c_1a37c66588f056fd9eb9eb3a4c4890083d" kindref="member">m_SpecialtyWeight</ref><sp/>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="152" refid="class_action_restrain_target_1aed7e8854374505eb93f9401671819a39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_restrain_target_1aed7e8854374505eb93f9401671819a39" kindref="member">OnFinishProgressClient</ref>(<sp/><ref refid="class_action_data" kindref="compound">ActionData</ref><sp/>action_data<sp/>)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnFinishProgressClient(<sp/>action_data<sp/>);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1ac2144c29cf7043ecd0831f3f43c6a973" kindref="member">GetAnalyticsClient</ref>().<ref refid="class_analytics_manager_client_1a6ed1b56e835b8c4719c3b15d4c00541d" kindref="member">OnActionRestrain</ref>();</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="class_chained_drop_and_restrain_lambda" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_chained_drop_and_restrain_lambda" kindref="compound">ChainedDropAndRestrainLambda</ref><sp/>:<sp/><ref refid="class_destroy_item_in_corpses_hands_and_create_new_on_gnd_lambda" kindref="compound">DestroyItemInCorpsesHandsAndCreateNewOnGndLambda</ref></highlight></codeline>
+<codeline lineno="161"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="162" refid="class_chained_drop_and_restrain_lambda_1aeadde5c117105caebdcd24294b89b9a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/><ref refid="class_chained_drop_and_restrain_lambda_1aeadde5c117105caebdcd24294b89b9a4" kindref="member">m_SourcePlayer</ref>;</highlight></codeline>
+<codeline lineno="163" refid="class_chained_drop_and_restrain_lambda_1a54f7d7df16bf228f54d43498efafaadb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_explosives_base_8c_1aee93f0aec8cce6897cf2da6281a3d9ee" kindref="member">ExplosivesBase</ref><sp/><ref refid="class_chained_drop_and_restrain_lambda_1a54f7d7df16bf228f54d43498efafaadb" kindref="member">m_PairedExplosive</ref>;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="class_chained_drop_and_restrain_lambda_1a25ead90c878c5654607773083899f439" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_chained_drop_and_restrain_lambda_1a25ead90c878c5654607773083899f439" kindref="member">ChainedDropAndRestrainLambda</ref><sp/>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>old_item,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>new_item_type,<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>destroy<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>src_player<sp/>=<sp/>null)</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_chained_drop_and_restrain_lambda_1aeadde5c117105caebdcd24294b89b9a4" kindref="member">m_SourcePlayer</ref><sp/>=<sp/>src_player;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="170" refid="class_chained_drop_and_restrain_lambda_1a62bf2a969bc44bce11959d0260a75765" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_chained_drop_and_restrain_lambda_1a62bf2a969bc44bce11959d0260a75765" kindref="member">OnSuccess</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>new_item)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnSuccess(new_item);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_chained_drop_and_restrain_lambda_1a54f7d7df16bf228f54d43498efafaadb" kindref="member">m_PairedExplosive</ref>)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_chained_drop_and_restrain_lambda_1a54f7d7df16bf228f54d43498efafaadb" kindref="member">m_PairedExplosive</ref>.UnpairRemote();</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>ib<sp/>=<sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref>.Cast(new_item);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ib.PairWithDevice(<ref refid="class_chained_drop_and_restrain_lambda_1a54f7d7df16bf228f54d43498efafaadb" kindref="member">m_PairedExplosive</ref>);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_chained_drop_and_restrain_lambda_1a54f7d7df16bf228f54d43498efafaadb" kindref="member">m_PairedExplosive</ref>.Arm();</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>as<sp/>soon<sp/>as<sp/>previous<sp/>op<sp/>is<sp/>finish,<sp/>start<sp/>another<sp/>one</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>item_in_hands_source<sp/>=<sp/><ref refid="class_chained_drop_and_restrain_lambda_1aeadde5c117105caebdcd24294b89b9a4" kindref="member">m_SourcePlayer</ref>.GetHumanInventory().GetEntityInHands();</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(item_in_hands_source)</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>new_item_name<sp/>=<sp/>MiscGameplayFunctions.ObtainRestrainItemTargetClassname(item_in_hands_source);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_action_restrain_target_8c_1a29339e9eb37778362b096e1d4d6fcd0c" kindref="member">RestrainTargetPlayerLambda</ref><sp/>lambda<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_action_restrain_target_8c_1a29339e9eb37778362b096e1d4d6fcd0c" kindref="member">RestrainTargetPlayerLambda</ref>(item_in_hands_source,<sp/>new_item_name,<sp/><ref refid="_hand___events_8c_1a02917914db83b7759e19cb7450c92354" kindref="member">m_Player</ref>);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_chained_drop_and_restrain_lambda_1aeadde5c117105caebdcd24294b89b9a4" kindref="member">m_SourcePlayer</ref>)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_chained_drop_and_restrain_lambda_1aeadde5c117105caebdcd24294b89b9a4" kindref="member">m_SourcePlayer</ref>.LocalReplaceItemInHandsWithNewElsewhere(lambda);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1ga786b160dafbe15abb829786ba345cb15" kindref="member">Error</ref>(</highlight><highlight class="stringliteral">&quot;ChainedDropAndRestrainLambda:<sp/>missing<sp/>source<sp/>player!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1ga786b160dafbe15abb829786ba345cb15" kindref="member">Error</ref>(</highlight><highlight class="stringliteral">&quot;ChainedDropAndRestrainLambda:<sp/>missing<sp/>source<sp/>item<sp/>in<sp/>hands!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="199" refid="class_chained_drop_and_restrain_lambda_1af1efd2b0071f9e91a54b1f28e5dfed78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_chained_drop_and_restrain_lambda_1af1efd2b0071f9e91a54b1f28e5dfed78" kindref="member">CopyOldPropertiesToNew</ref><sp/>(notnull<sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>old_item,<sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>new_item)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.CopyOldPropertiesToNew(old_item,<sp/>new_item);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_remote_detonator_trigger" kindref="compound">RemoteDetonatorTrigger</ref><sp/>trigger<sp/>=<sp/><ref refid="class_remote_detonator_trigger" kindref="compound">RemoteDetonatorTrigger</ref>.Cast(old_item);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(trigger)</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_chained_drop_and_restrain_lambda_1a54f7d7df16bf228f54d43498efafaadb" kindref="member">m_PairedExplosive</ref><sp/>=<sp/><ref refid="_explosives_base_8c_1aee93f0aec8cce6897cf2da6281a3d9ee" kindref="member">ExplosivesBase</ref>.Cast(trigger.<ref refid="class_remote_detonator_trigger_1a27bea22618c37d4aa459fe9a27d79880" kindref="member">GetControlledDevice</ref>());</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_action_restrain_target_8c_1a29339e9eb37778362b096e1d4d6fcd0c" kindref="member">RestrainTargetPlayerLambda</ref><sp/>:<sp/><ref refid="class_turn_item_into_item_lambda" kindref="compound">TurnItemIntoItemLambda</ref></highlight></codeline>
+<codeline lineno="210"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="211" refid="_action_restrain_target_8c_1af223fa7334cbd0cba046d5358ea1689e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/><ref refid="_action_restrain_target_8c_1af223fa7334cbd0cba046d5358ea1689e" kindref="member">m_TargetPlayer</ref>;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="_action_restrain_target_8c_1a29339e9eb37778362b096e1d4d6fcd0c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_action_restrain_target_8c_1a29339e9eb37778362b096e1d4d6fcd0c" kindref="member">RestrainTargetPlayerLambda</ref><sp/>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>old_item,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>new_item_type,<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_action_restrain_target_8c_1af223fa7334cbd0cba046d5358ea1689e" kindref="member">m_TargetPlayer</ref><sp/>=<sp/>player;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref><sp/>targetHnd<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref>;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>targetHnd.<ref refid="class_inventory_location_1af5b971f773deb968c54cfb6ca66df780" kindref="member">SetHands</ref>(<ref refid="_action_restrain_target_8c_1af223fa7334cbd0cba046d5358ea1689e" kindref="member">m_TargetPlayer</ref>,<sp/>null);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OverrideNewLocation(targetHnd);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="222" refid="_action_restrain_target_8c_1a0ace8db94c2306c900b5339f2a4eb665" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_turn_item_into_item_lambda_1a192dda71b34f6f74eca1691530f36d4f" kindref="member">OnSuccess</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>entity)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnSuccess(new_item);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_action_restrain_target_8c_1af223fa7334cbd0cba046d5358ea1689e" kindref="member">m_TargetPlayer</ref>.SetRestrained(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_action_restrain_target_8c_1af223fa7334cbd0cba046d5358ea1689e" kindref="member">m_TargetPlayer</ref>.OnItemInHandsChanged();</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SurrenderDataRestrain<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_surrender_data" kindref="compound">SurrenderData</ref></highlight></codeline>
+<codeline lineno="232"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="233" refid="class_surrender_data_1a567346661c148cced7c9bc6de8cdf770" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_surrender_data_1a567346661c148cced7c9bc6de8cdf770" kindref="member">End</ref>()</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/UserActionsComponent/Actions/Continuous/ActionRestrainTarget.c"/>
+  </compounddef>
+</doxygen>

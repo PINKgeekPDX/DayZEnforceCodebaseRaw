@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_player_stats_8c" kind="file" language="C++">
+    <compoundname>PlayerStats.c</compoundname>
+    <innerclass refid="class_player_stats" prot="public">PlayerStats</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_player_stats_8c_1aac7bf2a023a9a375ad9b9125339bb0d6" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EPSstatsFlags</name>
+        <enumvalue id="_player_stats_8c_1aac7bf2a023a9a375ad9b9125339bb0d6a2f0d18fc0d0fa4a6cd92dc328501874d" prot="public">
+          <name>EMPTY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerStats/PlayerStats.c" line="1" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerStats/PlayerStats.c" bodystart="2" bodyend="4"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="_player_stats_8c_1aac7bf2a023a9a375ad9b9125339bb0d6" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_player_stats_8c_1aac7bf2a023a9a375ad9b9125339bb0d6" kindref="member">EPSstatsFlags</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="_player_stats_8c_1aac7bf2a023a9a375ad9b9125339bb0d6a2f0d18fc0d0fa4a6cd92dc328501874d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_player_stats_8c_1aac7bf2a023a9a375ad9b9125339bb0d6a2f0d18fc0d0fa4a6cd92dc328501874d" kindref="member">EMPTY</ref>,</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_player_stats" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_player_stats" kindref="compound">PlayerStats</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8" refid="class_player_stats_1af5dd42493182776c934d87a7926f400a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="classarray" kindref="compound">array&lt;ref PlayerStatBase&gt;</ref><sp/><ref refid="class_player_stats_1af5dd42493182776c934d87a7926f400a" kindref="member">m_PlayerStats</ref>;</highlight></codeline>
+<codeline lineno="9" refid="class_player_stats_1a38fc46e2db96c77947d231d4d416e6c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="classarray" kindref="compound">array&lt;ref StatDebugObject&gt;</ref><sp/><ref refid="class_player_stats_1a38fc46e2db96c77947d231d4d416e6c5" kindref="member">m_PlayerStatsDebug</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ref<sp/>PlayerStatsPCO_current<sp/>m_PCO<sp/>=<sp/>new<sp/>PlayerStatsPCO_current();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_player_stats_1a8c0c17afdfb3cb8fa0c53a96304407f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="class_p_c_o_handler_stats" kindref="compound">PCOHandlerStats</ref><sp/><ref refid="class_player_stats_1a8c0c17afdfb3cb8fa0c53a96304407f2" kindref="member">m_PCOhandler</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_c_o_handler_stats" kindref="compound">PCOHandlerStats</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14" refid="class_player_stats_1abe94de147cbd807e1ef870c590752f05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="class_timer" kindref="compound">Timer</ref><sp/><ref refid="class_player_stats_1abe94de147cbd807e1ef870c590752f05" kindref="member">m_SyncTimer</ref>;</highlight></codeline>
+<codeline lineno="15" refid="class_player_stats_1ab27dbdf79781157043aecbbd21d01007" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Man<sp/><ref refid="class_player_stats_1ab27dbdf79781157043aecbbd21d01007" kindref="member">m_Player</ref>;</highlight></codeline>
+<codeline lineno="16" refid="class_player_stats_1a92c91026dc86a7722585f8a63b669f58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_player_stats_1a92c91026dc86a7722585f8a63b669f58" kindref="member">m_AllowLogs</ref>;</highlight></codeline>
+<codeline lineno="17" refid="class_player_stats_1a190d007d034d789b7713c98f4629d543" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_player_stats_1a190d007d034d789b7713c98f4629d543" kindref="member">m_System</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Stats&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//debuging<sp/>tag</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//int<sp/>m_SystemVersion<sp/>=<sp/>101;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21" refid="class_player_stats_1ae201f67f37685694568537d507126ebb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_stats_1ae201f67f37685694568537d507126ebb" kindref="member">PlayerStats</ref>(Man<sp/>player)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_game_8c_1a8045e088b31fe0754fb20cb0a5ff0dc9" kindref="member">Init</ref>(player);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_player_stats_1a1853863cde5eb2dc6f499ef455ad04eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_stats_1a1853863cde5eb2dc6f499ef455ad04eb" kindref="member">Init</ref>(Man<sp/>player)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_stats_1ab27dbdf79781157043aecbbd21d01007" kindref="member">m_Player</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>player;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_player_stats_1afab204a1a44e37ee667eb69bda843193" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_stats_p_c_o___base" kindref="compound">PlayerStatsPCO_Base</ref><sp/><ref refid="class_player_stats_1afab204a1a44e37ee667eb69bda843193" kindref="member">GetPCO</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>version<sp/>=<sp/>-1<sp/>)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_player_stats_1a8c0c17afdfb3cb8fa0c53a96304407f2" kindref="member">m_PCOhandler</ref>.<ref refid="class_p_c_o_handler_stats_1ae73d7d1d2ff30b5f85efe250323b1b9e" kindref="member">GetPCO</ref>(version);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="class_player_stats_1a0e3fd5adc703bc49e4c1afbe2a6f6598" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_stats_1a0e3fd5adc703bc49e4c1afbe2a6f6598" kindref="member">~PlayerStats</ref>()</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if(<sp/>GetGame()<sp/>&amp;&amp;<sp/>GetGame().IsDebugActions()<sp/>)<sp/>GatherAllRecords();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="class_player_stats_1a67c0ed93fe9a680cdf7403ab52925933" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_stat_base" kindref="compound">PlayerStatBase</ref><sp/><ref refid="class_player_stats_1a67c0ed93fe9a680cdf7403ab52925933" kindref="member">GetStatObject</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_stats_p_c_o___base" kindref="compound">PlayerStatsPCO_Base</ref><sp/>pco<sp/>=<sp/><ref refid="class_player_stats_1afab204a1a44e37ee667eb69bda843193" kindref="member">GetPCO</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pco<sp/>)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pco.GetStatObject(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>null;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/>array&lt;ref<sp/>PlayerStatBase&gt;<sp/>Get()</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>m_PlayerStats;</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="class_player_stats_1a3a1cdd20dca30a598a334a2eafbbbd64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_stats_1a3a1cdd20dca30a598a334a2eafbbbd64" kindref="member">SetAllowLogs</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_stats_1a92c91026dc86a7722585f8a63b669f58" kindref="member">m_AllowLogs</ref><sp/>=<sp/>enable;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="class_player_stats_1a7f9cc58b3cb18cfa5a036a6e75042d79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_player_stats_1a7f9cc58b3cb18cfa5a036a6e75042d79" kindref="member">GetAllowLogs</ref>()</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><sp/><ref refid="class_player_stats_1a92c91026dc86a7722585f8a63b669f58" kindref="member">m_AllowLogs</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="class_player_stats_1a788cb0475def17c4d08f0dc533b1a5d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_stats_1a788cb0475def17c4d08f0dc533b1a5d2" kindref="member">GetDebugInfo</ref>(<sp/><ref refid="classarray" kindref="compound">array&lt;ref StatDebugObject&gt;</ref><sp/>objects,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags<sp/>)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="74"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>m_PlayerStats.Count();<sp/>i++)</highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_PlayerStats.Get(i).SerializeValue(objects,<sp/>flags);</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81" refid="class_player_stats_1ad4478ac6a6f16c3b08a38e88bb83898d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_stats_1ad4478ac6a6f16c3b08a38e88bb83898d" kindref="member">GatherAllRecords</ref>()</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FileHandle<sp/>file<sp/>=<sp/>OpenFile(&quot;$profile:StatRecords.log&quot;,<sp/>FileMode.WRITE);</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FPrintln(file,<sp/>&quot;================================================================&quot;);</highlight></codeline>
+<codeline lineno="87"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FPrintln(file,&quot;<sp/>==================<sp/>&quot;<sp/>+<sp/>m_Player.ToString()<sp/>+&quot;<sp/>==================<sp/>&quot;);</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FPrintln(file,<sp/>&quot;================================================================&quot;);</highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>m_PlayerStats.Count();<sp/>i++)</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array&lt;PlayerStatRecord&gt;<sp/>records<sp/>=<sp/><sp/>m_PlayerStats.Get(i).GetRecords();</highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FPrintln(file,<sp/>m_PlayerStats.Get(i).GetLabel()<sp/>);</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for(int<sp/>z<sp/>=<sp/>0;<sp/>z<sp/>&lt;<sp/>records.Count();<sp/>z++)</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PlayerStatRecord<sp/>record<sp/>=<sp/>records.Get(z);</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>string<sp/>output<sp/>=<sp/>record.GetStringOutput();</highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FPrintln(file,<sp/>output);</highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106" refid="class_player_stats_1a2a60afa135b1f280da371ca19a253bb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_stats_1a2a60afa135b1f280da371ca19a253bb5" kindref="member">SaveStats</ref>(<sp/><ref refid="class_serializer" kindref="compound">ParamsWriteContext</ref><sp/>ctx<sp/>)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>current_version<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a434de0ca997e9550638f621788e93ca4" kindref="member">SaveVersion</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_stats_p_c_o___base" kindref="compound">PlayerStatsPCO_Base</ref><sp/>pco<sp/>=<sp/><ref refid="class_player_stats_1afab204a1a44e37ee667eb69bda843193" kindref="member">GetPCO</ref>(current_version);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pco<sp/>)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pco.OnStoreSave(ctx);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;Saving<sp/>stats<sp/>in<sp/>version:<sp/>&quot;+<sp/>pco.GetVersion());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="class_player_stats_1a5f9deb1552266affd7c08e3e1948bfe1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_player_stats_1a5f9deb1552266affd7c08e3e1948bfe1" kindref="member">LoadStats</ref>(<sp/><ref refid="class_serializer" kindref="compound">ParamsReadContext</ref><sp/>ctx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>version<sp/>)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_stats_p_c_o___base" kindref="compound">PlayerStatsPCO_Base</ref><sp/>pco<sp/>=<sp/><ref refid="class_player_stats_1afab204a1a44e37ee667eb69bda843193" kindref="member">GetPCO</ref>(version);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pco<sp/>&amp;&amp;<sp/>pco.OnStoreLoad(ctx))</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;*********<sp/>LoadStats<sp/>loading<sp/>version:<sp/>&quot;<sp/>+<sp/>pco.GetVersion());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="class_player_stats_1a191a5010cb7e5388c912dd12294b979a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_stats_1a191a5010cb7e5388c912dd12294b979a" kindref="member">ResetAllStats</ref>()</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_stats_1afab204a1a44e37ee667eb69bda843193" kindref="member">GetPCO</ref>().ResetAllStats();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerStats/PlayerStats.c"/>
+  </compounddef>
+</doxygen>

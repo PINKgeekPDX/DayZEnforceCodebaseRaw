@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_action_measure_temperature_self_8c" kind="file" language="C++">
+    <compoundname>ActionMeasureTemperatureSelf.c</compoundname>
+    <innerclass refid="class_action_measure_temperature_self_c_b" prot="public">ActionMeasureTemperatureSelfCB</innerclass>
+    <innerclass refid="class_action_measure_temperature_self" prot="public">ActionMeasureTemperatureSelf</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_action_measure_temperature_self_c_b" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_action_measure_temperature_self_c_b" kindref="compound">ActionMeasureTemperatureSelfCB</ref><sp/>:<sp/><ref refid="class_action_continuous_base_c_b" kindref="compound">ActionContinuousBaseCB</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_action_measure_temperature_self_c_b_1a8963eec046be104bf54def7fff0fa50d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_measure_temperature_self_c_b_1a8963eec046be104bf54def7fff0fa50d" kindref="member">CreateActionComponent</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_action_base_c_b_1ab8c5796aa8f98fa679639b14db60813f" kindref="member">m_ActionData</ref>.<ref refid="class_action_data_1a82934edb9e2ee84d9c8a45aa66242075" kindref="member">m_ActionComponent</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_a_continuous_time" kindref="compound">CAContinuousTime</ref>(<ref refid="class_u_a_time_spent" kindref="compound">UATimeSpent</ref>.<ref refid="class_u_a_time_spent_1ab17942f98ef59fe9f4546985fc19d7fe" kindref="member">MEASURE_TEMP</ref>);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_action_measure_temperature_self" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_action_measure_temperature_self" kindref="compound">ActionMeasureTemperatureSelf</ref>:<sp/><ref refid="class_action_continuous_base" kindref="compound">ActionContinuousBase</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11" refid="class_action_measure_temperature_self_1a7c410fedd8a91c8d3502bd92c7249f34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_measure_temperature_self_1a7c410fedd8a91c8d3502bd92c7249f34" kindref="member">ActionMeasureTemperatureSelf</ref>()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_animated_action_base_1a7bce84f3ceb181aacfabdfb000c56461" kindref="member">m_CallbackClass</ref><sp/>=<sp/><ref refid="class_action_measure_temperature_self_c_b" kindref="compound">ActionMeasureTemperatureSelfCB</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_animated_action_base_1a00487cccdebc5bf70af1b0c8d9ed3660" kindref="member">m_CommandUID</ref><sp/>=<sp/><ref refid="dayzplayer_8c_1a6fd289b7043f1412362529ab769d7881" kindref="member">DayZPlayerConstants</ref>.CMD_ACTIONMOD_TAKETEMPSELF;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_animated_action_base_1aff0b345c6a0a8469dfb7bc27365a11bd" kindref="member">m_CommandUIDProne</ref><sp/>=<sp/><ref refid="dayzplayer_8c_1a6fd289b7043f1412362529ab769d7881" kindref="member">DayZPlayerConstants</ref>.CMD_ACTIONFB_TAKETEMPSELF;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_action_base_8c_1a37c66588f056fd9eb9eb3a4c4890083d" kindref="member">m_SpecialtyWeight</ref><sp/>=<sp/><ref refid="class_u_a_soft_skills_weight" kindref="compound">UASoftSkillsWeight</ref>.<ref refid="class_u_a_soft_skills_weight_1aca0b0ad8f2753c2d1ba69ca1cf7baf55" kindref="member">PRECISE_LOW</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_action_base_8c_1acfd9461deb0a3259e0f775fead5961d3" kindref="member">m_Text</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;#measure_temperature&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20" refid="class_action_measure_temperature_self_1a2ed06ce2a9f07ae2459c707cca6b6d5f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_measure_temperature_self_1a2ed06ce2a9f07ae2459c707cca6b6d5f" kindref="member">CreateConditionComponents</ref>()<sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_action_base_8c_1a733279ad481ba700333db91fa140e910" kindref="member">m_ConditionItem</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_c_i_non_ruined" kindref="compound">CCINonRuined</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_action_base_8c_1a81fd8dac008261b8f2062657a645b0d4" kindref="member">m_ConditionTarget</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_c_t_self" kindref="compound">CCTSelf</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26" refid="class_action_measure_temperature_self_1a15ac2ebe0d3e4f768d1c6d51b748db81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_action_measure_temperature_self_1a15ac2ebe0d3e4f768d1c6d51b748db81" kindref="member">HasProneException</ref>()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_action_measure_temperature_self_1a3c5dfa145217322a4b345dd5bc0a05b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_action_measure_temperature_self_1a3c5dfa145217322a4b345dd5bc0a05b1" kindref="member">HasTarget</ref>()</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="class_action_measure_temperature_self_1af8fe81c6f6595379a34408c8a020abf1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_measure_temperature_self_1af8fe81c6f6595379a34408c8a020abf1" kindref="member">OnFinishProgressClient</ref>(<sp/><ref refid="class_action_data" kindref="compound">ActionData</ref><sp/>action_data<sp/>)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Thermometer<sp/>thermometer<sp/>=<sp/>Thermometer.Cast(action_data.<ref refid="class_action_data_1adbe781e3bcf840ec9eeaa2d0d005eb6f" kindref="member">m_MainItem</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(thermometer)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>thermometer.GetTemperatureValue(action_data.<ref refid="class_action_data_1a219946226b0958a6dfaf2c880ff576e9" kindref="member">m_Player</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>action_data.<ref refid="class_action_data_1a219946226b0958a6dfaf2c880ff576e9" kindref="member">m_Player</ref>.m_Hud.SetTemperature(value.<ref refid="classfloat_1a9aba6f516b6f38a950c55fa9d0b24afb" kindref="member">ToString</ref>()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;#degrees_celsius&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/UserActionsComponent/Actions/Continuous/Medical/ActionMeasureTemperatureSelf.c"/>
+  </compounddef>
+</doxygen>

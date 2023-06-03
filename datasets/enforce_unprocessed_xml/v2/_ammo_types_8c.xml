@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_ammo_types_8c" kind="file" language="C++">
+    <compoundname>AmmoTypes.c</compoundname>
+    <innerclass refid="class_ammo_types_a_p_i" prot="public">AmmoTypesAPI</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_ammo_types_a_p_i" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ammo_types_a_p_i" kindref="compound">AmmoTypesAPI</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_ammo_types_a_p_i_1a7eebfc75e44dab748d798e4d0c059f46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ammo_types_a_p_i_1a7eebfc75e44dab748d798e4d0c059f46" kindref="member">AmmoTypesAPI</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="4" refid="class_ammo_types_a_p_i_1a678961b7f845622ca246b39cc7af1d9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ammo_types_a_p_i_1a678961b7f845622ca246b39cc7af1d9a" kindref="member">~AmmoTypesAPI</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="7" refid="class_ammo_types_a_p_i_1a2da88c381578f94405519b212be75f25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>proto<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_ammo_types_a_p_i_1a2da88c381578f94405519b212be75f25" kindref="member">Exists</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ammoType);</highlight></codeline>
+<codeline lineno="9" refid="class_ammo_types_a_p_i_1a424f136f2801720401f5ee217d75f722" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>proto<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_ammo_types_a_p_i_1a424f136f2801720401f5ee217d75f722" kindref="member">GetAmmoType</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>magazineType,<sp/>out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ammoType);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12" refid="class_ammo_types_a_p_i_1ab21df5c9e2b39638e80389a65f8d7185" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_ammo_types_a_p_i_1ab21df5c9e2b39638e80389a65f8d7185" kindref="member">MagazineTypeToAmmoType</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>magazineType,<sp/>out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ammoType)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="class_ammo_types_a_p_i" kindref="compound">AmmoTypesAPI</ref>.<ref refid="class_ammo_types_a_p_i_1a2da88c381578f94405519b212be75f25" kindref="member">Exists</ref>(magazineType)<sp/>)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="class_ammo_types_a_p_i" kindref="compound">AmmoTypesAPI</ref>.<ref refid="class_ammo_types_a_p_i_1a424f136f2801720401f5ee217d75f722" kindref="member">GetAmmoType</ref>(magazineType,<sp/>ammoType)<sp/>)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_shape_1ga30f13400906443efe9fb79540dc674b5" kindref="member">ErrorEx</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.Format(</highlight><highlight class="stringliteral">&quot;%1<sp/>is<sp/>not<sp/>a<sp/>magazineType<sp/>or<sp/>ammoType<sp/>or<sp/>has<sp/>no<sp/>default<sp/>&apos;ammo&apos;<sp/>set<sp/>up<sp/>in<sp/>config.&quot;</highlight><highlight class="normal">,<sp/>magazineType));</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>already<sp/>an<sp/>ammoType</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ammoType<sp/>=<sp/>magazineType;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/AmmoTypes.c"/>
+  </compounddef>
+</doxygen>

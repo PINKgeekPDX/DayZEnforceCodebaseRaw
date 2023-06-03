@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_universal_temperature_source_lambda_base_impl_8c" kind="file" language="C++">
+    <compoundname>UniversalTemperatureSourceLambdaBaseImpl.c</compoundname>
+    <innerclass refid="class_universal_temperature_source_lambda_base_impl" prot="public">UniversalTemperatureSourceLambdaBaseImpl</innerclass>
+    <innerclass refid="class_universal_temperature_source_lambda_engine" prot="public">UniversalTemperatureSourceLambdaEngine</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_universal_temperature_source_lambda_base_impl_8c_1a22c019c2d977ccc1164906c93247c75f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_universal_temperature_source_lambda_base_impl" kindref="compound">UniversalTemperatureSourceLambdaBaseImpl</ref> <ref refid="class_universal_temperature_source_lambda_base" kindref="compound">UniversalTemperatureSourceLambdaBase</ref></type>
+        <definition>UniversalTemperatureSourceLambdaBaseImpl UniversalTemperatureSourceLambdaBase Execute</definition>
+        <argsstring>(UniversalTemperatureSourceSettings pSettings, UniversalTemperatureSourceResult resultValues)</argsstring>
+        <name>Execute</name>
+        <param>
+          <type><ref refid="class_universal_temperature_source_settings" kindref="compound">UniversalTemperatureSourceSettings</ref></type>
+          <declname>pSettings</declname>
+        </param>
+        <param>
+          <type>UniversalTemperatureSourceResult</type>
+          <declname>resultValues</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/UniversalTemperatureSource/UniversalTemperatureSourceLambdaBaseImpl.c" line="1" column="0" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/UniversalTemperatureSource/UniversalTemperatureSourceLambdaBaseImpl.c" bodystart="54" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="_universal_temperature_source_lambda_base_impl_8c_1a5689cf8f098fbe0c6629036452c704f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Execute::DryItemsInVicinity</definition>
+        <argsstring>(UniversalTemperatureSourceSettings pSettings)</argsstring>
+        <name>DryItemsInVicinity</name>
+        <param>
+          <type><ref refid="class_universal_temperature_source_settings" kindref="compound">UniversalTemperatureSourceSettings</ref></type>
+          <declname>pSettings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>heat transfer to items (no in player possession)</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/UniversalTemperatureSource/UniversalTemperatureSourceLambdaBaseImpl.c" line="55" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/UniversalTemperatureSource/UniversalTemperatureSourceLambdaBaseImpl.c" bodystart="55" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="_universal_temperature_source_lambda_base_impl_8c_1a22c019c2d977ccc1164906c93247c75f" refkind="member"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_universal_temperature_source_lambda_base_impl" kindref="compound">UniversalTemperatureSourceLambdaBaseImpl</ref><sp/>:<sp/><ref refid="class_universal_temperature_source_lambda_base" kindref="compound">UniversalTemperatureSourceLambdaBase</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_universal_temperature_source_lambda_base_impl_1a2a6cfeb6c856ea3ce886c17710349a23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_universal_temperature_source_lambda_base_impl_1a2a6cfeb6c856ea3ce886c17710349a23" kindref="member">DryItemsInVicinity</ref>(<ref refid="class_universal_temperature_source_settings" kindref="compound">UniversalTemperatureSourceSettings</ref><sp/>pSettings)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>distance;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;Object&gt;</ref><sp/>nearestObjects<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;Object&gt;</ref>();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>pos<sp/>=<sp/>pSettings.<ref refid="class_universal_temperature_source_settings_1a017eb94f472ab0dc53a8f8c7e4eb0c0d" kindref="member">m_Position</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pSettings.<ref refid="class_universal_temperature_source_settings_1ad1b055fe3005307718cd77b2a51e24be" kindref="member">m_Parent</ref><sp/>!=<sp/>null)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>pSettings.<ref refid="class_universal_temperature_source_settings_1ad1b055fe3005307718cd77b2a51e24be" kindref="member">m_Parent</ref>.GetPosition();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a04058e84b0a2d01db270c969608f8895" kindref="member">GetObjectsAtPosition</ref>(pos,<sp/>pSettings.<ref refid="class_universal_temperature_source_settings_1a5aedd8f55c240e57654e2c1865e63266" kindref="member">m_RangeMax</ref>,<sp/>nearestObjects,<sp/>null);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(<ref refid="class_object" kindref="compound">Object</ref><sp/>nearestObject<sp/>:<sp/>nearestObjects)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>nearestItem<sp/>=<sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref>.Cast(nearestObject);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nearestItem<sp/>&amp;&amp;<sp/>nearestItem.HasWetness()<sp/>&amp;&amp;<sp/>nearestItem<sp/>!=<sp/>pSettings.<ref refid="class_universal_temperature_source_settings_1ad1b055fe3005307718cd77b2a51e24be" kindref="member">m_Parent</ref><sp/>&amp;&amp;<sp/>!nearestItem.IsInherited(Man))</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>distance<sp/>=<sp/><ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1aad57f4c847a6ad08cf88f390961dd2db" kindref="member">Distance</ref>(nearestItem.GetPosition(),<sp/>pSettings.<ref refid="class_universal_temperature_source_settings_1a017eb94f472ab0dc53a8f8c7e4eb0c0d" kindref="member">m_Position</ref>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>distance<sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga0ea2cf98823125deeeb28e8c03d3d756" kindref="member">Max</ref>(distance,<sp/>0.1);<sp/></highlight><highlight class="comment">//min<sp/>distance<sp/>cannot<sp/>be<sp/>0<sp/>(division<sp/>by<sp/>zero)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dryModifier<sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nearestItem.GetWet()<sp/>&gt;=<sp/><ref refid="class_game_constants" kindref="compound">GameConstants</ref>.<ref refid="group___item_wetness_1ga1e3a36c489d889ff08e6bd680cf84a41" kindref="member">STATE_DAMP</ref>)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dryModifier<sp/>=<sp/>(-1<sp/>*<sp/>pSettings.<ref refid="class_universal_temperature_source_settings_1a394f56e0a4da4604b8b8228fcc49ff9b" kindref="member">m_UpdateInterval</ref><sp/>*<sp/>nearestItem.GetDryingIncrement(</highlight><highlight class="stringliteral">&quot;groundHeatSource&quot;</highlight><highlight class="normal">))<sp/>/<sp/>distance;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga939cca08ae6c7facc9293f2dbce3def5" kindref="member">Clamp</ref>(dryModifier,<sp/>nearestItem.GetWetMin(),<sp/>nearestItem.GetWetMax());</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nearestItem.AddWet(dryModifier);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;EntityAI&gt;</ref><sp/>cargoEntities<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;EntityAI&gt;</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nearestItem.GetInventory().EnumerateInventory(<ref refid="gameplay_8c_1ac5ade7a41ab88bd2906cf0b55a32492e" kindref="member">InventoryTraversalType</ref>.INORDER,<sp/>cargoEntities);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>cargoEntity<sp/>:<sp/>cargoEntities)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>cargoItem<sp/>=<sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref>.Cast(cargoEntity);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cargoItem)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dryModifier<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cargoItem.GetWet()<sp/>&gt;=<sp/><ref refid="class_game_constants" kindref="compound">GameConstants</ref>.<ref refid="group___item_wetness_1ga1e3a36c489d889ff08e6bd680cf84a41" kindref="member">STATE_DAMP</ref>)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dryModifier<sp/>=<sp/>(-1<sp/>*<sp/>pSettings.<ref refid="class_universal_temperature_source_settings_1a394f56e0a4da4604b8b8228fcc49ff9b" kindref="member">m_UpdateInterval</ref><sp/>*<sp/>cargoItem.GetDryingIncrement(</highlight><highlight class="stringliteral">&quot;groundHeatSource&quot;</highlight><highlight class="normal">))<sp/>/<sp/>distance;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga939cca08ae6c7facc9293f2dbce3def5" kindref="member">Clamp</ref>(dryModifier,<sp/>cargoItem.GetWetMin(),<sp/>cargoItem.GetWetMax());</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cargoItem.AddWet(dryModifier);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">UniversalTemperatureSourceLambdaConstant<sp/>:<sp/><ref refid="class_universal_temperature_source_lambda_base_impl" kindref="compound">UniversalTemperatureSourceLambdaBaseImpl</ref></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_universal_temperature_source_lambda_base_1a5e59b6e6e616fa35088526d41d27a8da" kindref="member">Execute</ref>(<ref refid="class_universal_temperature_source_settings" kindref="compound">UniversalTemperatureSourceSettings</ref><sp/>pSettings,<sp/>UniversalTemperatureSourceResult<sp/>resultValues)</highlight></codeline>
+<codeline lineno="55" refid="_universal_temperature_source_lambda_base_impl_8c_1a5689cf8f098fbe0c6629036452c704f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resultValues.m_Temperature<sp/>=<sp/>pSettings.<ref refid="class_universal_temperature_source_settings_1abcf789c159e76141f1e4a2faedfb749e" kindref="member">m_TemperatureMax</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_universal_temperature_source_lambda_base_impl_1a2a6cfeb6c856ea3ce886c17710349a23" kindref="member">DryItemsInVicinity</ref>(pSettings);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="class_universal_temperature_source_lambda_engine" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_universal_temperature_source_lambda_engine" kindref="compound">UniversalTemperatureSourceLambdaEngine</ref><sp/>:<sp/><ref refid="class_universal_temperature_source_lambda_base" kindref="compound">UniversalTemperatureSourceLambdaBase</ref></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64" refid="class_universal_temperature_source_lambda_engine_1ab7d53fae240553eac6184dbb198fedf1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_universal_temperature_source_lambda_engine_1ab7d53fae240553eac6184dbb198fedf1" kindref="member">Execute</ref>(<ref refid="class_universal_temperature_source_settings" kindref="compound">UniversalTemperatureSourceSettings</ref><sp/>pSettings,<sp/>UniversalTemperatureSourceResult<sp/>resultValues)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resultValues.m_Temperature<sp/>=<sp/>pSettings.<ref refid="class_universal_temperature_source_settings_1abcf789c159e76141f1e4a2faedfb749e" kindref="member">m_TemperatureMax</ref>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/UniversalTemperatureSource/UniversalTemperatureSourceLambdaBaseImpl.c"/>
+  </compounddef>
+</doxygen>

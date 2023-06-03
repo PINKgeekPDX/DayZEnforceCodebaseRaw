@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_ump45_recoil_8c" kind="file" language="C++">
+    <compoundname>Ump45Recoil.c</compoundname>
+    <innerclass refid="class_ump45_recoil" prot="public">Ump45Recoil</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_ump45_recoil" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ump45_recoil" kindref="compound">Ump45Recoil</ref>:<sp/><ref refid="class_recoil_base" kindref="compound">RecoilBase</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_ump45_recoil_1aff85ba7d8135b88b15da52aadd719c83" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ump45_recoil_1aff85ba7d8135b88b15da52aadd719c83" kindref="member">Init</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>point_1;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>point_2;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>point_3;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>point_4;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>point_1[0]<sp/>=<sp/><ref refid="class_recoil_base_1a4b8b66430aeb8351dc99427eed120faf" kindref="member">m_Player</ref>.GetRandomGeneratorSyncManager().GetRandomInRange(<ref refid="_random_generator_sync_manager_8c_1afe3bb26b57097f9a390bb1e8de15d84a" kindref="member">RandomGeneratorSyncUsage</ref>.RGSRecoil,0.5,1);<sp/>point_1[1]<sp/>=<sp/>0.8;<sp/>point_1[2]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>point_2[0]<sp/>=<sp/><ref refid="class_recoil_base_1a4b8b66430aeb8351dc99427eed120faf" kindref="member">m_Player</ref>.GetRandomGeneratorSyncManager().GetRandomInRange(<ref refid="_random_generator_sync_manager_8c_1afe3bb26b57097f9a390bb1e8de15d84a" kindref="member">RandomGeneratorSyncUsage</ref>.RGSRecoil,-1,1);<sp/>point_2[1]<sp/>=<sp/>0.5;<sp/>point_2[2]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>point_3[0]<sp/>=<sp/><ref refid="class_recoil_base_1a4b8b66430aeb8351dc99427eed120faf" kindref="member">m_Player</ref>.GetRandomGeneratorSyncManager().GetRandomInRange(<ref refid="_random_generator_sync_manager_8c_1afe3bb26b57097f9a390bb1e8de15d84a" kindref="member">RandomGeneratorSyncUsage</ref>.RGSRecoil,-0.75,-1.75);<sp/>point_3[1]<sp/>=<sp/>0.5;<sp/>point_3[2]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>point_4[0]<sp/>=<sp/><ref refid="class_recoil_base_1a4b8b66430aeb8351dc99427eed120faf" kindref="member">m_Player</ref>.GetRandomGeneratorSyncManager().GetRandomInRange(<ref refid="_random_generator_sync_manager_8c_1afe3bb26b57097f9a390bb1e8de15d84a" kindref="member">RandomGeneratorSyncUsage</ref>.RGSRecoil,-0.5,-0.1);<sp/>point_4[1]<sp/>=<sp/>0.6;<sp/>point_4[2]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_recoil_base_1aec099d51101224a8470b61dc558eb3da" kindref="member">m_HandsCurvePoints</ref>.Insert(point_1);</highlight><highlight class="comment">//forms<sp/>a<sp/>2<sp/>dimensional<sp/>spline(z<sp/>is<sp/>ignored)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_recoil_base_1aec099d51101224a8470b61dc558eb3da" kindref="member">m_HandsCurvePoints</ref>.Insert(point_2);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_recoil_base_1aec099d51101224a8470b61dc558eb3da" kindref="member">m_HandsCurvePoints</ref>.Insert(point_3);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_recoil_base_1aec099d51101224a8470b61dc558eb3da" kindref="member">m_HandsCurvePoints</ref>.Insert(point_4);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_recoil_base_1aec099d51101224a8470b61dc558eb3da" kindref="member">m_HandsCurvePoints</ref>.Insert(</highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_recoil_base_1acb3c1e276f24fdc5704caf5abcd5d5fb" kindref="member">m_HandsOffsetRelativeTime</ref><sp/>=<sp/>0.25;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_recoil_base_1aef125d4d5d892ad36d88867bbdf105b5" kindref="member">m_MouseOffsetRangeMin</ref><sp/>=<sp/>50;</highlight><highlight class="comment">//in<sp/>degrees<sp/>min</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_recoil_base_1a4c104a2d0dfa044ae58c2e03c7e2cbc0" kindref="member">m_MouseOffsetRangeMax</ref><sp/>=<sp/>120;</highlight><highlight class="comment">//in<sp/>degrees<sp/>max</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_recoil_base_1a28e041e773a7e80b7d2ab41ed12964c0" kindref="member">m_MouseOffsetDistance</ref><sp/>=<sp/>0.25;</highlight><highlight class="comment">//how<sp/>far<sp/>should<sp/>the<sp/>mouse<sp/>travel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_recoil_base_1ac809a54602c0fc0795e5ea0101b9f60a" kindref="member">m_MouseOffsetRelativeTime</ref><sp/>=<sp/>0.5;</highlight><highlight class="comment">//[0..1]<sp/>a<sp/>time<sp/>it<sp/>takes<sp/>to<sp/>move<sp/>the<sp/>mouse<sp/>the<sp/>required<sp/>distance<sp/>relative<sp/>to<sp/>the<sp/>reload<sp/>time<sp/>of<sp/>the<sp/>weapon(firing<sp/>mode)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_recoil_base_1a2398684e2c3806112991933b9e44631b" kindref="member">m_CamOffsetDistance</ref><sp/>=<sp/>0.01;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_recoil_base_1a1f6b1312c2756314b189581ae7b86416" kindref="member">m_CamOffsetRelativeTime</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/RecoilBase/Recoils/Ump45Recoil.c"/>
+  </compounddef>
+</doxygen>

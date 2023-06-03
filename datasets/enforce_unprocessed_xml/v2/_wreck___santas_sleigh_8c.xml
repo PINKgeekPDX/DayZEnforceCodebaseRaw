@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_wreck___santas_sleigh_8c" kind="file" language="C++">
+    <compoundname>Wreck_SantasSleigh.c</compoundname>
+    <innerclass refid="class_crash_base" prot="public">CrashBase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//Christmas<sp/>Event:<sp/>Santa&apos;s<sp/>Sleigh</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Wreck_SantasSleigh<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_crash_base" kindref="compound">CrashBase</ref></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="4" refid="class_crash_base_1a9deccfb66a055c2eb0db49399fede2b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>XmasSleighLight<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_crash_base_1a9deccfb66a055c2eb0db49399fede2b5" kindref="member">m_SleighLight</ref>;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="6" refid="class_crash_base_1ae2b6630658e357bbfe1d0635674fe44e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_MaxDeersAmount<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="7" refid="class_crash_base_1ac8bf7dde1d7c84f624c173146d54183d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_MinDeersAmount<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="8" refid="class_crash_base_1af4b92bd3e0551215b8d83ccb206bc512" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_MaxDeersSpawnRange<sp/>=<sp/>25;</highlight></codeline>
+<codeline lineno="9" refid="class_crash_base_1a21a1e3c75176d512a0f5035d51ea1371" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m_MinDeersSpawnRange<sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_crash_base_1ad0c00c0bedf941974fed25a5015af4ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_crash_base_1ad0c00c0bedf941974fed25a5015af4ec" kindref="member">Wreck_SantasSleigh</ref>()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsDedicatedServer()<sp/>)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//particles<sp/>-<sp/>Aurora<sp/>trail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_ParticleEfx<sp/>=<sp/><ref refid="_particle_manager_8c_1a93ef360e8fc315d276eb8cc256dc3ef8" kindref="member">ParticleManager</ref>.GetInstance().PlayOnObject(<ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1af561d2b578717fa089634656c6475c8b" kindref="member">AURORA_SANTA_WRECK</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="group___math3_d_a_p_i_1ga5bd1deb1c96276d94eeec6fe40955c41" kindref="member">Vector</ref>(0,<sp/>0,<sp/>0));</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//lights<sp/>-<sp/>green<sp/>light</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_SleighLight<sp/>=<sp/>XmasSleighLight.Cast(<sp/><ref refid="class_scripted_light_base" kindref="compound">ScriptedLightBase</ref>.CreateLight(<sp/>XmasSleighLight,<sp/><ref refid="group___math3_d_a_p_i_1ga5bd1deb1c96276d94eeec6fe40955c41" kindref="member">Vector</ref>(0,<sp/>0,<sp/>0)<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_SleighLight.AttachOnMemoryPoint(<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;light&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>needs<sp/>to<sp/>have<sp/>the<sp/>soundset<sp/>registered<sp/>in<sp/>CrashBase.Init()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_crash_base_1a1f96de4a372c4a4f39b5a0f57145e9c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_crash_base_1a1f96de4a372c4a4f39b5a0f57145e9c8" kindref="member">GetSoundSet</ref>()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;SledgeCrash_Distant_SoundSet&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30" refid="class_crash_base_1a94e9879d68faa5fc48e929d5b84e9829" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_crash_base_1a94e9879d68faa5fc48e929d5b84e9829" kindref="member">EEOnCECreate</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.EEOnCECreate();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_crash_base_1aaf8662b9869d29468de0e0ee66f33b22" kindref="member">SpawnRandomDeerLater</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="class_crash_base_1a661a1f1af635896ad3326a3bde0e0684" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_crash_base_1a661a1f1af635896ad3326a3bde0e0684" kindref="member">EEDelete</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>parent)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.EEDelete(parent);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsDedicatedServer()<sp/>)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>m_SleighLight<sp/>)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_SleighLight.Destroy();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="class_crash_base_1aaf8662b9869d29468de0e0ee66f33b22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_crash_base_1aaf8662b9869d29468de0e0ee66f33b22" kindref="member">SpawnRandomDeerLater</ref>()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//SpawnRandomDeers();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a3301af2fa61873a778485aa575bc1ad6" kindref="member">GetCallQueue</ref>(<sp/><ref refid="group___tools_1ga32e05515215d4ff50969513ff6d88310" kindref="member">CALL_CATEGORY_GAMEPLAY</ref><sp/>).<ref refid="class_script_call_queue_1abe764b22b6eee91d169f3f5996fe0c3d" kindref="member">CallLater</ref>(<sp/>SpawnRandomDeers,<sp/>0);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Spawn<sp/>a<sp/>random<sp/>amount<sp/>of<sp/>(dead)<sp/>deers<sp/>around<sp/>the<sp/>sleigh</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="class_crash_base_1a2fa93f871d96821fb988aefdea6a04d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_crash_base_1a2fa93f871d96821fb988aefdea6a04d1" kindref="member">SpawnRandomDeers</ref>()</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>deer;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>crash_pos<sp/>=<sp/><ref refid="_underground_area_loader_8c_1af4b5180d61f839c99de2d15fdcda4568" kindref="member">GetPosition</ref>();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>deersAmount<sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gafbc28855d0d24deda2fbdd3229c6bac2" kindref="member">RandomIntInclusive</ref>(m_MinDeersAmount,m_MaxDeersAmount);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_crash_base_1ae2b6630658e357bbfe1d0635674fe44e" kindref="member">m_MaxDeersAmount</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>deer_pos<sp/>=<sp/><ref refid="_map_navigation_behaviour_8c_1a662e508960087ff5aaa40c2ca9cb69dc" kindref="member">RandomizePosition</ref>(crash_pos);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>deer<sp/>=<sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref>.Cast(<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().CreateObject(</highlight><highlight class="stringliteral">&quot;Animal_CervusElaphus&quot;</highlight><highlight class="normal">,<sp/>deer_pos,</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>deer.SetHealth01(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>0);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>orientation<sp/>=<sp/>deer.GetOrientation();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>deer.SetOrientation(<ref refid="group___math3_d_a_p_i_1ga5bd1deb1c96276d94eeec6fe40955c41" kindref="member">Vector</ref>(<ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gafbc28855d0d24deda2fbdd3229c6bac2" kindref="member">RandomIntInclusive</ref>(0,360),orientation[1],orientation[2]));</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Return<sp/>a<sp/>new<sp/>vector<sp/>scattered<sp/>around<sp/>origin.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="class_crash_base_1a38075fbddb464dfe8085efb0a863647e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/><ref refid="class_crash_base_1a38075fbddb464dfe8085efb0a863647e" kindref="member">RandomizePosition</ref>(<ref refid="classvector" kindref="compound">vector</ref><sp/>origin)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>randX;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>randZ;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>randX<sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gafbc28855d0d24deda2fbdd3229c6bac2" kindref="member">RandomIntInclusive</ref>(m_MinDeersSpawnRange,<sp/>m_MaxDeersSpawnRange);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gafbc28855d0d24deda2fbdd3229c6bac2" kindref="member">RandomIntInclusive</ref>(0,1)<sp/>&lt;<sp/>1)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>randX<sp/>=<sp/>-randX;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>randZ<sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gafbc28855d0d24deda2fbdd3229c6bac2" kindref="member">RandomIntInclusive</ref>(m_MinDeersSpawnRange,<sp/>m_MaxDeersSpawnRange);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gafbc28855d0d24deda2fbdd3229c6bac2" kindref="member">RandomIntInclusive</ref>(0,1)<sp/>&lt;<sp/>1)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>randZ<sp/>=<sp/>-randZ;<sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>origin[0]<sp/>=<sp/>origin[0]<sp/>+<sp/>randX;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>origin[2]<sp/>=<sp/>origin[2]<sp/>+<sp/>randZ;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>origin;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Building/Wrecks/Wreck_SantasSleigh.c"/>
+  </compounddef>
+</doxygen>

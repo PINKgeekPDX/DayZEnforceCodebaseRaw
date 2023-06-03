@@ -1,0 +1,286 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_animator_timer" kind="class" language="C++" prot="public">
+    <compoundname>AnimatorTimer</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_animator_timer_1a46e419d228f7e825667fa5c2794f078d" prot="private" static="no" mutable="no">
+        <type>private <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>private bool AnimatorTimer::m_active</definition>
+        <argsstring></argsstring>
+        <name>m_active</name>
+        <qualifiedname>AnimatorTimer::m_active</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="737" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="737" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_animator_timer_1ad7e78bfd4ae42fc0abdffedf442d5916" prot="private" static="no" mutable="no">
+        <type>private <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>private bool AnimatorTimer::m_loop</definition>
+        <argsstring></argsstring>
+        <name>m_loop</name>
+        <qualifiedname>AnimatorTimer::m_loop</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="738" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="738" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_animator_timer_1ae63fb41235fd777e4c066e9e41b5d065" prot="private" static="no" mutable="no">
+        <type>private <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>private float AnimatorTimer::m_target_value</definition>
+        <argsstring></argsstring>
+        <name>m_target_value</name>
+        <qualifiedname>AnimatorTimer::m_target_value</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="739" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="739" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_animator_timer_1a00412a1ec279aa6ae8fe2bf13ee6cd2a" prot="private" static="no" mutable="no">
+        <type>private <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>private float AnimatorTimer::m_value</definition>
+        <argsstring></argsstring>
+        <name>m_value</name>
+        <qualifiedname>AnimatorTimer::m_value</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="740" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="740" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_animator_timer_1a1c06533686aab7b471ce6e6f433ca00a" prot="private" static="no" mutable="no">
+        <type>private <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>private float AnimatorTimer::m_time</definition>
+        <argsstring></argsstring>
+        <name>m_time</name>
+        <qualifiedname>AnimatorTimer::m_time</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="741" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="741" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_animator_timer_1a4a93a16b37e6d026beefdaf64ada845e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnimatorTimer::Animate</definition>
+        <argsstring>(float val, float speed=1.0)</argsstring>
+        <name>Animate</name>
+        <qualifiedname>AnimatorTimer::Animate</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>speed</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Starts animate value until value reaches target value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> target value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> speed of animating, units per second </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="748" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="748" bodyend="754"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animator_timer_1a5b154495323910993150a241e40fe1e4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnimatorTimer::AnimateLoop</definition>
+        <argsstring>(float speed=1.0)</argsstring>
+        <name>AnimateLoop</name>
+        <qualifiedname>AnimatorTimer::AnimateLoop</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>speed</declname>
+          <defval>1.0</defval>
+        </param>
+        <briefdescription>
+<para>Starts infinite animation loop &lt;-1,1&gt;. Based on sinus transition. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>speed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> speed of animating , cycles per second (1.0 means one 360 degree sinus cycle per second: 0..1..0..-1..0) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="760" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="760" bodyend="767"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animator_timer_1a0b9dac0a787eabd47edab1233f0848ce" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float AnimatorTimer::GetValue</definition>
+        <argsstring>()</argsstring>
+        <name>GetValue</name>
+        <qualifiedname>AnimatorTimer::GetValue</qualifiedname>
+        <briefdescription>
+<para>Returns actual animated value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="772" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="772" bodyend="774"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animator_timer_1a9bbae09afef96e0cc33d738220ab1e9e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float AnimatorTimer::GetTargetValue</definition>
+        <argsstring>()</argsstring>
+        <name>GetTargetValue</name>
+        <qualifiedname>AnimatorTimer::GetTargetValue</qualifiedname>
+        <briefdescription>
+<para>Returns target value. While AnimateLoop returns angle of cycle in radians. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="779" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="779" bodyend="781"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animator_timer_1a094c4de86a7fad0913fa15b44b465cd4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnimatorTimer::SetValue</definition>
+        <argsstring>(float val)</argsstring>
+        <name>SetValue</name>
+        <qualifiedname>AnimatorTimer::SetValue</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Sets both value and target value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="786" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="786" bodyend="789"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animator_timer_1ab347dd47e87fee12c99524847902cbce" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool AnimatorTimer::IsRunning</definition>
+        <argsstring>()</argsstring>
+        <name>IsRunning</name>
+        <qualifiedname>AnimatorTimer::IsRunning</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="791" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="791" bodyend="794"/>
+      </memberdef>
+      <memberdef kind="function" id="class_animator_timer_1a52badcb79a1c778a7160911297ca4e1e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnimatorTimer::Tick</definition>
+        <argsstring>(float timeslice)</argsstring>
+        <name>Tick</name>
+        <qualifiedname>AnimatorTimer::Tick</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>timeslice</declname>
+        </param>
+        <briefdescription>
+<para>Ticks the timer, is called by timer subsystem. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="798" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="798" bodyend="831"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>AnimatorTimer</label>
+        <link refid="class_animator_timer"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_active</edgelabel>
+          <edgelabel>m_loop</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_target_value</edgelabel>
+          <edgelabel>m_time</edgelabel>
+          <edgelabel>m_value</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>bool</label>
+        <link refid="classbool"/>
+      </node>
+      <node id="3">
+        <label>float</label>
+        <link refid="classfloat"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>LOWEST</edgelabel>
+          <edgelabel>MAX</edgelabel>
+          <edgelabel>MIN</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="735" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="736" bodyend="832"/>
+    <listofallmembers>
+      <member refid="class_animator_timer_1a4a93a16b37e6d026beefdaf64ada845e" prot="private" virt="non-virtual"><scope>AnimatorTimer</scope><name>Animate</name></member>
+      <member refid="class_animator_timer_1a5b154495323910993150a241e40fe1e4" prot="private" virt="non-virtual"><scope>AnimatorTimer</scope><name>AnimateLoop</name></member>
+      <member refid="class_animator_timer_1a9bbae09afef96e0cc33d738220ab1e9e" prot="private" virt="non-virtual"><scope>AnimatorTimer</scope><name>GetTargetValue</name></member>
+      <member refid="class_animator_timer_1a0b9dac0a787eabd47edab1233f0848ce" prot="private" virt="non-virtual"><scope>AnimatorTimer</scope><name>GetValue</name></member>
+      <member refid="class_animator_timer_1ab347dd47e87fee12c99524847902cbce" prot="private" virt="non-virtual"><scope>AnimatorTimer</scope><name>IsRunning</name></member>
+      <member refid="class_animator_timer_1a46e419d228f7e825667fa5c2794f078d" prot="private" virt="non-virtual"><scope>AnimatorTimer</scope><name>m_active</name></member>
+      <member refid="class_animator_timer_1ad7e78bfd4ae42fc0abdffedf442d5916" prot="private" virt="non-virtual"><scope>AnimatorTimer</scope><name>m_loop</name></member>
+      <member refid="class_animator_timer_1ae63fb41235fd777e4c066e9e41b5d065" prot="private" virt="non-virtual"><scope>AnimatorTimer</scope><name>m_target_value</name></member>
+      <member refid="class_animator_timer_1a1c06533686aab7b471ce6e6f433ca00a" prot="private" virt="non-virtual"><scope>AnimatorTimer</scope><name>m_time</name></member>
+      <member refid="class_animator_timer_1a00412a1ec279aa6ae8fe2bf13ee6cd2a" prot="private" virt="non-virtual"><scope>AnimatorTimer</scope><name>m_value</name></member>
+      <member refid="class_animator_timer_1a094c4de86a7fad0913fa15b44b465cd4" prot="private" virt="non-virtual"><scope>AnimatorTimer</scope><name>SetValue</name></member>
+      <member refid="class_animator_timer_1a52badcb79a1c778a7160911297ca4e1e" prot="private" virt="non-virtual"><scope>AnimatorTimer</scope><name>Tick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

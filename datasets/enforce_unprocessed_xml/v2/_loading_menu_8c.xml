@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_loading_menu_8c" kind="file" language="C++">
+    <compoundname>LoadingMenu.c</compoundname>
+    <innerclass refid="class_u_i_scripted_menu" prot="public">UIScriptedMenu</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">class<sp/></highlight><highlight class="normal">LoadingMenu<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_u_i_scripted_menu" kindref="compound">UIScriptedMenu</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_u_i_scripted_menu_1a5fa0ec5e6a76e21fb0085c3ad6586b01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_u_i_scripted_menu_1a5fa0ec5e6a76e21fb0085c3ad6586b01" kindref="member">LoadingMenu</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="class_u_i_scripted_menu_1a4661e63f8f4b3cb4186ea0a6b8f67649" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_u_i_scripted_menu_1a4661e63f8f4b3cb4186ea0a6b8f67649" kindref="member">~LoadingMenu</ref>()</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="11" refid="class_u_i_scripted_menu_1aca76f7de94e43c81d67d6c5b672f4fbe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/><ref refid="class_widget" kindref="compound">Widget</ref><sp/><ref refid="class_u_i_scripted_menu_1aca76f7de94e43c81d67d6c5b672f4fbe" kindref="member">Init</ref>()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>layoutRoot<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a9acfc7077cec18228fcafc8649054e66" kindref="member">GetWorkspace</ref>().<ref refid="group___widget_a_p_i_1ga28f2c34f1fa5af85b32e1a11ef6f6024" kindref="member">CreateWidgets</ref>(</highlight><highlight class="stringliteral">&quot;gui/layouts/loading.layout&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_label<sp/>=<sp/><ref refid="class_text_widget" kindref="compound">TextWidget</ref>.Cast(<sp/>layoutRoot.FindAnyWidget(</highlight><highlight class="stringliteral">&quot;TextWidget&quot;</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_progressBar<sp/>=<sp/>ProgressBarWidget.Cast(<sp/>layoutRoot.FindAnyWidget(</highlight><highlight class="stringliteral">&quot;ProgressBarWidget&quot;</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_image<sp/>=<sp/>ImageWidget.Cast(<sp/>layoutRoot.FindAnyWidget(</highlight><highlight class="stringliteral">&quot;ImageBackground&quot;</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_image.LoadImageFile(<sp/>0,<sp/><ref refid="_u_i_manager_8c_1a1208affe1b3dd314e16895632442c644" kindref="member">GetRandomLoadingBackground</ref>()<sp/>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>layoutRoot.FindAnyWidget(</highlight><highlight class="stringliteral">&quot;notification_root&quot;</highlight><highlight class="normal">).Show(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>PLATFORM_CONSOLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>PLATFORM_XBOX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifdef<sp/>BUILD_EXPERIMENTAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_widget" kindref="compound">Widget</ref><sp/>exp_notifiaction<sp/>=<sp/>layoutRoot.FindAnyWidget(</highlight><highlight class="stringliteral">&quot;notification_root&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(exp_notifiaction)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exp_notifiaction.Show(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>layoutRoot;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="class_u_i_scripted_menu_1a583975bee20a174433d2aea2956a7c7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_text_widget" kindref="compound">TextWidget</ref><sp/><ref refid="class_u_i_scripted_menu_1a583975bee20a174433d2aea2956a7c7a" kindref="member">m_label</ref>;</highlight></codeline>
+<codeline lineno="38" refid="class_u_i_scripted_menu_1a006a82273fb1c1d3e6c14a3b9716dc7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ProgressBarWidget<sp/><ref refid="class_u_i_scripted_menu_1a006a82273fb1c1d3e6c14a3b9716dc7b" kindref="member">m_progressBar</ref>;</highlight></codeline>
+<codeline lineno="39" refid="class_u_i_scripted_menu_1ad1b8866b0821a86888aee781993d2ad2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ImageWidget<sp/><ref refid="class_u_i_scripted_menu_1ad1b8866b0821a86888aee781993d2ad2" kindref="member">m_image</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/5_Mission/GUI/LoadingMenu.c"/>
+  </compounddef>
+</doxygen>

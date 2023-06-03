@@ -1,0 +1,1121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="group___rigid_body" kind="group">
+    <compoundname>RigidBody</compoundname>
+    <title>RigidBody API</title>
+    <innerclass refid="class_physics_geom_def" prot="public">PhysicsGeomDef</innerclass>
+    <innergroup refid="group___geometry">Geometry API definition</innergroup>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___rigid_body_1gaefc8378ef88030349d44d0da88a3a834" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ActiveState</name>
+        <enumvalue id="group___rigid_body_1ggaefc8378ef88030349d44d0da88a3a834a33cf1d8ef1d06ee698a7fabf40eb3a7f" prot="public">
+          <name>ACTIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___rigid_body_1ggaefc8378ef88030349d44d0da88a3a834a3ff8ba88da6f8947ab7c22b7825c6bb6" prot="public">
+          <name>INACTIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="group___rigid_body_1ggaefc8378ef88030349d44d0da88a3a834ad468937383ff5cbd3e39d3086a6548ee" prot="public">
+          <name>ALWAYS_ACTIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>state of a rigidbody </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="85" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" bodystart="86" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___rigid_body_1ga9c7220798b0796d96b0e9e1bd72cdaed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto bool dBodyCreateStaticEx</definition>
+        <argsstring>(notnull IEntity ent, PhysicsGeomDef geoms[])</argsstring>
+        <name>dBodyCreateStaticEx</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <param>
+          <type><ref refid="class_physics_geom_def" kindref="compound">PhysicsGeomDef</ref></type>
+          <declname>geoms</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates RigidBody from custom made geometries. The geometries are deleted when rigid body is destroyed <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>geoms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of custom made geometries <programlisting><codeline><highlight class="normal">autoptr<sp/>PhysicsGeomDef<sp/>geoms[]<sp/>=<sp/>{PhysicsGeomDef(&quot;&quot;,<sp/>dGeomCreateBox(size),<sp/>&quot;material/default&quot;,<sp/>0xffffffff)};</highlight></codeline>
+<codeline><highlight class="normal">dBodyCreateStaticEx(this,<sp/>geoms);</highlight></codeline>
+</programlisting> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="58" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="58" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga382d1382e9d220ae2ce2c7b33b2abba9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto bool dBodyCreateGhostEx</definition>
+        <argsstring>(notnull IEntity ent, PhysicsGeomDef geoms[])</argsstring>
+        <name>dBodyCreateGhostEx</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <param>
+          <type><ref refid="class_physics_geom_def" kindref="compound">PhysicsGeomDef</ref></type>
+          <declname>geoms</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="59" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="59" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gaa324165b985fa1639addae012bdad502" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto bool dBodyCreateDynamicEx</definition>
+        <argsstring>(notnull IEntity ent, vector centerOfMass, float mass, PhysicsGeomDef geoms[])</argsstring>
+        <name>dBodyCreateDynamicEx</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>centerOfMass</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>mass</declname>
+        </param>
+        <param>
+          <type><ref refid="class_physics_geom_def" kindref="compound">PhysicsGeomDef</ref></type>
+          <declname>geoms</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates RigidBody from custom made geometries. The geometries are deleted when rigid body is destroyed <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>centerOfMass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset from object-pivot to center of mass </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mass</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Body mass </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>geoms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>array of custom made geometries <programlisting><codeline><highlight class="normal">autoptr<sp/>PhysicsGeomDef<sp/>geoms[]<sp/>=<sp/>{PhysicsGeomDef(&quot;&quot;,<sp/>dGeomCreateBox(size),<sp/>&quot;material/default&quot;,<sp/>0xffffffff)};</highlight></codeline>
+<codeline><highlight class="normal">dBodyCreateDynamicEx(this,<sp/>center,<sp/>1.0,<sp/>geoms);</highlight></codeline>
+</programlisting> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="71" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="71" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga589e6f79b9104a9689589cb63c26f259" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void dBodyDestroy</definition>
+        <argsstring>(notnull IEntity ent)</argsstring>
+        <name>dBodyDestroy</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <briefdescription>
+<para>Destroys attached physics body. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="74" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="74" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gaec263f7d455170ec5aa2fedd6c62d0ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool dBodyIsSet</definition>
+        <argsstring>(notnull IEntity ent)</argsstring>
+        <name>dBodyIsSet</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <briefdescription>
+<para>Has the entity attached physics body? </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="77" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="77" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga9d0121f8b092b282d9750fa6f69112ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void dBodySetInteractionLayer</definition>
+        <argsstring>(notnull IEntity ent, int mask)</argsstring>
+        <name>dBodySetInteractionLayer</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="79" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="79" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gaff315d5521838a4c9e477fd06e956d0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int dBodyGetInteractionLayer</definition>
+        <argsstring>(notnull IEntity ent)</argsstring>
+        <name>dBodyGetInteractionLayer</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="80" column="18" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="80" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gae103a72d7543089b3107cf593b4372b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void dBodySetGeomInteractionLayer</definition>
+        <argsstring>(notnull IEntity ent, int index, int mask)</argsstring>
+        <name>dBodySetGeomInteractionLayer</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>mask</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="81" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="81" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga4fc15e4db0d946ed860030eeadd6dc3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int dBodyGetGeomInteractionLayer</definition>
+        <argsstring>(notnull IEntity ent, int index)</argsstring>
+        <name>dBodyGetGeomInteractionLayer</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="82" column="18" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="82" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga699b9ff8b31798bbcbe6c34bdbb1db01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void dBodyActive</definition>
+        <argsstring>(notnull IEntity ent, ActiveState activeState)</argsstring>
+        <name>dBodyActive</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <param>
+          <type><ref refid="group___rigid_body_1gaefc8378ef88030349d44d0da88a3a834" kindref="member">ActiveState</ref></type>
+          <declname>activeState</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="92" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="92" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga72544adaa28ff93ce0635463f880a233" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void dBodyDynamic</definition>
+        <argsstring>(notnull IEntity ent, bool dynamic)</argsstring>
+        <name>dBodyDynamic</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>dynamic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="93" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="93" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gaea05a509e9ac3adf302e8bc35a6a619e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool dBodyIsDynamic</definition>
+        <argsstring>(notnull IEntity ent)</argsstring>
+        <name>dBodyIsDynamic</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="94" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="94" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga6c16eb476b8460d50e036a4fcb386ab2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool dBodyIsActive</definition>
+        <argsstring>(notnull IEntity ent)</argsstring>
+        <name>dBodyIsActive</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="96" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="96" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga044301051ad7c0e408a52ef6dee0d4cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool dBodyEnableGravity</definition>
+        <argsstring>(notnull IEntity ent, bool enable)</argsstring>
+        <name>dBodyEnableGravity</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="97" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="97" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga6ca073e5b606d711014febbd07db0967" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void dBodySetDamping</definition>
+        <argsstring>(notnull IEntity ent, float linearDamping, float angularDamping)</argsstring>
+        <name>dBodySetDamping</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>linearDamping</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>angularDamping</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="98" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="98" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga45752e0f039d453b85074015ffc12e32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void dBodySetSleepingTreshold</definition>
+        <argsstring>(notnull IEntity body, float linearTreshold, float angularTreshold)</argsstring>
+        <name>dBodySetSleepingTreshold</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>linearTreshold</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>angularTreshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="99" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="99" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gafb61192526f7fc09048974bcfae9b918" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool dBodyIsSolid</definition>
+        <argsstring>(notnull IEntity ent)</argsstring>
+        <name>dBodyIsSolid</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="101" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="101" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga7833443e2d2f95d268a4e3a77d5e13f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void dBodySetSolid</definition>
+        <argsstring>(notnull IEntity ent, bool solid)</argsstring>
+        <name>dBodySetSolid</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>solid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="102" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="102" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga2466a44f125004d2a52bb31eba560047" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void dBodyEnableCCD</definition>
+        <argsstring>(notnull IEntity body, float maxMotion, float sphereCastRadius)</argsstring>
+        <name>dBodyEnableCCD</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>maxMotion</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>sphereCastRadius</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If both maxMotion and shapeCastRadius is &gt;=0 then the continuous collision detection is enabled. If you want to disable it, use -1 <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>maxMotion</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>max motion threshold when sphere-cast is performed, to find time of impact. It should be little bit less than size of the geometry to catch the situation when tunelling can happen </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sphereCastRadius</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The radius of the largest possible sphere, that is completelly inside the body geometry. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="111" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="111" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gac06a7db4f9b7b14ee4b85ec21ff9dbbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void dBodySetLinearFactor</definition>
+        <argsstring>(notnull IEntity body, vector linearFactor)</argsstring>
+        <name>dBodySetLinearFactor</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>linearFactor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets scale factor for all impulses/velocities/forces. Default is &lt;1,1,1&gt;. Zero any axis if you want to do 2D physics </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="115" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="115" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gab28243e4f5adbb163ef21fba5fa1b447" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>proto native vector dBodyGetCenterOfMass</definition>
+        <argsstring>(notnull IEntity body)</argsstring>
+        <name>dBodyGetCenterOfMass</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <briefdescription>
+<para>returns center of mass offset </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="118" column="21" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="118" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga3e827787960ad4f9fd63618e6bf20e8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>proto native vector GetVelocity</definition>
+        <argsstring>(notnull IEntity ent)</argsstring>
+        <name>GetVelocity</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <briefdescription>
+<para>Returns linear velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_i_entity" kindref="compound">IEntity</ref></computeroutput> entity which origin will be set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput>[4] matrix to be set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>vector</computeroutput> linear velocity <programlisting><codeline><highlight class="normal">Man<sp/>player<sp/>=<sp/>g_Game.GetPlayer();</highlight></codeline>
+<codeline><highlight class="normal">Print(<sp/>GetVelocity(player)<sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>&lt;0,0,0&gt;</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="132" column="21" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="132" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gab9244ca8d1de57dba81894e9aba2a8e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void SetVelocity</definition>
+        <argsstring>(notnull IEntity ent, vector vel)</argsstring>
+        <name>SetVelocity</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>vel</declname>
+        </param>
+        <briefdescription>
+<para>Sets linear velocity (for Rigid bodies) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>entity</computeroutput> which velocity will be set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>velocity</computeroutput> vector to be set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="139" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="139" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gaf690c302d36e8d64edb7834a8a1c5ff2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="group___physics_1gad51c7e632eea3484979c15b45b72b9e8" kindref="member">dBlock</ref></type>
+        <definition>proto native dBlock dBodyCollisionBlock</definition>
+        <argsstring>(notnull IEntity ent1, notnull IEntity ent2)</argsstring>
+        <name>dBodyCollisionBlock</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent1</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent2</declname>
+        </param>
+        <briefdescription>
+<para>Disables collisions between two entities. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="144" column="21" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="144" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gaf804d87d50d087bd31e7ab7c2daf6035" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void dBodyRemoveBlock</definition>
+        <argsstring>(notnull IEntity worldEntity, dBlock block)</argsstring>
+        <name>dBodyRemoveBlock</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>worldEntity</declname>
+        </param>
+        <param>
+          <type><ref refid="group___physics_1gad51c7e632eea3484979c15b45b72b9e8" kindref="member">dBlock</ref></type>
+          <declname>block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="145" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="145" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gaa8da8a1fba2752af44237345afa2f076" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void dBodySetInertiaTensorV</definition>
+        <argsstring>(notnull IEntity body, vector v)</argsstring>
+        <name>dBodySetInertiaTensorV</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="147" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="147" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gac999d23998a6539e08426417ca7f5fc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void dBodySetInertiaTensorM</definition>
+        <argsstring>(notnull IEntity body, vector m[3])</argsstring>
+        <name>dBodySetInertiaTensorM</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>m</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="148" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="148" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gad3a2d3417a11ec522125988e84c735b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float dBodyGetMass</definition>
+        <argsstring>(notnull IEntity ent)</argsstring>
+        <name>dBodyGetMass</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="150" column="20" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="150" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gaafbe7059b29e7827e4edddb6c3f2f716" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void dBodySetMass</definition>
+        <argsstring>(notnull IEntity body, float mass)</argsstring>
+        <name>dBodySetMass</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>mass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="151" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="151" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga34c4f07815af905e446d3b3b298d2942" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void dBodyApplyTorqueImpulse</definition>
+        <argsstring>(notnull IEntity ent, vector torqueImpulse)</argsstring>
+        <name>dBodyApplyTorqueImpulse</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>torqueImpulse</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="153" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="153" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gac9b723b8124b2654a9609004c7e9ecb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>proto native vector dBodyGetInvInertiaDiagLocal</definition>
+        <argsstring>(notnull IEntity ent)</argsstring>
+        <name>dBodyGetInvInertiaDiagLocal</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="154" column="21" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="154" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga8feced83721cde87b5107824502a4c1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float dBodyComputeImpulseDenominator</definition>
+        <argsstring>(notnull IEntity ent, vector position, vector normal)</argsstring>
+        <name>dBodyComputeImpulseDenominator</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>normal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="155" column="20" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="155" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gadbd3cda121ca39e269ec2285b9d59151" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float dBodyComputeAngularImpulseDenominator</definition>
+        <argsstring>(notnull IEntity ent, vector axis)</argsstring>
+        <name>dBodyComputeAngularImpulseDenominator</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>axis</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="156" column="20" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="156" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gaa99a746dc76e98920ea85a4ecf434edb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>proto native vector dBodyGetLocalInertia</definition>
+        <argsstring>(notnull IEntity ent)</argsstring>
+        <name>dBodyGetLocalInertia</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>ent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="157" column="21" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="157" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga6d019d47304aabb84afc7276d401269a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void dBodyGetInvInertiaTensorWorld</definition>
+        <argsstring>(notnull IEntity body, out vector inertiaTensorWS[3])</argsstring>
+        <name>dBodyGetInvInertiaTensorWorld</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type>out <ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>inertiaTensorWS</declname>
+          <array>[3]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="159" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="159" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga9c947b6725a2f3a97c27c8fd2f6d2843" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void dBodyApplyImpulseAt</definition>
+        <argsstring>(notnull IEntity body, vector impulse, vector pos)</argsstring>
+        <name>dBodyApplyImpulseAt</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>impulse</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Applies impuls on a pos position in world coordinates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="164" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="164" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga7177f6588e2de1684e285e53f63ad300" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void dBodyApplyImpulse</definition>
+        <argsstring>(notnull IEntity body, vector impulse)</argsstring>
+        <name>dBodyApplyImpulse</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>impulse</declname>
+        </param>
+        <briefdescription>
+<para>Applies impuls on a rigidbody (origin) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="169" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="169" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gaee159dad70841eb973ee00c1036d85e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void dBodyApplyForce</definition>
+        <argsstring>(notnull IEntity body, vector force)</argsstring>
+        <name>dBodyApplyForce</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>force</declname>
+        </param>
+        <briefdescription>
+<para>Applies constant force on a rigidbody (origin) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="174" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="174" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gaf970d5fa1837edf7b2dcc310dc94e0ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void dBodyApplyForceAt</definition>
+        <argsstring>(notnull IEntity body, vector pos, vector force)</argsstring>
+        <name>dBodyApplyForceAt</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>force</declname>
+        </param>
+        <briefdescription>
+<para>Applies constant force on a position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="179" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="179" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga253a085d1491d8a8be72a8d97a1aaa2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void dBodyApplyTorque</definition>
+        <argsstring>(notnull IEntity body, vector torque)</argsstring>
+        <name>dBodyApplyTorque</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>torque</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="181" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="181" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gaeb67acf9489482364efa03358027e249" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>proto vector dBodyGetAngularVelocity</definition>
+        <argsstring>(notnull IEntity body)</argsstring>
+        <name>dBodyGetAngularVelocity</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <briefdescription>
+<para>Gets angular velocity for a rigidbody. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="186" column="14" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="186" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gad3a4576902b69eeb29a06b3a5cc08767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void dBodySetAngularVelocity</definition>
+        <argsstring>(notnull IEntity body, vector angvel)</argsstring>
+        <name>dBodySetAngularVelocity</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>angvel</declname>
+        </param>
+        <briefdescription>
+<para>Changed an angular velocity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>body</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>Rigid</computeroutput> body </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>angvel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>Angular</computeroutput> velocity, rotation around x, y and z axis (not yaw/pitch/roll) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="193" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="193" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga54b2e970e58edf1d54c194281c6b8283" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void dBodySetTargetMatrix</definition>
+        <argsstring>(notnull IEntity body, vector matrix[4], float timeslice)</argsstring>
+        <name>dBodySetTargetMatrix</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>matrix</declname>
+          <array>[4]</array>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>timeslice</declname>
+        </param>
+        <briefdescription>
+<para>Sets target transformation. If timeslice == dt (simulation step delta time), it will happen in next step, otherwise in time = timeslice. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="198" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="198" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1gaa977bf8020939588f44d1e3f1697e327" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float dBodyGetKineticEnergy</definition>
+        <argsstring>(notnull IEntity body)</argsstring>
+        <name>dBodyGetKineticEnergy</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="199" column="20" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="199" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group___rigid_body_1ga215665a4d6b653bdbc166ef8dad0d211" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>proto native vector dBodyGetVelocityAt</definition>
+        <argsstring>(notnull IEntity body, vector globalpos)</argsstring>
+        <name>dBodyGetVelocityAt</name>
+        <param>
+          <type>notnull <ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>body</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>globalpos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" line="201" column="21" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnPhysics.c" declline="201" declcolumn="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

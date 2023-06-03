@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_call_queue" kind="class" language="C++" prot="public">
+    <compoundname>CallQueue</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_call_queue_1aed0774f37971538327037e70f4f428ed" prot="private" static="no" mutable="no">
+        <type>private ref Param3&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, <ref refid="classbool" kindref="compound">bool</ref> &gt;</type>
+        <definition>private ref Param3&lt;int, int, bool&gt; CallQueue::m_mouse_params</definition>
+        <argsstring></argsstring>
+        <name>m_mouse_params</name>
+        <qualifiedname>CallQueue::m_mouse_params</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="155" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_call_queue_1a74b81e64f265ced30d16250178d90e99" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CallQueue::DragQueue</definition>
+        <argsstring>()</argsstring>
+        <name>DragQueue</name>
+        <qualifiedname>CallQueue::DragQueue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="157" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="157" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_call_queue_1a725ea436fd56fa894a7039c5a8ce3fc5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CallQueue::Tick</definition>
+        <argsstring>()</argsstring>
+        <name>Tick</name>
+        <qualifiedname>CallQueue::Tick</qualifiedname>
+        <briefdescription>
+<para>System function, don&apos;t call it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="165" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="165" bodyend="212"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>DragQueue <ref refid="class_class" kindref="compound">Class</ref> provide callbacks while mouse is dragging. Callback function must have exact arguments: </para>
+    </briefdescription>
+    <detaileddescription>
+<para><programlisting><codeline><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>AnyFunctionName(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mouse_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mouse_y,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_dragging);</highlight></codeline>
+</programlisting> When mouse button is released, callback function is called one more time with is_dragging = false. Then all callbacks are automatically removed from queue.</para>
+<para><linebreak/>
+ usage: <programlisting><codeline><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">XYZ</highlight></codeline>
+<codeline><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>UpdateDrag(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mouse_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mouse_y,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_dragging);</highlight></codeline>
+<codeline><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a448fcd0fd466c6fd52240a62c447b233" kindref="member">GetDragQueue</ref>().Call(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;UpdateDrag&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>calls<sp/>&quot;UpdateDrag&quot;<sp/>function<sp/>on<sp/>&quot;this&quot;<sp/></highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="153" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="154" bodyend="213"/>
+    <listofallmembers>
+      <member refid="class_call_queue_1a74b81e64f265ced30d16250178d90e99" prot="private" virt="non-virtual"><scope>CallQueue</scope><name>DragQueue</name></member>
+      <member refid="class_call_queue_1aed0774f37971538327037e70f4f428ed" prot="private" virt="non-virtual"><scope>CallQueue</scope><name>m_mouse_params</name></member>
+      <member refid="class_call_queue_1a725ea436fd56fa894a7039c5a8ce3fc5" prot="private" virt="non-virtual"><scope>CallQueue</scope><name>Tick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

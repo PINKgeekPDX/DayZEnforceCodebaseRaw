@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_land___underground___panel___lever_8c" kind="file" language="C++">
+    <compoundname>Land_Underground_Panel_Lever.c</compoundname>
+    <innerclass refid="class_land___underground___panel___lever" prot="public">Land_Underground_Panel_Lever</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_land___underground___panel___lever" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_land___underground___panel___lever" kindref="compound">Land_Underground_Panel_Lever</ref><sp/>:<sp/><ref refid="_land___underground___panel_8c_1a393bea3350b27d48372aa0a9fe9f0f60" kindref="member">Land_Underground_Panel</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_land___underground___panel___lever_1a96c9582ce75bebd40f3d9f0dfe350a4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_land___underground___panel___lever_1a96c9582ce75bebd40f3d9f0dfe350a4e" kindref="member">SetActions</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.SetActions();</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a033d077df58807906c4dad3101d8768c" kindref="member">AddAction</ref>(<ref refid="class_action_use_underground_lever" kindref="compound">ActionUseUndergroundLever</ref>);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_land___underground___panel___lever_1a8c50dc5d7bbfa0b04fc5613796853b02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_land___underground___panel___lever_1a8c50dc5d7bbfa0b04fc5613796853b02" kindref="member">ResetPhase</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>target)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>target.SetAnimationPhaseNow(</highlight><highlight class="stringliteral">&quot;PanelLever&quot;</highlight><highlight class="normal">,<sp/>0);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15" refid="class_land___underground___panel___lever_1a476169ac6f9406877e36720b3fb23d96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_land___underground___panel___lever_1a476169ac6f9406877e36720b3fb23d96" kindref="member">OnPanelUsedSynchronized</ref>()</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnPanelUsedSynchronized();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetAnimationPhase(</highlight><highlight class="stringliteral">&quot;PanelLever&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a3301af2fa61873a778485aa575bc1ad6" kindref="member">GetCallQueue</ref>(<sp/><ref refid="group___tools_1gaaf491f3ecd1d9aefb35a16bf96ca420c" kindref="member">CALL_CATEGORY_SYSTEM</ref><sp/>).<ref refid="class_script_call_queue_1abe764b22b6eee91d169f3f5996fe0c3d" kindref="member">CallLater</ref>(<sp/><ref refid="class_land___underground___panel___lever_1a8c50dc5d7bbfa0b04fc5613796853b02" kindref="member">ResetPhase</ref>,<sp/>3000,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_land___underground___panel_8c_1ac4f2e6d2c0b6a1e35acf7905c4fc7f55" kindref="member">OnLEDStateChanged</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23" refid="class_land___underground___panel___lever_1a41b473cf49db71a93ade1fe202c67544" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_land___underground___panel___lever_1a41b473cf49db71a93ade1fe202c67544" kindref="member">Interact</ref>()</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.Interact();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a7a3b454f0864f35869812abeb395755a" kindref="member">RegisterNetworkStaticObject</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a7a3b454f0864f35869812abeb395755a" kindref="member">RegisterNetworkStaticObject</ref>(<ref refid="_land___underground___panel_8c_1ac880e66c246644e2d6c3f354603136fa" kindref="member">GetLinkedDoor</ref>());</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Building/Underground/Entrance/Land_Underground_Panel_Lever.c"/>
+  </compounddef>
+</doxygen>

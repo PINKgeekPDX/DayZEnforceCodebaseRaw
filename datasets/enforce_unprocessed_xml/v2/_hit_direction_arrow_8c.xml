@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_hit_direction_arrow_8c" kind="file" language="C++">
+    <compoundname>HitDirectionArrow.c</compoundname>
+    <innerclass refid="class_hit_direction_effect_base" prot="public">HitDirectionEffectBase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="class_hit_direction_effect_base" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">HitDirectionEffectArrow<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_hit_direction_effect_base" kindref="compound">HitDirectionEffectBase</ref></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="4" refid="class_hit_direction_effect_base_1a5625c5906b4fa6caea0a6d1d489c8c29" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/><ref refid="class_hit_direction_images_base" kindref="compound">HitDirectionImagesBase</ref><sp/><ref refid="class_hit_direction_effect_base_1a5625c5906b4fa6caea0a6d1d489c8c29" kindref="member">GetImageData</ref>()</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>type<sp/>=<sp/>HitDirectionImagesArrow;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HitDirectionImagesArrow<sp/>data<sp/>=<sp/>HitDirectionImagesArrow.Cast(type.Spawn());</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="11" refid="class_hit_direction_effect_base_1a7251ac8bfefd669ae056a832c974db8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hit_direction_effect_base_1a7251ac8bfefd669ae056a832c974db8b" kindref="member">FinalizePositionCalculation</ref>()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//blobs<sp/>move<sp/>around<sp/>the<sp/>edges,<sp/>the<sp/>rest<sp/>on<sp/>elypsis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>distance_x<sp/>=<sp/>(m_DistanceAdjust<sp/>*<sp/><ref refid="class_hit_direction_effect_base_1aacc69064ecb36022b9b7239436441ec4" kindref="member">m_SizeXEnf</ref>)<sp/>+<sp/>(m_SizeXEnf<sp/>/<sp/>2.5);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>distance_y<sp/>=<sp/>(m_DistanceAdjust<sp/>*<sp/><ref refid="class_hit_direction_effect_base_1ac1ca5d65faeb5f47cdcebe51221a169d" kindref="member">m_SizeYEnf</ref>)<sp/>+<sp/>(m_SizeYEnf<sp/>/<sp/>2.5);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_PosX<sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga94eedd3910334f450ef989d69ab4e4fd" kindref="member">Sin</ref>(m_AngleRad)<sp/>*<sp/>distance_x;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_PosY<sp/>=<sp/>-<ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga59a832dc3ede05300c969625f9c012d6" kindref="member">Cos</ref>(m_AngleRad)<sp/>*<sp/>distance_y;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20" refid="class_hit_direction_effect_base_1aff8e2fd9dd922a79a83502c05df5faa4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hit_direction_effect_base_1aff8e2fd9dd922a79a83502c05df5faa4" kindref="member">SetIndicatorRotation</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timeslice<sp/>=<sp/>-1.0)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_RotationOverride<sp/>==<sp/>HitDirectionConstants.ROTATION_DEFAULT)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_LayoutRoot.SetRotation(0,0,<ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gad73851cb23a468ee6eb705d0ec76e141" kindref="member">RAD2DEG</ref><sp/>*<sp/>m_AngleRad,</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_LayoutRoot.SetRotation(0,0,m_RotationOverride,</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/HitIndication/HitDirectionArrow.c"/>
+  </compounddef>
+</doxygen>

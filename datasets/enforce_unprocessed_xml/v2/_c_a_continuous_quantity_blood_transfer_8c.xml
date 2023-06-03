@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_c_a_continuous_quantity_blood_transfer_8c" kind="file" language="C++">
+    <compoundname>CAContinuousQuantityBloodTransfer.c</compoundname>
+    <innerclass refid="class_c_a_continuous_quantity_blood_transfer" prot="public">CAContinuousQuantityBloodTransfer</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_c_a_continuous_quantity_blood_transfer" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_c_a_continuous_quantity_blood_transfer" kindref="compound">CAContinuousQuantityBloodTransfer</ref><sp/>:<sp/><ref refid="class_c_a_continuous_quantity_repeat" kindref="compound">CAContinuousQuantityRepeat</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_c_a_continuous_quantity_blood_transfer_1a70dcf5ba66701f31def0b0a0ce9cdca8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_a_continuous_quantity_blood_transfer_1a70dcf5ba66701f31def0b0a0ce9cdca8" kindref="member">CalcAndSetQuantity</ref>(<sp/><ref refid="class_action_data" kindref="compound">ActionData</ref><sp/>action_data<sp/>)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsServer()<sp/>)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_c_a_continuous_quantity_repeat_1a836267f2974b149dc951b27717a16987" kindref="member">m_SpentUnits</ref><sp/>)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_continuous_quantity_repeat_1a836267f2974b149dc951b27717a16987" kindref="member">m_SpentUnits</ref>.param1<sp/>=<sp/><ref refid="class_c_a_continuous_quantity_repeat_1ab9163e91ba4b63fb1e71de470651d2e2" kindref="member">m_SpentQuantity</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_c_a_base_1a15caa3f387f97bbe79d18e4269dec382" kindref="member">SetACData</ref>(<ref refid="class_c_a_continuous_quantity_repeat_1a836267f2974b149dc951b27717a16987" kindref="member">m_SpentUnits</ref>);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>action_data.<ref refid="class_action_data_1adbe781e3bcf840ec9eeaa2d0d005eb6f" kindref="member">m_MainItem</ref>.AddQuantity(<sp/>-<ref refid="class_c_a_continuous_quantity_repeat_1ab9163e91ba4b63fb1e71de470651d2e2" kindref="member">m_SpentQuantity</ref>,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_action_give_blood_data" kindref="compound">ActionGiveBloodData</ref><sp/>action_data_b<sp/>=<sp/><ref refid="class_action_give_blood_data" kindref="compound">ActionGiveBloodData</ref>.Cast(<sp/>action_data<sp/>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>bloodtarget<sp/>=<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref>.Cast(<sp/>action_data.<ref refid="class_action_data_1a57bdca781ae4f1cfcb6574b0ace5d74d" kindref="member">m_Target</ref>.GetObject()<sp/>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!bloodtarget<sp/>)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bloodtarget<sp/>=<sp/>action_data.<ref refid="class_action_data_1a219946226b0958a6dfaf2c880ff576e9" kindref="member">m_Player</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="class_blood_types" kindref="compound">BloodTypes</ref>.<ref refid="class_blood_types_1a42e232c87dd85d75318cc6471e026e66" kindref="member">MatchBloodCompatibility</ref>(action_data_b.<ref refid="class_action_give_blood_data_1ade9fb4e2a59dc7481701df5c965c822f" kindref="member">m_ItemBloodType</ref>,<sp/>bloodtarget.GetStatBloodType().Get())<sp/>)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bloodtarget.AddHealth(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Blood&quot;</highlight><highlight class="normal">,<sp/><ref refid="class_c_a_continuous_quantity_repeat_1ab9163e91ba4b63fb1e71de470651d2e2" kindref="member">m_SpentQuantity</ref>);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/UserActionsComponent/ActionComponents/CAContinuousQuantityBloodTransfer.c"/>
+  </compounddef>
+</doxygen>

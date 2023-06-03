@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_agents_notfr_8c" kind="file" language="C++">
+    <compoundname>AgentsNotfr.c</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">class<sp/>AgentsNotfr:<sp/>NotifierBase</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"></highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/>private<sp/>const<sp/>float<sp/><sp/><sp/><sp/><sp/>DEC_TRESHOLD_LOW<sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/><sp/><sp/><sp/>private<sp/>const<sp/>float<sp/><sp/><sp/><sp/><sp/>DEC_TRESHOLD_MED<sp/><sp/><sp/><sp/>=<sp/>-0.5;</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/><sp/><sp/>private<sp/>const<sp/>float<sp/><sp/><sp/><sp/><sp/>DEC_TRESHOLD_HIGH<sp/><sp/><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/><sp/><sp/>private<sp/>const<sp/>float<sp/><sp/><sp/><sp/><sp/>INC_TRESHOLD_LOW<sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/><sp/><sp/>private<sp/>const<sp/>float<sp/><sp/><sp/><sp/><sp/>INC_TRESHOLD_MED<sp/><sp/><sp/><sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/>private<sp/>const<sp/>float<sp/><sp/><sp/><sp/><sp/>INC_TRESHOLD_HIGH<sp/><sp/><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/><sp/>void<sp/>AgentsNotfr(NotifiersManager<sp/>manager)</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetActive(true);</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_TendencyBufferSize<sp/>=<sp/>3;//for<sp/>best<sp/>results,<sp/>this<sp/>should<sp/>be<sp/>somewhat<sp/>aligned<sp/>with<sp/>modifier<sp/>frequency</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/>override<sp/>int<sp/>GetNotifierType()</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>eNotifiers.NTF_AGENT_INFECTION;</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/>override<sp/>void<sp/>DisplayTendency(float<sp/>delta)</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int<sp/>tendency<sp/>=<sp/>CalculateTendency(delta,<sp/>INC_TRESHOLD_LOW,<sp/>INC_TRESHOLD_MED,<sp/>INC_TRESHOLD_HIGH,<sp/>DEC_TRESHOLD_LOW,<sp/>DEC_TRESHOLD_MED,<sp/>DEC_TRESHOLD_HIGH);</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//GetVirtualHud().SetStatus(eDisplayElements.DELM_TDCY_BACTERIA,tendency);</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DisplayElementTendency<sp/>dis_elm<sp/>=<sp/>DisplayElementTendency.Cast(GetVirtualHud().GetElement(eDisplayElements.DELM_TDCY_BACTERIA));</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>dis_elm<sp/>)</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dis_elm.SetTendency(tendency);</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/>override<sp/>float<sp/>GetObservedValue()</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float<sp/>count<sp/>=<sp/>m_Player.GetTotalAgentCount();</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//Debug.Log(<sp/>&quot;GetObservedValue:&quot;<sp/>+<sp/>count.ToString(),&quot;Tendency&quot;);</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>count;</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">};*/</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/PlayerNotifiers/Notifiers/AgentsNotfr.c"/>
+  </compounddef>
+</doxygen>

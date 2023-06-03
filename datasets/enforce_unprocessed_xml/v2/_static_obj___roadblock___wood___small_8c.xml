@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_static_obj___roadblock___wood___small_8c" kind="file" language="C++">
+    <compoundname>StaticObj_Roadblock_Wood_Small.c</compoundname>
+    <innerclass refid="class_static_obj___roadblock___wood___small" prot="public">StaticObj_Roadblock_Wood_Small</innerclass>
+    <innerclass refid="class_point_light_base" prot="public">PointLightBase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_static_obj___roadblock___wood___small" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_static_obj___roadblock___wood___small" kindref="compound">StaticObj_Roadblock_Wood_Small</ref>:<sp/><ref refid="class_house" kindref="compound">House</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="3" refid="class_static_obj___roadblock___wood___small_1ae554481904e1ee7a2569becfeb206a7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_point_light_base" kindref="compound">PointLightBase</ref><sp/><ref refid="class_static_obj___roadblock___wood___small_1ae554481904e1ee7a2569becfeb206a7f" kindref="member">m_BlinkingLight</ref>;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="5" refid="class_static_obj___roadblock___wood___small_1a316b4f27b60c491dcd6b8861b75d3ca7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_static_obj___roadblock___wood___small_1a316b4f27b60c491dcd6b8861b75d3ca7" kindref="member">EEInit</ref>()</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.EEInit();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsDedicatedServer()<sp/>)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_static_obj___roadblock___wood___small_1ae554481904e1ee7a2569becfeb206a7f" kindref="member">m_BlinkingLight</ref><sp/>=<sp/><ref refid="_entrance_light_8c_1a4b8a515beeb22142c9aaed2086f04687" kindref="member">EntranceLight</ref>.Cast(<ref refid="class_scripted_light_base" kindref="compound">ScriptedLightBase</ref>.CreateLightAtObjMemoryPoint(Roadblock_Light,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Light&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15" refid="class_static_obj___roadblock___wood___small_1af3bdd94f6506d7149ea7ced4b32bf182" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_static_obj___roadblock___wood___small_1af3bdd94f6506d7149ea7ced4b32bf182" kindref="member">EEDelete</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>parent)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.EEDelete(parent);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsDedicatedServer()<sp/>)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_static_obj___roadblock___wood___small_1ae554481904e1ee7a2569becfeb206a7f" kindref="member">m_BlinkingLight</ref><sp/>)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_static_obj___roadblock___wood___small_1ae554481904e1ee7a2569becfeb206a7f" kindref="member">m_BlinkingLight</ref>.Destroy();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_point_light_base" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Roadblock_Light<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_point_light_base" kindref="compound">PointLightBase</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29" refid="class_point_light_base_1a307d47d6913770c2c18b521cb181d585" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_contaminated_area___dynamic_8c_1a2202cad687ba74d92664106a8b8baee3" kindref="member">m_DefaultBrightness</ref><sp/>=<sp/>5.5;</highlight></codeline>
+<codeline lineno="30" refid="class_point_light_base_1a19bbc8f163b1212bc034bd702ad25835" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_contaminated_area___dynamic_8c_1ad03bb02d17f63aee0a171b52caadf929" kindref="member">m_DefaultRadius</ref><sp/>=<sp/>20;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32" refid="class_point_light_base_1a78ca1f55ffeda717e6eb36f8a96f637b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_light_base_1a78ca1f55ffeda717e6eb36f8a96f637b" kindref="member">Roadblock_Light</ref>()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetVisibleDuringDaylight(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetRadiusTo(<ref refid="_contaminated_area___dynamic_8c_1ad03bb02d17f63aee0a171b52caadf929" kindref="member">m_DefaultRadius</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetBrightnessTo(<ref refid="_contaminated_area___dynamic_8c_1a2202cad687ba74d92664106a8b8baee3" kindref="member">m_DefaultBrightness</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FadeIn(1);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetFadeOutTime(2);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetFlareVisible(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetCastShadow(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetAmbientColor(0.9,<sp/>0.9,<sp/>0.7);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetDiffuseColor(0.9,<sp/>0.9,<sp/>0.7);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetBlinkingSpeed(1);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Building/Wrecks/StaticObj_Roadblock_Wood_Small.c"/>
+  </compounddef>
+</doxygen>

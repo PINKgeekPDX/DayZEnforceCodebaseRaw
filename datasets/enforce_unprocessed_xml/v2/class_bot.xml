@@ -1,0 +1,598 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_bot" kind="class" language="C++" prot="public">
+    <compoundname>Bot</compoundname>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="class_bot_1a99ed6291b73b326ac40c713a50f19885" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bot::InitFSM</definition>
+        <argsstring>()</argsstring>
+        <name>InitFSM</name>
+        <qualifiedname>Bot::InitFSM</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>transition table</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="126" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_bot_1a62115f035fcb6ceff6840ac3556599c0" prot="private" static="no" mutable="no">
+        <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+        <definition>PlayerBase Bot::m_Owner</definition>
+        <argsstring></argsstring>
+        <name>m_Owner</name>
+        <qualifiedname>Bot::m_Owner</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="20" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bot_1aaaf3c0a26ebf4899a210944d7c9419e6" prot="private" static="no" mutable="no">
+        <type>protected ref <ref refid="class_timer" kindref="compound">Timer</ref></type>
+        <definition>protected ref Timer Bot::m_Timer</definition>
+        <argsstring></argsstring>
+        <name>m_Timer</name>
+        <qualifiedname>Bot::m_Timer</qualifiedname>
+        <initializer>= new <ref refid="class_timer" kindref="compound">Timer</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="21" column="21" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bot_1ab26b6e5a42b12fe6bfaac4f25f5c14ed" prot="private" static="no" mutable="no">
+        <type>protected const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected const float Bot::c_TriggerTimeoutMS</definition>
+        <argsstring></argsstring>
+        <name>c_TriggerTimeoutMS</name>
+        <qualifiedname>Bot::c_TriggerTimeoutMS</qualifiedname>
+        <initializer>= 1000.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="22" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bot_1acd94b826de04250ceb16f4a0c08c36e0" prot="private" static="no" mutable="no">
+        <type>protected const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected const float Bot::c_UpdateMS</definition>
+        <argsstring></argsstring>
+        <name>c_UpdateMS</name>
+        <qualifiedname>Bot::c_UpdateMS</qualifiedname>
+        <initializer>= 16.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="24" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bot_1aa1c442e1cb736e4d4abccc21bebe5f4b" prot="private" static="no" mutable="no">
+        <type>protected ref <ref refid="class_bot_f_s_m" kindref="compound">BotFSM</ref></type>
+        <definition>protected ref BotFSM Bot::m_FSM</definition>
+        <argsstring></argsstring>
+        <name>m_FSM</name>
+        <qualifiedname>Bot::m_FSM</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="25" column="22" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bot_1abe8d3bf35cfdef94ce9a80e55b6bbc51" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool Bot::m_UseTrigger</definition>
+        <argsstring></argsstring>
+        <name>m_UseTrigger</name>
+        <qualifiedname>Bot::m_UseTrigger</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="26" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bot_1aa53b32976a730086f1b8d4708a974b36" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool Bot::m_Triggered</definition>
+        <argsstring></argsstring>
+        <name>m_Triggered</name>
+        <qualifiedname>Bot::m_Triggered</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="27" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bot_1af54d531461034b50a788afa402664b56" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="dayzplayer_8c_1a6bf3172c861dd775de5c544fed868499" kindref="member">DayZPlayerInstanceType</ref></type>
+        <definition>protected DayZPlayerInstanceType Bot::m_InstanceType</definition>
+        <argsstring></argsstring>
+        <name>m_InstanceType</name>
+        <qualifiedname>Bot::m_InstanceType</qualifiedname>
+        <initializer>= <ref refid="dayzplayer_8c_1a6bf3172c861dd775de5c544fed868499a7d8f139c6306380b4ec1863a93c14454" kindref="member">DayZPlayerInstanceType.INSTANCETYPE_CLIENT</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="28" column="34" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bot_1a930e9b5b176e2059598cb8e2f78993d9" prot="private" static="no" mutable="no">
+        <type>protected ref <ref refid="class_bot_trigger" kindref="compound">BotTrigger</ref></type>
+        <definition>protected ref BotTrigger Bot::m_BotTrigger</definition>
+        <argsstring></argsstring>
+        <name>m_BotTrigger</name>
+        <qualifiedname>Bot::m_BotTrigger</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="29" column="26" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bot_1a754f9a50b223568b6e943835dd3ff85c" prot="private" static="no" mutable="no">
+        <type>protected ref <ref refid="class_bot_state_base" kindref="compound">BotStateBase</ref></type>
+        <definition>protected ref BotStateBase Bot::m_BotTest</definition>
+        <argsstring></argsstring>
+        <name>m_BotTest</name>
+        <qualifiedname>Bot::m_BotTest</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="30" column="28" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_bot_1a2481d930512d3c6b024c2680c47f3ebb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bot::Bot</definition>
+        <argsstring>(PlayerBase ow)</argsstring>
+        <name>Bot</name>
+        <qualifiedname>Bot::Bot</qualifiedname>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>ow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="32" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bot_1a94555d22b15e4007fdf6fd4b94f53025" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bot::SetInstanceType</definition>
+        <argsstring>(DayZPlayerInstanceType t)</argsstring>
+        <name>SetInstanceType</name>
+        <qualifiedname>Bot::SetInstanceType</qualifiedname>
+        <param>
+          <type><ref refid="dayzplayer_8c_1a6bf3172c861dd775de5c544fed868499" kindref="member">DayZPlayerInstanceType</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="37" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bot_1afaf621a7b326dd2a55613309259e723d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bot::Start</definition>
+        <argsstring>(bool use_trigger, BotTrigger trigger=null)</argsstring>
+        <name>Start</name>
+        <qualifiedname>Bot::Start</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>use_trigger</declname>
+        </param>
+        <param>
+          <type><ref refid="class_bot_trigger" kindref="compound">BotTrigger</ref></type>
+          <declname>trigger</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="39" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="39" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bot_1a250e83b5a53e292c1f2fd7df2cad875d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bot::DelayedStart</definition>
+        <argsstring>(float ms)</argsstring>
+        <name>DelayedStart</name>
+        <qualifiedname>Bot::DelayedStart</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>ms</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="62" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="62" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bot_1a461d1938cc5a99e006de28e4e628b4ec" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void Bot::OnDelayedStart</definition>
+        <argsstring>()</argsstring>
+        <name>OnDelayedStart</name>
+        <qualifiedname>Bot::OnDelayedStart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="67" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="67" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bot_1a8f3c88aa8be334b986d880ae708d9ff8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bot::Stop</definition>
+        <argsstring>()</argsstring>
+        <name>Stop</name>
+        <qualifiedname>Bot::Stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="75" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="75" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bot_1ae448e8e53fcc88f557983beba40c6519" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void Bot::OnTrigger</definition>
+        <argsstring>()</argsstring>
+        <name>OnTrigger</name>
+        <qualifiedname>Bot::OnTrigger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="82" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="82" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bot_1ad025516db8f8b6b18a40a8c6fe2732a1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bot::OnUpdate</definition>
+        <argsstring>(float dt)</argsstring>
+        <name>OnUpdate</name>
+        <qualifiedname>Bot::OnUpdate</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="112" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="112" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bot_1ac5273ba6dd2af56e7eb0fbff989653b8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bot::OnTimer</definition>
+        <argsstring>()</argsstring>
+        <name>OnTimer</name>
+        <qualifiedname>Bot::OnTimer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="119" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="119" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bot_1abf0950b283cdac4b15ac06d9f1ebb19b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool Bot::ProcessEvent</definition>
+        <argsstring>(BotEventBase e)</argsstring>
+        <name>ProcessEvent</name>
+        <qualifiedname>Bot::ProcessEvent</qualifiedname>
+        <param>
+          <type><ref refid="class_bot_event_base" kindref="compound">BotEventBase</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="167" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="167" bodyend="179"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Bot</label>
+        <link refid="class_bot"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_Owner</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Timer</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>c_TriggerTimeoutMS</edgelabel>
+          <edgelabel>c_UpdateMS</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_FSM</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_Triggered</edgelabel>
+          <edgelabel>m_UseTrigger</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_BotTrigger</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_BotTest</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>BotFSM</label>
+        <link refid="class_bot_f_s_m"/>
+      </node>
+      <node id="9">
+        <label>BotStateBase</label>
+        <link refid="class_bot_state_base"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_Entity</edgelabel>
+          <edgelabel>m_Target</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Timeout</edgelabel>
+          <edgelabel>m_dtAccumulator</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_Periodic</edgelabel>
+          <edgelabel>m_TargetInSight</edgelabel>
+          <edgelabel>m_TargetLost</edgelabel>
+          <edgelabel>m_Tracking</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_Type</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_Owner</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>m_Bot</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_ParentState</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_FSM</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>BotTrigger</label>
+        <link refid="class_bot_trigger"/>
+      </node>
+      <node id="14">
+        <label>Class</label>
+        <link refid="class_class"/>
+      </node>
+      <node id="10">
+        <label>EntityAI</label>
+        <link refid="class_entity_a_i"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_ContinuousActions</edgelabel>
+          <edgelabel>m_InteractActions</edgelabel>
+          <edgelabel>m_SingleUseActions</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>SOUND_CONTACT_SKIP</edgelabel>
+          <edgelabel>m_SoundContactTickTime</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>m_SoundImpactTable</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_ActionsInitialize</edgelabel>
+          <edgelabel>m_IsMeleeWeapon</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>m_OnItemAddedToHands</edgelabel>
+          <edgelabel>m_OnItemRemovedFromHands</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Object</label>
+        <link refid="class_object"/>
+      </node>
+      <node id="2">
+        <label>PlayerBase</label>
+        <link refid="class_player_base"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_PersonalLight</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_PersonalLightDisabledByDebug</edgelabel>
+          <edgelabel>m_PersonalLightEnabledOnCurrentServer</edgelabel>
+          <edgelabel>m_PersonalLightIsSwitchedOn</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>ScriptInvoker</label>
+        <link refid="class_script_invoker"/>
+      </node>
+      <node id="3">
+        <label>ScriptedLightBase</label>
+        <link refid="class_scripted_light_base"/>
+      </node>
+      <node id="18">
+        <label>SoundLookupTable</label>
+        <link refid="class_sound_lookup_table"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_parameterName</edgelabel>
+          <edgelabel>m_tableCategoryName</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+      <node id="16">
+        <label>Widget</label>
+        <link refid="class_widget"/>
+      </node>
+      <node id="13">
+        <label>array</label>
+        <link refid="classarray"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>array&lt; Widget &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>array&lt; int &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>bool</label>
+        <link refid="classbool"/>
+      </node>
+      <node id="6">
+        <label>float</label>
+        <link refid="classfloat"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>LOWEST</edgelabel>
+          <edgelabel>MAX</edgelabel>
+          <edgelabel>MIN</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>string</label>
+        <link refid="classstring"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>Empty</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" line="18" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot.c" bodystart="19" bodyend="180"/>
+    <listofallmembers>
+      <member refid="class_bot_1a2481d930512d3c6b024c2680c47f3ebb" prot="private" virt="non-virtual"><scope>Bot</scope><name>Bot</name></member>
+      <member refid="class_bot_1ab26b6e5a42b12fe6bfaac4f25f5c14ed" prot="private" virt="non-virtual"><scope>Bot</scope><name>c_TriggerTimeoutMS</name></member>
+      <member refid="class_bot_1acd94b826de04250ceb16f4a0c08c36e0" prot="private" virt="non-virtual"><scope>Bot</scope><name>c_UpdateMS</name></member>
+      <member refid="class_bot_1a250e83b5a53e292c1f2fd7df2cad875d" prot="private" virt="non-virtual"><scope>Bot</scope><name>DelayedStart</name></member>
+      <member refid="class_bot_1a99ed6291b73b326ac40c713a50f19885" prot="private" virt="non-virtual"><scope>Bot</scope><name>InitFSM</name></member>
+      <member refid="class_bot_1a754f9a50b223568b6e943835dd3ff85c" prot="private" virt="non-virtual"><scope>Bot</scope><name>m_BotTest</name></member>
+      <member refid="class_bot_1a930e9b5b176e2059598cb8e2f78993d9" prot="private" virt="non-virtual"><scope>Bot</scope><name>m_BotTrigger</name></member>
+      <member refid="class_bot_1aa1c442e1cb736e4d4abccc21bebe5f4b" prot="private" virt="non-virtual"><scope>Bot</scope><name>m_FSM</name></member>
+      <member refid="class_bot_1af54d531461034b50a788afa402664b56" prot="private" virt="non-virtual"><scope>Bot</scope><name>m_InstanceType</name></member>
+      <member refid="class_bot_1a62115f035fcb6ceff6840ac3556599c0" prot="private" virt="non-virtual"><scope>Bot</scope><name>m_Owner</name></member>
+      <member refid="class_bot_1aaaf3c0a26ebf4899a210944d7c9419e6" prot="private" virt="non-virtual"><scope>Bot</scope><name>m_Timer</name></member>
+      <member refid="class_bot_1aa53b32976a730086f1b8d4708a974b36" prot="private" virt="non-virtual"><scope>Bot</scope><name>m_Triggered</name></member>
+      <member refid="class_bot_1abe8d3bf35cfdef94ce9a80e55b6bbc51" prot="private" virt="non-virtual"><scope>Bot</scope><name>m_UseTrigger</name></member>
+      <member refid="class_bot_1a461d1938cc5a99e006de28e4e628b4ec" prot="private" virt="non-virtual"><scope>Bot</scope><name>OnDelayedStart</name></member>
+      <member refid="class_bot_1ac5273ba6dd2af56e7eb0fbff989653b8" prot="private" virt="non-virtual"><scope>Bot</scope><name>OnTimer</name></member>
+      <member refid="class_bot_1ae448e8e53fcc88f557983beba40c6519" prot="private" virt="non-virtual"><scope>Bot</scope><name>OnTrigger</name></member>
+      <member refid="class_bot_1ad025516db8f8b6b18a40a8c6fe2732a1" prot="private" virt="non-virtual"><scope>Bot</scope><name>OnUpdate</name></member>
+      <member refid="class_bot_1abf0950b283cdac4b15ac06d9f1ebb19b" prot="private" virt="non-virtual"><scope>Bot</scope><name>ProcessEvent</name></member>
+      <member refid="class_bot_1a94555d22b15e4007fdf6fd4b94f53025" prot="private" virt="non-virtual"><scope>Bot</scope><name>SetInstanceType</name></member>
+      <member refid="class_bot_1afaf621a7b326dd2a55613309259e723d" prot="private" virt="non-virtual"><scope>Bot</scope><name>Start</name></member>
+      <member refid="class_bot_1a8f3c88aa8be334b986d880ae708d9ff8" prot="private" virt="non-virtual"><scope>Bot</scope><name>Stop</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

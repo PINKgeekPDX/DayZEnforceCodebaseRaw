@@ -1,0 +1,849 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_trap___land_mine_8c" kind="file" language="C++">
+    <compoundname>Trap_LandMine.c</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_trap___land_mine_8c_1ab7c0a8c87c9492901190e660dacb20f4" prot="public" static="no" strong="no">
+        <type></type>
+        <name>SoundTypeMine</name>
+        <enumvalue id="_trap___land_mine_8c_1ab7c0a8c87c9492901190e660dacb20f4af83c51364ccb82b783d8a420b65da814" prot="public">
+          <name>DISARMING</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="1" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="2" bodyend="4"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_trap___land_mine_8c_1afbe253ef8f808d8e9cf45dc7fefa9c01" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_trap___land_mine_8c_1ab7c0a8c87c9492901190e660dacb20f4" kindref="member">SoundTypeMine</ref></type>
+        <definition>enum SoundTypeMine m_TimerLoopSound</definition>
+        <argsstring></argsstring>
+        <name>m_TimerLoopSound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="8" column="43"/>
+      </memberdef>
+      <memberdef kind="variable" id="_trap___land_mine_8c_1a8bfa720c5428ba48b72afd800ae95b2e" prot="public" static="no" mutable="no">
+        <type>protected ref <ref refid="class_effect_sound" kindref="compound">EffectSound</ref></type>
+        <definition>protected ref EffectSound m_DisarmingLoopSound</definition>
+        <argsstring></argsstring>
+        <name>m_DisarmingLoopSound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="9" column="27" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_trap___land_mine_8c_1a6b4fcef28c02b7789fd5beed146e1f05" prot="public" static="no" mutable="no">
+        <type>protected ref <ref refid="class_timer" kindref="compound">Timer</ref></type>
+        <definition>protected ref Timer m_DeleteTimer</definition>
+        <argsstring></argsstring>
+        <name>m_DeleteTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="10" column="21" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_trap___land_mine_8c_1a805d15782a04d09c31fb2af334d8c8bf" prot="public" static="no" mutable="no">
+        <type>private const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>private const int BROKEN_LEG_PROB</definition>
+        <argsstring></argsstring>
+        <name>BROKEN_LEG_PROB</name>
+        <initializer>= 90</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="12" column="19" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_trap___land_mine_8c_1adf2f5e7b53b48df83b4dc42610543a03" prot="public" static="no" mutable="no">
+        <type>private const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>private const int BLEED_SOURCE_PROB</definition>
+        <argsstring></argsstring>
+        <name>BLEED_SOURCE_PROB</name>
+        <initializer>= 50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="13" column="19" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_trap___land_mine_8c_1aca8b953d278e9caba35dae88b43ab339" prot="public" static="no" mutable="no">
+        <type>private const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>private const int MAX_BLEED_SOURCE</definition>
+        <argsstring></argsstring>
+        <name>MAX_BLEED_SOURCE</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="14" column="19" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_trap___land_mine_8c_1a12489b89a024912f02caa1b92097ba8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void LandMineTrap</definition>
+        <argsstring>()</argsstring>
+        <name>LandMineTrap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="16" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="16" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1a6f57c2cfceac064ee3cec2c7fe860364" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ~LandMineTrap</definition>
+        <argsstring>()</argsstring>
+        <name>~LandMineTrap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="37" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="37" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1a7061b4e200bcad2499e0afb71cc25ccd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void StartActivate</definition>
+        <argsstring>(PlayerBase player)</argsstring>
+        <name>StartActivate</name>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="43" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="43" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1ac03b8faf21665d7257172ff0961ff524" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnActivatedByItem</definition>
+        <argsstring>(notnull ItemBase item)</argsstring>
+        <name>OnActivatedByItem</name>
+        <param>
+          <type>notnull <ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+<para>Called when this item is activated by other. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="55" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="55" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1ad22c92ea2ca551f9894095ffd4154e6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnActivate</definition>
+        <argsstring>()</argsstring>
+        <name>OnActivate</name>
+        <briefdescription>
+<para>HumanCommandScript fully scriptable command. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>NON-MANAGED, will be managed by C++ once it is sent to the CommandHandler through Human.StartCommand_Script </para>
+</simplesect>
+<simplesect kind="note"><para>So ideally, it is best to set up the HumanCommandScript, not create any instances and start it through Human.StartCommand_ScriptInst In case an instance needs to be created, it needs manual deletion if not sent to the CommandHandler But deleting it while it is in the CommandHandler will cause crashes constructor must have 1st parameter to be Human virtual to be overridden called when command starts </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="61" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="61" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1a6b28177ea528659f35679edcfe0bb36f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool CanExplodeInFire</definition>
+        <argsstring>()</argsstring>
+        <name>CanExplodeInFire</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="78" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1a3f4b9ce81981a3ef7489e591a4998d88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnUpdate</definition>
+        <argsstring>(EntityAI victim)</argsstring>
+        <name>OnUpdate</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>victim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="83" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="83" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1a832179b1b442b1db4376da2693413de5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnSteppedOn</definition>
+        <argsstring>(EntityAI victim)</argsstring>
+        <name>OnSteppedOn</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>victim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para><ref refid="class_car_script" kindref="compound">CarScript</ref> specific reaction on LandMineTrap</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="95" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="95" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1a36e8e5bf3f040925651f664fbc660042" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnSteppedOut</definition>
+        <argsstring>(EntityAI victim)</argsstring>
+        <name>OnSteppedOut</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>victim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="160" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="160" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1a17265f89500e188ff31cf55b8c0ca364" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void OnServerSteppedOn</definition>
+        <argsstring>(Object obj, string damageZone)</argsstring>
+        <name>OnServerSteppedOn</name>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>damageZone</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="171" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="171" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1a88d6d3cd2ac4200d3b57df74017e9571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DeleteThis</definition>
+        <argsstring>()</argsstring>
+        <name>DeleteThis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="188" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="188" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1a1320fa5889e47c848cbb7b33a142bda2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnItemLocationChanged</definition>
+        <argsstring>(EntityAI old_owner, EntityAI new_owner)</argsstring>
+        <name>OnItemLocationChanged</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>old_owner</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>new_owner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="194" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="194" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1a4de4d414d0cbf15100ab71ec84ca25f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void EEKilled</definition>
+        <argsstring>(Object killer)</argsstring>
+        <name>EEKilled</name>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>killer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="199" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="199" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1aafbfef1d76a0267d0869ba9678d2fe1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlaySoundActivate</definition>
+        <argsstring>()</argsstring>
+        <name>PlaySoundActivate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="206" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="206" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1a26eb4b1cf52c5eef709d65fdb92f90f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Explode</definition>
+        <argsstring>(int damageType, string ammoType=&quot;&quot;)</argsstring>
+        <name>Explode</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>damageType</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>ammoType</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="215" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="215" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1a39ff70d7c687bb8df5fcf8348016e9ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool CanBeDisarmed</definition>
+        <argsstring>()</argsstring>
+        <name>CanBeDisarmed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="236" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="236" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1a23f886d53b513cd9424769403fbf6866" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnRPC</definition>
+        <argsstring>(PlayerIdentity sender, int rpc_type, ParamsReadContext ctx)</argsstring>
+        <name>OnRPC</name>
+        <param>
+          <type><ref refid="class_player_identity" kindref="compound">PlayerIdentity</ref></type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>rpc_type</declname>
+        </param>
+        <param>
+          <type><ref refid="gameplay_8c_1a4ff67286551fc6c18504752a277c8bc1" kindref="member">ParamsReadContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="241" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="241" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1a40a792b7099b4f4b0a44a083c7a73e63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayDisarmingLoopSound</definition>
+        <argsstring>()</argsstring>
+        <name>PlayDisarmingLoopSound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="269" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="269" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1af707e712c92e4a56fef479c86dee9c52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StopDisarmingLoopSound</definition>
+        <argsstring>()</argsstring>
+        <name>StopDisarmingLoopSound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="277" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="277" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1a6ff31a876fba89e2f0ae6c33af8cd551" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnPlacementComplete</definition>
+        <argsstring>(Man player, vector position=&quot;0 0 0&quot;, vector orientation=&quot;0 0 0&quot;)</argsstring>
+        <name>OnPlacementComplete</name>
+        <param>
+          <type>Man</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>position</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>orientation</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="286" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="286" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1ab18e11ed223759f876177531c553dfbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool IsDeployable</definition>
+        <argsstring>()</argsstring>
+        <name>IsDeployable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="297" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="297" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1a4403b4f304acf2affb04880ba46a1313" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>override string GetLoopDeploySoundset</definition>
+        <argsstring>()</argsstring>
+        <name>GetLoopDeploySoundset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="302" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="302" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___land_mine_8c_1afa39b7c4d3d085ef8514a87c32b81a4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SetActions</definition>
+        <argsstring>()</argsstring>
+        <name>SetActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" line="307" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c" bodystart="307" bodyend="316"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="_trap___land_mine_8c_1ab7c0a8c87c9492901190e660dacb20f4" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_trap___land_mine_8c_1ab7c0a8c87c9492901190e660dacb20f4" kindref="member">SoundTypeMine</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_trap___land_mine_8c_1ab7c0a8c87c9492901190e660dacb20f4af83c51364ccb82b783d8a420b65da814" kindref="member">DISARMING</ref><sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="4" refid="_trap___land_mine_8c_1ab7c0a8c87c9492901190e660dacb20f4af83c51364ccb82b783d8a420b65da814" refkind="member"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_trap___land_mine_8c_1a12489b89a024912f02caa1b92097ba8f" kindref="member">LandMineTrap</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_trap_base" kindref="compound">TrapBase</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8" refid="_trap___land_mine_8c_1afbe253ef8f808d8e9cf45dc7fefa9c01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>ref<sp/><ref refid="class_effect_sound" kindref="compound">EffectSound</ref><sp/><ref refid="_trap___land_mine_8c_1afbe253ef8f808d8e9cf45dc7fefa9c01" kindref="member">m_TimerLoopSound</ref>;</highlight></codeline>
+<codeline lineno="9" refid="_trap___land_mine_8c_1a8bfa720c5428ba48b72afd800ae95b2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>ref<sp/><ref refid="class_effect_sound" kindref="compound">EffectSound</ref><sp/><ref refid="_trap___land_mine_8c_1a8bfa720c5428ba48b72afd800ae95b2e" kindref="member">m_DisarmingLoopSound</ref>;</highlight></codeline>
+<codeline lineno="10" refid="_trap___land_mine_8c_1a6b4fcef28c02b7789fd5beed146e1f05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>ref<sp/><ref refid="class_timer" kindref="compound">Timer</ref><sp/><ref refid="_explosives_base_8c_1a6b4fcef28c02b7789fd5beed146e1f05" kindref="member">m_DeleteTimer</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12" refid="_trap___land_mine_8c_1a805d15782a04d09c31fb2af334d8c8bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_trap___land_mine_8c_1a805d15782a04d09c31fb2af334d8c8bf" kindref="member">BROKEN_LEG_PROB</ref><sp/><sp/><sp/>=<sp/>90;</highlight></codeline>
+<codeline lineno="13" refid="_trap___land_mine_8c_1adf2f5e7b53b48df83b4dc42610543a03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_trap___land_mine_8c_1adf2f5e7b53b48df83b4dc42610543a03" kindref="member">BLEED_SOURCE_PROB</ref><sp/>=<sp/>50;</highlight></codeline>
+<codeline lineno="14" refid="_trap___land_mine_8c_1aca8b953d278e9caba35dae88b43ab339" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_trap___land_mine_8c_1aca8b953d278e9caba35dae88b43ab339" kindref="member">MAX_BLEED_SOURCE</ref><sp/><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16" refid="_trap___land_mine_8c_1a12489b89a024912f02caa1b92097ba8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_trap___land_mine_8c_1a12489b89a024912f02caa1b92097ba8f" kindref="member">LandMineTrap</ref>()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a065465201074b5f13d75b7d91db6facc" kindref="member">m_DefectRate</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>15;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1ac45c00c32c19647f4e038f85c180a0e5" kindref="member">m_DamagePlayers</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//How<sp/>much<sp/>damage<sp/>player<sp/>gets<sp/>when<sp/>caught</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1ab356033c77d459948a36eac7dd6a2eb9" kindref="member">m_InitWaitTime</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>10;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//After<sp/>this<sp/>time<sp/>after<sp/>deployment,<sp/>the<sp/>trap<sp/>is<sp/>activated</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a8dcd220fb43cdd6c35c6a298cc40629c" kindref="member">m_InfoActivationTime</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.<ref refid="group___strings_1gaec7e49a1dcfd0bc429834f29bc0d35c1" kindref="member">Format</ref>(</highlight><highlight class="stringliteral">&quot;#STR_LandMineTrap0%1#STR_LandMineTrap1&quot;</highlight><highlight class="normal">,<sp/><ref refid="_trap_base_8c_1ab356033c77d459948a36eac7dd6a2eb9" kindref="member">m_InitWaitTime</ref>.ToString());</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1ae0e42a1236c389cc813354ac62981d34" kindref="member">m_AddDeactivationDefect</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Order<sp/>is<sp/>important<sp/>and<sp/>must<sp/>match<sp/>clothing<sp/>array<sp/>in<sp/>DamageClothing<sp/>method</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1aa967c9463b787cd642716d6ba49acd14" kindref="member">m_ClothingDmg</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;int&gt;</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1aa967c9463b787cd642716d6ba49acd14" kindref="member">m_ClothingDmg</ref>.Insert(60);<sp/><sp/><sp/></highlight><highlight class="comment">//Trousers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1aa967c9463b787cd642716d6ba49acd14" kindref="member">m_ClothingDmg</ref>.Insert(100);<sp/><sp/></highlight><highlight class="comment">//BackPack</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1aa967c9463b787cd642716d6ba49acd14" kindref="member">m_ClothingDmg</ref>.Insert(40);<sp/><sp/><sp/></highlight><highlight class="comment">//Vest</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1aa967c9463b787cd642716d6ba49acd14" kindref="member">m_ClothingDmg</ref>.Insert(10);<sp/><sp/><sp/></highlight><highlight class="comment">//HeadGear</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1aa967c9463b787cd642716d6ba49acd14" kindref="member">m_ClothingDmg</ref>.Insert(10);<sp/><sp/><sp/></highlight><highlight class="comment">//Mask</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1aa967c9463b787cd642716d6ba49acd14" kindref="member">m_ClothingDmg</ref>.Insert(40);<sp/><sp/><sp/></highlight><highlight class="comment">//Body</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1aa967c9463b787cd642716d6ba49acd14" kindref="member">m_ClothingDmg</ref>.Insert(50);<sp/><sp/><sp/></highlight><highlight class="comment">//Feet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1aa967c9463b787cd642716d6ba49acd14" kindref="member">m_ClothingDmg</ref>.Insert(5);<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Gloves</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="_trap___land_mine_8c_1a6f57c2cfceac064ee3cec2c7fe860364" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_trap___land_mine_8c_1a6f57c2cfceac064ee3cec2c7fe860364" kindref="member">~LandMineTrap</ref>()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_effect_manager" kindref="compound">SEffectManager</ref>.<ref refid="class_s_effect_manager_1aec7ef95de317ab1011f04c6c5c496248" kindref="member">DestroyEffect</ref>(<ref refid="_trap___land_mine_8c_1afbe253ef8f808d8e9cf45dc7fefa9c01" kindref="member">m_TimerLoopSound</ref>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_s_effect_manager" kindref="compound">SEffectManager</ref>.<ref refid="class_s_effect_manager_1aec7ef95de317ab1011f04c6c5c496248" kindref="member">DestroyEffect</ref>(<ref refid="_trap___land_mine_8c_1a8bfa720c5428ba48b72afd800ae95b2e" kindref="member">m_DisarmingLoopSound</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="_trap___land_mine_8c_1a7061b4e200bcad2499e0afb71cc25ccd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_trap_base_8c_1acf9c82ef825d2ca5d8edb53b89ba20c6" kindref="member">StartActivate</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.StartActivate(player);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsDedicatedServer())</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_effect_sound" kindref="compound">EffectSound</ref><sp/>sound<sp/>=<sp/><ref refid="class_s_effect_manager" kindref="compound">SEffectManager</ref>.<ref refid="class_s_effect_manager_1aa05a7b24ec51456db8c32cf2e4b099ef" kindref="member">PlaySound</ref>(</highlight><highlight class="stringliteral">&quot;landmine_safetyPin_SoundSet&quot;</highlight><highlight class="normal">,<sp/><ref refid="_underground_area_loader_8c_1af4b5180d61f839c99de2d15fdcda4568" kindref="member">GetPosition</ref>(),<sp/>0,<sp/>0,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sound.<ref refid="class_effect_sound_1a2cc90aea49a8e5dfad08b37632ec21ee" kindref="member">SetAutodestroy</ref>(<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___land_mine_8c_1afbe253ef8f808d8e9cf45dc7fefa9c01" kindref="member">m_TimerLoopSound</ref><sp/>=<sp/><ref refid="class_s_effect_manager" kindref="compound">SEffectManager</ref>.<ref refid="class_s_effect_manager_1aa05a7b24ec51456db8c32cf2e4b099ef" kindref="member">PlaySound</ref>(</highlight><highlight class="stringliteral">&quot;landmine_timer2_SoundSet&quot;</highlight><highlight class="normal">,<sp/><ref refid="_underground_area_loader_8c_1af4b5180d61f839c99de2d15fdcda4568" kindref="member">GetPosition</ref>(),<sp/>0,<sp/>0,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="_trap___land_mine_8c_1ac03b8faf21665d7257172ff0961ff524" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_remote_detonator_8c_1ac03b8faf21665d7257172ff0961ff524" kindref="member">OnActivatedByItem</ref>(notnull<sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>item)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetHealth(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>0.0);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___land_mine_8c_1a88d6d3cd2ac4200d3b57df74017e9571" kindref="member">DeleteThis</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="_trap___land_mine_8c_1ad22c92ea2ca551f9894095ffd4154e6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_trap_base_1a39d748bcd0cc25c23067222e1897fb71" kindref="member">OnActivate</ref>()</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsDedicatedServer())</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_trap___land_mine_8c_1afbe253ef8f808d8e9cf45dc7fefa9c01" kindref="member">m_TimerLoopSound</ref>)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___land_mine_8c_1afbe253ef8f808d8e9cf45dc7fefa9c01" kindref="member">m_TimerLoopSound</ref>.SetAutodestroy(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___land_mine_8c_1afbe253ef8f808d8e9cf45dc7fefa9c01" kindref="member">m_TimerLoopSound</ref>.SoundStop();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="_modifier_base_8c_1aaf6ee4d1f067be1038b7a662af6af1bf" kindref="member">GetPlayer</ref>())</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___land_mine_8c_1aafbfef1d76a0267d0869ba9678d2fe1e" kindref="member">PlaySoundActivate</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78" refid="_trap___land_mine_8c_1a6b28177ea528659f35679edcfe0bb36f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_item_base_8c_1a5bde8493d322c11ab011129e128c557e" kindref="member">CanExplodeInFire</ref>()</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83" refid="_trap_base_8c_1a68b977ad148efc138c7330cf2eb720e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___tools_1gab414e48870421e21bf5553f4033493b0" kindref="member">OnUpdate</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>victim)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(victim<sp/>&amp;&amp;<sp/>victim.IsInherited(<ref refid="class_car_script" kindref="compound">CarScript</ref>))</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>wheel<sp/>=<sp/><ref refid="_trap_base_8c_1a84805c92b8d5792a3f11d2204c941b05" kindref="member">GetClosestCarWheel</ref>(victim);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wheel)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_trap_base_1a13a88a03d3e4bf01c5a57a7a9072bc15" kindref="member">OnServerSteppedOn</ref>(wheel,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95" refid="_trap___land_mine_8c_1a832179b1b442b1db4376da2693413de5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_trap_base_1a2f27129cccbe8f3b61923f57e97e11b4" kindref="member">OnSteppedOn</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>victim)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsServer()<sp/>&amp;&amp;<sp/>victim)</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!victim.GetAllowDamage())</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(victim.IsInherited(<ref refid="class_car_script" kindref="compound">CarScript</ref>))</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Param1&lt;EntityAI&gt;<sp/>params<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Param1&lt;EntityAI&gt;(victim);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_radial_menu_8c_1ad2e26b3579a09b0f5513be82ec80b04e" kindref="member">m_UpdateTimer</ref>.Run(<ref refid="_trap_base_8c_1a2406f7b22951ec022c12d6469a9549b4" kindref="member">UPDATE_TIMER_INTERVAL</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;OnUpdate&quot;</highlight><highlight class="normal">,<sp/>params,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Check<sp/>if<sp/>we<sp/>have<sp/>a<sp/>player</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>victim_PB<sp/>=<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref>.Cast(victim);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(victim_PB<sp/>&amp;&amp;<sp/>victim_PB.IsAlive())</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>randNum;<sp/></highlight><highlight class="comment">//value<sp/>used<sp/>for<sp/>probability<sp/>evaluation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>randNum<sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gac34f9f8daa0e311b6a6b40cc21d38226" kindref="member">RandomInt</ref>(0,<sp/>100);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(randNum<sp/>&lt;=<sp/><ref refid="_trap___land_mine_8c_1a805d15782a04d09c31fb2af334d8c8bf" kindref="member">BROKEN_LEG_PROB</ref>)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>damage<sp/>=<sp/>victim_PB.GetMaxHealth(</highlight><highlight class="stringliteral">&quot;RightLeg&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//deal<sp/>100%<sp/>damage<sp/>to<sp/>break<sp/>legs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>victim_PB.DamageAllLegs(<sp/>damage<sp/>);<sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>randNum<sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gac34f9f8daa0e311b6a6b40cc21d38226" kindref="member">RandomInt</ref>(0,<sp/>100);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(randNum<sp/>&lt;<sp/><ref refid="_trap___land_mine_8c_1adf2f5e7b53b48df83b4dc42610543a03" kindref="member">BLEED_SOURCE_PROB</ref>)</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="_trap___land_mine_8c_1aca8b953d278e9caba35dae88b43ab339" kindref="member">MAX_BLEED_SOURCE</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//We<sp/>add<sp/>two<sp/>bleeding<sp/>sources<sp/>max<sp/>to<sp/>lower<sp/>half</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>randNum<sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gafbc28855d0d24deda2fbdd3229c6bac2" kindref="member">RandomIntInclusive</ref>(0,<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref>.m_BleedingSourcesLow.Count()<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>victim_PB.m_BleedingManagerServer.AttemptAddBleedingSourceBySelection(<ref refid="class_player_base" kindref="compound">PlayerBase</ref>.m_BleedingSourcesLow[randNum]);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a718c37e651de88d02e91eed321c2fd08" kindref="member">DamageClothing</ref>(victim_PB);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>victim_IB<sp/>=<sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref>.Cast(victim);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(victim_IB)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MiscGameplayFunctions.DealAbsoluteDmg(victim_IB,<sp/><ref refid="_trap_base_8c_1ab6a1c3344ff68c61b0f298dfca0d1b88" kindref="member">DAMAGE_TRIGGER_MINE</ref>);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___land_mine_8c_1a26eb4b1cf52c5eef709d65fdb92f90f0" kindref="member">Explode</ref>(<ref refid="_damage_system_8c_1afce48e0416f4e1a1a8c79629bbbf602d" kindref="member">DamageType</ref>.EXPLOSION);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___land_mine_8c_1a88d6d3cd2ac4200d3b57df74017e9571" kindref="member">DeleteThis</ref>();</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnSteppedOn(victim);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="160" refid="_trap_base_8c_1a6b03f943951470cb3dcbf71c8269a7ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_trap_base_1af7a7fc18ec1c3de19dc640e577e08555" kindref="member">OnSteppedOut</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>victim)</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(victim.IsInherited(<ref refid="class_car_script" kindref="compound">CarScript</ref>))</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_radial_menu_8c_1ad2e26b3579a09b0f5513be82ec80b04e" kindref="member">m_UpdateTimer</ref><sp/>&amp;&amp;<sp/><ref refid="_radial_menu_8c_1ad2e26b3579a09b0f5513be82ec80b04e" kindref="member">m_UpdateTimer</ref>.IsRunning())</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_radial_menu_8c_1ad2e26b3579a09b0f5513be82ec80b04e" kindref="member">m_UpdateTimer</ref>.<ref refid="class_timer_1a706ec0e00fbebe148e45036e07cd6311" kindref="member">Stop</ref>();</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="171" refid="_trap___land_mine_8c_1a17265f89500e188ff31cf55b8c0ca364" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_trap_base_1a13a88a03d3e4bf01c5a57a7a9072bc15" kindref="member">OnServerSteppedOn</ref>(<ref refid="class_object" kindref="compound">Object</ref><sp/>obj,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>damageZone)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(obj.IsInherited(<ref refid="class_car_wheel" kindref="compound">CarWheel</ref>))</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>obj.ProcessDirectDamage(DT_CLOSE_COMBAT,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;LandMineExplosion_CarWheel&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___land_mine_8c_1a26eb4b1cf52c5eef709d65fdb92f90f0" kindref="member">Explode</ref>(<ref refid="_damage_system_8c_1afce48e0416f4e1a1a8c79629bbbf602d" kindref="member">DamageType</ref>.EXPLOSION);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_radial_menu_8c_1ad2e26b3579a09b0f5513be82ec80b04e" kindref="member">m_UpdateTimer</ref>.IsRunning())</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_radial_menu_8c_1ad2e26b3579a09b0f5513be82ec80b04e" kindref="member">m_UpdateTimer</ref>.<ref refid="class_timer_1a706ec0e00fbebe148e45036e07cd6311" kindref="member">Stop</ref>();</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a9c02237ebda40c6716cb82c807c89e89" kindref="member">SetInactive</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a6c0d25d6f7749f82555d4b073214eb8f" kindref="member">Synch</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref>.Cast(obj));</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="_trap___land_mine_8c_1a88d6d3cd2ac4200d3b57df74017e9571" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_trap___land_mine_8c_1a88d6d3cd2ac4200d3b57df74017e9571" kindref="member">DeleteThis</ref>()</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_explosives_base_8c_1a6b4fcef28c02b7789fd5beed146e1f05" kindref="member">m_DeleteTimer</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_timer" kindref="compound">Timer</ref>(<ref refid="group___tools_1gaaf491f3ecd1d9aefb35a16bf96ca420c" kindref="member">CALL_CATEGORY_SYSTEM</ref>);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_explosives_base_8c_1a6b4fcef28c02b7789fd5beed146e1f05" kindref="member">m_DeleteTimer</ref>.Run(1,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;DeleteSafe&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="194" refid="_trap___land_mine_8c_1a1320fa5889e47c848cbb7b33a142bda2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_item_base_8c_1aaec86a5608205336c3c365b0c564852c" kindref="member">OnItemLocationChanged</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>old_owner,<sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>new_owner)<sp/></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnItemLocationChanged(old_owner,<sp/>new_owner);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="199" refid="_trap___land_mine_8c_1a4de4d414d0cbf15100ab71ec84ca25f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_explosives_base_8c_1a4de4d414d0cbf15100ab71ec84ca25f7" kindref="member">EEKilled</ref>(<ref refid="class_object" kindref="compound">Object</ref><sp/>killer)</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.EEKilled(killer);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___land_mine_8c_1a26eb4b1cf52c5eef709d65fdb92f90f0" kindref="member">Explode</ref>(<ref refid="_damage_system_8c_1afce48e0416f4e1a1a8c79629bbbf602d" kindref="member">DamageType</ref>.EXPLOSION);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="206" refid="_trap___land_mine_8c_1aafbfef1d76a0267d0869ba9678d2fe1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_trap___land_mine_8c_1aafbfef1d76a0267d0869ba9678d2fe1e" kindref="member">PlaySoundActivate</ref>()</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsDedicatedServer())</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_effect_sound" kindref="compound">EffectSound</ref><sp/>sound<sp/>=<sp/><ref refid="class_s_effect_manager" kindref="compound">SEffectManager</ref>.<ref refid="class_s_effect_manager_1aa05a7b24ec51456db8c32cf2e4b099ef" kindref="member">PlaySound</ref>(</highlight><highlight class="stringliteral">&quot;landmineActivate_SoundSet&quot;</highlight><highlight class="normal">,<sp/><ref refid="_underground_area_loader_8c_1af4b5180d61f839c99de2d15fdcda4568" kindref="member">GetPosition</ref>(),<sp/>0,<sp/>0,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sound.<ref refid="class_effect_sound_1a2cc90aea49a8e5dfad08b37632ec21ee" kindref="member">SetAutodestroy</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="215" refid="_trap___land_mine_8c_1a26eb4b1cf52c5eef709d65fdb92f90f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_trap___land_mine_8c_1a26eb4b1cf52c5eef709d65fdb92f90f0" kindref="member">Explode</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>damageType,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ammoType<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ammoType<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ammoType<sp/>=<sp/>ConfigGetString(</highlight><highlight class="stringliteral">&quot;ammoType&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ammoType<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ammoType<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Dummy_Heavy&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsServer()<sp/>)</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SynchExplosion();</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>offset<sp/>=<sp/><ref refid="group___math3_d_a_p_i_1ga5bd1deb1c96276d94eeec6fe40955c41" kindref="member">Vector</ref>(0,<sp/>0.1,<sp/>0);<sp/></highlight><highlight class="comment">//Vertical<sp/>offset<sp/>applied<sp/>to<sp/>landmine<sp/>explosion<sp/>(in<sp/>meters)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DamageSystem.ExplosionDamage(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>NULL,<sp/>ammoType,<sp/><ref refid="_underground_area_loader_8c_1af4b5180d61f839c99de2d15fdcda4568" kindref="member">GetPosition</ref>()<sp/>+<sp/>offset,<sp/>damageType);<sp/></highlight><highlight class="comment">//Offset<sp/>explosion<sp/>on<sp/>Y<sp/>axis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___land_mine_8c_1a88d6d3cd2ac4200d3b57df74017e9571" kindref="member">DeleteThis</ref>();</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="236" refid="_trap___land_mine_8c_1a39ff70d7c687bb8df5fcf8348016e9ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_trap_base_1a9e1d6b582f566d581853c491b28cd920" kindref="member">CanBeDisarmed</ref>()</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="241" refid="_trap___land_mine_8c_1a23f886d53b513cd9424769403fbf6866" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_stamina_handler_8c_1a971ea67ff4c3c8c5e203de03274c5db2" kindref="member">OnRPC</ref>(<ref refid="class_player_identity" kindref="compound">PlayerIdentity</ref><sp/>sender,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rpc_type,<sp/><ref refid="class_serializer" kindref="compound">ParamsReadContext</ref><sp/>ctx)</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnRPC(sender,<sp/>rpc_type,<sp/>ctx);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Param1&lt;bool&gt;<sp/>p<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Param1&lt;bool&gt;(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ctx.<ref refid="class_serializer_1a9a38a9c5322133ee30fe87a3a4c0659e" kindref="member">Read</ref>(p))</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>play<sp/>=<sp/>p.param1;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(rpc_type)</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_trap___land_mine_8c_1ab7c0a8c87c9492901190e660dacb20f4" kindref="member">SoundTypeMine</ref>.DISARMING:</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(play)</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___land_mine_8c_1a40a792b7099b4f4b0a44a083c7a73e63" kindref="member">PlayDisarmingLoopSound</ref>();</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___land_mine_8c_1af707e712c92e4a56fef479c86dee9c52" kindref="member">StopDisarmingLoopSound</ref>();</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="269" refid="_trap___land_mine_8c_1a40a792b7099b4f4b0a44a083c7a73e63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_trap___land_mine_8c_1a40a792b7099b4f4b0a44a083c7a73e63" kindref="member">PlayDisarmingLoopSound</ref>()</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="_trap___land_mine_8c_1a8bfa720c5428ba48b72afd800ae95b2e" kindref="member">m_DisarmingLoopSound</ref><sp/>||<sp/>!<ref refid="_trap___land_mine_8c_1a8bfa720c5428ba48b72afd800ae95b2e" kindref="member">m_DisarmingLoopSound</ref>.<ref refid="class_effect_sound_1abf2e5207cf74b01295801ff9cbc6f7cd" kindref="member">IsSoundPlaying</ref>())</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___land_mine_8c_1a8bfa720c5428ba48b72afd800ae95b2e" kindref="member">m_DisarmingLoopSound</ref><sp/>=<sp/><ref refid="class_s_effect_manager" kindref="compound">SEffectManager</ref>.<ref refid="class_s_effect_manager_1aa05a7b24ec51456db8c32cf2e4b099ef" kindref="member">PlaySound</ref>(</highlight><highlight class="stringliteral">&quot;landmine_deploy_SoundSet&quot;</highlight><highlight class="normal">,<sp/><ref refid="_underground_area_loader_8c_1af4b5180d61f839c99de2d15fdcda4568" kindref="member">GetPosition</ref>());</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="277" refid="_trap___land_mine_8c_1af707e712c92e4a56fef479c86dee9c52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_trap___land_mine_8c_1af707e712c92e4a56fef479c86dee9c52" kindref="member">StopDisarmingLoopSound</ref>()</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___land_mine_8c_1a8bfa720c5428ba48b72afd800ae95b2e" kindref="member">m_DisarmingLoopSound</ref>.<ref refid="class_effect_sound_1afb3e761198a4167f611442d60925e1e7" kindref="member">SoundStop</ref>();</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ADVANCED<sp/>PLACEMENT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="286" refid="_trap___land_mine_8c_1a6ff31a876fba89e2f0ae6c33af8cd551" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_trap_base_1a882fb980c2e81cf2f313434929cd649f" kindref="member">OnPlacementComplete</ref>(Man<sp/>player,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>position<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>orientation<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnPlacementComplete(player,<sp/>position,<sp/>orientation);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsServer())</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player_PB<sp/>=<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref>.Cast(player);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1acf9c82ef825d2ca5d8edb53b89ba20c6" kindref="member">StartActivate</ref>(player_PB);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="297" refid="_trap___land_mine_8c_1ab18e11ed223759f876177531c553dfbe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_trap_base_1aca6dafea75a9634626a0210102c9357c" kindref="member">IsDeployable</ref>()</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="302" refid="_trap___land_mine_8c_1a4403b4f304acf2affb04880ba46a1313" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_trap_base_1a38ba82430c8652da6361126781c7383a" kindref="member">GetLoopDeploySoundset</ref>()</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;landmine_deploy_SoundSet&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="307" refid="_trap___land_mine_8c_1afa39b7c4d3d085ef8514a87c32b81a4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_trap_base_1aeaff7a7498570759e37dcf7f983aff9e" kindref="member">SetActions</ref>()</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.SetActions();</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a033d077df58807906c4dad3101d8768c" kindref="member">AddAction</ref>(<ref refid="_action_attach_8c_1a160ebb3b520d6eb3dd1fbbdb362cc951" kindref="member">ActionAttach</ref>);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a033d077df58807906c4dad3101d8768c" kindref="member">AddAction</ref>(<ref refid="_action_detach_8c_1a0d029c8f8d01c63cca13a523faf40996" kindref="member">ActionDetach</ref>);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a033d077df58807906c4dad3101d8768c" kindref="member">AddAction</ref>(<ref refid="class_action_toggle_place_object" kindref="compound">ActionTogglePlaceObject</ref>);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a033d077df58807906c4dad3101d8768c" kindref="member">AddAction</ref>(<ref refid="class_action_activate_trap" kindref="compound">ActionActivateTrap</ref>);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a033d077df58807906c4dad3101d8768c" kindref="member">AddAction</ref>(<ref refid="_action_deploy_object_8c_1a1eb6c584b29789b9c360df2d769c22a8" kindref="member">ActionDeployObject</ref>);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEVELOPER<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Debug<sp/>menu<sp/>Spawn<sp/>Ground<sp/>Special</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_hatchback__02_8c_1a07e1fe7c5e95b4ef7987be52d7fdf51c" kindref="member">OnDebugSpawn</ref>()</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1acf9c82ef825d2ca5d8edb53b89ba20c6" kindref="member">StartActivate</ref>(null);</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fireplace_base_8c_1add7373fc8492b0821fd03c0692256f5c" kindref="member">GetDebugButtonNames</ref>(out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>button1,<sp/>out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>button2,<sp/>out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>button3,<sp/>out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>button4)</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>button1<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Activate&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>button2<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Deactivate&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fireplace_base_8c_1a46c79f6a4908c367de361cddfae5dd0a" kindref="member">OnDebugButtonPressServer</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>button_index)</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(button_index)</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1acf9c82ef825d2ca5d8edb53b89ba20c6" kindref="member">StartActivate</ref>(null);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a9c02237ebda40c6716cb82c807c89e89" kindref="member">SetInactive</ref>();</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_LandMine.c"/>
+  </compounddef>
+</doxygen>

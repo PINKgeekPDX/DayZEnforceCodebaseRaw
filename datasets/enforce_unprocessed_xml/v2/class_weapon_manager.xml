@@ -1,0 +1,1614 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_weapon_manager" kind="class" language="C++" prot="public">
+    <compoundname>WeaponManager</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_weapon_manager_1a7f636d2e1ef216dc6f68e7769a040601" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>const float WeaponManager::MAX_DROP_MAGAZINE_DISTANCE_SQ</definition>
+        <argsstring></argsstring>
+        <name>MAX_DROP_MAGAZINE_DISTANCE_SQ</name>
+        <qualifiedname>WeaponManager::MAX_DROP_MAGAZINE_DISTANCE_SQ</qualifiedname>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="3" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1a630e8ff0265cdb2aa4f1ef4ac33ac0ef" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+        <definition>protected PlayerBase WeaponManager::m_player</definition>
+        <argsstring></argsstring>
+        <name>m_player</name>
+        <qualifiedname>WeaponManager::m_player</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="5" column="22" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1ac775168042b7e3f32558e982002e4fd9" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected int WeaponManager::m_LastAcknowledgmentID</definition>
+        <argsstring></argsstring>
+        <name>m_LastAcknowledgmentID</name>
+        <qualifiedname>WeaponManager::m_LastAcknowledgmentID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="7" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1a3e0136813572b6564de1eb3b80bc8fbb" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected int WeaponManager::m_PendingWeaponActionAcknowledgmentID</definition>
+        <argsstring></argsstring>
+        <name>m_PendingWeaponActionAcknowledgmentID</name>
+        <qualifiedname>WeaponManager::m_PendingWeaponActionAcknowledgmentID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="9" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1a062b605c0496f2d4957fd70897ded649" prot="private" static="no" mutable="no">
+        <type>protected Magazine</type>
+        <definition>protected Magazine WeaponManager::m_PendingTargetMagazine</definition>
+        <argsstring></argsstring>
+        <name>m_PendingTargetMagazine</name>
+        <qualifiedname>WeaponManager::m_PendingTargetMagazine</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="10" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1a8fa565ce46e088cf5d164a31e988bbff" prot="private" static="no" mutable="no">
+        <type>protected ref <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+        <definition>protected ref InventoryLocation WeaponManager::m_TargetInventoryLocation</definition>
+        <argsstring></argsstring>
+        <name>m_TargetInventoryLocation</name>
+        <qualifiedname>WeaponManager::m_TargetInventoryLocation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="11" column="32" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1a07b00ab4b4a55b4eeefa4df44cf6be6c" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected int WeaponManager::m_PendingWeaponAction</definition>
+        <argsstring></argsstring>
+        <name>m_PendingWeaponAction</name>
+        <qualifiedname>WeaponManager::m_PendingWeaponAction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="12" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1a06ffb2370835476b96791d65561e331a" prot="private" static="no" mutable="no">
+        <type>protected ref <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+        <definition>protected ref InventoryLocation WeaponManager::m_PendingInventoryLocation</definition>
+        <argsstring></argsstring>
+        <name>m_PendingInventoryLocation</name>
+        <qualifiedname>WeaponManager::m_PendingInventoryLocation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="13" column="32" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1adafaf63deb0dfed49635120960945c39" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool WeaponManager::m_canEnd</definition>
+        <argsstring></argsstring>
+        <name>m_canEnd</name>
+        <qualifiedname>WeaponManager::m_canEnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="15" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1ab59e2a69fd00130758bedf2893a45bb9" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool WeaponManager::m_justStart</definition>
+        <argsstring></argsstring>
+        <name>m_justStart</name>
+        <qualifiedname>WeaponManager::m_justStart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="16" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1ad6f1c68bdccbf59c9f20f25795e4a358" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool WeaponManager::m_InProgress</definition>
+        <argsstring></argsstring>
+        <name>m_InProgress</name>
+        <qualifiedname>WeaponManager::m_InProgress</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="17" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1ac929c426a13dcaacca1b19c31d56391c" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool WeaponManager::m_IsEventSended</definition>
+        <argsstring></argsstring>
+        <name>m_IsEventSended</name>
+        <qualifiedname>WeaponManager::m_IsEventSended</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="18" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1a12152fc4cfd3fdd04c0d7f2176c26953" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool WeaponManager::m_WantContinue</definition>
+        <argsstring></argsstring>
+        <name>m_WantContinue</name>
+        <qualifiedname>WeaponManager::m_WantContinue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="19" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1a80585a56a7f642e021353d4031bdeafc" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool WeaponManager::m_InIronSight</definition>
+        <argsstring></argsstring>
+        <name>m_InIronSight</name>
+        <qualifiedname>WeaponManager::m_InIronSight</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="20" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1ad31e38c4cddcbc1253d3903ac1b0dff6" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool WeaponManager::m_InOptic</definition>
+        <argsstring></argsstring>
+        <name>m_InOptic</name>
+        <qualifiedname>WeaponManager::m_InOptic</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="21" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1ab45a487655f69e09136a85e9f5534dfa" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool WeaponManager::m_readyToStart</definition>
+        <argsstring></argsstring>
+        <name>m_readyToStart</name>
+        <qualifiedname>WeaponManager::m_readyToStart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="22" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1ad6a9f0db000ec4c096414eaa0c9b2c99" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="class_weapon___base" kindref="compound">Weapon_Base</ref></type>
+        <definition>protected Weapon_Base WeaponManager::m_WeaponInHand</definition>
+        <argsstring></argsstring>
+        <name>m_WeaponInHand</name>
+        <qualifiedname>WeaponManager::m_WeaponInHand</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="23" column="22" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1a0b8d4224b09b2473a52385af51e277c7" prot="private" static="no" mutable="no">
+        <type>protected MagazineStorage</type>
+        <definition>protected MagazineStorage WeaponManager::m_MagazineInHand</definition>
+        <argsstring></argsstring>
+        <name>m_MagazineInHand</name>
+        <qualifiedname>WeaponManager::m_MagazineInHand</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="24" column="26" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1a80feef04b58639a4269d8067b59f5edd" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="_action_base_8c_1a9e29a236902beb34a65218c0aa3debdb" kindref="member">ActionBase</ref></type>
+        <definition>protected ActionBase WeaponManager::m_ControlAction</definition>
+        <argsstring></argsstring>
+        <name>m_ControlAction</name>
+        <qualifiedname>WeaponManager::m_ControlAction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="25" column="21" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1a8761781a72ce1b6b9c97f2ff6864214e" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected int WeaponManager::m_ForceEjectBulletTimestamp</definition>
+        <argsstring></argsstring>
+        <name>m_ForceEjectBulletTimestamp</name>
+        <qualifiedname>WeaponManager::m_ForceEjectBulletTimestamp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="26" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1a1fd189ef99142e16264cd11bdd089bfd" prot="private" static="no" mutable="no">
+        <type>protected const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected const int WeaponManager::FORCE_EJECT_BULLET_TIMEOUT</definition>
+        <argsstring></argsstring>
+        <name>FORCE_EJECT_BULLET_TIMEOUT</name>
+        <qualifiedname>WeaponManager::FORCE_EJECT_BULLET_TIMEOUT</qualifiedname>
+        <initializer>= 2000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="28" column="21" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1a6000b2539ad5caafba9130c3567f3ada" prot="private" static="no" mutable="no">
+        <type>protected ref <ref refid="classarray" kindref="compound">array</ref>&lt; Magazine &gt;</type>
+        <definition>protected ref array&lt;Magazine&gt; WeaponManager::m_MagazinePilesInInventory</definition>
+        <argsstring></argsstring>
+        <name>m_MagazinePilesInInventory</name>
+        <qualifiedname>WeaponManager::m_MagazinePilesInInventory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="33" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1a71cfa8a505bbb80db715c7ed9ea3fcf8" prot="private" static="no" mutable="no">
+        <type>protected ref <ref refid="classarray" kindref="compound">array</ref>&lt; MagazineStorage &gt;</type>
+        <definition>protected ref array&lt;MagazineStorage&gt; WeaponManager::m_MagazineStorageInInventory</definition>
+        <argsstring></argsstring>
+        <name>m_MagazineStorageInInventory</name>
+        <qualifiedname>WeaponManager::m_MagazineStorageInInventory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="34" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1a696552d0b88dd4bb3a0358378e85ed63" prot="private" static="no" mutable="no">
+        <type>protected ref <ref refid="classarray" kindref="compound">array</ref>&lt; Magazine &gt;</type>
+        <definition>protected ref array&lt;Magazine&gt; WeaponManager::m_SuitableMagazines</definition>
+        <argsstring></argsstring>
+        <name>m_SuitableMagazines</name>
+        <qualifiedname>WeaponManager::m_SuitableMagazines</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="35" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1afb53f9a3118143b59cac3dc994dde283" prot="private" static="no" mutable="no">
+        <type>protected Magazine</type>
+        <definition>protected Magazine WeaponManager::m_PreparedMagazine</definition>
+        <argsstring></argsstring>
+        <name>m_PreparedMagazine</name>
+        <qualifiedname>WeaponManager::m_PreparedMagazine</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="36" column="19" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1a2920e708a78920988d9decf8b7b37cb4" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float WeaponManager::m_NewJamChance</definition>
+        <argsstring></argsstring>
+        <name>m_NewJamChance</name>
+        <qualifiedname>WeaponManager::m_NewJamChance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="39" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1ab37c05b41f8f20eb32b7cd4e360531f8" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool WeaponManager::m_WaitToSyncJamChance</definition>
+        <argsstring></argsstring>
+        <name>m_WaitToSyncJamChance</name>
+        <qualifiedname>WeaponManager::m_WaitToSyncJamChance</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="40" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_weapon_manager_1a1c7110014d1b31afc18cef54a05b61ab" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected int WeaponManager::m_AnimationRefreshCooldown</definition>
+        <argsstring></argsstring>
+        <name>m_AnimationRefreshCooldown</name>
+        <qualifiedname>WeaponManager::m_AnimationRefreshCooldown</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="43" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_weapon_manager_1ab914f166fba9d26700e6764450fdbdf5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::WeaponManager</definition>
+        <argsstring>(PlayerBase player)</argsstring>
+        <name>WeaponManager</name>
+        <qualifiedname>WeaponManager::WeaponManager</qualifiedname>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="45" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="45" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a9729a7010ff7760d310ac30ba08c2363" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::CanFire</definition>
+        <argsstring>(Weapon_Base wpn)</argsstring>
+        <name>CanFire</name>
+        <qualifiedname>WeaponManager::CanFire</qualifiedname>
+        <param>
+          <type><ref refid="class_weapon___base" kindref="compound">Weapon_Base</ref></type>
+          <declname>wpn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="79" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="79" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a1de3d9ce93b559994c1d367e5f124437" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::CanAttachMagazine</definition>
+        <argsstring>(Weapon_Base wpn, Magazine mag, bool reservationCheck=true)</argsstring>
+        <name>CanAttachMagazine</name>
+        <qualifiedname>WeaponManager::CanAttachMagazine</qualifiedname>
+        <param>
+          <type><ref refid="class_weapon___base" kindref="compound">Weapon_Base</ref></type>
+          <declname>wpn</declname>
+        </param>
+        <param>
+          <type>Magazine</type>
+          <declname>mag</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>reservationCheck</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="92" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="92" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a62c87538d230afc9513b9861727a9370" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::CanSwapMagazine</definition>
+        <argsstring>(Weapon_Base wpn, Magazine mag, bool reservationCheck=true)</argsstring>
+        <name>CanSwapMagazine</name>
+        <qualifiedname>WeaponManager::CanSwapMagazine</qualifiedname>
+        <param>
+          <type><ref refid="class_weapon___base" kindref="compound">Weapon_Base</ref></type>
+          <declname>wpn</declname>
+        </param>
+        <param>
+          <type>Magazine</type>
+          <declname>mag</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>reservationCheck</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="133" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="133" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a984c6aae2253c852e71087f64f32ec79" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::CanDetachMagazine</definition>
+        <argsstring>(Weapon_Base wpn, Magazine mag, bool reservationCheck=true)</argsstring>
+        <name>CanDetachMagazine</name>
+        <qualifiedname>WeaponManager::CanDetachMagazine</qualifiedname>
+        <param>
+          <type><ref refid="class_weapon___base" kindref="compound">Weapon_Base</ref></type>
+          <declname>wpn</declname>
+        </param>
+        <param>
+          <type>Magazine</type>
+          <declname>mag</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>reservationCheck</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="181" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="181" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a1c44c0f9a9ae75d3fe2403eadbbf4807" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::CanLoadBullet</definition>
+        <argsstring>(Weapon_Base wpn, Magazine mag, bool reservationCheck=true)</argsstring>
+        <name>CanLoadBullet</name>
+        <qualifiedname>WeaponManager::CanLoadBullet</qualifiedname>
+        <param>
+          <type><ref refid="class_weapon___base" kindref="compound">Weapon_Base</ref></type>
+          <declname>wpn</declname>
+        </param>
+        <param>
+          <type>Magazine</type>
+          <declname>mag</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>reservationCheck</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="201" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="201" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a0a3478d98d0721070180de20b109afa5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::CanUnjam</definition>
+        <argsstring>(Weapon_Base wpn, bool reservationCheck=true)</argsstring>
+        <name>CanUnjam</name>
+        <qualifiedname>WeaponManager::CanUnjam</qualifiedname>
+        <param>
+          <type><ref refid="class_weapon___base" kindref="compound">Weapon_Base</ref></type>
+          <declname>wpn</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>reservationCheck</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="230" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="230" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a2d726b1fe0447f9a4f75256e2fbad18e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::CanEjectBullet</definition>
+        <argsstring>(Weapon_Base wpn, bool reservationCheck=true)</argsstring>
+        <name>CanEjectBullet</name>
+        <qualifiedname>WeaponManager::CanEjectBullet</qualifiedname>
+        <param>
+          <type><ref refid="class_weapon___base" kindref="compound">Weapon_Base</ref></type>
+          <declname>wpn</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>reservationCheck</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="254" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="254" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1aa0f789bb4d8769382045ee290ec53cea" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::SetEjectBulletTryTimestamp</definition>
+        <argsstring>()</argsstring>
+        <name>SetEjectBulletTryTimestamp</name>
+        <qualifiedname>WeaponManager::SetEjectBulletTryTimestamp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="277" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="277" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1afeb7c328fa5e1e21b90f2d1b1eb4d227" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::InventoryReservation</definition>
+        <argsstring>(Magazine mag, InventoryLocation invLoc)</argsstring>
+        <name>InventoryReservation</name>
+        <qualifiedname>WeaponManager::InventoryReservation</qualifiedname>
+        <param>
+          <type>Magazine</type>
+          <declname>mag</declname>
+        </param>
+        <param>
+          <type><ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>invLoc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="282" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="282" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a2618acbae22bf48f05f699b939377fcf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::AttachMagazine</definition>
+        <argsstring>(Magazine mag, ActionBase control_action=NULL)</argsstring>
+        <name>AttachMagazine</name>
+        <qualifiedname>WeaponManager::AttachMagazine</qualifiedname>
+        <param>
+          <type>Magazine</type>
+          <declname>mag</declname>
+        </param>
+        <param>
+          <type><ref refid="_action_base_8c_1a9e29a236902beb34a65218c0aa3debdb" kindref="member">ActionBase</ref></type>
+          <declname>control_action</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="341" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="341" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a43dcb66f2c909f851da2b9a92ba2da22" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::DetachMagazine</definition>
+        <argsstring>(InventoryLocation invLoc, ActionBase control_action=NULL)</argsstring>
+        <name>DetachMagazine</name>
+        <qualifiedname>WeaponManager::DetachMagazine</qualifiedname>
+        <param>
+          <type><ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>invLoc</declname>
+        </param>
+        <param>
+          <type><ref refid="_action_base_8c_1a9e29a236902beb34a65218c0aa3debdb" kindref="member">ActionBase</ref></type>
+          <declname>control_action</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="346" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="346" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a7eceddac7377af3547198e80d70e81e7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::SwapMagazine</definition>
+        <argsstring>(Magazine mag, ActionBase control_action=NULL)</argsstring>
+        <name>SwapMagazine</name>
+        <qualifiedname>WeaponManager::SwapMagazine</qualifiedname>
+        <param>
+          <type>Magazine</type>
+          <declname>mag</declname>
+        </param>
+        <param>
+          <type><ref refid="_action_base_8c_1a9e29a236902beb34a65218c0aa3debdb" kindref="member">ActionBase</ref></type>
+          <declname>control_action</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="351" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="351" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1abbd7d7f87cb0f386c148628562810cd4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::SwapMagazineEx</definition>
+        <argsstring>(Magazine mag, InventoryLocation invLoc, ActionBase control_action=NULL)</argsstring>
+        <name>SwapMagazineEx</name>
+        <qualifiedname>WeaponManager::SwapMagazineEx</qualifiedname>
+        <param>
+          <type>Magazine</type>
+          <declname>mag</declname>
+        </param>
+        <param>
+          <type><ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>invLoc</declname>
+        </param>
+        <param>
+          <type><ref refid="_action_base_8c_1a9e29a236902beb34a65218c0aa3debdb" kindref="member">ActionBase</ref></type>
+          <declname>control_action</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="361" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="361" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a2a7e02175890fee53b06828b2f8a83fc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::LoadBullet</definition>
+        <argsstring>(Magazine mag, ActionBase control_action=NULL)</argsstring>
+        <name>LoadBullet</name>
+        <qualifiedname>WeaponManager::LoadBullet</qualifiedname>
+        <param>
+          <type>Magazine</type>
+          <declname>mag</declname>
+        </param>
+        <param>
+          <type><ref refid="_action_base_8c_1a9e29a236902beb34a65218c0aa3debdb" kindref="member">ActionBase</ref></type>
+          <declname>control_action</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="366" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="366" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a33428999ee827f5d724aa6cf5343a21d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::LoadMultiBullet</definition>
+        <argsstring>(Magazine mag, ActionBase control_action=NULL)</argsstring>
+        <name>LoadMultiBullet</name>
+        <qualifiedname>WeaponManager::LoadMultiBullet</qualifiedname>
+        <param>
+          <type>Magazine</type>
+          <declname>mag</declname>
+        </param>
+        <param>
+          <type><ref refid="_action_base_8c_1a9e29a236902beb34a65218c0aa3debdb" kindref="member">ActionBase</ref></type>
+          <declname>control_action</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="371" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="371" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a45756d6568546973584d2854ceda3264" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::LoadMultiBulletStop</definition>
+        <argsstring>()</argsstring>
+        <name>LoadMultiBulletStop</name>
+        <qualifiedname>WeaponManager::LoadMultiBulletStop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="376" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="376" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1aabb3883a2036060ef8af292d0308a878" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::Unjam</definition>
+        <argsstring>(ActionBase control_action=NULL)</argsstring>
+        <name>Unjam</name>
+        <qualifiedname>WeaponManager::Unjam</qualifiedname>
+        <param>
+          <type><ref refid="_action_base_8c_1a9e29a236902beb34a65218c0aa3debdb" kindref="member">ActionBase</ref></type>
+          <declname>control_action</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="381" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="381" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1ad4bc9275d7dd76d68ade4003f3ef4285" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::EjectBullet</definition>
+        <argsstring>(ActionBase control_action=NULL)</argsstring>
+        <name>EjectBullet</name>
+        <qualifiedname>WeaponManager::EjectBullet</qualifiedname>
+        <param>
+          <type><ref refid="_action_base_8c_1a9e29a236902beb34a65218c0aa3debdb" kindref="member">ActionBase</ref></type>
+          <declname>control_action</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="386" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="386" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a1b59be38ebac57771074bca3be0f56b8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::CanEjectBulletVerified</definition>
+        <argsstring>()</argsstring>
+        <name>CanEjectBulletVerified</name>
+        <qualifiedname>WeaponManager::CanEjectBulletVerified</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="391" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="391" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a02268b32a8761b6e89569f5ae3e867b1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::EjectBulletVerified</definition>
+        <argsstring>(ActionBase control_action=NULL)</argsstring>
+        <name>EjectBulletVerified</name>
+        <qualifiedname>WeaponManager::EjectBulletVerified</qualifiedname>
+        <param>
+          <type><ref refid="_action_base_8c_1a9e29a236902beb34a65218c0aa3debdb" kindref="member">ActionBase</ref></type>
+          <declname>control_action</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="405" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="405" bodyend="421"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a4e22c8625376251fb1020e3b912a1fd2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::SetNextMuzzleMode</definition>
+        <argsstring>()</argsstring>
+        <name>SetNextMuzzleMode</name>
+        <qualifiedname>WeaponManager::SetNextMuzzleMode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="423" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="423" bodyend="426"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1abf6497f92a5d34366a8021d82bf7940d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::Fire</definition>
+        <argsstring>(Weapon_Base wpn)</argsstring>
+        <name>Fire</name>
+        <qualifiedname>WeaponManager::Fire</qualifiedname>
+        <param>
+          <type><ref refid="class_weapon___base" kindref="compound">Weapon_Base</ref></type>
+          <declname>wpn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="428" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="428" bodyend="445"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a93cbc845171c191f880ee47fa6f6224b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void WeaponManager::Synchronize</definition>
+        <argsstring>()</argsstring>
+        <name>Synchronize</name>
+        <qualifiedname>WeaponManager::Synchronize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="463" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="463" bodyend="518"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a9d1d81af0c5e819880c43bb9d3c0d44e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::OnSyncJuncture</definition>
+        <argsstring>(int pJunctureID, ParamsReadContext pCtx)</argsstring>
+        <name>OnSyncJuncture</name>
+        <qualifiedname>WeaponManager::OnSyncJuncture</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>pJunctureID</declname>
+        </param>
+        <param>
+          <type><ref refid="gameplay_8c_1a4ff67286551fc6c18504752a277c8bc1" kindref="member">ParamsReadContext</ref></type>
+          <declname>pCtx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="522" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="522" bodyend="568"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a8a0a4c9c0fb68fee6486945434c97e77" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::OnInputUserDataProcess</definition>
+        <argsstring>(int userDataType, ParamsReadContext ctx)</argsstring>
+        <name>OnInputUserDataProcess</name>
+        <qualifiedname>WeaponManager::OnInputUserDataProcess</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>userDataType</declname>
+        </param>
+        <param>
+          <type><ref refid="gameplay_8c_1a4ff67286551fc6c18504752a277c8bc1" kindref="member">ParamsReadContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="572" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="572" bodyend="712"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1ada6b0b4177c209084ae24a2e4168d96d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::StartAction</definition>
+        <argsstring>(int action, Magazine mag, InventoryLocation il, ActionBase control_action=NULL)</argsstring>
+        <name>StartAction</name>
+        <qualifiedname>WeaponManager::StartAction</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>Magazine</type>
+          <declname>mag</declname>
+        </param>
+        <param>
+          <type><ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>il</declname>
+        </param>
+        <param>
+          <type><ref refid="_action_base_8c_1a9e29a236902beb34a65218c0aa3debdb" kindref="member">ActionBase</ref></type>
+          <declname>control_action</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="714" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="714" bodyend="749"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1afa516d7a2df92999b1e6c823efbb8cdc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::StartPendingAction</definition>
+        <argsstring>()</argsstring>
+        <name>StartPendingAction</name>
+        <qualifiedname>WeaponManager::StartPendingAction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="751" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="751" bodyend="814"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a3f8b76825e84641696afca11bc38b0a8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::IsRunning</definition>
+        <argsstring>()</argsstring>
+        <name>IsRunning</name>
+        <qualifiedname>WeaponManager::IsRunning</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="816" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="816" bodyend="819"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1ab79b3bf868a1cb63da66ccf036691322" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::SetRunning</definition>
+        <argsstring>(bool value)</argsstring>
+        <name>SetRunning</name>
+        <qualifiedname>WeaponManager::SetRunning</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="821" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="821" bodyend="824"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a4d1188bde812aedc04f8686bf8002935" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::Refresh</definition>
+        <argsstring>()</argsstring>
+        <name>Refresh</name>
+        <qualifiedname>WeaponManager::Refresh</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="826" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="826" bodyend="829"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a807d90f96a3707d7944cd6bd7159719e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::Update</definition>
+        <argsstring>(float deltaT)</argsstring>
+        <name>Update</name>
+        <qualifiedname>WeaponManager::Update</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>deltaT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="831" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="831" bodyend="937"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a5f7146ef572e6e30c7c758f5d4b77da6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::OnWeaponActionEnd</definition>
+        <argsstring>()</argsstring>
+        <name>OnWeaponActionEnd</name>
+        <qualifiedname>WeaponManager::OnWeaponActionEnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="939" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="939" bodyend="982"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a0fd98be125a1e01d9d66beb18d537505" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::DelayedRefreshAnimationState</definition>
+        <argsstring>(int delay)</argsstring>
+        <name>DelayedRefreshAnimationState</name>
+        <qualifiedname>WeaponManager::DelayedRefreshAnimationState</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>delay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="984" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="984" bodyend="994"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a60242d4d68794607491b892e50c7993a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::RefreshAnimationState</definition>
+        <argsstring>()</argsstring>
+        <name>RefreshAnimationState</name>
+        <qualifiedname>WeaponManager::RefreshAnimationState</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="996" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="996" bodyend="1011"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a4f5423d211b1f11de9bc6d03f985c00c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::WantContinue</definition>
+        <argsstring>()</argsstring>
+        <name>WantContinue</name>
+        <qualifiedname>WeaponManager::WantContinue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="1013" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="1013" bodyend="1016"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1ae2be408e061b523cb97ce29f9d2cc695" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Magazine</type>
+        <definition>Magazine WeaponManager::GetPreparedMagazine</definition>
+        <argsstring>()</argsstring>
+        <name>GetPreparedMagazine</name>
+        <qualifiedname>WeaponManager::GetPreparedMagazine</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="1018" column="10" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="1018" bodyend="1033"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a788f078e3a2c9704727d447a98a87247" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Magazine</type>
+        <definition>Magazine WeaponManager::GetNextPreparedMagazine</definition>
+        <argsstring>(out int startIdx)</argsstring>
+        <name>GetNextPreparedMagazine</name>
+        <qualifiedname>WeaponManager::GetNextPreparedMagazine</qualifiedname>
+        <param>
+          <type>out <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>startIdx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="1035" column="10" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="1035" bodyend="1046"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1af8a4bc319364793b02c09be79de48a30" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::OnMagazineInventoryEnter</definition>
+        <argsstring>(Magazine mag)</argsstring>
+        <name>OnMagazineInventoryEnter</name>
+        <qualifiedname>WeaponManager::OnMagazineInventoryEnter</qualifiedname>
+        <param>
+          <type>Magazine</type>
+          <declname>mag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="1048" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="1048" bodyend="1104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1af5c296c07aca5fc5b4c01b7021dd2500" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::OnMagazineInventoryExit</definition>
+        <argsstring>(Magazine mag)</argsstring>
+        <name>OnMagazineInventoryExit</name>
+        <qualifiedname>WeaponManager::OnMagazineInventoryExit</qualifiedname>
+        <param>
+          <type>Magazine</type>
+          <declname>mag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="1106" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="1106" bodyend="1121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1aef2c60de95c0261682e67c9711f2f88b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::OnMagazineAttach</definition>
+        <argsstring>(Magazine mag)</argsstring>
+        <name>OnMagazineAttach</name>
+        <qualifiedname>WeaponManager::OnMagazineAttach</qualifiedname>
+        <param>
+          <type>Magazine</type>
+          <declname>mag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="1123" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="1123" bodyend="1126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1ae9de798bce777830b6ac606069ab854b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::OnMagazineDetach</definition>
+        <argsstring>(Magazine mag)</argsstring>
+        <name>OnMagazineDetach</name>
+        <qualifiedname>WeaponManager::OnMagazineDetach</qualifiedname>
+        <param>
+          <type>Magazine</type>
+          <declname>mag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="1128" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="1128" bodyend="1131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1aaae0a27a5e6318dfa71d82769bc6d9a0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int WeaponManager::CompareMagazinesSuitability</definition>
+        <argsstring>(Magazine mag1, Magazine mag2)</argsstring>
+        <name>CompareMagazinesSuitability</name>
+        <qualifiedname>WeaponManager::CompareMagazinesSuitability</qualifiedname>
+        <param>
+          <type>Magazine</type>
+          <declname>mag1</declname>
+        </param>
+        <param>
+          <type>Magazine</type>
+          <declname>mag2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="1133" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="1133" bodyend="1136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a56a248c512ed435d3f7cbaa83a78da01" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::SortMagazineAfterLoad</definition>
+        <argsstring>()</argsstring>
+        <name>SortMagazineAfterLoad</name>
+        <qualifiedname>WeaponManager::SortMagazineAfterLoad</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="1138" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="1138" bodyend="1197"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a0532c84fa04ef1b600d01c08c147e8b9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::SetSutableMagazines</definition>
+        <argsstring>()</argsstring>
+        <name>SetSutableMagazines</name>
+        <qualifiedname>WeaponManager::SetSutableMagazines</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="1199" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="1199" bodyend="1258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a9291937d3df9a3f098b7e7ef65b0cf6b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void WeaponManager::OnLiftWeapon</definition>
+        <argsstring>()</argsstring>
+        <name>OnLiftWeapon</name>
+        <qualifiedname>WeaponManager::OnLiftWeapon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="1260" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="1260" bodyend="1264"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a0310bf8ef7d986de8f46f67206d3c974" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>string WeaponManager::GetCurrentModeName</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrentModeName</name>
+        <qualifiedname>WeaponManager::GetCurrentModeName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="1266" column="8" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="1266" bodyend="1274"/>
+      </memberdef>
+      <memberdef kind="function" id="class_weapon_manager_1a3a6428ee800fd228f0a1eba20e57f8cf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool WeaponManager::PrepareInventoryLocationForMagazineSwap</definition>
+        <argsstring>(notnull Weapon_Base wpn, notnull Magazine new_mag, out InventoryLocation new_il)</argsstring>
+        <name>PrepareInventoryLocationForMagazineSwap</name>
+        <qualifiedname>WeaponManager::PrepareInventoryLocationForMagazineSwap</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_weapon___base" kindref="compound">Weapon_Base</ref></type>
+          <declname>wpn</declname>
+        </param>
+        <param>
+          <type>notnull Magazine</type>
+          <declname>new_mag</declname>
+        </param>
+        <param>
+          <type>out <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>new_il</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="1276" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="1276" bodyend="1301"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="13">
+        <label>Class</label>
+        <link refid="class_class"/>
+      </node>
+      <node id="6">
+        <label>InventoryLocation</label>
+        <link refid="class_inventory_location"/>
+      </node>
+      <node id="11">
+        <label>Object</label>
+        <link refid="class_object"/>
+      </node>
+      <node id="3">
+        <label>PlayerBase</label>
+        <link refid="class_player_base"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_PersonalLight</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_PersonalLightDisabledByDebug</edgelabel>
+          <edgelabel>m_PersonalLightEnabledOnCurrentServer</edgelabel>
+          <edgelabel>m_PersonalLightIsSwitchedOn</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ScriptedLightBase</label>
+        <link refid="class_scripted_light_base"/>
+      </node>
+      <node id="1">
+        <label>WeaponManager</label>
+        <link refid="class_weapon_manager"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>MAX_DROP_MAGAZINE_DISTANCE_SQ</edgelabel>
+          <edgelabel>m_NewJamChance</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_player</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_PendingInventoryLocation</edgelabel>
+          <edgelabel>m_TargetInventoryLocation</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_InIronSight</edgelabel>
+          <edgelabel>m_InOptic</edgelabel>
+          <edgelabel>m_InProgress</edgelabel>
+          <edgelabel>m_IsEventSended</edgelabel>
+          <edgelabel>m_WaitToSyncJamChance</edgelabel>
+          <edgelabel>m_WantContinue</edgelabel>
+          <edgelabel>m_canEnd</edgelabel>
+          <edgelabel>m_justStart</edgelabel>
+          <edgelabel>m_readyToStart</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_WeaponInHand</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_MagazinePilesInInventory</edgelabel>
+          <edgelabel>m_SuitableMagazines</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>m_MagazineStorageInInventory</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>WeaponStableState</label>
+        <link refid="class_weapon_stable_state"/>
+      </node>
+      <node id="7">
+        <label>Weapon_Base</label>
+        <link refid="class_weapon___base"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>C</edgelabel>
+          <edgelabel>CC00</edgelabel>
+          <edgelabel>CC01</edgelabel>
+          <edgelabel>CC10</edgelabel>
+          <edgelabel>CC11</edgelabel>
+          <edgelabel>CD00</edgelabel>
+          <edgelabel>CD01</edgelabel>
+          <edgelabel>CJF0</edgelabel>
+          <edgelabel>CJF1</edgelabel>
+          <edgelabel>OD00</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>ATT_SLOT_CYLINDER</edgelabel>
+          <edgelabel>ATT_SLOT_EJECTOR</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Widget</label>
+        <link refid="class_widget"/>
+      </node>
+      <node id="12">
+        <label>array</label>
+        <link refid="classarray"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>array&lt; Magazine &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>array&lt; MagazineStorage &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>array&lt; Widget &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>bool</label>
+        <link refid="classbool"/>
+      </node>
+      <node id="2">
+        <label>float</label>
+        <link refid="classfloat"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>LOWEST</edgelabel>
+          <edgelabel>MAX</edgelabel>
+          <edgelabel>MIN</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>string</label>
+        <link refid="classstring"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>Empty</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" line="1" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/Weapons/WeaponManager.c" bodystart="2" bodyend="1302"/>
+    <listofallmembers>
+      <member refid="class_weapon_manager_1a2618acbae22bf48f05f699b939377fcf" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>AttachMagazine</name></member>
+      <member refid="class_weapon_manager_1a1de3d9ce93b559994c1d367e5f124437" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>CanAttachMagazine</name></member>
+      <member refid="class_weapon_manager_1a984c6aae2253c852e71087f64f32ec79" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>CanDetachMagazine</name></member>
+      <member refid="class_weapon_manager_1a2d726b1fe0447f9a4f75256e2fbad18e" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>CanEjectBullet</name></member>
+      <member refid="class_weapon_manager_1a1b59be38ebac57771074bca3be0f56b8" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>CanEjectBulletVerified</name></member>
+      <member refid="class_weapon_manager_1a9729a7010ff7760d310ac30ba08c2363" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>CanFire</name></member>
+      <member refid="class_weapon_manager_1a1c44c0f9a9ae75d3fe2403eadbbf4807" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>CanLoadBullet</name></member>
+      <member refid="class_weapon_manager_1a62c87538d230afc9513b9861727a9370" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>CanSwapMagazine</name></member>
+      <member refid="class_weapon_manager_1a0a3478d98d0721070180de20b109afa5" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>CanUnjam</name></member>
+      <member refid="class_weapon_manager_1aaae0a27a5e6318dfa71d82769bc6d9a0" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>CompareMagazinesSuitability</name></member>
+      <member refid="class_weapon_manager_1a0fd98be125a1e01d9d66beb18d537505" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>DelayedRefreshAnimationState</name></member>
+      <member refid="class_weapon_manager_1a43dcb66f2c909f851da2b9a92ba2da22" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>DetachMagazine</name></member>
+      <member refid="class_weapon_manager_1ad4bc9275d7dd76d68ade4003f3ef4285" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>EjectBullet</name></member>
+      <member refid="class_weapon_manager_1a02268b32a8761b6e89569f5ae3e867b1" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>EjectBulletVerified</name></member>
+      <member refid="class_weapon_manager_1abf6497f92a5d34366a8021d82bf7940d" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>Fire</name></member>
+      <member refid="class_weapon_manager_1a1fd189ef99142e16264cd11bdd089bfd" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>FORCE_EJECT_BULLET_TIMEOUT</name></member>
+      <member refid="class_weapon_manager_1a0310bf8ef7d986de8f46f67206d3c974" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>GetCurrentModeName</name></member>
+      <member refid="class_weapon_manager_1a788f078e3a2c9704727d447a98a87247" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>GetNextPreparedMagazine</name></member>
+      <member refid="class_weapon_manager_1ae2be408e061b523cb97ce29f9d2cc695" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>GetPreparedMagazine</name></member>
+      <member refid="class_weapon_manager_1afeb7c328fa5e1e21b90f2d1b1eb4d227" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>InventoryReservation</name></member>
+      <member refid="class_weapon_manager_1a3f8b76825e84641696afca11bc38b0a8" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>IsRunning</name></member>
+      <member refid="class_weapon_manager_1a2a7e02175890fee53b06828b2f8a83fc" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>LoadBullet</name></member>
+      <member refid="class_weapon_manager_1a33428999ee827f5d724aa6cf5343a21d" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>LoadMultiBullet</name></member>
+      <member refid="class_weapon_manager_1a45756d6568546973584d2854ceda3264" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>LoadMultiBulletStop</name></member>
+      <member refid="class_weapon_manager_1a1c7110014d1b31afc18cef54a05b61ab" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_AnimationRefreshCooldown</name></member>
+      <member refid="class_weapon_manager_1adafaf63deb0dfed49635120960945c39" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_canEnd</name></member>
+      <member refid="class_weapon_manager_1a80feef04b58639a4269d8067b59f5edd" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_ControlAction</name></member>
+      <member refid="class_weapon_manager_1a8761781a72ce1b6b9c97f2ff6864214e" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_ForceEjectBulletTimestamp</name></member>
+      <member refid="class_weapon_manager_1a80585a56a7f642e021353d4031bdeafc" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_InIronSight</name></member>
+      <member refid="class_weapon_manager_1ad31e38c4cddcbc1253d3903ac1b0dff6" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_InOptic</name></member>
+      <member refid="class_weapon_manager_1ad6f1c68bdccbf59c9f20f25795e4a358" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_InProgress</name></member>
+      <member refid="class_weapon_manager_1ac929c426a13dcaacca1b19c31d56391c" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_IsEventSended</name></member>
+      <member refid="class_weapon_manager_1ab59e2a69fd00130758bedf2893a45bb9" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_justStart</name></member>
+      <member refid="class_weapon_manager_1ac775168042b7e3f32558e982002e4fd9" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_LastAcknowledgmentID</name></member>
+      <member refid="class_weapon_manager_1a0b8d4224b09b2473a52385af51e277c7" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_MagazineInHand</name></member>
+      <member refid="class_weapon_manager_1a6000b2539ad5caafba9130c3567f3ada" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_MagazinePilesInInventory</name></member>
+      <member refid="class_weapon_manager_1a71cfa8a505bbb80db715c7ed9ea3fcf8" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_MagazineStorageInInventory</name></member>
+      <member refid="class_weapon_manager_1a2920e708a78920988d9decf8b7b37cb4" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_NewJamChance</name></member>
+      <member refid="class_weapon_manager_1a06ffb2370835476b96791d65561e331a" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_PendingInventoryLocation</name></member>
+      <member refid="class_weapon_manager_1a062b605c0496f2d4957fd70897ded649" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_PendingTargetMagazine</name></member>
+      <member refid="class_weapon_manager_1a07b00ab4b4a55b4eeefa4df44cf6be6c" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_PendingWeaponAction</name></member>
+      <member refid="class_weapon_manager_1a3e0136813572b6564de1eb3b80bc8fbb" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_PendingWeaponActionAcknowledgmentID</name></member>
+      <member refid="class_weapon_manager_1a630e8ff0265cdb2aa4f1ef4ac33ac0ef" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_player</name></member>
+      <member refid="class_weapon_manager_1afb53f9a3118143b59cac3dc994dde283" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_PreparedMagazine</name></member>
+      <member refid="class_weapon_manager_1ab45a487655f69e09136a85e9f5534dfa" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_readyToStart</name></member>
+      <member refid="class_weapon_manager_1a696552d0b88dd4bb3a0358378e85ed63" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_SuitableMagazines</name></member>
+      <member refid="class_weapon_manager_1a8fa565ce46e088cf5d164a31e988bbff" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_TargetInventoryLocation</name></member>
+      <member refid="class_weapon_manager_1ab37c05b41f8f20eb32b7cd4e360531f8" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_WaitToSyncJamChance</name></member>
+      <member refid="class_weapon_manager_1a12152fc4cfd3fdd04c0d7f2176c26953" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_WantContinue</name></member>
+      <member refid="class_weapon_manager_1ad6a9f0db000ec4c096414eaa0c9b2c99" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>m_WeaponInHand</name></member>
+      <member refid="class_weapon_manager_1a7f636d2e1ef216dc6f68e7769a040601" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>MAX_DROP_MAGAZINE_DISTANCE_SQ</name></member>
+      <member refid="class_weapon_manager_1a8a0a4c9c0fb68fee6486945434c97e77" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>OnInputUserDataProcess</name></member>
+      <member refid="class_weapon_manager_1a9291937d3df9a3f098b7e7ef65b0cf6b" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>OnLiftWeapon</name></member>
+      <member refid="class_weapon_manager_1aef2c60de95c0261682e67c9711f2f88b" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>OnMagazineAttach</name></member>
+      <member refid="class_weapon_manager_1ae9de798bce777830b6ac606069ab854b" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>OnMagazineDetach</name></member>
+      <member refid="class_weapon_manager_1af8a4bc319364793b02c09be79de48a30" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>OnMagazineInventoryEnter</name></member>
+      <member refid="class_weapon_manager_1af5c296c07aca5fc5b4c01b7021dd2500" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>OnMagazineInventoryExit</name></member>
+      <member refid="class_weapon_manager_1a9d1d81af0c5e819880c43bb9d3c0d44e" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>OnSyncJuncture</name></member>
+      <member refid="class_weapon_manager_1a5f7146ef572e6e30c7c758f5d4b77da6" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>OnWeaponActionEnd</name></member>
+      <member refid="class_weapon_manager_1a3a6428ee800fd228f0a1eba20e57f8cf" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>PrepareInventoryLocationForMagazineSwap</name></member>
+      <member refid="class_weapon_manager_1a4d1188bde812aedc04f8686bf8002935" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>Refresh</name></member>
+      <member refid="class_weapon_manager_1a60242d4d68794607491b892e50c7993a" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>RefreshAnimationState</name></member>
+      <member refid="class_weapon_manager_1aa0f789bb4d8769382045ee290ec53cea" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>SetEjectBulletTryTimestamp</name></member>
+      <member refid="class_weapon_manager_1a4e22c8625376251fb1020e3b912a1fd2" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>SetNextMuzzleMode</name></member>
+      <member refid="class_weapon_manager_1ab79b3bf868a1cb63da66ccf036691322" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>SetRunning</name></member>
+      <member refid="class_weapon_manager_1a0532c84fa04ef1b600d01c08c147e8b9" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>SetSutableMagazines</name></member>
+      <member refid="class_weapon_manager_1a56a248c512ed435d3f7cbaa83a78da01" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>SortMagazineAfterLoad</name></member>
+      <member refid="class_weapon_manager_1ada6b0b4177c209084ae24a2e4168d96d" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>StartAction</name></member>
+      <member refid="class_weapon_manager_1afa516d7a2df92999b1e6c823efbb8cdc" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>StartPendingAction</name></member>
+      <member refid="class_weapon_manager_1a7eceddac7377af3547198e80d70e81e7" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>SwapMagazine</name></member>
+      <member refid="class_weapon_manager_1abbd7d7f87cb0f386c148628562810cd4" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>SwapMagazineEx</name></member>
+      <member refid="class_weapon_manager_1a93cbc845171c191f880ee47fa6f6224b" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>Synchronize</name></member>
+      <member refid="class_weapon_manager_1aabb3883a2036060ef8af292d0308a878" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>Unjam</name></member>
+      <member refid="class_weapon_manager_1a807d90f96a3707d7944cd6bd7159719e" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>Update</name></member>
+      <member refid="class_weapon_manager_1a4f5423d211b1f11de9bc6d03f985c00c" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>WantContinue</name></member>
+      <member refid="class_weapon_manager_1ab914f166fba9d26700e6764450fdbdf5" prot="private" virt="non-virtual"><scope>WeaponManager</scope><name>WeaponManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

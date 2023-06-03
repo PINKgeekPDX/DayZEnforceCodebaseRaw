@@ -1,0 +1,473 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_flare_simulation_8c" kind="file" language="C++">
+    <compoundname>FlareSimulation.c</compoundname>
+    <innerclass refid="class_flare_simulation" prot="public">FlareSimulation</innerclass>
+    <innerclass refid="class_flare_simulation___green" prot="public">FlareSimulation_Green</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_flare_simulation_8c_1a915be1f2ac9cd8986da5313a17d5ea2a" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="class_particle" kindref="compound">Particle</ref></type>
+        <definition>protected Particle m_ParMainFire</definition>
+        <argsstring></argsstring>
+        <name>m_ParMainFire</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="121" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_flare_simulation_8c_1a7c62635efb7628d7a33fbbd4e6e52d07" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="class_effect_sound" kindref="compound">EffectSound</ref></type>
+        <definition>protected EffectSound m_BurningSound</definition>
+        <argsstring></argsstring>
+        <name>m_BurningSound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="122" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_flare_simulation_8c_1abc23bd7a8bdaa65b21933bef2e28a9c9" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="class_flare_light" kindref="compound">FlareLight</ref></type>
+        <definition>protected FlareLight m_FlareLight</definition>
+        <argsstring></argsstring>
+        <name>m_FlareLight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="123" column="21" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_flare_simulation_8c_1ae948e8de827412cae57ea4210868b355" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>const float MAX_FARLIGHT_DIST</definition>
+        <argsstring></argsstring>
+        <name>MAX_FARLIGHT_DIST</name>
+        <initializer>= 40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="124" column="19" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_flare_simulation_8c_1a0183e787b6c513a323e9ae44dc8cf9d7" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>const float MIN_FARLIGHT_DIST</definition>
+        <argsstring></argsstring>
+        <name>MIN_FARLIGHT_DIST</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="125" column="19" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_flare_simulation_8c_1a5da08e43b3e60e582d6c7c61d0484a85" prot="public" static="yes" mutable="no">
+        <type>ref <ref refid="_noise_8c_1aceda78b4f4625e1c9901f7bf4a7f5cf0" kindref="member">NoiseParams</ref></type>
+        <definition>ref NoiseParams m_NoisePar</definition>
+        <argsstring></argsstring>
+        <name>m_NoisePar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="127" column="24" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_flare_simulation_8c_1a86e1f0c51d9f3f8e5fde7e2b257abc49" prot="public" static="no" mutable="no">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float m_LastNoiseTime</definition>
+        <argsstring></argsstring>
+        <name>m_LastNoiseTime</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="128" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_flare_simulation_8c_1a9b026e2c5a6a467ef47e61820ebcd836" prot="public" static="no" mutable="no">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float m_NoiseTimer</definition>
+        <argsstring></argsstring>
+        <name>m_NoiseTimer</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="129" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_flare_simulation_8c_1a62b10ebe9bc403a697f6700d200d6ebe" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>const float NOISE_DELAY</definition>
+        <argsstring></argsstring>
+        <name>NOISE_DELAY</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="130" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_flare_simulation_8c_1a74d14b7c57dc6b1957d2e9abce569299" prot="public" static="yes" mutable="no">
+        <type>protected</type>
+        <definition>protected m_ScriptedLight</definition>
+        <argsstring></argsstring>
+        <name>m_ScriptedLight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="132" column="27" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_flare_simulation_8c_1aae0e58f338e1f6c0361bba2483a6ce2c" prot="public" static="yes" mutable="no">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected int m_ParticleId</definition>
+        <argsstring></argsstring>
+        <name>m_ParticleId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="133" column="22" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_flare_simulation_8c_1a46e13bafb2874db34fc112e861e644aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_flare_simulation" kindref="compound">FlareSimulation</ref> <ref refid="class_entity" kindref="compound">Entity</ref></type>
+        <definition>FlareSimulation Entity FlareSimulation_Red</definition>
+        <argsstring>()</argsstring>
+        <name>FlareSimulation_Red</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="1" column="0" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="120" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="_flare_simulation_8c_1a53e70c3795f499a796b5b9e608ba62af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FlareSimulation_Red::FlareSimulation</definition>
+        <argsstring>()</argsstring>
+        <name>FlareSimulation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="135" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="135" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="_flare_simulation_8c_1a490c6df292994b53a95abae645c0cb96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FlareSimulation_Red::OnActivation</definition>
+        <argsstring>(Entity flare)</argsstring>
+        <name>OnActivation</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref></type>
+          <declname>flare</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="141" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="141" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="_flare_simulation_8c_1a7c19dd66e67484e32b62d9fa5e0ca004" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FlareSimulation_Red::OnTermination</definition>
+        <argsstring>(Entity flare)</argsstring>
+        <name>OnTermination</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref></type>
+          <declname>flare</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="166" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="166" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="_flare_simulation_8c_1a921352e02fe548acf3bc39d9bd3640cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FlareSimulation_Red::OnFire</definition>
+        <argsstring>(Entity flare)</argsstring>
+        <name>OnFire</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref></type>
+          <declname>flare</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="171" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="171" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="_flare_simulation_8c_1ade31e3ee6bc31463e92a024cfc753a8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FlareSimulation_Red::Simulate</definition>
+        <argsstring>(Entity flare)</argsstring>
+        <name>Simulate</name>
+        <param>
+          <type><ref refid="class_entity" kindref="compound">Entity</ref></type>
+          <declname>flare</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="177" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="177" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="_flare_simulation_8c_1ac8605d93219232b363eb3825f65634cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FlareSimulation_Red::CastFlareAINoise</definition>
+        <argsstring>(vector position)</argsstring>
+        <name>CastFlareAINoise</name>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="194" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="194" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="_flare_simulation_8c_1a3bf6e42f20f1aed44417c179466deac6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FlareSimulation_Red::TurnOffDistantLight</definition>
+        <argsstring>()</argsstring>
+        <name>TurnOffDistantLight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="212" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="212" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="_flare_simulation_8c_1a8f3d1bf86d953b33c1371794f5982224" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FlareSimulation_Red::~FlareSimulation</definition>
+        <argsstring>()</argsstring>
+        <name>~FlareSimulation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="223" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="223" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="_flare_simulation_8c_1a95262aa0e14721443e0e0305d1687aa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_flare_simulation___green" kindref="compound">FlareSimulation_Green</ref> <ref refid="class_flare_simulation" kindref="compound">FlareSimulation</ref></type>
+        <definition>FlareSimulation_Green FlareSimulation FlareSimulation_Blue</definition>
+        <argsstring>()</argsstring>
+        <name>FlareSimulation_Blue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="1" column="0" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="138" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="_flare_simulation_8c_1aa3e2c92fdd2d9cad8124228b488d8ce6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FlareSimulation_Blue::FlareSimulation_Green</definition>
+        <argsstring>()</argsstring>
+        <name>FlareSimulation_Green</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" line="139" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c" bodystart="139" bodyend="143"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="_flare_simulation_8c_1a95262aa0e14721443e0e0305d1687aa4" refkind="member"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_flare_simulation" kindref="compound">FlareSimulation</ref><sp/>:<sp/><ref refid="class_entity" kindref="compound">Entity</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_flare_simulation_1ab2730e538de80335129afaf2cff1870f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="class_particle" kindref="compound">Particle</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1ab2730e538de80335129afaf2cff1870f" kindref="member">m_ParMainFire</ref>;</highlight></codeline>
+<codeline lineno="4" refid="class_flare_simulation_1a94d7253c9526eda5f2ae999ac5ad9710" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="class_effect_sound" kindref="compound">EffectSound</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1a94d7253c9526eda5f2ae999ac5ad9710" kindref="member">m_BurningSound</ref>;</highlight></codeline>
+<codeline lineno="5" refid="class_flare_simulation_1a5162e86f780da430269126db101b2c33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="class_flare_light" kindref="compound">FlareLight</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1a5162e86f780da430269126db101b2c33" kindref="member">m_FlareLight</ref>;</highlight></codeline>
+<codeline lineno="6" refid="class_flare_simulation_1a4cac772619c275c63b3700d9ee1f0ba9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1a4cac772619c275c63b3700d9ee1f0ba9" kindref="member">MAX_FARLIGHT_DIST</ref><sp/>=<sp/>40;</highlight></codeline>
+<codeline lineno="7" refid="class_flare_simulation_1ab376a8f4cdf7a0fb28a9cef37992737b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1ab376a8f4cdf7a0fb28a9cef37992737b" kindref="member">MIN_FARLIGHT_DIST</ref><sp/>=<sp/>5;<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9" refid="class_flare_simulation_1a765110f996503690a55a6e8c51c372e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ref<sp/><ref refid="_noise_8c_1aceda78b4f4625e1c9901f7bf4a7f5cf0" kindref="member">NoiseParams</ref><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1a765110f996503690a55a6e8c51c372e5" kindref="member">m_NoisePar</ref>;<sp/></highlight><highlight class="comment">//<sp/>Contains<sp/>the<sp/>noise<sp/>data<sp/>(<sp/>template<sp/>and<sp/>strength<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_flare_simulation_1a801ad4a33f2b19ba9b6d21b68f011495" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1a801ad4a33f2b19ba9b6d21b68f011495" kindref="member">m_LastNoiseTime</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="11" refid="class_flare_simulation_1a05942629b2e3d3eeb044db8d32aa13b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1a05942629b2e3d3eeb044db8d32aa13b1" kindref="member">m_NoiseTimer</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="12" refid="class_flare_simulation_1ae488f187840b9f774b9d3143cd980979" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1ae488f187840b9f774b9d3143cd980979" kindref="member">NOISE_DELAY</ref><sp/>=<sp/>5;<sp/></highlight><highlight class="comment">//<sp/>How<sp/>much<sp/>time<sp/>between<sp/>two<sp/>consecutive<sp/>noise<sp/>pings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14" refid="class_flare_simulation_1af30b3096d87200887272144ec120f3ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_flare_simulation_1af30b3096d87200887272144ec120f3ed" kindref="member">m_ScriptedLight</ref>;</highlight></codeline>
+<codeline lineno="15" refid="class_flare_simulation_1abc5769c8bbd1a3bb11c7f8f6ee2aa98e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1abc5769c8bbd1a3bb11c7f8f6ee2aa98e" kindref="member">m_ParticleId</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17" refid="class_flare_simulation_1a9bc7274330243f06a1709ca512a63201" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_flare_simulation_1a9bc7274330243f06a1709ca512a63201" kindref="member">FlareSimulation</ref>()</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1af30b3096d87200887272144ec120f3ed" kindref="member">m_ScriptedLight</ref><sp/><sp/>=<sp/><ref refid="class_flare_light" kindref="compound">FlareLight</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1abc5769c8bbd1a3bb11c7f8f6ee2aa98e" kindref="member">m_ParticleId</ref><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a8cb1c8e4cf578d99d4c067b3d05487ef" kindref="member">FLAREPROJ_ACTIVATE</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23" refid="class_flare_simulation_1a9c0cc0032b46473535a318b667607ffa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_flare_simulation_1a9c0cc0032b46473535a318b667607ffa" kindref="member">OnActivation</ref>(<ref refid="class_entity" kindref="compound">Entity</ref><sp/>flare)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsServer()<sp/>||<sp/>!<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsMultiplayer()<sp/>)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1a5162e86f780da430269126db101b2c33" kindref="member">m_FlareLight</ref><sp/>=<sp/><ref refid="class_flare_light" kindref="compound">FlareLight</ref>.Cast(<sp/><ref refid="class_scripted_light_base" kindref="compound">ScriptedLightBase</ref>.CreateLight(<sp/><ref refid="class_flare_simulation_1af30b3096d87200887272144ec120f3ed" kindref="member">m_ScriptedLight</ref>,<sp/><ref refid="group___math3_d_a_p_i_1ga5bd1deb1c96276d94eeec6fe40955c41" kindref="member">Vector</ref>(0,0,0)<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_flare_simulation_1a5162e86f780da430269126db101b2c33" kindref="member">m_FlareLight</ref><sp/>)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1a5162e86f780da430269126db101b2c33" kindref="member">m_FlareLight</ref>.AttachOnObject(<sp/>flare<sp/>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_flare_simulation_1ab2730e538de80335129afaf2cff1870f" kindref="member">m_ParMainFire</ref>)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1ab2730e538de80335129afaf2cff1870f" kindref="member">m_ParMainFire</ref>.<ref refid="class_particle_1ae9d5642dc992c942c1ae2f221e064921" kindref="member">Stop</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1ab2730e538de80335129afaf2cff1870f" kindref="member">m_ParMainFire</ref><sp/>=<sp/><ref refid="_particle_manager_8c_1a93ef360e8fc315d276eb8cc256dc3ef8" kindref="member">ParticleManager</ref>.GetInstance().PlayOnObject(<sp/><ref refid="class_flare_simulation_1abc5769c8bbd1a3bb11c7f8f6ee2aa98e" kindref="member">m_ParticleId</ref>,<sp/>flare<sp/>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1ab2730e538de80335129afaf2cff1870f" kindref="member">m_ParMainFire</ref>.<ref refid="class_particle_1a1684ce266800c5b4297d6be685da14bf" kindref="member">SetWiggle</ref>(<sp/>7,<sp/>0.3<sp/>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flare.PlaySoundSetLoop(<sp/><ref refid="class_flare_simulation_1a94d7253c9526eda5f2ae999ac5ad9710" kindref="member">m_BurningSound</ref>,<sp/></highlight><highlight class="stringliteral">&quot;roadflareLoop_SoundSet&quot;</highlight><highlight class="normal">,<sp/>0,<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsServer()<sp/>)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>and<sp/>load<sp/>noise<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1a765110f996503690a55a6e8c51c372e5" kindref="member">m_NoisePar</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_noise_8c_1aceda78b4f4625e1c9901f7bf4a7f5cf0" kindref="member">NoiseParams</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1a765110f996503690a55a6e8c51c372e5" kindref="member">m_NoisePar</ref>.LoadFromPath(</highlight><highlight class="stringliteral">&quot;cfgWeapons<sp/>Flaregun_Base<sp/>NoiseFlare&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="class_flare_simulation_1a92f74660c99a703c64f9936e443ae11b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_flare_simulation_1a92f74660c99a703c64f9936e443ae11b" kindref="member">OnTermination</ref>(<ref refid="class_entity" kindref="compound">Entity</ref><sp/>flare)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//MiscGameplayFunctions.GenerateAINoiseAtPosition(flare.GetPosition(),<sp/>NOISE_DELAY,<sp/>m_NoisePar);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="class_flare_simulation_1ab3d5fdb6a9ffa2e6bede12fae510aac6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_flare_simulation_1ab3d5fdb6a9ffa2e6bede12fae510aac6" kindref="member">OnFire</ref>(<sp/><ref refid="class_entity" kindref="compound">Entity</ref><sp/>flare)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//m_ParMainFire<sp/>=<sp/>ParticleManager.GetInstance().PlayOnObject(<sp/>ParticleList.FLAREPROJ_FIRE,<sp/>flare);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//m_ParMainFire.SetWiggle(<sp/>7,<sp/>0.3);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="class_flare_simulation_1ae91feea70480d21a6c7550526f0b428a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_flare_simulation_1ae91feea70480d21a6c7550526f0b428a" kindref="member">Simulate</ref>(<sp/><ref refid="class_entity" kindref="compound">Entity</ref><sp/>flare<sp/>)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref><sp/>player<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a98e334b5640f57fa731546a0ba86b3be" kindref="member">GetPlayer</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>player<sp/>)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>playerPos<sp/>=<sp/>player.GetPosition();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dist<sp/>=<sp/><ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1a21d8662c860e105943718b2da59349e7" kindref="member">DistanceSq</ref>(flare.GetPosition(),<sp/>playerPos);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(<sp/>dist<sp/>&lt;=<sp/><ref refid="class_flare_simulation_1a4cac772619c275c63b3700d9ee1f0ba9" kindref="member">MAX_FARLIGHT_DIST</ref><sp/>*<sp/><ref refid="class_flare_simulation_1a4cac772619c275c63b3700d9ee1f0ba9" kindref="member">MAX_FARLIGHT_DIST</ref><sp/>)<sp/>&amp;&amp;<sp/>(<sp/>dist<sp/>&gt;<sp/><ref refid="class_flare_simulation_1ab376a8f4cdf7a0fb28a9cef37992737b" kindref="member">MIN_FARLIGHT_DIST</ref><sp/>*<sp/><ref refid="class_flare_simulation_1ab376a8f4cdf7a0fb28a9cef37992737b" kindref="member">MIN_FARLIGHT_DIST</ref><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1ab2730e538de80335129afaf2cff1870f" kindref="member">m_ParMainFire</ref>.<ref refid="class_particle_1a9b937645c781f2112e86556633ee5210" kindref="member">SetParameter</ref>(<sp/>0,<sp/><ref refid="group___particle_effect_1gae0fed29d09aa06a8ca33de9f2b039e4b" kindref="member">EmitorParam</ref>.SIZE,<sp/>MiscGameplayFunctions.Normalize(dist,<sp/><ref refid="class_flare_simulation_1a4cac772619c275c63b3700d9ee1f0ba9" kindref="member">MAX_FARLIGHT_DIST</ref><sp/>*<sp/><ref refid="class_flare_simulation_1a4cac772619c275c63b3700d9ee1f0ba9" kindref="member">MAX_FARLIGHT_DIST</ref>)<sp/>);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>dist<sp/>&lt;=<sp/><ref refid="class_flare_simulation_1ab376a8f4cdf7a0fb28a9cef37992737b" kindref="member">MIN_FARLIGHT_DIST</ref><sp/>*<sp/><ref refid="class_flare_simulation_1ab376a8f4cdf7a0fb28a9cef37992737b" kindref="member">MIN_FARLIGHT_DIST</ref><sp/>)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1a5bc47a50e0a78fd546ab9f7e8c8ad35c" kindref="member">TurnOffDistantLight</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//CastFlareAINoise(<sp/>flare.GetPosition()<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76" refid="class_flare_simulation_1a5095f94bf17920b352ecb6e8794dd1dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_flare_simulation_1a5095f94bf17920b352ecb6e8794dd1dd" kindref="member">CastFlareAINoise</ref>(<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>position<sp/>)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_flare_simulation_1a801ad4a33f2b19ba9b6d21b68f011495" kindref="member">m_LastNoiseTime</ref><sp/>&lt;<sp/>0<sp/>)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1a801ad4a33f2b19ba9b6d21b68f011495" kindref="member">m_LastNoiseTime</ref><sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1aaef5e82614e886a86023cbdc7e85ca47" kindref="member">GetTime</ref>()<sp/>*<sp/>0.0033;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>delta_time<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1aaef5e82614e886a86023cbdc7e85ca47" kindref="member">GetTime</ref>()<sp/>*<sp/>0.0033<sp/>-<sp/><ref refid="class_flare_simulation_1a801ad4a33f2b19ba9b6d21b68f011495" kindref="member">m_LastNoiseTime</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1a801ad4a33f2b19ba9b6d21b68f011495" kindref="member">m_LastNoiseTime</ref><sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1aaef5e82614e886a86023cbdc7e85ca47" kindref="member">GetTime</ref>()<sp/>*<sp/>0.0033;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1a05942629b2e3d3eeb044db8d32aa13b1" kindref="member">m_NoiseTimer</ref><sp/>+=<sp/>delta_time;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_flare_simulation_1a05942629b2e3d3eeb044db8d32aa13b1" kindref="member">m_NoiseTimer</ref><sp/>&gt;=<sp/><ref refid="class_flare_simulation_1ae488f187840b9f774b9d3143cd980979" kindref="member">NOISE_DELAY</ref><sp/>)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MiscGameplayFunctions.GenerateAINoiseAtPosition(position,<sp/><ref refid="class_flare_simulation_1ae488f187840b9f774b9d3143cd980979" kindref="member">NOISE_DELAY</ref>,<sp/><ref refid="class_flare_simulation_1a765110f996503690a55a6e8c51c372e5" kindref="member">m_NoisePar</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1a05942629b2e3d3eeb044db8d32aa13b1" kindref="member">m_NoiseTimer</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94" refid="class_flare_simulation_1a5bc47a50e0a78fd546ab9f7e8c8ad35c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_flare_simulation_1a5bc47a50e0a78fd546ab9f7e8c8ad35c" kindref="member">TurnOffDistantLight</ref>()</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_flare_simulation_1ab2730e538de80335129afaf2cff1870f" kindref="member">m_ParMainFire</ref>)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1ab2730e538de80335129afaf2cff1870f" kindref="member">m_ParMainFire</ref>.<ref refid="class_particle_1a9b937645c781f2112e86556633ee5210" kindref="member">SetParameter</ref>(0,<sp/><ref refid="group___particle_effect_1gae0fed29d09aa06a8ca33de9f2b039e4b" kindref="member">EmitorParam</ref>.LIFETIME,<sp/>0);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1ab2730e538de80335129afaf2cff1870f" kindref="member">m_ParMainFire</ref>.<ref refid="class_particle_1a9b937645c781f2112e86556633ee5210" kindref="member">SetParameter</ref>(0,<sp/><ref refid="group___particle_effect_1gae0fed29d09aa06a8ca33de9f2b039e4b" kindref="member">EmitorParam</ref>.LIFETIME_RND,<sp/>0);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1ab2730e538de80335129afaf2cff1870f" kindref="member">m_ParMainFire</ref>.<ref refid="class_particle_1a9b937645c781f2112e86556633ee5210" kindref="member">SetParameter</ref>(0,<sp/><ref refid="group___particle_effect_1gae0fed29d09aa06a8ca33de9f2b039e4b" kindref="member">EmitorParam</ref>.REPEAT,<sp/>0);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1ab2730e538de80335129afaf2cff1870f" kindref="member">m_ParMainFire</ref>.<ref refid="class_particle_1a9b937645c781f2112e86556633ee5210" kindref="member">SetParameter</ref>(0,<sp/><ref refid="group___particle_effect_1gae0fed29d09aa06a8ca33de9f2b039e4b" kindref="member">EmitorParam</ref>.SIZE,<sp/>0);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105" refid="class_flare_simulation_1a26f91f337498f42b223d8ab888b4c474" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_flare_simulation_1a26f91f337498f42b223d8ab888b4c474" kindref="member">~FlareSimulation</ref>()</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_flare_simulation_1ab2730e538de80335129afaf2cff1870f" kindref="member">m_ParMainFire</ref>)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1ab2730e538de80335129afaf2cff1870f" kindref="member">m_ParMainFire</ref>.<ref refid="class_particle_1ae9d5642dc992c942c1ae2f221e064921" kindref="member">Stop</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_flare_simulation_1a94d7253c9526eda5f2ae999ac5ad9710" kindref="member">m_BurningSound</ref>)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1a94d7253c9526eda5f2ae999ac5ad9710" kindref="member">m_BurningSound</ref>.<ref refid="class_effect_sound_1afb3e761198a4167f611442d60925e1e7" kindref="member">SoundStop</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_flare_simulation_1a5162e86f780da430269126db101b2c33" kindref="member">m_FlareLight</ref>)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1a5162e86f780da430269126db101b2c33" kindref="member">m_FlareLight</ref>.FadeOut();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_flare_simulation_8c_1a46e13bafb2874db34fc112e861e644aa" kindref="member">FlareSimulation_Red</ref><sp/>:<sp/><ref refid="class_flare_simulation" kindref="compound">FlareSimulation</ref></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_flare_simulation_8c_1a46e13bafb2874db34fc112e861e644aa" kindref="member">FlareSimulation_Red</ref>()</highlight></codeline>
+<codeline lineno="121" refid="_flare_simulation_8c_1a915be1f2ac9cd8986da5313a17d5ea2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122" refid="_flare_simulation_8c_1a7c62635efb7628d7a33fbbd4e6e52d07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_flare_simulation_8c_1a74d14b7c57dc6b1957d2e9abce569299" kindref="member">m_ScriptedLight</ref><sp/><sp/>=<sp/><ref refid="class_flare_light_red" kindref="compound">FlareLightRed</ref>;</highlight></codeline>
+<codeline lineno="123" refid="_flare_simulation_8c_1abc23bd7a8bdaa65b21933bef2e28a9c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_flare_simulation_8c_1aae0e58f338e1f6c0361bba2483a6ce2c" kindref="member">m_ParticleId</ref><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1aeaa486928cd998ea988cbca6a4ca7c00" kindref="member">FLAREPROJ_ACTIVATE_RED</ref>;</highlight></codeline>
+<codeline lineno="124" refid="_flare_simulation_8c_1ae948e8de827412cae57ea4210868b355" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125" refid="_flare_simulation_8c_1a0183e787b6c513a323e9ae44dc8cf9d7" refkind="member"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="_flare_simulation_8c_1a5da08e43b3e60e582d6c7c61d0484a85" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_flare_simulation___green" kindref="compound">FlareSimulation_Green</ref><sp/>:<sp/><ref refid="class_flare_simulation" kindref="compound">FlareSimulation</ref></highlight></codeline>
+<codeline lineno="128" refid="_flare_simulation_8c_1a86e1f0c51d9f3f8e5fde7e2b257abc49" refkind="member"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="129" refid="class_flare_simulation___green_1a8fd2563edca94d4d0998d12c692d7128" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_flare_simulation___green_1a8fd2563edca94d4d0998d12c692d7128" kindref="member">FlareSimulation_Green</ref>()</highlight></codeline>
+<codeline lineno="130" refid="_flare_simulation_8c_1a62b10ebe9bc403a697f6700d200d6ebe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1af30b3096d87200887272144ec120f3ed" kindref="member">m_ScriptedLight</ref><sp/><sp/>=<sp/><ref refid="_flare_light_8c_1a1588867af565745d45ae13d858346155" kindref="member">FlareLightGreen</ref>;</highlight></codeline>
+<codeline lineno="132" refid="_flare_simulation_8c_1a74d14b7c57dc6b1957d2e9abce569299" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_flare_simulation_1abc5769c8bbd1a3bb11c7f8f6ee2aa98e" kindref="member">m_ParticleId</ref><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a7ecb567a3e7d269dfc25f45986843926" kindref="member">FLAREPROJ_ACTIVATE_GREEN</ref>;</highlight></codeline>
+<codeline lineno="133" refid="_flare_simulation_8c_1aae0e58f338e1f6c0361bba2483a6ce2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135" refid="_flare_simulation_8c_1a53e70c3795f499a796b5b9e608ba62af" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_flare_simulation_8c_1a95262aa0e14721443e0e0305d1687aa4" kindref="member">FlareSimulation_Blue</ref><sp/>:<sp/><ref refid="class_flare_simulation" kindref="compound">FlareSimulation</ref></highlight></codeline>
+<codeline lineno="137"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_flare_simulation_8c_1a95262aa0e14721443e0e0305d1687aa4" kindref="member">FlareSimulation_Blue</ref>()</highlight></codeline>
+<codeline lineno="139" refid="_flare_simulation_8c_1aa3e2c92fdd2d9cad8124228b488d8ce6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_flare_simulation_8c_1a74d14b7c57dc6b1957d2e9abce569299" kindref="member">m_ScriptedLight</ref><sp/><sp/>=<sp/><ref refid="_flare_light_8c_1a86c3dcae7e6f39a6d3c5194ac5ecc7c8" kindref="member">FlareLightBlue</ref>;</highlight></codeline>
+<codeline lineno="141" refid="_flare_simulation_8c_1a490c6df292994b53a95abae645c0cb96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_flare_simulation_8c_1aae0e58f338e1f6c0361bba2483a6ce2c" kindref="member">m_ParticleId</ref><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1ac465616e229386e85026d16785729e70" kindref="member">FLAREPROJ_ACTIVATE_BLUE</ref>;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/Firearms/FlareSimulation.c"/>
+  </compounddef>
+</doxygen>

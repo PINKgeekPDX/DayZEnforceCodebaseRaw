@@ -1,0 +1,628 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_plugin_remote_player_debug_client_8c" kind="file" language="C++">
+    <compoundname>PluginRemotePlayerDebugClient.c</compoundname>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_plugin_remote_player_debug_client_8c_1a3c67c40c8784545258a78499d40ad4cb" prot="public" static="no" strong="no">
+        <type></type>
+        <name>eRemoteDebugType</name>
+        <enumvalue id="_plugin_remote_player_debug_client_8c_1a3c67c40c8784545258a78499d40ad4cbac157bdf0b85a40d2619cbc8bc1ae5fe2" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_plugin_remote_player_debug_client_8c_1a3c67c40c8784545258a78499d40ad4cba65d238dbe7e6b139bf6001519227b330" prot="public">
+          <name>DAMAGE_ONLY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_plugin_remote_player_debug_client_8c_1a3c67c40c8784545258a78499d40ad4cbab1d5eac4b1dca480c8056eaea7663b7a" prot="public">
+          <name>ALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="1" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="2" bodyend="6"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_plugin_remote_player_debug_client_8c_1ac7ce728a8564ce85c9d58f2572bdbdc2" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_plugin_remote_player_debug_client_8c_1a3c67c40c8784545258a78499d40ad4cb" kindref="member">eRemoteDebugType</ref></type>
+        <definition>enum eRemoteDebugType MAX_SIMULTANIOUS_PLAYERS</definition>
+        <argsstring></argsstring>
+        <name>MAX_SIMULTANIOUS_PLAYERS</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="10" column="36"/>
+      </memberdef>
+      <memberdef kind="variable" id="_plugin_remote_player_debug_client_8c_1ab9d12254392a7437f54fb90d69b2a5c0" prot="public" static="no" mutable="no">
+        <type>ref <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="_remote_player_stat_debug_8c_1aba93fe37bc958ee086cbf5ae61268335" kindref="member">RemotePlayerStatDebug</ref> &gt;</type>
+        <definition>ref array&lt;ref RemotePlayerStatDebug&gt; m_PlayerDebugStats</definition>
+        <argsstring></argsstring>
+        <name>m_PlayerDebugStats</name>
+        <initializer>= new <ref refid="classarray" kindref="compound">array</ref>&lt;ref <ref refid="_remote_player_stat_debug_8c_1aba93fe37bc958ee086cbf5ae61268335" kindref="member">RemotePlayerStatDebug</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="11" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_plugin_remote_player_debug_client_8c_1a31de55455efdba9dc6b617b55972e505" prot="public" static="no" mutable="no">
+        <type>ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="class_player_base" kindref="compound">PlayerBase</ref>, ref <ref refid="class_remote_player_damage_debug" kindref="compound">RemotePlayerDamageDebug</ref> &gt;</type>
+        <definition>ref map&lt;PlayerBase, ref RemotePlayerDamageDebug&gt; m_PlayerDebugDamage</definition>
+        <argsstring></argsstring>
+        <name>m_PlayerDebugDamage</name>
+        <initializer>= new <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt;<ref refid="class_player_base" kindref="compound">PlayerBase</ref>,ref <ref refid="class_remote_player_damage_debug" kindref="compound">RemotePlayerDamageDebug</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="12" column="9" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_plugin_remote_player_debug_client_8c_1a8ba0557daf8b627a8c8f89783367a683" prot="public" static="no" mutable="no">
+        <type>ref <ref refid="class_widget" kindref="compound">Widget</ref></type>
+        <definition>ref Widget m_RootWidget[MAX_SIMULTANIOUS_PLAYERS]</definition>
+        <argsstring>[MAX_SIMULTANIOUS_PLAYERS]</argsstring>
+        <name>m_RootWidget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="14" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_plugin_remote_player_debug_client_8c_1acf4ac4fa3c046ff094724f45d11abceb" prot="public" static="no" mutable="no">
+        <type>ref <ref refid="class_widget" kindref="compound">Widget</ref></type>
+        <definition>ref Widget m_RootWidgetDamage[MAX_SIMULTANIOUS_PLAYERS]</definition>
+        <argsstring>[MAX_SIMULTANIOUS_PLAYERS]</argsstring>
+        <name>m_RootWidgetDamage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="15" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_plugin_remote_player_debug_client_8c_1a545ea8e92fb00d2ba9de5a59a925c16e" prot="public" static="no" mutable="no">
+        <type>ref TextListboxWidget</type>
+        <definition>ref TextListboxWidget m_StatListWidgets[MAX_SIMULTANIOUS_PLAYERS]</definition>
+        <argsstring>[MAX_SIMULTANIOUS_PLAYERS]</argsstring>
+        <name>m_StatListWidgets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="16" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_plugin_remote_player_debug_client_8c_1a69d10e6ed47dcdea177599d6405dc56f" prot="public" static="no" mutable="no">
+        <type>ref TextListboxWidget</type>
+        <definition>ref TextListboxWidget m_DamageListWidgets[MAX_SIMULTANIOUS_PLAYERS]</definition>
+        <argsstring>[MAX_SIMULTANIOUS_PLAYERS]</argsstring>
+        <name>m_DamageListWidgets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="17" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_plugin_remote_player_debug_client_8c_1a25da834b9e374a6f04944fd5490d418d" prot="public" static="no" mutable="no">
+        <type>ref <ref refid="class_text_widget" kindref="compound">TextWidget</ref></type>
+        <definition>ref TextWidget m_DistanceWidget[MAX_SIMULTANIOUS_PLAYERS]</definition>
+        <argsstring>[MAX_SIMULTANIOUS_PLAYERS]</argsstring>
+        <name>m_DistanceWidget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="18" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_plugin_remote_player_debug_client_8c_1a276723feb712a3b6c3bd8bb20b7b7617" prot="public" static="no" mutable="no">
+        <type><ref refid="_plugin_remote_player_debug_client_8c_1a3c67c40c8784545258a78499d40ad4cb" kindref="member">eRemoteDebugType</ref></type>
+        <definition>eRemoteDebugType m_DebugType</definition>
+        <argsstring></argsstring>
+        <name>m_DebugType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="19" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_plugin_remote_player_debug_client_8c_1a01f1070c46e4cc24d25a0ea0869bc972" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnInit</definition>
+        <argsstring>()</argsstring>
+        <name>OnInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="21" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="21" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="_plugin_remote_player_debug_client_8c_1ada777685abe2f010988b4924f95e76bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnUpdate</definition>
+        <argsstring>(float delta_time)</argsstring>
+        <name>OnUpdate</name>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>delta_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="28" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="28" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="_plugin_remote_player_debug_client_8c_1abe86e971e9029c5e50a9cb2ca809d032" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitWidgets</definition>
+        <argsstring>()</argsstring>
+        <name>InitWidgets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="35" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="35" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="_plugin_remote_player_debug_client_8c_1a3220896629361cbdfbfb507dcf9859ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EnableWidgets</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>EnableWidgets</name>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="47" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="47" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="_plugin_remote_player_debug_client_8c_1a8fcbc6976bbed4f8f1a88bcf438ef2be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateWidgetsStats</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateWidgetsStats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="56" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="56" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="_plugin_remote_player_debug_client_8c_1a841bc1be9601fd8b7be6f0dd10a16fc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateDamageWidget</definition>
+        <argsstring>(int index, PlayerBase player)</argsstring>
+        <name>UpdateDamageWidget</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="96" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="96" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="_plugin_remote_player_debug_client_8c_1a194e4f966dea1d4fedcf4ced2e619644" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateDistanceWidget</definition>
+        <argsstring>(int index, PlayerBase other_player)</argsstring>
+        <name>UpdateDistanceWidget</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>other_player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="127" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="127" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="_plugin_remote_player_debug_client_8c_1a7ff5c5fff6c53e2fc02bcbea99008791" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateStatsWidget</definition>
+        <argsstring>(int index, RemotePlayerStatDebug rpd)</argsstring>
+        <name>UpdateStatsWidget</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="_remote_player_stat_debug_8c_1aba93fe37bc958ee086cbf5ae61268335" kindref="member">RemotePlayerStatDebug</ref></type>
+          <declname>rpd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="133" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="133" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="_plugin_remote_player_debug_client_8c_1a8b6f72fdaff5d841039ea6c1f045485e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RequestPlayerInfo</definition>
+        <argsstring>(PlayerBase player, int type)</argsstring>
+        <name>RequestPlayerInfo</name>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="148" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="148" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="_plugin_remote_player_debug_client_8c_1acf304cdc224f30c75e3370e42dd51318" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MergeDamage</definition>
+        <argsstring>(array&lt; ref RemotePlayerDamageDebug &gt; delta)</argsstring>
+        <name>MergeDamage</name>
+        <param>
+          <type><ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_remote_player_damage_debug" kindref="compound">RemotePlayerDamageDebug</ref> &gt;</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="168" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="168" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="_plugin_remote_player_debug_client_8c_1a51e90984f793ccc6cdc8baf1d5e2b86f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DebugDamage</definition>
+        <argsstring>(PlayerBase player)</argsstring>
+        <name>DebugDamage</name>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="198" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="198" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="_plugin_remote_player_debug_client_8c_1abdc765142c7d9fa2c017982090949738" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnRPC</definition>
+        <argsstring>(ParamsReadContext ctx)</argsstring>
+        <name>OnRPC</name>
+        <param>
+          <type><ref refid="gameplay_8c_1a4ff67286551fc6c18504752a277c8bc1" kindref="member">ParamsReadContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" line="226" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c" bodystart="226" bodyend="248"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="_plugin_remote_player_debug_client_8c_1a3c67c40c8784545258a78499d40ad4cb" refkind="member"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a3c67c40c8784545258a78499d40ad4cb" kindref="member">eRemoteDebugType</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="_plugin_remote_player_debug_client_8c_1a3c67c40c8784545258a78499d40ad4cbac157bdf0b85a40d2619cbc8bc1ae5fe2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a3c67c40c8784545258a78499d40ad4cbac157bdf0b85a40d2619cbc8bc1ae5fe2" kindref="member">NONE</ref>,</highlight></codeline>
+<codeline lineno="4" refid="_plugin_remote_player_debug_client_8c_1a3c67c40c8784545258a78499d40ad4cba65d238dbe7e6b139bf6001519227b330" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a3c67c40c8784545258a78499d40ad4cba65d238dbe7e6b139bf6001519227b330" kindref="member">DAMAGE_ONLY</ref>,</highlight></codeline>
+<codeline lineno="5" refid="_plugin_remote_player_debug_client_8c_1a3c67c40c8784545258a78499d40ad4cbab1d5eac4b1dca480c8056eaea7663b7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a3c67c40c8784545258a78499d40ad4cbab1d5eac4b1dca480c8056eaea7663b7a" kindref="member">ALL</ref>,</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">PluginRemotePlayerDebugClient<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_plugin_base" kindref="compound">PluginBase</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10" refid="_plugin_remote_player_debug_client_8c_1ac7ce728a8564ce85c9d58f2572bdbdc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_plugin_remote_player_debug_client_8c_1ac7ce728a8564ce85c9d58f2572bdbdc2" kindref="member">MAX_SIMULTANIOUS_PLAYERS</ref><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="11" refid="_plugin_remote_player_debug_client_8c_1ab9d12254392a7437f54fb90d69b2a5c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="classarray" kindref="compound">array&lt;ref RemotePlayerStatDebug&gt;</ref><sp/><ref refid="_plugin_remote_player_debug_client_8c_1ab9d12254392a7437f54fb90d69b2a5c0" kindref="member">m_PlayerDebugStats</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ref RemotePlayerStatDebug&gt;</ref>;</highlight></codeline>
+<codeline lineno="12" refid="_plugin_remote_player_debug_client_8c_1a31de55455efdba9dc6b617b55972e505" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map&lt;PlayerBase, ref RemotePlayerDamageDebug&gt;</ref><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a31de55455efdba9dc6b617b55972e505" kindref="member">m_PlayerDebugDamage</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map&lt;PlayerBase,ref RemotePlayerDamageDebug&gt;</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14" refid="_plugin_remote_player_debug_client_8c_1a8ba0557daf8b627a8c8f89783367a683" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="class_widget" kindref="compound">Widget</ref><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a8ba0557daf8b627a8c8f89783367a683" kindref="member">m_RootWidget</ref>[<ref refid="_plugin_remote_player_debug_client_8c_1ac7ce728a8564ce85c9d58f2572bdbdc2" kindref="member">MAX_SIMULTANIOUS_PLAYERS</ref>];</highlight></codeline>
+<codeline lineno="15" refid="_plugin_remote_player_debug_client_8c_1acf4ac4fa3c046ff094724f45d11abceb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="class_widget" kindref="compound">Widget</ref><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1acf4ac4fa3c046ff094724f45d11abceb" kindref="member">m_RootWidgetDamage</ref>[<ref refid="_plugin_remote_player_debug_client_8c_1ac7ce728a8564ce85c9d58f2572bdbdc2" kindref="member">MAX_SIMULTANIOUS_PLAYERS</ref>];</highlight></codeline>
+<codeline lineno="16" refid="_plugin_remote_player_debug_client_8c_1a545ea8e92fb00d2ba9de5a59a925c16e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/>TextListboxWidget<sp/><ref refid="_plugin_remote_player_debug_client_8c_1a545ea8e92fb00d2ba9de5a59a925c16e" kindref="member">m_StatListWidgets</ref>[<ref refid="_plugin_remote_player_debug_client_8c_1ac7ce728a8564ce85c9d58f2572bdbdc2" kindref="member">MAX_SIMULTANIOUS_PLAYERS</ref>];</highlight></codeline>
+<codeline lineno="17" refid="_plugin_remote_player_debug_client_8c_1a69d10e6ed47dcdea177599d6405dc56f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/>TextListboxWidget<sp/><ref refid="_plugin_remote_player_debug_client_8c_1a69d10e6ed47dcdea177599d6405dc56f" kindref="member">m_DamageListWidgets</ref>[<ref refid="_plugin_remote_player_debug_client_8c_1ac7ce728a8564ce85c9d58f2572bdbdc2" kindref="member">MAX_SIMULTANIOUS_PLAYERS</ref>];</highlight></codeline>
+<codeline lineno="18" refid="_plugin_remote_player_debug_client_8c_1a25da834b9e374a6f04944fd5490d418d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="class_text_widget" kindref="compound">TextWidget</ref><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a25da834b9e374a6f04944fd5490d418d" kindref="member">m_DistanceWidget</ref>[<ref refid="_plugin_remote_player_debug_client_8c_1ac7ce728a8564ce85c9d58f2572bdbdc2" kindref="member">MAX_SIMULTANIOUS_PLAYERS</ref>];</highlight></codeline>
+<codeline lineno="19" refid="_plugin_remote_player_debug_client_8c_1a276723feb712a3b6c3bd8bb20b7b7617" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a3c67c40c8784545258a78499d40ad4cb" kindref="member">eRemoteDebugType</ref><sp/><ref refid="class_plugin_base_1ab9b9515a9f54fece194e7073142db17a" kindref="member">m_DebugType</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21" refid="_plugin_remote_player_debug_client_8c_1a01f1070c46e4cc24d25a0ea0869bc972" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_plugin_base_1a8f77e5e68a7f44a1f13990058beef710" kindref="member">OnInit</ref>()</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifndef<sp/>NO_GUI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_plugin_base_1a4210e312b7c9e40058ff5b39b5b17ebb" kindref="member">InitWidgets</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="_plugin_remote_player_debug_client_8c_1ada777685abe2f010988b4924f95e76bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___tools_1gab414e48870421e21bf5553f4033493b0" kindref="member">OnUpdate</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>delta_time)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifndef<sp/>NO_GUI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_plugin_remote_player_debug_client_8c_1a276723feb712a3b6c3bd8bb20b7b7617" kindref="member">m_DebugType</ref><sp/>!=0<sp/>)<sp/><ref refid="_plugin_remote_player_debug_client_8c_1a8fcbc6976bbed4f8f1a88bcf438ef2be" kindref="member">UpdateWidgetsStats</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="_plugin_remote_player_debug_client_8c_1abe86e971e9029c5e50a9cb2ca809d032" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_plugin_base_1a4210e312b7c9e40058ff5b39b5b17ebb" kindref="member">InitWidgets</ref>()</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="_plugin_remote_player_debug_client_8c_1ac7ce728a8564ce85c9d58f2572bdbdc2" kindref="member">MAX_SIMULTANIOUS_PLAYERS</ref>;<sp/>++i)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a8ba0557daf8b627a8c8f89783367a683" kindref="member">m_RootWidget</ref>[i]<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a9acfc7077cec18228fcafc8649054e66" kindref="member">GetWorkspace</ref>().<ref refid="group___widget_a_p_i_1ga28f2c34f1fa5af85b32e1a11ef6f6024" kindref="member">CreateWidgets</ref>(</highlight><highlight class="stringliteral">&quot;gui/layouts/debug/day_z_debug_remoteinfo.layout&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1acf4ac4fa3c046ff094724f45d11abceb" kindref="member">m_RootWidgetDamage</ref>[i]<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a9acfc7077cec18228fcafc8649054e66" kindref="member">GetWorkspace</ref>().<ref refid="group___widget_a_p_i_1ga28f2c34f1fa5af85b32e1a11ef6f6024" kindref="member">CreateWidgets</ref>(</highlight><highlight class="stringliteral">&quot;gui/layouts/debug/day_z_debug_remoteinfo_damage.layout&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a69d10e6ed47dcdea177599d6405dc56f" kindref="member">m_DamageListWidgets</ref>[i]<sp/>=<sp/>TextListboxWidget.Cast(<ref refid="_plugin_remote_player_debug_client_8c_1acf4ac4fa3c046ff094724f45d11abceb" kindref="member">m_RootWidgetDamage</ref>[i].<ref refid="group___widget_a_p_i_1ga4c60c2c4f7361799eda0405af7eb5342" kindref="member">FindAnyWidget</ref>(</highlight><highlight class="stringliteral">&quot;TextListboxWidget1&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a545ea8e92fb00d2ba9de5a59a925c16e" kindref="member">m_StatListWidgets</ref>[i]<sp/>=<sp/>TextListboxWidget.Cast(<ref refid="_plugin_remote_player_debug_client_8c_1a8ba0557daf8b627a8c8f89783367a683" kindref="member">m_RootWidget</ref>[i].<ref refid="group___widget_a_p_i_1ga4c60c2c4f7361799eda0405af7eb5342" kindref="member">FindAnyWidget</ref>(</highlight><highlight class="stringliteral">&quot;TextListboxWidget0&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a25da834b9e374a6f04944fd5490d418d" kindref="member">m_DistanceWidget</ref>[i]<sp/>=<sp/><ref refid="class_text_widget" kindref="compound">TextWidget</ref>.Cast(<ref refid="_plugin_remote_player_debug_client_8c_1a8ba0557daf8b627a8c8f89783367a683" kindref="member">m_RootWidget</ref>[i].<ref refid="group___widget_a_p_i_1ga4c60c2c4f7361799eda0405af7eb5342" kindref="member">FindAnyWidget</ref>(</highlight><highlight class="stringliteral">&quot;TextWidget0&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="_plugin_remote_player_debug_client_8c_1a3220896629361cbdfbfb507dcf9859ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_plugin_base_1af317b9ce1d84f24ea37e65e04cec8a89" kindref="member">EnableWidgets</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="_plugin_remote_player_debug_client_8c_1ac7ce728a8564ce85c9d58f2572bdbdc2" kindref="member">MAX_SIMULTANIOUS_PLAYERS</ref>;<sp/>++i)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a8ba0557daf8b627a8c8f89783367a683" kindref="member">m_RootWidget</ref>[i].Show(enable);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1acf4ac4fa3c046ff094724f45d11abceb" kindref="member">m_RootWidgetDamage</ref>[i].Show(enable);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="_plugin_remote_player_debug_client_8c_1a8fcbc6976bbed4f8f1a88bcf438ef2be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a8fcbc6976bbed4f8f1a88bcf438ef2be" kindref="member">UpdateWidgetsStats</ref>()</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>i<sp/>&lt;<sp/><ref refid="_plugin_remote_player_debug_client_8c_1ab9d12254392a7437f54fb90d69b2a5c0" kindref="member">m_PlayerDebugStats</ref>.Count();<sp/>++i)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_remote_player_stat_debug_8c_1aba93fe37bc958ee086cbf5ae61268335" kindref="member">RemotePlayerStatDebug</ref><sp/>rpd<sp/>=<sp/><ref refid="_plugin_remote_player_debug_client_8c_1ab9d12254392a7437f54fb90d69b2a5c0" kindref="member">m_PlayerDebugStats</ref>.Get(i);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player<sp/>=<sp/>rpd.GetPlayer();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(player)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>pos<sp/>=<sp/>player.GetPosition();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>screen_pos_stats<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a38e476f1a0254e1533d606f35719caef" kindref="member">GetScreenPos</ref>(pos<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>screen_pos_damage<sp/>=<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a38e476f1a0254e1533d606f35719caef" kindref="member">GetScreenPos</ref>(pos<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>2<sp/>0&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a8ba0557daf8b627a8c8f89783367a683" kindref="member">m_RootWidget</ref>[i].SetPos(screen_pos_stats[0],<sp/>screen_pos_stats[1]);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1acf4ac4fa3c046ff094724f45d11abceb" kindref="member">m_RootWidgetDamage</ref>[i].SetPos(screen_pos_damage[0],<sp/>screen_pos_damage[1]);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(screen_pos_stats[2]<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>screen_pos_stats[0]<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>screen_pos_stats[1]<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a8ba0557daf8b627a8c8f89783367a683" kindref="member">m_RootWidget</ref>[i].Show(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1acf4ac4fa3c046ff094724f45d11abceb" kindref="member">m_RootWidgetDamage</ref>[i].Show(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a7ff5c5fff6c53e2fc02bcbea99008791" kindref="member">UpdateStatsWidget</ref>(i,<sp/>rpd);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a194e4f966dea1d4fedcf4ced2e619644" kindref="member">UpdateDistanceWidget</ref>(i,<sp/>player);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a841bc1be9601fd8b7be6f0dd10a16fc1" kindref="member">UpdateDamageWidget</ref>(i,<sp/>player);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a8ba0557daf8b627a8c8f89783367a683" kindref="member">m_RootWidget</ref>[i].Show(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1acf4ac4fa3c046ff094724f45d11abceb" kindref="member">m_RootWidgetDamage</ref>[i].Show(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>i<sp/>&lt;<sp/><ref refid="_plugin_remote_player_debug_client_8c_1ac7ce728a8564ce85c9d58f2572bdbdc2" kindref="member">MAX_SIMULTANIOUS_PLAYERS</ref>;<sp/>++i)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a8ba0557daf8b627a8c8f89783367a683" kindref="member">m_RootWidget</ref>[i].Show(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1acf4ac4fa3c046ff094724f45d11abceb" kindref="member">m_RootWidgetDamage</ref>[i].Show(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96" refid="_plugin_remote_player_debug_client_8c_1a841bc1be9601fd8b7be6f0dd10a16fc1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a841bc1be9601fd8b7be6f0dd10a16fc1" kindref="member">UpdateDamageWidget</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;ref DamageData&gt;</ref><sp/>damage_list<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ref DamageData&gt;</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_plugin_remote_player_debug_client_8c_1a31de55455efdba9dc6b617b55972e505" kindref="member">m_PlayerDebugDamage</ref>.Contains(player))</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_remote_player_damage_debug" kindref="compound">RemotePlayerDamageDebug</ref><sp/>value<sp/>=<sp/><ref refid="_plugin_remote_player_debug_client_8c_1a31de55455efdba9dc6b617b55972e505" kindref="member">m_PlayerDebugDamage</ref>.Get(player);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value.<ref refid="class_remote_player_damage_debug_1ad62695cf1b488a573e36de1c8eeabb4f" kindref="member">GetReversed</ref>(damage_list);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a69d10e6ed47dcdea177599d6405dc56f" kindref="member">m_DamageListWidgets</ref>[index].ClearItems();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(damage_list.Count()<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a69d10e6ed47dcdea177599d6405dc56f" kindref="member">m_DamageListWidgets</ref>[index].Show(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>damage_list.Count();<sp/>++i)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_damage_data" kindref="compound">DamageData</ref><sp/>data<sp/>=<sp/>damage_list[i];</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value_global<sp/>=<sp/>data.<ref refid="class_damage_data_1acbcb62b4d9ac8d68df3454645d256bfe" kindref="member">GetValueGlobal</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value_blood<sp/>=<sp/>data.<ref refid="class_damage_data_1a92acbb1efa4ab556eb006108547a90e0" kindref="member">GetValueBlood</ref>();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value_shock<sp/>=<sp/>data.<ref refid="class_damage_data_1a463c63b961b66d52962ebf5153537ac3" kindref="member">GetValueShock</ref>();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a69d10e6ed47dcdea177599d6405dc56f" kindref="member">m_DamageListWidgets</ref>[index].AddItem(<sp/>value_global.<ref refid="classfloat_1a9aba6f516b6f38a950c55fa9d0b24afb" kindref="member">ToString</ref>(),<sp/>null,<sp/>0,<sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a69d10e6ed47dcdea177599d6405dc56f" kindref="member">m_DamageListWidgets</ref>[index].SetItem(<sp/>i,<sp/>value_blood.<ref refid="classfloat_1a9aba6f516b6f38a950c55fa9d0b24afb" kindref="member">ToString</ref>(),<sp/>null,<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a69d10e6ed47dcdea177599d6405dc56f" kindref="member">m_DamageListWidgets</ref>[index].SetItem(<sp/>i,<sp/>value_shock.<ref refid="classfloat_1a9aba6f516b6f38a950c55fa9d0b24afb" kindref="member">ToString</ref>(),<sp/>null,<sp/>2<sp/>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a69d10e6ed47dcdea177599d6405dc56f" kindref="member">m_DamageListWidgets</ref>[index].Show(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="127" refid="_plugin_remote_player_debug_client_8c_1a194e4f966dea1d4fedcf4ced2e619644" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a194e4f966dea1d4fedcf4ced2e619644" kindref="member">UpdateDistanceWidget</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>other_player)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>distance<sp/>=<sp/><ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1aad57f4c847a6ad08cf88f390961dd2db" kindref="member">Distance</ref>(<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().GetCurrentCameraPosition(),<sp/>other_player.GetPosition());</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a25da834b9e374a6f04944fd5490d418d" kindref="member">m_DistanceWidget</ref>[index].SetText(distance.<ref refid="classfloat_1a9aba6f516b6f38a950c55fa9d0b24afb" kindref="member">ToString</ref>()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;m&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133" refid="_plugin_remote_player_debug_client_8c_1a7ff5c5fff6c53e2fc02bcbea99008791" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a7ff5c5fff6c53e2fc02bcbea99008791" kindref="member">UpdateStatsWidget</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/><ref refid="_remote_player_stat_debug_8c_1aba93fe37bc958ee086cbf5ae61268335" kindref="member">RemotePlayerStatDebug</ref><sp/>rpd)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;string&gt;</ref><sp/>names<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;string&gt;</ref>;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;string&gt;</ref><sp/>values<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;string&gt;</ref>;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rpd.SerializeNames(names,<sp/><ref refid="_plugin_remote_player_debug_client_8c_1a276723feb712a3b6c3bd8bb20b7b7617" kindref="member">m_DebugType</ref>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rpd.SerializeValues(values,<ref refid="_plugin_remote_player_debug_client_8c_1a276723feb712a3b6c3bd8bb20b7b7617" kindref="member">m_DebugType</ref>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a545ea8e92fb00d2ba9de5a59a925c16e" kindref="member">m_StatListWidgets</ref>[index].ClearItems();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>names.Count();<sp/>++i)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a545ea8e92fb00d2ba9de5a59a925c16e" kindref="member">m_StatListWidgets</ref>[index].AddItem(<sp/>names.Get(i),<sp/>null,<sp/>0,<sp/>i<sp/>);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a545ea8e92fb00d2ba9de5a59a925c16e" kindref="member">m_StatListWidgets</ref>[index].SetItem(<sp/>i,<sp/>values.Get(i),<sp/>null,<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="_plugin_remote_player_debug_client_8c_1a8b6f72fdaff5d841039ea6c1f045485e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a8b6f72fdaff5d841039ea6c1f045485e" kindref="member">RequestPlayerInfo</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DIAG_DEVELOPER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_plugin_base_1af317b9ce1d84f24ea37e65e04cec8a89" kindref="member">EnableWidgets</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="156"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline lineno="157"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EnableWidgets(true);</highlight></codeline>
+<codeline lineno="159"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="160"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_script_r_p_c" kindref="compound">ScriptRPC</ref><sp/>rpc<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_script_r_p_c" kindref="compound">ScriptRPC</ref>();</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a276723feb712a3b6c3bd8bb20b7b7617" kindref="member">m_DebugType</ref><sp/>=<sp/>type;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rpc.<ref refid="class_serializer_1a3568bd9439217225013ea9906eb09a3f" kindref="member">Write</ref>(type);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rpc.<ref refid="class_script_r_p_c_1a96f5185fa93cf7f008fba76a0e7729b9" kindref="member">Send</ref>(<sp/>player,<sp/><ref refid="_e_r_p_cs_8c_1a6ce2d98a3b8fbdba5b450abf2d6eab37" kindref="member">ERPCs</ref>.DEV_PLAYER_DEBUG_REQUEST,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>player.GetIdentity()<sp/>);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="168" refid="_plugin_remote_player_debug_client_8c_1acf304cdc224f30c75e3370e42dd51318" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_plugin_remote_player_debug_client_8c_1acf304cdc224f30c75e3370e42dd51318" kindref="member">MergeDamage</ref>(<sp/><ref refid="classarray" kindref="compound">array&lt;ref RemotePlayerDamageDebug&gt;</ref><sp/>delta<sp/>)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(<ref refid="class_remote_player_damage_debug" kindref="compound">RemotePlayerDamageDebug</ref><sp/>valueDelta<sp/>:<sp/>delta)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>playerDelta<sp/>=<sp/>valueDelta.GetPlayer();</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_plugin_remote_player_debug_client_8c_1a31de55455efdba9dc6b617b55972e505" kindref="member">m_PlayerDebugDamage</ref>.Contains(null)<sp/>)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//cleans<sp/>up<sp/>garbage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a31de55455efdba9dc6b617b55972e505" kindref="member">m_PlayerDebugDamage</ref>.Remove(null);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_plugin_remote_player_debug_client_8c_1a31de55455efdba9dc6b617b55972e505" kindref="member">m_PlayerDebugDamage</ref>.Contains(playerDelta)<sp/>)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_remote_player_damage_debug" kindref="compound">RemotePlayerDamageDebug</ref><sp/>valueLocal<sp/>=<sp/><ref refid="_plugin_remote_player_debug_client_8c_1a31de55455efdba9dc6b617b55972e505" kindref="member">m_PlayerDebugDamage</ref>.Get(playerDelta);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;ref DamageData&gt;</ref><sp/>damageList<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ref DamageData&gt;</ref>;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>valueDelta.GetReversed(damageList);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(<ref refid="class_damage_data" kindref="compound">DamageData</ref><sp/>data<sp/>:<sp/>damageList)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>valueLocal.<ref refid="class_remote_player_damage_debug_1a3ebe65f7f9d801b35a7cc870ce21097a" kindref="member">InsertDamageObject</ref>(<sp/>data<sp/>);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a31de55455efdba9dc6b617b55972e505" kindref="member">m_PlayerDebugDamage</ref>.Insert(playerDelta,<sp/>valueDelta);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="198" refid="_plugin_remote_player_debug_client_8c_1a51e90984f793ccc6cdc8baf1d5e2b86f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_plugin_remote_player_debug_client_8c_1a51e90984f793ccc6cdc8baf1d5e2b86f" kindref="member">DebugDamage</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="_plugin_remote_player_debug_client_8c_1ab9d12254392a7437f54fb90d69b2a5c0" kindref="member">m_PlayerDebugStats</ref>.Count();<sp/>i++)</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>player<sp/>=<sp/><ref refid="_plugin_remote_player_debug_client_8c_1ab9d12254392a7437f54fb90d69b2a5c0" kindref="member">m_PlayerDebugStats</ref>.Get(i).GetPlayer();</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___enforce_1ga57f32b036e535bd975e903bb47bc7c3c" kindref="member">PrintString</ref>(</highlight><highlight class="stringliteral">&quot;player:&quot;</highlight><highlight class="normal"><sp/>+<sp/>player.ToString()<sp/>);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_plugin_remote_player_debug_client_8c_1ab9d12254392a7437f54fb90d69b2a5c0" kindref="member">m_PlayerDebugStats</ref>.Get(i).Debug();</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___enforce_1ga57f32b036e535bd975e903bb47bc7c3c" kindref="member">PrintString</ref>(</highlight><highlight class="stringliteral">&quot;-------------------------------------&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="_plugin_remote_player_debug_client_8c_1a31de55455efdba9dc6b617b55972e505" kindref="member">m_PlayerDebugDamage</ref>.Count();<sp/>i++)</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___enforce_1ga57f32b036e535bd975e903bb47bc7c3c" kindref="member">PrintString</ref>(</highlight><highlight class="stringliteral">&quot;-------------------------------------&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="_plugin_remote_player_debug_client_8c_1a31de55455efdba9dc6b617b55972e505" kindref="member">m_PlayerDebugDamage</ref>.GetElement(i)<sp/>)<sp/><ref refid="_plugin_remote_player_debug_client_8c_1a31de55455efdba9dc6b617b55972e505" kindref="member">m_PlayerDebugDamage</ref>.GetElement(i).Debug();</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___enforce_1ga57f32b036e535bd975e903bb47bc7c3c" kindref="member">PrintString</ref>(</highlight><highlight class="stringliteral">&quot;-------------------------------------&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="_plugin_remote_player_debug_client_8c_1a31de55455efdba9dc6b617b55972e505" kindref="member">m_PlayerDebugDamage</ref>.Count();i++)</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___enforce_1ga57f32b036e535bd975e903bb47bc7c3c" kindref="member">PrintString</ref>(</highlight><highlight class="stringliteral">&quot;------------Debug<sp/>Damage<sp/>Start--------------&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player2<sp/>=<sp/><ref refid="_plugin_remote_player_debug_client_8c_1a31de55455efdba9dc6b617b55972e505" kindref="member">m_PlayerDebugDamage</ref>.GetKey(i);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_remote_player_damage_debug" kindref="compound">RemotePlayerDamageDebug</ref><sp/>obj<sp/>=<sp/><ref refid="_plugin_remote_player_debug_client_8c_1a31de55455efdba9dc6b617b55972e505" kindref="member">m_PlayerDebugDamage</ref>.Get(player2);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>obj.<ref refid="class_remote_player_damage_debug_1a1a75dd2263c59cbbe8e01c4427ffef5b" kindref="member">Debug</ref>();</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___enforce_1ga57f32b036e535bd975e903bb47bc7c3c" kindref="member">PrintString</ref>(</highlight><highlight class="stringliteral">&quot;-------------Debug<sp/>Damage<sp/>End-------------&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="226" refid="_plugin_remote_player_debug_client_8c_1abdc765142c7d9fa2c017982090949738" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_plugin_base_1aca2016c163049d426f554217adc7d3e4" kindref="member">OnRPC</ref>(<ref refid="class_serializer" kindref="compound">ParamsReadContext</ref><sp/>ctx)</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx.<ref refid="class_serializer_1a9a38a9c5322133ee30fe87a3a4c0659e" kindref="member">Read</ref>(<ref refid="_plugin_remote_player_debug_client_8c_1ab9d12254392a7437f54fb90d69b2a5c0" kindref="member">m_PlayerDebugStats</ref>);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;ref RemotePlayerDamageDebug&gt;</ref><sp/>player_damage<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ref RemotePlayerDamageDebug&gt;</ref>;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx.<ref refid="class_serializer_1a9a38a9c5322133ee30fe87a3a4c0659e" kindref="member">Read</ref>(player_damage);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player;</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_icon_8c_1a2970c38de5fbde060cc7a0ed546e674f" kindref="member">x</ref><sp/>=<sp/>0;<sp/><ref refid="_icon_8c_1a2970c38de5fbde060cc7a0ed546e674f" kindref="member">x</ref><sp/>&lt;<sp/>player_damage.Count();<sp/><ref refid="_icon_8c_1a2970c38de5fbde060cc7a0ed546e674f" kindref="member">x</ref>++)</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_remote_player_damage_debug" kindref="compound">RemotePlayerDamageDebug</ref><sp/>value<sp/>=<sp/>player_damage.Get(<ref refid="_icon_8c_1a2970c38de5fbde060cc7a0ed546e674f" kindref="member">x</ref>);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value)</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>player<sp/>=<sp/>value.<ref refid="class_remote_player_damage_debug_1a79e46505ba3e203540f79b3605b75cef" kindref="member">GetPlayer</ref>();</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___enforce_1ga57f32b036e535bd975e903bb47bc7c3c" kindref="member">PrintString</ref>(</highlight><highlight class="stringliteral">&quot;debug<sp/>damage:<sp/>&quot;</highlight><highlight class="normal">+<ref refid="_icon_8c_1a2970c38de5fbde060cc7a0ed546e674f" kindref="member">x</ref>.ToString()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal"><sp/>+<sp/>player.ToString());</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value.<ref refid="class_remote_player_damage_debug_1a1a75dd2263c59cbbe8e01c4427ffef5b" kindref="member">Debug</ref>();</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>xs<sp/>=<sp/>1<sp/>+<sp/>1;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(player_damage.Count()<sp/>&gt;<sp/>0<sp/>)<sp/><ref refid="_plugin_remote_player_debug_client_8c_1acf304cdc224f30c75e3370e42dd51318" kindref="member">MergeDamage</ref>(player_damage);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginDeveloper/PluginRemotePlayerDebugClient.c"/>
+  </compounddef>
+</doxygen>

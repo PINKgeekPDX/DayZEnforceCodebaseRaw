@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_human_command_move" kind="class" language="C++" prot="public">
+    <compoundname>HumanCommandMove</compoundname>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_human_command_move_1a538a18e8435256b0930dda7c73da5ed9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void HumanCommandMove::HumanCommandMove</definition>
+        <argsstring>()</argsstring>
+        <name>HumanCommandMove</name>
+        <qualifiedname>HumanCommandMove::HumanCommandMove</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="426" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" bodystart="426" bodyend="426"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1a93b5eea05d2491f98ac014712341daa9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void HumanCommandMove::~HumanCommandMove</definition>
+        <argsstring>()</argsstring>
+        <name>~HumanCommandMove</name>
+        <qualifiedname>HumanCommandMove::~HumanCommandMove</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="427" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" bodystart="427" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1a952cc9aa3d028fab636eb696181e36b1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float HumanCommandMove::GetCurrentMovementAngle</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrentMovementAngle</name>
+        <qualifiedname>HumanCommandMove::GetCurrentMovementAngle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>marks command to continue to combo -180 -90 0 90 180 angles of current movement <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="431" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1a4fdcff8191d69884e7c1752449465a7f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto bool HumanCommandMove::GetCurrentInputAngle</definition>
+        <argsstring>(out float pAngle)</argsstring>
+        <name>GetCurrentInputAngle</name>
+        <qualifiedname>HumanCommandMove::GetCurrentInputAngle</qualifiedname>
+        <param>
+          <type>out <ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pAngle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>direction held on keyboard/controller -180 -90 0 90 180 angles of input movement (no filtering, no postprocesses) return false in idle states </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="436" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1a21eb38ab1e801b0cc325e3983644fd17" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float HumanCommandMove::GetCurrentMovementSpeed</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrentMovementSpeed</name>
+        <qualifiedname>HumanCommandMove::GetCurrentMovementSpeed</qualifiedname>
+        <briefdescription>
+<para>0,1,2..3 idle, walk, run, sprint </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="439" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1afe6e1beb463171deccee66c84dbc4635" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanCommandMove::IsChangingStance</definition>
+        <argsstring>()</argsstring>
+        <name>IsChangingStance</name>
+        <qualifiedname>HumanCommandMove::IsChangingStance</qualifiedname>
+        <briefdescription>
+<para>returns true if character is changing stance </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="442" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1a649935ac288b36964f27940f8249478e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanCommandMove::IsOnBack</definition>
+        <argsstring>()</argsstring>
+        <name>IsOnBack</name>
+        <qualifiedname>HumanCommandMove::IsOnBack</qualifiedname>
+        <briefdescription>
+<para>return true if prone is on back </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="445" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1a310fed54b0240cc64a71e6bd545a0d87" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanCommandMove::IsInRoll</definition>
+        <argsstring>()</argsstring>
+        <name>IsInRoll</name>
+        <qualifiedname>HumanCommandMove::IsInRoll</qualifiedname>
+        <briefdescription>
+<para>return true if character barrel rolling </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="448" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1a3a680fbb27a8f168327664874549c048" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanCommandMove::IsLeavingUncon</definition>
+        <argsstring>()</argsstring>
+        <name>IsLeavingUncon</name>
+        <qualifiedname>HumanCommandMove::IsLeavingUncon</qualifiedname>
+        <briefdescription>
+<para>return true if character transitions out of uncon </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="451" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1aa1ea47cac38524e6af8cfb0fc79b05ee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanCommandMove::IsStandingFromBack</definition>
+        <argsstring>()</argsstring>
+        <name>IsStandingFromBack</name>
+        <qualifiedname>HumanCommandMove::IsStandingFromBack</qualifiedname>
+        <briefdescription>
+<para>return true if prone on back is chaning to crounch/stand </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="454" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1ab1d672d1911bc73c4d41a69fdcc52c33" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanCommandMove::StartMeleeEvade</definition>
+        <argsstring>()</argsstring>
+        <name>StartMeleeEvade</name>
+        <qualifiedname>HumanCommandMove::StartMeleeEvade</qualifiedname>
+        <briefdescription>
+<para>marks command to continue to combo </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="457" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1a0b97fd10ebc632df5e276c37e88887f0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanCommandMove::StartMeleeEvadeA</definition>
+        <argsstring>(float pDirAngle)</argsstring>
+        <name>StartMeleeEvadeA</name>
+        <qualifiedname>HumanCommandMove::StartMeleeEvadeA</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pDirAngle</declname>
+        </param>
+        <briefdescription>
+<para>marks command to continue to combo, pDirAngle specifies angle </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="460" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1a15f8ec961c54a57678111b965a021d8a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanCommandMove::IsMeleeEvade</definition>
+        <argsstring>()</argsstring>
+        <name>IsMeleeEvade</name>
+        <qualifiedname>HumanCommandMove::IsMeleeEvade</qualifiedname>
+        <briefdescription>
+<para>this is true when in melee evade </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="463" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1ac65b37bc93cfd0432c70d3e25b51652f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanCommandMove::SetMeleeBlock</definition>
+        <argsstring>(bool pBlock)</argsstring>
+        <name>SetMeleeBlock</name>
+        <qualifiedname>HumanCommandMove::SetMeleeBlock</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pBlock</declname>
+        </param>
+        <briefdescription>
+<para>this enables/disables block </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="466" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1a4a2b667d4dbbbcb88f8848bd15c4f191" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanCommandMove::ForceStance</definition>
+        <argsstring>(int pStanceIdx)</argsstring>
+        <name>ForceStance</name>
+        <qualifiedname>HumanCommandMove::ForceStance</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>pStanceIdx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pStanceIds is one of STANCEIDX_ERECT,STANCEIDX_CROUCH,STANCEIDX_PRONE,STANCEIDX_RAISEDERECT,STANCEIDX_RAISEDCROUCH,STANCEIDX_RAISEDPRONE, or -1 when release the stance lock <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="470" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1ae17438b642c71a2e1f9816251c6023a2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanCommandMove::ForceStanceUp</definition>
+        <argsstring>(int pStanceIdx)</argsstring>
+        <name>ForceStanceUp</name>
+        <qualifiedname>HumanCommandMove::ForceStanceUp</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>pStanceIdx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>pStanceIds is one of STANCEIDX_ERECT,STANCEIDX_CROUCH this forces to stand up to required stance </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="475" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1a4a530ae9fedbcdfd9395a0fa1e087cdf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanCommandMove::SetRunSprintFilterModifier</definition>
+        <argsstring>(float value)</argsstring>
+        <name>SetRunSprintFilterModifier</name>
+        <qualifiedname>HumanCommandMove::SetRunSprintFilterModifier</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>sets the multiplier for SHumanCommandMoveSettings::m_fRunSpringTimeout </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="479" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1a37c97ece2615d8fba32bd994d871cecd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanCommandMove::SetDirectionFilterModifier</definition>
+        <argsstring>(float value)</argsstring>
+        <name>SetDirectionFilterModifier</name>
+        <qualifiedname>HumanCommandMove::SetDirectionFilterModifier</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>sets the multiplier for SHumanCommandMoveSettings::m_fDirFilterTimeout </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="482" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1a72b457ea3be562f8a9f85000bf90691a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanCommandMove::SetDirectionSprintFilterModifier</definition>
+        <argsstring>(float value)</argsstring>
+        <name>SetDirectionSprintFilterModifier</name>
+        <qualifiedname>HumanCommandMove::SetDirectionSprintFilterModifier</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>sets the multiplier for SHumanCommandMoveSettings::m_fDirFilterSprintTimeout </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="485" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1a22bbebd5cf9837c5a7f27c7a29108a23" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanCommandMove::SetTurnSpanModifier</definition>
+        <argsstring>(float value)</argsstring>
+        <name>SetTurnSpanModifier</name>
+        <qualifiedname>HumanCommandMove::SetTurnSpanModifier</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>sets the multiplier for <ref refid="class_human_item_behavior_cfg_1aaff5c5a57ab6987df06149af514e9e5c" kindref="member">HumanItemBehaviorCfg::m_fMoveHeadingFilterSpan</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="488" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1a35e8a66c963b9e697f9b98e735cb6a9b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanCommandMove::SetTurnSpanSprintModifier</definition>
+        <argsstring>(float value)</argsstring>
+        <name>SetTurnSpanSprintModifier</name>
+        <qualifiedname>HumanCommandMove::SetTurnSpanSprintModifier</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>sets the multiplier for <ref refid="class_human_item_behavior_cfg_1a22599ee9340da7d16c253c5d65d7b3b4" kindref="member">HumanItemBehaviorCfg::m_fMoveHeadingSprintFilterSpan</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="491" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_command_move_1aa274d29e719e865d9d9e9581acc7d569" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanCommandMove::SetCurrentWaterLevel</definition>
+        <argsstring>(float value)</argsstring>
+        <name>SetCurrentWaterLevel</name>
+        <qualifiedname>HumanCommandMove::SetCurrentWaterLevel</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>sets water level (depth) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="494" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="424" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" bodystart="425" bodyend="495"/>
+    <listofallmembers>
+      <member refid="class_human_command_move_1a4a2b667d4dbbbcb88f8848bd15c4f191" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>ForceStance</name></member>
+      <member refid="class_human_command_move_1ae17438b642c71a2e1f9816251c6023a2" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>ForceStanceUp</name></member>
+      <member refid="class_human_command_move_1a4fdcff8191d69884e7c1752449465a7f" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>GetCurrentInputAngle</name></member>
+      <member refid="class_human_command_move_1a952cc9aa3d028fab636eb696181e36b1" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>GetCurrentMovementAngle</name></member>
+      <member refid="class_human_command_move_1a21eb38ab1e801b0cc325e3983644fd17" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>GetCurrentMovementSpeed</name></member>
+      <member refid="class_human_command_move_1a538a18e8435256b0930dda7c73da5ed9" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>HumanCommandMove</name></member>
+      <member refid="class_human_command_move_1afe6e1beb463171deccee66c84dbc4635" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>IsChangingStance</name></member>
+      <member refid="class_human_command_move_1a310fed54b0240cc64a71e6bd545a0d87" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>IsInRoll</name></member>
+      <member refid="class_human_command_move_1a3a680fbb27a8f168327664874549c048" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>IsLeavingUncon</name></member>
+      <member refid="class_human_command_move_1a15f8ec961c54a57678111b965a021d8a" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>IsMeleeEvade</name></member>
+      <member refid="class_human_command_move_1a649935ac288b36964f27940f8249478e" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>IsOnBack</name></member>
+      <member refid="class_human_command_move_1aa1ea47cac38524e6af8cfb0fc79b05ee" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>IsStandingFromBack</name></member>
+      <member refid="class_human_command_move_1aa274d29e719e865d9d9e9581acc7d569" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>SetCurrentWaterLevel</name></member>
+      <member refid="class_human_command_move_1a37c97ece2615d8fba32bd994d871cecd" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>SetDirectionFilterModifier</name></member>
+      <member refid="class_human_command_move_1a72b457ea3be562f8a9f85000bf90691a" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>SetDirectionSprintFilterModifier</name></member>
+      <member refid="class_human_command_move_1ac65b37bc93cfd0432c70d3e25b51652f" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>SetMeleeBlock</name></member>
+      <member refid="class_human_command_move_1a4a530ae9fedbcdfd9395a0fa1e087cdf" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>SetRunSprintFilterModifier</name></member>
+      <member refid="class_human_command_move_1a22bbebd5cf9837c5a7f27c7a29108a23" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>SetTurnSpanModifier</name></member>
+      <member refid="class_human_command_move_1a35e8a66c963b9e697f9b98e735cb6a9b" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>SetTurnSpanSprintModifier</name></member>
+      <member refid="class_human_command_move_1ab1d672d1911bc73c4d41a69fdcc52c33" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>StartMeleeEvade</name></member>
+      <member refid="class_human_command_move_1a0b97fd10ebc632df5e276c37e88887f0" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>StartMeleeEvadeA</name></member>
+      <member refid="class_human_command_move_1a93b5eea05d2491f98ac014712341daa9" prot="private" virt="non-virtual"><scope>HumanCommandMove</scope><name>~HumanCommandMove</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

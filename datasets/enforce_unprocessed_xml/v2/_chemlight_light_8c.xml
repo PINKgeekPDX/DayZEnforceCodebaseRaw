@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_chemlight_light_8c" kind="file" language="C++">
+    <compoundname>ChemlightLight.c</compoundname>
+    <innerclass refid="class_point_light_base" prot="public">PointLightBase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">class<sp/></highlight><highlight class="normal">ChemlightLight<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_point_light_base" kindref="compound">PointLightBase</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_point_light_base_1afe68c1e7895f7799d8580f589a42052c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_contaminated_area___dynamic_8c_1a2202cad687ba74d92664106a8b8baee3" kindref="member">m_DefaultBrightness</ref><sp/>=<sp/>1.5;</highlight></codeline>
+<codeline lineno="4" refid="class_point_light_base_1aa9fa32a1888f0ad59962c80790d6ec08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_contaminated_area___dynamic_8c_1ad03bb02d17f63aee0a171b52caadf929" kindref="member">m_DefaultRadius</ref><sp/>=<sp/>7.5;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="6" refid="class_point_light_base_1abb7d739c8cc7c41df0fe2ab2605ce5c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_light_base_1abb7d739c8cc7c41df0fe2ab2605ce5c5" kindref="member">ChemlightLight</ref>()</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetVisibleDuringDaylight(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetRadiusTo(<ref refid="_contaminated_area___dynamic_8c_1ad03bb02d17f63aee0a171b52caadf929" kindref="member">m_DefaultRadius</ref>);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetBrightnessTo(<ref refid="_contaminated_area___dynamic_8c_1a2202cad687ba74d92664106a8b8baee3" kindref="member">m_DefaultBrightness</ref>);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FadeIn(1);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetFadeOutTime(2);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetFlareVisible(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16" refid="class_point_light_base_1ac098cdd94718f7d4e5c655a163b63caf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_light_base_1ac098cdd94718f7d4e5c655a163b63caf" kindref="member">SetIntensity</ref>(<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>coef,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>time<sp/>)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FadeBrightnessTo(<ref refid="_contaminated_area___dynamic_8c_1a2202cad687ba74d92664106a8b8baee3" kindref="member">m_DefaultBrightness</ref><sp/>*<sp/>coef,<sp/>time);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FadeRadiusTo(<ref refid="_contaminated_area___dynamic_8c_1ad03bb02d17f63aee0a171b52caadf929" kindref="member">m_DefaultRadius</ref><sp/>*<sp/>coef,<sp/>time);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22" refid="class_point_light_base_1af69af39100426ba16f2221a4b5a1f469" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_light_base_1af69af39100426ba16f2221a4b5a1f469" kindref="member">SetColorToWhite</ref>()</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetAmbientColor(0.9,<sp/>0.9,<sp/>1.0);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetDiffuseColor(0.9,<sp/>0.9,<sp/>1.0);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="class_point_light_base_1a759f0cc9b3e41a2616cd82e3e7eb528d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_light_base_1a759f0cc9b3e41a2616cd82e3e7eb528d" kindref="member">SetColorToRed</ref>()</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetAmbientColor(1.0,<sp/>0.3,<sp/>0.2);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetDiffuseColor(1.0,<sp/>0.3,<sp/>0.2);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="class_point_light_base_1a765b8db58ec62eece426dcde5a1650d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_light_base_1a765b8db58ec62eece426dcde5a1650d9" kindref="member">SetColorToGreen</ref>()</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetAmbientColor(0.3,<sp/>1.0,<sp/>0.2);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetDiffuseColor(0.3,<sp/>1.0,<sp/>0.2);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="class_point_light_base_1a4e85287ad0c5b5b7ac9404659e099c0a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_light_base_1a4e85287ad0c5b5b7ac9404659e099c0a" kindref="member">SetColorToBlue</ref>()</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetAmbientColor(0.3,<sp/>0.3,<sp/>1.0);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetDiffuseColor(0.3,<sp/>0.3,<sp/>1.0);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="class_point_light_base_1aed5eb0c8789d6217b76b5e1b6f742b29" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_light_base_1aed5eb0c8789d6217b76b5e1b6f742b29" kindref="member">SetColorToYellow</ref>()</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetAmbientColor(1.0,<sp/>1.0,<sp/>0.3);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetDiffuseColor(1.0,<sp/>1.0,<sp/>0.3);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedLightBase/PointLightBase/ChemlightLight.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="classarray_3_01ref_01_call_queue_context_01_4" kind="class" language="C++" prot="public">
+    <compoundname>array&lt; ref CallQueueContext &gt;</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classarray_3_01ref_01_call_queue_context_01_4_1a0bf4c307bb6b32d05c344ee75fd88785" prot="private" static="no" mutable="no">
+        <type>private <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>private bool array&lt; ref CallQueueContext &gt;::m_processing</definition>
+        <argsstring></argsstring>
+        <name>m_processing</name>
+        <qualifiedname>array&lt; ref CallQueueContext &gt;::m_processing</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="68" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classarray_3_01ref_01_call_queue_context_01_4_1ac0722658d72b3bacedf90a066978ae64" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void array&lt; ref CallQueueContext &gt;::CallQueue</definition>
+        <argsstring>()</argsstring>
+        <name>CallQueue</name>
+        <qualifiedname>array&lt; ref CallQueueContext &gt;::CallQueue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="70" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classarray_3_01ref_01_call_queue_context_01_4_1a7df80c7f34b71260756b40e01f602d41" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void array&lt; ref CallQueueContext &gt;::Tick</definition>
+        <argsstring>()</argsstring>
+        <name>Tick</name>
+        <qualifiedname>array&lt; ref CallQueueContext &gt;::Tick</qualifiedname>
+        <briefdescription>
+<para>System function, don&apos;t call it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="78" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="78" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classarray_3_01ref_01_call_queue_context_01_4_1a6ff879991838e0d15deed8d7ed9b0430" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void array&lt; ref CallQueueContext &gt;::Call</definition>
+        <argsstring>(Class obj, string fn_name, Param params=NULL)</argsstring>
+        <name>Call</name>
+        <qualifiedname>array&lt; ref CallQueueContext &gt;::Call</qualifiedname>
+        <param>
+          <type><ref refid="class_class" kindref="compound">Class</ref></type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>fn_name</declname>
+        </param>
+        <param>
+          <type><ref refid="class_param" kindref="compound">Param</ref></type>
+          <declname>params</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Creates new call request, add it on queue and execute during frame update (depends on call category) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target object on which function will be executed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fn_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of function (on object &quot;obj&quot;) which will be executed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>function arguments see <ref refid="class_param" kindref="compound">Param</ref> for usage, default NULL (no arguments) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>When object &quot;obj&quot; is deleted prior call execution, don&apos;t forget to remove calls for this object with RemoveCalls </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="108" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classarray_3_01ref_01_call_queue_context_01_4_1a776fa1ed1395a03a83656c2f7a29b7b9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void array&lt; ref CallQueueContext &gt;::RemoveCalls</definition>
+        <argsstring>(Class obj)</argsstring>
+        <name>RemoveCalls</name>
+        <qualifiedname>array&lt; ref CallQueueContext &gt;::RemoveCalls</qualifiedname>
+        <param>
+          <type><ref refid="class_class" kindref="compound">Class</ref></type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+<para>Removes all queued calls for object (call this function when object is going to be deleted) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>object for which you want remove all &quot;lazy&quot; calls </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="118" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="118" bodyend="131"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_call_queue" kindref="compound">CallQueue</ref> <ref refid="class_class" kindref="compound">Class</ref> provide &quot;lazy&quot; calls - when we don&apos;t want to execute function immediately but later during frame update (used mainly in UI) <linebreak/>
+ usage: </para>
+    </briefdescription>
+    <detaileddescription>
+<para><programlisting><codeline><highlight class="normal"><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a3301af2fa61873a778485aa575bc1ad6" kindref="member">GetCallQueue</ref>(<ref refid="group___tools_1gaae15173306f94a164b31a4baea73e5eb" kindref="member">CALL_CATEGORY_GUI</ref>).<ref refid="class_script_call_queue_1aa3b6f9bf12bd4762b836f733eec0f05d" kindref="member">Call</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Refresh&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>calls<sp/>&quot;Refresh&quot;<sp/>function<sp/>on<sp/>&quot;this&quot;<sp/>with<sp/>no<sp/>arguments</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a3301af2fa61873a778485aa575bc1ad6" kindref="member">GetCallQueue</ref>(<ref refid="group___tools_1gaae15173306f94a164b31a4baea73e5eb" kindref="member">CALL_CATEGORY_GUI</ref>).<ref refid="class_script_call_queue_1aa3b6f9bf12bd4762b836f733eec0f05d" kindref="member">Call</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Show&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Param1&lt;bool&gt;(</highlight><highlight class="keyword">true</highlight><highlight class="normal">));<sp/></highlight><highlight class="comment">//<sp/>calls<sp/>&quot;Show&quot;<sp/>function<sp/>on<sp/>&quot;this&quot;<sp/>with<sp/>one<sp/>bool<sp/>argument</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a3301af2fa61873a778485aa575bc1ad6" kindref="member">GetCallQueue</ref>(<ref refid="group___tools_1gaae15173306f94a164b31a4baea73e5eb" kindref="member">CALL_CATEGORY_GUI</ref>).<ref refid="class_script_call_queue_1aa3b6f9bf12bd4762b836f733eec0f05d" kindref="member">Call</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;SetPos&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_param2" kindref="compound">Param2&lt;float, float&gt;</ref>(0.2,<sp/>0.5));<sp/></highlight><highlight class="comment">//<sp/>calls<sp/>&quot;SetPos&quot;<sp/>function<sp/>on<sp/>&quot;this&quot;<sp/>with<sp/>two<sp/>float<sp/>arguments</highlight></codeline>
+</programlisting> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>array&lt; ref CallQueueContext &gt;</label>
+        <link refid="classarray_3_01ref_01_call_queue_context_01_4"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_processing</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>bool</label>
+        <link refid="classbool"/>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" line="66" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/tools.c" bodystart="67" bodyend="132"/>
+    <listofallmembers>
+      <member refid="classarray_3_01ref_01_call_queue_context_01_4_1a6ff879991838e0d15deed8d7ed9b0430" prot="private" virt="non-virtual"><scope>array&lt; ref CallQueueContext &gt;</scope><name>Call</name></member>
+      <member refid="classarray_3_01ref_01_call_queue_context_01_4_1ac0722658d72b3bacedf90a066978ae64" prot="private" virt="non-virtual"><scope>array&lt; ref CallQueueContext &gt;</scope><name>CallQueue</name></member>
+      <member refid="classarray_3_01ref_01_call_queue_context_01_4_1a0bf4c307bb6b32d05c344ee75fd88785" prot="private" virt="non-virtual"><scope>array&lt; ref CallQueueContext &gt;</scope><name>m_processing</name></member>
+      <member refid="classarray_3_01ref_01_call_queue_context_01_4_1a776fa1ed1395a03a83656c2f7a29b7b9" prot="private" virt="non-virtual"><scope>array&lt; ref CallQueueContext &gt;</scope><name>RemoveCalls</name></member>
+      <member refid="classarray_3_01ref_01_call_queue_context_01_4_1a7df80c7f34b71260756b40e01f602d41" prot="private" virt="non-virtual"><scope>array&lt; ref CallQueueContext &gt;</scope><name>Tick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

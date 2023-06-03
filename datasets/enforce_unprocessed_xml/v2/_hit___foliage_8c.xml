@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_hit___foliage_8c" kind="file" language="C++">
+    <compoundname>Hit_Foliage.c</compoundname>
+    <innerclass refid="class_hit___foliage" prot="public">Hit_Foliage</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_hit___foliage" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_hit___foliage" kindref="compound">Hit_Foliage</ref><sp/>:<sp/><ref refid="class_eff_bullet_impact_base" kindref="compound">EffBulletImpactBase</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_hit___foliage_1a1d5327f36c47455ed3b6556614f11a45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hit___foliage_1a1d5327f36c47455ed3b6556614f11a45" kindref="member">Hit_Foliage</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_eff_bullet_impact_base_1a52d3a64b754ef643bf0e6c7245d9b024" kindref="member">SetEnterParticle</ref>(<ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a658e0eca1764e8523686b684e89d438b" kindref="member">IMPACT_FOLIAGE_ENTER</ref>);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_eff_bullet_impact_base_1a3abaab42a9c169537f1bcadbbc9cbede" kindref="member">SetExitParticle</ref>(<ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a886ce6edac936de14ada0374a14544f9" kindref="member">IMPACT_FOLIAGE_EXIT</ref>);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_eff_bullet_impact_base_1aaff894f60e4e17ff15d3d31014f07200" kindref="member">SetRicochetParticle</ref>(<ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1ab5da974030d7c554c29630c25b5f52c0" kindref="member">IMPACT_FOLIAGE_RICOCHET</ref>);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="10" refid="class_hit___foliage_1aef84ea2c70b423c1ac20c244d23c6dfe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_hit___foliage_1aef84ea2c70b423c1ac20c244d23c6dfe" kindref="member">CalculateStoppingForce</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>in_speedf,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>out_speedf,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>ammoType,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>weight)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_eff_bullet_impact_base_1a09243023bb2daaf3c09c3c781b71b33a" kindref="member">m_ImpactType</ref><sp/>==<sp/><ref refid="_impact_effects_8c_1aed11197d78b210965b9ae9cc67703b99" kindref="member">ImpactTypes</ref>.MELEE<sp/>)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>500;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>projectile_weight_coef<sp/>=<sp/>weight<sp/>/<sp/><ref refid="class_eff_bullet_impact_base_1ab117212103bc2e3ae931d27879d52db3" kindref="member">DEFAULT_PROJECTILE_WEIGHT</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>stopping_force<sp/>=<sp/>in_speedf<sp/>*<sp/>projectile_weight_coef<sp/>*<sp/>0.5;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stopping_force;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Effects/EffectParticle/BulletImpactBase/Hit_Foliage.c"/>
+  </compounddef>
+</doxygen>

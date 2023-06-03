@@ -1,0 +1,1167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_trap___trip_wire_8c" kind="file" language="C++">
+    <compoundname>Trap_TripWire.c</compoundname>
+    <innerclass refid="class_tripwire_trap_deployed" prot="public">TripwireTrapDeployed</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_trap___trip_wire_8c_1a50fcac5bd072363731670c22cefdc8e4" prot="public" static="no" strong="no">
+        <type></type>
+        <name>eWireMaterial</name>
+        <enumvalue id="_trap___trip_wire_8c_1a50fcac5bd072363731670c22cefdc8e4a1f1dd8e7a28788f8b1f2635baafe0d9b" prot="public">
+          <name>WIRE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_trap___trip_wire_8c_1a50fcac5bd072363731670c22cefdc8e4aa0b736653663dc571d7a34bf3f08da2a" prot="public">
+          <name>BARBED_WIRE</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_trap___trip_wire_8c_1a50fcac5bd072363731670c22cefdc8e4a24d6f5addc374131ab07a16c222d6992" prot="public">
+          <name>ROPE</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="2" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="3" bodyend="7"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_trap___trip_wire_8c_1a25611e326fe1b4ab140780b9d9460044" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_trap___trip_wire_8c_1a50fcac5bd072363731670c22cefdc8e4" kindref="member">eWireMaterial</ref></type>
+        <definition>enum eWireMaterial FOLDED</definition>
+        <argsstring></argsstring>
+        <name>FOLDED</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="12" column="25"/>
+      </memberdef>
+      <memberdef kind="variable" id="_trap___trip_wire_8c_1a500e292a70cefa1351fccaa36246b57f" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int DEPLOYED</definition>
+        <argsstring></argsstring>
+        <name>DEPLOYED</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="13" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_trap___trip_wire_8c_1a1d056edb542b563fdfdeb878116d0b9b" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int TRIGGERED</definition>
+        <argsstring></argsstring>
+        <name>TRIGGERED</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="14" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_trap___trip_wire_8c_1aff586702f64ad6d31cfa8e5de6de3d4d" prot="public" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int m_State</definition>
+        <argsstring></argsstring>
+        <name>m_State</name>
+        <initializer>= <ref refid="_trap___trip_wire_8c_1a25611e326fe1b4ab140780b9d9460044" kindref="member">FOLDED</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="16" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_trap___trip_wire_8c_1a53b63e0fe042880470713535b648ab2c" prot="public" static="no" mutable="no">
+        <type>private <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>private int m_WireMaterial</definition>
+        <argsstring></argsstring>
+        <name>m_WireMaterial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="17" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_trap___trip_wire_8c_1a95a703623a2cb282ba7219b147237e2c" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool m_ResultOfAdvancedPlacing</definition>
+        <argsstring></argsstring>
+        <name>m_ResultOfAdvancedPlacing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="19" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_trap___trip_wire_8c_1ab0735192bdc91656cb681d0e76b0fa66" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>protected vector m_TriggerPosition</definition>
+        <argsstring></argsstring>
+        <name>m_TriggerPosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="20" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_trap___trip_wire_8c_1a494acc5f32e0d28a86eb80af97940564" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>protected vector m_TriggerOrientation</definition>
+        <argsstring></argsstring>
+        <name>m_TriggerOrientation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="21" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_trap___trip_wire_8c_1aea9b9b55667dc9572784dd968ba75845" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TripwireTrap</definition>
+        <argsstring>()</argsstring>
+        <name>TripwireTrap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="23" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="23" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1ad183155e7592e816863539c54b6fa83f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnVariablesSynchronized</definition>
+        <argsstring>()</argsstring>
+        <name>OnVariablesSynchronized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="37" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="37" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1a35a85dbb8d86badfdee250107b15e803" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnStoreSave</definition>
+        <argsstring>(ParamsWriteContext ctx)</argsstring>
+        <name>OnStoreSave</name>
+        <param>
+          <type><ref refid="gameplay_8c_1af1d1033fca2ebd02f4ba61051b6341c4" kindref="member">ParamsWriteContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="47" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="47" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1ab311cdf3df0e3547b7d3cd810e61ca61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool OnStoreLoad</definition>
+        <argsstring>(ParamsReadContext ctx, int version)</argsstring>
+        <name>OnStoreLoad</name>
+        <param>
+          <type><ref refid="gameplay_8c_1a4ff67286551fc6c18504752a277c8bc1" kindref="member">ParamsReadContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="55" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="55" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1afc7c03491c0efb104d0d0d108993d733" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CreateTrigger</definition>
+        <argsstring>()</argsstring>
+        <name>CreateTrigger</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="70" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="70" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1a832179b1b442b1db4376da2693413de5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnSteppedOn</definition>
+        <argsstring>(EntityAI victim)</argsstring>
+        <name>OnSteppedOn</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>victim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="80" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="80" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1a1320fa5889e47c848cbb7b33a142bda2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnItemLocationChanged</definition>
+        <argsstring>(EntityAI old_owner, EntityAI new_owner)</argsstring>
+        <name>OnItemLocationChanged</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>old_owner</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>new_owner</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="107" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="107" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1aafac0842577356f878e87cbecd8dbdc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void EEItemLocationChanged</definition>
+        <argsstring>(notnull InventoryLocation oldLoc, notnull InventoryLocation newLoc)</argsstring>
+        <name>EEItemLocationChanged</name>
+        <param>
+          <type>notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>oldLoc</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>newLoc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="119" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="119" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1a56edaa75fb618ddf0aa2354f005cdd6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void EEHealthLevelChanged</definition>
+        <argsstring>(int oldLevel, int newLevel, string zone)</argsstring>
+        <name>EEHealthLevelChanged</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>oldLevel</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>newLevel</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>zone</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="144" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="144" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1a7fd5a669e6eaaaeeae8a27282c448a49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SetInactive</definition>
+        <argsstring>(bool stop_timer=true)</argsstring>
+        <name>SetInactive</name>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>stop_timer</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="158" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="158" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1ac1e3d598591ab6157454067618b6ef39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetState</definition>
+        <argsstring>(int state_ID)</argsstring>
+        <name>SetState</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>state_ID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="179" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="179" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1a4a93aa7809e0ac5f0b9f49c170e06a36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int GetState</definition>
+        <argsstring>()</argsstring>
+        <name>GetState</name>
+        <briefdescription>
+<para>returns one of STATE_... </para>
+        </briefdescription>
+        <detaileddescription>
+<para>returns the state of climb (enum value of ClimbStates); </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="184" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="184" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1a8e580263114d24451555874aaa94bcdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetWireType</definition>
+        <argsstring>(int wireType)</argsstring>
+        <name>SetWireType</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>wireType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="189" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="189" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1a3af252172f59c64c2fd13b1f3ff8b4b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int GetWireType</definition>
+        <argsstring>()</argsstring>
+        <name>GetWireType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="194" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="194" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1a721aa5c9c604253743c10171d90cd9e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void RefreshState</definition>
+        <argsstring>()</argsstring>
+        <name>RefreshState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="200" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="200" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1abacd4e57c6f586e88a7bcacb9a564f25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SetupTrapPlayer</definition>
+        <argsstring>(PlayerBase player, bool set_position=true)</argsstring>
+        <name>SetupTrapPlayer</name>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>set_position</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="210" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="210" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1ac0ed3e12866b63a75f57771a52b83e57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void StartDeactivate</definition>
+        <argsstring>(PlayerBase player)</argsstring>
+        <name>StartDeactivate</name>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="216" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="216" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1ae7bd4d02b82fa1017e3a4cf7e3caba18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool CanReceiveAttachment</definition>
+        <argsstring>(EntityAI attachment, int slotId)</argsstring>
+        <name>CanReceiveAttachment</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>attachment</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>slotId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="225" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="225" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1a850b9b0562bb3b88cad1d9d6d0202dc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool CanDisplayAttachmentSlot</definition>
+        <argsstring>(int slot_id)</argsstring>
+        <name>CanDisplayAttachmentSlot</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>slot_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="234" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="234" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1ac063b6124c64033d904f29247d8eb45a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void EEItemAttached</definition>
+        <argsstring>(EntityAI item, string slot_name)</argsstring>
+        <name>EEItemAttached</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>slot_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="242" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="242" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1a870b0dcd0dfafe4a764232688d9356c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void EEItemDetached</definition>
+        <argsstring>(EntityAI item, string slot_name)</argsstring>
+        <name>EEItemDetached</name>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>slot_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="249" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="249" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1a4de4d414d0cbf15100ab71ec84ca25f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void EEKilled</definition>
+        <argsstring>(Object killer)</argsstring>
+        <name>EEKilled</name>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>killer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="256" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="256" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1a74760c70d995dba9f713e3cf17ea9405" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FoldTripWire</definition>
+        <argsstring>()</argsstring>
+        <name>FoldTripWire</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="267" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="267" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1ad0580e19ee7c965536e590ae5f2c9ea8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnInventoryEnter</definition>
+        <argsstring>(Man player)</argsstring>
+        <name>OnInventoryEnter</name>
+        <param>
+          <type>Man</type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="282" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="282" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1a6ff31a876fba89e2f0ae6c33af8cd551" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnPlacementComplete</definition>
+        <argsstring>(Man player, vector position=&quot;0 0 0&quot;, vector orientation=&quot;0 0 0&quot;)</argsstring>
+        <name>OnPlacementComplete</name>
+        <param>
+          <type>Man</type>
+          <declname>player</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>position</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>orientation</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="346" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="346" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1a92bbc22017be7c79d20a6162878d5fa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void OnPlacementCancelled</definition>
+        <argsstring>(Man player)</argsstring>
+        <name>OnPlacementCancelled</name>
+        <param>
+          <type>Man</type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="361" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="361" bodyend="368"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1ab18e11ed223759f876177531c553dfbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool IsDeployable</definition>
+        <argsstring>()</argsstring>
+        <name>IsDeployable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="370" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="370" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1ac04a39fa356ae48f99ac9fed3df8887d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool IsTakeable</definition>
+        <argsstring>()</argsstring>
+        <name>IsTakeable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="376" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="376" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1a14046891600537e83da30eb2e7a1f4d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>override string GetDeploySoundset</definition>
+        <argsstring>()</argsstring>
+        <name>GetDeploySoundset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="381" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="381" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1a4403b4f304acf2affb04880ba46a1313" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>override string GetLoopDeploySoundset</definition>
+        <argsstring>()</argsstring>
+        <name>GetLoopDeploySoundset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="386" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="386" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1afa39b7c4d3d085ef8514a87c32b81a4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void SetActions</definition>
+        <argsstring>()</argsstring>
+        <name>SetActions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="391" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="391" bodyend="397"/>
+      </memberdef>
+      <memberdef kind="function" id="_trap___trip_wire_8c_1ac7528e3fcc34000aba7488abe3880737" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UpdateProxySelections</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateProxySelections</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" line="403" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c" bodystart="403" bodyend="423"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Wire<sp/>type<sp/>is<sp/>used<sp/>in<sp/>the<sp/>case<sp/>of<sp/>decrafting<sp/>to<sp/>give<sp/>back<sp/>the<sp/>correct<sp/>base<sp/>Ingredient</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="_trap___trip_wire_8c_1a50fcac5bd072363731670c22cefdc8e4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_trap___trip_wire_8c_1a50fcac5bd072363731670c22cefdc8e4" kindref="member">eWireMaterial</ref></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="4" refid="_trap___trip_wire_8c_1a50fcac5bd072363731670c22cefdc8e4a1f1dd8e7a28788f8b1f2635baafe0d9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_trap___trip_wire_8c_1a50fcac5bd072363731670c22cefdc8e4a1f1dd8e7a28788f8b1f2635baafe0d9b" kindref="member">WIRE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="5" refid="_trap___trip_wire_8c_1a50fcac5bd072363731670c22cefdc8e4aa0b736653663dc571d7a34bf3f08da2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_trap___trip_wire_8c_1a50fcac5bd072363731670c22cefdc8e4aa0b736653663dc571d7a34bf3f08da2a" kindref="member">BARBED_WIRE</ref><sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_trap___trip_wire_8c_1a50fcac5bd072363731670c22cefdc8e4a24d6f5addc374131ab07a16c222d6992" kindref="member">ROPE</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2</highlight></codeline>
+<codeline lineno="7" refid="_trap___trip_wire_8c_1a50fcac5bd072363731670c22cefdc8e4a24d6f5addc374131ab07a16c222d6992" refkind="member"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_trap___trip_wire_8c_1aea9b9b55667dc9572784dd968ba75845" kindref="member">TripwireTrap</ref><sp/>:<sp/><ref refid="class_trap_base" kindref="compound">TrapBase</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Current<sp/>state<sp/>of<sp/>the<sp/>tripwire</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="_trap___trip_wire_8c_1a25611e326fe1b4ab140780b9d9460044" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_trap___trip_wire_8c_1a25611e326fe1b4ab140780b9d9460044" kindref="member">FOLDED</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="13" refid="_trap___trip_wire_8c_1a500e292a70cefa1351fccaa36246b57f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_trap___trip_wire_8c_1a500e292a70cefa1351fccaa36246b57f" kindref="member">DEPLOYED</ref><sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="14" refid="_trap___trip_wire_8c_1a1d056edb542b563fdfdeb878116d0b9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_trap___trip_wire_8c_1a1d056edb542b563fdfdeb878116d0b9b" kindref="member">TRIGGERED</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="_trap___trip_wire_8c_1aff586702f64ad6d31cfa8e5de6de3d4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stamina_handler_8c_1aff669510956ec2c2cc6c60ed37ca7d63" kindref="member">m_State</ref><sp/>=<sp/><ref refid="_trap___trip_wire_8c_1a25611e326fe1b4ab140780b9d9460044" kindref="member">FOLDED</ref>;</highlight></codeline>
+<codeline lineno="17" refid="_trap___trip_wire_8c_1a53b63e0fe042880470713535b648ab2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_trap___trip_wire_8c_1a53b63e0fe042880470713535b648ab2c" kindref="member">m_WireMaterial</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19" refid="_trap___trip_wire_8c_1a95a703623a2cb282ba7219b147237e2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="_trap___trip_wire_8c_1a95a703623a2cb282ba7219b147237e2c" kindref="member">m_ResultOfAdvancedPlacing</ref>;</highlight></codeline>
+<codeline lineno="20" refid="_trap___trip_wire_8c_1ab0735192bdc91656cb681d0e76b0fa66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/><ref refid="_trap___trip_wire_8c_1ab0735192bdc91656cb681d0e76b0fa66" kindref="member">m_TriggerPosition</ref>;</highlight></codeline>
+<codeline lineno="21" refid="_trap___trip_wire_8c_1a494acc5f32e0d28a86eb80af97940564" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/><ref refid="_trap___trip_wire_8c_1a494acc5f32e0d28a86eb80af97940564" kindref="member">m_TriggerOrientation</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23" refid="_trap___trip_wire_8c_1aea9b9b55667dc9572784dd968ba75845" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_trap___trip_wire_8c_1aea9b9b55667dc9572784dd968ba75845" kindref="member">TripwireTrap</ref>()</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1ac45c00c32c19647f4e038f85c180a0e5" kindref="member">m_DamagePlayers</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//How<sp/>much<sp/>damage<sp/>player<sp/>gets<sp/>when<sp/>caught</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1ab356033c77d459948a36eac7dd6a2eb9" kindref="member">m_InitWaitTime</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//After<sp/>this<sp/>time<sp/>after<sp/>deployment,<sp/>the<sp/>trap<sp/>is<sp/>activated</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a065465201074b5f13d75b7d91db6facc" kindref="member">m_DefectRate</ref><sp/>=<sp/>15;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a7023f7e30811a92e7d49ce2ee2c1a266" kindref="member">m_NeedActivation</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a59d2be4e8c91bd135a1adeef74b3985a" kindref="member">m_AnimationPhaseGrounded</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;inventory&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a8e3a770cc95dc558b9b1d7c5c5f2eebd" kindref="member">m_AnimationPhaseSet</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;placing&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a040da04c77b049d7e43219a2fe30cd3d" kindref="member">m_AnimationPhaseTriggered</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;triggered&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a8dcd220fb43cdd6c35c6a298cc40629c" kindref="member">m_InfoActivationTime</ref><sp/>=<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.<ref refid="group___strings_1gaec7e49a1dcfd0bc429834f29bc0d35c1" kindref="member">Format</ref>(</highlight><highlight class="stringliteral">&quot;#STR_TripwireTrap0%1#STR_TripwireTrap1&quot;</highlight><highlight class="normal">,<sp/><ref refid="_trap_base_8c_1ab356033c77d459948a36eac7dd6a2eb9" kindref="member">m_InitWaitTime</ref>.ToString());<sp/><sp/></highlight><highlight class="comment">//<sp/>nefunguje<sp/>dynamicke<sp/>vyrazy<sp/>mimo<sp/>funkcii<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RegisterNetSyncVariableInt(</highlight><highlight class="stringliteral">&quot;m_State&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="_trap___trip_wire_8c_1ad183155e7592e816863539c54b6fa83f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_land___underground___panel_8c_1ad183155e7592e816863539c54b6fa83f" kindref="member">OnVariablesSynchronized</ref>()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnVariablesSynchronized();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_item_base_8c_1ab6e8c28d15027c4b76ccc1bade37d588" kindref="member">IsPlaceSound</ref>()<sp/>)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_item_base_8c_1a6b80a5da6acc708b6949710c97f0da9c" kindref="member">PlayPlaceSound</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="_trap___trip_wire_8c_1a35a85dbb8d86badfdee250107b15e803" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_modifier_base_8c_1ad975050d7a080cca462e74c604f404a2" kindref="member">OnStoreSave</ref>(<ref refid="class_serializer" kindref="compound">ParamsWriteContext</ref><sp/>ctx)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnStoreSave(ctx);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ctx.<ref refid="class_serializer_1a3568bd9439217225013ea9906eb09a3f" kindref="member">Write</ref>(<sp/><ref refid="_stamina_handler_8c_1aff669510956ec2c2cc6c60ed37ca7d63" kindref="member">m_State</ref><sp/>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//----------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="_trap___trip_wire_8c_1ab311cdf3df0e3547b7d3cd810e61ca61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_modifiers_manager_8c_1ab8fb9b4105d97f4c7ba4bdd84d6c7de9" kindref="member">OnStoreLoad</ref>(<ref refid="class_serializer" kindref="compound">ParamsReadContext</ref><sp/>ctx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>version)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!super.OnStoreLoad(ctx,<sp/>version)<sp/>)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state<sp/>=<sp/><ref refid="_trap___trip_wire_8c_1a25611e326fe1b4ab140780b9d9460044" kindref="member">FOLDED</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!ctx.<ref refid="class_serializer_1a9a38a9c5322133ee30fe87a3a4c0659e" kindref="member">Read</ref>(<sp/>state<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state<sp/>=<sp/><ref refid="_trap___trip_wire_8c_1a25611e326fe1b4ab140780b9d9460044" kindref="member">FOLDED</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stamina_handler_8c_1a51121c56fd44f1678bb5e97c034e533d" kindref="member">SetState</ref>(<sp/>state<sp/>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a6aa66b59ee3d79f671ae4c98bfa2b797" kindref="member">RefreshState</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="_trap___trip_wire_8c_1afc7c03491c0efb104d0d0d108993d733" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_trap_base_1a35c0d41a8f08b86ab2063bdc81a34b65" kindref="member">CreateTrigger</ref>()</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1afa4899c37d495901cb139b2e50555923" kindref="member">m_TrapTrigger</ref><sp/>=<sp/>TripWireTrigger.Cast(<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().CreateObjectEx(</highlight><highlight class="stringliteral">&quot;TripWireTrigger&quot;</highlight><highlight class="normal">,<sp/><ref refid="_underground_area_loader_8c_1af4b5180d61f839c99de2d15fdcda4568" kindref="member">GetPosition</ref>(),<sp/><ref refid="_trap_base_8c_1a4cf7baeb7d617d5aef0081be3934f510" kindref="member">SPAWN_FLAGS</ref>));</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>mins<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;-0.75<sp/>0.3<sp/>-0.01&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>maxs<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.75<sp/>0.32<sp/>0.01&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1afa4899c37d495901cb139b2e50555923" kindref="member">m_TrapTrigger</ref>.SetOrientation(<ref refid="_area_damage_manager_8c_1a3bae34135b918bcd04b5f8a3d136e313" kindref="member">GetOrientation</ref>());</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1afa4899c37d495901cb139b2e50555923" kindref="member">m_TrapTrigger</ref>.<ref refid="class_trigger_1a73c5812d3476cee4fa5d862ce9c03265" kindref="member">SetExtents</ref>(mins,<sp/>maxs);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1afa4899c37d495901cb139b2e50555923" kindref="member">m_TrapTrigger</ref>.<ref refid="class_trap_trigger_1ac3a2b22839a818e941e18efe308d937d" kindref="member">SetParentObject</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80" refid="_trap___trip_wire_8c_1a832179b1b442b1db4376da2693413de5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_trap_base_1a2f27129cccbe8f3b61923f57e97e11b4" kindref="member">OnSteppedOn</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>victim)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!victim)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!victim.GetAllowDamage())</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>must<sp/>deal<sp/>some<sp/>damage,<sp/>here<sp/>5<sp/>shock<sp/>as<sp/>melee<sp/>damage<sp/>in<sp/>order<sp/>to<sp/>trigger<sp/>hit<sp/>animation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsServer())</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>victim.ProcessDirectDamage(DT_CLOSE_COMBAT,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;TripWireHit&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stamina_handler_8c_1a51121c56fd44f1678bb5e97c034e533d" kindref="member">SetState</ref>(<ref refid="_trap___trip_wire_8c_1a1d056edb542b563fdfdeb878116d0b9b" kindref="member">TRIGGERED</ref>);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a9c02237ebda40c6716cb82c807c89e89" kindref="member">SetInactive</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>play<sp/>the<sp/>trap<sp/>trigger<sp/>sound</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifndef<sp/>SERVER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_effect_sound" kindref="compound">EffectSound</ref><sp/>sound<sp/>=<sp/><ref refid="class_s_effect_manager" kindref="compound">SEffectManager</ref>.<ref refid="class_s_effect_manager_1aa05a7b24ec51456db8c32cf2e4b099ef" kindref="member">PlaySound</ref>(</highlight><highlight class="stringliteral">&quot;TripwireTrap_Trigger_SoundSet&quot;</highlight><highlight class="normal">,<sp/><ref refid="_underground_area_loader_8c_1af4b5180d61f839c99de2d15fdcda4568" kindref="member">GetPosition</ref>());</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sound.<ref refid="class_effect_sound_1a2cc90aea49a8e5dfad08b37632ec21ee" kindref="member">SetAutodestroy</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107" refid="_trap___trip_wire_8c_1a1320fa5889e47c848cbb7b33a142bda2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_item_base_8c_1aaec86a5608205336c3c365b0c564852c" kindref="member">OnItemLocationChanged</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>old_owner,<sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>new_owner)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnItemLocationChanged(old_owner,<sp/>new_owner);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player<sp/>=<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref>.Cast(new_owner);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(player)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1af61dbb8d73886834d784291bbafb7360" kindref="member">StartDeactivate</ref>(player);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119" refid="_trap___trip_wire_8c_1aafac0842577356f878e87cbecd8dbdc1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_remote_detonator_8c_1a535ae6a53e08114dca25f7cbd7def55a" kindref="member">EEItemLocationChanged</ref>(notnull<sp/><ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref><sp/>oldLoc,<sp/>notnull<sp/><ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref><sp/>newLoc)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.EEItemLocationChanged(oldLoc,<sp/>newLoc);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_trap___trip_wire_8c_1a95a703623a2cb282ba7219b147237e2c" kindref="member">m_ResultOfAdvancedPlacing</ref>)</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(oldLoc.GetType()<sp/>==<sp/><ref refid="_inventory_location_8c_1ad09049fb2b99c763369bfe6228aa81b3" kindref="member">InventoryLocationType</ref>.GROUND<sp/>&amp;&amp;<sp/>newLoc.GetType()<sp/>==<sp/><ref refid="_inventory_location_8c_1ad09049fb2b99c763369bfe6228aa81b3" kindref="member">InventoryLocationType</ref>.GROUND)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a6e24e8c83077da760962af8be205d942" kindref="member">SetActive</ref>();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1afa4899c37d495901cb139b2e50555923" kindref="member">m_TrapTrigger</ref>.SetPosition(<ref refid="_trap___trip_wire_8c_1ab0735192bdc91656cb681d0e76b0fa66" kindref="member">m_TriggerPosition</ref>);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1afa4899c37d495901cb139b2e50555923" kindref="member">m_TrapTrigger</ref>.SetOrientation(<ref refid="_trap___trip_wire_8c_1a494acc5f32e0d28a86eb80af97940564" kindref="member">m_TriggerOrientation</ref>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___trip_wire_8c_1a95a703623a2cb282ba7219b147237e2c" kindref="member">m_ResultOfAdvancedPlacing</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(oldLoc.GetType()<sp/>==<sp/><ref refid="_inventory_location_8c_1ad09049fb2b99c763369bfe6228aa81b3" kindref="member">InventoryLocationType</ref>.GROUND<sp/>&amp;&amp;<sp/>newLoc.GetType()<sp/>==<sp/><ref refid="_inventory_location_8c_1ad09049fb2b99c763369bfe6228aa81b3" kindref="member">InventoryLocationType</ref>.CARGO)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a9c02237ebda40c6716cb82c807c89e89" kindref="member">SetInactive</ref>();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1ad566b67fc8ada7882b5a0a6522b55a01" kindref="member">DeleteTrigger</ref>();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stamina_handler_8c_1a51121c56fd44f1678bb5e97c034e533d" kindref="member">SetState</ref>(<ref refid="_trap___trip_wire_8c_1a25611e326fe1b4ab140780b9d9460044" kindref="member">FOLDED</ref>);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a6aa66b59ee3d79f671ae4c98bfa2b797" kindref="member">RefreshState</ref>();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="144" refid="_trap___trip_wire_8c_1a56edaa75fb618ddf0aa2354f005cdd6e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_trap_base_1af7f14064b4b872edd0e55953f3921892" kindref="member">EEHealthLevelChanged</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>oldLevel,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>newLevel,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>zone)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.EEHealthLevelChanged(oldLevel,<sp/>newLevel,<sp/>zone);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsServer())</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(newLevel<sp/>==<sp/><ref refid="class_game_constants" kindref="compound">GameConstants</ref>.<ref refid="group___item_health_1ga3908fcde0f2e91545d7e3a51fab2d5d0" kindref="member">STATE_RUINED</ref>)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stamina_handler_8c_1a51121c56fd44f1678bb5e97c034e533d" kindref="member">SetState</ref>(<ref refid="_trap___trip_wire_8c_1a1d056edb542b563fdfdeb878116d0b9b" kindref="member">TRIGGERED</ref>);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a6aa66b59ee3d79f671ae4c98bfa2b797" kindref="member">RefreshState</ref>();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="158" refid="_trap___trip_wire_8c_1a7fd5a669e6eaaaeeae8a27282c448a49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_trap_base_8c_1a9c02237ebda40c6716cb82c807c89e89" kindref="member">SetInactive</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>stop_timer<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.SetInactive(stop_timer);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>de-attach<sp/>attachments<sp/>after<sp/>&quot;activating<sp/>them&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>att<sp/>=<sp/>0;<sp/>att<sp/>&lt;<sp/>GetInventory().AttachmentCount();<sp/>att++)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>attachment<sp/>=<sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref>.Cast(GetInventory().GetAttachmentFromIndex(att));</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attachment)</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(attachment.IsLockedInSlot())</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attachment.UnlockFromParent();</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attachment.OnActivatedByItem(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetInventory().DropEntity(<ref refid="3___game_2_systems_2_inventory_2_inventory_8c_1a5073c77c5d68882860f688a9fc4cba4d" kindref="member">InventoryMode</ref>.SERVER,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>attachment);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="179" refid="_trap___trip_wire_8c_1ac1e3d598591ab6157454067618b6ef39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_stamina_handler_8c_1a51121c56fd44f1678bb5e97c034e533d" kindref="member">SetState</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state_ID)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stamina_handler_8c_1aff669510956ec2c2cc6c60ed37ca7d63" kindref="member">m_State</ref><sp/>=<sp/>state_ID;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="184" refid="_trap___trip_wire_8c_1a4a93aa7809e0ac5f0b9f49c170e06a36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="human_8c_1acc3552021b812e2dceef0206918282a7" kindref="member">GetState</ref>()</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_stamina_handler_8c_1aff669510956ec2c2cc6c60ed37ca7d63" kindref="member">m_State</ref>;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="189" refid="_trap___trip_wire_8c_1a8e580263114d24451555874aaa94bcdc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_trap___trip_wire_8c_1a8e580263114d24451555874aaa94bcdc" kindref="member">SetWireType</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wireType<sp/>)</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___trip_wire_8c_1a53b63e0fe042880470713535b648ab2c" kindref="member">m_WireMaterial</ref><sp/>=<sp/>wireType;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="194" refid="_trap___trip_wire_8c_1a3af252172f59c64c2fd13b1f3ff8b4b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_trap___trip_wire_8c_1a3af252172f59c64c2fd13b1f3ff8b4b0" kindref="member">GetWireType</ref>()</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_trap___trip_wire_8c_1a53b63e0fe042880470713535b648ab2c" kindref="member">m_WireMaterial</ref>;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="_trap___trip_wire_8c_1a721aa5c9c604253743c10171d90cd9e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_trap_base_8c_1a6aa66b59ee3d79f671ae4c98bfa2b797" kindref="member">RefreshState</ref>()</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.RefreshState();</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="human_8c_1acc3552021b812e2dceef0206918282a7" kindref="member">GetState</ref>()<sp/>==<sp/><ref refid="_trap___trip_wire_8c_1a25611e326fe1b4ab140780b9d9460044" kindref="member">FOLDED</ref>)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___trip_wire_8c_1a74760c70d995dba9f713e3cf17ea9405" kindref="member">FoldTripWire</ref>();</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="210" refid="_trap___trip_wire_8c_1abacd4e57c6f586e88a7bcacb9a564f25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_trap_base_8c_1ab97fcd7553274fd8812b75bb5e8fc3c9" kindref="member">SetupTrapPlayer</ref>(<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>set_position<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.SetupTrapPlayer(<sp/>player,<sp/>set_position<sp/>);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stamina_handler_8c_1a51121c56fd44f1678bb5e97c034e533d" kindref="member">SetState</ref>(<ref refid="_trap___trip_wire_8c_1a500e292a70cefa1351fccaa36246b57f" kindref="member">DEPLOYED</ref>);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="216" refid="_trap_base_8c_1af61dbb8d73886834d784291bbafb7360" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_trap_base_8c_1af61dbb8d73886834d784291bbafb7360" kindref="member">StartDeactivate</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.StartDeactivate(player);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1ad566b67fc8ada7882b5a0a6522b55a01" kindref="member">DeleteTrigger</ref>();</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stamina_handler_8c_1a51121c56fd44f1678bb5e97c034e533d" kindref="member">SetState</ref>(<ref refid="_trap___trip_wire_8c_1a25611e326fe1b4ab140780b9d9460044" kindref="member">FOLDED</ref>);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>do<sp/>not<sp/>want<sp/>players<sp/>to<sp/>attach<sp/>charges<sp/>before<sp/>trap<sp/>is<sp/>deployed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="_trap___trip_wire_8c_1ae7bd4d02b82fa1017e3a4cf7e3caba18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_item_base_8c_1ad21557e16ac492f09776dd46e3e8ae15" kindref="member">CanReceiveAttachment</ref>(<sp/><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>attachment,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>slotId<sp/>)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="human_8c_1acc3552021b812e2dceef0206918282a7" kindref="member">GetState</ref>()<sp/>!=<sp/><ref refid="_trap___trip_wire_8c_1a500e292a70cefa1351fccaa36246b57f" kindref="member">DEPLOYED</ref><sp/>)</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>super.CanReceiveAttachment(<sp/>attachment,<sp/>slotId<sp/>);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>As<sp/>players<sp/>cannot<sp/>attch<sp/>charges,<sp/>we<sp/>do<sp/>not<sp/>display<sp/>the<sp/>attachment<sp/>slot<sp/>before<sp/>it<sp/>is<sp/>necessary</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234" refid="_trap___trip_wire_8c_1a850b9b0562bb3b88cad1d9d6d0202dc9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_trap___trip_wire_8c_1a850b9b0562bb3b88cad1d9d6d0202dc9" kindref="member">CanDisplayAttachmentSlot</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>slot_id<sp/>)</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="human_8c_1acc3552021b812e2dceef0206918282a7" kindref="member">GetState</ref>()<sp/>!=<sp/><ref refid="_trap___trip_wire_8c_1a500e292a70cefa1351fccaa36246b57f" kindref="member">DEPLOYED</ref><sp/>)</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>super.CanDisplayAttachmentSlot(<sp/>slot_id<sp/>);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="242" refid="_trap___trip_wire_8c_1ac063b6124c64033d904f29247d8eb45a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_base_building_base_8c_1a9bf3965858dc8da241804bffd38061e3" kindref="member">EEItemAttached</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>item,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>slot_name)</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.EEItemAttached(item,<sp/>slot_name);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_item_base_8c_1a7ebe889f604229565900943d6301da6f" kindref="member">SetTakeable</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="249" refid="_trap___trip_wire_8c_1a870b0dcd0dfafe4a764232688d9356c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_base_building_base_8c_1a6f460cfdac24b23c56164e675f0965bf" kindref="member">EEItemDetached</ref>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>item,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>slot_name)</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.EEItemDetached(item,<sp/>slot_name);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_item_base_8c_1a7ebe889f604229565900943d6301da6f" kindref="member">SetTakeable</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="256" refid="_trap___trip_wire_8c_1a4de4d414d0cbf15100ab71ec84ca25f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_explosives_base_8c_1a4de4d414d0cbf15100ab71ec84ca25f7" kindref="member">EEKilled</ref>(<ref refid="class_object" kindref="compound">Object</ref><sp/>killer)</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_trap_base_8c_1afa4899c37d495901cb139b2e50555923" kindref="member">m_TrapTrigger</ref>)</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1af61dbb8d73886834d784291bbafb7360" kindref="member">StartDeactivate</ref>(null);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.EEKilled(killer);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>reset<sp/>the<sp/>animation<sp/>phases<sp/>to<sp/>see<sp/>the<sp/>tripwire<sp/>as<sp/>folded</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267" refid="_trap___trip_wire_8c_1a74760c70d995dba9f713e3cf17ea9405" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_trap___trip_wire_8c_1a74760c70d995dba9f713e3cf17ea9405" kindref="member">FoldTripWire</ref>()</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_trap_base_8c_1a59d2be4e8c91bd135a1adeef74b3985a" kindref="member">m_AnimationPhaseGrounded</ref><sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetAnimationPhase(<sp/><ref refid="_trap_base_8c_1a8e3a770cc95dc558b9b1d7c5c5f2eebd" kindref="member">m_AnimationPhaseSet</ref>,<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_trap_base_8c_1a040da04c77b049d7e43219a2fe30cd3d" kindref="member">m_AnimationPhaseTriggered</ref><sp/>!=<sp/><ref refid="_trap_base_8c_1a59d2be4e8c91bd135a1adeef74b3985a" kindref="member">m_AnimationPhaseGrounded</ref><sp/>)<sp/></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetAnimationPhase(<sp/><ref refid="_trap_base_8c_1a040da04c77b049d7e43219a2fe30cd3d" kindref="member">m_AnimationPhaseTriggered</ref>,<sp/>1<sp/>);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetAnimationPhase(<sp/><ref refid="_trap_base_8c_1a59d2be4e8c91bd135a1adeef74b3985a" kindref="member">m_AnimationPhaseGrounded</ref>,<sp/>0<sp/>);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="282" refid="_trap___trip_wire_8c_1ad0580e19ee7c965536e590ae5f2c9ea8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_item_base_8c_1a71b84f6068407d79560f58ed9d86ad52" kindref="member">OnInventoryEnter</ref>(<sp/>Man<sp/>player<sp/>)</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stamina_handler_8c_1a51121c56fd44f1678bb5e97c034e533d" kindref="member">SetState</ref>(<sp/><ref refid="_trap___trip_wire_8c_1a25611e326fe1b4ab140780b9d9460044" kindref="member">FOLDED</ref><sp/>);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>PLATFORM_WINDOWS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>How<sp/>one<sp/>sees<sp/>the<sp/>tripwire<sp/>when<sp/>in<sp/>vicinity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>GetViewIndex()</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>MemoryPointExists(<sp/></highlight><highlight class="stringliteral">&quot;invView2&quot;</highlight><highlight class="normal"><sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref><sp/>il<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref>;</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetInventory().GetCurrentInventoryLocation(<sp/>il<sp/>);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_inventory_location_8c_1ad09049fb2b99c763369bfe6228aa81b3" kindref="member">InventoryLocationType</ref><sp/>type<sp/>=<sp/>il.<ref refid="class_inventory_location_1af47a618941989bcedd7ee33dd3c45721" kindref="member">GetType</ref>();</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<sp/>type<sp/>)</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_inventory_location_8c_1ad09049fb2b99c763369bfe6228aa81b3" kindref="member">InventoryLocationType</ref>.CARGO:</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_inventory_location_8c_1ad09049fb2b99c763369bfe6228aa81b3" kindref="member">InventoryLocationType</ref>.ATTACHMENT:</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_inventory_location_8c_1ad09049fb2b99c763369bfe6228aa81b3" kindref="member">InventoryLocationType</ref>.HANDS:</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_inventory_location_8c_1ad09049fb2b99c763369bfe6228aa81b3" kindref="member">InventoryLocationType</ref>.GROUND:</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Different<sp/>view<sp/>index<sp/>depending<sp/>on<sp/>deployment<sp/>state<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="human_8c_1acc3552021b812e2dceef0206918282a7" kindref="member">GetState</ref>()<sp/>==<sp/><ref refid="_trap___trip_wire_8c_1a500e292a70cefa1351fccaa36246b57f" kindref="member">DEPLOYED</ref><sp/>)</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="human_8c_1acc3552021b812e2dceef0206918282a7" kindref="member">GetState</ref>()<sp/>==<sp/><ref refid="_trap___trip_wire_8c_1a1d056edb542b563fdfdeb878116d0b9b" kindref="member">TRIGGERED</ref><sp/>)</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>When<sp/>folded</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="_inventory_location_8c_1ad09049fb2b99c763369bfe6228aa81b3" kindref="member">InventoryLocationType</ref>.PROXYCARGO:</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="human_8c_1acc3552021b812e2dceef0206918282a7" kindref="member">GetState</ref>()<sp/>==<sp/><ref refid="_trap___trip_wire_8c_1a500e292a70cefa1351fccaa36246b57f" kindref="member">DEPLOYED</ref><sp/>)</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="human_8c_1acc3552021b812e2dceef0206918282a7" kindref="member">GetState</ref>()<sp/>==<sp/><ref refid="_trap___trip_wire_8c_1a1d056edb542b563fdfdeb878116d0b9b" kindref="member">TRIGGERED</ref><sp/>)</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>When<sp/>folded</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ADVANCED<sp/>PLACEMENT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>placement<sp/>complete,<sp/>set<sp/>state,<sp/>play<sp/>sound,<sp/>create<sp/>trigger<sp/>and<sp/>synch<sp/>to<sp/>client</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="346" refid="_trap___trip_wire_8c_1a6ff31a876fba89e2f0ae6c33af8cd551" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_trap_base_1a882fb980c2e81cf2f313434929cd649f" kindref="member">OnPlacementComplete</ref>(Man<sp/>player,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>position<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>orientation<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnPlacementComplete(player,<sp/>position,<sp/>orientation);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_item_base_8c_1a7fe7c70636f12f4d65a6f802b0ba19e1" kindref="member">SetIsPlaceSound</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsServer())</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stamina_handler_8c_1a51121c56fd44f1678bb5e97c034e533d" kindref="member">SetState</ref>(<ref refid="_trap___trip_wire_8c_1a500e292a70cefa1351fccaa36246b57f" kindref="member">DEPLOYED</ref>);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___trip_wire_8c_1ab0735192bdc91656cb681d0e76b0fa66" kindref="member">m_TriggerPosition</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>position;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___trip_wire_8c_1a494acc5f32e0d28a86eb80af97940564" kindref="member">m_TriggerOrientation</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>orientation;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___trip_wire_8c_1a95a703623a2cb282ba7219b147237e2c" kindref="member">m_ResultOfAdvancedPlacing</ref><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="361" refid="_trap___trip_wire_8c_1a92bbc22017be7c79d20a6162878d5fa6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_trap___trip_wire_8c_1a92bbc22017be7c79d20a6162878d5fa6" kindref="member">OnPlacementCancelled</ref>(Man<sp/>player)</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnPlacementCancelled(player);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stamina_handler_8c_1a51121c56fd44f1678bb5e97c034e533d" kindref="member">SetState</ref>(<ref refid="_trap___trip_wire_8c_1a25611e326fe1b4ab140780b9d9460044" kindref="member">FOLDED</ref>);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap___trip_wire_8c_1a95a703623a2cb282ba7219b147237e2c" kindref="member">m_ResultOfAdvancedPlacing</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="370" refid="_trap___trip_wire_8c_1ab18e11ed223759f876177531c553dfbe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_trap_base_1aca6dafea75a9634626a0210102c9357c" kindref="member">IsDeployable</ref>()</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Tripwire<sp/>cannot<sp/>be<sp/>taken<sp/>if<sp/>deployed<sp/>with<sp/>attachment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376" refid="_trap___trip_wire_8c_1ac04a39fa356ae48f99ac9fed3df8887d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_explosives_base_8c_1ac04a39fa356ae48f99ac9fed3df8887d" kindref="member">IsTakeable</ref>()</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="human_8c_1acc3552021b812e2dceef0206918282a7" kindref="member">GetState</ref>()<sp/>!=<sp/><ref refid="_trap___trip_wire_8c_1a500e292a70cefa1351fccaa36246b57f" kindref="member">DEPLOYED</ref><sp/>||<sp/>(GetInventory().AttachmentCount()<sp/>==<sp/>0<sp/>&amp;&amp;<sp/><ref refid="human_8c_1acc3552021b812e2dceef0206918282a7" kindref="member">GetState</ref>()<sp/>==<sp/><ref refid="_trap___trip_wire_8c_1a500e292a70cefa1351fccaa36246b57f" kindref="member">DEPLOYED</ref>);</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="381" refid="_trap___trip_wire_8c_1a14046891600537e83da30eb2e7a1f4d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_item_base_8c_1a5482d1a937c197cac6260fcd32bf4853" kindref="member">GetDeploySoundset</ref>()</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;tripwire_deploy_SoundSet&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="386" refid="_trap___trip_wire_8c_1a4403b4f304acf2affb04880ba46a1313" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_trap_base_1a38ba82430c8652da6361126781c7383a" kindref="member">GetLoopDeploySoundset</ref>()</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;tripwiretrap_deploy_SoundSet&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="391" refid="_trap___trip_wire_8c_1afa39b7c4d3d085ef8514a87c32b81a4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_trap_base_1aeaff7a7498570759e37dcf7f983aff9e" kindref="member">SetActions</ref>()</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.SetActions();</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a033d077df58807906c4dad3101d8768c" kindref="member">AddAction</ref>(<ref refid="class_action_toggle_place_object" kindref="compound">ActionTogglePlaceObject</ref>);</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_advanced_communication_8c_1a033d077df58807906c4dad3101d8768c" kindref="member">AddAction</ref>(<ref refid="_action_deploy_object_8c_1a1eb6c584b29789b9c360df2d769c22a8" kindref="member">ActionDeployObject</ref>);</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>====================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===========<sp/><sp/>DEPRECATED<sp/><sp/>===========</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>====================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="403" refid="_trap___trip_wire_8c_1ac7528e3fcc34000aba7488abe3880737" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_trap___trip_wire_8c_1ac7528e3fcc34000aba7488abe3880737" kindref="member">UpdateProxySelections</ref>()</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>GetInventory().AttachmentCount()<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>attachment<sp/>=<sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref>.Cast(<sp/>GetInventory().GetAttachmentFromIndex(0)<sp/>);</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>attachment<sp/>)</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Hide<sp/>all<sp/>proxies</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;=<sp/>3;<sp/>i++)</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HideSelection(</highlight><highlight class="stringliteral">&quot;s&quot;</highlight><highlight class="normal"><sp/>+<sp/>i<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;_charge&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>show<sp/>the<sp/>one<sp/>we<sp/>need<sp/>to<sp/>see</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>proxy_to_show<sp/>=<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.Format(</highlight><highlight class="stringliteral">&quot;s%1_charge&quot;</highlight><highlight class="normal">,<sp/><ref refid="human_8c_1acc3552021b812e2dceef0206918282a7" kindref="member">GetState</ref>()<sp/>);<sp/></highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(proxy_to_show);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ShowSelection(<sp/>proxy_to_show<sp/>);</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"></highlight></codeline>
+<codeline lineno="425"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEVELOPER<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Debug<sp/>menu<sp/>Spawn<sp/>Ground<sp/>Special</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_hatchback__02_8c_1a07e1fe7c5e95b4ef7987be52d7fdf51c" kindref="member">OnDebugSpawn</ref>()</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_stamina_handler_8c_1a51121c56fd44f1678bb5e97c034e533d" kindref="member">SetState</ref>(<ref refid="_trap___trip_wire_8c_1a500e292a70cefa1351fccaa36246b57f" kindref="member">DEPLOYED</ref>);</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1acf9c82ef825d2ca5d8edb53b89ba20c6" kindref="member">StartActivate</ref>(null);</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fireplace_base_8c_1add7373fc8492b0821fd03c0692256f5c" kindref="member">GetDebugButtonNames</ref>(out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>button1,<sp/>out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>button2,<sp/>out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>button3,<sp/>out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>button4)</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>button1<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Activate&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>button2<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Deactivate&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_fireplace_base_8c_1a46c79f6a4908c367de361cddfae5dd0a" kindref="member">OnDebugButtonPressServer</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>button_index)</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(button_index)</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1acf9c82ef825d2ca5d8edb53b89ba20c6" kindref="member">StartActivate</ref>(null);</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_trap_base_8c_1a9c02237ebda40c6716cb82c807c89e89" kindref="member">SetInactive</ref>();</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="457"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight></codeline>
+<codeline lineno="459" refid="class_tripwire_trap_deployed" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_tripwire_trap_deployed" kindref="compound">TripwireTrapDeployed</ref><sp/>:<sp/><ref refid="_trap___trip_wire_8c_1aea9b9b55667dc9572784dd968ba75845" kindref="member">TripwireTrap</ref></highlight></codeline>
+<codeline lineno="460"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="462"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ItemBase/TrapBase/Trap_TripWire.c"/>
+  </compounddef>
+</doxygen>

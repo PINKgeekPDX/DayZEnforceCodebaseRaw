@@ -1,0 +1,903 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_p_p_e_manager_8c" kind="file" language="C++">
+    <compoundname>PPEManager.c</compoundname>
+    <innerclass refid="class_p_p_e_manager_static" prot="public">PPEManagerStatic</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_p_p_e_manager_8c_1a554a0b106fcf9a5fa152c30efa8cf0ef" prot="public" static="no" mutable="no">
+        <type>class <ref refid="class_p_p_e_manager_static" kindref="compound">PPEManagerStatic</ref></type>
+        <definition>class PPEManagerStatic CAMERA_ID</definition>
+        <argsstring></argsstring>
+        <name>CAMERA_ID</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>/brief Postprocess manager, responsible for updates, receiving, and re-distributing requester data to their respective destinations. /par Basic post process flow outline: Getting a registered &apos;PPERequester&apos; instance from the &apos;PPERequesterBank&apos;</para>
+<para>/par Launching the requester, either through an overriden &apos;Start&apos; method, or custom method with some setters (both flag it as active and to be processed)</para>
+<para>/par On render update, PPEManager: Handles queued requester changes, re-distributes individual commands to material structure <verbatim>/par
+Updates the material/parameter structure and calculates the blend values
+
+/par
+Sets the final values via native functions (only called once per changed parameter - optimization stonks)
+</verbatim> /note Requester serves as a centralized platform for specific effec/group of effects. Although technically the direct commands to mat/param would be feasible, this allows for easier control of effect groups, /note and clearer command hierarchy (no value setters without clear parentage). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="55" column="21"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_manager_8c_1ada31e7a3ccd94a067e802178d7c775e1" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool m_ManagerInitialized</definition>
+        <argsstring></argsstring>
+        <name>m_ManagerInitialized</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="57" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" prot="public" static="no" mutable="no">
+        <type>protected ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, ref <ref refid="class_p_p_e_class_base" kindref="compound">PPEClassBase</ref> &gt;</type>
+        <definition>protected ref map&lt;int, ref PPEClassBase&gt; m_PPEClassMap</definition>
+        <argsstring></argsstring>
+        <name>m_PPEClassMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="58" column="19" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_manager_8c_1ab6d019f0e9e83a154334e64b5ea486f5" prot="public" static="no" mutable="no">
+        <type>protected ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, ref <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt; &gt;</type>
+        <definition>protected ref map&lt;int, ref array&lt;int&gt; &gt; m_PPEMaterialUpdateQueueMap</definition>
+        <argsstring></argsstring>
+        <name>m_PPEMaterialUpdateQueueMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="59" column="19" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_manager_8c_1ad18fd913a84dd753c29a9a40dce41154" prot="public" static="no" mutable="no">
+        <type>protected ref <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt;</type>
+        <definition>protected ref array&lt;int&gt; m_UpdatedMaterials</definition>
+        <argsstring></argsstring>
+        <name>m_UpdatedMaterials</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="60" column="21" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_manager_8c_1a73619b42026369f5bc7c0fa042070b79" prot="public" static="no" mutable="no">
+        <type>protected ref <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref> &gt;</type>
+        <definition>protected ref array&lt;ref PPERequesterBase&gt; m_ExistingPostprocessRequests</definition>
+        <argsstring></argsstring>
+        <name>m_ExistingPostprocessRequests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="61" column="21" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_p_p_e_manager_8c_1a4f3a0b94ce13791ca81bd439850f6792" prot="public" static="no" mutable="no">
+        <type>protected ref <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref> &gt;</type>
+        <definition>protected ref array&lt;ref PPERequesterBase&gt; m_UpdatingRequests</definition>
+        <argsstring></argsstring>
+        <name>m_UpdatingRequests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="62" column="21" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_p_p_e_manager_8c_1a3f65891e72814e8a6b29c4af7885038d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PPEManager</definition>
+        <argsstring>()</argsstring>
+        <name>PPEManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="64" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="64" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1ae89a123aad1c66a76c398b7af216aae4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>Cleanup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="70" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="70" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1a1e3b6d38df0786ccf7f938d60e386aae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+<para>Launched from &apos;DayZGame.DeferredInit&apos; to make earlier access, use, and updates impossible (downside of a non-static system) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="84" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="84" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1a1b9b71468e1ec8f4b788f1e6c565ff91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void InitPPEManagerClassMap</definition>
+        <argsstring>()</argsstring>
+        <name>InitPPEManagerClassMap</name>
+        <briefdescription>
+<para>Ordered by &apos;PostProcessEffectType&apos; for easy access through the same enum; ID saved all the same. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="101" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="101" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void RegisterPPEClass</definition>
+        <argsstring>(PPEClassBase material_class)</argsstring>
+        <name>RegisterPPEClass</name>
+        <param>
+          <type><ref refid="class_p_p_e_class_base" kindref="compound">PPEClassBase</ref></type>
+          <declname>material_class</declname>
+        </param>
+        <briefdescription>
+<para>Registeres material class and creates data structure within. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="137" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1ab50b198c90931284c15756c65c7462ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SendMaterialValueData</definition>
+        <argsstring>(PPERequestParamDataBase data)</argsstring>
+        <name>SendMaterialValueData</name>
+        <param>
+          <type><ref refid="class_p_p_e_request_param_data_base" kindref="compound">PPERequestParamDataBase</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="142" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="142" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1aaca68301fd7adfefb48f0bab6df8f671" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetMaterialParamUpdating</definition>
+        <argsstring>(int material_id, int parameter_id, int order)</argsstring>
+        <name>SetMaterialParamUpdating</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>material_id</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>parameter_id</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+<para>Queues material/parameter to update (once) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="151" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="151" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1ac25c1e5db3b4d3bcd09af9fd0d7d60e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RemoveMaterialUpdating</definition>
+        <argsstring>(int material_id, int order=0)</argsstring>
+        <name>RemoveMaterialUpdating</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>material_id</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>order</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Currently unused, requests remain in the hierarchy and are used when needed (slightly faster than constantly re-shuffilng the arrays) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="176" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="176" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1a5749de315222d03b6a5480df3122ed54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void ClearMaterialUpdating</definition>
+        <argsstring>()</argsstring>
+        <name>ClearMaterialUpdating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="187" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="187" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1a48da27826925d0ab1d9441103e1afca2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetRequestActive</definition>
+        <argsstring>(PPERequesterBase request, bool active)</argsstring>
+        <name>SetRequestActive</name>
+        <param>
+          <type><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref></type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>active</declname>
+        </param>
+        <briefdescription>
+<para>Marks requester as &apos;active&apos;. Currently indistinguiishable from &apos;updating&apos; requester, can potentially be used for intermittently updated requesters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="193" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="193" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1ac3cf4afc2b88ead1154943cae6b55aa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SetRequestUpdating</definition>
+        <argsstring>(PPERequesterBase request, bool active)</argsstring>
+        <name>SetRequestUpdating</name>
+        <param>
+          <type><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref></type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>active</declname>
+        </param>
+        <briefdescription>
+<para>Marks requester as &apos;updating&apos; and to be processed on manager update. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="209" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="209" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1acfec04b19badaf40c88be6cab24ce004" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool GetExistingRequester</definition>
+        <argsstring>(typename req, out PPERequesterBase ret)</argsstring>
+        <name>GetExistingRequester</name>
+        <param>
+          <type><ref refid="classtypename" kindref="compound">typename</ref> req</type>
+        </param>
+        <param>
+          <type>out <ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref></type>
+          <declname>ret</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="230" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="230" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1abf2aa5bec2a42a7e92051658d7dc1344" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void RemoveActiveRequestFromMaterials</definition>
+        <argsstring>(PPERequesterBase req)</argsstring>
+        <name>RemoveActiveRequestFromMaterials</name>
+        <param>
+          <type><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref></type>
+          <declname>req</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>/brief Originally designed to rip the requester data from all relevant mat/params, but that proved too costly and volatile. /note Still, it is here, use at your own peril. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="245" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="245" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1a5af247d0488b90a0118a412f60add18d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void RequestsCleanup</definition>
+        <argsstring>()</argsstring>
+        <name>RequestsCleanup</name>
+        <briefdescription>
+<para>Unused cleanup method, should it be ever needed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="258" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="258" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1a4e36ebc18ec5c7feca23a42fd88d46d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InsertUpdatedMaterial</definition>
+        <argsstring>(int mat_id)</argsstring>
+        <name>InsertUpdatedMaterial</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>mat_id</declname>
+        </param>
+        <briefdescription>
+<para>Marks material class as updated and values to be set in the course of update - &apos;ProcessApplyValueChanges&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="263" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="263" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1aed61d5da9d7ed52efd439d0870577386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void ProcessRequesterUpdates</definition>
+        <argsstring>(float timeslice)</argsstring>
+        <name>ProcessRequesterUpdates</name>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>timeslice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="272" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="272" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1a5dd9cab82412520ec5fb8cd169173b70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void ProcessMaterialUpdates</definition>
+        <argsstring>(float timeslice)</argsstring>
+        <name>ProcessMaterialUpdates</name>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>timeslice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="284" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="284" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1aec3843bc3b1f75b5c5bd3d453f52cd0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void ProcessApplyValueChanges</definition>
+        <argsstring>()</argsstring>
+        <name>ProcessApplyValueChanges</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="299" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="299" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1a325083b299d352e645ed7995f974ce59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Update</definition>
+        <argsstring>(float timeslice)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>timeslice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="313" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="313" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1a8dba9b9e47a4cfffa4a0f9287164f566" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_param" kindref="compound">Param</ref></type>
+        <definition>Param GetPostProcessDefaultValues</definition>
+        <argsstring>(int material, int parameter)</argsstring>
+        <name>GetPostProcessDefaultValues</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>material</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>parameter</declname>
+        </param>
+        <briefdescription>
+<para>Returns default values as <ref refid="class_param" kindref="compound">Param</ref>. See &apos;PPEConstants&apos; file for various typedefs used. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="325" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="325" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1ad1163cb72984e768e95769db199a0212" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_param" kindref="compound">Param</ref></type>
+        <definition>Param GetPostProcessCurrentValues</definition>
+        <argsstring>(int material, int parameter)</argsstring>
+        <name>GetPostProcessCurrentValues</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>material</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>parameter</declname>
+        </param>
+        <briefdescription>
+<para>Returns current values as <ref refid="class_param" kindref="compound">Param</ref>. See &apos;PPEConstants&apos; file for various typedefs used. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="332" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="332" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1a8dbfa415c098f074f397fdbd469ba56d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChangePPEMaterial</definition>
+        <argsstring>(PostProcessPrioritiesCamera priority, PostProcessEffectType type, string path, bool scriptside_only)</argsstring>
+        <name>ChangePPEMaterial</name>
+        <param>
+          <type><ref refid="_p_p_e_constants_8c_1ad276cdedb5a3eae18144540aef237b95" kindref="member">PostProcessPrioritiesCamera</ref></type>
+          <declname>priority</declname>
+        </param>
+        <param>
+          <type><ref refid="group___camera_1gac5442d940bdd247b908f1f02efd643ec" kindref="member">PostProcessEffectType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>scriptside_only</declname>
+        </param>
+        <briefdescription>
+<para>Changes material file associated with the script material class. Will be used very rarely, mostly set in C++ anyway. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="341" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="341" bodyend="363"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1a23c9ee9ccb5145214a008010f02751f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void StopAllEffects</definition>
+        <argsstring>(int mask=0)</argsstring>
+        <name>StopAllEffects</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>mask</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>stops all effects of a certain kind </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="366" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="366" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="_p_p_e_manager_8c_1a0debfb0df974e6c624d6b665a6e82e52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DbgPrnt</definition>
+        <argsstring>(string text)</argsstring>
+        <name>DbgPrnt</name>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" line="380" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c" bodystart="380" bodyend="383"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="class_p_p_e_manager_static" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_p_p_e_manager_static" kindref="compound">PPEManagerStatic</ref></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="4" refid="class_p_p_e_manager_static_1adc41414753ed11616f4936ad9355e89c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ref<sp/><ref refid="_p_p_e_manager_8c_1a3f65891e72814e8a6b29c4af7885038d" kindref="member">PPEManager</ref><sp/><ref refid="class_p_p_e_manager_static_1adc41414753ed11616f4936ad9355e89c" kindref="member">m_Manager</ref>;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="6" refid="class_p_p_e_manager_static_1a70e68ea53fe9909c8e2443ec22c1fc9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_manager_static_1a70e68ea53fe9909c8e2443ec22c1fc9e" kindref="member">CreateManagerStatic</ref>()</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_p_p_e_manager_static_1adc41414753ed11616f4936ad9355e89c" kindref="member">m_Manager</ref>)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_debug" kindref="compound">Debug</ref>.<ref refid="class_debug_1ac759558b1dd4e820330546c994a9d840" kindref="member">Log</ref>(</highlight><highlight class="stringliteral">&quot;PPEManagerStatic<sp/>|<sp/>CreateManagerStatic<sp/>-<sp/>PPEManager<sp/>already<sp/>exists&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_manager_static_1adc41414753ed11616f4936ad9355e89c" kindref="member">m_Manager</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1a3f65891e72814e8a6b29c4af7885038d" kindref="member">PPEManager</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17" refid="class_p_p_e_manager_static_1a9c4572e41b2e18a5659d1e85a0503299" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_manager_static_1a9c4572e41b2e18a5659d1e85a0503299" kindref="member">DestroyManagerStatic</ref>()</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_p_p_e_manager_static_1adc41414753ed11616f4936ad9355e89c" kindref="member">m_Manager</ref>)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_manager_static_1adc41414753ed11616f4936ad9355e89c" kindref="member">m_Manager</ref>.Cleanup();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_manager_static_1adc41414753ed11616f4936ad9355e89c" kindref="member">m_Manager</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="class_p_p_e_manager_static_1a86b3b44641655b3466eab6e2f31bfa14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1a3f65891e72814e8a6b29c4af7885038d" kindref="member">PPEManager</ref><sp/><ref refid="class_p_p_e_manager_static_1a86b3b44641655b3466eab6e2f31bfa14" kindref="member">GetPPEManager</ref>()</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_manager_static_1adc41414753ed11616f4936ad9355e89c" kindref="member">m_Manager</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_p_p_e_manager_8c_1a3f65891e72814e8a6b29c4af7885038d" kindref="member">PPEManager</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_managed" kindref="compound">Managed</ref></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55" refid="_p_p_e_manager_8c_1a554a0b106fcf9a5fa152c30efa8cf0ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1a554a0b106fcf9a5fa152c30efa8cf0ef" kindref="member">CAMERA_ID</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="_p_p_e_manager_8c_1ada31e7a3ccd94a067e802178d7c775e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1ada31e7a3ccd94a067e802178d7c775e1" kindref="member">m_ManagerInitialized</ref>;</highlight></codeline>
+<codeline lineno="58" refid="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>ref<sp/><ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map&lt;int, ref PPEClassBase&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" kindref="member">m_PPEClassMap</ref>;<sp/></highlight><highlight class="comment">//contains<sp/>sorted<sp/>postprocess<sp/>classes,<sp/>IDs<sp/>in<sp/>&apos;PostProcessEffectType&apos;<sp/>//<sp/>&lt;MaterialID,&lt;material_class&gt;&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="_p_p_e_manager_8c_1ab6d019f0e9e83a154334e64b5ea486f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>ref<sp/><ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map&lt;int, ref array&lt;int&gt;</ref>&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1ab6d019f0e9e83a154334e64b5ea486f5" kindref="member">m_PPEMaterialUpdateQueueMap</ref>;<sp/></highlight><highlight class="comment">//multiple<sp/>levels<sp/>of<sp/>update<sp/>queues,<sp/>to<sp/>allow<sp/>for<sp/>multiple<sp/>dependent<sp/>updates<sp/>during<sp/>same<sp/>frame<sp/>(greedy?)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="_p_p_e_manager_8c_1ad18fd913a84dd753c29a9a40dce41154" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>ref<sp/><ref refid="classarray" kindref="compound">array&lt;int&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1ad18fd913a84dd753c29a9a40dce41154" kindref="member">m_UpdatedMaterials</ref>;</highlight></codeline>
+<codeline lineno="61" refid="_p_p_e_manager_8c_1a73619b42026369f5bc7c0fa042070b79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>ref<sp/><ref refid="classarray" kindref="compound">array&lt;ref PPERequesterBase&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a73619b42026369f5bc7c0fa042070b79" kindref="member">m_ExistingPostprocessRequests</ref>;<sp/></highlight><highlight class="comment">//which<sp/>requests<sp/>are<sp/>active<sp/>overall.<sp/>Does<sp/>not<sp/>have<sp/>to<sp/>be<sp/>updating<sp/>ATM!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="_p_p_e_manager_8c_1a4f3a0b94ce13791ca81bd439850f6792" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>ref<sp/><ref refid="classarray" kindref="compound">array&lt;ref PPERequesterBase&gt;</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4f3a0b94ce13791ca81bd439850f6792" kindref="member">m_UpdatingRequests</ref>;<sp/></highlight><highlight class="comment">//which<sp/>requests<sp/>are<sp/>currently<sp/>updating<sp/>and<sp/>processing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="_p_p_e_manager_8c_1a3f65891e72814e8a6b29c4af7885038d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1a3f65891e72814e8a6b29c4af7885038d" kindref="member">PPEManager</ref>()</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1ada31e7a3ccd94a067e802178d7c775e1" kindref="member">m_ManagerInitialized</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PPERequesterBank.Init();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="_p_p_e_manager_8c_1ae89a123aad1c66a76c398b7af216aae4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_managed_1acd5ce8693104b8f35cde706be9e79cd0" kindref="member">Cleanup</ref>()</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PPERequesterBank.Cleanup();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_p_p_e_manager_8c_1ada31e7a3ccd94a067e802178d7c775e1" kindref="member">m_ManagerInitialized</ref>)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1ab6d019f0e9e83a154334e64b5ea486f5" kindref="member">m_PPEMaterialUpdateQueueMap</ref>.Clear();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a73619b42026369f5bc7c0fa042070b79" kindref="member">m_ExistingPostprocessRequests</ref>.Clear();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4f3a0b94ce13791ca81bd439850f6792" kindref="member">m_UpdatingRequests</ref>.Clear();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" kindref="member">m_PPEClassMap</ref>.Clear();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84" refid="_p_p_e_manager_8c_1a1e3b6d38df0786ccf7f938d60e386aae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_managed_1a325c9a8c1ba18f0730129835c4934351" kindref="member">Init</ref>()</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DbgPrnt(&quot;PPEDebug<sp/>|<sp/>PPEManager<sp/>|<sp/>m_ManagerInitialized:<sp/>&quot;<sp/>+<sp/>m_ManagerInitialized);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="_p_p_e_manager_8c_1ada31e7a3ccd94a067e802178d7c775e1" kindref="member">m_ManagerInitialized</ref>)</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1ab6d019f0e9e83a154334e64b5ea486f5" kindref="member">m_PPEMaterialUpdateQueueMap</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map&lt;int, ref array&lt;int&gt;</ref>&gt;;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1ad18fd913a84dd753c29a9a40dce41154" kindref="member">m_UpdatedMaterials</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;int&gt;</ref>;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a73619b42026369f5bc7c0fa042070b79" kindref="member">m_ExistingPostprocessRequests</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ref PPERequesterBase&gt;</ref>;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4f3a0b94ce13791ca81bd439850f6792" kindref="member">m_UpdatingRequests</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ref PPERequesterBase&gt;</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a1b9b71468e1ec8f4b788f1e6c565ff91" kindref="member">InitPPEManagerClassMap</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1a518452f9839eb58dc532b159cf661e3f" kindref="member">GetUpdateQueue</ref>(<ref refid="group___tools_1gaae15173306f94a164b31a4baea73e5eb" kindref="member">CALL_CATEGORY_GUI</ref>).<ref refid="class_script_invoker_1ad6e8fe06898a73a776c29ad671549f02" kindref="member">Insert</ref>(this.<ref refid="group___widget_a_p_i_1ga70ac517aa5d3b3af95f61a2d560d811f" kindref="member">Update</ref>);<sp/></highlight><highlight class="comment">//can<sp/>be<sp/>safely<sp/>and<sp/>easily<sp/>&apos;disabled&apos;<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_ManagerInitialized<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101" refid="_p_p_e_manager_8c_1a1b9b71468e1ec8f4b788f1e6c565ff91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1a1b9b71468e1ec8f4b788f1e6c565ff91" kindref="member">InitPPEManagerClassMap</ref>()</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" kindref="member">m_PPEClassMap</ref>)</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" kindref="member">m_PPEClassMap</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" kindref="member">m_PPEClassMap</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map&lt;int, ref PPEClassBase&gt;</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_none" kindref="compound">PPENone</ref>());<sp/></highlight><highlight class="comment">//dummy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_under_water" kindref="compound">PPEUnderWater</ref>());</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_s_s_a_o" kindref="compound">PPESSAO</ref>());</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_depth_of_field" kindref="compound">PPEDepthOfField</ref>());</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_h_b_a_o" kindref="compound">PPEHBAO</ref>());</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_rot_blur" kindref="compound">PPERotBlur</ref>());</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_god_rays" kindref="compound">PPEGodRays</ref>());</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_rain" kindref="compound">PPERain</ref>());</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_film_grain" kindref="compound">PPEFilmGrain</ref>());</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_radial_blur" kindref="compound">PPERadialBlur</ref>());</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_chrom_aber" kindref="compound">PPEChromAber</ref>());</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_wet_distort" kindref="compound">PPEWetDistort</ref>());</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_dynamic_blur" kindref="compound">PPEDynamicBlur</ref>());</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_color_grading" kindref="compound">PPEColorGrading</ref>());</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_colors" kindref="compound">PPEColors</ref>());</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_glow" kindref="compound">PPEGlow</ref>());</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_s_m_a_a" kindref="compound">PPESMAA</ref>());</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_f_x_a_a" kindref="compound">PPEFXAA</ref>());</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_median" kindref="compound">PPEMedian</ref>());</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_sun_mask" kindref="compound">PPESunMask</ref>());</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_gauss_filter" kindref="compound">PPEGaussFilter</ref>());</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_exposure_native" kindref="compound">PPEExposureNative</ref>());</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_eye_accomodation_native" kindref="compound">PPEEyeAccomodationNative</ref>());</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_d_o_f" kindref="compound">PPEDOF</ref>());</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_p_p_e_light_intensity_params_native" kindref="compound">PPELightIntensityParamsNative</ref>());</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137" refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1a4553501b894bc6249a789dbbd2d35e86" kindref="member">RegisterPPEClass</ref>(<ref refid="class_p_p_e_class_base" kindref="compound">PPEClassBase</ref><sp/>material_class)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" kindref="member">m_PPEClassMap</ref>.Set(material_class.<ref refid="class_p_p_e_class_base_1ad5bb3b0cbe702a83f6ab872aa54bf66e" kindref="member">GetPostProcessEffectID</ref>(),<sp/>material_class);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="142" refid="_p_p_e_manager_8c_1ab50b198c90931284c15756c65c7462ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1ab50b198c90931284c15756c65c7462ff" kindref="member">SendMaterialValueData</ref>(<ref refid="class_p_p_e_request_param_data_base" kindref="compound">PPERequestParamDataBase</ref><sp/>data)</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DbgPrnt(&quot;DataVerification<sp/>|<sp/>m_ColorTarget<sp/>|<sp/>SendMaterialValueData:<sp/>&quot;<sp/>+<sp/>PPERequestParamDataColor.Cast(data).m_ColorTarget[0]<sp/>+<sp/>&quot;/&quot;<sp/>+<sp/>PPERequestParamDataColor.Cast(data).m_ColorTarget[1]<sp/>+<sp/>&quot;/&quot;<sp/>+<sp/>PPERequestParamDataColor.Cast(data).m_ColorTarget[2]<sp/>+<sp/>&quot;/&quot;<sp/>+<sp/>PPERequestParamDataColor.Cast(data).m_ColorTarget[3]);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_class_base" kindref="compound">PPEClassBase</ref><sp/>mat_class<sp/>=<sp/><ref refid="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" kindref="member">m_PPEClassMap</ref>.Get(data.<ref refid="class_p_p_e_request_param_data_base_1ab0dfdaa1158d2ee75f2cce4e8f651832" kindref="member">GetMaterialID</ref>());</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mat_class.<ref refid="class_p_p_e_class_base_1a2c95285f23145ae03c556c1a26d6baa1" kindref="member">InsertParamValueData</ref>(data);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1aaca68301fd7adfefb48f0bab6df8f671" kindref="member">SetMaterialParamUpdating</ref>(data.<ref refid="class_p_p_e_request_param_data_base_1ab0dfdaa1158d2ee75f2cce4e8f651832" kindref="member">GetMaterialID</ref>(),data.<ref refid="class_p_p_e_request_param_data_base_1a57d007c700cee2aa8868d6bb545b9a00" kindref="member">GetParameterID</ref>(),PPEConstants.DEPENDENCY_ORDER_BASE);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151" refid="_p_p_e_manager_8c_1aaca68301fd7adfefb48f0bab6df8f671" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1aaca68301fd7adfefb48f0bab6df8f671" kindref="member">SetMaterialParamUpdating</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>material_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>parameter_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>order)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>order<sp/>&gt;<sp/>PPEConstants.DEPENDENCY_ORDER_HIGHEST<sp/>)</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DbgPrnt(&quot;PPEDebug<sp/>|<sp/>PPEManager<sp/>-<sp/>SetMaterialParamUpdating<sp/>|<sp/>Order<sp/>higher<sp/>than<sp/>max,<sp/>ignoring!<sp/>|<sp/>mat/par/ord:<sp/>&quot;<sp/>+<sp/>material_id<sp/>+<sp/>&quot;/&quot;<sp/>+<sp/>parameter_id<sp/>+<sp/>&quot;/&quot;<sp/>+<sp/>order);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_class_base" kindref="compound">PPEClassBase</ref><sp/>mat_class<sp/>=<sp/><ref refid="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" kindref="member">m_PPEClassMap</ref>.Get(material_id);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DbgPrnt(&quot;PPEDebug<sp/>|<sp/>PPEManager<sp/>-<sp/>SetMaterialParamUpdating<sp/>|<sp/>mat/par:<sp/>&quot;<sp/>+<sp/>material_id<sp/>+<sp/>&quot;/&quot;<sp/>+<sp/>parameter_id);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//insert<sp/>material<sp/>into<sp/>queue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="_p_p_e_manager_8c_1ab6d019f0e9e83a154334e64b5ea486f5" kindref="member">m_PPEMaterialUpdateQueueMap</ref>.Contains(order)<sp/>)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1ab6d019f0e9e83a154334e64b5ea486f5" kindref="member">m_PPEMaterialUpdateQueueMap</ref>.Set(order,</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;int&gt;</ref>);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>found<sp/>=<sp/><ref refid="_p_p_e_manager_8c_1ab6d019f0e9e83a154334e64b5ea486f5" kindref="member">m_PPEMaterialUpdateQueueMap</ref>.Get(order).Find(material_id);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>found<sp/>==<sp/>-1<sp/>)</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1ab6d019f0e9e83a154334e64b5ea486f5" kindref="member">m_PPEMaterialUpdateQueueMap</ref>.Get(order).Insert(material_id);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mat_class.<ref refid="class_p_p_e_class_base_1ac7804f9f3d08a000c0ad883ab56e4f98" kindref="member">SetParameterUpdating</ref>(order,parameter_id);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="176" refid="_p_p_e_manager_8c_1ac25c1e5db3b4d3bcd09af9fd0d7d60e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1ac25c1e5db3b4d3bcd09af9fd0d7d60e5" kindref="member">RemoveMaterialUpdating</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>material_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>order<sp/>=<sp/>0)</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_p_p_e_manager_8c_1ab6d019f0e9e83a154334e64b5ea486f5" kindref="member">m_PPEMaterialUpdateQueueMap</ref>.Contains(order)<sp/>)</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1ab6d019f0e9e83a154334e64b5ea486f5" kindref="member">m_PPEMaterialUpdateQueueMap</ref>.Get(order).RemoveItem(material_id);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_p_p_e_manager_8c_1ab6d019f0e9e83a154334e64b5ea486f5" kindref="member">m_PPEMaterialUpdateQueueMap</ref>.Get(order).Count()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1ab6d019f0e9e83a154334e64b5ea486f5" kindref="member">m_PPEMaterialUpdateQueueMap</ref>.Remove(order);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="187" refid="_p_p_e_manager_8c_1a5749de315222d03b6a5480df3122ed54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1a5749de315222d03b6a5480df3122ed54" kindref="member">ClearMaterialUpdating</ref>()</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1ab6d019f0e9e83a154334e64b5ea486f5" kindref="member">m_PPEMaterialUpdateQueueMap</ref>.Clear();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193" refid="_p_p_e_manager_8c_1a48da27826925d0ab1d9441103e1afca2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1a48da27826925d0ab1d9441103e1afca2" kindref="member">SetRequestActive</ref>(<ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref><sp/>request,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>active)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>found<sp/>=<sp/><ref refid="_p_p_e_manager_8c_1a73619b42026369f5bc7c0fa042070b79" kindref="member">m_ExistingPostprocessRequests</ref>.Find(request);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>active<sp/>&amp;&amp;<sp/>found<sp/>==<sp/>-1<sp/>)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a73619b42026369f5bc7c0fa042070b79" kindref="member">m_ExistingPostprocessRequests</ref>.Insert(request);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!active<sp/>&amp;&amp;<sp/>found<sp/>&gt;<sp/>-1<sp/>)<sp/></highlight><highlight class="comment">//should<sp/>always<sp/>be<sp/>found<sp/>in<sp/>this<sp/>case,<sp/>redundant?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//RemoveActiveRequestFromMaterials(request);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a73619b42026369f5bc7c0fa042070b79" kindref="member">m_ExistingPostprocessRequests</ref>.Remove(found);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="209" refid="_p_p_e_manager_8c_1ac3cf4afc2b88ead1154943cae6b55aa3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1ac3cf4afc2b88ead1154943cae6b55aa3" kindref="member">SetRequestUpdating</ref>(<ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref><sp/>request,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>active)</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="_p_p_e_manager_8c_1a4f3a0b94ce13791ca81bd439850f6792" kindref="member">m_UpdatingRequests</ref>)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_debug" kindref="compound">Debug</ref>.<ref refid="class_debug_1ac759558b1dd4e820330546c994a9d840" kindref="member">Log</ref>(</highlight><highlight class="stringliteral">&quot;PPEManager<sp/>|<sp/>SetRequestUpdating<sp/>|<sp/>!m_UpdatingRequests&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx<sp/>=<sp/><ref refid="_p_p_e_manager_8c_1a4f3a0b94ce13791ca81bd439850f6792" kindref="member">m_UpdatingRequests</ref>.Find(request);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>active<sp/>&amp;&amp;<sp/>idx<sp/>==<sp/>-1<sp/>)</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4f3a0b94ce13791ca81bd439850f6792" kindref="member">m_UpdatingRequests</ref>.Insert(request);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!active<sp/>&amp;&amp;<sp/>idx<sp/>&gt;<sp/>-1<sp/>)</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a4f3a0b94ce13791ca81bd439850f6792" kindref="member">m_UpdatingRequests</ref>.Remove(idx);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Just<sp/>a<sp/>getter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="_p_p_e_manager_8c_1acfec04b19badaf40c88be6cab24ce004" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1acfec04b19badaf40c88be6cab24ce004" kindref="member">GetExistingRequester</ref>(</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>req,<sp/>out<sp/><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref><sp/>ret)</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx<sp/>=<sp/><ref refid="_p_p_e_manager_8c_1a73619b42026369f5bc7c0fa042070b79" kindref="member">m_ExistingPostprocessRequests</ref>.Find(PPERequesterBank.GetRequester(req));</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idx<sp/>&gt;<sp/>-1)</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret<sp/>=<sp/><ref refid="_p_p_e_manager_8c_1a73619b42026369f5bc7c0fa042070b79" kindref="member">m_ExistingPostprocessRequests</ref>.Get(idx);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="245" refid="_p_p_e_manager_8c_1abf2aa5bec2a42a7e92051658d7dc1344" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1abf2aa5bec2a42a7e92051658d7dc1344" kindref="member">RemoveActiveRequestFromMaterials</ref>(<ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref><sp/>req)</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>req.<ref refid="class_p_p_e_requester_base_1a9fec20de2371b06b5d7799c091e7235a" kindref="member">GetActiveRequestStructure</ref>().Count();</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_id;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>count;<sp/>i++)</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mat_id<sp/>=<sp/>req.<ref refid="class_p_p_e_requester_base_1a9fec20de2371b06b5d7799c091e7235a" kindref="member">GetActiveRequestStructure</ref>().GetKey(i);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_class_base" kindref="compound">PPEClassBase</ref><sp/>mat_class<sp/>=<sp/><ref refid="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" kindref="member">m_PPEClassMap</ref>.Get(mat_id);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mat_class.<ref refid="class_p_p_e_class_base_1a98b53b1f2ff88ff2cc6f37da94ba3d17" kindref="member">RemoveRequest</ref>(req.<ref refid="class_p_p_e_requester_base_1a12e0b00ecac1967e241677b283bedc0f" kindref="member">GetRequesterIDX</ref>());</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="258" refid="_p_p_e_manager_8c_1a5af247d0488b90a0118a412f60add18d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1a5af247d0488b90a0118a412f60add18d" kindref="member">RequestsCleanup</ref>()</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="263" refid="_p_p_e_manager_8c_1a4e36ebc18ec5c7feca23a42fd88d46d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1a4e36ebc18ec5c7feca23a42fd88d46d9" kindref="member">InsertUpdatedMaterial</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_id)</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_p_p_e_manager_8c_1ad18fd913a84dd753c29a9a40dce41154" kindref="member">m_UpdatedMaterials</ref>.Find(mat_id)<sp/>==<sp/>-1<sp/>)</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1ad18fd913a84dd753c29a9a40dce41154" kindref="member">m_UpdatedMaterials</ref>.Insert(mat_id);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//---------//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//PROCESSING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//---------//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272" refid="_p_p_e_manager_8c_1aed61d5da9d7ed52efd439d0870577386" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1aed61d5da9d7ed52efd439d0870577386" kindref="member">ProcessRequesterUpdates</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timeslice)</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref><sp/>req;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="_p_p_e_manager_8c_1a4f3a0b94ce13791ca81bd439850f6792" kindref="member">m_UpdatingRequests</ref>.Count();<sp/>i++)</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DbgPrnt(&quot;PPEDebug<sp/>|<sp/>ProcessRequesterUpdates<sp/>|<sp/>m_UpdatingRequests[i]:<sp/>&quot;<sp/>+<sp/>m_UpdatingRequests[i]);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>req<sp/>=<sp/><ref refid="_p_p_e_manager_8c_1a4f3a0b94ce13791ca81bd439850f6792" kindref="member">m_UpdatingRequests</ref>.Get(i);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(req)</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>req.<ref refid="class_p_p_e_requester_base_1a162bb711809480c5d9462ef85f5aa793" kindref="member">OnUpdate</ref>(timeslice);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="284" refid="_p_p_e_manager_8c_1a5dd9cab82412520ec5fb8cd169173b70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1a5dd9cab82412520ec5fb8cd169173b70" kindref="member">ProcessMaterialUpdates</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timeslice)</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="_p_p_e_manager_8c_1ab6d019f0e9e83a154334e64b5ea486f5" kindref="member">m_PPEMaterialUpdateQueueMap</ref>.Count();<sp/>i++)<sp/></highlight><highlight class="comment">//orders<sp/>(levels?)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DbgPrnt(&quot;PPEDebug<sp/>|<sp/>ProcessMaterialUpdates<sp/>|<sp/>GetKey<sp/>&quot;<sp/>+<sp/>i<sp/>+<sp/>&quot;:<sp/>&quot;<sp/>+<sp/>m_PPEMaterialUpdateQueueMap.GetKey(i));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//DbgPrnt(&quot;PPEDebug<sp/>|<sp/>ProcessMaterialUpdates<sp/>|<sp/>GetElement<sp/>-<sp/>count<sp/>&quot;<sp/>+<sp/>i<sp/>+<sp/>&quot;:<sp/>&quot;<sp/>+<sp/>m_PPEMaterialUpdateQueueMap.GetElement(i).Count());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/><ref refid="_p_p_e_manager_8c_1ab6d019f0e9e83a154334e64b5ea486f5" kindref="member">m_PPEMaterialUpdateQueueMap</ref>.GetElement(i).<ref refid="_random_generator_sync_manager_8c_1afe3bb26b57097f9a390bb1e8de15d84aa928f33270be19855038d0245a0fa06a1" kindref="member">Count</ref>();<sp/>j++)</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_class_base" kindref="compound">PPEClassBase</ref><sp/>mat_class<sp/>=<sp/><ref refid="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" kindref="member">m_PPEClassMap</ref>.Get(<ref refid="_p_p_e_manager_8c_1ab6d019f0e9e83a154334e64b5ea486f5" kindref="member">m_PPEMaterialUpdateQueueMap</ref>.GetElement(i).Get(j));</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mat_class.<ref refid="class_p_p_e_class_base_1ac576543ba7c7e8414befe94d283af8fe" kindref="member">OnUpdate</ref>(timeslice,i);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="299" refid="_p_p_e_manager_8c_1aec3843bc3b1f75b5c5bd3d453f52cd0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1aec3843bc3b1f75b5c5bd3d453f52cd0d" kindref="member">ProcessApplyValueChanges</ref>()</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>material_id;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="_p_p_e_manager_8c_1ad18fd913a84dd753c29a9a40dce41154" kindref="member">m_UpdatedMaterials</ref>.Count();<sp/>i++)</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>material_id<sp/>=<sp/><ref refid="_p_p_e_manager_8c_1ad18fd913a84dd753c29a9a40dce41154" kindref="member">m_UpdatedMaterials</ref>.Get(i);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_class_base" kindref="compound">PPEClassBase</ref><sp/>mat_class<sp/>=<sp/><ref refid="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" kindref="member">m_PPEClassMap</ref>.Get(material_id);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mat_class.<ref refid="class_p_p_e_class_base_1a9f0d64bff8688e1fab88f1bc61865492" kindref="member">ApplyValueChanges</ref>();</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1ad18fd913a84dd753c29a9a40dce41154" kindref="member">m_UpdatedMaterials</ref>.Clear();</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a5749de315222d03b6a5480df3122ed54" kindref="member">ClearMaterialUpdating</ref>();</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="313" refid="_p_p_e_manager_8c_1a325083b299d352e645ed7995f974ce59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___widget_a_p_i_1ga70ac517aa5d3b3af95f61a2d560d811f" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timeslice)</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="_p_p_e_manager_8c_1ada31e7a3ccd94a067e802178d7c775e1" kindref="member">m_ManagerInitialized</ref>)</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1aed61d5da9d7ed52efd439d0870577386" kindref="member">ProcessRequesterUpdates</ref>(timeslice);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a5dd9cab82412520ec5fb8cd169173b70" kindref="member">ProcessMaterialUpdates</ref>(timeslice);</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1aec3843bc3b1f75b5c5bd3d453f52cd0d" kindref="member">ProcessApplyValueChanges</ref>();</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a5af247d0488b90a0118a412f60add18d" kindref="member">RequestsCleanup</ref>();<sp/></highlight><highlight class="comment">//unused</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="325" refid="_p_p_e_manager_8c_1a8dba9b9e47a4cfffa4a0f9287164f566" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_param" kindref="compound">Param</ref><sp/><ref refid="_p_p_e_manager_8c_1a8dba9b9e47a4cfffa4a0f9287164f566" kindref="member">GetPostProcessDefaultValues</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>material,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>parameter)</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_class_base" kindref="compound">PPEClassBase</ref><sp/>mat_class<sp/>=<sp/><ref refid="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" kindref="member">m_PPEClassMap</ref>.Get(material);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mat_class.<ref refid="class_p_p_e_class_base_1aecc4a40a634deaaff895a53d697a1a55" kindref="member">GetParameterCommandData</ref>(parameter).<ref refid="class_p_p_e_mat_class_parameter_command_data_1abcf749bba63ddb04a98db386efd1acb9" kindref="member">GetDefaultValues</ref>();</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="332" refid="_p_p_e_manager_8c_1ad1163cb72984e768e95769db199a0212" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_param" kindref="compound">Param</ref><sp/><ref refid="_p_p_e_manager_8c_1ad1163cb72984e768e95769db199a0212" kindref="member">GetPostProcessCurrentValues</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>material,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>parameter)</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_class_base" kindref="compound">PPEClassBase</ref><sp/>mat_class<sp/>=<sp/><ref refid="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" kindref="member">m_PPEClassMap</ref>.Get(material);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>mat_class.<ref refid="class_p_p_e_class_base_1aecc4a40a634deaaff895a53d697a1a55" kindref="member">GetParameterCommandData</ref>(parameter).<ref refid="class_p_p_e_mat_class_parameter_command_data_1a580865b54a845dccc6c9643f2cf6b422" kindref="member">GetCurrentValues</ref>();</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO<sp/>-<sp/>certain<sp/>C++<sp/>events<sp/>may<sp/>change<sp/>the<sp/>actual<sp/>material<sp/>path<sp/>with<sp/>a<sp/>graphics<sp/>option<sp/>changes.<sp/>Reflect<sp/>this<sp/>on<sp/>script-side!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Currently<sp/>only<sp/>SSAY/HBAO<sp/>affected...welp.</highlight></codeline>
+<codeline lineno="341" refid="_p_p_e_manager_8c_1a8dbfa415c098f074f397fdbd469ba56d" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1a8dbfa415c098f074f397fdbd469ba56d" kindref="member">ChangePPEMaterial</ref>(<ref refid="_p_p_e_constants_8c_1ad276cdedb5a3eae18144540aef237b95" kindref="member">PostProcessPrioritiesCamera</ref><sp/>priority,<sp/><ref refid="group___camera_1gac5442d940bdd247b908f1f02efd643ec" kindref="member">PostProcessEffectType</ref><sp/>type,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>scriptside_only)</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" kindref="member">m_PPEClassMap</ref>.Contains(type))</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_class_base" kindref="compound">PPEClassBase</ref><sp/>mat_class<sp/>=<sp/><ref refid="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" kindref="member">m_PPEClassMap</ref>.Get(type);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/><ref refid="_plugin_day_z_infected_debug_8c_1a8ccf841cb59e451791bcb2e1ac4f1edc" kindref="member">name</ref><sp/>=<sp/>mat_class.Type();</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_p_p_e_class_base" kindref="compound">PPEClassBase</ref><sp/>postprocess_capsule<sp/>=<sp/><ref refid="class_p_p_e_class_base" kindref="compound">PPEClassBase</ref>.Cast(<ref refid="_plugin_day_z_infected_debug_8c_1a8ccf841cb59e451791bcb2e1ac4f1edc" kindref="member">name</ref>.Spawn());</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>postprocess_capsule.<ref refid="class_p_p_e_class_base_1a06649350d6ef06545243c97e0cdcaf1e" kindref="member">ChangeMaterialPathUsed</ref>(<ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(postprocess_capsule.<ref refid="class_p_p_e_class_base_1a6c68c23fd05ef1148e739e6003543e75" kindref="member">GetMaterial</ref>()<sp/>==<sp/>0x0)</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_debug" kindref="compound">Debug</ref>.<ref refid="class_debug_1ac759558b1dd4e820330546c994a9d840" kindref="member">Log</ref>(</highlight><highlight class="stringliteral">&quot;PPEManager<sp/>|<sp/>Invalid<sp/>material<sp/>path<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>used<sp/>for<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="_plugin_day_z_infected_debug_8c_1a8ccf841cb59e451791bcb2e1ac4f1edc" kindref="member">name</ref><sp/>);</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//m_PPEClassMap.Remove(type);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_p_p_e_manager_8c_1a2a1fece8780c830f07ff9494529e1e4d" kindref="member">m_PPEClassMap</ref>.Set(type,postprocess_capsule);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//can<sp/>be<sp/>sent<sp/>script-side<sp/>only<sp/>to<sp/>adapt<sp/>to<sp/>c++<sp/>options<sp/>changes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!scriptside_only)</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___camera_1gaf10ab120d06c5b35d83a3cce12da61ea" kindref="member">SetCameraPostProcessEffect</ref>(<ref refid="_p_p_e_manager_8c_1a554a0b106fcf9a5fa152c30efa8cf0ef" kindref="member">CAMERA_ID</ref>,priority,type,<ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="366" refid="_p_p_e_manager_8c_1a23c9ee9ccb5145214a008010f02751f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_managed_1a6913738f17196fa86c79867f14f4d7e0" kindref="member">StopAllEffects</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mask<sp/>=<sp/>0)</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_p_p_e_manager_8c_1a73619b42026369f5bc7c0fa042070b79" kindref="member">m_ExistingPostprocessRequests</ref>)</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal"><sp/>(<ref refid="class_p_p_e_requester_base" kindref="compound">PPERequesterBase</ref><sp/>requester<sp/>:<sp/><ref refid="_p_p_e_manager_8c_1a73619b42026369f5bc7c0fa042070b79" kindref="member">m_ExistingPostprocessRequests</ref>)</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(requester.GetCategoryMask()<sp/>&amp;<sp/>mask)</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requester.Stop();</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="380" refid="_p_p_e_manager_8c_1a0debfb0df974e6c624d6b665a6e82e52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_p_p_e_manager_8c_1a0debfb0df974e6c624d6b665a6e82e52" kindref="member">DbgPrnt</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>text)</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Debug.Log(&quot;&quot;+text);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="384"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/PPEManager/PPEManager.c"/>
+  </compounddef>
+</doxygen>

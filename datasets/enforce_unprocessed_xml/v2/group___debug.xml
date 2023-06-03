@@ -1,0 +1,391 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="group___debug" kind="group">
+    <compoundname>Debug</compoundname>
+    <title>Debug utilities</title>
+    <innergroup refid="group___debug_u_i">Debug UI API</innergroup>
+    <innergroup refid="group___debug_shape">Debug Shape API definition</innergroup>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="group___debug_1ga750f272dd3e344b461130dece1aea917" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ErrorExSeverity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" line="61" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" bodystart="62" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___debug_1gaa4d19de31eba89ee469662c1faf6fa21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void DumpStack</definition>
+        <argsstring>()</argsstring>
+        <name>DumpStack</name>
+        <briefdescription>
+<para>Prints current call stack (stack trace) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>void</computeroutput> <programlisting><codeline><highlight class="normal">DumpStack();</highlight></codeline>
+</programlisting></para>
+</simplesect>
+<verbatim>    Output:
+        -- Stack trace --
+       SaveFile() Scripts\Entities\Modules\ModuleBase\ModuleFileHandler.c : 51
+       SaveConfigToFile() Scripts\Entities\Modules\ModuleBase\ModuleFileHandler\ModuleLocalProfile.c : 114
+       SaveParameterArray() Scripts\Entities\Modules\ModuleBase\ModuleFileHandler\ModuleLocalProfile.c : 133
+       SetParameterArray() Scripts\Entities\Modules\ModuleBase\ModuleFileHandler\ModuleLocalProfile.c : 231
+       PresetAdd() Scripts\Entities\Modules\ModuleBase\ModuleFileHandler\ModuleLocalProfile\ModuleLocalProfileUI.h : 46
+       OnKeyPress() Scripts/mission/missionGameplay.c : 215
+       OnKeyPress() Scripts/DayZGame.c : 334
+       -----------------</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" line="27" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" declline="27" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___debug_1gac561f7f718bab6558d9c5c70c3fdb1c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void DumpStackString</definition>
+        <argsstring>(out string stack)</argsstring>
+        <name>DumpStackString</name>
+        <param>
+          <type>out <ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>stack</declname>
+        </param>
+        <briefdescription>
+<para>Prints current call stack (stack trace) to given output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>void</computeroutput> <programlisting><codeline><highlight class="normal">string<sp/>tmp;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>DumpStackString(tmp);</highlight></codeline>
+<codeline><highlight class="normal">Print(tmp);</highlight></codeline>
+</programlisting></para>
+</simplesect>
+<verbatim>    Output:
+      SaveFile() Scripts\Entities\Modules\ModuleBase\ModuleFileHandler.c : 51
+      SaveConfigToFile() Scripts\Entities\Modules\ModuleBase\ModuleFileHandler\ModuleLocalProfile.c : 114
+      SaveParameterArray() Scripts\Entities\Modules\ModuleBase\ModuleFileHandler\ModuleLocalProfile.c : 133
+      SetParameterArray() Scripts\Entities\Modules\ModuleBase\ModuleFileHandler\ModuleLocalProfile.c : 231
+      PresetAdd() Scripts\Entities\Modules\ModuleBase\ModuleFileHandler\ModuleLocalProfile\ModuleLocalProfileUI.h : 46
+      OnKeyPress() Scripts/mission/missionGameplay.c : 215
+      OnKeyPress() Scripts/DayZGame.c : 334</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" line="50" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" declline="50" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___debug_1gac0d90421a3875b8c64b8ea486b83f981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void DebugBreak</definition>
+        <argsstring>(bool condition=true, void param1=NULL, void param2=NULL, void param3=NULL, void param4=NULL, void param5=NULL, void param6=NULL, void param7=NULL, void param8=NULL, void param9=NULL)</argsstring>
+        <name>DebugBreak</name>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>condition</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param1</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param2</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param3</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param4</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param5</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param6</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param7</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param8</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param9</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Triggers breakpoint in C++ in run time(when app is running in debug enviroment) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" line="53" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" declline="53" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___debug_1gaf1cfebf89ea5d93babe726a08bd3bcfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CompileBreak</definition>
+        <argsstring>()</argsstring>
+        <name>CompileBreak</name>
+        <briefdescription>
+<para>Triggers breakpoint in C++ in compile time(when app is running in debug enviroment) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" line="56" column="6" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" declline="56" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group___debug_1gad40897900c6420e1c23bace98c84e7c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void DPrint</definition>
+        <argsstring>(string var)</argsstring>
+        <name>DPrint</name>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+<para>Prints content of variable to console/log. Should be used for critical messages so it will appear in debug log. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" line="59" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" declline="59" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___debug_1gac08bb050be562fd77ef53c878ee4ff8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>enum <ref refid="group___debug_1ga750f272dd3e344b461130dece1aea917" kindref="member">ErrorExSeverity</ref></type>
+        <definition>enum ErrorExSeverity ErrorEx</definition>
+        <argsstring>(string err, ErrorExSeverity severity=ErrorExSeverity.ERROR)</argsstring>
+        <name>ErrorEx</name>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>err</declname>
+        </param>
+        <param>
+          <type><ref refid="group___debug_1ga750f272dd3e344b461130dece1aea917" kindref="member">ErrorExSeverity</ref></type>
+          <declname>severity</declname>
+          <defval><ref refid="group___diag_menu_1ga9eaada089c4de774cfc8b7aea4b9379a" kindref="member">ErrorExSeverity.ERROR</ref></defval>
+        </param>
+        <briefdescription>
+<para>Error message, prefixed by method name, above &apos;INFO&apos; will show a messagebox. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Format: [className%::methodName%] :: [severity%] :: errString% </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+p string Error message to use <programlisting><codeline><highlight class="normal">class<sp/>ErrorExTest</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>ThrowWarning()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>[ErrorExTest::ThrowWarning]<sp/>::<sp/>[WARNING]<sp/>::<sp/>This<sp/>is<sp/>a<sp/>warning.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ErrorEx(&quot;This<sp/>is<sp/>a<sp/>warning.&quot;,<sp/>ErrorExSeverity.WARNING);<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" line="59" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" declline="59" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___debug_1gafbdd16891ac41a6715bdb5dd9609ecf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void ErrorExString</definition>
+        <argsstring>(string err, out string str, ErrorExSeverity severity=ErrorExSeverity.ERROR)</argsstring>
+        <name>ErrorExString</name>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>err</declname>
+        </param>
+        <param>
+          <type>out <ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type><ref refid="group___debug_1ga750f272dd3e344b461130dece1aea917" kindref="member">ErrorExSeverity</ref></type>
+          <declname>severity</declname>
+          <defval><ref refid="group___diag_menu_1ga9eaada089c4de774cfc8b7aea4b9379a" kindref="member">ErrorExSeverity.ERROR</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" line="84" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" declline="84" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___debug_1ga0fa3cc438c5e129c6cb1ccfd7ad91245" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Error2</definition>
+        <argsstring>(string title, string err)</argsstring>
+        <name>Error2</name>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>err</declname>
+        </param>
+        <briefdescription>
+<para>Messagebox with error message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" line="87" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" declline="87" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___debug_1ga786b160dafbe15abb829786ba345cb15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Error</definition>
+        <argsstring>(string err)</argsstring>
+        <name>Error</name>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>err</declname>
+        </param>
+        <briefdescription>
+<para>Messagebox with error message. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" line="90" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="group___debug_1gaaa9351d895a1f244a26fd635c378c536" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void Print</definition>
+        <argsstring>(void var)</argsstring>
+        <name>Print</name>
+        <param>
+          <type>void</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+<para>Prints content of variable to console/log. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" line="96" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" declline="96" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___debug_1gae273d2b39046bd2d0b46d3e5132ee54c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void PrintToRPT</definition>
+        <argsstring>(void var)</argsstring>
+        <name>PrintToRPT</name>
+        <param>
+          <type>void</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+<para>Prints content of variable to RPT file (performance warning - each write means fflush! use with care) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" line="99" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" declline="99" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="group___debug_1gafab491b31c611590d7fb40afc05962a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void PrintFormat</definition>
+        <argsstring>(string fmt, void param1=NULL, void param2=NULL, void param3=NULL, void param4=NULL, void param5=NULL, void param6=NULL, void param7=NULL, void param8=NULL, void param9=NULL)</argsstring>
+        <name>PrintFormat</name>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param1</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param2</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param3</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param4</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param5</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param6</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param7</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param8</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>void</type>
+          <declname>param9</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Prints formated text to console/log. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">string<sp/>c<sp/>=<sp/>&quot;Peter&quot;;</highlight></codeline>
+<codeline><highlight class="normal">PrintFormat(&quot;Hello<sp/>%1,<sp/>how<sp/>are<sp/>you?&quot;,<sp/>c);<sp/>//<sp/>prints<sp/>&quot;Hello<sp/>&apos;Peter&apos;,<sp/>how<sp/>are<sp/>you?&quot;</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" line="108" column="12" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnDebug.c" declline="108" declcolumn="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

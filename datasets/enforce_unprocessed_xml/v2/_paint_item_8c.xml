@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_paint_item_8c" kind="file" language="C++">
+    <compoundname>PaintItem.c</compoundname>
+    <innerclass refid="class_paint_item" prot="public">PaintItem</innerclass>
+    <innerclass refid="class_paint_item_lambda" prot="public">PaintItemLambda</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_paint_item" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_paint_item" kindref="compound">PaintItem</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="4" refid="class_paint_item_1a7267f1e76aaad53f3546cf3701c7209b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_paint_item_1a7267f1e76aaad53f3546cf3701c7209b" kindref="member">Paint</ref>(<ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>item_tool,<sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>item_target,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>base_name,<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>specialty_weight<sp/>=<sp/>0)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>spray_color<sp/>=<sp/>item_tool.ConfigGetString(</highlight><highlight class="stringliteral">&quot;color&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>item_color<sp/>=<sp/>item_target.ConfigGetString(</highlight><highlight class="stringliteral">&quot;color&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>new_class_name<sp/>=<sp/>base_name<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;_&quot;</highlight><highlight class="normal"><sp/>+<sp/>spray_color;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_paint_item" kindref="compound">PaintItem</ref>.<ref refid="class_paint_item_1aed0b1c9cef38dbdac25461e97cecb79f" kindref="member">SwitchItems</ref>(item_target,<sp/>new_class_name,<sp/>player);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_paint_item_1aae1470b94af419ad7e960e1f5651b437" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_paint_item_1aae1470b94af419ad7e960e1f5651b437" kindref="member">CanPaintItem</ref>(<ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>item_tool,<sp/><ref refid="class_item_base" kindref="compound">ItemBase</ref><sp/>item_target)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>spray_color<sp/>=<sp/>item_tool.ConfigGetString(</highlight><highlight class="stringliteral">&quot;color&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>item_color<sp/>=<sp/>item_target.ConfigGetString(</highlight><highlight class="stringliteral">&quot;color&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>spray_color<sp/>!=<sp/>item_color<sp/>)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="class_paint_item_1aed0b1c9cef38dbdac25461e97cecb79f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_paint_item_1aed0b1c9cef38dbdac25461e97cecb79f" kindref="member">SwitchItems</ref><sp/>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>old_item,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>new_item,<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MiscGameplayFunctions.TurnItemIntoItemEx(player,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_paint_item_lambda" kindref="compound">PaintItemLambda</ref>(old_item,<sp/>new_item,<sp/>player));</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_paint_item_lambda" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_paint_item_lambda" kindref="compound">PaintItemLambda</ref><sp/>:<sp/><ref refid="class_turn_item_into_item_lambda" kindref="compound">TurnItemIntoItemLambda</ref></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38" refid="class_paint_item_lambda_1aa283b99a0b8d8ac759861aa81d60d051" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_paint_item_lambda_1aa283b99a0b8d8ac759861aa81d60d051" kindref="member">PaintItemLambda</ref><sp/>(<ref refid="class_entity_a_i" kindref="compound">EntityAI</ref><sp/>old_item,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>new_item_type,<sp/><ref refid="class_player_base" kindref="compound">PlayerBase</ref><sp/>player)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Static/PaintItem.c"/>
+  </compounddef>
+</doxygen>

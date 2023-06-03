@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_action_interact_loop_base_8c" kind="file" language="C++">
+    <compoundname>ActionInteractLoopBase.c</compoundname>
+    <innerclass refid="class_action_interact_loop_base_c_b" prot="public">ActionInteractLoopBaseCB</innerclass>
+    <innerclass refid="class_action_interact_loop_base" prot="public">ActionInteractLoopBase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_action_interact_loop_base_c_b" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_action_interact_loop_base_c_b" kindref="compound">ActionInteractLoopBaseCB</ref><sp/>:<sp/><ref refid="class_action_interact_base_c_b" kindref="compound">ActionInteractBaseCB</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="4" refid="class_action_interact_loop_base_c_b_1aad68204dcde71d411bdfdfdcf7f07058" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_action_interact_loop_base_c_b_1aad68204dcde71d411bdfdfdcf7f07058" kindref="member">CancelCondition</ref>()</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="class_action_base_c_b_1ab8c5796aa8f98fa679639b14db60813f" kindref="member">m_ActionData</ref><sp/>)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="human_8c_1af67e880ad00b69eab6bf03c8395d3ec8" kindref="member">DefaultCancelCondition</ref>();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//SetCommand(DayZPlayerConstants.CMD_ACTIONINT_ACTIONLOOP);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;cancel<sp/>condition<sp/>enabled:<sp/>&quot;<sp/>+<sp/>GetState().ToString()<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="class_action_base_c_b_1a19ded0aa636fcf7e419cf94c7980ad18" kindref="member">m_Interrupted</ref><sp/>&amp;&amp;<sp/>(<ref refid="human_8c_1acc3552021b812e2dceef0206918282a7" kindref="member">GetState</ref>()<sp/>==<sp/><ref refid="human_8c_1ab9478b06befba3a8bd52435a249df222" kindref="member">STATE_LOOP_LOOP</ref><sp/>||<sp/><ref refid="human_8c_1acc3552021b812e2dceef0206918282a7" kindref="member">GetState</ref>()<sp/>==<sp/><ref refid="human_8c_1acd3eeb2b932dcc18950f59477a7d5fa8" kindref="member">STATE_LOOP_LOOP2</ref>)<sp/>)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_animated_action_base" kindref="compound">AnimatedActionBase</ref><sp/>action<sp/>=<sp/><ref refid="class_animated_action_base" kindref="compound">AnimatedActionBase</ref>.Cast(<ref refid="class_action_base_c_b_1ab8c5796aa8f98fa679639b14db60813f" kindref="member">m_ActionData</ref>.<ref refid="class_action_data_1ae22b01b87c5948b3f66ee7cac92b0abb" kindref="member">m_Action</ref>);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>action.<ref refid="class_animated_action_base_1a055b86572ae34d95954db3f9755e7fca" kindref="member">Do</ref>(<ref refid="class_action_base_c_b_1ab8c5796aa8f98fa679639b14db60813f" kindref="member">m_ActionData</ref>,<ref refid="class_action_base_c_b_1ab8c5796aa8f98fa679639b14db60813f" kindref="member">m_ActionData</ref>.<ref refid="class_action_data_1ac1e0ce4566aafcf4a9faf829080267c8" kindref="member">m_State</ref>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="human_8c_1af67e880ad00b69eab6bf03c8395d3ec8" kindref="member">DefaultCancelCondition</ref>();<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20" refid="class_action_interact_loop_base_c_b_1a3ebf0d04aa872e82abcf6df67dd254fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_interact_loop_base_c_b_1a3ebf0d04aa872e82abcf6df67dd254fd" kindref="member">OnAnimationEvent</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pEventID)<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24" refid="class_action_interact_loop_base_c_b_1a57f6b4bd3c8871890502274f18b3d3b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_interact_loop_base_c_b_1a57f6b4bd3c8871890502274f18b3d3b3" kindref="member">CreateActionComponent</ref>()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_action_base_c_b_1ab8c5796aa8f98fa679639b14db60813f" kindref="member">m_ActionData</ref>.<ref refid="class_action_data_1a82934edb9e2ee84d9c8a45aa66242075" kindref="member">m_ActionComponent</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_a_interact" kindref="compound">CAInteract</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="class_action_interact_loop_base_c_b_1afcb10d45a581ac65e13362e77e3c3956" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_interact_loop_base_c_b_1afcb10d45a581ac65e13362e77e3c3956" kindref="member">InitActionComponent</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.InitActionComponent();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="human_8c_1a7521158a3ddfe9572eef984b25938727" kindref="member">EnableCancelCondition</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="class_action_interact_loop_base" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_action_interact_loop_base" kindref="compound">ActionInteractLoopBase</ref><sp/>:<sp/><ref refid="class_action_interact_base" kindref="compound">ActionInteractBase</ref></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="class_action_interact_loop_base_1a105aa262025d719d7be4b7489d64c57e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_action_interact_loop_base_1a105aa262025d719d7be4b7489d64c57e" kindref="member">ActionInteractLoopBase</ref>()<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_animated_action_base_1a7bce84f3ceb181aacfabdfb000c56461" kindref="member">m_CallbackClass</ref><sp/>=<sp/><ref refid="class_action_interact_loop_base_c_b" kindref="compound">ActionInteractLoopBaseCB</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_animated_action_base_1a00487cccdebc5bf70af1b0c8d9ed3660" kindref="member">m_CommandUID</ref><sp/>=<sp/><ref refid="dayzplayer_8c_1a6fd289b7043f1412362529ab769d7881" kindref="member">DayZPlayerConstants</ref>.CMD_ACTIONFB_INTERACT;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/UserActionsComponent/Actions/ActionInteractLoopBase.c"/>
+  </compounddef>
+</doxygen>

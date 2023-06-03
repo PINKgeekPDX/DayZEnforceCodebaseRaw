@@ -1,0 +1,1339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_input" kind="class" language="C++" prot="public">
+    <compoundname>Input</compoundname>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_input_1a357a64afaf416766b12a84dbbae6547c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Input::ChangeGameFocus</definition>
+        <argsstring>(int add, int input_device=-1)</argsstring>
+        <name>ChangeGameFocus</name>
+        <qualifiedname>Input::ChangeGameFocus</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>add</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>input_device</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Change game focus number. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>add</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number to add to focus number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>input_device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if equals -1, works globally on all devices, see INPUT_DEVICE_* values in constants.h </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_input_1aa756b5115b0153421393ae91bb0e3c82" kindref="member">HasGameFocus()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="20" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1aecb6745026225718b78bba748e6ae07a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Input::ResetGameFocus</definition>
+        <argsstring>(int input_device=-1)</argsstring>
+        <name>ResetGameFocus</name>
+        <qualifiedname>Input::ResetGameFocus</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>input_device</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Reset game focus number (set to 0) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input_device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if equals -1, works globally on all devices, see INPUT_DEVICE_* values in constants.h </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="class_input_1aa756b5115b0153421393ae91bb0e3c82" kindref="member">HasGameFocus()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="27" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1aa756b5115b0153421393ae91bb0e3c82" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Input::HasGameFocus</definition>
+        <argsstring>(int input_device=-1)</argsstring>
+        <name>HasGameFocus</name>
+        <qualifiedname>Input::HasGameFocus</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>input_device</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Check if game should have focus. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input_device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if equals -1, checks all devices, see INPUT_DEVICE_* values in constants.h </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if focus number == 0, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="34" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a2e83528da36f7bd77fa47dfdc4d850c8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int Input::GetActionGroupsCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetActionGroupsCount</name>
+        <qualifiedname>Input::GetActionGroupsCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="37" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a008379ee9eaee7b93129ab2fbc3a305e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int Input::GetActionGroupSize</definition>
+        <argsstring>(int group_index)</argsstring>
+        <name>GetActionGroupSize</name>
+        <qualifiedname>Input::GetActionGroupSize</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>group_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="38" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a4560783943c5a67d974ebe6fc12dac5f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto int Input::GetActionGroupName</definition>
+        <argsstring>(int group_index, out string name)</argsstring>
+        <name>GetActionGroupName</name>
+        <qualifiedname>Input::GetActionGroupName</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>group_index</declname>
+        </param>
+        <param>
+          <type>out <ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="39" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a84e3d367c7245f1b3e22e288d164f992" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto int Input::GetActionDesc</definition>
+        <argsstring>(int action_index, out string desc)</argsstring>
+        <name>GetActionDesc</name>
+        <qualifiedname>Input::GetActionDesc</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>action_index</declname>
+        </param>
+        <param>
+          <type>out <ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>desc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="40" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1af14be5a93c0b93deddfed38e934657aa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float Input::LocalValue_ID</definition>
+        <argsstring>(int action, bool check_focus=true)</argsstring>
+        <name>LocalValue_ID</name>
+        <qualifiedname>Input::LocalValue_ID</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>check_focus</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Get action state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id of action, defined in <ref refid="4___world_2_classes_2_user_actions_component_2__constants_8c" kindref="compound">4_World/Classes/UserActionsComponent/_constants.c</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>check_focus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true and game is unfocused, returns 0; otherwise returns actual value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>actual action state as float, for regular two state buttons returns 0 or 1, for analog buttons/axes returns value in interval &lt;0, 1&gt; with consideration of defined deadzones </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="class_input_1a93aa11e7d7554da93127443cb51d9adb" kindref="member">LocalValue()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="50" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a93aa11e7d7554da93127443cb51d9adb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float Input::LocalValue</definition>
+        <argsstring>(string action, bool check_focus=true)</argsstring>
+        <name>LocalValue</name>
+        <qualifiedname>Input::LocalValue</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>check_focus</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="51" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1affb93db3e7e56c23c11980dfbca1a567" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Input::LocalPress_ID</definition>
+        <argsstring>(int action, bool check_focus=true)</argsstring>
+        <name>LocalPress_ID</name>
+        <qualifiedname>Input::LocalPress_ID</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>check_focus</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Returns true just in frame, when action was invoked (button was pressed) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>if the input is limited (click, hold, doubleclick), &apos;Press&apos; event is limited as well, and reacts to the limiter only! Otherwise it registeres the first event, usually &apos;press&apos; (change of value from 0) </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id of action, defined in <ref refid="4___world_2_classes_2_user_actions_component_2__constants_8c" kindref="compound">4_World/Classes/UserActionsComponent/_constants.c</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>check_focus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true and game is unfocused, returns 0; otherwise returns actual value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if action was invoked in that frame, false otherwise </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="class_input_1a1403ec3de002c90ed0af39dd9ba25318" kindref="member">LocalPress()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="61" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a1403ec3de002c90ed0af39dd9ba25318" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Input::LocalPress</definition>
+        <argsstring>(string action, bool check_focus=true)</argsstring>
+        <name>LocalPress</name>
+        <qualifiedname>Input::LocalPress</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>check_focus</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="62" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a641be59f88b6800482430c84eeaaaa5e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Input::LocalRelease_ID</definition>
+        <argsstring>(int action, bool check_focus=true)</argsstring>
+        <name>LocalRelease_ID</name>
+        <qualifiedname>Input::LocalRelease_ID</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>check_focus</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Returns true just in frame, when release action happened (button was released) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id of action, defined in <ref refid="4___world_2_classes_2_user_actions_component_2__constants_8c" kindref="compound">4_World/Classes/UserActionsComponent/_constants.c</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>check_focus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true and game is unfocused, returns 0; otherwise returns actual value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if action was released in that frame, false otherwise </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="class_input_1ad3a01772715955dd1d69476aa8e41f96" kindref="member">LocalRelease()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="71" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1ad3a01772715955dd1d69476aa8e41f96" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Input::LocalRelease</definition>
+        <argsstring>(string action, bool check_focus=true)</argsstring>
+        <name>LocalRelease</name>
+        <qualifiedname>Input::LocalRelease</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>check_focus</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="72" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a8ec970cc2359de612f145b7d58039b4a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Input::LocalHold_ID</definition>
+        <argsstring>(int action, bool check_focus=true)</argsstring>
+        <name>LocalHold_ID</name>
+        <qualifiedname>Input::LocalHold_ID</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>check_focus</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Returns true just in frame, when hold action invoked (button is hold) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id of action, defined in <ref refid="4___world_2_classes_2_user_actions_component_2__constants_8c" kindref="compound">4_World/Classes/UserActionsComponent/_constants.c</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>check_focus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true and game is unfocused, returns 0; otherwise returns actual value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if action was released in that frame, false otherwise </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="class_input_1a2477619b66dd6ce5f8651a343b7aa997" kindref="member">LocalHold()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="81" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a2477619b66dd6ce5f8651a343b7aa997" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Input::LocalHold</definition>
+        <argsstring>(string action, bool check_focus=true)</argsstring>
+        <name>LocalHold</name>
+        <qualifiedname>Input::LocalHold</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>check_focus</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="82" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1af7f30cc80316b5ba3cd631ce4e855f98" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Input::LocalDbl_ID</definition>
+        <argsstring>(int action, bool check_focus=true)</argsstring>
+        <name>LocalDbl_ID</name>
+        <qualifiedname>Input::LocalDbl_ID</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>check_focus</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Returns true just in frame, when double click action invoked (button double clicked) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>action</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id of action, defined in <ref refid="4___world_2_classes_2_user_actions_component_2__constants_8c" kindref="compound">4_World/Classes/UserActionsComponent/_constants.c</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>check_focus</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if true and game is unfocused, returns 0; otherwise returns actual value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if action was released in that frame, false otherwise </para>
+</simplesect>
+<simplesect kind="see"><para><ref refid="class_input_1a6b9b48bde46586f55ce7e70e10acb724" kindref="member">LocalDbl()</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="91" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a6b9b48bde46586f55ce7e70e10acb724" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Input::LocalDbl</definition>
+        <argsstring>(string action, bool check_focus=true)</argsstring>
+        <name>LocalDbl</name>
+        <qualifiedname>Input::LocalDbl</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>check_focus</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="92" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a030602d8602f205df42f116a64181c33" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Input::DisableKey</definition>
+        <argsstring>(int key)</argsstring>
+        <name>DisableKey</name>
+        <qualifiedname>Input::DisableKey</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Disable key until end of frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>id of key, defined in <ref refid="group___keyboard_1ga7885f47644a0388f981f416fa20389b2" kindref="member">KeyCode</ref> <programlisting><codeline><highlight class="normal"><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().<ref refid="class_c_game_1aecd897d7ae85f4fba1f7ee552046f909" kindref="member">GetInput</ref>().<ref refid="class_input_1a030602d8602f205df42f116a64181c33" kindref="member">DisableKey</ref>(<ref refid="group___keyboard_1ga7885f47644a0388f981f416fa20389b2" kindref="member">KeyCode</ref>.KC_RETURN);</highlight></codeline>
+</programlisting> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="101" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a1619bdbe42953de671dc414946955fe4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Input::EnableMouseAndKeyboard</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>EnableMouseAndKeyboard</name>
+        <qualifiedname>Input::EnableMouseAndKeyboard</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+<para>Enable mouse and keyboard (on consoles) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="104" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1abc174950ffbd9de5251bff56c972fac6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Input::IsEnabledMouseAndKeyboard</definition>
+        <argsstring>()</argsstring>
+        <name>IsEnabledMouseAndKeyboard</name>
+        <qualifiedname>Input::IsEnabledMouseAndKeyboard</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>state of support mouse and keyboard (on consoles) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="106" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1ac126a312eb00766d55ecd133ed440a3f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Input::IsEnabledMouseAndKeyboardEvenOnServer</definition>
+        <argsstring>()</argsstring>
+        <name>IsEnabledMouseAndKeyboardEvenOnServer</name>
+        <qualifiedname>Input::IsEnabledMouseAndKeyboardEvenOnServer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>state of support mouse and keyboard. If client playing on server where mouse and keyboard is disabled, then return false. (on consoles) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="111" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1aef505af986df4e79973f4895dc47b997" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Input::IsMouseConnected</definition>
+        <argsstring>()</argsstring>
+        <name>IsMouseConnected</name>
+        <qualifiedname>Input::IsMouseConnected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Console: Last state queried from the platform operating system for the active gamepad. PC: Always true. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="117" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a60f6ec5becef66ab7bcb099f855409ff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Input::IsKeyboardConnected</definition>
+        <argsstring>()</argsstring>
+        <name>IsKeyboardConnected</name>
+        <qualifiedname>Input::IsKeyboardConnected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="118" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1ac9601093267416fde226b5e78719fbc1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int Input::GetCurrentProfile</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrentProfile</name>
+        <qualifiedname>Input::GetCurrentProfile</qualifiedname>
+        <briefdescription>
+<para>gets currently selected profile </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="121" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1ae999960b8f260b99770a9591284f420a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Input::GetCurrentProfileActionKeys</definition>
+        <argsstring>(int action_index, out TIntArray keys)</argsstring>
+        <name>GetCurrentProfileActionKeys</name>
+        <qualifiedname>Input::GetCurrentProfileActionKeys</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>action_index</declname>
+        </param>
+        <param>
+          <type>out <ref refid="group___enforce_1ga62db042ecba76039a4391153a4660c2c" kindref="member">TIntArray</ref></type>
+          <declname>keys</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="123" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1aaebe6616d6b648f2850eba5c5846bac4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto int Input::GetProfileName</definition>
+        <argsstring>(int profile_index, out string name)</argsstring>
+        <name>GetProfileName</name>
+        <qualifiedname>Input::GetProfileName</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>profile_index</declname>
+        </param>
+        <param>
+          <type>out <ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>gets profile by index </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="125" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a1548c51fbce0045c1df024f5cf723bdd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int Input::GetProfilesCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetProfilesCount</name>
+        <qualifiedname>Input::GetProfilesCount</qualifiedname>
+        <briefdescription>
+<para>gets profile by name </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="127" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a2b6b9ac4a4e86d790820faab316f8209" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int Input::SetProfile</definition>
+        <argsstring>(int index)</argsstring>
+        <name>SetProfile</name>
+        <qualifiedname>Input::SetProfile</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>setting active profile </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="129" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a5e113e2a6dab38587a9984fee797ee2b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int Input::GetDevicesCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetDevicesCount</name>
+        <qualifiedname>Input::GetDevicesCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="133" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a16751ae3cfa622819e35f1dfcbdc37ae" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto int Input::GetDeviceName</definition>
+        <argsstring>(int device_index, out string name)</argsstring>
+        <name>GetDeviceName</name>
+        <qualifiedname>Input::GetDeviceName</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>device_index</declname>
+        </param>
+        <param>
+          <type>out <ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="134" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1aece6995fdbf447491ccbd9fb36dbf594" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int Input::IsDeviceXInput</definition>
+        <argsstring>(int device_index)</argsstring>
+        <name>IsDeviceXInput</name>
+        <qualifiedname>Input::IsDeviceXInput</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>device_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="135" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1afabd1f940c46a4568c42f6617cafeaaa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int Input::IsDeviceEnabled</definition>
+        <argsstring>(int device_index)</argsstring>
+        <name>IsDeviceEnabled</name>
+        <qualifiedname>Input::IsDeviceEnabled</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>device_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="136" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1aa45fdebc6ec60d8b3224c12b6134fa5f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Input::SetDeviceEnabled</definition>
+        <argsstring>(int device_index, bool enabled)</argsstring>
+        <name>SetDeviceEnabled</name>
+        <qualifiedname>Input::SetDeviceEnabled</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>device_index</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>enabled</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="137" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a237bd1799ac965f61cdab0fc959a4707" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto bool Input::GetGamepadThumbDirection</definition>
+        <argsstring>(GamepadButton thumbButton, out float angle, out float value)</argsstring>
+        <name>GetGamepadThumbDirection</name>
+        <qualifiedname>Input::GetGamepadThumbDirection</qualifiedname>
+        <param>
+          <type><ref refid="group___gamepad_1ga7a2d71f78acae0c6efa38d7f1fea596f" kindref="member">GamepadButton</ref></type>
+          <declname>thumbButton</declname>
+        </param>
+        <param>
+          <type>out <ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>angle</declname>
+        </param>
+        <param>
+          <type>out <ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>return true if was deflected button. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="140" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a1726e39280b99e2810381d4f67a1b4c1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Input::ResetActiveGamepad</definition>
+        <argsstring>()</argsstring>
+        <name>ResetActiveGamepad</name>
+        <qualifiedname>Input::ResetActiveGamepad</qualifiedname>
+        <briefdescription>
+<para>clears active gamepad </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="143" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a2772065cf3037a735a68de51663b2297" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Input::SelectActiveGamepad</definition>
+        <argsstring>(int gamepad)</argsstring>
+        <name>SelectActiveGamepad</name>
+        <qualifiedname>Input::SelectActiveGamepad</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>gamepad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="144" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a5eda1f646cdeb8234674dd1c386f6366" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Input::GetGamepadList</definition>
+        <argsstring>(out array&lt; int &gt; gamepads)</argsstring>
+        <name>GetGamepadList</name>
+        <qualifiedname>Input::GetGamepadList</qualifiedname>
+        <param>
+          <type>out <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt;</type>
+          <declname>gamepads</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="145" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a05af00a824e2367bde152483ff294710" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void Input::GetGamepadUser</definition>
+        <argsstring>(int gamepad, out BiosUser user)</argsstring>
+        <name>GetGamepadUser</name>
+        <qualifiedname>Input::GetGamepadUser</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>gamepad</declname>
+        </param>
+        <param>
+          <type>out <ref refid="class_bios_user" kindref="compound">BiosUser</ref></type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="146" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1ab711094813978350d153a19aa13134fb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void Input::IdentifyGamepad</definition>
+        <argsstring>(GamepadButton button)</argsstring>
+        <name>IdentifyGamepad</name>
+        <qualifiedname>Input::IdentifyGamepad</qualifiedname>
+        <param>
+          <type><ref refid="group___gamepad_1ga7a2d71f78acae0c6efa38d7f1fea596f" kindref="member">GamepadButton</ref></type>
+          <declname>button</declname>
+        </param>
+        <briefdescription>
+<para>the on OnGamepadIdentification callback will return the first gamepad where the button was pressed </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>button</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the button that needs to be pressed for the identification </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="151" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1aa6f2050786d4047114fafc8fd00a7528" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool Input::IsActiveGamepadSelected</definition>
+        <argsstring>()</argsstring>
+        <name>IsActiveGamepadSelected</name>
+        <qualifiedname>Input::IsActiveGamepadSelected</qualifiedname>
+        <briefdescription>
+<para>returns true if there is an active gamepad selected. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="153" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a97017d0c18dc3002d77213c3a53bb331" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool Input::IsAnyInputDeviceActive</definition>
+        <argsstring>()</argsstring>
+        <name>IsAnyInputDeviceActive</name>
+        <qualifiedname>Input::IsAnyInputDeviceActive</qualifiedname>
+        <briefdescription>
+<para>returns true if &apos;Gamepad&apos; or &apos;Mouse and Keyboard&apos; is connected </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="156" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" bodystart="156" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a6b09a2edfed991d805bb2b4850b373e0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool Input::AreAllAllowedInputDevicesActive</definition>
+        <argsstring>(out array&lt; int &gt; unavailableDeviceList=null)</argsstring>
+        <name>AreAllAllowedInputDevicesActive</name>
+        <qualifiedname>Input::AreAllAllowedInputDevicesActive</qualifiedname>
+        <param>
+          <type>out <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt;</type>
+          <declname>unavailableDeviceList</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>returns true if &apos;Gamepad&apos; or if &apos;Mouse/Keyboard&apos; control is allowed locally and on server, and the respective input devicse are connected. Gamepad takes priority. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>unavailableDeviceList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lists all devices that SHOULD be available, but aren&apos;t. Optional. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="165" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" bodystart="165" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a34b7aa055a6d8ea45960a2bcfb3fe71f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Input::FillUnavailableDeviceArray</definition>
+        <argsstring>(int device, inout array&lt; int &gt; filler)</argsstring>
+        <name>FillUnavailableDeviceArray</name>
+        <qualifiedname>Input::FillUnavailableDeviceArray</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>inout <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt;</type>
+          <declname>filler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="218" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" bodystart="218" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a449249262b40e68289745050c0467ccf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Input::UpdateConnectedInputDeviceList</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateConnectedInputDeviceList</name>
+        <qualifiedname>Input::UpdateConnectedInputDeviceList</qualifiedname>
+        <briefdescription>
+<para>currently lists only available Gamepad, Mouse, and Keyboard. Extendable as needed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="227" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" bodystart="227" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a138b0da8490a45f594f604d7e1357978" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="input_8c_1a541a84e06cfb332b5f5d061c2dba4d86" kindref="member">EInputDeviceType</ref></type>
+        <definition>proto native EInputDeviceType Input::GetCurrentInputDevice</definition>
+        <argsstring>()</argsstring>
+        <name>GetCurrentInputDevice</name>
+        <qualifiedname>Input::GetCurrentInputDevice</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="class_input" kindref="compound">Input</ref> device, with the last input event (&apos;mouse and keyboard&apos;, &apos;controller&apos; or &apos;unknown&apos; if none input event was fired from the beginning). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="243" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a0da764dcdcaee42d953ff2a318611528" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="group___gamepad_1ga7a2d71f78acae0c6efa38d7f1fea596f" kindref="member">GamepadButton</ref></type>
+        <definition>proto native GamepadButton Input::GetEnterButton</definition>
+        <argsstring>()</argsstring>
+        <name>GetEnterButton</name>
+        <qualifiedname>Input::GetEnterButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>For PlayStation, Enter button in Asia territory is typically Circle button (B button), but in Europe and America it is Cross button (A button). </para>
+</simplesect>
+<simplesect kind="return"><para>Button, which represent Enter/Accept button. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="250" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a0a13d9f85429014850354637d57f5a58" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Input::OnGamepadConnected</definition>
+        <argsstring>(int gamepad)</argsstring>
+        <name>OnGamepadConnected</name>
+        <qualifiedname>Input::OnGamepadConnected</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>gamepad</declname>
+        </param>
+        <briefdescription>
+<para>callback that is fired when a new gamepad is connected </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="253" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" bodystart="253" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a8731c78b6a6ad7508c94728820e52513" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Input::OnGamepadDisconnected</definition>
+        <argsstring>(int gamepad)</argsstring>
+        <name>OnGamepadDisconnected</name>
+        <qualifiedname>Input::OnGamepadDisconnected</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>gamepad</declname>
+        </param>
+        <briefdescription>
+<para>callback that is fired when gamepad is disconnected </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="277" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" bodystart="277" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1ae5f09760992644d990624b113adcedec" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Input::OnGamepadIdentification</definition>
+        <argsstring>(int gamepad)</argsstring>
+        <name>OnGamepadIdentification</name>
+        <qualifiedname>Input::OnGamepadIdentification</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>gamepad</declname>
+        </param>
+        <briefdescription>
+<para>callback that is fired when identification was requested </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="296" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" bodystart="296" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a997306de5f2a903ba1fd92f93bb14295" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int Input::GetUserGamepad</definition>
+        <argsstring>(BiosUser user)</argsstring>
+        <name>GetUserGamepad</name>
+        <qualifiedname>Input::GetUserGamepad</qualifiedname>
+        <param>
+          <type><ref refid="class_bios_user" kindref="compound">BiosUser</ref></type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="317" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" bodystart="317" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1a35f1f306b128dcafc1d995c66aa85e06" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool Input::IsInactiveGamepadOrUserSelected</definition>
+        <argsstring>(int gamepad=-1)</argsstring>
+        <name>IsInactiveGamepadOrUserSelected</name>
+        <qualifiedname>Input::IsInactiveGamepadOrUserSelected</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>gamepad</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="331" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" bodystart="331" bodyend="342"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1aca219fcffa8c6cd516015f96ba3a3588" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Input::OnMouseConnected</definition>
+        <argsstring>()</argsstring>
+        <name>OnMouseConnected</name>
+        <qualifiedname>Input::OnMouseConnected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>callback that is fired when mouse is connected (PS: and assigned to the user) does not fire on PC - mouse/keyboard assumed to always be connected </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="346" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" bodystart="346" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1ad8970f7d978af21ba8f848d0b2317b33" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Input::OnMouseDisconnected</definition>
+        <argsstring>()</argsstring>
+        <name>OnMouseDisconnected</name>
+        <qualifiedname>Input::OnMouseDisconnected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>callback that is fired when mouse is disconnected does not fire on PC - mouse/keyboard assumed to always be connected </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="361" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" bodystart="361" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1abb8d7f8e92338143d7d879e92f0d9084" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Input::OnKeyboardConnected</definition>
+        <argsstring>()</argsstring>
+        <name>OnKeyboardConnected</name>
+        <qualifiedname>Input::OnKeyboardConnected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>callback that is fired when keyboard is connected (PS: and assigned to the user) does not fire on PC - mouse/keyboard assumed to always be connected </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="376" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" bodystart="376" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1aafabf58254cabca09fc5aac81ec442e4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Input::OnKeyboardDisconnected</definition>
+        <argsstring>()</argsstring>
+        <name>OnKeyboardDisconnected</name>
+        <qualifiedname>Input::OnKeyboardDisconnected</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>callback that is fired when keyboard is disconnected does not fire on PC - mouse/keyboard assumed to always be connected </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="391" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" bodystart="391" bodyend="402"/>
+      </memberdef>
+      <memberdef kind="function" id="class_input_1aa033b17b1a0b83c1a6519d82e358d7ee" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Input::OnLastInputDeviceChanged</definition>
+        <argsstring>(EInputDeviceType inputDevice)</argsstring>
+        <name>OnLastInputDeviceChanged</name>
+        <qualifiedname>Input::OnLastInputDeviceChanged</qualifiedname>
+        <param>
+          <type><ref refid="input_8c_1a541a84e06cfb332b5f5d061c2dba4d86" kindref="member">EInputDeviceType</ref></type>
+          <declname>inputDevice</declname>
+        </param>
+        <briefdescription>
+<para>called from code on different input device use </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="405" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" bodystart="405" bodyend="411"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" line="10" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/tools/input.c" bodystart="11" bodyend="412"/>
+    <listofallmembers>
+      <member refid="class_input_1a6b09a2edfed991d805bb2b4850b373e0" prot="private" virt="non-virtual"><scope>Input</scope><name>AreAllAllowedInputDevicesActive</name></member>
+      <member refid="class_input_1a357a64afaf416766b12a84dbbae6547c" prot="private" virt="non-virtual"><scope>Input</scope><name>ChangeGameFocus</name></member>
+      <member refid="class_input_1a030602d8602f205df42f116a64181c33" prot="private" virt="non-virtual"><scope>Input</scope><name>DisableKey</name></member>
+      <member refid="class_input_1a1619bdbe42953de671dc414946955fe4" prot="private" virt="non-virtual"><scope>Input</scope><name>EnableMouseAndKeyboard</name></member>
+      <member refid="class_input_1a34b7aa055a6d8ea45960a2bcfb3fe71f" prot="private" virt="non-virtual"><scope>Input</scope><name>FillUnavailableDeviceArray</name></member>
+      <member refid="class_input_1a84e3d367c7245f1b3e22e288d164f992" prot="private" virt="non-virtual"><scope>Input</scope><name>GetActionDesc</name></member>
+      <member refid="class_input_1a4560783943c5a67d974ebe6fc12dac5f" prot="private" virt="non-virtual"><scope>Input</scope><name>GetActionGroupName</name></member>
+      <member refid="class_input_1a2e83528da36f7bd77fa47dfdc4d850c8" prot="private" virt="non-virtual"><scope>Input</scope><name>GetActionGroupsCount</name></member>
+      <member refid="class_input_1a008379ee9eaee7b93129ab2fbc3a305e" prot="private" virt="non-virtual"><scope>Input</scope><name>GetActionGroupSize</name></member>
+      <member refid="class_input_1a138b0da8490a45f594f604d7e1357978" prot="private" virt="non-virtual"><scope>Input</scope><name>GetCurrentInputDevice</name></member>
+      <member refid="class_input_1ac9601093267416fde226b5e78719fbc1" prot="private" virt="non-virtual"><scope>Input</scope><name>GetCurrentProfile</name></member>
+      <member refid="class_input_1ae999960b8f260b99770a9591284f420a" prot="private" virt="non-virtual"><scope>Input</scope><name>GetCurrentProfileActionKeys</name></member>
+      <member refid="class_input_1a16751ae3cfa622819e35f1dfcbdc37ae" prot="private" virt="non-virtual"><scope>Input</scope><name>GetDeviceName</name></member>
+      <member refid="class_input_1a5e113e2a6dab38587a9984fee797ee2b" prot="private" virt="non-virtual"><scope>Input</scope><name>GetDevicesCount</name></member>
+      <member refid="class_input_1a0da764dcdcaee42d953ff2a318611528" prot="private" virt="non-virtual"><scope>Input</scope><name>GetEnterButton</name></member>
+      <member refid="class_input_1a5eda1f646cdeb8234674dd1c386f6366" prot="private" virt="non-virtual"><scope>Input</scope><name>GetGamepadList</name></member>
+      <member refid="class_input_1a237bd1799ac965f61cdab0fc959a4707" prot="private" virt="non-virtual"><scope>Input</scope><name>GetGamepadThumbDirection</name></member>
+      <member refid="class_input_1a05af00a824e2367bde152483ff294710" prot="private" virt="non-virtual"><scope>Input</scope><name>GetGamepadUser</name></member>
+      <member refid="class_input_1aaebe6616d6b648f2850eba5c5846bac4" prot="private" virt="non-virtual"><scope>Input</scope><name>GetProfileName</name></member>
+      <member refid="class_input_1a1548c51fbce0045c1df024f5cf723bdd" prot="private" virt="non-virtual"><scope>Input</scope><name>GetProfilesCount</name></member>
+      <member refid="class_input_1a997306de5f2a903ba1fd92f93bb14295" prot="private" virt="non-virtual"><scope>Input</scope><name>GetUserGamepad</name></member>
+      <member refid="class_input_1aa756b5115b0153421393ae91bb0e3c82" prot="private" virt="non-virtual"><scope>Input</scope><name>HasGameFocus</name></member>
+      <member refid="class_input_1ab711094813978350d153a19aa13134fb" prot="private" virt="non-virtual"><scope>Input</scope><name>IdentifyGamepad</name></member>
+      <member refid="class_input_1aa6f2050786d4047114fafc8fd00a7528" prot="private" virt="non-virtual"><scope>Input</scope><name>IsActiveGamepadSelected</name></member>
+      <member refid="class_input_1a97017d0c18dc3002d77213c3a53bb331" prot="private" virt="non-virtual"><scope>Input</scope><name>IsAnyInputDeviceActive</name></member>
+      <member refid="class_input_1afabd1f940c46a4568c42f6617cafeaaa" prot="private" virt="non-virtual"><scope>Input</scope><name>IsDeviceEnabled</name></member>
+      <member refid="class_input_1aece6995fdbf447491ccbd9fb36dbf594" prot="private" virt="non-virtual"><scope>Input</scope><name>IsDeviceXInput</name></member>
+      <member refid="class_input_1abc174950ffbd9de5251bff56c972fac6" prot="private" virt="non-virtual"><scope>Input</scope><name>IsEnabledMouseAndKeyboard</name></member>
+      <member refid="class_input_1ac126a312eb00766d55ecd133ed440a3f" prot="private" virt="non-virtual"><scope>Input</scope><name>IsEnabledMouseAndKeyboardEvenOnServer</name></member>
+      <member refid="class_input_1a35f1f306b128dcafc1d995c66aa85e06" prot="private" virt="non-virtual"><scope>Input</scope><name>IsInactiveGamepadOrUserSelected</name></member>
+      <member refid="class_input_1a60f6ec5becef66ab7bcb099f855409ff" prot="private" virt="non-virtual"><scope>Input</scope><name>IsKeyboardConnected</name></member>
+      <member refid="class_input_1aef505af986df4e79973f4895dc47b997" prot="private" virt="non-virtual"><scope>Input</scope><name>IsMouseConnected</name></member>
+      <member refid="class_input_1a6b9b48bde46586f55ce7e70e10acb724" prot="private" virt="non-virtual"><scope>Input</scope><name>LocalDbl</name></member>
+      <member refid="class_input_1af7f30cc80316b5ba3cd631ce4e855f98" prot="private" virt="non-virtual"><scope>Input</scope><name>LocalDbl_ID</name></member>
+      <member refid="class_input_1a2477619b66dd6ce5f8651a343b7aa997" prot="private" virt="non-virtual"><scope>Input</scope><name>LocalHold</name></member>
+      <member refid="class_input_1a8ec970cc2359de612f145b7d58039b4a" prot="private" virt="non-virtual"><scope>Input</scope><name>LocalHold_ID</name></member>
+      <member refid="class_input_1a1403ec3de002c90ed0af39dd9ba25318" prot="private" virt="non-virtual"><scope>Input</scope><name>LocalPress</name></member>
+      <member refid="class_input_1affb93db3e7e56c23c11980dfbca1a567" prot="private" virt="non-virtual"><scope>Input</scope><name>LocalPress_ID</name></member>
+      <member refid="class_input_1ad3a01772715955dd1d69476aa8e41f96" prot="private" virt="non-virtual"><scope>Input</scope><name>LocalRelease</name></member>
+      <member refid="class_input_1a641be59f88b6800482430c84eeaaaa5e" prot="private" virt="non-virtual"><scope>Input</scope><name>LocalRelease_ID</name></member>
+      <member refid="class_input_1a93aa11e7d7554da93127443cb51d9adb" prot="private" virt="non-virtual"><scope>Input</scope><name>LocalValue</name></member>
+      <member refid="class_input_1af14be5a93c0b93deddfed38e934657aa" prot="private" virt="non-virtual"><scope>Input</scope><name>LocalValue_ID</name></member>
+      <member refid="class_input_1a0a13d9f85429014850354637d57f5a58" prot="private" virt="non-virtual"><scope>Input</scope><name>OnGamepadConnected</name></member>
+      <member refid="class_input_1a8731c78b6a6ad7508c94728820e52513" prot="private" virt="non-virtual"><scope>Input</scope><name>OnGamepadDisconnected</name></member>
+      <member refid="class_input_1ae5f09760992644d990624b113adcedec" prot="private" virt="non-virtual"><scope>Input</scope><name>OnGamepadIdentification</name></member>
+      <member refid="class_input_1abb8d7f8e92338143d7d879e92f0d9084" prot="private" virt="non-virtual"><scope>Input</scope><name>OnKeyboardConnected</name></member>
+      <member refid="class_input_1aafabf58254cabca09fc5aac81ec442e4" prot="private" virt="non-virtual"><scope>Input</scope><name>OnKeyboardDisconnected</name></member>
+      <member refid="class_input_1aa033b17b1a0b83c1a6519d82e358d7ee" prot="private" virt="non-virtual"><scope>Input</scope><name>OnLastInputDeviceChanged</name></member>
+      <member refid="class_input_1aca219fcffa8c6cd516015f96ba3a3588" prot="private" virt="non-virtual"><scope>Input</scope><name>OnMouseConnected</name></member>
+      <member refid="class_input_1ad8970f7d978af21ba8f848d0b2317b33" prot="private" virt="non-virtual"><scope>Input</scope><name>OnMouseDisconnected</name></member>
+      <member refid="class_input_1a1726e39280b99e2810381d4f67a1b4c1" prot="private" virt="non-virtual"><scope>Input</scope><name>ResetActiveGamepad</name></member>
+      <member refid="class_input_1aecb6745026225718b78bba748e6ae07a" prot="private" virt="non-virtual"><scope>Input</scope><name>ResetGameFocus</name></member>
+      <member refid="class_input_1a2772065cf3037a735a68de51663b2297" prot="private" virt="non-virtual"><scope>Input</scope><name>SelectActiveGamepad</name></member>
+      <member refid="class_input_1aa45fdebc6ec60d8b3224c12b6134fa5f" prot="private" virt="non-virtual"><scope>Input</scope><name>SetDeviceEnabled</name></member>
+      <member refid="class_input_1a2b6b9ac4a4e86d790820faab316f8209" prot="private" virt="non-virtual"><scope>Input</scope><name>SetProfile</name></member>
+      <member refid="class_input_1a449249262b40e68289745050c0467ccf" prot="private" virt="non-virtual"><scope>Input</scope><name>UpdateConnectedInputDeviceList</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

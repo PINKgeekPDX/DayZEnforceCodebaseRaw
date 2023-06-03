@@ -1,0 +1,2037 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_particle_manager_8c" kind="file" language="C++">
+    <compoundname>ParticleManager.c</compoundname>
+    <innerclass refid="class_particle_manager_constants" prot="public">ParticleManagerConstants</innerclass>
+    <innerclass refid="class_particle_manager_events" prot="public">ParticleManagerEvents</innerclass>
+      <sectiondef kind="user-defined">
+      <header>Global ParticleManager settings</header>
+      <description><para>Settings applied to the global ParticleManager </para>
+</description>
+      <memberdef kind="variable" id="_particle_manager_8c_1a7d8b01ebd6552812288f52ec23818200" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int POOL_SIZE</definition>
+        <argsstring></argsstring>
+        <name>POOL_SIZE</name>
+        <initializer>= 10000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="40" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_particle_manager_8c_1abfea2a2403e6dabd3eddfcca69d703e9" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int FLAGS</definition>
+        <argsstring></argsstring>
+        <name>FLAGS</name>
+        <initializer>= <ref refid="group___profiler_1gga48a53a9623c700db48ed6af2f10bb784a899caa602e4fff675b17cdbab33607ec" kindref="member">ParticleManagerSettingsFlags.NONE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="41" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>API for compatibility with Particle/ParticleSource create/play</header>
+      <description><para>Mimics the static Create and Play methods from Particle/ParticleSource </para>
+</description>
+      <memberdef kind="function" id="_particle_manager_8c_1a188d298bc81a1571e6a2758c9059a38c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>ParticleSource CreateParticle</definition>
+        <argsstring>(int id, vector pos, bool playOnCreation=false, Object parent=null, vector ori=vector.Zero, bool forceWorldRotation=false, Class owner=null)</argsstring>
+        <name>CreateParticle</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>playOnCreation</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>parent</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>ori</declname>
+          <defval><ref refid="classvector_1a6f6d5246e38b34f79fa2741a7e72d7e7" kindref="member">vector.Zero</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>forceWorldRotation</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type><ref refid="class_class" kindref="compound">Class</ref></type>
+          <declname>owner</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Create function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> <ref refid="class_particle" kindref="compound">Particle</ref> ID registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Position of <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> in LS (WS when no parent) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>playOnCreation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Whether to play immediately after creation (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_object" kindref="compound">Object</ref></computeroutput> Parent <ref refid="class_object" kindref="compound">Object</ref> which will child the <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> (Optional) <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ori</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Orientation of <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> in LS (WS when no parent) (Pitch, Yaw, Roll in degrees) (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>forceWorldRotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Forces orientation to rotate relative to the world and not with the parent (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>owner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_class" kindref="compound">Class</ref></computeroutput> The owning instance for this particle (Optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></computeroutput> Created particle instance when successful </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="111" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="111" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a3824a3b4bfba3c235fe3191672e073a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>ParticleSource CreateParticleEx</definition>
+        <argsstring>(int id, vector pos, int flags=ParticlePropertiesFlags.NONE, Object parent=null, vector ori=vector.Zero, Class owner=null)</argsstring>
+        <name>CreateParticleEx</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>flags</declname>
+          <defval><ref refid="group___profiler_1gga48a53a9623c700db48ed6af2f10bb784a899caa602e4fff675b17cdbab33607ec" kindref="member">ParticlePropertiesFlags.NONE</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>parent</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>ori</declname>
+          <defval><ref refid="classvector_1a6f6d5246e38b34f79fa2741a7e72d7e7" kindref="member">vector.Zero</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="class_class" kindref="compound">Class</ref></type>
+          <declname>owner</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Master create function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> <ref refid="class_particle" kindref="compound">Particle</ref> ID registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Position of <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> in LS (WS when no parent) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> See ParticlePropertiesFlags (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_object" kindref="compound">Object</ref></computeroutput> Parent <ref refid="class_object" kindref="compound">Object</ref> which will child the <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> (Optional) <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ori</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Orientation of <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> in LS (WS when no parent) (Pitch, Yaw, Roll in degrees) (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>owner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_class" kindref="compound">Class</ref></computeroutput> The owning instance for this particle (Optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></computeroutput> Created particle instance when successful </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="138" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="138" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a51258f31b752bbe493a499871e418b7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>ParticleSource CreateOnObject</definition>
+        <argsstring>(int particle_id, Object parent_obj, vector local_pos=&quot;0 0 0&quot;, vector local_ori=&quot;0 0 0&quot;, bool force_world_rotation=false)</argsstring>
+        <name>CreateOnObject</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>parent_obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_pos</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_ori</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>force_world_rotation</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Creates a particle emitter and attaches it on the given object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>particle_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> <ref refid="class_particle" kindref="compound">Particle</ref> ID registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parent_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_object" kindref="compound">Object</ref></computeroutput> Instance on which this particle will be attached </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Attachment position local to the parent (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_ori</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Orientation local to the parent (Pitch, Yaw, Roll in degrees) (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>force_world_rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Forces particle&apos;s orientation to rotate relative to the world and not with the object (Optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></computeroutput> Created particle instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="161" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="161" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a0daf65f0c4965fb0407662b3a3294d3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>ParticleSource Create</definition>
+        <argsstring>(int particle_id, Object parent_obj, vector local_pos=&quot;0 0 0&quot;, vector local_ori=&quot;0 0 0&quot;)</argsstring>
+        <name>Create</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>parent_obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_pos</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_ori</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Legacy function for backwards compatibility. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="174" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="174" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a4bbb8340da7ca422a9e68d561e0f5b5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>ParticleSource CreateInWorld</definition>
+        <argsstring>(int particle_id, vector global_pos, vector global_ori=&quot;0 0 0&quot;, bool force_world_rotation=false)</argsstring>
+        <name>CreateInWorld</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>global_pos</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>global_ori</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>force_world_rotation</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Creates a particle emitter on the given position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>particle_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> <ref refid="class_particle" kindref="compound">Particle</ref> ID registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>global_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>Vector</computeroutput> Position where the particel will be created </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>global_ori</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Orientation (Pitch, Yawn, Roll in degrees) (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>force_world_rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Has absolutely no effect here as there is no parent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></computeroutput> Created particle instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="187" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="187" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1afc2216b5255eecb1edf04153888e2f6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>ParticleSource Create</definition>
+        <argsstring>(int particle_id, vector global_pos, vector global_ori=&quot;0 0 0&quot;)</argsstring>
+        <name>Create</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>global_pos</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>global_ori</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Legacy function for backwards compatibility with 1.01 and below. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="195" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="195" bodyend="198"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Static play on creation</header>
+      <description><para>You can use the following Play(...) functions to create and activate a particle in 1 line of your script. </para>
+</description>
+      <memberdef kind="function" id="_particle_manager_8c_1aaf94c0db6a73f71709314168c4395526" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>ParticleSource PlayOnObject</definition>
+        <argsstring>(int particle_id, Object parent_obj, vector local_pos=&quot;0 0 0&quot;, vector local_ori=&quot;0 0 0&quot;, bool force_world_rotation=false)</argsstring>
+        <name>PlayOnObject</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>parent_obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_pos</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_ori</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>force_world_rotation</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Creates a particle emitter, attaches it on the given object and activates it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>particle_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> <ref refid="class_particle" kindref="compound">Particle</ref> ID registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parent_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_object" kindref="compound">Object</ref></computeroutput> Instance on which this particle will be attached </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Attachment position local to the parent (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_ori</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Orientation local to the parent (Pitch, Yaw, Roll in degrees) (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>force_world_rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Forces particle&apos;s orientation to rotate relative to the world and not with the object (Optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></computeroutput> Created particle instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="218" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="218" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a2460bfdf16b3e4fa8153d31c369f56fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>ParticleSource Play</definition>
+        <argsstring>(int particle_id, Object parent_obj, vector local_pos=&quot;0 0 0&quot;, vector local_ori=&quot;0 0 0&quot;)</argsstring>
+        <name>Play</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>parent_obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_pos</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_ori</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Legacy function for backwards compatibility with 1.01 and below. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="226" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="226" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a7956c05d787a472940b22b4206a2636f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>ParticleSource PlayInWorld</definition>
+        <argsstring>(int particle_id, vector global_pos)</argsstring>
+        <name>PlayInWorld</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>global_pos</declname>
+        </param>
+        <briefdescription>
+<para>Creates a particle emitter on the given position and activates it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>particle_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> <ref refid="class_particle" kindref="compound">Particle</ref> ID registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>global_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>Vector</computeroutput> Position where the particel will be created </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></computeroutput> Created particle instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="237" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="237" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a1c60e793ce6120bb82bae57cbe529276" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>ParticleSource PlayInWorldEx</definition>
+        <argsstring>(int particle_id, Object parent_obj, vector global_pos, vector global_ori=&quot;0 0 0&quot;, bool force_world_rotation=false)</argsstring>
+        <name>PlayInWorldEx</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>parent_obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>global_pos</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>global_ori</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>force_world_rotation</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="242" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="242" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a4f49a93f0f29bc190c2f2391d60fc365" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>ParticleSource Play</definition>
+        <argsstring>(int particle_id, vector global_pos)</argsstring>
+        <name>Play</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>global_pos</declname>
+        </param>
+        <briefdescription>
+<para>Legacy function for backwards compatibility with 1.01 and below. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="251" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="251" bodyend="254"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Get Particles</header>
+      <description><para>API for creating, playing or obtaining particles from the pool </para>
+</description>
+      <memberdef kind="function" id="_particle_manager_8c_1aef516593f30b83bc71ff014641fb757f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int CreateParticles</definition>
+        <argsstring>(array&lt; ParticleSource &gt; particles, string path, notnull ParticlePropertiesArray properties, int count=1)</argsstring>
+        <name>CreateParticles</name>
+        <param>
+          <type><ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> &gt;</type>
+          <declname>particles</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>notnull ParticlePropertiesArray</type>
+          <declname>properties</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Creates an amount of particles with the properties given. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>particles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref></computeroutput> The resulting particles if an array is given </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Path of particle effect </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>properties</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ParticleProperties</computeroutput> Properties of the particles created </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Amount of particles to create with these properties </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> Amount of particles created in this frame, if the ParticleManager is still allocating while this is called and virtual particles are enabled, the overflow particles will be virtual instead and not given in the out array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="273" column="18" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" declline="273" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1acf91874b5f1e04898306aa89767a7317" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>ParticleSource CreateParticleByPath</definition>
+        <argsstring>(string path, notnull ParticleProperties properties)</argsstring>
+        <name>CreateParticleByPath</name>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>notnull ParticleProperties</type>
+          <declname>properties</declname>
+        </param>
+        <briefdescription>
+<para>Create a particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Path of particle effect </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>properties</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ParticleProperties</computeroutput> Properties of the particles created </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></computeroutput> The resulting particle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="281" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="281" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a91090f76acc21a98cea76449c8f38cd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int CreateParticlesById</definition>
+        <argsstring>(int id, notnull ParticlePropertiesArray properties, int count)</argsstring>
+        <name>CreateParticlesById</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>notnull ParticlePropertiesArray</type>
+          <declname>properties</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>QoL function using script <ref refid="class_particle_list" kindref="compound">ParticleList</ref>, strongly recommend to read comments for CreateParticles as well. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> ID of particle registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>properties</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ParticleProperties</computeroutput> Properties of the particles created </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Amount of particles to create with these properties </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> Amount of particles created in this frame, if the ParticleManager is still allocating while this is called and virtual particles are enabled, the overflow particles will be virtual instead </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="299" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="299" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a6625f5b025aea852227eceff6f60de30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> &gt;</type>
+        <definition>array&lt; ParticleSource &gt; CreateParticlesByIdArr</definition>
+        <argsstring>(int id, notnull ParticlePropertiesArray properties, int count)</argsstring>
+        <name>CreateParticlesByIdArr</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>notnull ParticlePropertiesArray</type>
+          <declname>properties</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>QoL function using script <ref refid="class_particle_list" kindref="compound">ParticleList</ref>, strongly recommend to read comments for CreateParticles as well. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> ID of particle registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>properties</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ParticleProperties</computeroutput> Properties of the particles created </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Amount of particles to create with these properties </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref></computeroutput> The resulting particles - Read particles param of CreateParticles </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="311" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="311" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1aa5f58163b674f018d3cbd72914460728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>ParticleSource CreateParticleById</definition>
+        <argsstring>(int id, ParticleProperties properties)</argsstring>
+        <name>CreateParticleById</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>ParticleProperties</type>
+          <declname>properties</declname>
+        </param>
+        <briefdescription>
+<para>QoL function for when only one particle is needed using script <ref refid="class_particle_list" kindref="compound">ParticleList</ref>, strongly recommend to read comments for CreateParticles as well. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> ID of particle registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>properties</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ParticleProperties</computeroutput> Properties of the particles created </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></computeroutput> The resulting particle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="324" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="324" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a017ae7eab4c55666356bc3dc1cf49c40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int PlayParticles</definition>
+        <argsstring>(out array&lt; ParticleSource &gt; particles, string path, notnull array&lt; vector &gt; positions, int count=1)</argsstring>
+        <name>PlayParticles</name>
+        <param>
+          <type>out <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> &gt;</type>
+          <declname>particles</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="classvector" kindref="compound">vector</ref> &gt;</type>
+          <declname>positions</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>QoL function for when wanting to play a particle at a position right away. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>particles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref></computeroutput> The resulting particles if an array is given </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Path of particle effect </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>positions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="classarray" kindref="compound">array&lt;vector&gt;</ref></computeroutput> Positions of particles </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Amount of particles to create at this position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> Amount of particles created in this frame, if the ParticleManager is still allocating while this is called and virtual particles are enabled, the overflow particles will be virtual instead and not given in the out array </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="343" column="18" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" declline="343" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1aba6890b8ab334f15766171bc6d3e226f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> &gt;</type>
+        <definition>array&lt; ParticleSource &gt; PlayParticlesById</definition>
+        <argsstring>(int id, array&lt; vector &gt; positions, int count)</argsstring>
+        <name>PlayParticlesById</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="classvector" kindref="compound">vector</ref> &gt;</type>
+          <declname>positions</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>QoL function using script <ref refid="class_particle_list" kindref="compound">ParticleList</ref>, strongly recommend to read comments for PlayParticles as well. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> ID of particle registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>positions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="classarray" kindref="compound">array&lt;vector&gt;</ref></computeroutput> Positions of particles </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Amount of particles to create at this position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref></computeroutput> The resulting particles - Read particles param of PlayParticles </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="352" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="352" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a24b24648d53a8dd2f9ecd0af4716e8a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>ParticleSource PlayParticleById</definition>
+        <argsstring>(int id, array&lt; vector &gt; position)</argsstring>
+        <name>PlayParticleById</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="classvector" kindref="compound">vector</ref> &gt;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>QoL function for when only one particle is needed using script <ref refid="class_particle_list" kindref="compound">ParticleList</ref>, strongly recommend to read comments for PlayParticles as well. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> ID of particle registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>positions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="classarray" kindref="compound">array&lt;vector&gt;</ref></computeroutput> Positions of particles </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></computeroutput> The resulting particle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="365" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="365" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a7bdc1d97f1bab1fbf5b89384a6c1e6a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>proto native ParticleSource GetParticle</definition>
+        <argsstring>(int index)</argsstring>
+        <name>GetParticle</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Manually get the particle at index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Index of particle </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></computeroutput> <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> at given index </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="381" column="29" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" declline="381" declcolumn="29"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a36f69b0f07f1fb2150d4368572771906" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int GetParticles</definition>
+        <argsstring>(out array&lt; ParticleSource &gt; outArray, int startIndex, int count)</argsstring>
+        <name>GetParticles</name>
+        <param>
+          <type>out <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> &gt;</type>
+          <declname>outArray</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>startIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Manually get a portion of the particles in the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>particles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref></computeroutput> The resulting particles </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>startIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Starting index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Amount of particles to get </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> Amount of particles in outArray </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="390" column="18" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" declline="390" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1acf84f0e90ff716fe98afeb220de35acb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> &gt;</type>
+        <definition>array&lt; ParticleSource &gt; GetParticlesEx</definition>
+        <argsstring>(int startIndex, int count)</argsstring>
+        <name>GetParticlesEx</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>startIndex</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+<para>Manually get a portion of the particles in the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>startIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Starting index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Amount of particles to get </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref></computeroutput> The resulting particles </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="398" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="398" bodyend="403"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Identification</header>
+      <description><para>Identification functionality </para>
+</description>
+      <memberdef kind="function" id="_particle_manager_8c_1a2baf4331e317d99b6c28664bd8e81543" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void SetName</definition>
+        <argsstring>(string name)</argsstring>
+        <name>SetName</name>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Set a name for the ParticleManager to identify it more easily. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Name for ParticleManager </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="418" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" declline="418" declcolumn="19"/>
+      </memberdef>
+      <member refid="group___widget_a_p_i_1gac97112280cc4435c8df3c88070c839b4" kind="function"><name>GetName</name></member>
+      <memberdef kind="function" id="_particle_manager_8c_1a6bf1e99963be321fecc5e3f452f1d47d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>proto string GetDebugNameNative</definition>
+        <argsstring>()</argsstring>
+        <name>GetDebugNameNative</name>
+        <briefdescription>
+<para>Gets the debug name for the ParticleManager. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dbgName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> &quot;name:id&quot; </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="430" column="14" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" declline="430" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a2731e77365c090d55fd098fedd5d2b1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>override string GetDebugName</definition>
+        <argsstring>()</argsstring>
+        <name>GetDebugName</name>
+        <briefdescription>
+<para>Gets the debug name for the ParticleManager. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>string</computeroutput> &quot;name:id&quot; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="436" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="436" bodyend="439"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a47a63a307e952a8b7c15bae77434a3d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto int GetCountID</definition>
+        <argsstring>()</argsstring>
+        <name>GetCountID</name>
+        <briefdescription>
+<para>Gets the ID for the ParticleManager. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> ID for the ParticleManager (different every restart, as it is the nth instance created since the start of the program) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="445" column="11" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" declline="445" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1ad1dfafc6a1802bef6579d6de077ff04e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto static native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto static native int GetStaticCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetStaticCount</name>
+        <briefdescription>
+<para>Gets the amount of ParticleManager that have been created since the start of the program. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> Amount of ParticleManager that have been created since the start of the program </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="451" column="25" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" declline="451" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a33248b0fd77db2256112b3302d86d6f6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto static native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto static native int GetStaticActiveCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetStaticActiveCount</name>
+        <briefdescription>
+<para>Gets the amount of ParticleManager that are currently existing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> Amount of ParticleManager that are currently existing </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="457" column="25" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" declline="457" declcolumn="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Properties and state</header>
+      <description><para>Obtain information about the state of the ParticleManager </para>
+</description>
+      <memberdef kind="function" id="_particle_manager_8c_1a0e7450574f55aa7e1e98183ffe5237c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int GetPoolSize</definition>
+        <argsstring>()</argsstring>
+        <name>GetPoolSize</name>
+        <briefdescription>
+<para>Gets the fixed maximum size of the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> The fixed maximum size of the pool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="472" column="18" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" declline="472" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a9380c63389466c5656295293e05a8486" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int GetAllocatedCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetAllocatedCount</name>
+        <briefdescription>
+<para>Gets the amount of particles currently allocated. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> Amount of particles currently allocated </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="478" column="18" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" declline="478" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a0997546924823ad491e87c8a73273a94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int GetVirtualCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetVirtualCount</name>
+        <briefdescription>
+<para>Gets the amount of virtual particles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> Amount of virtual particles currently waiting to be turned into real particles </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="484" column="18" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" declline="484" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a205ffb345e5d22e39f88cbc369ba1397" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int GetPlayingCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetPlayingCount</name>
+        <briefdescription>
+<para>Gets the amount of playing particles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> Amount of currently playing particles </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="490" column="18" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" declline="490" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1ab988115176a47f49dc730e04ab72f4ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool IsFinishedAllocating</definition>
+        <argsstring>()</argsstring>
+        <name>IsFinishedAllocating</name>
+        <briefdescription>
+<para>Checks if the ParticleManager has allocated all slots in the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>bool</computeroutput> True when the number of allocated particles is the same as the pool size </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="496" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" declline="496" declcolumn="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Script Events API</header>
+      <description><para>Setting and getting of ScriptEvents </para>
+</description>
+      <memberdef kind="function" id="_particle_manager_8c_1ab17c9f008e9dc4dbc2cd5b0d55782e22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>private proto void</type>
+        <definition>private proto void SetScriptEvents</definition>
+        <argsstring>(Managed events)</argsstring>
+        <name>SetScriptEvents</name>
+        <param>
+          <type><ref refid="class_managed" kindref="compound">Managed</ref></type>
+          <declname>events</declname>
+        </param>
+        <briefdescription>
+<para>Set the events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>events</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_managed" kindref="compound">Managed</ref></computeroutput> The events to set </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="511" column="20" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" declline="511" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a43670834970f32b189ec97a4449baf72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>private proto <ref refid="class_managed" kindref="compound">Managed</ref></type>
+        <definition>private proto Managed GetScriptEvents</definition>
+        <argsstring>()</argsstring>
+        <name>GetScriptEvents</name>
+        <briefdescription>
+<para>Get the events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput><ref refid="class_managed" kindref="compound">Managed</ref></computeroutput> If there is any events set, this will return them </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="517" column="23" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" declline="517" declcolumn="23"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a4c8053538d57e946a0546c65b43dea5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_particle_manager_events" kindref="compound">ParticleManagerEvents</ref></type>
+        <definition>ParticleManagerEvents GetEvents</definition>
+        <argsstring>()</argsstring>
+        <name>GetEvents</name>
+        <briefdescription>
+<para>Get the events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput><ref refid="class_particle_manager_events" kindref="compound">ParticleManagerEvents</ref></computeroutput> If there is any events set, this will return them so that additional functionality can be bound to them </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="523" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="523" bodyend="526"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Events</header>
+      <description><para>Events called from C++ </para>
+</description>
+      <memberdef kind="function" id="_particle_manager_8c_1a556e91ddf72c2bad6ba7db949d27053b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnAllocation</definition>
+        <argsstring>(array&lt; ParticleSource &gt; allocatedParticles)</argsstring>
+        <name>OnAllocation</name>
+        <param>
+          <type><ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> &gt;</type>
+          <declname>allocatedParticles</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="537" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="537" bodyend="540"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a78adcf77ed14ea72554d71fbe6011f99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OnAllocationEnd</definition>
+        <argsstring>()</argsstring>
+        <name>OnAllocationEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="542" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="542" bodyend="545"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2ce" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ParticleManagerSettingsFlags</name>
+        <enumvalue id="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2ceac157bdf0b85a40d2619cbc8bc1ae5fe2" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2ceab85a8cc1cf1444733a60d74a843ce24c" prot="public">
+          <name>FIXED_INDEX</name>
+          <briefdescription>
+<para>Particles will be locked to the index and not reused. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2cea854a1cd6e3a98db9e290dddea29725e7" prot="public">
+          <name>BLOCKING</name>
+          <briefdescription>
+<para>Allocation blocks the game until it is done. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2cea5610a04b0b522c8f5e9afdd4a4e5e5db" prot="public">
+          <name>DISABLE_VIRTUAL</name>
+          <briefdescription>
+<para>Disable the creation of virtual particles when the pool is still allocating. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2cea2d9d3b2e5a8d506634ab4a3f466d34d2" prot="public">
+          <name>REUSE_OWNED</name>
+          <briefdescription>
+<para>Reuse stopped particles even if they are owned by something. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flags for ParticleManagerSettings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="2" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="3" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_particle_manager_8c_1ae15f040364c119a2eaeac8dc63f40849" prot="public" static="no" mutable="no">
+        <type>class <ref refid="class_particle_manager_events" kindref="compound">ParticleManagerEvents</ref></type>
+        <definition>class ParticleManagerEvents g_ParticleManager</definition>
+        <argsstring></argsstring>
+        <name>g_ParticleManager</name>
+        <briefdescription>
+<para>Has a fixed pool of precreated and reserved particles. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_static" kindref="compound">Static</ref> ParticleManager </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="56" column="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_particle_manager_8c_1a180014652e28cc8fa2cd0cc46d181307" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class <ref refid="class_particle_manager_constants" kindref="compound">ParticleManagerConstants</ref></type>
+        <definition>class ParticleManagerConstants ParticleManagerSettings</definition>
+        <argsstring>(int poolSize, int flags=ParticleManagerSettingsFlags.NONE)</argsstring>
+        <name>ParticleManagerSettings</name>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>poolSize</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>flags</declname>
+          <defval><ref refid="group___profiler_1gga48a53a9623c700db48ed6af2f10bb784a899caa602e4fff675b17cdbab33607ec" kindref="member">ParticleManagerSettingsFlags.NONE</ref></defval>
+        </param>
+        <briefdescription>
+<para>Settings given to ParticleManager on creation (in ctor) </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor (ctor) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>poolSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Size of pool (amount of created and reserved particles) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> ParticleManagerSettingsFlags </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="1" column="0" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1afaeae8b29864c95183904728093ca4cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ~ParticleManagerSettings</definition>
+        <argsstring>()</argsstring>
+        <name>~ParticleManagerSettings</name>
+        <briefdescription>
+<para>dtor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="40" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a69082a728f9a7e6702c113ad875ede51" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_particle_manager_8c_1a93ef360e8fc315d276eb8cc256dc3ef8" kindref="member">ParticleManager</ref></type>
+        <definition>static ParticleManager GetInstance</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstance</name>
+        <briefdescription>
+<para>Access to the static ParticleManager. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="59" column="24" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="59" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a49ac11ff95b0200883d00f8fe048caaa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void CleanupInstance</definition>
+        <argsstring>()</argsstring>
+        <name>CleanupInstance</name>
+        <briefdescription>
+<para>To clean it up properly before game closes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="74" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="74" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a93ef360e8fc315d276eb8cc256dc3ef8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleManager</definition>
+        <argsstring>(ParticleManagerSettings settings)</argsstring>
+        <name>ParticleManager</name>
+        <param>
+          <type><ref refid="_particle_manager_8c_1a180014652e28cc8fa2cd0cc46d181307" kindref="member">ParticleManagerSettings</ref></type>
+          <declname>settings</declname>
+        </param>
+        <briefdescription>
+<para>Constructor (ctor) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>settings</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ParticleManagerSettings</computeroutput> Settings for the ParticleManager </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="84" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="84" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="_particle_manager_8c_1a8b4554a34bb27d058ff346d30c2820fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ~ParticleManager</definition>
+        <argsstring>()</argsstring>
+        <name>~ParticleManager</name>
+        <briefdescription>
+<para>dtor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" line="89" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c" bodystart="89" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="_particle_manager_8c_1a180014652e28cc8fa2cd0cc46d181307" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2ce" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2ce" kindref="member">ParticleManagerSettingsFlags</ref></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="4" refid="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2ceac157bdf0b85a40d2619cbc8bc1ae5fe2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2ceac157bdf0b85a40d2619cbc8bc1ae5fe2" kindref="member">NONE</ref>,</highlight></codeline>
+<codeline lineno="6" refid="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2ceab85a8cc1cf1444733a60d74a843ce24c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2ceab85a8cc1cf1444733a60d74a843ce24c" kindref="member">FIXED_INDEX</ref>,</highlight></codeline>
+<codeline lineno="8" refid="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2cea854a1cd6e3a98db9e290dddea29725e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2cea854a1cd6e3a98db9e290dddea29725e7" kindref="member">BLOCKING</ref>,</highlight></codeline>
+<codeline lineno="10" refid="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2cea5610a04b0b522c8f5e9afdd4a4e5e5db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2cea5610a04b0b522c8f5e9afdd4a4e5e5db" kindref="member">DISABLE_VIRTUAL</ref>,</highlight></codeline>
+<codeline lineno="12" refid="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2cea2d9d3b2e5a8d506634ab4a3f466d34d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2cea2d9d3b2e5a8d506634ab4a3f466d34d2" kindref="member">REUSE_OWNED</ref>,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_particle_manager_constants" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_particle_manager_constants" kindref="compound">ParticleManagerConstants</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22" refid="class_particle_manager_constants_1a1d5de15e197a17991aa76e1665dc0ce8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_particle_manager_constants_1a1d5de15e197a17991aa76e1665dc0ce8" kindref="member">POOL_SIZE</ref><sp/>=<sp/>10000;</highlight></codeline>
+<codeline lineno="23" refid="class_particle_manager_constants_1a6cfb4b8f85b2d6844a1dae4a2f398bf7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_particle_manager_constants_1a6cfb4b8f85b2d6844a1dae4a2f398bf7" kindref="member">FLAGS</ref><sp/>=<sp/><ref refid="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2ce" kindref="member">ParticleManagerSettingsFlags</ref>.NONE;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_particle_manager_8c_1a180014652e28cc8fa2cd0cc46d181307" kindref="member">ParticleManagerSettings</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a180014652e28cc8fa2cd0cc46d181307" kindref="member">ParticleManagerSettings</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>poolSize,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/><ref refid="_particle_manager_8c_1ab444c378c8f3ada95baa6b17d743e2ce" kindref="member">ParticleManagerSettingsFlags</ref>.NONE)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="_particle_manager_8c_1a7d8b01ebd6552812288f52ec23818200" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1afaeae8b29864c95183904728093ca4cb" kindref="member">~ParticleManagerSettings</ref>()</highlight></codeline>
+<codeline lineno="41" refid="_particle_manager_8c_1abfea2a2403e6dabd3eddfcca69d703e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_particle_manager_events" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_particle_manager_events" kindref="compound">ParticleManagerEvents</ref></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48" refid="class_particle_manager_events_1a1456cd586738b4f1e6795a735fe086a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref><sp/><ref refid="class_particle_manager_events_1a1456cd586738b4f1e6795a735fe086a1" kindref="member">Event_OnAllocation</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref>();</highlight></codeline>
+<codeline lineno="49" refid="class_particle_manager_events_1a5a1729fe2ed75e4e41c4def6c64453ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref><sp/><ref refid="class_particle_manager_events_1a5a1729fe2ed75e4e41c4def6c64453ff" kindref="member">Event_OnAllocationEnd</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_particle_manager_8c_1a93ef360e8fc315d276eb8cc256dc3ef8" kindref="member">ParticleManager</ref><sp/>:<sp/><ref refid="class_managed" kindref="compound">Managed</ref></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56" refid="_particle_manager_8c_1ae15f040364c119a2eaeac8dc63f40849" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ref<sp/><ref refid="_particle_manager_8c_1a93ef360e8fc315d276eb8cc256dc3ef8" kindref="member">ParticleManager</ref><sp/><ref refid="_particle_manager_8c_1ae15f040364c119a2eaeac8dc63f40849" kindref="member">g_ParticleManager</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="_particle_manager_8c_1a69082a728f9a7e6702c113ad875ede51" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a93ef360e8fc315d276eb8cc256dc3ef8" kindref="member">ParticleManager</ref><sp/><ref refid="_day_z_anim_event_maps_8c_1a8d0826d81e6727aa924957b016ae050f" kindref="member">GetInstance</ref>()</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="_particle_manager_8c_1ae15f040364c119a2eaeac8dc63f40849" kindref="member">g_ParticleManager</ref><sp/>&amp;&amp;<sp/>!<ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().IsDedicatedServer())</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_particle_manager_8c_1ae15f040364c119a2eaeac8dc63f40849" kindref="member">g_ParticleManager</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a93ef360e8fc315d276eb8cc256dc3ef8" kindref="member">ParticleManager</ref>(</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a180014652e28cc8fa2cd0cc46d181307" kindref="member">ParticleManagerSettings</ref>(</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_manager_constants" kindref="compound">ParticleManagerConstants</ref>.<ref refid="class_particle_manager_constants_1a1d5de15e197a17991aa76e1665dc0ce8" kindref="member">POOL_SIZE</ref>,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_manager_constants" kindref="compound">ParticleManagerConstants</ref>.<ref refid="class_particle_manager_constants_1a6cfb4b8f85b2d6844a1dae4a2f398bf7" kindref="member">FLAGS</ref>));</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_particle_manager_8c_1ae15f040364c119a2eaeac8dc63f40849" kindref="member">g_ParticleManager</ref>.SetName(</highlight><highlight class="stringliteral">&quot;GlobalParticleManager&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1ae15f040364c119a2eaeac8dc63f40849" kindref="member">g_ParticleManager</ref>;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="_particle_manager_8c_1a49ac11ff95b0200883d00f8fe048caaa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a49ac11ff95b0200883d00f8fe048caaa" kindref="member">CleanupInstance</ref>()</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_particle_manager_8c_1ae15f040364c119a2eaeac8dc63f40849" kindref="member">g_ParticleManager</ref>)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1ae15f040364c119a2eaeac8dc63f40849" kindref="member">g_ParticleManager</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84" refid="_particle_manager_8c_1a93ef360e8fc315d276eb8cc256dc3ef8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a93ef360e8fc315d276eb8cc256dc3ef8" kindref="member">ParticleManager</ref>(<ref refid="_particle_manager_8c_1a180014652e28cc8fa2cd0cc46d181307" kindref="member">ParticleManagerSettings</ref><sp/>settings)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89" refid="_particle_manager_8c_1a8b4554a34bb27d058ff346d30c2820fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a8b4554a34bb27d058ff346d30c2820fe" kindref="member">~ParticleManager</ref>()</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111" refid="_particle_manager_8c_1a188d298bc81a1571e6a2758c9059a38c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1aa613c8a80fc89086d77fa356df549ba0" kindref="member">CreateParticle</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>pos,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>playOnCreation<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>parent<sp/>=<sp/>null,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>ori<sp/>=<sp/><ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1a6f6d5246e38b34f79fa2741a7e72d7e7" kindref="member">Zero</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>forceWorldRotation<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/><ref refid="class_class" kindref="compound">Class</ref><sp/>owner<sp/>=<sp/>null<sp/>)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/>ParticlePropertiesFlags.NONE;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(playOnCreation)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flags<sp/>=<sp/>flags<sp/>|<sp/>ParticlePropertiesFlags.PLAY_ON_CREATION;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(forceWorldRotation)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flags<sp/>=<sp/>flags<sp/>|<sp/>ParticlePropertiesFlags.FORCE_WORLD_ROT;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a3824a3b4bfba3c235fe3191672e073a5" kindref="member">CreateParticleEx</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>pos,<sp/>flags,<sp/>parent,<sp/>ori,<sp/>owner);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138" refid="_particle_manager_8c_1a3824a3b4bfba3c235fe3191672e073a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="_particle_manager_8c_1a3824a3b4bfba3c235fe3191672e073a5" kindref="member">CreateParticleEx</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>pos,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/>ParticlePropertiesFlags.NONE,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>parent<sp/>=<sp/>null,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>ori<sp/>=<sp/><ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1a6f6d5246e38b34f79fa2741a7e72d7e7" kindref="member">Zero</ref>,<sp/><ref refid="class_class" kindref="compound">Class</ref><sp/>owner<sp/>=<sp/>null<sp/>)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>particlePath<sp/>=<sp/><ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a5e8368fe145ca144b377295e12dbdea4" kindref="member">GetParticleFullPath</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(particlePath<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">//<sp/>There<sp/>is<sp/>already<sp/>an<sp/>error<sp/>inside<sp/>of<sp/>ParticleList<sp/>signaling<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_shape_1ga30f13400906443efe9fb79540dc674b5" kindref="member">ErrorEx</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.Format(</highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>create<sp/>ParticleSource<sp/>as<sp/>particle<sp/>id<sp/>%1<sp/>is<sp/>invalid.&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>null;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ParticleProperties<sp/>props<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ParticleProperties(pos,<sp/>flags,<sp/>parent,<sp/>ori,<sp/>owner);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/>p<sp/>=<sp/><ref refid="_particle_manager_8c_1acf91874b5f1e04898306aa89767a7317" kindref="member">CreateParticleByPath</ref>(particlePath,<sp/>props);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="161" refid="_particle_manager_8c_1a51258f31b752bbe493a499871e418b7f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="_particle_manager_8c_1a51258f31b752bbe493a499871e418b7f" kindref="member">CreateOnObject</ref>(</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>parent_obj,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_pos<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_ori<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>force_world_rotation<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1aa613c8a80fc89086d77fa356df549ba0" kindref="member">CreateParticle</ref>(<ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/>local_pos,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>parent_obj,<sp/>local_ori,<sp/>force_world_rotation);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174" refid="_particle_manager_8c_1a0daf65f0c4965fb0407662b3a3294d3b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="group___debug_shape_1ga01f744a0b9ed95fc93c015ca4e1d03f4" kindref="member">Create</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>parent_obj,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_pos<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_ori<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a51258f31b752bbe493a499871e418b7f" kindref="member">CreateOnObject</ref>(<sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/>parent_obj,<sp/>local_pos,<sp/>local_ori);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="187" refid="_particle_manager_8c_1a4bbb8340da7ca422a9e68d561e0f5b5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="_particle_manager_8c_1a4bbb8340da7ca422a9e68d561e0f5b5a" kindref="member">CreateInWorld</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>global_pos,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>global_ori<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>force_world_rotation<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1aa613c8a80fc89086d77fa356df549ba0" kindref="member">CreateParticle</ref>(<ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/>global_pos,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>null,<sp/>global_ori,<sp/>force_world_rotation);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="195" refid="_particle_manager_8c_1afc2216b5255eecb1edf04153888e2f6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="group___debug_shape_1ga01f744a0b9ed95fc93c015ca4e1d03f4" kindref="member">Create</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>global_pos,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>global_ori<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a4bbb8340da7ca422a9e68d561e0f5b5a" kindref="member">CreateInWorld</ref>(<sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/>global_pos,<sp/>global_ori<sp/>);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="218" refid="_particle_manager_8c_1aaf94c0db6a73f71709314168c4395526" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="_particle_manager_8c_1aaf94c0db6a73f71709314168c4395526" kindref="member">PlayOnObject</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>parent_obj,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_pos<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_ori<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>force_world_rotation<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1aa613c8a80fc89086d77fa356df549ba0" kindref="member">CreateParticle</ref>(<ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/>local_pos,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>parent_obj,<sp/>local_ori,<sp/>force_world_rotation);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="226" refid="_particle_manager_8c_1a2460bfdf16b3e4fa8153d31c369f56fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="_smpt_anim_meta_8c_1a1044d828832cd398ac046799915a5136" kindref="member">Play</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>parent_obj,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_pos<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_ori<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1aaf94c0db6a73f71709314168c4395526" kindref="member">PlayOnObject</ref>(<sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/>parent_obj,<sp/>local_pos,<sp/>local_ori);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="237" refid="_particle_manager_8c_1a7956c05d787a472940b22b4206a2636f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="_particle_manager_8c_1a7956c05d787a472940b22b4206a2636f" kindref="member">PlayInWorld</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>global_pos)</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a1c60e793ce6120bb82bae57cbe529276" kindref="member">PlayInWorldEx</ref>(<ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/>null,<sp/>global_pos);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="242" refid="_particle_manager_8c_1a1c60e793ce6120bb82bae57cbe529276" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="_particle_manager_8c_1a1c60e793ce6120bb82bae57cbe529276" kindref="member">PlayInWorldEx</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>parent_obj,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>global_pos,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>global_ori<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>force_world_rotation<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1aa613c8a80fc89086d77fa356df549ba0" kindref="member">CreateParticle</ref>(<ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/>global_pos,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>parent_obj,<sp/>global_ori,<sp/>force_world_rotation);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251" refid="_particle_manager_8c_1a4f49a93f0f29bc190c2f2391d60fc365" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="_smpt_anim_meta_8c_1a1044d828832cd398ac046799915a5136" kindref="member">Play</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>global_pos)</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a7956c05d787a472940b22b4206a2636f" kindref="member">PlayInWorld</ref>(<sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/>global_pos);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="273" refid="_particle_manager_8c_1aef516593f30b83bc71ff014641fb757f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1aef516593f30b83bc71ff014641fb757f" kindref="member">CreateParticles</ref>(<ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref><sp/>particles,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>,<sp/>notnull<sp/>ParticlePropertiesArray<sp/>properties,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="281" refid="_particle_manager_8c_1acf91874b5f1e04898306aa89767a7317" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="_particle_manager_8c_1acf91874b5f1e04898306aa89767a7317" kindref="member">CreateParticleByPath</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>,<sp/>notnull<sp/>ParticleProperties<sp/>properties)</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref><sp/>tempArr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref>;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_particle_manager_8c_1aef516593f30b83bc71ff014641fb757f" kindref="member">CreateParticles</ref>(tempArr,<sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>,<sp/>{properties},<sp/>1);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tempArr.Count()<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tempArr[0];</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>null;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="299" refid="_particle_manager_8c_1a91090f76acc21a98cea76449c8f38cd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a91090f76acc21a98cea76449c8f38cd3" kindref="member">CreateParticlesById</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>notnull<sp/>ParticlePropertiesArray<sp/>properties,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count)</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1aef516593f30b83bc71ff014641fb757f" kindref="member">CreateParticles</ref>(null,<sp/><ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a5e8368fe145ca144b377295e12dbdea4" kindref="member">GetParticleFullPath</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">),<sp/>properties,<sp/>count);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="311" refid="_particle_manager_8c_1a6625f5b025aea852227eceff6f60de30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref><sp/><ref refid="_particle_manager_8c_1a6625f5b025aea852227eceff6f60de30" kindref="member">CreateParticlesByIdArr</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>notnull<sp/>ParticlePropertiesArray<sp/>properties,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count)</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref><sp/>outArr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref>;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_particle_manager_8c_1aef516593f30b83bc71ff014641fb757f" kindref="member">CreateParticles</ref>(outArr,<sp/><ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a5e8368fe145ca144b377295e12dbdea4" kindref="member">GetParticleFullPath</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">),<sp/>properties,<sp/>count);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>outArr;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="324" refid="_particle_manager_8c_1aa5f58163b674f018d3cbd72914460728" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="_particle_manager_8c_1aa5f58163b674f018d3cbd72914460728" kindref="member">CreateParticleById</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>ParticleProperties<sp/>properties)</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref><sp/>tempArr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref>;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_particle_manager_8c_1aef516593f30b83bc71ff014641fb757f" kindref="member">CreateParticles</ref>(tempArr,<sp/><ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a5e8368fe145ca144b377295e12dbdea4" kindref="member">GetParticleFullPath</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">),<sp/>{properties},<sp/>1);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tempArr.Count()<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tempArr[0];</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>null;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="343" refid="_particle_manager_8c_1a017ae7eab4c55666356bc3dc1cf49c40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a017ae7eab4c55666356bc3dc1cf49c40" kindref="member">PlayParticles</ref>(out<sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref><sp/>particles,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>,<sp/>notnull<sp/><ref refid="classarray" kindref="compound">array&lt;vector&gt;</ref><sp/>positions,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>1);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="352" refid="_particle_manager_8c_1aba6890b8ab334f15766171bc6d3e226f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref><sp/><ref refid="_particle_manager_8c_1aba6890b8ab334f15766171bc6d3e226f" kindref="member">PlayParticlesById</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/><ref refid="classarray" kindref="compound">array&lt;vector&gt;</ref><sp/>positions,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count)</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref><sp/>outArr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref>;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_particle_manager_8c_1a017ae7eab4c55666356bc3dc1cf49c40" kindref="member">PlayParticles</ref>(outArr,<sp/><ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a5e8368fe145ca144b377295e12dbdea4" kindref="member">GetParticleFullPath</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">),<sp/>positions,<sp/>count);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>outArr;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="365" refid="_particle_manager_8c_1a24b24648d53a8dd2f9ecd0af4716e8a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="_particle_manager_8c_1a24b24648d53a8dd2f9ecd0af4716e8a6" kindref="member">PlayParticleById</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/><ref refid="classarray" kindref="compound">array&lt;vector&gt;</ref><sp/>position)</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref><sp/>tempArr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref>;</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_particle_manager_8c_1a017ae7eab4c55666356bc3dc1cf49c40" kindref="member">PlayParticles</ref>(tempArr,<sp/><ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a5e8368fe145ca144b377295e12dbdea4" kindref="member">GetParticleFullPath</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">),<sp/>position,<sp/>1);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tempArr.Count()<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tempArr[0];</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>null;</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="381" refid="_particle_manager_8c_1a7bdc1d97f1bab1fbf5b89384a6c1e6a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="_particle_manager_8c_1a7bdc1d97f1bab1fbf5b89384a6c1e6a2" kindref="member">GetParticle</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index);</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="390" refid="_particle_manager_8c_1a36f69b0f07f1fb2150d4368572771906" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a36f69b0f07f1fb2150d4368572771906" kindref="member">GetParticles</ref>(out<sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref><sp/>outArray,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startIndex,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="398" refid="_particle_manager_8c_1acf84f0e90ff716fe98afeb220de35acb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref><sp/><ref refid="_particle_manager_8c_1acf84f0e90ff716fe98afeb220de35acb" kindref="member">GetParticlesEx</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startIndex,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count)</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref><sp/>outArr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref>;</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_particle_manager_8c_1a36f69b0f07f1fb2150d4368572771906" kindref="member">GetParticles</ref>(outArr,<sp/>startIndex,<sp/>count);</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>outArr;</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="418" refid="_particle_manager_8c_1a2baf4331e317d99b6c28664bd8e81543" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group___widget_a_p_i_1ga2baf4331e317d99b6c28664bd8e81543" kindref="member">SetName</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_plugin_day_z_infected_debug_8c_1a8ccf841cb59e451791bcb2e1ac4f1edc" kindref="member">name</ref>);</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="group___widget_a_p_i_1gac97112280cc4435c8df3c88070c839b4" kindref="member">GetName</ref>();</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="430" refid="_particle_manager_8c_1a6bf1e99963be321fecc5e3f452f1d47d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a6bf1e99963be321fecc5e3f452f1d47d" kindref="member">GetDebugNameNative</ref>();</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="436" refid="_particle_manager_8c_1a2731e77365c090d55fd098fedd5d2b1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a2731e77365c090d55fd098fedd5d2b1e" kindref="member">GetDebugName</ref>()</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a6bf1e99963be321fecc5e3f452f1d47d" kindref="member">GetDebugNameNative</ref>();</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="445" refid="_particle_manager_8c_1a47a63a307e952a8b7c15bae77434a3d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a47a63a307e952a8b7c15bae77434a3d3" kindref="member">GetCountID</ref>();</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="451" refid="_particle_manager_8c_1ad1dfafc6a1802bef6579d6de077ff04e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1ad1dfafc6a1802bef6579d6de077ff04e" kindref="member">GetStaticCount</ref>();</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="457" refid="_particle_manager_8c_1a33248b0fd77db2256112b3302d86d6f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a33248b0fd77db2256112b3302d86d6f6" kindref="member">GetStaticActiveCount</ref>();</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="472" refid="_particle_manager_8c_1a0e7450574f55aa7e1e98183ffe5237c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a0e7450574f55aa7e1e98183ffe5237c4" kindref="member">GetPoolSize</ref>();</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="478" refid="_particle_manager_8c_1a9380c63389466c5656295293e05a8486" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a9380c63389466c5656295293e05a8486" kindref="member">GetAllocatedCount</ref>();</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="484" refid="_particle_manager_8c_1a0997546924823ad491e87c8a73273a94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a0997546924823ad491e87c8a73273a94" kindref="member">GetVirtualCount</ref>();</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="490" refid="_particle_manager_8c_1a205ffb345e5d22e39f88cbc369ba1397" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a205ffb345e5d22e39f88cbc369ba1397" kindref="member">GetPlayingCount</ref>();</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="496" refid="_particle_manager_8c_1ab988115176a47f49dc730e04ab72f4ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1ab988115176a47f49dc730e04ab72f4ed" kindref="member">IsFinishedAllocating</ref>();</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="511" refid="_particle_manager_8c_1ab17c9f008e9dc4dbc2cd5b0d55782e22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>proto<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1ab17c9f008e9dc4dbc2cd5b0d55782e22" kindref="member">SetScriptEvents</ref>(<ref refid="class_managed" kindref="compound">Managed</ref><sp/>events);</highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="517" refid="_particle_manager_8c_1a43670834970f32b189ec97a4449baf72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>proto<sp/><ref refid="class_managed" kindref="compound">Managed</ref><sp/><ref refid="_particle_manager_8c_1a43670834970f32b189ec97a4449baf72" kindref="member">GetScriptEvents</ref>();</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="523" refid="_particle_manager_8c_1a4c8053538d57e946a0546c65b43dea5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_particle_manager_events" kindref="compound">ParticleManagerEvents</ref><sp/><ref refid="_particle_base_8c_1a16e1931b2da7a7e0c16f3bfacc1a5e28" kindref="member">GetEvents</ref>()</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_manager_events" kindref="compound">ParticleManagerEvents</ref>.Cast(<ref refid="_particle_manager_8c_1a43670834970f32b189ec97a4449baf72" kindref="member">GetScriptEvents</ref>());</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="529"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="530"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="531"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="536"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="537" refid="_particle_manager_8c_1a556e91ddf72c2bad6ba7db949d27053b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a556e91ddf72c2bad6ba7db949d27053b" kindref="member">OnAllocation</ref>(<ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref><sp/>allocatedParticles)</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_particle_base_8c_1a16e1931b2da7a7e0c16f3bfacc1a5e28" kindref="member">GetEvents</ref>().Event_OnAllocation.Invoke(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>allocatedParticles);</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="542" refid="_particle_manager_8c_1a78adcf77ed14ea72554d71fbe6011f99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_particle_manager_8c_1a78adcf77ed14ea72554d71fbe6011f99" kindref="member">OnAllocationEnd</ref>()</highlight></codeline>
+<codeline lineno="543"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="544"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_particle_base_8c_1a16e1931b2da7a7e0c16f3bfacc1a5e28" kindref="member">GetEvents</ref>().Event_OnAllocationEnd.Invoke(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="545"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="546"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="548"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleManager.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_bios_privacy_service" kind="class" language="C++" prot="public">
+    <compoundname>BiosPrivacyService</compoundname>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_bios_privacy_service_1aca726a6e1be53ada1e3149d9cbf1e1cb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+        <definition>proto native EBiosError BiosPrivacyService::GetPermissionsAsync</definition>
+        <argsstring>(array&lt; string &gt; uid_list, array&lt; EBiosPrivacyPermission &gt; permission_list)</argsstring>
+        <name>GetPermissionsAsync</name>
+        <qualifiedname>BiosPrivacyService::GetPermissionsAsync</qualifiedname>
+        <param>
+          <type><ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="classstring" kindref="compound">string</ref> &gt;</type>
+          <declname>uid_list</declname>
+        </param>
+        <param>
+          <type><ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="_bios_privacy_service_8c_1a4c78f4ecb246c3812488500c977b330c" kindref="member">EBiosPrivacyPermission</ref> &gt;</type>
+          <declname>permission_list</declname>
+        </param>
+        <briefdescription>
+<para>Query for privacy permissions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The async result is returned in the OnPermissions callback. Expected errors: BAD_PARAMETER - if atleast one of the permissions is not supported on the current platform, or atleast one of the input arrays is NULL.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>uid_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of target user Uid&apos;s for which to query privacy permissions. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>permission_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of requested permissions for each target user. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>EBiosError indicating if the async operation is pending. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPrivacyService.c" line="67" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_privacy_service_1ae498744933365c56503f74a0784c062d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+        <definition>proto native EBiosError BiosPrivacyService::GetPrivilegeAsync</definition>
+        <argsstring>(EBiosPrivacyPrivilege privilege, bool try_resolution)</argsstring>
+        <name>GetPrivilegeAsync</name>
+        <qualifiedname>BiosPrivacyService::GetPrivilegeAsync</qualifiedname>
+        <param>
+          <type><ref refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6" kindref="member">EBiosPrivacyPrivilege</ref></type>
+          <declname>privilege</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>try_resolution</declname>
+        </param>
+        <briefdescription>
+<para>Query for privileges. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The async result is returned in the OnPrivilege callback. Expected errors: BAD_PARAMETER - if atleast one of the privileges is not supported on the current platform, PURCHASE_REQUIRED, BANNED, NOT_ALLOWED - the privilege is granted,</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>privilege</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the requested privilege. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tryResolution</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Xbox: show system GUI with error msg and attempts to resolve it if possible. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>EBiosError indicating if the async operation is pending. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPrivacyService.c" line="83" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_privacy_service_1a2736adb86bb51e4f66029b42356c5286" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosPrivacyService::OnPermissions</definition>
+        <argsstring>(BiosPrivacyUidResultArray result_list, EBiosError error)</argsstring>
+        <name>OnPermissions</name>
+        <qualifiedname>BiosPrivacyService::OnPermissions</qualifiedname>
+        <param>
+          <type><ref refid="_bios_privacy_service_8c_1a1629868bf3e6bbbe5397b2a19c768f22" kindref="member">BiosPrivacyUidResultArray</ref></type>
+          <declname>result_list</declname>
+        </param>
+        <param>
+          <type><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Async callback for GetPermissionsAsync. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>result_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of results for each requested user. NULL if failed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error indicating success or fail of the async operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPrivacyService.c" line="91" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPrivacyService.c" bodystart="91" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_privacy_service_1a00d20a9660b1df3f40d157da4bae87c9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosPrivacyService::OnPrivilege</definition>
+        <argsstring>(EBiosPrivacyPrivilege privilege, EBiosError error)</argsstring>
+        <name>OnPrivilege</name>
+        <qualifiedname>BiosPrivacyService::OnPrivilege</qualifiedname>
+        <param>
+          <type><ref refid="_bios_privacy_service_8c_1a7147f579d8990103aec30e14865c63b6" kindref="member">EBiosPrivacyPrivilege</ref></type>
+          <declname>privilege</declname>
+        </param>
+        <param>
+          <type><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Async callback for GetPrivilegeAsync. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>privilege</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the requested privilege. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error indicating success or fail of the async operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPrivacyService.c" line="107" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPrivacyService.c" bodystart="107" bodyend="122"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_bios_privacy_service" kindref="compound">BiosPrivacyService</ref> is used to query privacy permissions for a target user/s. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPrivacyService.c" line="53" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosPrivacyService.c" bodystart="54" bodyend="123"/>
+    <listofallmembers>
+      <member refid="class_bios_privacy_service_1aca726a6e1be53ada1e3149d9cbf1e1cb" prot="private" virt="non-virtual"><scope>BiosPrivacyService</scope><name>GetPermissionsAsync</name></member>
+      <member refid="class_bios_privacy_service_1ae498744933365c56503f74a0784c062d" prot="private" virt="non-virtual"><scope>BiosPrivacyService</scope><name>GetPrivilegeAsync</name></member>
+      <member refid="class_bios_privacy_service_1a2736adb86bb51e4f66029b42356c5286" prot="private" virt="non-virtual"><scope>BiosPrivacyService</scope><name>OnPermissions</name></member>
+      <member refid="class_bios_privacy_service_1a00d20a9660b1df3f40d157da4bae87c9" prot="private" virt="non-virtual"><scope>BiosPrivacyService</scope><name>OnPrivilege</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

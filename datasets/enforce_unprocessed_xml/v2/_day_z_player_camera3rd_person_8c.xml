@@ -1,0 +1,1330 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_day_z_player_camera3rd_person_8c" kind="file" language="C++">
+    <compoundname>DayZPlayerCamera3rdPerson.c</compoundname>
+    <innerclass refid="class_day_z_player_camera_base" prot="public">DayZPlayerCameraBase</innerclass>
+    <innerclass refid="class_day_z_player_camera3rd_person_erc" prot="public">DayZPlayerCamera3rdPersonErc</innerclass>
+    <innerclass refid="class_day_z_player_camera3rd_person_erc_raised" prot="public">DayZPlayerCamera3rdPersonErcRaised</innerclass>
+    <innerclass refid="class_day_z_player_camera3rd_person_crouch" prot="public">DayZPlayerCamera3rdPersonCrouch</innerclass>
+    <innerclass refid="class_day_z_player_camera3rd_person_prone_base" prot="public">DayZPlayerCamera3rdPersonProneBase</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1aa59814833643a675cf580aa2bc0314bf" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>const float CONST_UD_MIN</definition>
+        <argsstring></argsstring>
+        <name>CONST_UD_MIN</name>
+        <initializer>= -85.0</initializer>
+        <briefdescription>
+<para>down limit </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="171" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a4e15292c0485bdae55b4ca339aa450c8" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>const float CONST_UD_MAX</definition>
+        <argsstring></argsstring>
+        <name>CONST_UD_MAX</name>
+        <initializer>= 85.0</initializer>
+        <briefdescription>
+<para>up limit </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="172" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a5d6c5c9f3cb694f50d794bd50a1f1cd3" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>const float CONST_LR_MIN</definition>
+        <argsstring></argsstring>
+        <name>CONST_LR_MIN</name>
+        <initializer>= -160.0</initializer>
+        <briefdescription>
+<para>down limit </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="174" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a7c62592d6f09d56c99c2d8f7b7bfa8cf" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>const float CONST_LR_MAX</definition>
+        <argsstring></argsstring>
+        <name>CONST_LR_MAX</name>
+        <initializer>= 160.0</initializer>
+        <briefdescription>
+<para>up limit </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="175" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1aa222e4eda0aab2c42126dc6300683604" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected int m_iBoneIndex</definition>
+        <argsstring></argsstring>
+        <name>m_iBoneIndex</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+<para>runtime config </para>
+        </briefdescription>
+        <detaileddescription>
+<para>main bone </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="300" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1ac4686aa51bae4031b84b18735efab3cf" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>protected vector m_CameraOffsetMS</definition>
+        <argsstring></argsstring>
+        <name>m_CameraOffsetMS</name>
+        <briefdescription>
+<para>model space offset </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="301" column="19" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a36b5f20fb85db20946190c5dd857635a" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>protected vector m_CameraOffsetLS</definition>
+        <argsstring></argsstring>
+        <name>m_CameraOffsetLS</name>
+        <briefdescription>
+<para>local space offset </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="302" column="19" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1ae379fe9513c65e9a4dfe646f3c0c0006" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float m_fDistance</definition>
+        <argsstring></argsstring>
+        <name>m_fDistance</name>
+        <briefdescription>
+<para>distance from start </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="303" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1ac3e630e3ee0c75407f93355d55d4356e" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float m_fShoulderWidth</definition>
+        <argsstring></argsstring>
+        <name>m_fShoulderWidth</name>
+        <briefdescription>
+<para>shoulder camera widths </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="304" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1aba241f4abfd9560715a47e0ab9f5ac54" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool m_bShoulderInLS</definition>
+        <argsstring></argsstring>
+        <name>m_bShoulderInLS</name>
+        <briefdescription>
+<para>true - shoulder is in local space </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="305" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a8203c3f3fbccb8a905f60312602a775d" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float m_fRoll</definition>
+        <argsstring></argsstring>
+        <name>m_fRoll</name>
+        <briefdescription>
+<para>camera roll (deprecated) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="306" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a77d313f767b47a3245e7d3c7d3d38c30" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float m_fLeanDistance</definition>
+        <argsstring></argsstring>
+        <name>m_fLeanDistance</name>
+        <briefdescription>
+<para>shift on leaning </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="307" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a8c964c0226b8a1a695e2917d468342bf" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float m_fUpDownAngle</definition>
+        <argsstring></argsstring>
+        <name>m_fUpDownAngle</name>
+        <briefdescription>
+<para>runtime values </para>
+        </briefdescription>
+        <detaileddescription>
+<para>up down angle in rad </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="311" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a58960fc790b83be163478ca6411e95be" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float m_fUpDownAngleAdd</definition>
+        <argsstring></argsstring>
+        <name>m_fUpDownAngleAdd</name>
+        <briefdescription>
+<para>up down angle in rad </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="312" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="312" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a74cf8859007b9001c09ebab24e1856ce" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float m_fLeftRightAngle</definition>
+        <argsstring></argsstring>
+        <name>m_fLeftRightAngle</name>
+        <briefdescription>
+<para>left right angle in rad (in freelook only) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="313" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a99f5a10040eadb27ef3a87e53da1b235" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float m_fLeftRightAngleAdd</definition>
+        <argsstring></argsstring>
+        <name>m_fLeftRightAngleAdd</name>
+        <briefdescription>
+<para>left right angle in rad (in freelook only) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="314" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a1a7acd4d3bb079cab723a254d1275045" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float m_fCameraLRShoulder</definition>
+        <argsstring></argsstring>
+        <name>m_fCameraLRShoulder</name>
+        <briefdescription>
+<para>shoulder offsets </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="317" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a819596bcac1d64e87e06f357973a8d20" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float m_fCameraLRShoulderVel[1]</definition>
+        <argsstring>[1]</argsstring>
+        <name>m_fCameraLRShoulderVel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="318" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a9b0a6591476ecbd9aaf235960fd80cdd" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float m_fPredictCollisionRadius</definition>
+        <argsstring></argsstring>
+        <name>m_fPredictCollisionRadius</name>
+        <briefdescription>
+<para>collision prediction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="321" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1aa20c94cf3a51fa5af0ca371fd70a7cd9" prot="public" static="no" mutable="no">
+        <type>ref <ref refid="class_human_movement_state" kindref="compound">HumanMovementState</ref></type>
+        <definition>ref HumanMovementState m_MovementState</definition>
+        <argsstring></argsstring>
+        <name>m_MovementState</name>
+        <initializer>= new <ref refid="class_human_movement_state" kindref="compound">HumanMovementState</ref>()</initializer>
+        <briefdescription>
+<para>movement state </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="324" column="24" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a5b913016df225baf4d638800401687d2" prot="public" static="no" mutable="no">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float m_fDelay</definition>
+        <argsstring></argsstring>
+        <name>m_fDelay</name>
+        <briefdescription>
+<para>runtime config </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="280" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a40c9bf570dbddb612141ac430e92c9e9" prot="public" static="no" mutable="no">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float m_fDamping</definition>
+        <argsstring></argsstring>
+        <name>m_fDamping</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="281" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a9682ad14b85442e985731bb1bd368d7d" prot="public" static="no" mutable="no">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float m_fDelayTimer</definition>
+        <argsstring></argsstring>
+        <name>m_fDelayTimer</name>
+        <briefdescription>
+<para>runtime values </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="284" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1aae411f63ef6b6b9f2d10256da2503943" prot="public" static="no" mutable="no">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float m_fJumpStartY</definition>
+        <argsstring></argsstring>
+        <name>m_fJumpStartY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="285" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1ac77086d2ef3b605a72ebb4e31297540f" prot="public" static="no" mutable="no">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float m_fJumpOffset</definition>
+        <argsstring></argsstring>
+        <name>m_fJumpOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="286" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a2088488712a2805e6de9bd402b4b39fc" prot="public" static="no" mutable="no">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float m_jumpOffsetVelocity[1]</definition>
+        <argsstring>[1]</argsstring>
+        <name>m_jumpOffsetVelocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="287" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1af202b28a1defa698a406072c4d56f536" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected int m_iPelvisBone</definition>
+        <argsstring></argsstring>
+        <name>m_iPelvisBone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="350" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1ad86650b10945acb04b219c5e96ac915d" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float m_fTime</definition>
+        <argsstring></argsstring>
+        <name>m_fTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="351" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1acdb6ea344ae5210369297a05d32a5fab" prot="public" static="no" mutable="no">
+        <type>class DayZPlayerCamera3rdPersonErcRaisedMelee extends <ref refid="class_day_z_player_camera3rd_person_erc_raised" kindref="compound">DayZPlayerCamera3rdPersonErcRaised</ref></type>
+        <definition>class DayZPlayerCamera3rdPersonErcRaisedMelee extends DayZPlayerCamera3rdPersonErcRaised CONST_CAMERAMOVEMENTHEIGH</definition>
+        <argsstring></argsstring>
+        <name>CONST_CAMERAMOVEMENTHEIGH</name>
+        <initializer>= 0.4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="381" column="46"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a605bda7be57a38b07627dd9fff74b492" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float m_fCameraHeight</definition>
+        <argsstring></argsstring>
+        <name>m_fCameraHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="408" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a050a922c2fefc5e9f6f782bcd9c9388d" prot="public" static="no" mutable="no">
+        <type>protected <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>protected float m_fCameraHeightVel[1]</definition>
+        <argsstring>[1]</argsstring>
+        <name>m_fCameraHeightVel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="409" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_day_z_player_camera3rd_person_8c_1a7caf9dc1fb956b858e7d2485379044df" prot="public" static="no" mutable="no">
+        <type>class DayZPlayerCamera3rdPersonCrouchRaised extends <ref refid="class_day_z_player_camera3rd_person_crouch" kindref="compound">DayZPlayerCamera3rdPersonCrouch</ref></type>
+        <definition>class DayZPlayerCamera3rdPersonCrouchRaised extends DayZPlayerCamera3rdPersonCrouch m_LookAtLRAngle</definition>
+        <argsstring></argsstring>
+        <name>m_LookAtLRAngle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="440" column="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_day_z_player_camera3rd_person_8c_1a38728ace9ec2f97aa3e4a68ca0fc061c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class <ref refid="_day_z_player_camera3rd_person_8c_1a0bea94e1152399d4c2626cf79f3dbdba" kindref="member">DayZPlayerCamera3rdPerson</ref> extends <ref refid="class_day_z_player_camera_base" kindref="compound">DayZPlayerCameraBase</ref></type>
+        <definition>class DayZPlayerCamera3rdPerson extends DayZPlayerCameraBase DayZPlayerCamera3rdPersonErc</definition>
+        <argsstring>(DayZPlayer pPlayer, HumanInputController pInput)</argsstring>
+        <name>DayZPlayerCamera3rdPersonErc</name>
+        <param>
+          <type><ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref></type>
+          <declname>pPlayer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref></type>
+          <declname>pInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="4" column="32" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="170" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="_day_z_player_camera3rd_person_8c_1a0bea94e1152399d4c2626cf79f3dbdba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DayZPlayerCamera3rdPersonErc::DayZPlayerCamera3rdPerson</definition>
+        <argsstring>(DayZPlayer pPlayer, HumanInputController pInput)</argsstring>
+        <name>DayZPlayerCamera3rdPerson</name>
+        <param>
+          <type><ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref></type>
+          <declname>pPlayer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref></type>
+          <declname>pInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="177" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="177" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="_day_z_player_camera3rd_person_8c_1ac886db88e86fa7de7738f04f6ad4ce9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void DayZPlayerCamera3rdPersonErc::OnActivate</definition>
+        <argsstring>(DayZPlayerCamera pPrevCamera, DayZPlayerCameraResult pPrevCameraResult)</argsstring>
+        <name>OnActivate</name>
+        <param>
+          <type><ref refid="dayzplayer_8c_1aec7df242d6c8a470331cdb4d38bb4ab4" kindref="member">DayZPlayerCamera</ref></type>
+          <declname>pPrevCamera</declname>
+        </param>
+        <param>
+          <type><ref refid="class_day_z_player_camera_result" kindref="compound">DayZPlayerCameraResult</ref></type>
+          <declname>pPrevCameraResult</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="197" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="197" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="_day_z_player_camera3rd_person_8c_1a4e5420f58fe3d82fa17df5921ff3a130" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void DayZPlayerCamera3rdPersonErc::OnUpdate</definition>
+        <argsstring>(float pDt, out DayZPlayerCameraResult pOutResult)</argsstring>
+        <name>OnUpdate</name>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pDt</declname>
+        </param>
+        <param>
+          <type>out <ref refid="class_day_z_player_camera_result" kindref="compound">DayZPlayerCameraResult</ref></type>
+          <declname>pOutResult</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>update angles from input</para>
+<para>base bone pos</para>
+<para>apply shoulder dist</para>
+<para>store distance</para>
+<para>basically -&gt; transform up vector (0,1,0) and read x coord -&gt; and set is as roll</para>
+<para>prev update</para>
+<para>movement height</para>
+<para>prev update</para>
+<para>update angles from input</para>
+<para>this is actually negative to yaw</para>
+<para>base bone pos</para>
+<para>apply shoulder dist</para>
+<para>store distance</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="214" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="214" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="_day_z_player_camera3rd_person_8c_1a98a3479cbf9bcd2d39c9bc5a8af436aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>override vector DayZPlayerCamera3rdPersonErc::GetBaseAngles</definition>
+        <argsstring>()</argsstring>
+        <name>GetBaseAngles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="276" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="276" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="_day_z_player_camera3rd_person_8c_1a62f9eaecba648cb0c03a4b66d6b94b67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>override vector DayZPlayerCamera3rdPersonErc::GetAdditiveAngles</definition>
+        <argsstring>()</argsstring>
+        <name>GetAdditiveAngles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="285" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="285" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="_day_z_player_camera3rd_person_8c_1aef1f221c72e388c6f0fb5821f6ad3e75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>override string DayZPlayerCamera3rdPersonErc::GetCameraName</definition>
+        <argsstring>()</argsstring>
+        <name>GetCameraName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="294" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="294" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="_day_z_player_camera3rd_person_8c_1a562cebe7ec110118d7e357695caa0a79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class <ref refid="_day_z_player_camera3rd_person_8c_1a2a887f7d444cb77cd5bc29fd7c08980c" kindref="member">DayZPlayerCamera3rdPersonJump</ref> extends <ref refid="class_day_z_player_camera3rd_person_erc" kindref="compound">DayZPlayerCamera3rdPersonErc</ref></type>
+        <definition>class DayZPlayerCamera3rdPersonJump extends DayZPlayerCamera3rdPersonErc DayZPlayerCamera3rdPersonClimb</definition>
+        <argsstring>(DayZPlayer pPlayer, HumanInputController pInput)</argsstring>
+        <name>DayZPlayerCamera3rdPersonClimb</name>
+        <param>
+          <type><ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref></type>
+          <declname>pPlayer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref></type>
+          <declname>pInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="186" column="36" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="241" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="_day_z_player_camera3rd_person_8c_1a2a887f7d444cb77cd5bc29fd7c08980c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DayZPlayerCamera3rdPersonClimb::DayZPlayerCamera3rdPersonJump</definition>
+        <argsstring>(DayZPlayer pPlayer, HumanInputController pInput)</argsstring>
+        <name>DayZPlayerCamera3rdPersonJump</name>
+        <param>
+          <type><ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref></type>
+          <declname>pPlayer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref></type>
+          <declname>pInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>runtime config</para>
+<para>runtime values</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="242" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="242" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="_day_z_player_camera3rd_person_8c_1a87e998ebc399019846469c59b12a3348" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class <ref refid="_day_z_player_camera3rd_person_8c_1aed3d57837822c20e8c35b63de6f30430" kindref="member">DayZPlayerCamera3rdPersonErcSpr</ref> extends <ref refid="class_day_z_player_camera3rd_person_erc" kindref="compound">DayZPlayerCamera3rdPersonErc</ref></type>
+        <definition>class DayZPlayerCamera3rdPersonErcSpr extends DayZPlayerCamera3rdPersonErc DayZPlayerCamera3rdPersonErcRaised</definition>
+        <argsstring>(DayZPlayer pPlayer, HumanInputController pInput)</argsstring>
+        <name>DayZPlayerCamera3rdPersonErcRaised</name>
+        <param>
+          <type><ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref></type>
+          <declname>pPlayer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref></type>
+          <declname>pInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="254" column="38" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="308" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="_day_z_player_camera3rd_person_8c_1aed3d57837822c20e8c35b63de6f30430" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DayZPlayerCamera3rdPersonErcRaised::DayZPlayerCamera3rdPersonErcSpr</definition>
+        <argsstring>(DayZPlayer pPlayer, HumanInputController pInput)</argsstring>
+        <name>DayZPlayerCamera3rdPersonErcSpr</name>
+        <param>
+          <type><ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref></type>
+          <declname>pPlayer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref></type>
+          <declname>pInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="309" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="309" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="_day_z_player_camera3rd_person_8c_1a6e7f37c8076ce14e770fa034e5a4dfaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool IsCamera3rdRaised</definition>
+        <argsstring>()</argsstring>
+        <name>IsCamera3rdRaised</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="348" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="348" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="_day_z_player_camera3rd_person_8c_1a5bbe20d06e2bdde6b94d3780cbd58e37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DayZPlayerCamera3rdPersonCrouch</definition>
+        <argsstring>(DayZPlayer pPlayer, HumanInputController pInput)</argsstring>
+        <name>DayZPlayerCamera3rdPersonCrouch</name>
+        <param>
+          <type><ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref></type>
+          <declname>pPlayer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref></type>
+          <declname>pInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="383" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="383" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="_day_z_player_camera3rd_person_8c_1aa26eec70aad4726e878218e2f695e6a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float UpdateLRAngleLookAt</definition>
+        <argsstring>(float pMin, float pMax, float pDt)</argsstring>
+        <name>UpdateLRAngleLookAt</name>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pMin</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pMax</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pDt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>lr angle</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="442" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="442" bodyend="460"/>
+      </memberdef>
+      <memberdef kind="function" id="_day_z_player_camera3rd_person_8c_1a65cc2249f227dccf5ac6c058f25eed9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>class <ref refid="_day_z_player_camera3rd_person_8c_1abeeafadd29b6c9573d86e2378bd83a7d" kindref="member">DayZPlayerCamera3rdPersonProne</ref> extends <ref refid="class_day_z_player_camera3rd_person_prone_base" kindref="compound">DayZPlayerCamera3rdPersonProneBase</ref></type>
+        <definition>class DayZPlayerCamera3rdPersonProne extends DayZPlayerCamera3rdPersonProneBase DayZPlayerCamera3rdPersonProneRaised</definition>
+        <argsstring>(DayZPlayer pPlayer, HumanInputController pInput)</argsstring>
+        <name>DayZPlayerCamera3rdPersonProneRaised</name>
+        <param>
+          <type><ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref></type>
+          <declname>pPlayer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref></type>
+          <declname>pInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="531" column="37" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="550" bodyend="558"/>
+      </memberdef>
+      <memberdef kind="function" id="_day_z_player_camera3rd_person_8c_1abeeafadd29b6c9573d86e2378bd83a7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DayZPlayerCamera3rdPersonProneRaised::DayZPlayerCamera3rdPersonProne</definition>
+        <argsstring>(DayZPlayer pPlayer, HumanInputController pInput)</argsstring>
+        <name>DayZPlayerCamera3rdPersonProne</name>
+        <param>
+          <type><ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref></type>
+          <declname>pPlayer</declname>
+        </param>
+        <param>
+          <type><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref></type>
+          <declname>pInput</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" line="551" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c" bodystart="551" bodyend="559"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>!<sp/>DayZPlayerCamera3rdPerson<sp/>-<sp/>base<sp/>for<sp/>3rd<sp/>person<sp/>cameras</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="_day_z_player_camera3rd_person_8c_1a38728ace9ec2f97aa3e4a68ca0fc061c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_day_z_player_camera3rd_person_8c_1a0bea94e1152399d4c2626cf79f3dbdba" kindref="member">DayZPlayerCamera3rdPerson</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera_base" kindref="compound">DayZPlayerCameraBase</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><ref refid="_day_z_player_camera1st_person_8c_1aa59814833643a675cf580aa2bc0314bf" kindref="member">CONST_UD_MIN</ref><sp/><sp/><sp/><sp/>=<sp/>-85.0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><ref refid="_day_z_player_camera1st_person_8c_1a4e15292c0485bdae55b4ca339aa450c8" kindref="member">CONST_UD_MAX</ref><sp/><sp/><sp/><sp/>=<sp/>85.0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><ref refid="_day_z_player_camera1st_person_8c_1a5d6c5c9f3cb694f50d794bd50a1f1cd3" kindref="member">CONST_LR_MIN</ref><sp/><sp/><sp/><sp/>=<sp/>-160.0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><ref refid="_day_z_player_camera1st_person_8c_1a7c62592d6f09d56c99c2d8f7b7bfa8cf" kindref="member">CONST_LR_MAX</ref><sp/><sp/><sp/><sp/>=<sp/>160.0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12" refid="class_day_z_player_camera_base_1a20181fd3122764036a62366daeab143b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_day_z_player_camera_base_1a20181fd3122764036a62366daeab143b" kindref="member">DayZPlayerCamera3rdPerson</ref>(<ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref><sp/>pPlayer,<sp/><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref><sp/>pInput)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pInput.<ref refid="class_human_input_controller_1a7eea73bbe69269e5b01d6970bd849464" kindref="member">Camera3rdIsRightShoulder</ref>())</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a1a7acd4d3bb079cab723a254d1275045" kindref="member">m_fCameraLRShoulder</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a1a7acd4d3bb079cab723a254d1275045" kindref="member">m_fCameraLRShoulder</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>-1.0;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a819596bcac1d64e87e06f357973a8d20" kindref="member">m_fCameraLRShoulderVel</ref>[0]<sp/><sp/><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera___base_8c_1af78d712456f3fa631d27dccc6029d55c" kindref="member">m_CurrentCameraRoll</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera___base_8c_1a0f54b33e62a1c60f3b89443f47701a25" kindref="member">m_WeaponSwayModifier</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a77d313f767b47a3245e7d3c7d3d38c30" kindref="member">m_fLeanDistance</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0.3;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dayzplayer_8c_1a6d04f6d82f549a390570d804a7e76d6e" kindref="member">m_fPredictCollisionRadius</ref><sp/><sp/><sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_day_z_player_camera_base_1a87097975726a089208d9d51b7450745b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_day_z_player_camera_base_1a87097975726a089208d9d51b7450745b" kindref="member">OnActivate</ref>(<ref refid="dayzplayer_8c_1aec7df242d6c8a470331cdb4d38bb4ab4" kindref="member">DayZPlayerCamera</ref><sp/>pPrevCamera,<sp/><ref refid="class_day_z_player_camera_result" kindref="compound">DayZPlayerCameraResult</ref><sp/>pPrevCameraResult)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnActivate(pPrevCamera,<sp/>pPrevCameraResult);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pPrevCamera)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>baseAngles<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>pPrevCamera.GetBaseAngles();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera1st_person_8c_1a8c964c0226b8a1a695e2917d468342bf" kindref="member">m_fUpDownAngle</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>baseAngles[0];<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera1st_person_8c_1a74cf8859007b9001c09ebab24e1856ce" kindref="member">m_fLeftRightAngle</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>baseAngles[1];<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>addAngles<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>pPrevCamera.GetAdditiveAngles();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera1st_person_8c_1a58960fc790b83be163478ca6411e95be" kindref="member">m_fUpDownAngleAdd</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>addAngles[0];</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera1st_person_8c_1a99f5a10040eadb27ef3a87e53da1b235" kindref="member">m_fLeftRightAngleAdd</ref><sp/><sp/><sp/><sp/>=<sp/>addAngles[1];</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="class_day_z_player_camera_base_1ac3435bb4241c224aa76a0c074f2df077" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_day_z_player_camera_base_1ac3435bb4241c224aa76a0c074f2df077" kindref="member">OnUpdate</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pDt,<sp/>out<sp/><ref refid="class_day_z_player_camera_result" kindref="compound">DayZPlayerCameraResult</ref><sp/>pOutResult)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dayzplayer_8c_1a812a1b534847d47082e8f0c58ba6c5bd" kindref="member">m_pPlayer</ref>.GetMovementState(<ref refid="_day_z_player_camera3rd_person_8c_1aa20c94cf3a51fa5af0ca371fd70a7cd9" kindref="member">m_MovementState</ref>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera___base_8c_1ab0f6794849938625297fb809e8fba343" kindref="member">m_CurrentCameraYaw</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="_day_z_player_camera___base_8c_1a0ff8945b8e8b4b80ffbc392e3af62203" kindref="member">UpdateLRAngleUnlocked</ref>(<ref refid="_day_z_player_camera1st_person_8c_1a74cf8859007b9001c09ebab24e1856ce" kindref="member">m_fLeftRightAngle</ref>,<sp/><ref refid="_day_z_player_camera1st_person_8c_1a99f5a10040eadb27ef3a87e53da1b235" kindref="member">m_fLeftRightAngleAdd</ref>,<sp/><ref refid="_day_z_player_camera1st_person_8c_1a5d6c5c9f3cb694f50d794bd50a1f1cd3" kindref="member">CONST_LR_MIN</ref>,<sp/><ref refid="_day_z_player_camera1st_person_8c_1a7c62592d6f09d56c99c2d8f7b7bfa8cf" kindref="member">CONST_LR_MAX</ref>,<sp/>pDt);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera___base_8c_1a331da698006e35e3e51b608d1d823d57" kindref="member">m_CurrentCameraPitch</ref><sp/><sp/><sp/><sp/>=<sp/><ref refid="_day_z_player_camera___base_8c_1a40e3bbd2306af3ac9d07884e2f4a0eec" kindref="member">UpdateUDAngleUnlocked</ref>(<ref refid="_day_z_player_camera1st_person_8c_1a8c964c0226b8a1a695e2917d468342bf" kindref="member">m_fUpDownAngle</ref>,<sp/><ref refid="_day_z_player_camera1st_person_8c_1a58960fc790b83be163478ca6411e95be" kindref="member">m_fUpDownAngleAdd</ref>,<sp/><ref refid="_day_z_player_camera1st_person_8c_1aa59814833643a675cf580aa2bc0314bf" kindref="member">CONST_UD_MIN</ref>,<sp/><ref refid="_day_z_player_camera1st_person_8c_1a4e15292c0485bdae55b4ca339aa450c8" kindref="member">CONST_UD_MAX</ref>,<sp/>pDt);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera___base_8c_1aeeb3de71b20781b9ea1510ace4423945" kindref="member">ProcessCameraShake</ref>(pDt,<sp/><ref refid="_day_z_player_camera1st_person_8c_1a74cf8859007b9001c09ebab24e1856ce" kindref="member">m_fLeftRightAngle</ref>,<sp/><ref refid="_day_z_player_camera1st_person_8c_1a58960fc790b83be163478ca6411e95be" kindref="member">m_fUpDownAngleAdd</ref>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>update<sp/>l/r<sp/>offsets<sp/>and<sp/>set<sp/>it<sp/>as<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dayzplayer_8c_1aa96a2955fa536f11eba67d61a8ef06ed" kindref="member">m_pInput</ref>.<ref refid="class_human_input_controller_1a7eea73bbe69269e5b01d6970bd849464" kindref="member">Camera3rdIsRightShoulder</ref>())</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a1a7acd4d3bb079cab723a254d1275045" kindref="member">m_fCameraLRShoulder</ref><sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gae5ee54bb2c75e1edd71b0c0feef2b01b" kindref="member">SmoothCD</ref>(<ref refid="_day_z_player_camera3rd_person_8c_1a1a7acd4d3bb079cab723a254d1275045" kindref="member">m_fCameraLRShoulder</ref>,<sp/>1.0,<sp/><ref refid="_day_z_player_camera3rd_person_8c_1a819596bcac1d64e87e06f357973a8d20" kindref="member">m_fCameraLRShoulderVel</ref>,<sp/>0.14,<sp/>1000,<sp/>pDt);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a1a7acd4d3bb079cab723a254d1275045" kindref="member">m_fCameraLRShoulder</ref><sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gae5ee54bb2c75e1edd71b0c0feef2b01b" kindref="member">SmoothCD</ref>(<ref refid="_day_z_player_camera3rd_person_8c_1a1a7acd4d3bb079cab723a254d1275045" kindref="member">m_fCameraLRShoulder</ref>,<sp/>-1.0,<sp/><ref refid="_day_z_player_camera3rd_person_8c_1a819596bcac1d64e87e06f357973a8d20" kindref="member">m_fCameraLRShoulderVel</ref>,<sp/>0.14,<sp/>1000,<sp/>pDt);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>shoulderDist<sp/>=<sp/><ref refid="_day_z_player_camera3rd_person_8c_1a1a7acd4d3bb079cab723a254d1275045" kindref="member">m_fCameraLRShoulder</ref><sp/>*<sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac3e630e3ee0c75407f93355d55d4356e" kindref="member">m_fShoulderWidth</ref><sp/>+<sp/><ref refid="_day_z_player_camera3rd_person_8c_1aa20c94cf3a51fa5af0ca371fd70a7cd9" kindref="member">m_MovementState</ref>.<ref refid="class_human_movement_state_1a547574e61606f8204c23a75c95b1624b" kindref="member">m_fLeaning</ref><sp/>*<sp/><ref refid="class_day_z_player_camera_base_1ad4233ba3e7357fc55f55d7bbbe759fcc" kindref="member">m_fLeanDistance</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_math3_d" kindref="compound">Math3D</ref>.<ref refid="group___math3_d_a_p_i_1ga91222ac45b26b806e50d1d77268114de" kindref="member">YawPitchRollMatrix</ref>(<ref refid="dayzplayer_8c_1af024aaffc0601951b70fbba9d32d20ad" kindref="member">GetCurrentOrientation</ref>(),<sp/>pOutResult.m_CameraTM);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_day_z_player_camera1st_person_8c_1aa222e4eda0aab2c42126dc6300683604" kindref="member">m_iBoneIndex</ref><sp/>!=<sp/>-1)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pOutResult.m_CameraTM[3]<sp/><sp/><sp/><sp/>=<sp/><ref refid="dayzplayer_8c_1a812a1b534847d47082e8f0c58ba6c5bd" kindref="member">m_pPlayer</ref>.GetBonePositionMS(<ref refid="_day_z_player_camera1st_person_8c_1aa222e4eda0aab2c42126dc6300683604" kindref="member">m_iBoneIndex</ref>);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pOutResult.m_CameraTM[3]<sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>msOffset<sp/>=<sp/><ref refid="class_day_z_player_camera_base_1af2f9ec60ef29bd4f1928685748d5d2cd" kindref="member">m_CameraOffsetMS</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>lsOffset<sp/>=<sp/><ref refid="class_day_z_player_camera_base_1a2fa7391b8315b45b0e99a670c8f07dc6" kindref="member">m_CameraOffsetLS</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_day_z_player_camera3rd_person_8c_1aba241f4abfd9560715a47e0ab9f5ac54" kindref="member">m_bShoulderInLS</ref>)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lsOffset[0]<sp/>=<sp/>lsOffset[0]<sp/>+<sp/>shoulderDist;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>msOffset[0]<sp/>=<sp/>msOffset[0]<sp/>+<sp/>shoulderDist;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ls<sp/>offset<sp/>+<sp/>ms<sp/>offset<sp/>+<sp/>shoulder<sp/>width<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pOutResult.m_CameraTM[3]<sp/><sp/><sp/><sp/>=<sp/>pOutResult.m_CameraTM[3]<sp/>+<sp/>pOutResult.m_CameraTM[0]<sp/>*<sp/>lsOffset[0]<sp/>+<sp/>pOutResult.m_CameraTM[1]<sp/>*<sp/>lsOffset[1]<sp/>+<sp/>pOutResult.m_CameraTM[2]<sp/>*<sp/>lsOffset[2]<sp/>+<sp/>msOffset;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pOutResult.m_fDistance<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_day_z_player_camera_base_1ae2cd3be5771ad219167942dbdc914010" kindref="member">m_fDistance</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pOutResult.m_fUseHeading<sp/><sp/><sp/><sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pOutResult.m_fInsideCamera<sp/><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pOutResult.m_fPredictCollisionRadius<sp/>=<sp/><ref refid="class_day_z_player_camera_base_1ab1afd168172d8fc1b233f1676842c66a" kindref="member">m_fPredictCollisionRadius</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera___base_8c_1a9dbf6771ce02f6712411280ed30613cc" kindref="member">InitCameraOnPlayer</ref>();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera___base_8c_1a589903243b2ce2813cb247cc13c8ff58" kindref="member">StdFovUpdate</ref>(pDt,<sp/>pOutResult);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera___base_8c_1acae0c4086f7a3988667408a192d10829" kindref="member">UpdateCameraNV</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref>.Cast(<ref refid="dayzplayer_8c_1a812a1b534847d47082e8f0c58ba6c5bd" kindref="member">m_pPlayer</ref>));</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="class_day_z_player_camera_base_1a7efbf40fc09b040ad1b1471ed3ddb152" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/><ref refid="class_day_z_player_camera_base_1a7efbf40fc09b040ad1b1471ed3ddb152" kindref="member">GetBaseAngles</ref>()</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>a;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a[0]<sp/>=<sp/><ref refid="class_day_z_player_camera_base_1a5b7f02ff7c9ef90bda6e6488a5ffb029" kindref="member">m_fUpDownAngle</ref>;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a[1]<sp/>=<sp/><ref refid="class_day_z_player_camera_base_1ab153b2bf470892517b79314032728237" kindref="member">m_fLeftRightAngle</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a[2]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="class_day_z_player_camera_base_1a477ca7aaa612d0559c24717152875dc3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/><ref refid="class_day_z_player_camera_base_1a477ca7aaa612d0559c24717152875dc3" kindref="member">GetAdditiveAngles</ref>()</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>a;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a[0]<sp/>=<sp/><ref refid="class_day_z_player_camera_base_1a110820ab01cf1010846e327564558865" kindref="member">m_fUpDownAngleAdd</ref>;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a[1]<sp/>=<sp/><ref refid="class_day_z_player_camera_base_1a3de07ac64406ad559e6ab08847b20a19" kindref="member">m_fLeftRightAngleAdd</ref>;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a[2]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129" refid="class_day_z_player_camera_base_1a8e7b49ccabc3a6814a9956e174ad8781" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera_base_1a8e7b49ccabc3a6814a9956e174ad8781" kindref="member">GetCameraName</ref>()</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;DayZPlayerCamera3rdPerson&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera1st_person_8c_1aa222e4eda0aab2c42126dc6300683604" kindref="member">m_iBoneIndex</ref><sp/>=<sp/>-1;<sp/><sp/></highlight></codeline>
+<codeline lineno="136" refid="class_day_z_player_camera_base_1af2f9ec60ef29bd4f1928685748d5d2cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/><sp/><ref refid="class_day_z_player_camera_base_1af2f9ec60ef29bd4f1928685748d5d2cd" kindref="member">m_CameraOffsetMS</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137" refid="class_day_z_player_camera_base_1a2fa7391b8315b45b0e99a670c8f07dc6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/><sp/><ref refid="class_day_z_player_camera_base_1a2fa7391b8315b45b0e99a670c8f07dc6" kindref="member">m_CameraOffsetLS</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="138" refid="class_day_z_player_camera_base_1ae2cd3be5771ad219167942dbdc914010" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_player_camera_base_1ae2cd3be5771ad219167942dbdc914010" kindref="member">m_fDistance</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="139" refid="class_day_z_player_camera_base_1ac42629727a5d9f0d5b1b9a935edb1611" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_player_camera_base_1ac42629727a5d9f0d5b1b9a935edb1611" kindref="member">m_fShoulderWidth</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140" refid="class_day_z_player_camera_base_1a73a716b43a27af66dc15e5b70ed5c9ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_day_z_player_camera_base_1a73a716b43a27af66dc15e5b70ed5c9ae" kindref="member">m_bShoulderInLS</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141" refid="class_day_z_player_camera_base_1a74a135f3e9271990f066deaa4ee1b5e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_player_camera_base_1a74a135f3e9271990f066deaa4ee1b5e0" kindref="member">m_fRoll</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="142" refid="class_day_z_player_camera_base_1ad4233ba3e7357fc55f55d7bbbe759fcc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_player_camera_base_1ad4233ba3e7357fc55f55d7bbbe759fcc" kindref="member">m_fLeanDistance</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_player_camera_base_1a5b7f02ff7c9ef90bda6e6488a5ffb029" kindref="member">m_fUpDownAngle</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_player_camera_base_1a110820ab01cf1010846e327564558865" kindref="member">m_fUpDownAngleAdd</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_player_camera_base_1ab153b2bf470892517b79314032728237" kindref="member">m_fLeftRightAngle</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_player_camera_base_1a3de07ac64406ad559e6ab08847b20a19" kindref="member">m_fLeftRightAngleAdd</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="class_day_z_player_camera_base_1a39333f4b05fe65a078ca2b54f3e4f196" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_day_z_player_camera_base_1a39333f4b05fe65a078ca2b54f3e4f196" kindref="member">m_fCameraLRShoulder</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-1..1<sp/>shoulderness<sp/>:)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="class_day_z_player_camera_base_1a18845615bc894304268eeaeda1369b3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a819596bcac1d64e87e06f357973a8d20" kindref="member">m_fCameraLRShoulderVel</ref>[1];<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="156" refid="class_day_z_player_camera_base_1ab1afd168172d8fc1b233f1676842c66a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="class_day_z_player_camera_base_1ab1afd168172d8fc1b233f1676842c66a" kindref="member">m_fPredictCollisionRadius</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="159" refid="class_day_z_player_camera_base_1ae8d3ce3a381a134fae121b5a7bcc4b7e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>ref<sp/><ref refid="class_human_movement_state" kindref="compound">HumanMovementState</ref><sp/><ref refid="_day_z_player_camera3rd_person_8c_1aa20c94cf3a51fa5af0ca371fd70a7cd9" kindref="member">m_MovementState</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_human_movement_state" kindref="compound">HumanMovementState</ref>();</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="comment">//<sp/>!<sp/>DayZPlayerCamera3rdPersonErc<sp/>-<sp/>3rd<sp/>person<sp/>erected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_day_z_player_camera3rd_person_erc" kindref="compound">DayZPlayerCamera3rdPersonErc</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a0bea94e1152399d4c2626cf79f3dbdba" kindref="member">DayZPlayerCamera3rdPerson</ref></highlight></codeline>
+<codeline lineno="169"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_erc" kindref="compound">DayZPlayerCamera3rdPersonErc</ref>(<ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref><sp/>pPlayer,<sp/><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref><sp/>pInput)</highlight></codeline>
+<codeline lineno="171" refid="_day_z_player_camera3rd_person_8c_1aa59814833643a675cf580aa2bc0314bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="172" refid="_day_z_player_camera3rd_person_8c_1a4e15292c0485bdae55b4ca339aa450c8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;new<sp/>camera:<sp/>DayZPlayerCamera3rdPersonErc&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174" refid="_day_z_player_camera3rd_person_8c_1a5d6c5c9f3cb694f50d794bd50a1f1cd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ae379fe9513c65e9a4dfe646f3c0c0006" kindref="member">m_fDistance</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1.6;</highlight></codeline>
+<codeline lineno="175" refid="_day_z_player_camera3rd_person_8c_1a7c62592d6f09d56c99c2d8f7b7bfa8cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac4686aa51bae4031b84b18735efab3cf" kindref="member">m_CameraOffsetMS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>1.4<sp/>0.0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a36b5f20fb85db20946190c5dd857635a" kindref="member">m_CameraOffsetLS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>0.3<sp/>0.0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="177" refid="_day_z_player_camera3rd_person_8c_1a0bea94e1152399d4c2626cf79f3dbdba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac3e630e3ee0c75407f93355d55d4356e" kindref="member">m_fShoulderWidth</ref><sp/><sp/><sp/><sp/>=<sp/>0.3;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a9b0a6591476ecbd9aaf235960fd80cdd" kindref="member">m_fPredictCollisionRadius</ref><sp/>=<sp/>1.2;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="comment">//<sp/>!<sp/>DayZPlayerCamera3rdPersonJump<sp/>-<sp/>3rd<sp/>person<sp/>jump</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="_day_z_player_camera3rd_person_8c_1a562cebe7ec110118d7e357695caa0a79" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_day_z_player_camera3rd_person_8c_1a2a887f7d444cb77cd5bc29fd7c08980c" kindref="member">DayZPlayerCamera3rdPersonJump</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_erc" kindref="compound">DayZPlayerCamera3rdPersonErc</ref></highlight></codeline>
+<codeline lineno="187"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="188" refid="class_day_z_player_camera3rd_person_erc_1a825028ff4fb2276e5bf1a7b0191ca729" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_erc_1a825028ff4fb2276e5bf1a7b0191ca729" kindref="member">DayZPlayerCamera3rdPersonJump</ref>(<ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref><sp/>pPlayer,<sp/><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref><sp/>pInput)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;new<sp/>camera:<sp/>DayZPlayerCamera3rdPersonJump&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a5b913016df225baf4d638800401687d2" kindref="member">m_fDelay</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0.15;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a40c9bf570dbddb612141ac430e92c9e9" kindref="member">m_fDamping</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0.25;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="197" refid="_day_z_player_camera3rd_person_8c_1ac886db88e86fa7de7738f04f6ad4ce9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1aae411f63ef6b6b9f2d10256da2503943" kindref="member">m_fJumpStartY</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>pPlayer.GetOrigin()[1];</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac77086d2ef3b605a72ebb4e31297540f" kindref="member">m_fJumpOffset</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a9682ad14b85442e985731bb1bd368d7d" kindref="member">m_fDelayTimer</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203" refid="class_day_z_player_camera3rd_person_erc_1a4e5420f58fe3d82fa17df5921ff3a130" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_day_z_player_camera3rd_person_erc_1a4e5420f58fe3d82fa17df5921ff3a130" kindref="member">OnUpdate</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pDt,<sp/>out<sp/><ref refid="class_day_z_player_camera_result" kindref="compound">DayZPlayerCameraResult</ref><sp/>pOutResult)</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnUpdate(pDt,<sp/>pOutResult);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>yPos<sp/>=<sp/><ref refid="dayzplayer_8c_1a812a1b534847d47082e8f0c58ba6c5bd" kindref="member">m_pPlayer</ref>.GetOrigin()[1];</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>yDiff<sp/>=<sp/>yPos<sp/>-<sp/><ref refid="class_day_z_player_camera3rd_person_erc_1abcc949b73b095cf6baeae5cc7e4cb796" kindref="member">m_fJumpStartY</ref>;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>yDiff<sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga939cca08ae6c7facc9293f2dbce3def5" kindref="member">Clamp</ref>(yDiff,<sp/>0.0,<sp/>2.0);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="_day_z_player_camera3rd_person_8c_1a9682ad14b85442e985731bb1bd368d7d" kindref="member">m_fDelayTimer</ref><sp/>&lt;<sp/><ref refid="_day_z_player_camera3rd_person_8c_1a5b913016df225baf4d638800401687d2" kindref="member">m_fDelay</ref><sp/>)</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a9682ad14b85442e985731bb1bd368d7d" kindref="member">m_fDelayTimer</ref><sp/>+=<sp/>pDt;</highlight></codeline>
+<codeline lineno="214" refid="_day_z_player_camera3rd_person_8c_1a4e5420f58fe3d82fa17df5921ff3a130" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac77086d2ef3b605a72ebb4e31297540f" kindref="member">m_fJumpOffset</ref><sp/>=<sp/>yDiff;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac77086d2ef3b605a72ebb4e31297540f" kindref="member">m_fJumpOffset</ref><sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gae5ee54bb2c75e1edd71b0c0feef2b01b" kindref="member">SmoothCD</ref>(<ref refid="_day_z_player_camera3rd_person_8c_1ac77086d2ef3b605a72ebb4e31297540f" kindref="member">m_fJumpOffset</ref>,<sp/>-(<ref refid="_day_z_player_camera3rd_person_8c_1a40c9bf570dbddb612141ac430e92c9e9" kindref="member">m_fDamping</ref><sp/>*<sp/>yDiff),<sp/><ref refid="_day_z_player_camera3rd_person_8c_1a2088488712a2805e6de9bd402b4b39fc" kindref="member">m_jumpOffsetVelocity</ref>,<sp/>0.3,<sp/>1000,<sp/>pDt);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>newY<sp/>=<sp/>pOutResult.m_CameraTM[3][1]<sp/>-<sp/><ref refid="class_day_z_player_camera3rd_person_erc_1a2d717983dea9eee762d38efe546e8d18" kindref="member">m_fJumpOffset</ref>;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pOutResult.m_CameraTM[3][1]<sp/>=<sp/>newY;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226" refid="class_day_z_player_camera3rd_person_erc_1aa9bce8f3e95a4f53e07e3e5a57ff5ee4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_erc_1aa9bce8f3e95a4f53e07e3e5a57ff5ee4" kindref="member">m_fDelay</ref>;</highlight></codeline>
+<codeline lineno="227" refid="class_day_z_player_camera3rd_person_erc_1a843ffc5b30aff0ac99551713e6f6b188" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_erc_1a843ffc5b30aff0ac99551713e6f6b188" kindref="member">m_fDamping</ref>;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="class_day_z_player_camera3rd_person_erc_1a288421e0fdbee2f05b922218a57d20c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_erc_1a288421e0fdbee2f05b922218a57d20c5" kindref="member">m_fDelayTimer</ref>;</highlight></codeline>
+<codeline lineno="231" refid="class_day_z_player_camera3rd_person_erc_1abcc949b73b095cf6baeae5cc7e4cb796" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_erc_1abcc949b73b095cf6baeae5cc7e4cb796" kindref="member">m_fJumpStartY</ref>;</highlight></codeline>
+<codeline lineno="232" refid="class_day_z_player_camera3rd_person_erc_1a2d717983dea9eee762d38efe546e8d18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_erc_1a2d717983dea9eee762d38efe546e8d18" kindref="member">m_fJumpOffset</ref>;</highlight></codeline>
+<codeline lineno="233" refid="class_day_z_player_camera3rd_person_erc_1a22518c95fecb0aca625d82791333e85c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a2088488712a2805e6de9bd402b4b39fc" kindref="member">m_jumpOffsetVelocity</ref>[1];<sp/><sp/></highlight></codeline>
+<codeline lineno="234"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="comment">//<sp/>!<sp/>DayZPlayerCamera3rdPersonJump<sp/>-<sp/>3rd<sp/>person<sp/>jump</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_day_z_player_camera3rd_person_8c_1a562cebe7ec110118d7e357695caa0a79" kindref="member">DayZPlayerCamera3rdPersonClimb</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_erc" kindref="compound">DayZPlayerCamera3rdPersonErc</ref></highlight></codeline>
+<codeline lineno="240"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a562cebe7ec110118d7e357695caa0a79" kindref="member">DayZPlayerCamera3rdPersonClimb</ref>(<ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref><sp/>pPlayer,<sp/><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref><sp/>pInput)</highlight></codeline>
+<codeline lineno="242" refid="_day_z_player_camera3rd_person_8c_1a2a887f7d444cb77cd5bc29fd7c08980c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;new<sp/>camera:<sp/>DayZPlayerCamera3rdPersonClimb&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dayzplayer_8c_1a5aab5f37d2ece729777e698c49dd1395" kindref="member">m_fDistance</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac4686aa51bae4031b84b18735efab3cf" kindref="member">m_CameraOffsetMS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>0.3<sp/>-0.6&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera1st_person_8c_1aa222e4eda0aab2c42126dc6300683604" kindref="member">m_iBoneIndex</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>pPlayer.GetBoneIndexByName(</highlight><highlight class="stringliteral">&quot;Spine&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dayzplayer_8c_1a6d04f6d82f549a390570d804a7e76d6e" kindref="member">m_fPredictCollisionRadius</ref><sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="249"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight><highlight class="comment">//<sp/>!<sp/>DayZPlayerCamera3rdPersonErc<sp/>-<sp/>3rd<sp/>person<sp/>erected<sp/>sprint</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254" refid="_day_z_player_camera3rd_person_8c_1a87e998ebc399019846469c59b12a3348" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_day_z_player_camera3rd_person_8c_1aed3d57837822c20e8c35b63de6f30430" kindref="member">DayZPlayerCamera3rdPersonErcSpr</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_erc" kindref="compound">DayZPlayerCamera3rdPersonErc</ref></highlight></codeline>
+<codeline lineno="255"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="256" refid="class_day_z_player_camera3rd_person_erc_1a79638210a95bf81dcdc42c7b66716836" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_erc_1a79638210a95bf81dcdc42c7b66716836" kindref="member">DayZPlayerCamera3rdPersonErcSpr</ref>(<ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref><sp/>pPlayer,<sp/><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref><sp/>pInput)</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;new<sp/>camera:<sp/>DayZPlayerCamera3rdPersonErcSpr&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dayzplayer_8c_1a5aab5f37d2ece729777e698c49dd1395" kindref="member">m_fDistance</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2.0;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac4686aa51bae4031b84b18735efab3cf" kindref="member">m_CameraOffsetMS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>1.3<sp/>0.0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a36b5f20fb85db20946190c5dd857635a" kindref="member">m_CameraOffsetLS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>0.3<sp/>0.0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac3e630e3ee0c75407f93355d55d4356e" kindref="member">m_fShoulderWidth</ref><sp/><sp/><sp/><sp/>=<sp/>0.15;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1af202b28a1defa698a406072c4d56f536" kindref="member">m_iPelvisBone</ref><sp/><sp/><sp/>=<sp/>pPlayer.GetBoneIndexByName(</highlight><highlight class="stringliteral">&quot;Pelvis&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_day_z_player_camera3rd_person_8c_1af202b28a1defa698a406072c4d56f536" kindref="member">m_iPelvisBone</ref><sp/>==<sp/>-1)</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(</highlight><highlight class="stringliteral">&quot;DayZPlayerCamera3rdPersonErcSpr:<sp/>hips<sp/>bone<sp/>not<sp/>found&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ad86650b10945acb04b219c5e96ac915d" kindref="member">m_fTime</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276" refid="_day_z_player_camera3rd_person_8c_1a98a3479cbf9bcd2d39c9bc5a8af436aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277" refid="class_day_z_player_camera3rd_person_erc_1a4e5420f58fe3d82fa17df5921ff3a130" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_day_z_player_camera3rd_person_erc_1a4e5420f58fe3d82fa17df5921ff3a130" kindref="member">OnUpdate</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pDt,<sp/>out<sp/><ref refid="class_day_z_player_camera_result" kindref="compound">DayZPlayerCameraResult</ref><sp/>pOutResult)</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ad86650b10945acb04b219c5e96ac915d" kindref="member">m_fTime</ref><sp/>+=<sp/>pDt<sp/>*<sp/>5;</highlight></codeline>
+<codeline lineno="280" refid="_day_z_player_camera3rd_person_8c_1a5b913016df225baf4d638800401687d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="281" refid="_day_z_player_camera3rd_person_8c_1a40c9bf570dbddb612141ac430e92c9e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/><sp/>tm[4];</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dayzplayer_8c_1a812a1b534847d47082e8f0c58ba6c5bd" kindref="member">m_pPlayer</ref>.GetBoneTransformLS(<ref refid="_day_z_player_camera3rd_person_8c_1af202b28a1defa698a406072c4d56f536" kindref="member">m_iPelvisBone</ref>,<sp/>tm);</highlight></codeline>
+<codeline lineno="285" refid="_day_z_player_camera3rd_person_8c_1a62f9eaecba648cb0c03a4b66d6b94b67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>xShift<sp/>=<sp/>tm[1][0];</highlight></codeline>
+<codeline lineno="286" refid="_day_z_player_camera3rd_person_8c_1ac77086d2ef3b605a72ebb4e31297540f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera___base_8c_1af78d712456f3fa631d27dccc6029d55c" kindref="member">m_CurrentCameraRoll</ref><sp/>=<sp/>xShift<sp/>*<sp/>3.0;<sp/></highlight><highlight class="comment">//<sp/>3<sp/>is<sp/>just<sp/>made<sp/>up<sp/>value<sp/>i<sp/>like<sp/>:)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287" refid="_day_z_player_camera3rd_person_8c_1a2088488712a2805e6de9bd402b4b39fc" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>m_CurrentCameraRoll<sp/>=<sp/>(sin(1.5<sp/>*<sp/>m_fTime));<sp/>//<sp/><sp/>+<sp/>0.3<sp/>*<sp/>sin(3.6<sp/>*<sp/>m_fTime)<sp/>+<sp/>0.2<sp/>*<sp/>sin(0.7<sp/>*<sp/>m_fTime))<sp/>/<sp/>1.3<sp/>*<sp/>3;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnUpdate(pDt,<sp/>pOutResult);</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pOutResult.m_fFovMultiplier<sp/>=<sp/>1.2;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294" refid="_day_z_player_camera3rd_person_8c_1aef1f221c72e388c6f0fb5821f6ad3e75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297" refid="class_day_z_player_camera3rd_person_erc_1a5852a2750c51ac2c3ad60ce61170fbeb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="class_day_z_player_camera3rd_person_erc_1a5852a2750c51ac2c3ad60ce61170fbeb" kindref="member">m_iPelvisBone</ref>;</highlight></codeline>
+<codeline lineno="298" refid="class_day_z_player_camera3rd_person_erc_1ae0f98dcb8054ab470b5edc9ab8b3e651" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_erc_1ae0f98dcb8054ab470b5edc9ab8b3e651" kindref="member">m_fTime</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300" refid="_day_z_player_camera3rd_person_8c_1aa222e4eda0aab2c42126dc6300683604" refkind="member"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="301" refid="_day_z_player_camera3rd_person_8c_1ac4686aa51bae4031b84b18735efab3cf" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302" refid="_day_z_player_camera3rd_person_8c_1a36b5f20fb85db20946190c5dd857635a" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303" refid="_day_z_player_camera3rd_person_8c_1ae379fe9513c65e9a4dfe646f3c0c0006" refkind="member"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304" refid="_day_z_player_camera3rd_person_8c_1ac3e630e3ee0c75407f93355d55d4356e" refkind="member"><highlight class="normal"></highlight><highlight class="comment">//<sp/>!<sp/>DayZPlayerCamera3rdPersonErcRaised<sp/>-<sp/>3rd<sp/>person<sp/>erected<sp/>raised</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305" refid="_day_z_player_camera3rd_person_8c_1aba241f4abfd9560715a47e0ab9f5ac54" refkind="member"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306" refid="_day_z_player_camera3rd_person_8c_1a8203c3f3fbccb8a905f60312602a775d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_day_z_player_camera3rd_person_erc_raised" kindref="compound">DayZPlayerCamera3rdPersonErcRaised</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_erc" kindref="compound">DayZPlayerCamera3rdPersonErc</ref></highlight></codeline>
+<codeline lineno="307" refid="_day_z_player_camera3rd_person_8c_1a77d313f767b47a3245e7d3c7d3d38c30" refkind="member"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_erc_raised" kindref="compound">DayZPlayerCamera3rdPersonErcRaised</ref>(<ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref><sp/>pPlayer,<sp/><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref><sp/>pInput)</highlight></codeline>
+<codeline lineno="309" refid="_day_z_player_camera3rd_person_8c_1aed3d57837822c20e8c35b63de6f30430" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;new<sp/>camera:<sp/>DayZPlayerCamera3rdPersonErcRaised&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311" refid="_day_z_player_camera3rd_person_8c_1a8c964c0226b8a1a695e2917d468342bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a9b0a6591476ecbd9aaf235960fd80cdd" kindref="member">m_fPredictCollisionRadius</ref><sp/>=<sp/>0.2;</highlight></codeline>
+<codeline lineno="312" refid="_day_z_player_camera3rd_person_8c_1a58960fc790b83be163478ca6411e95be" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313" refid="_day_z_player_camera3rd_person_8c_1a74cf8859007b9001c09ebab24e1856ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pPlayer.GetCurrentPerItemCameraUD<sp/>()<sp/>==<sp/><ref refid="class_day_z_player_cameras" kindref="compound">DayZPlayerCameras</ref>.<ref refid="class_day_z_player_cameras_1a7cc2316891d2dd86d86eab962815da9c" kindref="member">PERITEMUD_EMPTYHANDED</ref><sp/>)</highlight></codeline>
+<codeline lineno="314" refid="_day_z_player_camera3rd_person_8c_1a99f5a10040eadb27ef3a87e53da1b235" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>item<sp/>in<sp/>hands<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ae379fe9513c65e9a4dfe646f3c0c0006" kindref="member">m_fDistance</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1.2;</highlight></codeline>
+<codeline lineno="317" refid="_day_z_player_camera3rd_person_8c_1a1a7acd4d3bb079cab723a254d1275045" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac3e630e3ee0c75407f93355d55d4356e" kindref="member">m_fShoulderWidth</ref><sp/><sp/><sp/><sp/>=<sp/>0.4;</highlight></codeline>
+<codeline lineno="318" refid="_day_z_player_camera3rd_person_8c_1a819596bcac1d64e87e06f357973a8d20" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac4686aa51bae4031b84b18735efab3cf" kindref="member">m_CameraOffsetMS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>1.3<sp/>0.2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a36b5f20fb85db20946190c5dd857635a" kindref="member">m_CameraOffsetLS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>0.3<sp/>0.0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="321" refid="_day_z_player_camera3rd_person_8c_1a9b0a6591476ecbd9aaf235960fd80cdd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pPlayer.GetCurrentPerItemCameraUD<sp/>()<sp/>==<sp/><ref refid="class_day_z_player_cameras" kindref="compound">DayZPlayerCameras</ref>.<ref refid="class_day_z_player_cameras_1a6dbbf6d95a16043d93cf260178974cee" kindref="member">PERITEMUD_TWOHANDED</ref><sp/>)</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="324" refid="_day_z_player_camera3rd_person_8c_1aa20c94cf3a51fa5af0ca371fd70a7cd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>two<sp/>handed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ae379fe9513c65e9a4dfe646f3c0c0006" kindref="member">m_fDistance</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1.2;</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac3e630e3ee0c75407f93355d55d4356e" kindref="member">m_fShoulderWidth</ref><sp/><sp/><sp/><sp/>=<sp/>0.4;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac4686aa51bae4031b84b18735efab3cf" kindref="member">m_CameraOffsetMS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>1.3<sp/>0.2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a36b5f20fb85db20946190c5dd857635a" kindref="member">m_CameraOffsetLS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>0.3<sp/>0.0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>pPlayer.GetCurrentPerItemCameraUD<sp/>()<sp/>==<sp/><ref refid="class_day_z_player_cameras" kindref="compound">DayZPlayerCameras</ref>.<ref refid="class_day_z_player_cameras_1addf353151679e179e2568e2aa96123db" kindref="member">PERITEMUD_ONEHANDED</ref><sp/>)</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>one<sp/>handed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ae379fe9513c65e9a4dfe646f3c0c0006" kindref="member">m_fDistance</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1.2;</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac3e630e3ee0c75407f93355d55d4356e" kindref="member">m_fShoulderWidth</ref><sp/><sp/><sp/><sp/>=<sp/>0.4;</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac4686aa51bae4031b84b18735efab3cf" kindref="member">m_CameraOffsetMS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>1.3<sp/>0.2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a36b5f20fb85db20946190c5dd857635a" kindref="member">m_CameraOffsetLS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>0.3<sp/>0.0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>weapons<sp/>in<sp/>hands<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ae379fe9513c65e9a4dfe646f3c0c0006" kindref="member">m_fDistance</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0.8;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac4686aa51bae4031b84b18735efab3cf" kindref="member">m_CameraOffsetMS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>1.3<sp/>0.2&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a36b5f20fb85db20946190c5dd857635a" kindref="member">m_CameraOffsetLS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>0.3<sp/>0.0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac3e630e3ee0c75407f93355d55d4356e" kindref="member">m_fShoulderWidth</ref><sp/><sp/><sp/><sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="348" refid="_day_z_player_camera3rd_person_8c_1a6e7f37c8076ce14e770fa034e5a4dfaf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a6e7f37c8076ce14e770fa034e5a4dfaf" kindref="member">IsCamera3rdRaised</ref>()</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="350" refid="_day_z_player_camera3rd_person_8c_1af202b28a1defa698a406072c4d56f536" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="351" refid="_day_z_player_camera3rd_person_8c_1ad86650b10945acb04b219c5e96ac915d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="352"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight><highlight class="comment">//<sp/>!<sp/>DayZPlayerCamera3rdPersonErcRaised<sp/>-<sp/>3rd<sp/>person<sp/>erected<sp/>raised</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358" refid="class_day_z_player_camera3rd_person_erc_raised" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">DayZPlayerCamera3rdPersonErcRaisedMelee<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_erc_raised" kindref="compound">DayZPlayerCamera3rdPersonErcRaised</ref></highlight></codeline>
+<codeline lineno="359"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="360" refid="class_day_z_player_camera3rd_person_erc_raised_1a75b0dde007cb04c2faacba03cc3e675c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_erc_raised_1a75b0dde007cb04c2faacba03cc3e675c" kindref="member">DayZPlayerCamera3rdPersonErcRaisedMelee</ref>(<ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref><sp/>pPlayer,<sp/><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref><sp/>pInput)</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;new<sp/>camera:<sp/>DayZPlayerCamera3rdPersonErcRaisedMelee&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pInput.<ref refid="class_human_input_controller_1ac9028a3a4fd21ea10705b8ef528d3039" kindref="member">Override3rdIsRightShoulder</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>pInput.<ref refid="class_human_input_controller_1a7eea73bbe69269e5b01d6970bd849464" kindref="member">Camera3rdIsRightShoulder</ref>());</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368" refid="class_day_z_player_camera3rd_person_erc_raised_1ae388cbc8a1155d8f247782833a0dc979" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_erc_raised_1ae388cbc8a1155d8f247782833a0dc979" kindref="member">~DayZPlayerCamera3rdPersonErcRaisedMelee</ref>()</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dayzplayer_8c_1aa96a2955fa536f11eba67d61a8ef06ed" kindref="member">m_pInput</ref>.<ref refid="class_human_input_controller_1ac9028a3a4fd21ea10705b8ef528d3039" kindref="member">Override3rdIsRightShoulder</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="373"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight><highlight class="comment">//<sp/>!<sp/>DayZPlayerCamera3rdPersonCrouch<sp/>-<sp/>3rd<sp/>person<sp/>crouch</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_day_z_player_camera3rd_person_crouch" kindref="compound">DayZPlayerCamera3rdPersonCrouch</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a0bea94e1152399d4c2626cf79f3dbdba" kindref="member">DayZPlayerCamera3rdPerson</ref></highlight></codeline>
+<codeline lineno="380"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="381" refid="_day_z_player_camera3rd_person_8c_1acdb6ea344ae5210369297a05d32a5fab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1acdb6ea344ae5210369297a05d32a5fab" kindref="member">CONST_CAMERAMOVEMENTHEIGH</ref><sp/>=<sp/>0.4;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0<sp/>idle,<sp/>0.15<sp/>walk<sp/>0.3<sp/>run/sprint<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"></highlight></codeline>
+<codeline lineno="383" refid="_day_z_player_camera3rd_person_8c_1a5bbe20d06e2bdde6b94d3780cbd58e37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_crouch" kindref="compound">DayZPlayerCamera3rdPersonCrouch</ref><sp/>(<ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref><sp/>pPlayer,<sp/><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref><sp/>pInput)</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;new<sp/>camera:<sp/>DayZPlayerCamera3rdPersonCrouch&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ae379fe9513c65e9a4dfe646f3c0c0006" kindref="member">m_fDistance</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1.4;</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac4686aa51bae4031b84b18735efab3cf" kindref="member">m_CameraOffsetMS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>0.7<sp/>0.1&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a36b5f20fb85db20946190c5dd857635a" kindref="member">m_CameraOffsetLS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>0.3<sp/>0.0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac3e630e3ee0c75407f93355d55d4356e" kindref="member">m_fShoulderWidth</ref><sp/><sp/><sp/><sp/>=<sp/>0.3;</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___tools_1gab414e48870421e21bf5553f4033493b0" kindref="member">OnUpdate</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pDt,<sp/>out<sp/><ref refid="class_day_z_player_camera_result" kindref="compound">DayZPlayerCameraResult</ref><sp/>pOutResult)</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dayzplayer_8c_1a812a1b534847d47082e8f0c58ba6c5bd" kindref="member">m_pPlayer</ref>.GetMovementState(<ref refid="_day_z_player_camera3rd_person_8c_1aa20c94cf3a51fa5af0ca371fd70a7cd9" kindref="member">m_MovementState</ref>);</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>movement<sp/><sp/><sp/><sp/>=<sp/>(<ref refid="_day_z_player_camera___base_8c_1a49a31f1bdd7fa77a2ca95e72d304c099" kindref="member">Limit</ref>(<ref refid="_day_z_player_camera3rd_person_8c_1aa20c94cf3a51fa5af0ca371fd70a7cd9" kindref="member">m_MovementState</ref>.<ref refid="class_human_movement_state_1a04b18fdc0228482ff96609c8fdf94e3d" kindref="member">m_iMovement</ref>,<sp/>1,<sp/>3)<sp/>-<sp/>1.0)<sp/>*<sp/>0.5;</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>movement<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*=<sp/><ref refid="_day_z_player_camera3rd_person_8c_1acdb6ea344ae5210369297a05d32a5fab" kindref="member">CONST_CAMERAMOVEMENTHEIGH</ref>;</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a605bda7be57a38b07627dd9fff74b492" kindref="member">m_fCameraHeight</ref><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gae5ee54bb2c75e1edd71b0c0feef2b01b" kindref="member">SmoothCD</ref>(<ref refid="_day_z_player_camera3rd_person_8c_1a605bda7be57a38b07627dd9fff74b492" kindref="member">m_fCameraHeight</ref>,<sp/>movement,<sp/><ref refid="_day_z_player_camera3rd_person_8c_1a050a922c2fefc5e9f6f782bcd9c9388d" kindref="member">m_fCameraHeightVel</ref>,<sp/>0.2,<sp/>1000,<sp/>pDt);</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac4686aa51bae4031b84b18735efab3cf" kindref="member">m_CameraOffsetMS</ref>[1]<sp/>=<sp/>0.7<sp/>+<sp/><ref refid="_day_z_player_camera3rd_person_8c_1a605bda7be57a38b07627dd9fff74b492" kindref="member">m_fCameraHeight</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnUpdate(pDt,<sp/>pOutResult);</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"></highlight></codeline>
+<codeline lineno="408" refid="_day_z_player_camera3rd_person_8c_1a605bda7be57a38b07627dd9fff74b492" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a605bda7be57a38b07627dd9fff74b492" kindref="member">m_fCameraHeight</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-1..1<sp/>shoulderness<sp/>:)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="409" refid="_day_z_player_camera3rd_person_8c_1a050a922c2fefc5e9f6f782bcd9c9388d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a050a922c2fefc5e9f6f782bcd9c9388d" kindref="member">m_fCameraHeightVel</ref>[1];<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="410"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"></highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="414"><highlight class="normal"></highlight><highlight class="comment">//<sp/>!<sp/>DayZPlayerCamera3rdPersonCrouchRaised-<sp/>3rd<sp/>person<sp/>crouch<sp/>raised</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="415"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="416" refid="class_day_z_player_camera3rd_person_crouch" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">DayZPlayerCamera3rdPersonCrouchRaised<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_crouch" kindref="compound">DayZPlayerCamera3rdPersonCrouch</ref></highlight></codeline>
+<codeline lineno="417"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="418" refid="class_day_z_player_camera3rd_person_crouch_1adb56c1b6c13dd5b58de84c0a1ce3ec79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_crouch_1adb56c1b6c13dd5b58de84c0a1ce3ec79" kindref="member">DayZPlayerCamera3rdPersonCrouchRaised</ref>(<ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref><sp/>pPlayer,<sp/><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref><sp/>pInput)</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;new<sp/>camera:<sp/>DayZPlayerCamera3rdPersonCrouchRaised&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dayzplayer_8c_1a5aab5f37d2ece729777e698c49dd1395" kindref="member">m_fDistance</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0.8;</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac4686aa51bae4031b84b18735efab3cf" kindref="member">m_CameraOffsetMS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>0.8<sp/>0.1&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>being<sp/>overwritten<sp/>by<sp/>m_CameraOffsetMS[1]<sp/>from<sp/>DayZPlayerCamera3rdPersonCrouch<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a36b5f20fb85db20946190c5dd857635a" kindref="member">m_CameraOffsetLS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>0.3<sp/>0.0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac3e630e3ee0c75407f93355d55d4356e" kindref="member">m_fShoulderWidth</ref><sp/><sp/><sp/><sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="428" refid="class_day_z_player_camera3rd_person_crouch_1a55f6feca28b20f96787e2a74fffb4ef4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_crouch_1a55f6feca28b20f96787e2a74fffb4ef4" kindref="member">IsCamera3rdRaised</ref>()</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="432"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"></highlight></codeline>
+<codeline lineno="434"><highlight class="normal"></highlight></codeline>
+<codeline lineno="435"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"></highlight><highlight class="comment">//<sp/>!<sp/>DayZPlayerCamera3rdPersonProneRaised<sp/>-<sp/>3rd<sp/>person<sp/>prone<sp/>raised</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_day_z_player_camera3rd_person_prone_base" kindref="compound">DayZPlayerCamera3rdPersonProneBase</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a0bea94e1152399d4c2626cf79f3dbdba" kindref="member">DayZPlayerCamera3rdPerson</ref></highlight></codeline>
+<codeline lineno="439"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="440" refid="_day_z_player_camera3rd_person_8c_1a7caf9dc1fb956b858e7d2485379044df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a7caf9dc1fb956b858e7d2485379044df" kindref="member">m_LookAtLRAngle</ref>;</highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="442" refid="_day_z_player_camera3rd_person_8c_1aa26eec70aad4726e878218e2f695e6a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_day_z_player_camera3rd_person_8c_1aa26eec70aad4726e878218e2f695e6a1" kindref="member">UpdateLRAngleLookAt</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pMin,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pMax,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pDt)</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dayzplayer_8c_1aa96a2955fa536f11eba67d61a8ef06ed" kindref="member">m_pInput</ref>.<ref refid="class_human_input_controller_1a17501da6e8e6fd1b0d4f09a753fa2f0b" kindref="member">CameraIsFreeLook</ref>()<sp/>||<sp/><ref refid="_day_z_player_camera___base_8c_1a9b149941928967120b612c4ef3bf2c85" kindref="member">m_bForceFreeLook</ref>)<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a7caf9dc1fb956b858e7d2485379044df" kindref="member">m_LookAtLRAngle</ref><sp/>+=<sp/><ref refid="dayzplayer_8c_1aa96a2955fa536f11eba67d61a8ef06ed" kindref="member">m_pInput</ref>.<ref refid="class_human_input_controller_1a4ee8fb45ca6611bf66868e8d4347c37b" kindref="member">GetAimChange</ref>()[0]<sp/>*<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gad73851cb23a468ee6eb705d0ec76e141" kindref="member">RAD2DEG</ref>;</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a7caf9dc1fb956b858e7d2485379044df" kindref="member">m_LookAtLRAngle</ref><sp/>=<sp/><ref refid="_day_z_player_camera___base_8c_1a49a31f1bdd7fa77a2ca95e72d304c099" kindref="member">Limit</ref>(<ref refid="_day_z_player_camera3rd_person_8c_1a7caf9dc1fb956b858e7d2485379044df" kindref="member">m_LookAtLRAngle</ref>,<sp/>pMin,<sp/>pMax);</highlight></codeline>
+<codeline lineno="449"><highlight class="normal"></highlight></codeline>
+<codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera___base_8c_1a29ae607d685a976fb2fcaa62b3af3f25" kindref="member">m_fLRAngleVel</ref>[0]<sp/><sp/><sp/><sp/>=<sp/>0;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reset<sp/>filter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>smooth<sp/>value<sp/>back<sp/>to<sp/>0<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a7caf9dc1fb956b858e7d2485379044df" kindref="member">m_LookAtLRAngle</ref><sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gae5ee54bb2c75e1edd71b0c0feef2b01b" kindref="member">SmoothCD</ref>(<ref refid="_day_z_player_camera3rd_person_8c_1a7caf9dc1fb956b858e7d2485379044df" kindref="member">m_LookAtLRAngle</ref>,<sp/>0,<sp/><ref refid="_day_z_player_camera___base_8c_1a29ae607d685a976fb2fcaa62b3af3f25" kindref="member">m_fLRAngleVel</ref>,<sp/>0.14,<sp/>1000,<sp/>pDt);</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>m_fLeftRightAngle<sp/><sp/><sp/><sp/>=<sp/>0.9<sp/>*<sp/>(1.0<sp/>-<sp/>pDt);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"></highlight></codeline>
+<codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a7caf9dc1fb956b858e7d2485379044df" kindref="member">m_LookAtLRAngle</ref>;</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"></highlight></codeline>
+<codeline lineno="462"><highlight class="normal"></highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___tools_1gab414e48870421e21bf5553f4033493b0" kindref="member">OnUpdate</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>pDt,<sp/>out<sp/><ref refid="class_day_z_player_camera_result" kindref="compound">DayZPlayerCameraResult</ref><sp/>pOutResult)</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera___base_8c_1a331da698006e35e3e51b608d1d823d57" kindref="member">m_CurrentCameraPitch</ref><sp/><sp/><sp/><sp/>=<sp/><ref refid="_day_z_player_camera___base_8c_1a40e3bbd2306af3ac9d07884e2f4a0eec" kindref="member">UpdateUDAngleUnlocked</ref>(<ref refid="_day_z_player_camera3rd_person_8c_1a8c964c0226b8a1a695e2917d468342bf" kindref="member">m_fUpDownAngle</ref>,<sp/><ref refid="_day_z_player_camera3rd_person_8c_1a58960fc790b83be163478ca6411e95be" kindref="member">m_fUpDownAngleAdd</ref>,<sp/><ref refid="_day_z_player_camera3rd_person_8c_1aa59814833643a675cf580aa2bc0314bf" kindref="member">CONST_UD_MIN</ref>,<sp/><ref refid="_day_z_player_camera3rd_person_8c_1a4e15292c0485bdae55b4ca339aa450c8" kindref="member">CONST_UD_MAX</ref>,<sp/>pDt);</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"></highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>orientYaw<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="dayzplayer_8c_1a812a1b534847d47082e8f0c58ba6c5bd" kindref="member">m_pPlayer</ref>.GetOrientation()[0];</highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>headYaw<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="dayzplayer_8c_1aa96a2955fa536f11eba67d61a8ef06ed" kindref="member">m_pInput</ref>.<ref refid="class_human_input_controller_1ae9b604e4a7ef153e34516942e0120a45" kindref="member">GetHeadingAngle</ref>()<sp/>*<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gad73851cb23a468ee6eb705d0ec76e141" kindref="member">RAD2DEG</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera___base_8c_1ab0f6794849938625297fb809e8fba343" kindref="member">m_CurrentCameraYaw</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>-<ref refid="_day_z_player_camera___base_8c_1aaa2c1228d50544ba406b1c114cff3dcf" kindref="member">fixAngle_180_180</ref>(orientYaw<sp/>+<sp/>headYaw);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="472"><highlight class="normal"></highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print(&quot;OY:<sp/>&quot;<sp/>+<sp/>orientYaw.ToString()<sp/>+<sp/>&quot;<sp/>HY:<sp/>&quot;<sp/>+<sp/>headYaw.ToString());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>update<sp/>l/r<sp/>offsets<sp/>and<sp/>set<sp/>it<sp/>as<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera___base_8c_1aeeb3de71b20781b9ea1510ace4423945" kindref="member">ProcessCameraShake</ref>(pDt,<sp/><ref refid="_day_z_player_camera3rd_person_8c_1a74cf8859007b9001c09ebab24e1856ce" kindref="member">m_fLeftRightAngle</ref>,<sp/><ref refid="_day_z_player_camera3rd_person_8c_1a58960fc790b83be163478ca6411e95be" kindref="member">m_fUpDownAngleAdd</ref>);</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="dayzplayer_8c_1aa96a2955fa536f11eba67d61a8ef06ed" kindref="member">m_pInput</ref>.<ref refid="class_human_input_controller_1a7eea73bbe69269e5b01d6970bd849464" kindref="member">Camera3rdIsRightShoulder</ref>())</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a1a7acd4d3bb079cab723a254d1275045" kindref="member">m_fCameraLRShoulder</ref><sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gae5ee54bb2c75e1edd71b0c0feef2b01b" kindref="member">SmoothCD</ref>(<ref refid="_day_z_player_camera3rd_person_8c_1a1a7acd4d3bb079cab723a254d1275045" kindref="member">m_fCameraLRShoulder</ref>,<sp/>1.0,<sp/><ref refid="_day_z_player_camera3rd_person_8c_1a819596bcac1d64e87e06f357973a8d20" kindref="member">m_fCameraLRShoulderVel</ref>,<sp/>0.14,<sp/>1000,<sp/>pDt);</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a1a7acd4d3bb079cab723a254d1275045" kindref="member">m_fCameraLRShoulder</ref><sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gae5ee54bb2c75e1edd71b0c0feef2b01b" kindref="member">SmoothCD</ref>(<ref refid="_day_z_player_camera3rd_person_8c_1a1a7acd4d3bb079cab723a254d1275045" kindref="member">m_fCameraLRShoulder</ref>,<sp/>-1.0,<sp/><ref refid="_day_z_player_camera3rd_person_8c_1a819596bcac1d64e87e06f357973a8d20" kindref="member">m_fCameraLRShoulderVel</ref>,<sp/>0.14,<sp/>1000,<sp/>pDt);</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"></highlight></codeline>
+<codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><sp/><sp/>shoulderDist<sp/>=<sp/><ref refid="_day_z_player_camera3rd_person_8c_1a1a7acd4d3bb079cab723a254d1275045" kindref="member">m_fCameraLRShoulder</ref><sp/>*<sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac3e630e3ee0c75407f93355d55d4356e" kindref="member">m_fShoulderWidth</ref>;</highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_math3_d" kindref="compound">Math3D</ref>.<ref refid="group___math3_d_a_p_i_1ga91222ac45b26b806e50d1d77268114de" kindref="member">YawPitchRollMatrix</ref>(<ref refid="dayzplayer_8c_1af024aaffc0601951b70fbba9d32d20ad" kindref="member">GetCurrentOrientation</ref>(),<sp/>pOutResult.m_CameraTM);</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"></highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_day_z_player_camera3rd_person_8c_1aa222e4eda0aab2c42126dc6300683604" kindref="member">m_iBoneIndex</ref><sp/>!=<sp/>-1)</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pOutResult.m_CameraTM[3]<sp/><sp/><sp/><sp/>=<sp/><ref refid="dayzplayer_8c_1a812a1b534847d47082e8f0c58ba6c5bd" kindref="member">m_pPlayer</ref>.GetBonePositionMS(<ref refid="_day_z_player_camera3rd_person_8c_1aa222e4eda0aab2c42126dc6300683604" kindref="member">m_iBoneIndex</ref>);</highlight></codeline>
+<codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pOutResult.m_CameraTM[3]<sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"></highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>msOffset<sp/>=<sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac4686aa51bae4031b84b18735efab3cf" kindref="member">m_CameraOffsetMS</ref>;</highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>lsOffset<sp/>=<sp/><ref refid="_day_z_player_camera3rd_person_8c_1a36b5f20fb85db20946190c5dd857635a" kindref="member">m_CameraOffsetLS</ref>;</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lsOffset[0]<sp/>=<sp/>lsOffset[0]<sp/>+<sp/>shoulderDist;</highlight></codeline>
+<codeline lineno="508"><highlight class="normal"></highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ls<sp/>offset<sp/>+<sp/>ms<sp/>offset<sp/>+<sp/>shoulder<sp/>width<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pOutResult.m_CameraTM[3]<sp/>=<sp/>pOutResult.m_CameraTM[3]<sp/>+<sp/>pOutResult.m_CameraTM[0]<sp/>*<sp/>lsOffset[0]<sp/>+<sp/>pOutResult.m_CameraTM[1]<sp/>*<sp/>lsOffset[1]<sp/>+<sp/>pOutResult.m_CameraTM[2]<sp/>*<sp/>lsOffset[2]<sp/>+<sp/>msOffset;</highlight></codeline>
+<codeline lineno="511"><highlight class="normal"></highlight></codeline>
+<codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera___base_8c_1ab0f6794849938625297fb809e8fba343" kindref="member">m_CurrentCameraYaw</ref><sp/>=<sp/><ref refid="_day_z_player_camera3rd_person_8c_1aa26eec70aad4726e878218e2f695e6a1" kindref="member">UpdateLRAngleLookAt</ref>(-180,<sp/>180,<sp/>pDt);</highlight></codeline>
+<codeline lineno="513"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_math3_d" kindref="compound">Math3D</ref>.<ref refid="group___math3_d_a_p_i_1ga91222ac45b26b806e50d1d77268114de" kindref="member">YawPitchRollMatrix</ref>(<ref refid="dayzplayer_8c_1af024aaffc0601951b70fbba9d32d20ad" kindref="member">GetCurrentOrientation</ref>(),<sp/>pOutResult.m_CameraTM);</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"></highlight></codeline>
+<codeline lineno="516"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pOutResult.m_fDistance<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/><ref refid="_day_z_player_camera3rd_person_8c_1ae379fe9513c65e9a4dfe646f3c0c0006" kindref="member">m_fDistance</ref>;</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pOutResult.m_fUseHeading<sp/><sp/><sp/><sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pOutResult.m_fInsideCamera<sp/><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pOutResult.m_fPositionModelSpace<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pOutResult.m_bUpdateWhenBlendOut<sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera___base_8c_1a9dbf6771ce02f6712411280ed30613cc" kindref="member">InitCameraOnPlayer</ref>();</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera___base_8c_1a589903243b2ce2813cb247cc13c8ff58" kindref="member">StdFovUpdate</ref>(pDt,<sp/>pOutResult);</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera___base_8c_1acae0c4086f7a3988667408a192d10829" kindref="member">UpdateCameraNV</ref>(<ref refid="class_player_base" kindref="compound">PlayerBase</ref>.Cast(<ref refid="dayzplayer_8c_1a812a1b534847d47082e8f0c58ba6c5bd" kindref="member">m_pPlayer</ref>));</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="526"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="527"><highlight class="normal"></highlight></codeline>
+<codeline lineno="528"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="529"><highlight class="normal"></highlight><highlight class="comment">//<sp/>!<sp/>DayZPlayerCamera3rdPersonProne<sp/>-<sp/>3rd<sp/>person<sp/>prone</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="530"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="531" refid="_day_z_player_camera3rd_person_8c_1a65cc2249f227dccf5ac6c058f25eed9e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_day_z_player_camera3rd_person_8c_1abeeafadd29b6c9573d86e2378bd83a7d" kindref="member">DayZPlayerCamera3rdPersonProne</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_prone_base" kindref="compound">DayZPlayerCamera3rdPersonProneBase</ref></highlight></codeline>
+<codeline lineno="532"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="533" refid="class_day_z_player_camera3rd_person_prone_base_1a0440842fec5645f500c67eff4cfe7cf8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_prone_base_1a0440842fec5645f500c67eff4cfe7cf8" kindref="member">DayZPlayerCamera3rdPersonProne</ref>(<ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref><sp/>pPlayer,<sp/><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref><sp/>pInput)</highlight></codeline>
+<codeline lineno="534"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="535"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;new<sp/>camera:<sp/>DayZPlayerCamera3rdPersonProne&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="536"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera1st_person_8c_1aa222e4eda0aab2c42126dc6300683604" kindref="member">m_iBoneIndex</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>pPlayer.GetBoneIndexByName<sp/>(</highlight><highlight class="stringliteral">&quot;Camera3rd_Helper&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="537"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dayzplayer_8c_1a5aab5f37d2ece729777e698c49dd1395" kindref="member">m_fDistance</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="538"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac4686aa51bae4031b84b18735efab3cf" kindref="member">m_CameraOffsetMS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>0.4<sp/>0.0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="539"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a36b5f20fb85db20946190c5dd857635a" kindref="member">m_CameraOffsetLS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>0.2<sp/>0.0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac3e630e3ee0c75407f93355d55d4356e" kindref="member">m_fShoulderWidth</ref><sp/><sp/><sp/><sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="542"><highlight class="normal"></highlight></codeline>
+<codeline lineno="543"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="544"><highlight class="normal"></highlight></codeline>
+<codeline lineno="545"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="546"><highlight class="normal"></highlight><highlight class="comment">//<sp/>!<sp/>DayZPlayerCamera3rdPersonProneRaised<sp/>-<sp/>3rd<sp/>person<sp/>prone<sp/>raised</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="547"><highlight class="normal"></highlight><highlight class="comment">//<sp/>*************************************************************************************</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="548"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="_day_z_player_camera3rd_person_8c_1a65cc2249f227dccf5ac6c058f25eed9e" kindref="member">DayZPlayerCamera3rdPersonProneRaised</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_day_z_player_camera3rd_person_prone_base" kindref="compound">DayZPlayerCamera3rdPersonProneBase</ref></highlight></codeline>
+<codeline lineno="549"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a65cc2249f227dccf5ac6c058f25eed9e" kindref="member">DayZPlayerCamera3rdPersonProneRaised</ref>(<ref refid="class_day_z_player" kindref="compound">DayZPlayer</ref><sp/>pPlayer,<sp/><ref refid="class_human_input_controller" kindref="compound">HumanInputController</ref><sp/>pInput)</highlight></codeline>
+<codeline lineno="551" refid="_day_z_player_camera3rd_person_8c_1abeeafadd29b6c9573d86e2378bd83a7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="552"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Print(&quot;new<sp/>camera:<sp/>DayZPlayerCamera3rdPersonProneRaised&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="553"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera1st_person_8c_1aa222e4eda0aab2c42126dc6300683604" kindref="member">m_iBoneIndex</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>pPlayer.GetBoneIndexByName<sp/>(</highlight><highlight class="stringliteral">&quot;Camera3rd_Helper&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="554"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dayzplayer_8c_1a5aab5f37d2ece729777e698c49dd1395" kindref="member">m_fDistance</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac4686aa51bae4031b84b18735efab3cf" kindref="member">m_CameraOffsetMS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>0.4<sp/>0.0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="556"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a36b5f20fb85db20946190c5dd857635a" kindref="member">m_CameraOffsetLS</ref><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0.0<sp/>0.2<sp/>0.0&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="557"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_player_camera3rd_person_8c_1ac3e630e3ee0c75407f93355d55d4356e" kindref="member">m_fShoulderWidth</ref><sp/><sp/><sp/><sp/>=<sp/>0.5;</highlight></codeline>
+<codeline lineno="558"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="559"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_day_z_player_camera3rd_person_8c_1a6e7f37c8076ce14e770fa034e5a4dfaf" kindref="member">IsCamera3rdRaised</ref>()</highlight></codeline>
+<codeline lineno="561"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="562"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="563"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="564"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ManBase/DayZPlayer/DayZPlayerCamera3rdPerson.c"/>
+  </compounddef>
+</doxygen>

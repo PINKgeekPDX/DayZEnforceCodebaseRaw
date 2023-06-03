@@ -1,0 +1,648 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_player_agent_pool" kind="class" language="C++" prot="public">
+    <compoundname>PlayerAgentPool</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_agent_pool_1aa1604f712268fb93b9f5a2839ae35ced" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, <ref refid="classfloat" kindref="compound">float</ref> &gt;</type>
+        <definition>ref map&lt;int,float&gt; PlayerAgentPool::m_VirusPool</definition>
+        <argsstring></argsstring>
+        <name>m_VirusPool</name>
+        <qualifiedname>PlayerAgentPool::m_VirusPool</qualifiedname>
+        <initializer>= new <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt;<ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>,<ref refid="classfloat" kindref="compound">float</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="3" column="9" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_agent_pool_1a872a43511688dc5ce1ab9677fdea1c3e" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt;</type>
+        <definition>ref array&lt;int&gt; PlayerAgentPool::m_VirusPoolArray</definition>
+        <argsstring></argsstring>
+        <name>m_VirusPoolArray</name>
+        <qualifiedname>PlayerAgentPool::m_VirusPoolArray</qualifiedname>
+        <initializer>= new <ref refid="classarray" kindref="compound">array</ref>&lt;<ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="4" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_agent_pool_1a91f4daf4fc07b4f3c2a40b127fe9d781" prot="private" static="no" mutable="no">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float PlayerAgentPool::m_LastTicked</definition>
+        <argsstring></argsstring>
+        <name>m_LastTicked</name>
+        <qualifiedname>PlayerAgentPool::m_LastTicked</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="5" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_agent_pool_1a566f989d9d702b247ef76a7f5822454b" prot="private" static="no" mutable="no">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float PlayerAgentPool::m_TotalAgentCount</definition>
+        <argsstring></argsstring>
+        <name>m_TotalAgentCount</name>
+        <qualifiedname>PlayerAgentPool::m_TotalAgentCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="6" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_agent_pool_1a9d034fac65266cfe4e95d15e948e737d" prot="private" static="no" mutable="no">
+        <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+        <definition>PlayerBase PlayerAgentPool::m_Player</definition>
+        <argsstring></argsstring>
+        <name>m_Player</name>
+        <qualifiedname>PlayerAgentPool::m_Player</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="7" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_agent_pool_1aaca67a08b424e499026729192b7fcad5" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int PlayerAgentPool::m_AgentMask</definition>
+        <argsstring></argsstring>
+        <name>m_AgentMask</name>
+        <qualifiedname>PlayerAgentPool::m_AgentMask</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="8" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_agent_pool_1ade3a46a7d3c79470ce201fc6dcdb3b06" prot="private" static="no" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int PlayerAgentPool::STORAGE_VERSION</definition>
+        <argsstring></argsstring>
+        <name>STORAGE_VERSION</name>
+        <qualifiedname>PlayerAgentPool::STORAGE_VERSION</qualifiedname>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="10" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_agent_pool_1a5aaec886508fbbc0d5dedaad77e174f8" prot="private" static="no" mutable="no">
+        <type>PluginTransmissionAgents</type>
+        <definition>PluginTransmissionAgents PlayerAgentPool::m_PluginTransmissionAgents</definition>
+        <argsstring></argsstring>
+        <name>m_PluginTransmissionAgents</name>
+        <qualifiedname>PlayerAgentPool::m_PluginTransmissionAgents</qualifiedname>
+        <initializer>= PluginTransmissionAgents.Cast(<ref refid="_plugin_manager_8c_1a35050f82bea320b7a5336fc549630eaf" kindref="member">GetPlugin</ref>(PluginTransmissionAgents))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="12" column="26" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_player_agent_pool_1a5377987ac16ee3303e87931e80d4768a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerAgentPool::PlayerAgentPool</definition>
+        <argsstring>(PlayerBase player)</argsstring>
+        <name>PlayerAgentPool</name>
+        <qualifiedname>PlayerAgentPool::PlayerAgentPool</qualifiedname>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="14" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1ac4d986a7fca8dfb1542875e88ea5f81f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerAgentPool::~PlayerAgentPool</definition>
+        <argsstring>()</argsstring>
+        <name>~PlayerAgentPool</name>
+        <qualifiedname>PlayerAgentPool::~PlayerAgentPool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="19" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1ae0e2e2ad0199d6659dcdcb63b8fd21d6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int PlayerAgentPool::GetStorageVersion</definition>
+        <argsstring>()</argsstring>
+        <name>GetStorageVersion</name>
+        <qualifiedname>PlayerAgentPool::GetStorageVersion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="24" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1ae1fffdb7176dd308b4603844105536db" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerAgentPool::PrintAgents</definition>
+        <argsstring>()</argsstring>
+        <name>PrintAgents</name>
+        <qualifiedname>PlayerAgentPool::PrintAgents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="29" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="29" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1aae32ae5d0a6f8020a114621b79ce5edd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerAgentPool::ImmuneSystemTick</definition>
+        <argsstring>(float value, float deltaT)</argsstring>
+        <name>ImmuneSystemTick</name>
+        <qualifiedname>PlayerAgentPool::ImmuneSystemTick</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>deltaT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="42" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="42" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1af38a116aee78ae180dc097f87e252a29" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerAgentPool::GrowAgents</definition>
+        <argsstring>(float deltaT)</argsstring>
+        <name>GrowAgents</name>
+        <qualifiedname>PlayerAgentPool::GrowAgents</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>deltaT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="48" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="48" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1a1c8b25abed55bae169593cebe7c433ea" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerAgentPool::OnStoreSave</definition>
+        <argsstring>(ParamsWriteContext ctx)</argsstring>
+        <name>OnStoreSave</name>
+        <qualifiedname>PlayerAgentPool::OnStoreSave</qualifiedname>
+        <param>
+          <type><ref refid="gameplay_8c_1af1d1033fca2ebd02f4ba61051b6341c4" kindref="member">ParamsWriteContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="91" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="91" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1ad11fc8e98346091840a802b16203857d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool PlayerAgentPool::OnStoreLoad</definition>
+        <argsstring>(ParamsReadContext ctx, int version)</argsstring>
+        <name>OnStoreLoad</name>
+        <qualifiedname>PlayerAgentPool::OnStoreLoad</qualifiedname>
+        <param>
+          <type><ref refid="gameplay_8c_1a4ff67286551fc6c18504752a277c8bc1" kindref="member">ParamsReadContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>version</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="105" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="105" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1ad9c503ddfc066c67a531769d4c87f34c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerAgentPool::DigestAgent</definition>
+        <argsstring>(int agent_id, float count)</argsstring>
+        <name>DigestAgent</name>
+        <qualifiedname>PlayerAgentPool::DigestAgent</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>agent_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="134" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="134" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1a8c9c8688caa2a8c1b5c236e590aca79b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerAgentPool::AddAgent</definition>
+        <argsstring>(int agent_id, float count)</argsstring>
+        <name>AddAgent</name>
+        <qualifiedname>PlayerAgentPool::AddAgent</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>agent_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="139" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="139" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1a6b6b3a860e86745f53437f86f43bab9c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerAgentPool::RemoveAgent</definition>
+        <argsstring>(int agent_id)</argsstring>
+        <name>RemoveAgent</name>
+        <qualifiedname>PlayerAgentPool::RemoveAgent</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>agent_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="165" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="165" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1a2acb1b2fb026cc52426ad74cd98cf69a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerAgentPool::RemoveAllAgents</definition>
+        <argsstring>()</argsstring>
+        <name>RemoveAllAgents</name>
+        <qualifiedname>PlayerAgentPool::RemoveAllAgents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="170" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="170" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1aa67ee34a1b1b5c6b3e100fa51924d8b3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int PlayerAgentPool::GetAgents</definition>
+        <argsstring>()</argsstring>
+        <name>GetAgents</name>
+        <qualifiedname>PlayerAgentPool::GetAgents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="190" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="190" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1aed3c4abe1ca2167b15e3194d371530f5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int PlayerAgentPool::GetSingleAgentCount</definition>
+        <argsstring>(int agent_id)</argsstring>
+        <name>GetSingleAgentCount</name>
+        <qualifiedname>PlayerAgentPool::GetSingleAgentCount</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>agent_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="195" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="195" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1a2ad3ee66e827058bc63d8bcf3429dbf9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float PlayerAgentPool::GetTotalAgentCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetTotalAgentCount</name>
+        <qualifiedname>PlayerAgentPool::GetTotalAgentCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="204" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="204" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1af10a2a2bcfe736076b44971902c20867" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerAgentPool::SpawnAgents</definition>
+        <argsstring>(float deltaT)</argsstring>
+        <name>SpawnAgents</name>
+        <qualifiedname>PlayerAgentPool::SpawnAgents</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>deltaT</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="214" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="214" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1ae3f172cafbfbbc2b3674d811c3e744b8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerAgentPool::SetAgentCount</definition>
+        <argsstring>(int agent_id, float count)</argsstring>
+        <name>SetAgentCount</name>
+        <qualifiedname>PlayerAgentPool::SetAgentCount</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>agent_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="230" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="230" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1aaf4aee025aaa656f10e75ab64fc49f81" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerAgentPool::AntibioticsAttack</definition>
+        <argsstring>(float attack_value)</argsstring>
+        <name>AntibioticsAttack</name>
+        <qualifiedname>PlayerAgentPool::AntibioticsAttack</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>attack_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="251" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="251" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1a275fb8b0692ea23083c86052355a0aad" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerAgentPool::RemoteGrowRequestDebug</definition>
+        <argsstring>(ParamsReadContext ctx)</argsstring>
+        <name>RemoteGrowRequestDebug</name>
+        <qualifiedname>PlayerAgentPool::RemoteGrowRequestDebug</qualifiedname>
+        <param>
+          <type><ref refid="gameplay_8c_1a4ff67286551fc6c18504752a277c8bc1" kindref="member">ParamsReadContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="268" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="268" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_agent_pool_1ae4363096af75bf42c59a2feaf4a60eb2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerAgentPool::GetDebugObject</definition>
+        <argsstring>(array&lt; ref Param &gt; object_out)</argsstring>
+        <name>GetDebugObject</name>
+        <qualifiedname>PlayerAgentPool::GetDebugObject</qualifiedname>
+        <param>
+          <type><ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_param" kindref="compound">Param</ref> &gt;</type>
+          <declname>object_out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="284" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="284" bodyend="297"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5">
+        <label>Class</label>
+        <link refid="class_class"/>
+      </node>
+      <node id="3">
+        <label>Object</label>
+        <link refid="class_object"/>
+      </node>
+      <node id="1">
+        <label>PlayerAgentPool</label>
+        <link refid="class_player_agent_pool"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_VirusPoolArray</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_LastTicked</edgelabel>
+          <edgelabel>m_TotalAgentCount</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_Player</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>PlayerBase</label>
+        <link refid="class_player_base"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_PersonalLight</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_PersonalLightDisabledByDebug</edgelabel>
+          <edgelabel>m_PersonalLightEnabledOnCurrentServer</edgelabel>
+          <edgelabel>m_PersonalLightIsSwitchedOn</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ScriptedLightBase</label>
+        <link refid="class_scripted_light_base"/>
+      </node>
+      <node id="7">
+        <label>Widget</label>
+        <link refid="class_widget"/>
+      </node>
+      <node id="4">
+        <label>array</label>
+        <link refid="classarray"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>array&lt; Widget &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>array&lt; int &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>bool</label>
+        <link refid="classbool"/>
+      </node>
+      <node id="9">
+        <label>float</label>
+        <link refid="classfloat"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>LOWEST</edgelabel>
+          <edgelabel>MAX</edgelabel>
+          <edgelabel>MIN</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>string</label>
+        <link refid="classstring"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>Empty</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" line="1" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Classes/TransmissionAgents/PlayerAgentPool/PlayerAgentPool.c" bodystart="2" bodyend="298"/>
+    <listofallmembers>
+      <member refid="class_player_agent_pool_1a8c9c8688caa2a8c1b5c236e590aca79b" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>AddAgent</name></member>
+      <member refid="class_player_agent_pool_1aaf4aee025aaa656f10e75ab64fc49f81" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>AntibioticsAttack</name></member>
+      <member refid="class_player_agent_pool_1ad9c503ddfc066c67a531769d4c87f34c" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>DigestAgent</name></member>
+      <member refid="class_player_agent_pool_1aa67ee34a1b1b5c6b3e100fa51924d8b3" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>GetAgents</name></member>
+      <member refid="class_player_agent_pool_1ae4363096af75bf42c59a2feaf4a60eb2" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>GetDebugObject</name></member>
+      <member refid="class_player_agent_pool_1aed3c4abe1ca2167b15e3194d371530f5" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>GetSingleAgentCount</name></member>
+      <member refid="class_player_agent_pool_1ae0e2e2ad0199d6659dcdcb63b8fd21d6" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>GetStorageVersion</name></member>
+      <member refid="class_player_agent_pool_1a2ad3ee66e827058bc63d8bcf3429dbf9" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>GetTotalAgentCount</name></member>
+      <member refid="class_player_agent_pool_1af38a116aee78ae180dc097f87e252a29" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>GrowAgents</name></member>
+      <member refid="class_player_agent_pool_1aae32ae5d0a6f8020a114621b79ce5edd" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>ImmuneSystemTick</name></member>
+      <member refid="class_player_agent_pool_1aaca67a08b424e499026729192b7fcad5" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>m_AgentMask</name></member>
+      <member refid="class_player_agent_pool_1a91f4daf4fc07b4f3c2a40b127fe9d781" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>m_LastTicked</name></member>
+      <member refid="class_player_agent_pool_1a9d034fac65266cfe4e95d15e948e737d" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>m_Player</name></member>
+      <member refid="class_player_agent_pool_1a5aaec886508fbbc0d5dedaad77e174f8" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>m_PluginTransmissionAgents</name></member>
+      <member refid="class_player_agent_pool_1a566f989d9d702b247ef76a7f5822454b" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>m_TotalAgentCount</name></member>
+      <member refid="class_player_agent_pool_1aa1604f712268fb93b9f5a2839ae35ced" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>m_VirusPool</name></member>
+      <member refid="class_player_agent_pool_1a872a43511688dc5ce1ab9677fdea1c3e" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>m_VirusPoolArray</name></member>
+      <member refid="class_player_agent_pool_1ad11fc8e98346091840a802b16203857d" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>OnStoreLoad</name></member>
+      <member refid="class_player_agent_pool_1a1c8b25abed55bae169593cebe7c433ea" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>OnStoreSave</name></member>
+      <member refid="class_player_agent_pool_1a5377987ac16ee3303e87931e80d4768a" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>PlayerAgentPool</name></member>
+      <member refid="class_player_agent_pool_1ae1fffdb7176dd308b4603844105536db" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>PrintAgents</name></member>
+      <member refid="class_player_agent_pool_1a275fb8b0692ea23083c86052355a0aad" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>RemoteGrowRequestDebug</name></member>
+      <member refid="class_player_agent_pool_1a6b6b3a860e86745f53437f86f43bab9c" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>RemoveAgent</name></member>
+      <member refid="class_player_agent_pool_1a2acb1b2fb026cc52426ad74cd98cf69a" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>RemoveAllAgents</name></member>
+      <member refid="class_player_agent_pool_1ae3f172cafbfbbc2b3674d811c3e744b8" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>SetAgentCount</name></member>
+      <member refid="class_player_agent_pool_1af10a2a2bcfe736076b44971902c20867" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>SpawnAgents</name></member>
+      <member refid="class_player_agent_pool_1ade3a46a7d3c79470ce201fc6dcdb3b06" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>STORAGE_VERSION</name></member>
+      <member refid="class_player_agent_pool_1ac4d986a7fca8dfb1542875e88ea5f81f" prot="private" virt="non-virtual"><scope>PlayerAgentPool</scope><name>~PlayerAgentPool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

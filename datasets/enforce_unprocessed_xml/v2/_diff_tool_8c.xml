@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_diff_tool_8c" kind="file" language="C++">
+    <compoundname>DiffTool.c</compoundname>
+    <innerclass refid="class_s_v_n_diff_plugin" prot="public">SVNDiffPlugin</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">[<ref refid="class_workbench_plugin_attribute" kindref="compound">WorkbenchPluginAttribute</ref>(</highlight><highlight class="stringliteral">&quot;SVN<sp/>Diff&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Just<sp/>for<sp/>testing&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ctrl+`&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>{</highlight><highlight class="stringliteral">&quot;ScriptEditor&quot;</highlight><highlight class="normal">})]</highlight></codeline>
+<codeline lineno="2" refid="class_s_v_n_diff_plugin" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/><ref refid="class_s_v_n_diff_plugin" kindref="compound">SVNDiffPlugin</ref>:<sp/><ref refid="class_workbench_plugin" kindref="compound">WorkbenchPlugin</ref></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>[<ref refid="class_attribute" kindref="compound">Attribute</ref>(</highlight><highlight class="stringliteral">&quot;TortoiseProc<sp/>/command:diff<sp/>/path:$path&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;editbox&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="5" refid="class_s_v_n_diff_plugin_1a5f39fd00ff7ff115dd21d3a7b1919f68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_s_v_n_diff_plugin_1a5f39fd00ff7ff115dd21d3a7b1919f68" kindref="member">CommandLine</ref>;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="7" refid="class_s_v_n_diff_plugin_1a1ae35d58977ab17369df38d01ea3592a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_v_n_diff_plugin_1a1ae35d58977ab17369df38d01ea3592a" kindref="member">Run</ref>()</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_script_editor" kindref="compound">ScriptEditor</ref><sp/>mod<sp/>=<sp/><ref refid="class_workbench" kindref="compound">Workbench</ref>.<ref refid="class_workbench_1a8a71da4c69345bc6989c74a240443851" kindref="member">GetModule</ref>(</highlight><highlight class="stringliteral">&quot;ScriptEditor&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mod)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>file;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>absPath;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mod.<ref refid="class_script_editor_1ac0d484a98586cf07d3450170acc050cc" kindref="member">GetCurrentFile</ref>(file)<sp/>&amp;&amp;<sp/><ref refid="class_workbench" kindref="compound">Workbench</ref>.<ref refid="class_workbench_1af761e45de778987e066a89a4f7418ee0" kindref="member">GetAbsolutePath</ref>(file,<sp/>absPath))</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>command<sp/>=<sp/>CommandLine;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>command.<ref refid="group___strings_1ga0280be725f595b7267367ded2b7c1725" kindref="member">Replace</ref>(</highlight><highlight class="stringliteral">&quot;$path&quot;</highlight><highlight class="normal">,<sp/>absPath);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_workbench" kindref="compound">Workbench</ref>.<ref refid="class_workbench_1a58d4659a0977ae97e7427040c73b89bf" kindref="member">RunCmd</ref>(command);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(<sp/>command<sp/>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(<sp/>absPath<sp/>);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25" refid="class_s_v_n_diff_plugin_1abd47beeda4a9e54726c638759a99fdd8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_v_n_diff_plugin_1abd47beeda4a9e54726c638759a99fdd8" kindref="member">Configure</ref>()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_workbench" kindref="compound">Workbench</ref>.<ref refid="class_workbench_1ab5d8eda73e7fe5071bc9ec75d0f06915" kindref="member">ScriptDialog</ref>(</highlight><highlight class="stringliteral">&quot;Configure<sp/>SVN<sp/>Diff&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Usage:<sp/>\n$path<sp/>-<sp/>will<sp/>be<sp/>replaced<sp/>with<sp/>file<sp/>name&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>[<ref refid="class_button_attribute" kindref="compound">ButtonAttribute</ref>(</highlight><highlight class="stringliteral">&quot;OK&quot;</highlight><highlight class="normal">)]</highlight></codeline>
+<codeline lineno="31" refid="class_s_v_n_diff_plugin_1a908db78928ed05027980ebe456a48303" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_s_v_n_diff_plugin_1a908db78928ed05027980ebe456a48303" kindref="member">OkButton</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/editor/Workbench/DiffTool.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,2531 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_particle_source" kind="class" language="C++" prot="public">
+    <compoundname>ParticleSource</compoundname>
+    <basecompoundref refid="class_particle" prot="private" virt="non-virtual">Particle</basecompoundref>
+      <sectiondef kind="user-defined">
+      <header>Playback</header>
+      <description><para>Methods regarding playing/stopping of particle </para>
+</description>
+      <memberdef kind="function" id="class_particle_source_1a749b1febbc82aaa446a7aaa26d4d3c36" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>private proto <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>private proto bool ParticleSource::PlayParticleNative</definition>
+        <argsstring>(int flags)</argsstring>
+        <name>PlayParticleNative</name>
+        <qualifiedname>ParticleSource::PlayParticleNative</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Method to tell the particle to start playing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Will call OnParticleStart when successful </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the particle successfully started </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="339" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a8b95d16fede2eb4703370e063b0cae35" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool ParticleSource::PlayParticleEx</definition>
+        <argsstring>(int particle_id=-1, int flags=0)</argsstring>
+        <name>PlayParticleEx</name>
+        <qualifiedname>ParticleSource::PlayParticleEx</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Method to tell the particle to start playing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>particle_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> <ref refid="class_particle" kindref="compound">Particle</ref> ID registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> to start playing </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the particle successfully started </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="346" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="346" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a6e5b006b6a66d96e9f845dcdcdf00b1f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>private proto <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>private proto bool ParticleSource::StopParticleNative</definition>
+        <argsstring>(int flags)</argsstring>
+        <name>StopParticleNative</name>
+        <qualifiedname>ParticleSource::StopParticleNative</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Method to tell the particle to stop playing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The particle is not immediately stopped by default, instead it will gradually fade If this is however desired, then pass in StopParticleFlags.IMMEDIATE </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Flags to pass to the stopping (StopParticleFlags) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the particle successfully stopped </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="365" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a28b58f26c4487d1f79a4edd2d7821713" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool ParticleSource::StopParticle</definition>
+        <argsstring>(int flags=0)</argsstring>
+        <name>StopParticle</name>
+        <qualifiedname>ParticleSource::StopParticle</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Method to tell the particle to stop playing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> Flags to pass to the stopping (StopParticleFlags) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the particle successfully stopped </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="372" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="372" bodyend="375"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a0a5dc7cedb5531b267edc488665a7948" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>private proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>private proto native bool ParticleSource::ResetParticleNative</definition>
+        <argsstring>()</argsstring>
+        <name>ResetParticleNative</name>
+        <qualifiedname>ParticleSource::ResetParticleNative</qualifiedname>
+        <briefdescription>
+<para>Method to tell the particle to reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the particle successfully reset </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="381" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1afadce8e68b323cf1dd60a8a99e5a5f3a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool ParticleSource::ResetParticle</definition>
+        <argsstring>()</argsstring>
+        <name>ResetParticle</name>
+        <qualifiedname>ParticleSource::ResetParticle</qualifiedname>
+        <briefdescription>
+<para>Method to tell the particle to reset. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the particle successfully reset </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="387" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="387" bodyend="390"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a08e52dc72858081562e67b9d59f3a48d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>private proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>private proto native bool ParticleSource::RestartParticleNative</definition>
+        <argsstring>()</argsstring>
+        <name>RestartParticleNative</name>
+        <qualifiedname>ParticleSource::RestartParticleNative</qualifiedname>
+        <briefdescription>
+<para>Method to tell the particle to restart (reset + play) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the particle successfully restarted </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="396" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1aabbedfcf76812c59e65d9737c6d5f636" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool ParticleSource::RestartParticle</definition>
+        <argsstring>()</argsstring>
+        <name>RestartParticle</name>
+        <qualifiedname>ParticleSource::RestartParticle</qualifiedname>
+        <briefdescription>
+<para>Method to tell the particle to restart (reset + play) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the particle successfully restarted </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="402" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="402" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a50d2e20d6d2bd7707bc438cc2405665b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>private proto <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>private proto bool ParticleSource::IsParticlePlayingNative</definition>
+        <argsstring>()</argsstring>
+        <name>IsParticlePlayingNative</name>
+        <qualifiedname>ParticleSource::IsParticlePlayingNative</qualifiedname>
+        <briefdescription>
+<para>Ask if the particle is still playing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the particle is playing </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="411" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a3b9ca243f4cfcc90df1c6af4f773ae93" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool ParticleSource::IsParticlePlaying</definition>
+        <argsstring>()</argsstring>
+        <name>IsParticlePlaying</name>
+        <qualifiedname>ParticleSource::IsParticlePlaying</qualifiedname>
+        <briefdescription>
+<para>Ask if the particle is still playing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the particle is playing </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="417" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="417" bodyend="420"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>SetParticle</header>
+      <description><para>Methods that set the particle to be used </para>
+</description>
+      <memberdef kind="function" id="class_particle_source_1a5e72927e761ec18b16f3d43422856b33" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>private proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>private proto native bool ParticleSource::SetParticleNative</definition>
+        <argsstring>(string path)</argsstring>
+        <name>SetParticleNative</name>
+        <qualifiedname>ParticleSource::SetParticleNative</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Assigns a particle to the <ref refid="class_particle_source" kindref="compound">ParticleSource</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Path of particle effect </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the creating and assigning of particle was successful </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="436" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1abc9a5c9b15998add37e9911bf0b8321b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>private bool ParticleSource::SetParticle</definition>
+        <argsstring>(string path)</argsstring>
+        <name>SetParticle</name>
+        <qualifiedname>ParticleSource::SetParticle</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Assigns a particle to the <ref refid="class_particle_source" kindref="compound">ParticleSource</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Intentionally private, as it is best to use &apos;SetParticleByID&apos; instead from script, because <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Path of particle effect </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the creating and assigning of particle was successful </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="444" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="444" bodyend="447"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a5bb7c9465bece1298ae61c26d9d5b3ed" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool ParticleSource::SetParticleByID</definition>
+        <argsstring>(int id)</argsstring>
+        <name>SetParticleByID</name>
+        <qualifiedname>ParticleSource::SetParticleByID</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Assigns a particle to the <ref refid="class_particle_source" kindref="compound">ParticleSource</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> ID of particle registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the creating and assigning of particle was successful </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="454" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="454" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a89b4caf047f5b99947240e40fb54dbb5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ParticleSource::SetSource</definition>
+        <argsstring>(int particle_id)</argsstring>
+        <name>SetSource</name>
+        <qualifiedname>ParticleSource::SetSource</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <briefdescription>
+<para>Sets particle id. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Purely here for backwards compatibility with <ref refid="class_particle" kindref="compound">Particle</ref> </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>particle_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> <ref refid="class_particle" kindref="compound">Particle</ref> ID registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> to start playing </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="464" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="464" bodyend="467"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>GetParticle</header>
+      <description><para>Methods that get the particle assigned </para>
+</description>
+      <memberdef kind="function" id="class_particle_source_1a0db8b0eba12da4628ffd258dbb038574" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>private proto <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>private proto bool ParticleSource::GetParticleNative</definition>
+        <argsstring>(out string path, EGetParticleMode mode)</argsstring>
+        <name>GetParticleNative</name>
+        <qualifiedname>ParticleSource::GetParticleNative</qualifiedname>
+        <param>
+          <type>out <ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>EGetParticleMode</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Gets the path to the currently assigned particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Path of particle effect </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>EGetParticleMode</computeroutput> What path to return </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the path is filled in or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="484" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a35f24ecec7504b94dff16c8ca1b07352" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool ParticleSource::GetParticle</definition>
+        <argsstring>(out string path, EGetParticleMode mode)</argsstring>
+        <name>GetParticle</name>
+        <qualifiedname>ParticleSource::GetParticle</qualifiedname>
+        <param>
+          <type>out <ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>EGetParticleMode</type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Gets the path to the currently assigned particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Path of particle effect </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>EGetParticleMode</computeroutput> What path to return </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the path is filled in or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="492" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="492" bodyend="495"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1abe25b74aac8751c287a47a0bf7837311" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>override int ParticleSource::GetParticleID</definition>
+        <argsstring>()</argsstring>
+        <name>GetParticleID</name>
+        <qualifiedname>ParticleSource::GetParticleID</qualifiedname>
+        <briefdescription>
+<para>Gets the <ref refid="class_particle_list" kindref="compound">ParticleList</ref> ID of the currently assigned particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> ID of particle registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="501" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="501" bodyend="508"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a5cf89dfc75ae2b294d1762df1654f686" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int ParticleSource::GetParticleIDLegacy</definition>
+        <argsstring>()</argsstring>
+        <name>GetParticleIDLegacy</name>
+        <qualifiedname>ParticleSource::GetParticleIDLegacy</qualifiedname>
+        <briefdescription>
+<para>Gets the <ref refid="class_particle_list" kindref="compound">ParticleList</ref> ID of the currently assigned particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This is because the new GetParticleID will only work when every particle file name has a unique name In case this is not the case, then this method is what one will want to use </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> ID of particle registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="516" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="516" bodyend="523"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Apply properties</header>
+      <description><para>Methods to apply properties to the particle </para>
+</description>
+      <memberdef kind="function" id="class_particle_source_1afcae9920d4f38415b3f89a0d24076e26" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>private proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>private proto native bool ParticleSource::ApplyPropertiesNative</definition>
+        <argsstring>(ParticleProperties properties)</argsstring>
+        <name>ApplyPropertiesNative</name>
+        <qualifiedname>ParticleSource::ApplyPropertiesNative</qualifiedname>
+        <param>
+          <type>ParticleProperties</type>
+          <declname>properties</declname>
+        </param>
+        <briefdescription>
+<para>Applies the properties given to the <ref refid="class_particle_source" kindref="compound">ParticleSource</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Already handles proper reparenting </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>properties</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ParticleProperties</computeroutput> The properties to apply </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the properties were successfully applied </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="540" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a797565b90125292d40ae3bf5ed2a446c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool ParticleSource::ApplyProperties</definition>
+        <argsstring>(ParticleProperties properties)</argsstring>
+        <name>ApplyProperties</name>
+        <qualifiedname>ParticleSource::ApplyProperties</qualifiedname>
+        <param>
+          <type>ParticleProperties</type>
+          <declname>properties</declname>
+        </param>
+        <briefdescription>
+<para>Applies the properties given to the <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>properties</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ParticleProperties</computeroutput> The properties to apply </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the properties were successfully applied </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="547" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="547" bodyend="550"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Properties and state</header>
+      <description><para>Obtain information or set properties regarding the state of the <ref refid="class_particle" kindref="compound">Particle</ref> </para>
+</description>
+      <memberdef kind="function" id="class_particle_source_1aac11d3734638dbac213c490831f8cebb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="class_object" kindref="compound">Object</ref></type>
+        <definition>override Object ParticleSource::GetDirectParticleEffect</definition>
+        <argsstring>()</argsstring>
+        <name>GetDirectParticleEffect</name>
+        <qualifiedname>ParticleSource::GetDirectParticleEffect</qualifiedname>
+        <briefdescription>
+<para>Returns direct particle effect entity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Backwards compatibility with <ref refid="class_particle" kindref="compound">Particle</ref>, here it is the <ref refid="class_object" kindref="compound">Object</ref> itself </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput><ref refid="class_object" kindref="compound">Object</ref></computeroutput> The <ref refid="class_object" kindref="compound">Object</ref> with the particle component (this) </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="566" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="566" bodyend="569"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a7fdd86734755f44c7bf80e60829be78d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="class_object" kindref="compound">Object</ref></type>
+        <definition>override Object ParticleSource::GetParticleParent</definition>
+        <argsstring>()</argsstring>
+        <name>GetParticleParent</name>
+        <qualifiedname>ParticleSource::GetParticleParent</qualifiedname>
+        <briefdescription>
+<para>Returns the parent of this <ref refid="class_particle" kindref="compound">Particle</ref> if there is one. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput><ref refid="class_object" kindref="compound">Object</ref></computeroutput> The parent or null if there is none </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="575" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="575" bodyend="578"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1ac8d03ede8aadce1da4d08d3ad47d9566" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>private proto <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>private proto bool ParticleSource::HasActiveParticleNative</definition>
+        <argsstring>()</argsstring>
+        <name>HasActiveParticleNative</name>
+        <qualifiedname>ParticleSource::HasActiveParticleNative</qualifiedname>
+        <briefdescription>
+<para>Returns if there is any particle active. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether there is any particle active </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="584" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a977275ac2144431ebcba12f4936cead1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool ParticleSource::HasActiveParticle</definition>
+        <argsstring>()</argsstring>
+        <name>HasActiveParticle</name>
+        <qualifiedname>ParticleSource::HasActiveParticle</qualifiedname>
+        <briefdescription>
+<para>Returns if there is any particle active. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether there is any particle active </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="590" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="590" bodyend="593"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a1eefd2537e1c5309bc4c98ef14ccd245" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>private proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>private proto int ParticleSource::GetParticleCountNative</definition>
+        <argsstring>()</argsstring>
+        <name>GetParticleCountNative</name>
+        <qualifiedname>ParticleSource::GetParticleCountNative</qualifiedname>
+        <briefdescription>
+<para>Returns the total count of active particles in all emitors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Internally does a sum, HasActiveParticle is better for a quick check </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> Total count of active particles </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="600" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a1a58e738560ce5bfa676a0319fa8a78b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>override int ParticleSource::GetParticleCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetParticleCount</name>
+        <qualifiedname>ParticleSource::GetParticleCount</qualifiedname>
+        <briefdescription>
+<para>Returns the total count of active particles in all emitors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Internally does a sum, HasActiveParticle is better for a quick check </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> Total count of active particles </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="607" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="607" bodyend="610"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1abcc153b423030b3631e27d483b88af26" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>private proto <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>private proto bool ParticleSource::IsRepeatNative</definition>
+        <argsstring>()</argsstring>
+        <name>IsRepeatNative</name>
+        <qualifiedname>ParticleSource::IsRepeatNative</qualifiedname>
+        <briefdescription>
+<para>Returns whether there is a repeating particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>bool</computeroutput> whether there is a repeating particle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="616" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1ab1e5c8421398922f70affb5785b93a85" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool ParticleSource::IsRepeat</definition>
+        <argsstring>()</argsstring>
+        <name>IsRepeat</name>
+        <qualifiedname>ParticleSource::IsRepeat</qualifiedname>
+        <briefdescription>
+<para>Returns whether there is a repeating particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>bool</computeroutput> whether there is a repeating particle </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="622" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="622" bodyend="625"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a9b0fb677f644b96a3256256c29016660" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>private proto <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>private proto float ParticleSource::GetMaxLifetimeNative</definition>
+        <argsstring>()</argsstring>
+        <name>GetMaxLifetimeNative</name>
+        <qualifiedname>ParticleSource::GetMaxLifetimeNative</qualifiedname>
+        <briefdescription>
+<para>Returns the approx. max lifetime. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>float</computeroutput> The largest lifetime sum among the emitors </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="631" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a1ca8f1efc22ac4e8bea15069ca87d284" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>override float ParticleSource::GetMaxLifetime</definition>
+        <argsstring>()</argsstring>
+        <name>GetMaxLifetime</name>
+        <qualifiedname>ParticleSource::GetMaxLifetime</qualifiedname>
+        <briefdescription>
+<para>Returns the approx. max lifetime. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>float</computeroutput> The largest lifetime sum among the emitors </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="637" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="637" bodyend="640"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a83ca67ddc49d95bac4b45d15808946cd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="class_class" kindref="compound">Class</ref></type>
+        <definition>proto native Class ParticleSource::GetOwner</definition>
+        <argsstring>()</argsstring>
+        <name>GetOwner</name>
+        <qualifiedname>ParticleSource::GetOwner</qualifiedname>
+        <briefdescription>
+<para>Get the owner of this <ref refid="class_particle_source" kindref="compound">ParticleSource</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput><ref refid="class_class" kindref="compound">Class</ref></computeroutput> The owner or null </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="646" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a9389522123fbe128cd6aafc9e0b272a8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void ParticleSource::SetOwner</definition>
+        <argsstring>(Class owner)</argsstring>
+        <name>SetOwner</name>
+        <qualifiedname>ParticleSource::SetOwner</qualifiedname>
+        <param>
+          <type><ref refid="class_class" kindref="compound">Class</ref></type>
+          <declname>owner</declname>
+        </param>
+        <briefdescription>
+<para>Set the owner of this <ref refid="class_particle_source" kindref="compound">ParticleSource</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+p <ref refid="class_class" kindref="compound">Class</ref> The owner or null </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="652" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1abdfe0d79d3bfbbdbd4671b2b16e1e6de" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void ParticleSource::Orphan</definition>
+        <argsstring>()</argsstring>
+        <name>Orphan</name>
+        <qualifiedname>ParticleSource::Orphan</qualifiedname>
+        <briefdescription>
+<para>null the owner of this <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="657" column="19"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Owning ParticleManager</header>
+      <description><para>Methods regarding the owner </para>
+</description>
+      <memberdef kind="function" id="class_particle_source_1ade85c2160d62182a3e1c0050ec44b4ea" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_particle_manager_8c_1a93ef360e8fc315d276eb8cc256dc3ef8" kindref="member">ParticleManager</ref></type>
+        <definition>proto native ParticleManager ParticleSource::GetParticleManager</definition>
+        <argsstring>()</argsstring>
+        <name>GetParticleManager</name>
+        <qualifiedname>ParticleSource::GetParticleManager</qualifiedname>
+        <briefdescription>
+<para>Get the ParticleManager the <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> belongs to if any. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>ParticleManager</computeroutput> The ParticleManager which created the <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> or null </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="672" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a2cc90784951842c4946a3918523453f8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int ParticleSource::GetIndex</definition>
+        <argsstring>()</argsstring>
+        <name>GetIndex</name>
+        <qualifiedname>ParticleSource::GetIndex</qualifiedname>
+        <briefdescription>
+<para>Get the index of this <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> in the owning ParticleManager. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> The index in the pool in the owning ParticleManager, -1 if no owner </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="678" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Static counter API</header>
+      <description><para>Gives counter information for the class </para>
+</description>
+      <memberdef kind="function" id="class_particle_source_1a0724dd74f8169bb3d7679bbac8d44f7d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto int ParticleSource::GetCountID</definition>
+        <argsstring>()</argsstring>
+        <name>GetCountID</name>
+        <qualifiedname>ParticleSource::GetCountID</qualifiedname>
+        <briefdescription>
+<para>Gets the ID for the <ref refid="class_particle_source" kindref="compound">ParticleSource</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Different every restart, as it is the nth instance created since the start of the program </para>
+</simplesect>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> ID for the <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="694" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1aceb4f9e4b5d659eaac859488b1e5a0a2" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto static native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto static native int ParticleSource::GetStaticCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetStaticCount</name>
+        <qualifiedname>ParticleSource::GetStaticCount</qualifiedname>
+        <briefdescription>
+<para>Gets the amount of <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> that have been created since the start of the program. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> Amount of <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> that have been created since the start of the program </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="700" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a94a8bccf8be772f774ad26043ff001e7" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto static native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto static native int ParticleSource::GetStaticActiveCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetStaticActiveCount</name>
+        <qualifiedname>ParticleSource::GetStaticActiveCount</qualifiedname>
+        <briefdescription>
+<para>Gets the amount of <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> that are currently existing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> Amount of <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> that are currently existing </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="706" column="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Events</header>
+      <description><para>ParticleBase events For <ref refid="class_particle_source" kindref="compound">ParticleSource</ref>, these are handed on C++ side For more information, read <ref refid="class_particle_events" kindref="compound">ParticleEvents</ref> </para>
+</description>
+      <memberdef kind="function" id="class_particle_source_1a8a04640e11ce7172f1d197fa1479bb5d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void ParticleSource::OnParticleParented</definition>
+        <argsstring>(IEntity parent)</argsstring>
+        <name>OnParticleParented</name>
+        <qualifiedname>ParticleSource::OnParticleParented</qualifiedname>
+        <param>
+          <type><ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+<para>Event when the particle receives a parent. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="722" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="722" bodyend="727"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a19567275a717e4f48b7878bbfb3e6412" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void ParticleSource::OnParticleUnParented</definition>
+        <argsstring>(IEntity parent)</argsstring>
+        <name>OnParticleUnParented</name>
+        <qualifiedname>ParticleSource::OnParticleUnParented</qualifiedname>
+        <param>
+          <type><ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+<para>Event when the particle is orphaned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="732" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="732" bodyend="750"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1ac7c889faf7e06e345f43586bd81cdd21" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void ParticleSource::OnParticleStop</definition>
+        <argsstring>()</argsstring>
+        <name>OnParticleStop</name>
+        <qualifiedname>ParticleSource::OnParticleStop</qualifiedname>
+        <briefdescription>
+<para>Event when the particle stops. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="755" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="755" bodyend="764"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Misc backwards compatibility helpers</header>
+      <description><para>Helpers for misc backwards compatibility functionality </para>
+</description>
+      <memberdef kind="function" id="class_particle_source_1a3e2caff10995021ef9e9fdb09e38f6f9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ParticleSource::AddAsChild</definition>
+        <argsstring>(Object parent, vector local_pos=&quot;0 0 0&quot;, vector local_ori=&quot;0 0 0&quot;, bool force_rotation_to_world=false)</argsstring>
+        <name>AddAsChild</name>
+        <qualifiedname>ParticleSource::AddAsChild</qualifiedname>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_pos</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_ori</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>force_rotation_to_world</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Attaches this particle onto some object. If null value is provided then the particle will be detached from the current parent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Unlike <ref refid="class_particle" kindref="compound">Particle</ref>, you are free to use AddChild/RemoveChild instead of this one if you know what you are doing </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_object" kindref="compound">Object</ref></computeroutput> Parent onto which this particle will be attached </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Attachment position local to the parent (optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_ori</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Orientation local to the parent (Pitch, Yawn, Roll in degrees) (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>force_rotation_to_world</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Force rotation to be in WS (Optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="783" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="783" bodyend="792"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Parameter API</header>
+      <description><para>Helpful methods for getting or setting parameters </para>
+</description>
+      <memberdef kind="function" id="class_particle_source_1afe03c6403d0192470bdc7c7042a8e57b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ParticleSource::SetParticleParam</definition>
+        <argsstring>(int parameter_id, float value)</argsstring>
+        <name>SetParticleParam</name>
+        <qualifiedname>ParticleSource::SetParticleParam</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>parameter_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the value of a parameter of all emitors in the particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The parameter to apply the new value to (enum EmitorParam) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The value to apply </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="808" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="808" bodyend="811"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a49cf246aca77de943da2799b517ad68b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ParticleSource::SetParameter</definition>
+        <argsstring>(int emitter, int parameter, float value)</argsstring>
+        <name>SetParameter</name>
+        <qualifiedname>ParticleSource::SetParameter</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>emitter</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>parameter</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the value of a parameter of an emitor in the particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>emitter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The emitter to apply the new value to, -1 for all emitter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The parameter to apply the new value to (enum EmitorParam) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The value to apply </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="819" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="819" bodyend="822"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1aed9f03fc3ce2a76e98a2bde4c55ceff6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ParticleSource::GetParameter</definition>
+        <argsstring>(int emitter, int parameter, out float value)</argsstring>
+        <name>GetParameter</name>
+        <qualifiedname>ParticleSource::GetParameter</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>emitter</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>parameter</declname>
+        </param>
+        <param>
+          <type>out <ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Get the value of a parameter of an emitor in the particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>emitter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The emitor to get the value from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The parameter to get the value from (enum EmitorParam) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="830" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="830" bodyend="833"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a902f89667524a56a945dbfb1a4855078" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>override float ParticleSource::GetParameterEx</definition>
+        <argsstring>(int emitter, int parameter)</argsstring>
+        <name>GetParameterEx</name>
+        <qualifiedname>ParticleSource::GetParameterEx</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>emitter</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>parameter</declname>
+        </param>
+        <briefdescription>
+<para>Get the value of a parameter of an emitor in the particle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>emitter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The emitor to get the value from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The parameter to get the value from (enum EmitorParam) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>float</computeroutput> The value </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="841" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="841" bodyend="846"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a07a6c429b4433c87ff18384a5ec7bb3a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ParticleSource::ScaleParticleParamFromOriginal</definition>
+        <argsstring>(int parameter_id, float coef)</argsstring>
+        <name>ScaleParticleParamFromOriginal</name>
+        <qualifiedname>ParticleSource::ScaleParticleParamFromOriginal</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>parameter_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>coef</declname>
+        </param>
+        <briefdescription>
+<para>Scales the given parameter on all emitors relatively to their ORIGINAL value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameter_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The parameter to adjust (enum EmitorParam) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The multiplier to apply </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="853" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="853" bodyend="862"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1aeb0eeebdefd9dea929373d8e99610011" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ParticleSource::ScaleParticleParam</definition>
+        <argsstring>(int parameter_id, float coef)</argsstring>
+        <name>ScaleParticleParam</name>
+        <qualifiedname>ParticleSource::ScaleParticleParam</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>parameter_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>coef</declname>
+        </param>
+        <briefdescription>
+<para>Scales the given parameter on all emitors relatively to their CURRENT value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameter_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The parameter to adjust (enum EmitorParam) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>coef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The multiplier to apply </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="869" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="869" bodyend="878"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a76bbe02ccfc654ebfc31bfb140dbc83a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ParticleSource::IncrementParticleParamFromOriginal</definition>
+        <argsstring>(int parameter_id, float value)</argsstring>
+        <name>IncrementParticleParamFromOriginal</name>
+        <qualifiedname>ParticleSource::IncrementParticleParamFromOriginal</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>parameter_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Increments the value of the given parameter relatively from the ORIGINAL value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>It&apos;s a simple sum, so negative value decrements </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameter_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The parameter to adjust (enum EmitorParam) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The value to sum </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="886" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="886" bodyend="895"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a01498271b3835816f4a261dab5009253" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ParticleSource::IncrementParticleParam</definition>
+        <argsstring>(int parameter_id, float value)</argsstring>
+        <name>IncrementParticleParam</name>
+        <qualifiedname>ParticleSource::IncrementParticleParam</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>parameter_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Increments the value of the given parameter relatively from the CURRENT value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>It&apos;s a simple sum, so negative value decrements </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameter_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The parameter to adjust (enum EmitorParam) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The value to sum </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="903" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="903" bodyend="912"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Wiggle API</header>
+      <description><para>Settings to make the <ref refid="class_particle" kindref="compound">Particle</ref> wiggle </para>
+</description>
+      <memberdef kind="function" id="class_particle_source_1aa4e5bddf362f77e96b076a697dadd405" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ParticleSource::SetWiggle</definition>
+        <argsstring>(float random_angle, float random_interval)</argsstring>
+        <name>SetWiggle</name>
+        <qualifiedname>ParticleSource::SetWiggle</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>random_angle</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>random_interval</declname>
+        </param>
+        <briefdescription>
+<para>Makes the particle change direction by random_angle every random_interval seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This does not actually work on <ref refid="class_particle" kindref="compound">Particle</ref> with no parent, it should on <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>random_angle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> Will be the range [-random_angle, random_angle[ to wiggle between </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>random_interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> Will be the time range [0, random_interval] to wiggle next time </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="929" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="929" bodyend="955"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a6dac4749922a2f38db03023b68a6e571" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void ParticleSource::StopWiggle</definition>
+        <argsstring>()</argsstring>
+        <name>StopWiggle</name>
+        <qualifiedname>ParticleSource::StopWiggle</qualifiedname>
+        <briefdescription>
+<para>Stops randomized wiggle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="960" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="960" bodyend="977"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a849286407b5cf711d132ec35cb8c16e9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override private void</type>
+        <definition>override private void ParticleSource::RandomizeOrientation</definition>
+        <argsstring>()</argsstring>
+        <name>RandomizeOrientation</name>
+        <qualifiedname>ParticleSource::RandomizeOrientation</qualifiedname>
+        <briefdescription>
+<para>Randomizes a new orientation and applies it. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="982" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="982" bodyend="1001"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Misc Particle specific helpers</header>
+      <description><para>Functionality specific for <ref refid="class_particle" kindref="compound">Particle</ref>, so we empty them here </para>
+</description>
+      <memberdef kind="function" id="class_particle_source_1a469c1578432fbfcf0ebac40d4ca0e25e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override private void</type>
+        <definition>override private void ParticleSource::UpdateState</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateState</name>
+        <qualifiedname>ParticleSource::UpdateState</qualifiedname>
+        <briefdescription>
+<para>Empty. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="1013" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="1013" bodyend="1013"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a925d11462545e642a19764ebd5ea329c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override private void</type>
+        <definition>override private void ParticleSource::DestroyParticleEffect</definition>
+        <argsstring>()</argsstring>
+        <name>DestroyParticleEffect</name>
+        <qualifiedname>ParticleSource::DestroyParticleEffect</qualifiedname>
+        <briefdescription>
+<para>Empty. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="1016" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="1016" bodyend="1016"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a4b94bb5a0b5e5824ce831f5954ade379" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override private void</type>
+        <definition>override private void ParticleSource::CreateParticleEffect</definition>
+        <argsstring>()</argsstring>
+        <name>CreateParticleEffect</name>
+        <qualifiedname>ParticleSource::CreateParticleEffect</qualifiedname>
+        <briefdescription>
+<para>Empty. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="1019" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="1019" bodyend="1019"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a637f45d2ffa6980f969397d547f187d2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void ParticleSource::EOnFrame</definition>
+        <argsstring>(IEntity other, float timeSlice)</argsstring>
+        <name>EOnFrame</name>
+        <qualifiedname>ParticleSource::EOnFrame</qualifiedname>
+        <param>
+          <type><ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>timeSlice</declname>
+        </param>
+        <briefdescription>
+<para>Empty. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="1022" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="1022" bodyend="1022"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1aebb9ce479a151f84c881546d1c7061c5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override private void</type>
+        <definition>override private void ParticleSource::OnCheckAutoDelete</definition>
+        <argsstring>()</argsstring>
+        <name>OnCheckAutoDelete</name>
+        <qualifiedname>ParticleSource::OnCheckAutoDelete</qualifiedname>
+        <briefdescription>
+<para>Empty. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="1025" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="1025" bodyend="1025"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a8fa32e6ec437ef9f60f10c0e65536d8a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override private void</type>
+        <definition>override private void ParticleSource::OnToDelete</definition>
+        <argsstring>()</argsstring>
+        <name>OnToDelete</name>
+        <qualifiedname>ParticleSource::OnToDelete</qualifiedname>
+        <briefdescription>
+<para>Empty. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="1028" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="1028" bodyend="1028"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Create a particle (static)</header>
+      <description><para>Helper static methods to create/attach/play a <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> on one line </para>
+</description>
+      <memberdef kind="function" id="class_particle_source_1a39f04fa3ee5a66c48638ee86cf37e81e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>static ParticleSource ParticleSource::CreateParticle</definition>
+        <argsstring>(int id, vector pos, bool playOnCreation=false, Object parent=null, vector ori=vector.Zero, bool forceWorldRotation=false, Class owner=null)</argsstring>
+        <name>CreateParticle</name>
+        <qualifiedname>ParticleSource::CreateParticle</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>playOnCreation</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>parent</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>ori</declname>
+          <defval><ref refid="classvector_1a6f6d5246e38b34f79fa2741a7e72d7e7" kindref="member">vector.Zero</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>forceWorldRotation</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type><ref refid="class_class" kindref="compound">Class</ref></type>
+          <declname>owner</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Create function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> <ref refid="class_particle" kindref="compound">Particle</ref> ID registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Position of <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> in LS (WS when no parent) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>playOnCreation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Whether to play immediately after creation (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_object" kindref="compound">Object</ref></computeroutput> Parent <ref refid="class_object" kindref="compound">Object</ref> which will child the <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> (Optional) <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ori</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Orientation of <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> in LS (WS when no parent) (Pitch, Yaw, Roll in degrees) (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>forceWorldRotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Forces orientation to rotate relative to the world and not with the parent (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>owner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_class" kindref="compound">Class</ref></computeroutput> The owning instance for this particle (Optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></computeroutput> Created particle instance when successful </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="178" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="178" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a1ff42fd8c4bf826ca13e791d73057bb6" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>static ParticleSource ParticleSource::CreateParticleEx</definition>
+        <argsstring>(int id, vector pos, int flags=ParticlePropertiesFlags.NONE, Object parent=null, vector ori=vector.Zero, Class owner=null)</argsstring>
+        <name>CreateParticleEx</name>
+        <qualifiedname>ParticleSource::CreateParticleEx</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>flags</declname>
+          <defval>ParticlePropertiesFlags.NONE</defval>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>parent</declname>
+          <defval>null</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>ori</declname>
+          <defval><ref refid="classvector_1a6f6d5246e38b34f79fa2741a7e72d7e7" kindref="member">vector.Zero</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="class_class" kindref="compound">Class</ref></type>
+          <declname>owner</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para>Master create function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> <ref refid="class_particle" kindref="compound">Particle</ref> ID registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Position of <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> in LS (WS when no parent) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> See ParticlePropertiesFlags (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_object" kindref="compound">Object</ref></computeroutput> Parent <ref refid="class_object" kindref="compound">Object</ref> which will child the <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> (Optional) <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ori</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Orientation of <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> in LS (WS when no parent) (Pitch, Yaw, Roll in degrees) (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>owner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_class" kindref="compound">Class</ref></computeroutput> The owning instance for this particle (Optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_particle_source" kindref="compound">ParticleSource</ref></computeroutput> Created particle instance when successful </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="205" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="205" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1aace89ceb87cc07e2ae3e46a9d6b53cd7" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="class_particle" kindref="compound">Particle</ref></type>
+        <definition>static override Particle ParticleSource::CreateOnObject</definition>
+        <argsstring>(int particle_id, Object parent_obj, vector local_pos=&quot;0 0 0&quot;, vector local_ori=&quot;0 0 0&quot;, bool force_world_rotation=false)</argsstring>
+        <name>CreateOnObject</name>
+        <qualifiedname>ParticleSource::CreateOnObject</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>parent_obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_pos</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_ori</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>force_world_rotation</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Creates a particle emitter and attaches it on the given object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>particle_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> <ref refid="class_particle" kindref="compound">Particle</ref> ID registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parent_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_object" kindref="compound">Object</ref></computeroutput> Instance on which this particle will be attached </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Attachment position local to the parent (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_ori</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Orientation local to the parent (Pitch, Yaw, Roll in degrees) (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>force_world_rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Forces particle&apos;s orientation to rotate relative to the world and not with the object (Optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_particle" kindref="compound">Particle</ref></computeroutput> Created particle instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="236" column="26" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="236" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a6ee21688c50c446d531cbe016cd43438" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="class_particle" kindref="compound">Particle</ref></type>
+        <definition>static override Particle ParticleSource::Create</definition>
+        <argsstring>(int particle_id, Object parent_obj, vector local_pos=&quot;0 0 0&quot;, vector local_ori=&quot;0 0 0&quot;)</argsstring>
+        <name>Create</name>
+        <qualifiedname>ParticleSource::Create</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>parent_obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_pos</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_ori</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Legacy function for backwards compatibility. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="249" column="26" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="249" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a124a5cd8bd47456baf2237a36e054723" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="class_particle" kindref="compound">Particle</ref></type>
+        <definition>static override Particle ParticleSource::CreateInWorld</definition>
+        <argsstring>(int particle_id, vector global_pos, vector global_ori=&quot;0 0 0&quot;, bool force_world_rotation=false)</argsstring>
+        <name>CreateInWorld</name>
+        <qualifiedname>ParticleSource::CreateInWorld</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>global_pos</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>global_ori</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>force_world_rotation</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Creates a particle emitter on the given position. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>particle_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> <ref refid="class_particle" kindref="compound">Particle</ref> ID registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>global_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>Vector</computeroutput> Position where the particel will be created </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>global_ori</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Orientation (Pitch, Yawn, Roll in degrees) (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>force_world_rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Has absolutely no effect here as there is no parent </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_particle" kindref="compound">Particle</ref></computeroutput> Created particle instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="262" column="26" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="262" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a8d4bd474c42838b47f96e6ca96f0a2c7" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="class_particle_source" kindref="compound">ParticleSource</ref></type>
+        <definition>static override ParticleSource ParticleSource::Create</definition>
+        <argsstring>(int particle_id, vector global_pos, vector global_ori=&quot;0 0 0&quot;)</argsstring>
+        <name>Create</name>
+        <qualifiedname>ParticleSource::Create</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>global_pos</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>global_ori</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Legacy function for backwards compatibility with 1.01 and below. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="270" column="32" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="270" bodyend="273"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Static play on creation</header>
+      <description><para>You can use the following Play(...) functions to create and activate a particle in 1 line of your script. </para>
+</description>
+      <memberdef kind="function" id="class_particle_source_1a1f78e662eeed54b90ebb682fa1525353" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="class_particle" kindref="compound">Particle</ref></type>
+        <definition>static override Particle ParticleSource::PlayOnObject</definition>
+        <argsstring>(int particle_id, Object parent_obj, vector local_pos=&quot;0 0 0&quot;, vector local_ori=&quot;0 0 0&quot;, bool force_world_rotation=false)</argsstring>
+        <name>PlayOnObject</name>
+        <qualifiedname>ParticleSource::PlayOnObject</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>parent_obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_pos</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_ori</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>force_world_rotation</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Creates a particle emitter, attaches it on the given object and activates it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>particle_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> <ref refid="class_particle" kindref="compound">Particle</ref> ID registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parent_obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_object" kindref="compound">Object</ref></computeroutput> Instance on which this particle will be attached </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Attachment position local to the parent (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_ori</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> Orientation local to the parent (Pitch, Yaw, Roll in degrees) (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>force_world_rotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Forces particle&apos;s orientation to rotate relative to the world and not with the object (Optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_particle" kindref="compound">Particle</ref></computeroutput> Created particle instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="293" column="26" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="293" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a01baa8036b977aab4110239610ef0e3a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="class_particle" kindref="compound">Particle</ref></type>
+        <definition>static override Particle ParticleSource::Play</definition>
+        <argsstring>(int particle_id, Object parent_obj, vector local_pos=&quot;0 0 0&quot;, vector local_ori=&quot;0 0 0&quot;)</argsstring>
+        <name>Play</name>
+        <qualifiedname>ParticleSource::Play</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>parent_obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_pos</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_ori</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Legacy function for backwards compatibility with 1.01 and below. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="301" column="26" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="301" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a4e5b7116e835b7a9295890bd05b6433c" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="class_particle" kindref="compound">Particle</ref></type>
+        <definition>static override Particle ParticleSource::PlayInWorld</definition>
+        <argsstring>(int particle_id, vector global_pos)</argsstring>
+        <name>PlayInWorld</name>
+        <qualifiedname>ParticleSource::PlayInWorld</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>global_pos</declname>
+        </param>
+        <briefdescription>
+<para>Creates a particle emitter on the given position and activates it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>particle_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> <ref refid="class_particle" kindref="compound">Particle</ref> ID registered in <ref refid="class_particle_list" kindref="compound">ParticleList</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>global_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>Vector</computeroutput> Position where the particel will be created </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_particle" kindref="compound">Particle</ref></computeroutput> Created particle instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="312" column="26" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="312" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a764a42860969ebb52abd1d03ad0d2413" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="class_particle" kindref="compound">Particle</ref></type>
+        <definition>static override Particle ParticleSource::Play</definition>
+        <argsstring>(int particle_id, vector global_pos)</argsstring>
+        <name>Play</name>
+        <qualifiedname>ParticleSource::Play</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>particle_id</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>global_pos</declname>
+        </param>
+        <briefdescription>
+<para>Legacy function for backwards compatibility with 1.01 and below. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="320" column="26" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="320" bodyend="323"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_particle_source_1a0aca44893bee659eb9940747f17b8879" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleSource::ParticleSource</definition>
+        <argsstring>()</argsstring>
+        <name>ParticleSource</name>
+        <qualifiedname>ParticleSource::ParticleSource</qualifiedname>
+        <briefdescription>
+<para>ctor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="126" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="126" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a944b20732efacb73523375139ee86a00" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleSource::~ParticleSource</definition>
+        <argsstring>()</argsstring>
+        <name>~ParticleSource</name>
+        <qualifiedname>ParticleSource::~ParticleSource</qualifiedname>
+        <briefdescription>
+<para>dtor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="132" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="132" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1aaf7f58753fa8d840fc80539d9a55a234" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void ParticleSource::ParticleInit</definition>
+        <argsstring>()</argsstring>
+        <name>ParticleInit</name>
+        <qualifiedname>ParticleSource::ParticleInit</qualifiedname>
+        <briefdescription>
+<para>Empty - Only needed for <ref refid="class_particle" kindref="compound">Particle</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="137" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="137" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1aa2734a10ecf17415ecced3075ef803a1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void ParticleSource::SetParticleAutoDestroyFlags</definition>
+        <argsstring>(ParticleAutoDestroyFlags flags)</argsstring>
+        <name>SetParticleAutoDestroyFlags</name>
+        <qualifiedname>ParticleSource::SetParticleAutoDestroyFlags</qualifiedname>
+        <param>
+          <type><ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88" kindref="member">ParticleAutoDestroyFlags</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+<para>Enables the particle to automatically clean up itself when ending or stopping. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Is enabled by default (ALL) </para>
+</simplesect>
+<simplesect kind="note"><para>Looping particles never end </para>
+</simplesect>
+<simplesect kind="note"><para><ref refid="class_particle_source" kindref="compound">ParticleSource</ref> belonging to a ParticleManager will ignore these </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ParticleAutoDestroyFlags</computeroutput> Flags enabling when the particle should be auto destroyed </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="146" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1ab98cffb50758099be2621201ce3d5492" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ParticleSource::DisableAutoDestroy</definition>
+        <argsstring>()</argsstring>
+        <name>DisableAutoDestroy</name>
+        <qualifiedname>ParticleSource::DisableAutoDestroy</qualifiedname>
+        <briefdescription>
+<para>Disables the particle automatically cleaning up itself when ending or stopping. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="151" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="151" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_particle_source_1a964b74c27c4d4237d49939c0425486a1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int ParticleSource::GetParticleAutoDestroyFlags</definition>
+        <argsstring>()</argsstring>
+        <name>GetParticleAutoDestroyFlags</name>
+        <qualifiedname>ParticleSource::GetParticleAutoDestroyFlags</qualifiedname>
+        <briefdescription>
+<para>Gets the currently set ParticleAutoDestroyFlags flags set on this <ref refid="class_particle_source" kindref="compound">ParticleSource</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> Currently set ParticleAutoDestroyFlags flags set on this <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="160" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_entity" kindref="compound">Entity</ref> which has the particle instance as an ObjectComponent. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>Unfortunately the native methods are private and have a script wrapper This is because of backwards compatibility with the old <ref refid="class_particle" kindref="compound">Particle</ref> and to avoid confusion As we should continue to use <ref refid="class_particle" kindref="compound">Particle</ref> for consistency, as it is too deeply rooted in script Which means switching is no longer possible due to it being harmful for already existing mods Even though using the <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> directly would be preferred</para>
+</simplesect>
+<simplesect kind="note"><para>Some variables from <ref refid="class_particle" kindref="compound">Particle</ref> are invalid on this level, those marked DEPRECATED by <ref refid="class_particle" kindref="compound">Particle</ref> are still DEPRECATED here m_ParticleID; //!&lt; INVALID - Use <ref refid="class_particle_source_1abe25b74aac8751c287a47a0bf7837311" kindref="member">GetParticleID()</ref> instead m_Lifetime; //!&lt; INVALID - No EOnFrame, so no use for it m_IsPlaying; //!&lt; VALID - Set through events - <ref refid="class_particle_source_1a3b9ca243f4cfcc90df1c6af4f773ae93" kindref="member">IsParticlePlaying()</ref> is still better m_IsRepeat; //!&lt; INVALID - Use <ref refid="class_particle_source_1ab1e5c8421398922f70affb5785b93a85" kindref="member">IsRepeat()</ref> instead m_MarkedForDeletion; //!&lt; INVALID - No EOnFrame, so no use for it Wiggle API variables are still used for Wiggle API m_ParentObject; //!&lt; VALID - Set through events - Or use <ref refid="class_particle_source_1a7fdd86734755f44c7bf80e60829be78d" kindref="member">GetParticleParent()</ref> or <ref refid="group___widget_a_p_i_1ga1d63886deac2f225cc139143f9d79141" kindref="member">GetParent()</ref> m_ParticleEffect; //!&lt; VALID - Not in the same usage as <ref refid="class_particle" kindref="compound">Particle</ref>, as it will always be &apos;this&apos;, never null </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Particle</label>
+        <link refid="class_particle"/>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ParticleBase</label>
+      </node>
+      <node id="1">
+        <label>ParticleSource</label>
+        <link refid="class_particle_source"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8">
+        <label>Object</label>
+        <link refid="class_object"/>
+      </node>
+      <node id="2">
+        <label>Particle</label>
+        <link refid="class_particle"/>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_Lifetime</edgelabel>
+          <edgelabel>m_MaxOriInterval</edgelabel>
+          <edgelabel>m_MaxOriWiggle</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_ForceOrientationRelativeToWorld</edgelabel>
+          <edgelabel>m_IsRepeat</edgelabel>
+          <edgelabel>m_MarkedForDeletion</edgelabel>
+          <edgelabel>m_WiggleProcessing</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_DefaultOri</edgelabel>
+          <edgelabel>m_DefaultPos</edgelabel>
+          <edgelabel>m_DefaultWorldOri</edgelabel>
+          <edgelabel>m_DefaultWorldPos</edgelabel>
+          <edgelabel>m_GlobalPosPreviousFrame</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_RandomizeOri</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_ParentObject</edgelabel>
+          <edgelabel>m_ParticleEffect</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ParticleBase</label>
+      </node>
+      <node id="1">
+        <label>ParticleSource</label>
+        <link refid="class_particle_source"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+      <node id="5">
+        <label>bool</label>
+        <link refid="classbool"/>
+      </node>
+      <node id="4">
+        <label>float</label>
+        <link refid="classfloat"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>LOWEST</edgelabel>
+          <edgelabel>MAX</edgelabel>
+          <edgelabel>MIN</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>vector</label>
+        <link refid="classvector"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>Aside</edgelabel>
+          <edgelabel>Forward</edgelabel>
+          <edgelabel>Up</edgelabel>
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="123" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="124" bodyend="1031"/>
+    <listofallmembers>
+      <member refid="class_particle_source_1a3e2caff10995021ef9e9fdb09e38f6f9" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>AddAsChild</name></member>
+      <member refid="class_particle_source_1a797565b90125292d40ae3bf5ed2a446c" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>ApplyProperties</name></member>
+      <member refid="class_particle_source_1afcae9920d4f38415b3f89a0d24076e26" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>ApplyPropertiesNative</name></member>
+      <member refid="class_particle_source_1a6ee21688c50c446d531cbe016cd43438" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>Create</name></member>
+      <member refid="class_particle_source_1a8d4bd474c42838b47f96e6ca96f0a2c7" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>Create</name></member>
+      <member refid="class_particle_source_1a124a5cd8bd47456baf2237a36e054723" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>CreateInWorld</name></member>
+      <member refid="class_particle_source_1aace89ceb87cc07e2ae3e46a9d6b53cd7" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>CreateOnObject</name></member>
+      <member refid="class_particle_source_1a39f04fa3ee5a66c48638ee86cf37e81e" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>CreateParticle</name></member>
+      <member refid="class_particle_source_1a4b94bb5a0b5e5824ce831f5954ade379" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>CreateParticleEffect</name></member>
+      <member refid="class_particle_source_1a1ff42fd8c4bf826ca13e791d73057bb6" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>CreateParticleEx</name></member>
+      <member refid="class_particle_source_1a925d11462545e642a19764ebd5ea329c" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>DestroyParticleEffect</name></member>
+      <member refid="class_particle_source_1ab98cffb50758099be2621201ce3d5492" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>DisableAutoDestroy</name></member>
+      <member refid="class_particle_source_1a637f45d2ffa6980f969397d547f187d2" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>EOnFrame</name></member>
+      <member refid="class_particle_source_1a0724dd74f8169bb3d7679bbac8d44f7d" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetCountID</name></member>
+      <member refid="class_particle_source_1aac11d3734638dbac213c490831f8cebb" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetDirectParticleEffect</name></member>
+      <member refid="class_particle_source_1a2cc90784951842c4946a3918523453f8" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetIndex</name></member>
+      <member refid="class_particle_source_1a1ca8f1efc22ac4e8bea15069ca87d284" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetMaxLifetime</name></member>
+      <member refid="class_particle_source_1a9b0fb677f644b96a3256256c29016660" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetMaxLifetimeNative</name></member>
+      <member refid="class_particle_source_1a83ca67ddc49d95bac4b45d15808946cd" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetOwner</name></member>
+      <member refid="class_particle_source_1aed9f03fc3ce2a76e98a2bde4c55ceff6" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetParameter</name></member>
+      <member refid="class_particle_source_1a902f89667524a56a945dbfb1a4855078" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetParameterEx</name></member>
+      <member refid="class_particle_source_1a35f24ecec7504b94dff16c8ca1b07352" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetParticle</name></member>
+      <member refid="class_particle_source_1a964b74c27c4d4237d49939c0425486a1" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetParticleAutoDestroyFlags</name></member>
+      <member refid="class_particle_source_1a1a58e738560ce5bfa676a0319fa8a78b" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetParticleCount</name></member>
+      <member refid="class_particle_source_1a1eefd2537e1c5309bc4c98ef14ccd245" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetParticleCountNative</name></member>
+      <member refid="class_particle_source_1abe25b74aac8751c287a47a0bf7837311" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetParticleID</name></member>
+      <member refid="class_particle_source_1a5cf89dfc75ae2b294d1762df1654f686" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetParticleIDLegacy</name></member>
+      <member refid="class_particle_source_1ade85c2160d62182a3e1c0050ec44b4ea" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetParticleManager</name></member>
+      <member refid="class_particle_source_1a0db8b0eba12da4628ffd258dbb038574" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetParticleNative</name></member>
+      <member refid="class_particle_source_1a7fdd86734755f44c7bf80e60829be78d" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetParticleParent</name></member>
+      <member refid="class_particle_source_1a94a8bccf8be772f774ad26043ff001e7" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetStaticActiveCount</name></member>
+      <member refid="class_particle_source_1aceb4f9e4b5d659eaac859488b1e5a0a2" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>GetStaticCount</name></member>
+      <member refid="class_particle_source_1a977275ac2144431ebcba12f4936cead1" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>HasActiveParticle</name></member>
+      <member refid="class_particle_source_1ac8d03ede8aadce1da4d08d3ad47d9566" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>HasActiveParticleNative</name></member>
+      <member refid="class_particle_source_1a01498271b3835816f4a261dab5009253" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>IncrementParticleParam</name></member>
+      <member refid="class_particle_source_1a76bbe02ccfc654ebfc31bfb140dbc83a" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>IncrementParticleParamFromOriginal</name></member>
+      <member refid="class_particle_source_1a3b9ca243f4cfcc90df1c6af4f773ae93" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>IsParticlePlaying</name></member>
+      <member refid="class_particle_source_1a50d2e20d6d2bd7707bc438cc2405665b" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>IsParticlePlayingNative</name></member>
+      <member refid="class_particle_source_1ab1e5c8421398922f70affb5785b93a85" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>IsRepeat</name></member>
+      <member refid="class_particle_source_1abcc153b423030b3631e27d483b88af26" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>IsRepeatNative</name></member>
+      <member refid="class_particle_1afdd8a5e2ccb094ff06ebf2a52440c8d2" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>IsWiggling</name></member>
+      <member refid="class_particle_1a4383ab618b84352b1fe82343f7408e66" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>m_DefaultOri</name></member>
+      <member refid="class_particle_1a1a8166ddbba5008431c06249f105dd68" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>m_DefaultPos</name></member>
+      <member refid="class_particle_1a37ddd5c12e1bc548478ff43ea799570d" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>m_DefaultWorldOri</name></member>
+      <member refid="class_particle_1a88c05af7a702e6746302f4ec53672645" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>m_DefaultWorldPos</name></member>
+      <member refid="class_particle_1a5169480d2be6a38b63b7e22956929fdb" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>m_ForceOrientationRelativeToWorld</name></member>
+      <member refid="class_particle_1a0001cb996cc58f2e6b5f5b7d327f527e" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>m_GlobalPosPreviousFrame</name></member>
+      <member refid="class_particle_1a0081d6d4a12da6b87b877b3b60e0faf4" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>m_IsRepeat</name></member>
+      <member refid="class_particle_1a19fe0657f7eee29097de3b8aa7322275" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>m_Lifetime</name></member>
+      <member refid="class_particle_1acdeab6f26e89281564f0c2a8fd5425aa" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>m_MarkedForDeletion</name></member>
+      <member refid="class_particle_1ada3488041094b2b81abb568afee17164" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>m_MaxOriInterval</name></member>
+      <member refid="class_particle_1ad658ab8afa78b9591af1cecb56ba0845" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>m_MaxOriWiggle</name></member>
+      <member refid="class_particle_1a774f593efed4c45f331ce4e2bafa814a" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>m_ParentObject</name></member>
+      <member refid="class_particle_1a69bc3028d8138b490171821b11e09c61" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>m_ParticleEffect</name></member>
+      <member refid="class_particle_1a4e24c6afd13f5c0e57ba2a613fbdecda" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>m_ParticleID</name></member>
+      <member refid="class_particle_1a054b7c31c41157725350ca84e0da0656" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>m_PreviousFrame</name></member>
+      <member refid="class_particle_1af826cdee8e8cff69617645615154ba42" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>m_RandomizeOri</name></member>
+      <member refid="class_particle_1a733b7fcacc372111977b89b4e151b2b2" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>m_WiggleProcessing</name></member>
+      <member refid="class_particle_1ad57340219d7e72d07c82cb5d980f3015" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>MAX_EMITORS</name></member>
+      <member refid="class_particle_source_1aebb9ce479a151f84c881546d1c7061c5" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>OnCheckAutoDelete</name></member>
+      <member refid="class_particle_source_1a8a04640e11ce7172f1d197fa1479bb5d" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>OnParticleParented</name></member>
+      <member refid="class_particle_source_1ac7c889faf7e06e345f43586bd81cdd21" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>OnParticleStop</name></member>
+      <member refid="class_particle_source_1a19567275a717e4f48b7878bbfb3e6412" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>OnParticleUnParented</name></member>
+      <member refid="class_particle_source_1a8fa32e6ec437ef9f60f10c0e65536d8a" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>OnToDelete</name></member>
+      <member refid="class_particle_source_1abdfe0d79d3bfbbdbd4671b2b16e1e6de" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>Orphan</name></member>
+      <member refid="class_particle_1a16491a7c48b5611a0e8e1d99dfa40a55" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>Particle</name></member>
+      <member refid="class_particle_source_1aaf7f58753fa8d840fc80539d9a55a234" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>ParticleInit</name></member>
+      <member refid="class_particle_source_1a0aca44893bee659eb9940747f17b8879" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>ParticleSource</name></member>
+      <member refid="class_particle_source_1a01baa8036b977aab4110239610ef0e3a" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>Play</name></member>
+      <member refid="class_particle_source_1a764a42860969ebb52abd1d03ad0d2413" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>Play</name></member>
+      <member refid="class_particle_source_1a4e5b7116e835b7a9295890bd05b6433c" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>PlayInWorld</name></member>
+      <member refid="class_particle_source_1a1f78e662eeed54b90ebb682fa1525353" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>PlayOnObject</name></member>
+      <member refid="class_particle_1a6e115cbbef0d51e7eaa32edffa9eab2c" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>PlayParticle</name></member>
+      <member refid="class_particle_source_1a8b95d16fede2eb4703370e063b0cae35" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>PlayParticleEx</name></member>
+      <member refid="class_particle_source_1a749b1febbc82aaa446a7aaa26d4d3c36" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>PlayParticleNative</name></member>
+      <member refid="class_particle_source_1a849286407b5cf711d132ec35cb8c16e9" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>RandomizeOrientation</name></member>
+      <member refid="class_particle_1a8334790c7f7748e9f25085495df951bc" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>RandWiggleFloat</name></member>
+      <member refid="class_particle_1a83739fdd66dbebcee473daecc8fa3dff" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>RandWiggleVector</name></member>
+      <member refid="class_particle_source_1afadce8e68b323cf1dd60a8a99e5a5f3a" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>ResetParticle</name></member>
+      <member refid="class_particle_source_1a0a5dc7cedb5531b267edc488665a7948" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>ResetParticleNative</name></member>
+      <member refid="class_particle_source_1aabbedfcf76812c59e65d9737c6d5f636" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>RestartParticle</name></member>
+      <member refid="class_particle_source_1a08e52dc72858081562e67b9d59f3a48d" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>RestartParticleNative</name></member>
+      <member refid="class_particle_source_1aeb0eeebdefd9dea929373d8e99610011" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>ScaleParticleParam</name></member>
+      <member refid="class_particle_source_1a07a6c429b4433c87ff18384a5ec7bb3a" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>ScaleParticleParamFromOriginal</name></member>
+      <member refid="class_particle_source_1a9389522123fbe128cd6aafc9e0b272a8" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>SetOwner</name></member>
+      <member refid="class_particle_source_1a49cf246aca77de943da2799b517ad68b" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>SetParameter</name></member>
+      <member refid="class_particle_source_1abc9a5c9b15998add37e9911bf0b8321b" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>SetParticle</name></member>
+      <member refid="class_particle_source_1aa2734a10ecf17415ecced3075ef803a1" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>SetParticleAutoDestroyFlags</name></member>
+      <member refid="class_particle_source_1a5bb7c9465bece1298ae61c26d9d5b3ed" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>SetParticleByID</name></member>
+      <member refid="class_particle_source_1a5e72927e761ec18b16f3d43422856b33" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>SetParticleNative</name></member>
+      <member refid="class_particle_source_1afe03c6403d0192470bdc7c7042a8e57b" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>SetParticleParam</name></member>
+      <member refid="class_particle_source_1a89b4caf047f5b99947240e40fb54dbb5" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>SetSource</name></member>
+      <member refid="class_particle_source_1aa4e5bddf362f77e96b076a697dadd405" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>SetWiggle</name></member>
+      <member refid="class_particle_1ae9d5642dc992c942c1ae2f221e064921" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>Stop</name></member>
+      <member refid="class_particle_source_1a28b58f26c4487d1f79a4edd2d7821713" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>StopParticle</name></member>
+      <member refid="class_particle_source_1a6e5b006b6a66d96e9f845dcdcdf00b1f" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>StopParticleNative</name></member>
+      <member refid="class_particle_source_1a6dac4749922a2f38db03023b68a6e571" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>StopWiggle</name></member>
+      <member refid="class_particle_source_1a469c1578432fbfcf0ebac40d4ca0e25e" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>UpdateState</name></member>
+      <member refid="class_particle_source_1a944b20732efacb73523375139ee86a00" prot="private" virt="non-virtual"><scope>ParticleSource</scope><name>~ParticleSource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

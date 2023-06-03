@@ -1,0 +1,884 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_error_module_handler" kind="class" language="C++" prot="public">
+    <compoundname>ErrorModuleHandler</compoundname>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_error_module_handler_1aa99dfe677063c4a2aaeb55b743a06082" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int ErrorModuleHandler::ThrowError</definition>
+        <argsstring>(ErrorCategory category, int code, string additionalInfo=&quot;&quot;)</argsstring>
+        <name>ThrowError</name>
+        <qualifiedname>ErrorModuleHandler::ThrowError</qualifiedname>
+        <param>
+          <type><ref refid="_error_module_handler_8c_1ae780bc06025224f6526b03ee3527469e" kindref="member">ErrorCategory</ref></type>
+          <declname>category</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>code</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>additionalInfo</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Creates and throws the error code, sending it to the handler of the category. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ErrorCategory</computeroutput> Category the error is thrown from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>code</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The code that the error belongs to inside the category between [-32768, 32767] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>additionalInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Any additional info regarding the error, usually data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> The full error code <programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>errorCode<sp/>=<sp/><ref refid="class_error_module_handler" kindref="compound">ErrorModuleHandler</ref>.<ref refid="class_error_module_handler_1aa99dfe677063c4a2aaeb55b743a06082" kindref="member">ThrowError</ref>(<sp/><ref refid="_error_module_handler_8c_1ae780bc06025224f6526b03ee3527469e" kindref="member">ErrorCategory</ref>.ConnectErrorClient,<sp/>-1<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(<sp/>errorCode<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>errorCode<sp/>=<sp/>196607</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="43" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1a0347b2450e954120e90e12065e5951de" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int ErrorModuleHandler::ThrowErrorCode</definition>
+        <argsstring>(int errorCode, string additionalInfo=&quot;&quot;)</argsstring>
+        <name>ThrowErrorCode</name>
+        <qualifiedname>ErrorModuleHandler::ThrowErrorCode</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>errorCode</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>additionalInfo</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Throws the error code and sends it to the handler of the category. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>errorCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The full error code </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>additionalInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Any additional info regarding the error, usually data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> The full error code <programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>errorCode<sp/>=<sp/><ref refid="class_error_module_handler" kindref="compound">ErrorModuleHandler</ref>.<ref refid="class_error_module_handler_1a0347b2450e954120e90e12065e5951de" kindref="member">ThrowErrorCode</ref>(<sp/>0x0002FFFF<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(<sp/>errorCode<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>errorCode<sp/>=<sp/>196607</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="57" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1a2e13465cd61d3d7a452fbe7d4dbfcd53" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int ErrorModuleHandler::CreateError</definition>
+        <argsstring>(ErrorCategory category, int code)</argsstring>
+        <name>CreateError</name>
+        <qualifiedname>ErrorModuleHandler::CreateError</qualifiedname>
+        <param>
+          <type><ref refid="_error_module_handler_8c_1ae780bc06025224f6526b03ee3527469e" kindref="member">ErrorCategory</ref></type>
+          <declname>category</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+<para>Creates full error code. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ErrorCategory</computeroutput> Category the error is thrown from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>code</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The code that the error belongs to inside the category between [-32768, 32767] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> The full error code <programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>errorCode<sp/>=<sp/><ref refid="class_error_module_handler" kindref="compound">ErrorModuleHandler</ref>.<ref refid="class_error_module_handler_1a2e13465cd61d3d7a452fbe7d4dbfcd53" kindref="member">CreateError</ref>(<sp/><ref refid="_error_module_handler_8c_1ae780bc06025224f6526b03ee3527469e" kindref="member">ErrorCategory</ref>.ConnectErrorClient,<sp/>-1<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(<sp/>errorCode<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>errorCode<sp/>=<sp/>196607</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="71" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1a8255e1ab154c23b5e7c58f922fc25856" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_error_module_handler_8c_1ae780bc06025224f6526b03ee3527469e" kindref="member">ErrorCategory</ref></type>
+        <definition>static proto ErrorCategory ErrorModuleHandler::GetCategoryFromError</definition>
+        <argsstring>(int errorCode)</argsstring>
+        <name>GetCategoryFromError</name>
+        <qualifiedname>ErrorModuleHandler::GetCategoryFromError</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>errorCode</declname>
+        </param>
+        <briefdescription>
+<para>Returns the category the error was thrown from. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>errorCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The full error code </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>ErrorCategory</computeroutput> The ErrorCategory the error was thrown from <programlisting><codeline><highlight class="normal"><ref refid="_error_module_handler_8c_1ae780bc06025224f6526b03ee3527469e" kindref="member">ErrorCategory</ref><sp/>category<sp/>=<sp/><ref refid="class_error_module_handler" kindref="compound">ErrorModuleHandler</ref>.<ref refid="class_error_module_handler_1a8255e1ab154c23b5e7c58f922fc25856" kindref="member">GetCategoryFromError</ref>(<sp/>0x0002FFFF<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(<sp/>category<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>category<sp/>=<sp/>2</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="84" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1a58b162d636b08d31ce86e2ede3bee387" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static proto int ErrorModuleHandler::GetCodeFromError</definition>
+        <argsstring>(int errorCode)</argsstring>
+        <name>GetCodeFromError</name>
+        <qualifiedname>ErrorModuleHandler::GetCodeFromError</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>errorCode</declname>
+        </param>
+        <briefdescription>
+<para>Returns the code of the error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>errorCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The full error code </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> The code of the error <programlisting><codeline><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>code<sp/>=<sp/><ref refid="class_error_module_handler" kindref="compound">ErrorModuleHandler</ref>.<ref refid="class_error_module_handler_1a58b162d636b08d31ce86e2ede3bee387" kindref="member">GetCodeFromError</ref>(<sp/>0x0002FFFF<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(<sp/>code<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>code<sp/>=<sp/>-1</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="97" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1ac9d453621ec29ec98463c58b0fd8ba45" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto owned <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>static proto owned string ErrorModuleHandler::GetErrorHex</definition>
+        <argsstring>(int errorCode)</argsstring>
+        <name>GetErrorHex</name>
+        <qualifiedname>ErrorModuleHandler::GetErrorHex</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>errorCode</declname>
+        </param>
+        <briefdescription>
+<para>Returns a formatted string of the error code. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>errorCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The full error code </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>string</computeroutput> A formatted string of the error code <programlisting><codeline><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>formattedCode<sp/>=<sp/><ref refid="class_error_module_handler" kindref="compound">ErrorModuleHandler</ref>.<ref refid="class_error_module_handler_1ac9d453621ec29ec98463c58b0fd8ba45" kindref="member">GetErrorHex</ref>(<sp/>196607<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><ref refid="group___debug_1gaaa9351d895a1f244a26fd635c378c536" kindref="member">Print</ref>(<sp/>formattedCode<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">&gt;&gt;<sp/>formattedCode<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;0x0002FFFF&apos;</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="110" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1a869ee220bda5c45f3649ce63927bc664" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static proto bool ErrorModuleHandler::AddModule</definition>
+        <argsstring>(ErrorCategory category, notnull ErrorHandlerModule errorModule)</argsstring>
+        <name>AddModule</name>
+        <qualifiedname>ErrorModuleHandler::AddModule</qualifiedname>
+        <param>
+          <type><ref refid="_error_module_handler_8c_1ae780bc06025224f6526b03ee3527469e" kindref="member">ErrorCategory</ref></type>
+          <declname>category</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_error_handler_module" kindref="compound">ErrorHandlerModule</ref></type>
+          <declname>errorModule</declname>
+        </param>
+        <briefdescription>
+<para>Adds a module handler to the <ref refid="class_error_module_handler" kindref="compound">ErrorModuleHandler</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ErrorCategory</computeroutput> Category the module is for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>errorModule</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_error_handler_module" kindref="compound">ErrorHandlerModule</ref></computeroutput> The class containing the information and codes for the category. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the adding of the module was successful or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="120" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1adf6c1905db38fe2b65071200770db8fc" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static proto bool ErrorModuleHandler::RemoveModule</definition>
+        <argsstring>(ErrorCategory category)</argsstring>
+        <name>RemoveModule</name>
+        <qualifiedname>ErrorModuleHandler::RemoveModule</qualifiedname>
+        <param>
+          <type><ref refid="_error_module_handler_8c_1ae780bc06025224f6526b03ee3527469e" kindref="member">ErrorCategory</ref></type>
+          <declname>category</declname>
+        </param>
+        <briefdescription>
+<para>Removes a module handler from the <ref refid="class_error_module_handler" kindref="compound">ErrorModuleHandler</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ErrorCategory</computeroutput> Category the module is for </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether the removing of the module was successful or not </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="127" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1a440e9ab4e85106d48b8e34e519aeba06" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>static proto string ErrorModuleHandler::GetClientMessage</definition>
+        <argsstring>(ErrorCategory category, int code, string additionalInfo=&quot;&quot;)</argsstring>
+        <name>GetClientMessage</name>
+        <qualifiedname>ErrorModuleHandler::GetClientMessage</qualifiedname>
+        <param>
+          <type><ref refid="_error_module_handler_8c_1ae780bc06025224f6526b03ee3527469e" kindref="member">ErrorCategory</ref></type>
+          <declname>category</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>code</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>additionalInfo</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Gets the Client Message for specified error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ErrorCategory</computeroutput> Category the error is thrown from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>code</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The code that the error belongs to inside the category between [-32768, 32767] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>additionalInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Any additional info regarding the error, usually data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>string</computeroutput> The message which would appear on Client </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="138" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1a80f0a503f6164c2741682c9a3dfa9732" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>static proto string ErrorModuleHandler::GetClientMessageByCode</definition>
+        <argsstring>(int errorCode, string additionalInfo=&quot;&quot;)</argsstring>
+        <name>GetClientMessageByCode</name>
+        <qualifiedname>ErrorModuleHandler::GetClientMessageByCode</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>errorCode</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>additionalInfo</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Gets the Client Message for specified error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>errorCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The full error code </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>additionalInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Any additional info regarding the error, usually data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>string</computeroutput> The message which would appear on Client </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="146" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1a7bbc5bc4692fe15e893c8ab17204e412" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>static proto string ErrorModuleHandler::GetLastClientMessage</definition>
+        <argsstring>(ErrorCategory category, int code)</argsstring>
+        <name>GetLastClientMessage</name>
+        <qualifiedname>ErrorModuleHandler::GetLastClientMessage</qualifiedname>
+        <param>
+          <type><ref refid="_error_module_handler_8c_1ae780bc06025224f6526b03ee3527469e" kindref="member">ErrorCategory</ref></type>
+          <declname>category</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+<para>Gets the Client Message for specified error, while attempting to restore information on the most recent error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ErrorCategory</computeroutput> Category the error is thrown from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>code</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The code that the error belongs to inside the category between [-32768, 32767] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>string</computeroutput> The message which would appear on Client </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="154" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1a3fb9bff2ed943331f913c8e7e424935c" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>static proto string ErrorModuleHandler::GetLastClientMessageByCode</definition>
+        <argsstring>(int errorCode)</argsstring>
+        <name>GetLastClientMessageByCode</name>
+        <qualifiedname>ErrorModuleHandler::GetLastClientMessageByCode</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>errorCode</declname>
+        </param>
+        <briefdescription>
+<para>Gets the Client Message for specified error, while attempting to restore information on the most recent error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>errorCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The full error code </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>string</computeroutput> The message which would appear on Client </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="161" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1a6564be66aef02448de3fec534d4d213f" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>static proto string ErrorModuleHandler::GetServerMessage</definition>
+        <argsstring>(ErrorCategory category, int code, string additionalInfo=&quot;&quot;)</argsstring>
+        <name>GetServerMessage</name>
+        <qualifiedname>ErrorModuleHandler::GetServerMessage</qualifiedname>
+        <param>
+          <type><ref refid="_error_module_handler_8c_1ae780bc06025224f6526b03ee3527469e" kindref="member">ErrorCategory</ref></type>
+          <declname>category</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>code</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>additionalInfo</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Gets the Server Message for specified error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ErrorCategory</computeroutput> Category the error is thrown from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>code</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The code that the error belongs to inside the category between [-32768, 32767] </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>additionalInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Any additional info regarding the error, usually data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>string</computeroutput> The message which would appear on Server </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="170" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1ac48be238664f3e98d400233a1ce3feea" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>static proto string ErrorModuleHandler::GetServerMessageByCode</definition>
+        <argsstring>(int errorCode, string additionalInfo=&quot;&quot;)</argsstring>
+        <name>GetServerMessageByCode</name>
+        <qualifiedname>ErrorModuleHandler::GetServerMessageByCode</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>errorCode</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>additionalInfo</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Gets the Server Message for specified error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>errorCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The full error code </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>additionalInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> Any additional info regarding the error, usually data </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>string</computeroutput> The message which would appear on Server </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="178" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1ac0e2c0bc356695829dff4922d3334241" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>static proto string ErrorModuleHandler::GetLastServerMessage</definition>
+        <argsstring>(ErrorCategory category, int code)</argsstring>
+        <name>GetLastServerMessage</name>
+        <qualifiedname>ErrorModuleHandler::GetLastServerMessage</qualifiedname>
+        <param>
+          <type><ref refid="_error_module_handler_8c_1ae780bc06025224f6526b03ee3527469e" kindref="member">ErrorCategory</ref></type>
+          <declname>category</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+<para>Gets the Server Message for specified error, while attempting to restore information on the most recent error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ErrorCategory</computeroutput> Category the error is thrown from </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>code</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The code that the error belongs to inside the category between [-32768, 32767] </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>string</computeroutput> The message which would appear on Server </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="186" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1adeec3b4e15af697df37989236b960511" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto <ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>static proto string ErrorModuleHandler::GetLastServerMessageByCode</definition>
+        <argsstring>(int errorCode)</argsstring>
+        <name>GetLastServerMessageByCode</name>
+        <qualifiedname>ErrorModuleHandler::GetLastServerMessageByCode</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>errorCode</declname>
+        </param>
+        <briefdescription>
+<para>Gets the Server Message for specified error, while attempting to restore information on the most recent error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>errorCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The full error code </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>string</computeroutput> The message which would appear on Server </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="193" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1a91269470d3b51a9b0bb803e13e56174c" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="class_error_module_handler" kindref="compound">ErrorModuleHandler</ref></type>
+        <definition>static proto native ErrorModuleHandler ErrorModuleHandler::GetInstance</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstance</name>
+        <qualifiedname>ErrorModuleHandler::GetInstance</qualifiedname>
+        <briefdescription>
+<para>Gets the EMH Instance. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput><ref refid="class_error_module_handler" kindref="compound">ErrorModuleHandler</ref></computeroutput> The <ref refid="class_error_module_handler" kindref="compound">ErrorModuleHandler</ref> Instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="201" column="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1a60e9aab8eff8310bb7d3675a5994334c" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>static proto void ErrorModuleHandler::GetErrorModules</definition>
+        <argsstring>(notnull out array&lt; ErrorHandlerModule &gt; errorModules)</argsstring>
+        <name>GetErrorModules</name>
+        <qualifiedname>ErrorModuleHandler::GetErrorModules</qualifiedname>
+        <param>
+          <type>notnull out <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="class_error_handler_module" kindref="compound">ErrorHandlerModule</ref> &gt;</type>
+          <declname>errorModules</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="203" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_error_module_handler_1aeaaf72dccb900c9732f746f3dcfd28d0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ErrorModuleHandler::SafeAddModule</definition>
+        <argsstring>(notnull ErrorHandlerModule errorModule)</argsstring>
+        <name>SafeAddModule</name>
+        <qualifiedname>ErrorModuleHandler::SafeAddModule</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_error_handler_module" kindref="compound">ErrorHandlerModule</ref></type>
+          <declname>errorModule</declname>
+        </param>
+        <briefdescription>
+<para>Wrapper for AddModule to give feedback whether it succeeded or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>errorModule</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_error_handler_module" kindref="compound">ErrorHandlerModule</ref></computeroutput> The <ref refid="class_error_handler_module" kindref="compound">ErrorHandlerModule</ref> to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="211" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" bodystart="211" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1a1530f72796058d9ee5676474028141e9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ErrorModuleHandler::SafeRemoveModule</definition>
+        <argsstring>(notnull ErrorHandlerModule errorModule)</argsstring>
+        <name>SafeRemoveModule</name>
+        <qualifiedname>ErrorModuleHandler::SafeRemoveModule</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_error_handler_module" kindref="compound">ErrorHandlerModule</ref></type>
+          <declname>errorModule</declname>
+        </param>
+        <briefdescription>
+<para>Wrapper for RemoveModule to give feedback whether it succeeded or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>errorModule</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_error_handler_module" kindref="compound">ErrorHandlerModule</ref></computeroutput> The <ref refid="class_error_handler_module" kindref="compound">ErrorHandlerModule</ref> to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="221" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" bodystart="221" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1ab195559d64107c015565835821876eb6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ErrorModuleHandler::SafeRemoveModule</definition>
+        <argsstring>(ErrorCategory category)</argsstring>
+        <name>SafeRemoveModule</name>
+        <qualifiedname>ErrorModuleHandler::SafeRemoveModule</qualifiedname>
+        <param>
+          <type><ref refid="_error_module_handler_8c_1ae780bc06025224f6526b03ee3527469e" kindref="member">ErrorCategory</ref></type>
+          <declname>category</declname>
+        </param>
+        <briefdescription>
+<para>Wrapper for RemoveModule to give feedback whether it succeeded or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>category</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>ErrorCategory</computeroutput> Category to remove </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="231" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" bodystart="231" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1a1fc58451e5b54ce4eaf19ad9c288a78d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void ErrorModuleHandler::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>ErrorModuleHandler::Init</qualifiedname>
+        <briefdescription>
+<para>Gets called shortly after creation of <ref refid="class_error_module_handler" kindref="compound">ErrorModuleHandler</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="240" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" bodystart="240" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="class_error_module_handler_1a9c836fff2f9cfea9a0950dfb0897602e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ErrorModuleHandler::OnEvent</definition>
+        <argsstring>(EventType eventTypeId, Param params)</argsstring>
+        <name>OnEvent</name>
+        <qualifiedname>ErrorModuleHandler::OnEvent</qualifiedname>
+        <param>
+          <type><ref refid="group___widget_a_p_i_1ga8bb92c7c1a97bd358a549857dc2fe53c" kindref="member">EventType</ref></type>
+          <declname>eventTypeId</declname>
+        </param>
+        <param>
+          <type><ref refid="class_param" kindref="compound">Param</ref></type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>is called by DayZGame to pass Events. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="255" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" bodystart="255" bodyend="264"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The error handler itself, for managing and distributing errors to modules Manages the <ref refid="class_error_handler_module" kindref="compound">ErrorHandlerModule</ref> instances inserted in Init. API comes with several functions to Create, Throw and extract data from error codes. The format used is an int which is made up of two shorts, one that holds the category and one that holds the code. Therefore when looking at an error code, it is much easier to identify when looking at the hex value. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" line="28" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Global/ErrorModuleHandler/ErrorModuleHandler.c" bodystart="29" bodyend="265"/>
+    <listofallmembers>
+      <member refid="class_error_module_handler_1a869ee220bda5c45f3649ce63927bc664" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>AddModule</name></member>
+      <member refid="class_error_module_handler_1a2e13465cd61d3d7a452fbe7d4dbfcd53" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>CreateError</name></member>
+      <member refid="class_error_module_handler_1a8255e1ab154c23b5e7c58f922fc25856" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>GetCategoryFromError</name></member>
+      <member refid="class_error_module_handler_1a440e9ab4e85106d48b8e34e519aeba06" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>GetClientMessage</name></member>
+      <member refid="class_error_module_handler_1a80f0a503f6164c2741682c9a3dfa9732" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>GetClientMessageByCode</name></member>
+      <member refid="class_error_module_handler_1a58b162d636b08d31ce86e2ede3bee387" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>GetCodeFromError</name></member>
+      <member refid="class_error_module_handler_1ac9d453621ec29ec98463c58b0fd8ba45" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>GetErrorHex</name></member>
+      <member refid="class_error_module_handler_1a60e9aab8eff8310bb7d3675a5994334c" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>GetErrorModules</name></member>
+      <member refid="class_error_module_handler_1a91269470d3b51a9b0bb803e13e56174c" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>GetInstance</name></member>
+      <member refid="class_error_module_handler_1a7bbc5bc4692fe15e893c8ab17204e412" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>GetLastClientMessage</name></member>
+      <member refid="class_error_module_handler_1a3fb9bff2ed943331f913c8e7e424935c" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>GetLastClientMessageByCode</name></member>
+      <member refid="class_error_module_handler_1ac0e2c0bc356695829dff4922d3334241" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>GetLastServerMessage</name></member>
+      <member refid="class_error_module_handler_1adeec3b4e15af697df37989236b960511" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>GetLastServerMessageByCode</name></member>
+      <member refid="class_error_module_handler_1a6564be66aef02448de3fec534d4d213f" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>GetServerMessage</name></member>
+      <member refid="class_error_module_handler_1ac48be238664f3e98d400233a1ce3feea" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>GetServerMessageByCode</name></member>
+      <member refid="class_error_module_handler_1a1fc58451e5b54ce4eaf19ad9c288a78d" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>Init</name></member>
+      <member refid="class_error_module_handler_1a9c836fff2f9cfea9a0950dfb0897602e" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>OnEvent</name></member>
+      <member refid="class_error_module_handler_1adf6c1905db38fe2b65071200770db8fc" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>RemoveModule</name></member>
+      <member refid="class_error_module_handler_1aeaaf72dccb900c9732f746f3dcfd28d0" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>SafeAddModule</name></member>
+      <member refid="class_error_module_handler_1a1530f72796058d9ee5676474028141e9" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>SafeRemoveModule</name></member>
+      <member refid="class_error_module_handler_1ab195559d64107c015565835821876eb6" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>SafeRemoveModule</name></member>
+      <member refid="class_error_module_handler_1aa99dfe677063c4a2aaeb55b743a06082" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>ThrowError</name></member>
+      <member refid="class_error_module_handler_1a0347b2450e954120e90e12065e5951de" prot="private" virt="non-virtual"><scope>ErrorModuleHandler</scope><name>ThrowErrorCode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

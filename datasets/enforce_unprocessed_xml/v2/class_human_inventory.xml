@@ -1,0 +1,1347 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_human_inventory" kind="class" language="C++" prot="public">
+    <compoundname>HumanInventory</compoundname>
+    <basecompoundref refid="class_game_inventory" prot="private" virt="non-virtual">GameInventory</basecompoundref>
+    <derivedcompoundref refid="class_human_inventory_with_f_s_m" prot="private" virt="non-virtual">HumanInventoryWithFSM</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_human_inventory_1a249eb023042adad1e19d080c38e9b580" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int HumanInventory::m_syncClearUserReservationindex</definition>
+        <argsstring></argsstring>
+        <name>m_syncClearUserReservationindex</name>
+        <qualifiedname>HumanInventory::m_syncClearUserReservationindex</qualifiedname>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="11" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_human_inventory_1a314bb90c0fcbd13aa737c13b199ac429" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+        <definition>HumanInventory::GetEntityInHands</definition>
+        <argsstring>()</argsstring>
+        <name>GetEntityInHands</name>
+        <qualifiedname>HumanInventory::GetEntityInHands</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>entity in hands </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="16" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a508e9c00d88de0c5af8027d35667e914" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>HumanInventory::CanAddEntityInHands</definition>
+        <argsstring>(EntityAI e)</argsstring>
+        <name>CanAddEntityInHands</name>
+        <qualifiedname>HumanInventory::CanAddEntityInHands</qualifiedname>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>alternative for TestAddEntityInHands(e, true, true, true); </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="21" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a02627264b78a554ea809fbbb60ddcb9d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>HumanInventory::TestAddEntityInHands</definition>
+        <argsstring>(EntityAI e, bool do_resevation_check, bool do_item_check, bool do_lock_check, bool do_occupancy_test, bool do_script_check)</argsstring>
+        <name>TestAddEntityInHands</name>
+        <qualifiedname>HumanInventory::TestAddEntityInHands</qualifiedname>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>do_resevation_check</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>do_item_check</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>do_lock_check</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>do_occupancy_test</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>do_script_check</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entity to test for taking in hands </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">do_item_check</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>deny if entity is not <ref refid="class_inventory_item" kindref="compound">InventoryItem</ref> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">do_occupancy_test</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>deny if there is item in hands already </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">do_script_check</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>deny if script conditions fail </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if item passed all tests </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="30" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1abe1a0ffa507784ed5c304d4f211d9f72" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>HumanInventory::CanRemoveEntityInHands</definition>
+        <argsstring>()</argsstring>
+        <name>CanRemoveEntityInHands</name>
+        <qualifiedname>HumanInventory::CanRemoveEntityInHands</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if entity can be removed from hands </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="35" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a63ea5953b048f4e80ab5651fdd755dcb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInventory::CanOpenInventory</definition>
+        <argsstring>()</argsstring>
+        <name>CanOpenInventory</name>
+        <qualifiedname>HumanInventory::CanOpenInventory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="37" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a313bbc773ff4207db5bfffc7cf3a0ae7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+        <definition>HumanInventory::CreateInHands</definition>
+        <argsstring>(string typeName)</argsstring>
+        <name>CreateInHands</name>
+        <qualifiedname>HumanInventory::CreateInHands</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>typeName</declname>
+        </param>
+        <briefdescription>
+<para>creates new entity in hands </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">typeName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>type name of the entity to be created </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>new entity or null otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="44" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a46012bb0a1550db91d68a9b13b53dcbd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int HumanInventory::GetUserReservedLocationCount</definition>
+        <argsstring>()</argsstring>
+        <name>GetUserReservedLocationCount</name>
+        <qualifiedname>HumanInventory::GetUserReservedLocationCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="46" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a96dc9983289f4a3e8bbffaeeebb863a3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int HumanInventory::FindUserReservedLocationIndex</definition>
+        <argsstring>(notnull EntityAI e)</argsstring>
+        <name>FindUserReservedLocationIndex</name>
+        <qualifiedname>HumanInventory::FindUserReservedLocationIndex</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="47" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a4a3b700f9732865f86991bfc0fc99f36" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int HumanInventory::FindCollidingUserReservedLocationIndex</definition>
+        <argsstring>(notnull EntityAI e, notnull InventoryLocation dst)</argsstring>
+        <name>FindCollidingUserReservedLocationIndex</name>
+        <qualifiedname>HumanInventory::FindCollidingUserReservedLocationIndex</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="48" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1ace8848e4887234b1e716547254e5f68e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInventory::GetUserReservedLocation</definition>
+        <argsstring>(int index, out notnull InventoryLocation dst)</argsstring>
+        <name>GetUserReservedLocation</name>
+        <qualifiedname>HumanInventory::GetUserReservedLocation</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type>out notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="49" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a55ed97e7176701ee108648b8fa023e39" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int HumanInventory::FindFirstUserReservedLocationIndexForContainer</definition>
+        <argsstring>(notnull EntityAI e)</argsstring>
+        <name>FindFirstUserReservedLocationIndexForContainer</name>
+        <qualifiedname>HumanInventory::FindFirstUserReservedLocationIndexForContainer</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="50" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a1a5c1080ca710f0a7edfea04c13375ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInventory::SetUserReservedLocation</definition>
+        <argsstring>(notnull EntityAI eai, notnull InventoryLocation dst)</argsstring>
+        <name>SetUserReservedLocation</name>
+        <qualifiedname>HumanInventory::SetUserReservedLocation</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>eai</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="52" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a8354876591165b70dafcbfc6bde0f861" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInventory::ClearUserReservedLocation</definition>
+        <argsstring>(notnull EntityAI eai)</argsstring>
+        <name>ClearUserReservedLocation</name>
+        <qualifiedname>HumanInventory::ClearUserReservedLocation</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>eai</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="53" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1adc6678bb8d2d3b8548cc79affe7e2466" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInventory::ClearUserReservedLocationAtIndex</definition>
+        <argsstring>(int index)</argsstring>
+        <name>ClearUserReservedLocationAtIndex</name>
+        <qualifiedname>HumanInventory::ClearUserReservedLocationAtIndex</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="54" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a3e21146381b9440455d0314f41d3c069" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInventory::ClearUserReservedLocationForContainer</definition>
+        <argsstring>(notnull EntityAI eai)</argsstring>
+        <name>ClearUserReservedLocationForContainer</name>
+        <qualifiedname>HumanInventory::ClearUserReservedLocationForContainer</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>eai</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="55" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1af17a6c45a65768cfd8e054213595e887" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInventory::GetDebugFlag</definition>
+        <argsstring>()</argsstring>
+        <name>GetDebugFlag</name>
+        <qualifiedname>HumanInventory::GetDebugFlag</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="56" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a846ce5819516e9d13a26b91652aed1e7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+        <definition>HumanInventory::CreateInInventory</definition>
+        <argsstring>(string type)</argsstring>
+        <name>CreateInInventory</name>
+        <qualifiedname>HumanInventory::CreateInInventory</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>creates entity somewhere in inventory </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>item</computeroutput> type to be placed in inventory </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>created entity </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="65" column="19" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="65" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a5968a6ae64fe5450a624a337e38078a0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HumanInventory::ClearUserReservedLocationSynced</definition>
+        <argsstring>(notnull EntityAI eai)</argsstring>
+        <name>ClearUserReservedLocationSynced</name>
+        <qualifiedname>HumanInventory::ClearUserReservedLocationSynced</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>eai</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="73" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="73" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a2dd00c54237949d08e8b0410b74f169e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HumanInventory::ClearUserReservedLocationAtIndexSynced</definition>
+        <argsstring>(int index)</argsstring>
+        <name>ClearUserReservedLocationAtIndexSynced</name>
+        <qualifiedname>HumanInventory::ClearUserReservedLocationAtIndexSynced</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="85" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="85" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a36daecfcc7e6657464d215bc431fc460" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Man</type>
+        <definition>Man HumanInventory::GetManOwner</definition>
+        <argsstring>()</argsstring>
+        <name>GetManOwner</name>
+        <qualifiedname>HumanInventory::GetManOwner</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="102" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a7b7015724e914ce7ae56bbae277634b1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool HumanInventory::HasEntityInHands</definition>
+        <argsstring>(EntityAI e)</argsstring>
+        <name>HasEntityInHands</name>
+        <qualifiedname>HumanInventory::HasEntityInHands</qualifiedname>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="104" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a396ce071d01b9b32c02f6793e8eb6df5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool HumanInventory::ProcessHandEvent</definition>
+        <argsstring>(HandEventBase e)</argsstring>
+        <name>ProcessHandEvent</name>
+        <qualifiedname>HumanInventory::ProcessHandEvent</qualifiedname>
+        <param>
+          <type><ref refid="class_hand_event_base" kindref="compound">HandEventBase</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="106" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1aa0e2c685048b541b33fbe06b1e38d945" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HumanInventory::OnHandsStateChanged</definition>
+        <argsstring>(HandStateBase src, HandStateBase dst)</argsstring>
+        <name>OnHandsStateChanged</name>
+        <qualifiedname>HumanInventory::OnHandsStateChanged</qualifiedname>
+        <param>
+          <type><ref refid="class_hand_state_base" kindref="compound">HandStateBase</ref></type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type><ref refid="class_hand_state_base" kindref="compound">HandStateBase</ref></type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="108" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a68796304fc2ca98db94ecd5c0c1bcba5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HumanInventory::OnHandsExitedStableState</definition>
+        <argsstring>(HandStateBase src, HandStateBase dst)</argsstring>
+        <name>OnHandsExitedStableState</name>
+        <qualifiedname>HumanInventory::OnHandsExitedStableState</qualifiedname>
+        <param>
+          <type><ref refid="class_hand_state_base" kindref="compound">HandStateBase</ref></type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type><ref refid="class_hand_state_base" kindref="compound">HandStateBase</ref></type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="109" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a5f750c5a14992a81d63c3935029ebb9b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HumanInventory::OnHandsEnteredStableState</definition>
+        <argsstring>(HandStateBase src, HandStateBase dst)</argsstring>
+        <name>OnHandsEnteredStableState</name>
+        <qualifiedname>HumanInventory::OnHandsEnteredStableState</qualifiedname>
+        <param>
+          <type><ref refid="class_hand_state_base" kindref="compound">HandStateBase</ref></type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type><ref refid="class_hand_state_base" kindref="compound">HandStateBase</ref></type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="110" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1aecd587d8d9b3de2a7675250c7e53d80a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HumanInventory::OnEntityInHandsCreated</definition>
+        <argsstring>(InventoryLocation src)</argsstring>
+        <name>OnEntityInHandsCreated</name>
+        <qualifiedname>HumanInventory::OnEntityInHandsCreated</qualifiedname>
+        <param>
+          <type><ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="112" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="112" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a61423c88d13a20afd8e6928c5bee82e0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HumanInventory::OnEntityInHandsDestroyed</definition>
+        <argsstring>(InventoryLocation src)</argsstring>
+        <name>OnEntityInHandsDestroyed</name>
+        <qualifiedname>HumanInventory::OnEntityInHandsDestroyed</qualifiedname>
+        <param>
+          <type><ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="120" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="120" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a54861663fd0fa49c2cd4934f6561c821" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool HumanInventory::HandEvent</definition>
+        <argsstring>(InventoryMode mode, HandEventBase e)</argsstring>
+        <name>HandEvent</name>
+        <qualifiedname>HumanInventory::HandEvent</qualifiedname>
+        <param>
+          <type><ref refid="3___game_2_systems_2_inventory_2_inventory_8c_1a5073c77c5d68882860f688a9fc4cba4d" kindref="member">InventoryMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type><ref refid="class_hand_event_base" kindref="compound">HandEventBase</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="128" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1aa98f65519717db93a5b1889e8ba8276e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool HumanInventory::DropEntity</definition>
+        <argsstring>(InventoryMode mode, EntityAI owner, notnull EntityAI item)</argsstring>
+        <name>DropEntity</name>
+        <qualifiedname>HumanInventory::DropEntity</qualifiedname>
+        <param>
+          <type><ref refid="3___game_2_systems_2_inventory_2_inventory_8c_1a5073c77c5d68882860f688a9fc4cba4d" kindref="member">InventoryMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>owner</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="133" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="133" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1af58563d1557e581b1812b4b2e826a378" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool HumanInventory::ThrowEntity</definition>
+        <argsstring>(EntityAI item, vector dir, float force)</argsstring>
+        <name>ThrowEntity</name>
+        <qualifiedname>HumanInventory::ThrowEntity</qualifiedname>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>force</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="152" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="152" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a74aceb74f955841bab4784039a18955d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool HumanInventory::RedirectToHandEvent</definition>
+        <argsstring>(InventoryMode mode, notnull InventoryLocation src, notnull InventoryLocation dst)</argsstring>
+        <name>RedirectToHandEvent</name>
+        <qualifiedname>HumanInventory::RedirectToHandEvent</qualifiedname>
+        <param>
+          <type><ref refid="3___game_2_systems_2_inventory_2_inventory_8c_1a5073c77c5d68882860f688a9fc4cba4d" kindref="member">InventoryMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="185" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="185" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1ad261eaeaceb38a6db7250f02bfe1fe9e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool HumanInventory::TakeToDst</definition>
+        <argsstring>(InventoryMode mode, notnull InventoryLocation src, notnull InventoryLocation dst)</argsstring>
+        <name>TakeToDst</name>
+        <qualifiedname>HumanInventory::TakeToDst</qualifiedname>
+        <param>
+          <type><ref refid="3___game_2_systems_2_inventory_2_inventory_8c_1a5073c77c5d68882860f688a9fc4cba4d" kindref="member">InventoryMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="228" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="228" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a967d72fa11c9cf140c034384307657c0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool HumanInventory::TakeEntityToInventory</definition>
+        <argsstring>(InventoryMode mode, FindInventoryLocationType flags, notnull EntityAI item)</argsstring>
+        <name>TakeEntityToInventory</name>
+        <qualifiedname>HumanInventory::TakeEntityToInventory</qualifiedname>
+        <param>
+          <type><ref refid="3___game_2_systems_2_inventory_2_inventory_8c_1a5073c77c5d68882860f688a9fc4cba4d" kindref="member">InventoryMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type><ref refid="_inventory_location_8c_1a71733d54d455853550df7ae602bf23dd" kindref="member">FindInventoryLocationType</ref></type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="238" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="238" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1acce4efdf3cf9b84673759ba7c0eba752" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool HumanInventory::TakeEntityToCargoEx</definition>
+        <argsstring>(InventoryMode mode, notnull EntityAI item, int idx, int row, int col)</argsstring>
+        <name>TakeEntityToCargoEx</name>
+        <qualifiedname>HumanInventory::TakeEntityToCargoEx</qualifiedname>
+        <param>
+          <type><ref refid="3___game_2_systems_2_inventory_2_inventory_8c_1a5073c77c5d68882860f688a9fc4cba4d" kindref="member">InventoryMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Put item into into cargo on specific cargo location. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="265" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="265" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a3758ad61b3ee08840065fdfe65184c77" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool HumanInventory::TakeEntityAsAttachmentEx</definition>
+        <argsstring>(InventoryMode mode, notnull EntityAI item, int slot)</argsstring>
+        <name>TakeEntityAsAttachmentEx</name>
+        <qualifiedname>HumanInventory::TakeEntityAsAttachmentEx</qualifiedname>
+        <param>
+          <type><ref refid="3___game_2_systems_2_inventory_2_inventory_8c_1a5073c77c5d68882860f688a9fc4cba4d" kindref="member">InventoryMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>item</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>slot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="292" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="292" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1ae4dc4412e66f9f7eaf8b481519a66da7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool HumanInventory::SwapEntities</definition>
+        <argsstring>(InventoryMode mode, notnull EntityAI item1, notnull EntityAI item2)</argsstring>
+        <name>SwapEntities</name>
+        <qualifiedname>HumanInventory::SwapEntities</qualifiedname>
+        <param>
+          <type><ref refid="3___game_2_systems_2_inventory_2_inventory_8c_1a5073c77c5d68882860f688a9fc4cba4d" kindref="member">InventoryMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>item1</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>item2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>returns item to previous location, if available</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="320" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="320" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1adc84c8d7f6ec0536b95d5ae8eb6824ff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool HumanInventory::ForceSwapEntities</definition>
+        <argsstring>(InventoryMode mode, notnull EntityAI item1, notnull EntityAI item2, notnull InventoryLocation item2_dst)</argsstring>
+        <name>ForceSwapEntities</name>
+        <qualifiedname>HumanInventory::ForceSwapEntities</qualifiedname>
+        <param>
+          <type><ref refid="3___game_2_systems_2_inventory_2_inventory_8c_1a5073c77c5d68882860f688a9fc4cba4d" kindref="member">InventoryMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>item1</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>item2</declname>
+        </param>
+        <param>
+          <type>notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>item2_dst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>returns item to previous location, if available</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="366" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="366" bodyend="418"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1aa9497219f241f89c02cef90813dc806e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool HumanInventory::LocalDestroyEntity</definition>
+        <argsstring>(notnull EntityAI item)</argsstring>
+        <name>LocalDestroyEntity</name>
+        <qualifiedname>HumanInventory::LocalDestroyEntity</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="420" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="420" bodyend="442"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a0980e45e35e35696a8cb3e0e5a2a52af" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>override bool HumanInventory::ReplaceItemWithNew</definition>
+        <argsstring>(InventoryMode mode, ReplaceItemWithNewLambdaBase lambda)</argsstring>
+        <name>ReplaceItemWithNew</name>
+        <qualifiedname>HumanInventory::ReplaceItemWithNew</qualifiedname>
+        <param>
+          <type><ref refid="3___game_2_systems_2_inventory_2_inventory_8c_1a5073c77c5d68882860f688a9fc4cba4d" kindref="member">InventoryMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type><ref refid="class_replace_item_with_new_lambda_base" kindref="compound">ReplaceItemWithNewLambdaBase</ref></type>
+          <declname>lambda</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="444" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="444" bodyend="450"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a778e794eefe083519ac9029d0d15d233" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool HumanInventory::ReplaceItemElsewhereWithNewInHands</definition>
+        <argsstring>(InventoryMode mode, ReplaceItemWithNewLambdaBase lambda)</argsstring>
+        <name>ReplaceItemElsewhereWithNewInHands</name>
+        <qualifiedname>HumanInventory::ReplaceItemElsewhereWithNewInHands</qualifiedname>
+        <param>
+          <type><ref refid="3___game_2_systems_2_inventory_2_inventory_8c_1a5073c77c5d68882860f688a9fc4cba4d" kindref="member">InventoryMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type><ref refid="class_replace_item_with_new_lambda_base" kindref="compound">ReplaceItemWithNewLambdaBase</ref></type>
+          <declname>lambda</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="452" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="452" bodyend="455"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1aee1cde8a7933829abe8728066bf16d32" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool HumanInventory::ReplaceItemInElsewhereWithNewinHandsImpl</definition>
+        <argsstring>(InventoryMode mode, HandEventBase e)</argsstring>
+        <name>ReplaceItemInElsewhereWithNewinHandsImpl</name>
+        <qualifiedname>HumanInventory::ReplaceItemInElsewhereWithNewinHandsImpl</qualifiedname>
+        <param>
+          <type><ref refid="3___game_2_systems_2_inventory_2_inventory_8c_1a5073c77c5d68882860f688a9fc4cba4d" kindref="member">InventoryMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type><ref refid="class_hand_event_base" kindref="compound">HandEventBase</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="457" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="457" bodyend="490"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a9d4329a1b943a75b48f50248bad14d82" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool HumanInventory::ReplaceItemInHandsWithNewImpl</definition>
+        <argsstring>(InventoryMode mode, HandEventBase e)</argsstring>
+        <name>ReplaceItemInHandsWithNewImpl</name>
+        <qualifiedname>HumanInventory::ReplaceItemInHandsWithNewImpl</qualifiedname>
+        <param>
+          <type><ref refid="3___game_2_systems_2_inventory_2_inventory_8c_1a5073c77c5d68882860f688a9fc4cba4d" kindref="member">InventoryMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type><ref refid="class_hand_event_base" kindref="compound">HandEventBase</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="492" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="492" bodyend="521"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1ad1ff04e2f6d6a330acf6dc531e07898e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool HumanInventory::ReplaceItemInHandsWithNew</definition>
+        <argsstring>(InventoryMode mode, ReplaceItemWithNewLambdaBase lambda)</argsstring>
+        <name>ReplaceItemInHandsWithNew</name>
+        <qualifiedname>HumanInventory::ReplaceItemInHandsWithNew</qualifiedname>
+        <param>
+          <type><ref refid="3___game_2_systems_2_inventory_2_inventory_8c_1a5073c77c5d68882860f688a9fc4cba4d" kindref="member">InventoryMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type><ref refid="class_replace_item_with_new_lambda_base" kindref="compound">ReplaceItemWithNewLambdaBase</ref></type>
+          <declname>lambda</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="523" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="523" bodyend="526"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a62706df71c598bc6f257816a50452989" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool HumanInventory::ReplaceItemInHandsWithNewElsewhere</definition>
+        <argsstring>(InventoryMode mode, ReplaceItemWithNewLambdaBase lambda)</argsstring>
+        <name>ReplaceItemInHandsWithNewElsewhere</name>
+        <qualifiedname>HumanInventory::ReplaceItemInHandsWithNewElsewhere</qualifiedname>
+        <param>
+          <type><ref refid="3___game_2_systems_2_inventory_2_inventory_8c_1a5073c77c5d68882860f688a9fc4cba4d" kindref="member">InventoryMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type><ref refid="class_replace_item_with_new_lambda_base" kindref="compound">ReplaceItemWithNewLambdaBase</ref></type>
+          <declname>lambda</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="528" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="528" bodyend="531"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1adfdfb7842bb43c5c3bab65daaef01d7e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool HumanInventory::SwappingToPreviousLocation</definition>
+        <argsstring>(EntityAI item1, EntityAI item2, out InventoryLocation dst)</argsstring>
+        <name>SwappingToPreviousLocation</name>
+        <qualifiedname>HumanInventory::SwappingToPreviousLocation</qualifiedname>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>item1</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>item2</declname>
+        </param>
+        <param>
+          <type>out <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="533" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="533" bodyend="577"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1a8cd7acda205442544c7e83624c9f7054" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HumanInventory::HandleInventoryManipulation</definition>
+        <argsstring>()</argsstring>
+        <name>HandleInventoryManipulation</name>
+        <qualifiedname>HumanInventory::HandleInventoryManipulation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="579" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="579" bodyend="580"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1afc334452542fd6347295b193ca942f9d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HumanInventory::Update</definition>
+        <argsstring>(float delta_time)</argsstring>
+        <name>Update</name>
+        <qualifiedname>HumanInventory::Update</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>delta_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="582" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="582" bodyend="607"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_inventory_1ac2c9ceafd63733d542d9f0be0d208651" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool HumanInventory::ValidateUserReservationCancel</definition>
+        <argsstring>(inout Serializer ctx, InventoryValidation validation)</argsstring>
+        <name>ValidateUserReservationCancel</name>
+        <qualifiedname>HumanInventory::ValidateUserReservationCancel</qualifiedname>
+        <param>
+          <type>inout <ref refid="class_serializer" kindref="compound">Serializer</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type><ref refid="class_inventory_validation" kindref="compound">InventoryValidation</ref></type>
+          <declname>validation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>TODO(kumarjac): It returned true and claimed success before, is this correct?</para>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="609" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="609" bodyend="624"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>inventory for plain man/human </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_human_inventory" kindref="compound">HumanInventory</ref> has simple synchronous operations only, i.e. no animations are involved while adding/removing/swapping to/from hands.</para>
+<para>Animations are added on higher level of hierarchy (<ref refid="class_day_z_player_inventory" kindref="compound">DayZPlayerInventory</ref> for example) </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>GameInventory</label>
+        <link refid="class_game_inventory"/>
+      </node>
+      <node id="1">
+        <label>HumanInventory</label>
+        <link refid="class_human_inventory"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>HumanInventoryWithFSM</label>
+        <link refid="class_human_inventory_with_f_s_m"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>GameInventory</label>
+        <link refid="class_game_inventory"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>c_MaxItemDistanceRadius</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>HumanInventory</label>
+        <link refid="class_human_inventory"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>float</label>
+        <link refid="classfloat"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>LOWEST</edgelabel>
+          <edgelabel>MAX</edgelabel>
+          <edgelabel>MIN</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" line="9" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HumanInventory.c" bodystart="10" bodyend="625"/>
+    <listofallmembers>
+      <member refid="class_game_inventory_1a9313f1be8c9bb8b8d923764404c34d59" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>AddEntityToInventory</name></member>
+      <member refid="class_game_inventory_1a0dbc4862b0957ede7c98e2fecf09d98d" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>AddInventoryReservation</name></member>
+      <member refid="class_game_inventory_1aba32302af926cbdd135f170ce3676833" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>AddInventoryReservationEx</name></member>
+      <member refid="class_game_inventory_1ac90636fb6dc15d1d0f98d04c9f55f6c4" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>AttachmentCount</name></member>
+      <member refid="class_game_inventory_1a9ee846eef87d396aeb2b64c720677873" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>c_InventoryReservationTimeoutMS</name></member>
+      <member refid="class_game_inventory_1a6197604def6effd41d564cfa569ceecf" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>c_InventoryReservationTimeoutShortMS</name></member>
+      <member refid="class_game_inventory_1ab5d90acd9fa77c1e15c54e4b218487bf" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>c_MaxItemDistanceRadius</name></member>
+      <member refid="class_game_inventory_1ad1cc52d2c12ce9bcea849852efda406d" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanAddAttachment</name></member>
+      <member refid="class_game_inventory_1a71d023ffa434c37a366e40768d4fc6cc" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanAddAttachmentEx</name></member>
+      <member refid="class_game_inventory_1a498812109e1c9a2d754ada64fa3e111f" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanAddEntityInCargo</name></member>
+      <member refid="class_game_inventory_1a7498bd4eafbe0927610a8a6b79cfc27c" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanAddEntityInCargoEx</name></member>
+      <member refid="class_game_inventory_1a1a4f0cf1aa43af1c39da3dc2e5f5e8a2" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanAddEntityInCargoExLoc</name></member>
+      <member refid="class_human_inventory_1a508e9c00d88de0c5af8027d35667e914" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanAddEntityInHands</name></member>
+      <member refid="class_game_inventory_1a6652513f4482667116093f0c84be4b49" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanAddEntityInto</name></member>
+      <member refid="class_game_inventory_1a5fefd9742e484d0536748ee6c9d9ccd6" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanAddEntityIntoHands</name></member>
+      <member refid="class_game_inventory_1a8813401188111b0aa1686954cf7f16a8" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanAddEntityIntoInventory</name></member>
+      <member refid="class_game_inventory_1aa5935953108841409479b81d5da9da8d" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanAddEntityToInventory</name></member>
+      <member refid="class_game_inventory_1adb1e8ab371800d58506c74d151720914" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanAddSwappedEntity</name></member>
+      <member refid="class_game_inventory_1a4f67c97ac2c5937a1fdb19074ac1752c" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanForceSwapEntities</name></member>
+      <member refid="class_game_inventory_1ab4cb9090f38af73c17a2e6b63d9dd68f" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanForceSwapEntitiesEx</name></member>
+      <member refid="class_game_inventory_1ab9d96d6234e29ddd755ed851385249d6" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanLockInventoryWithKey</name></member>
+      <member refid="class_human_inventory_1a63ea5953b048f4e80ab5651fdd755dcb" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanOpenInventory</name></member>
+      <member refid="class_game_inventory_1add6ab404c71037277cdd406a2c850b9e" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanRemoveAttachment</name></member>
+      <member refid="class_game_inventory_1a5ae97c9780fd50501a631a842b32a34a" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanRemoveAttachmentEx</name></member>
+      <member refid="class_game_inventory_1a3cc3a63db4cd9d96f348885ef66c2f3d" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanRemoveEntity</name></member>
+      <member refid="class_game_inventory_1aa4f6bfa0d3a0772eb57f613695cabfe5" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanRemoveEntityInCargo</name></member>
+      <member refid="class_game_inventory_1a9e5bc67ef92df74bcf6e860c8255855c" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanRemoveEntityInCargoEx</name></member>
+      <member refid="class_human_inventory_1abe1a0ffa507784ed5c304d4f211d9f72" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanRemoveEntityInHands</name></member>
+      <member refid="class_game_inventory_1a82813964710f71af8c805f8435c94103" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanSwapEntities</name></member>
+      <member refid="class_game_inventory_1a740ed71afc391434ebde9d09074a93ea" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanSwapEntitiesEx</name></member>
+      <member refid="class_game_inventory_1affcc8d856518fa7aff9b57d172730d79" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CanUnlockInventoryWithKey</name></member>
+      <member refid="class_game_inventory_1ac8c5bdfbe33a8fefe79a1bb4146a5af3" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CheckDropRequest</name></member>
+      <member refid="class_game_inventory_1a0cdda242b823c5818c1cc2c5a3f8f843" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CheckManipulatedObjectsDistances</name></member>
+      <member refid="class_game_inventory_1adaf9a9a1e658551d169327aa2602ed16" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CheckMoveToDstRequest</name></member>
+      <member refid="class_game_inventory_1ae28250d3071229a6901cc0a4959adc7b" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CheckRequestSrc</name></member>
+      <member refid="class_game_inventory_1acfd2893a10d036c3eccfb615209d1790" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CheckSwapItemsRequest</name></member>
+      <member refid="class_game_inventory_1a7a4106f03d14f369704da70f80eef909" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CheckTakeItemRequest</name></member>
+      <member refid="class_game_inventory_1a7082c018bf4bb1cec486dccbc62dce0c" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ClearInventoryReservation</name></member>
+      <member refid="class_game_inventory_1a581d436ff87b95116056e4da8247948b" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ClearInventoryReservationEx</name></member>
+      <member refid="class_human_inventory_1a8354876591165b70dafcbfc6bde0f861" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ClearUserReservedLocation</name></member>
+      <member refid="class_human_inventory_1adc6678bb8d2d3b8548cc79affe7e2466" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ClearUserReservedLocationAtIndex</name></member>
+      <member refid="class_human_inventory_1a2dd00c54237949d08e8b0410b74f169e" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ClearUserReservedLocationAtIndexSynced</name></member>
+      <member refid="class_human_inventory_1a3e21146381b9440455d0314f41d3c069" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ClearUserReservedLocationForContainer</name></member>
+      <member refid="class_human_inventory_1a5968a6ae64fe5450a624a337e38078a0" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ClearUserReservedLocationSynced</name></member>
+      <member refid="class_game_inventory_1a7999ee9730ab20cc758403814f4e7873" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CountInventory</name></member>
+      <member refid="class_game_inventory_1adc754d31257ff76a21a404f57f838b53" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CreateAttachment</name></member>
+      <member refid="class_game_inventory_1ab65ea36a62f242f860016d6a2e78d6fd" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CreateAttachmentEx</name></member>
+      <member refid="class_game_inventory_1a1a3fb562072fd8aa355f3c923d7a2a52" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CreateEntityInCargo</name></member>
+      <member refid="class_game_inventory_1a0ee08afdfe6113ffb39ce6df72040a6c" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CreateEntityInCargoEx</name></member>
+      <member refid="class_human_inventory_1a313bbc773ff4207db5bfffc7cf3a0ae7" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CreateInHands</name></member>
+      <member refid="class_human_inventory_1a846ce5819516e9d13a26b91652aed1e7" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>CreateInInventory</name></member>
+      <member refid="class_human_inventory_1aa98f65519717db93a5b1889e8ba8276e" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>DropEntity</name></member>
+      <member refid="class_game_inventory_1aef1893e3e2f4ec1d2a078f9cbf00b8b5" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>DropEntityInBounds</name></member>
+      <member refid="class_game_inventory_1a50119730aa94ade7eaffc6b59529c3a2" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>DropEntityWithTransform</name></member>
+      <member refid="class_game_inventory_1a15edc2fbbcfc2c0f69f9dba5d19fa88c" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>EEDelete</name></member>
+      <member refid="class_game_inventory_1aa3eafb256d3be1810701cc07f732b990" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>EEInit</name></member>
+      <member refid="class_game_inventory_1a1a71f3a6ed87c8d9cb3896d13fb93986" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>EnumerateInventory</name></member>
+      <member refid="class_game_inventory_1a82f02165c039b1a84a9375da745c184b" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ExtendInventoryReservation</name></member>
+      <member refid="class_game_inventory_1a390587844a7ba1d4ac38a27cc477ec0d" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ExtendInventoryReservationEx</name></member>
+      <member refid="class_game_inventory_1af8002b59258c66566442a01887d57df8" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>FindAttachment</name></member>
+      <member refid="class_game_inventory_1ad0987f8e5421ebf5cd0e7555883d63eb" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>FindAttachmentByName</name></member>
+      <member refid="class_human_inventory_1a4a3b700f9732865f86991bfc0fc99f36" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>FindCollidingUserReservedLocationIndex</name></member>
+      <member refid="class_game_inventory_1a27466e0f00bbfb61dac795223e3e5a9f" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>FindFirstFreeLocationForNewEntity</name></member>
+      <member refid="class_human_inventory_1a55ed97e7176701ee108648b8fa023e39" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>FindFirstUserReservedLocationIndexForContainer</name></member>
+      <member refid="class_game_inventory_1aef8adb037ae97a060f82ba7a35e3d982" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>FindFreeLocationFor</name></member>
+      <member refid="class_game_inventory_1ac5c849e2886e37b8b4f2947a367c4f3e" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>FindFreeLocationForEx</name></member>
+      <member refid="class_game_inventory_1a1975383c68065b11af311b5bb7af46cf" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>FindFreeLocationsFor</name></member>
+      <member refid="class_game_inventory_1a4198d1a8d75c2322cf8a0c8a81008261" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>FindPlaceholderForSlot</name></member>
+      <member refid="class_human_inventory_1a96dc9983289f4a3e8bbffaeeebb863a3" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>FindUserReservedLocationIndex</name></member>
+      <member refid="class_game_inventory_1af2e485fcd48672eb7a75a82f8f903a8d" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>FlipCargo</name></member>
+      <member refid="class_human_inventory_1adc84c8d7f6ec0536b95d5ae8eb6824ff" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ForceSwapEntities</name></member>
+      <member refid="class_game_inventory_1afc134dff147a7d494e7afdc3d77bcd0e" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetAttachmentFromIndex</name></member>
+      <member refid="class_game_inventory_1a712b32149c4fdfca7a6c807a8888aacf" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetAttachmentSlotId</name></member>
+      <member refid="class_game_inventory_1af1273113a6d4a0f7847955a999b900a0" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetAttachmentSlotsCount</name></member>
+      <member refid="class_game_inventory_1a4723f85e2dee9b3c52f3a9a800ae31bb" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetCargo</name></member>
+      <member refid="class_game_inventory_1a4e3612446bcb6d287def040e0a0a171d" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetCargoFromIndex</name></member>
+      <member refid="class_game_inventory_1a9c95d4a9f29b98825fb7300e302158e4" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetCurrentAttachmentSlotInfo</name></member>
+      <member refid="class_game_inventory_1ae276ebb9b7c3bc9e3b6b0d3bb8b15b45" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetCurrentInventoryLocation</name></member>
+      <member refid="class_human_inventory_1af17a6c45a65768cfd8e054213595e887" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetDebugFlag</name></member>
+      <member refid="class_human_inventory_1a314bb90c0fcbd13aa737c13b199ac429" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetEntityInHands</name></member>
+      <member refid="class_game_inventory_1a00b51ed76df260ccba9c1786c305f8fa" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetFlipCargo</name></member>
+      <member refid="class_game_inventory_1a5a1b2ecf7396b27e9d716bf39207d7be" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetInventoryCheckContext</name></member>
+      <member refid="class_game_inventory_1ae2a8a9243b7ea8b63c02a1af471b1934" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetInventoryOwner</name></member>
+      <member refid="class_game_inventory_1a7dbbf38d5182fa4dc4f79cb5e3f3377d" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetInventoryReservationCount</name></member>
+      <member refid="class_human_inventory_1a36daecfcc7e6657464d215bc431fc460" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetManOwner</name></member>
+      <member refid="class_game_inventory_1aef8c13ffa440401f65c8bfa5dd1e40eb" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetScriptLockCount</name></member>
+      <member refid="class_game_inventory_1acdc72021c77040a68e7c572640aeb422" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetSlotId</name></member>
+      <member refid="class_game_inventory_1ae27c3edeb37a2955f7ab923183d66de0" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetSlotIdCount</name></member>
+      <member refid="class_game_inventory_1a8d4e6db70df0af6c2a66168d9c6accfe" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetSlotLock</name></member>
+      <member refid="class_human_inventory_1ace8848e4887234b1e716547254e5f68e" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetUserReservedLocation</name></member>
+      <member refid="class_human_inventory_1a46012bb0a1550db91d68a9b13b53dcbd" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>GetUserReservedLocationCount</name></member>
+      <member refid="class_human_inventory_1a54861663fd0fa49c2cd4934f6561c821" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>HandEvent</name></member>
+      <member refid="class_human_inventory_1a8cd7acda205442544c7e83624c9f7054" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>HandleInventoryManipulation</name></member>
+      <member refid="class_game_inventory_1a93028de19d767b8f7a8d989a017dfab9" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>HasAttachment</name></member>
+      <member refid="class_game_inventory_1a514fa9e275e3783c90d08a9bc4190c83" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>HasAttachmentEx</name></member>
+      <member refid="class_game_inventory_1a5b59b960c9be61b2ce1ee7fbec0b656d" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>HasEntityInCargo</name></member>
+      <member refid="class_game_inventory_1a8b435ef83c4fb5e3f01125170fa36284" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>HasEntityInCargoEx</name></member>
+      <member refid="class_human_inventory_1a7b7015724e914ce7ae56bbae277634b1" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>HasEntityInHands</name></member>
+      <member refid="class_game_inventory_1aabdefc9e385ce65d0407ea934c4da043" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>HasEntityInInventory</name></member>
+      <member refid="class_game_inventory_1ab1473dc1db9847e4075d45f337a9ea90" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>HasInventoryReservation</name></member>
+      <member refid="class_game_inventory_1a9844b59014e62be4452d544a976e6fdf" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>HasInventoryReservationCanAdd</name></member>
+      <member refid="class_game_inventory_1ad154700e58538f24f75d354787bbad81" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>HasInventoryReservationEx</name></member>
+      <member refid="class_game_inventory_1a6a5db361d08eeea420b3b2f10c1e075d" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>HasInventorySlot</name></member>
+      <member refid="class_game_inventory_1ab4553d56c8d6086741dec5417c0ae794" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>HasKeys</name></member>
+      <member refid="class_game_inventory_1ad8664d983a058d55f9443e5de4f85c51" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>Init</name></member>
+      <member refid="class_game_inventory_1a48bb8defdede3b6fc9e3f5b4db2bcc3e" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>IsAttachment</name></member>
+      <member refid="class_game_inventory_1a8fd2f1a5ea379b73be8ccc0c7dbec96d" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>IsCargoInHiearchy</name></member>
+      <member refid="class_game_inventory_1a5aac4a6843cc91da6036f75f2d0bbe11" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>IsInCargo</name></member>
+      <member refid="class_game_inventory_1a68311f638611769d8341f4b1131af086" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>IsInventoryLocked</name></member>
+      <member refid="class_game_inventory_1adc82ee2b59861ccb09c6c1cfbfcc5f7f" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>IsInventoryLockedForLockType</name></member>
+      <member refid="class_game_inventory_1a6ba9f53789e88c7b58027432251dfdca" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>IsInventoryUnlocked</name></member>
+      <member refid="class_game_inventory_1a84c529df2f468cbe48ade0ddbee2b403" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>IsPlaceholderEntity</name></member>
+      <member refid="class_human_inventory_1aa9497219f241f89c02cef90813dc806e" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>LocalDestroyEntity</name></member>
+      <member refid="class_game_inventory_1af42037684bfb5160a6ce5bdcd85065a4" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>LocationAddEntity</name></member>
+      <member refid="class_game_inventory_1a6049642477d6291973d76cfa4a6da4a8" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>LocationCanAddEntity</name></member>
+      <member refid="class_game_inventory_1afe56a3ea3f1ec5e3c2e1c36829adbd2f" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>LocationCanAddEntityEx</name></member>
+      <member refid="class_game_inventory_1afaa447545304ba3777276e0943b82e73" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>LocationCanMoveEntity</name></member>
+      <member refid="class_game_inventory_1aad2f13483ee7526544537ff3754626f2" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>LocationCanMoveEntitySyncCheck</name></member>
+      <member refid="class_game_inventory_1aa29cd369a0095cd09c35b5e590179df0" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>LocationCanRemoveEntity</name></member>
+      <member refid="class_game_inventory_1af2765cd9720db7ed8b768e7e36838b1b" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>LocationCreateEntity</name></member>
+      <member refid="class_game_inventory_1aaf3ee90e8a5cc80b631e2e1d2e03ddea" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>LocationCreateLocalEntity</name></member>
+      <member refid="class_game_inventory_1a3d823b4e9a418cdd058f1eee51a8da7c" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>LocationGetEntity</name></member>
+      <member refid="class_game_inventory_1a0907f4f709e1d08437aa483aca9dcc52" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>LocationMoveEntity</name></member>
+      <member refid="class_game_inventory_1a2a91047fe8db368ad86e4c8dd307982f" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>LocationRemoveEntity</name></member>
+      <member refid="class_game_inventory_1a8eabb09a4d62588cd48158cf813868e8" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>LocationSwap</name></member>
+      <member refid="class_game_inventory_1ae5e8d93d03255a7a80fb2f73f3854bc0" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>LocationSyncMoveEntity</name></member>
+      <member refid="class_game_inventory_1aad10cbe9457473a643ecb6191764fa71" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>LocationTestAddEntity</name></member>
+      <member refid="class_game_inventory_1a52db12c09b80f066e2de479ac896b374" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>LockInventory</name></member>
+      <member refid="class_game_inventory_1a7c120c57cc6566ceca6ea29f3720bd19" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>LockInventoryWithKey</name></member>
+      <member refid="class_game_inventory_1ab450e9839604d6e4b5588f798e1753a5" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>m_inventory_check_context</name></member>
+      <member refid="class_human_inventory_1a249eb023042adad1e19d080c38e9b580" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>m_syncClearUserReservationindex</name></member>
+      <member refid="class_game_inventory_1ac26047e069d12c1666e7ab32474217da" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>MakeDstForSwap</name></member>
+      <member refid="class_game_inventory_1a75cfcfc0b646e368cb58a4a609f31431" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>MakeSrcAndDstForForceSwap</name></member>
+      <member refid="class_game_inventory_1a6ace215b77d9e01a27bb7ca224ff5817" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>MakeSrcAndDstForSwap</name></member>
+      <member refid="class_game_inventory_1a0503fa277d7746f8719d34ece5e461d4" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>OnAfterStoreLoad</name></member>
+      <member refid="class_human_inventory_1aecd587d8d9b3de2a7675250c7e53d80a" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>OnEntityInHandsCreated</name></member>
+      <member refid="class_human_inventory_1a61423c88d13a20afd8e6928c5bee82e0" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>OnEntityInHandsDestroyed</name></member>
+      <member refid="class_human_inventory_1a5f750c5a14992a81d63c3935029ebb9b" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>OnHandsEnteredStableState</name></member>
+      <member refid="class_human_inventory_1a68796304fc2ca98db94ecd5c0c1bcba5" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>OnHandsExitedStableState</name></member>
+      <member refid="class_human_inventory_1aa0e2c685048b541b33fbe06b1e38d945" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>OnHandsStateChanged</name></member>
+      <member refid="class_game_inventory_1a070eb1d2d612196a050bf857d541ad2d" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>OnInputUserDataProcess</name></member>
+      <member refid="class_game_inventory_1a2791c79679ef3c89bf22d66a4ec42ac9" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>OnInventoryFailure</name></member>
+      <member refid="class_game_inventory_1abf03cf858514ac25ec5863b431ba7e85" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>OnInventoryJunctureFailureFromServer</name></member>
+      <member refid="class_game_inventory_1a88917f071ee3f920fb64b3ddf624a4fc" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>OnInventoryJunctureFromServer</name></member>
+      <member refid="class_game_inventory_1a55b7e0faf198d9d80c86aefc122fc4b6" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>OnInventoryJunctureRepairFromServer</name></member>
+      <member refid="class_game_inventory_1a05ef6bb0df3243b419ad492aefaa068e" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>OnServerInventoryCommand</name></member>
+      <member refid="class_game_inventory_1ab09deda6125fd48129add6ba56d98b70" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>OnServerInventoryCommandStatic</name></member>
+      <member refid="class_game_inventory_1afe983cd3f62a036207d8b673884e718e" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>OnStoreLoad</name></member>
+      <member refid="class_game_inventory_1accf50c3bb6195216edd7ef07a2afbdd7" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>OnStoreSave</name></member>
+      <member refid="class_game_inventory_1a6ac0c52c26ebdbd585cb7b832c5c7d81" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>PrepareDropEntityPos</name></member>
+      <member refid="class_human_inventory_1a396ce071d01b9b32c02f6793e8eb6df5" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ProcessHandEvent</name></member>
+      <member refid="class_human_inventory_1a74aceb74f955841bab4784039a18955d" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>RedirectToHandEvent</name></member>
+      <member refid="class_human_inventory_1a778e794eefe083519ac9029d0d15d233" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ReplaceItemElsewhereWithNewInHands</name></member>
+      <member refid="class_human_inventory_1aee1cde8a7933829abe8728066bf16d32" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ReplaceItemInElsewhereWithNewinHandsImpl</name></member>
+      <member refid="class_human_inventory_1ad1ff04e2f6d6a330acf6dc531e07898e" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ReplaceItemInHandsWithNew</name></member>
+      <member refid="class_human_inventory_1a62706df71c598bc6f257816a50452989" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ReplaceItemInHandsWithNewElsewhere</name></member>
+      <member refid="class_human_inventory_1a9d4329a1b943a75b48f50248bad14d82" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ReplaceItemInHandsWithNewImpl</name></member>
+      <member refid="class_human_inventory_1a0980e45e35e35696a8cb3e0e5a2a52af" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ReplaceItemWithNew</name></member>
+      <member refid="class_game_inventory_1ad07b837f4dbb95810facdcfadf578fe5" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ResetFlipCargo</name></member>
+      <member refid="class_game_inventory_1afa01c4ad0b546b8cc90e88b629d4a0a5" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ServerHandEvent</name></member>
+      <member refid="class_game_inventory_1a4cc4c8f84d80b3d9bd076eecaa6a23d5" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ServerLocationMoveEntity</name></member>
+      <member refid="class_game_inventory_1a3fea026ec104937dd2ea0f23b466c835" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ServerLocationSwap</name></member>
+      <member refid="class_game_inventory_1a85ab6eb608acc0afaa8184dc8fa5461c" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ServerLocationSyncMoveEntity</name></member>
+      <member refid="class_game_inventory_1acb8b1a84ba0691035d498a3527b509fb" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>SetFlipCargo</name></member>
+      <member refid="class_game_inventory_1a9a914b9d0dce757bd1d4bb6cd4580eb4" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>SetGroundPosByOwner</name></member>
+      <member refid="class_game_inventory_1a3ba7371bd37105dc532c6f0262b13ce2" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>SetGroundPosByOwnerBounds</name></member>
+      <member refid="class_game_inventory_1abb6d92cab6f0417edebf5c2e380ac7eb" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>SetGroundPosByTransform</name></member>
+      <member refid="class_game_inventory_1ad0890541226580dba11591dde80c9e1b" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>SetSlotLock</name></member>
+      <member refid="class_human_inventory_1a1a5c1080ca710f0a7edfea04c13375ed" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>SetUserReservedLocation</name></member>
+      <member refid="class_human_inventory_1ae4dc4412e66f9f7eaf8b481519a66da7" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>SwapEntities</name></member>
+      <member refid="class_human_inventory_1adfdfb7842bb43c5c3bab65daaef01d7e" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>SwappingToPreviousLocation</name></member>
+      <member refid="class_game_inventory_1aa3e6914e8ba643187f3329c0e84f77bc" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>TakeEntityAsAttachment</name></member>
+      <member refid="class_human_inventory_1a3758ad61b3ee08840065fdfe65184c77" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>TakeEntityAsAttachmentEx</name></member>
+      <member refid="class_game_inventory_1a7d490052b18f31ca8149bc2350063674" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>TakeEntityAsTargetAttachment</name></member>
+      <member refid="class_game_inventory_1afcca2d80762ee51b63f1631f1b66e55c" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>TakeEntityAsTargetAttachmentEx</name></member>
+      <member refid="class_game_inventory_1a0c86fb433ea2bda3fcdf9b6f384551f7" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>TakeEntityToCargo</name></member>
+      <member refid="class_human_inventory_1acce4efdf3cf9b84673759ba7c0eba752" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>TakeEntityToCargoEx</name></member>
+      <member refid="class_human_inventory_1a967d72fa11c9cf140c034384307657c0" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>TakeEntityToInventory</name></member>
+      <member refid="class_game_inventory_1ac715e5e797bef829e49bcec9b686b89a" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>TakeEntityToTargetCargo</name></member>
+      <member refid="class_game_inventory_1a4c370de03230f722265135a2ef3b9e2a" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>TakeEntityToTargetCargoEx</name></member>
+      <member refid="class_game_inventory_1a4ede0429239263cc67df955ee6de1583" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>TakeEntityToTargetInventory</name></member>
+      <member refid="class_human_inventory_1ad261eaeaceb38a6db7250f02bfe1fe9e" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>TakeToDst</name></member>
+      <member refid="class_game_inventory_1acecbe4030fa1dc0c4d936299edd056d6" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>TestAddEntityInCargoEx</name></member>
+      <member refid="class_game_inventory_1adf1b06be89cfae9298d1b35ee1e39348" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>TestAddEntityInCargoExLoc</name></member>
+      <member refid="class_human_inventory_1a02627264b78a554ea809fbbb60ddcb9d" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>TestAddEntityInHands</name></member>
+      <member refid="class_game_inventory_1a6dbf6c68f72396a199647a72c1793b8a" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>TestDropEntityPos</name></member>
+      <member refid="class_human_inventory_1af58563d1557e581b1812b4b2e826a378" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ThrowEntity</name></member>
+      <member refid="class_game_inventory_1a691deef22213c5324ac7f6037d3b963c" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>UnlockInventory</name></member>
+      <member refid="class_game_inventory_1adb73090ffa232ea3d797d630938145ad" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>UnlockInventoryWithKey</name></member>
+      <member refid="class_human_inventory_1afc334452542fd6347295b193ca942f9d" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>Update</name></member>
+      <member refid="class_human_inventory_1ac2c9ceafd63733d542d9f0be0d208651" prot="private" virt="non-virtual"><scope>HumanInventory</scope><name>ValidateUserReservationCancel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

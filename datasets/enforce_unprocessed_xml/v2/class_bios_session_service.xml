@@ -1,0 +1,733 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_bios_session_service" kind="class" language="C++" prot="public">
+    <compoundname>BiosSessionService</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_bios_session_service_1a5899b1eb7a05ab667f3ced81666373a0" prot="private" static="no" mutable="no">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected int BiosSessionService::m_GetSessionAttempts</definition>
+        <argsstring></argsstring>
+        <name>m_GetSessionAttempts</name>
+        <qualifiedname>BiosSessionService::m_GetSessionAttempts</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="3" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bios_session_service_1ac1e8569d0c006786300c5402d3f5cab8" prot="private" static="no" mutable="no">
+        <type><ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>string BiosSessionService::m_CurrentHandle</definition>
+        <argsstring></argsstring>
+        <name>m_CurrentHandle</name>
+        <qualifiedname>BiosSessionService::m_CurrentHandle</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="4" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_bios_session_service_1aebdd42d15a07c748c8d2abf5ace4e524" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+        <definition>proto native EBiosError BiosSessionService::EnterGameplaySessionAsync</definition>
+        <argsstring>(string session_address, int session_port)</argsstring>
+        <name>EnterGameplaySessionAsync</name>
+        <qualifiedname>BiosSessionService::EnterGameplaySessionAsync</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>session_address</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>session_port</declname>
+        </param>
+        <briefdescription>
+<para>Enter a gameplay session. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The async result is returned in the OnEnterGameplaySession callback. Expected errors: LOGICAL - if the user is currently in an active gameplay session.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>server IP address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>session_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>server port. <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>EBiosError indicating if the async operation is pending. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="16" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1ad54e36ddc21171bcafd28ce92e8814d3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+        <definition>proto native EBiosError BiosSessionService::LeaveGameplaySessionAsync</definition>
+        <argsstring>(string session_address, int session_port)</argsstring>
+        <name>LeaveGameplaySessionAsync</name>
+        <qualifiedname>BiosSessionService::LeaveGameplaySessionAsync</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>session_address</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>session_port</declname>
+        </param>
+        <briefdescription>
+<para>Leave a gameplay session. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The async result is returned in the OnLeaveGameplaySession callback. If there is an unexpected error the state is cleared. Expected errors: ERR_NOT_FOUND - when attempting to leave a gameplay session the user is not part of. ERR_LOGICAL - when the user is not in a gameplay session.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>server IP address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>session_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>server port. <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>EBiosError indicating if the async operation is pending. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="30" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1ac0d1fb913bc5e0910bf5a1af08403ef2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void BiosSessionService::OnSessionPlayerListUpdate</definition>
+        <argsstring>(array&lt; string &gt; newPlayers)</argsstring>
+        <name>OnSessionPlayerListUpdate</name>
+        <qualifiedname>BiosSessionService::OnSessionPlayerListUpdate</qualifiedname>
+        <param>
+          <type><ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="classstring" kindref="compound">string</ref> &gt;</type>
+          <declname>newPlayers</declname>
+        </param>
+        <briefdescription>
+<para>Alerts engine that players in current session have changed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newPlayers</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>players that have just joined the server. When player joins a server, ALL players already on server count as new players. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="36" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1a9f3dfa6e05d1f2d3f4505035486b2968" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosSessionService::TryGetSession</definition>
+        <argsstring>(string join_handle=&quot;&quot;)</argsstring>
+        <name>TryGetSession</name>
+        <qualifiedname>BiosSessionService::TryGetSession</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>join_handle</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Gets a session from a join handle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The async result is returned in the OnGetGameplaySession, OnGetLobbySession or OnGetSessionError callback, dependinng on the type of session, or error. Expected errors:</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>join_handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the parsed join handle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>EBiosError indicating if the async operation is pending. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="47" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" bodystart="47" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1aaee0c72f1d0e17a2cec7557ab58e3f8d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+        <definition>proto native EBiosError BiosSessionService::GetSessionAsync</definition>
+        <argsstring>(string join_handle)</argsstring>
+        <name>GetSessionAsync</name>
+        <qualifiedname>BiosSessionService::GetSessionAsync</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>join_handle</declname>
+        </param>
+        <briefdescription>
+<para>Gets a session from a join handle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The async result is returned in the OnGetGameplaySession, OnGetLobbySession or OnGetSessionError callback, dependinng on the type of session, or error. Expected errors:</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>join_handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the parsed join handle. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>EBiosError indicating if the async operation is pending. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="70" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1ab3b13df781da203f582ff5ca921e11ac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+        <definition>proto native EBiosError BiosSessionService::SetGameplayActivityAsync</definition>
+        <argsstring>(string session_address, int session_port)</argsstring>
+        <name>SetGameplayActivityAsync</name>
+        <qualifiedname>BiosSessionService::SetGameplayActivityAsync</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>session_address</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>session_port</declname>
+        </param>
+        <briefdescription>
+<para>Sets the activity to a gameplay session. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The async result is returned in the OnSetActivity callback. Expected errors: ERR_NOT_FOUND - when attempting to set a gameplay session activity the user is not part of.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>server IP address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>session_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>server port. <linebreak/>
+ </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>EBiosError indicating if the async operation is pending. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="82" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1af84d105d20ed5335b71371aa8f44b6d4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+        <definition>proto native EBiosError BiosSessionService::ClearActivityAsync</definition>
+        <argsstring>()</argsstring>
+        <name>ClearActivityAsync</name>
+        <qualifiedname>BiosSessionService::ClearActivityAsync</qualifiedname>
+        <briefdescription>
+<para>not implemented </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears the current activity</para>
+<para>The async result is returned in the OnClearActivity callback. Expected errors:</para>
+<para><simplesect kind="return"><para>EBiosError indicating if the async operation is pending. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="94" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1adde563930949dd7501f0255bfb8f4f88" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+        <definition>proto native EBiosError BiosSessionService::ShowInviteToGameplaySessionAsync</definition>
+        <argsstring>(string session_address, int session_port)</argsstring>
+        <name>ShowInviteToGameplaySessionAsync</name>
+        <qualifiedname>BiosSessionService::ShowInviteToGameplaySessionAsync</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>session_address</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>session_port</declname>
+        </param>
+        <briefdescription>
+<para>Show system UI to invite friends to current gameplay session. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The async result is returned in the OnShowInviteToGameplaySession callback. On Xbox, if session with session_address and session_port does not exist, then xbox show message &quot;We could not send the invite&quot;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>server IP address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>session_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>server port.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>EBiosError indicating if the async operation is pending. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="107" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1a8ca03e4d5ea70c9a31c5939ac38f1abc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+        <definition>proto native EBiosError BiosSessionService::InviteToGameplaySessionAsync</definition>
+        <argsstring>(string session_address, int session_port, array&lt; string &gt; invitee_list)</argsstring>
+        <name>InviteToGameplaySessionAsync</name>
+        <qualifiedname>BiosSessionService::InviteToGameplaySessionAsync</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>session_address</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>session_port</declname>
+        </param>
+        <param>
+          <type><ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="classstring" kindref="compound">string</ref> &gt;</type>
+          <declname>invitee_list</declname>
+        </param>
+        <briefdescription>
+<para>Send invite to list of users. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The async result is returned in the OnInviteToGameplaySession callback. The user must be inside the session. That means, OnEnterGameplaySession must be called with no errors.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>server IP address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>session_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>server port. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>invitee_list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of users to invite</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>EBiosError indicating if the async operation is pending. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="120" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1ab7c1d471af122f62d46a60b646e4838a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void BiosSessionService::SetMultiplayState</definition>
+        <argsstring>(bool is_active)</argsstring>
+        <name>SetMultiplayState</name>
+        <qualifiedname>BiosSessionService::SetMultiplayState</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>is_active</declname>
+        </param>
+        <briefdescription>
+<para>Notifiy about interactive multiplayer state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="123" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1a4cc673ab555b330add21f17bfc380018" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosSessionService::OnSetActivity</definition>
+        <argsstring>(EBiosError error)</argsstring>
+        <name>OnSetActivity</name>
+        <qualifiedname>BiosSessionService::OnSetActivity</qualifiedname>
+        <param>
+          <type><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Callback function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error indicating success or fail of the async operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="129" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1a146797ec14ccf6f099d77d7bce80cf82" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosSessionService::OnClearActivity</definition>
+        <argsstring>(EBiosError error)</argsstring>
+        <name>OnClearActivity</name>
+        <qualifiedname>BiosSessionService::OnClearActivity</qualifiedname>
+        <param>
+          <type><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Callback function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error indicating success or fail of the async operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="138" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" bodystart="138" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1a32474f03dfab33c54ba4c67d4ba44601" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosSessionService::OnGetGameplaySession</definition>
+        <argsstring>(string session_address, int session_port)</argsstring>
+        <name>OnGetGameplaySession</name>
+        <qualifiedname>BiosSessionService::OnGetGameplaySession</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>session_address</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>session_port</declname>
+        </param>
+        <briefdescription>
+<para>Callback function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>server IP address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>session_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>server port. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="147" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" bodystart="147" bodyend="190"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1ac9cd040dd3db0e0e04e92d42469ccb34" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosSessionService::OnGetSessionError</definition>
+        <argsstring>(EBiosError error)</argsstring>
+        <name>OnGetSessionError</name>
+        <qualifiedname>BiosSessionService::OnGetSessionError</qualifiedname>
+        <param>
+          <type><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>//! Callback function, not implemented </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback function</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error indicating fail of the async operation. Cannot be OK. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="201" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" bodystart="201" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1a6aaa1fa5a49b53fe321db843938c5c1c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosSessionService::OnEnterGameplaySession</definition>
+        <argsstring>(string session_address, int session_port, EBiosError error)</argsstring>
+        <name>OnEnterGameplaySession</name>
+        <qualifiedname>BiosSessionService::OnEnterGameplaySession</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>session_address</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>session_port</declname>
+        </param>
+        <param>
+          <type><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Callback function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>session_address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>server IP address. Empty if failed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>session_port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>server port. 0 if failed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error indicating success or fail of the async operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="220" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" bodystart="220" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1a5261e2ffc412ac410b7d4b3cc4ba44e3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosSessionService::OnLeaveGameplaySession</definition>
+        <argsstring>(EBiosError error)</argsstring>
+        <name>OnLeaveGameplaySession</name>
+        <qualifiedname>BiosSessionService::OnLeaveGameplaySession</qualifiedname>
+        <param>
+          <type><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Callback function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>error indicating success or fail of the async operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="236" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" bodystart="236" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1af7025cf0097a9e06e17996c81dcd83fe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosSessionService::OnShowInviteToGameplaySession</definition>
+        <argsstring>(EBiosError error)</argsstring>
+        <name>OnShowInviteToGameplaySession</name>
+        <qualifiedname>BiosSessionService::OnShowInviteToGameplaySession</qualifiedname>
+        <param>
+          <type><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Callback function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indicating success or fail of the async operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="244" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" bodystart="244" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1a6042bb972f358b2c01ea64228fb8fad9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BiosSessionService::OnInviteToGameplaySession</definition>
+        <argsstring>(EBiosError error)</argsstring>
+        <name>OnInviteToGameplaySession</name>
+        <qualifiedname>BiosSessionService::OnInviteToGameplaySession</qualifiedname>
+        <param>
+          <type><ref refid="_b_i_o_s_error_module_8c_1a112301e9d14b76a1669e09f081559cd1" kindref="member">EBiosError</ref></type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+<para>Callback function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indicating success or fail of the async operation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="253" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" bodystart="253" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bios_session_service_1ae3753465d225f5bb82051a6a35a9a8ba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="classstring" kindref="compound">string</ref> &gt;</type>
+        <definition>array&lt; string &gt; BiosSessionService::GetSessionPlayerList</definition>
+        <argsstring>()</argsstring>
+        <name>GetSessionPlayerList</name>
+        <qualifiedname>BiosSessionService::GetSessionPlayerList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="258" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" bodystart="258" bodyend="261"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>BiosSessionService</label>
+        <link refid="class_bios_session_service"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_CurrentHandle</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+        <link refid="classstring"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>Empty</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" line="1" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Services/BiosSessionService.c" bodystart="2" bodyend="263"/>
+    <listofallmembers>
+      <member refid="class_bios_session_service_1af84d105d20ed5335b71371aa8f44b6d4" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>ClearActivityAsync</name></member>
+      <member refid="class_bios_session_service_1aebdd42d15a07c748c8d2abf5ace4e524" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>EnterGameplaySessionAsync</name></member>
+      <member refid="class_bios_session_service_1aaee0c72f1d0e17a2cec7557ab58e3f8d" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>GetSessionAsync</name></member>
+      <member refid="class_bios_session_service_1ae3753465d225f5bb82051a6a35a9a8ba" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>GetSessionPlayerList</name></member>
+      <member refid="class_bios_session_service_1a8ca03e4d5ea70c9a31c5939ac38f1abc" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>InviteToGameplaySessionAsync</name></member>
+      <member refid="class_bios_session_service_1ad54e36ddc21171bcafd28ce92e8814d3" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>LeaveGameplaySessionAsync</name></member>
+      <member refid="class_bios_session_service_1ac1e8569d0c006786300c5402d3f5cab8" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>m_CurrentHandle</name></member>
+      <member refid="class_bios_session_service_1a5899b1eb7a05ab667f3ced81666373a0" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>m_GetSessionAttempts</name></member>
+      <member refid="class_bios_session_service_1a146797ec14ccf6f099d77d7bce80cf82" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>OnClearActivity</name></member>
+      <member refid="class_bios_session_service_1a6aaa1fa5a49b53fe321db843938c5c1c" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>OnEnterGameplaySession</name></member>
+      <member refid="class_bios_session_service_1a32474f03dfab33c54ba4c67d4ba44601" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>OnGetGameplaySession</name></member>
+      <member refid="class_bios_session_service_1ac9cd040dd3db0e0e04e92d42469ccb34" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>OnGetSessionError</name></member>
+      <member refid="class_bios_session_service_1a6042bb972f358b2c01ea64228fb8fad9" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>OnInviteToGameplaySession</name></member>
+      <member refid="class_bios_session_service_1a5261e2ffc412ac410b7d4b3cc4ba44e3" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>OnLeaveGameplaySession</name></member>
+      <member refid="class_bios_session_service_1ac0d1fb913bc5e0910bf5a1af08403ef2" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>OnSessionPlayerListUpdate</name></member>
+      <member refid="class_bios_session_service_1a4cc673ab555b330add21f17bfc380018" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>OnSetActivity</name></member>
+      <member refid="class_bios_session_service_1af7025cf0097a9e06e17996c81dcd83fe" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>OnShowInviteToGameplaySession</name></member>
+      <member refid="class_bios_session_service_1ab3b13df781da203f582ff5ca921e11ac" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>SetGameplayActivityAsync</name></member>
+      <member refid="class_bios_session_service_1ab7c1d471af122f62d46a60b646e4838a" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>SetMultiplayState</name></member>
+      <member refid="class_bios_session_service_1adde563930949dd7501f0255bfb8f4f88" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>ShowInviteToGameplaySessionAsync</name></member>
+      <member refid="class_bios_session_service_1a9f3dfa6e05d1f2d3f4505035486b2968" prot="private" virt="non-virtual"><scope>BiosSessionService</scope><name>TryGetSession</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

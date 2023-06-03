@@ -1,0 +1,554 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="group___decals" kind="group">
+    <compoundname>Decals</compoundname>
+    <title>Decals API</title>
+    <innergroup refid="group___ocean">Ocean API</innergroup>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group___decals_1gac12f60cb366c2f246ccee06cffb37549" prot="public" static="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>[]</type>
+        <definition>typedef int [] hDecal</definition>
+        <argsstring></argsstring>
+        <name>hDecal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="312" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" bodystart="312" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group___decals_1ga0edf96771f80d13f1eb53ef62a2cf3c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="group___decals_1gac12f60cb366c2f246ccee06cffb37549" kindref="member">hDecal</ref></type>
+        <definition>proto native hDecal CreateDecal</definition>
+        <argsstring>(IEntity entity, vector origin, vector project, float nearclip, float angle, float size, string materialName, float lifetime, int flags)</argsstring>
+        <name>CreateDecal</name>
+        <param>
+          <type><ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>origin</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>project</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>nearclip</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>angle</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>materialName</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>lifetime</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates single visual mark, e.g. from shots when lifetime=0, pointer to decal is returned, that can be removed by RemoveDecal then <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entity where the landmark should be created </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>origin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first point of the decal, nothing is done now </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>project</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>projection direction (length is far clipping distance) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nearclip</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>near clipping distance </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>materialName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_material" kindref="compound">Material</ref> used for decal </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lifetime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lifetime in seconds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Not used ATM </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Decal pointer or null </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="326" column="21" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" declline="326" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___decals_1ga2879696b98a545a4a5d6a94346c3edf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void RemoveDecal</definition>
+        <argsstring>(hDecal decal)</argsstring>
+        <name>RemoveDecal</name>
+        <param>
+          <type><ref refid="group___decals_1gac12f60cb366c2f246ccee06cffb37549" kindref="member">hDecal</ref></type>
+          <declname>decal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="328" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" declline="328" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___decals_1ga57c744c16c2860ee1f3b8dfd01d1426c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="group___decals_1gac12f60cb366c2f246ccee06cffb37549" kindref="member">hDecal</ref></type>
+        <definition>proto native hDecal CreateLandMarkDecal</definition>
+        <argsstring>(IEntity entity, vector origin, vector normal, float edgeSize, float lifeTime, string materialName, hDecal prevDecal, float alpha)</argsstring>
+        <name>CreateLandMarkDecal</name>
+        <param>
+          <type><ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>origin</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>normal</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>edgeSize</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>lifeTime</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>materialName</declname>
+        </param>
+        <param>
+          <type><ref refid="group___decals_1gac12f60cb366c2f246ccee06cffb37549" kindref="member">hDecal</ref></type>
+          <declname>prevDecal</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates continous visual mark, e.g. from wheel when a car is moving on the ground <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entity where the landmark should be created (only terrain is supported ATM) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>origin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>first point of the decal, nothing is done now </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>normal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>normal of surface </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>edgesize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Edge size of decal </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lifetime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lifetime in seconds </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>materialName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_material" kindref="compound">Material</ref> used for decal </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Previous decal, we are connecting to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alpha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>translucency of point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Decal pointer or null </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="342" column="21" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" declline="342" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___decals_1gaabd9be3abda774da73e2819e50162609" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int CanAddToLandMarkDecal</definition>
+        <argsstring>(hDecal lmDecal, IEntity entity, string mat, vector newPoint)</argsstring>
+        <name>CanAddToLandMarkDecal</name>
+        <param>
+          <type><ref refid="group___decals_1gac12f60cb366c2f246ccee06cffb37549" kindref="member">hDecal</ref></type>
+          <declname>lmDecal</declname>
+        </param>
+        <param>
+          <type><ref refid="class_i_entity" kindref="compound">IEntity</ref></type>
+          <declname>entity</declname>
+        </param>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>mat</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>newPoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>is it possible to add new point to landmark decal? <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lmDecal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entity to add new landmark point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>entity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entity to add new landmark point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>material of decal </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newpoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new point to add </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>LMD_ERROR = error when adding new point (invalid decal) LMD_VALID = can add new point LMD_DIFF_ENT = new point is on different entity LMD_TOO_FAR = new point is too far from previous point </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="357" column="18" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" declline="357" declcolumn="18"/>
+      </memberdef>
+      <memberdef kind="function" id="group___decals_1ga2ba28999ce18f7e3083b9a9a81061e08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool AddPointToLandMarkDecal</definition>
+        <argsstring>(hDecal lmDecal, vector point, vector normal, float alpha)</argsstring>
+        <name>AddPointToLandMarkDecal</name>
+        <param>
+          <type><ref refid="group___decals_1gac12f60cb366c2f246ccee06cffb37549" kindref="member">hDecal</ref></type>
+          <declname>lmDecal</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>normal</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>alpha</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>add new point to decal, internally, new point is added when previous point is in some distance or the angle is more than some threshold <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lmDecal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entity to add new landmark point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>contact point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>normal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>normal of contact </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alpha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>translucency in point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if everything was OK, false if not. In this case, the application MUST not used later the pointer to decal, it&apos;s finalized internally ! </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="368" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" declline="368" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___decals_1ga0ffa6c3066cd794b89b539df7a4ead83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void FinalizeLandMarkDecal</definition>
+        <argsstring>(hDecal lmDecal, bool addAlpha, float alphaDist)</argsstring>
+        <name>FinalizeLandMarkDecal</name>
+        <param>
+          <type><ref refid="group___decals_1gac12f60cb366c2f246ccee06cffb37549" kindref="member">hDecal</ref></type>
+          <declname>lmDecal</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>addAlpha</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>alphaDist</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>finalize landmark adding, e.g. when entity lose contact with ground -&gt; the pointer to decal should have only world and entity if it has something to render, otherwise it&apos;s destroyed here <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lmDecal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entity to add new landmark point </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>addAlpha</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if to add last point with transition to zero alpha </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alphaDist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>distance to add last point </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="377" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" declline="377" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___decals_1ga53d60c24ebe1aa5022b58e29edf6db2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool IsLandMarkFinalized</definition>
+        <argsstring>(hDecal lmDecal)</argsstring>
+        <name>IsLandMarkFinalized</name>
+        <param>
+          <type><ref refid="group___decals_1gac12f60cb366c2f246ccee06cffb37549" kindref="member">hDecal</ref></type>
+          <declname>lmDecal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>return if landmark was finalized <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lmDecal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>decal to test </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="383" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" declline="383" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="group___decals_1gac5953da55353a0c65dcf6a3fae20c17d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>proto native vector GetLastLandMarkPoint</definition>
+        <argsstring>(hDecal lmDecal)</argsstring>
+        <name>GetLastLandMarkPoint</name>
+        <param>
+          <type><ref refid="group___decals_1gac12f60cb366c2f246ccee06cffb37549" kindref="member">hDecal</ref></type>
+          <declname>lmDecal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>return last landmark point or -65535.0 in all components <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lmDecal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>decal to test </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="389" column="21" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" declline="389" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="group___decals_1ga864c23928a6ba87af222d197887b725d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void SetGlobalLandMarkParams</definition>
+        <argsstring>(float minSegmentLength, float maxSegmentLength, float degAngle)</argsstring>
+        <name>SetGlobalLandMarkParams</name>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>minSegmentLength</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>maxSegmentLength</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>degAngle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set global parameters for landmark generation <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>minSegmentLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>minimum length segment, when new point is added (4 default), when is less, just the end position is on the fly updated </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxSegmentLength</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum segment length, when length is bigger, the path is finished </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>degAngle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>angle in degrees, when is more, the path is finished </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" line="397" column="19" declfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/1_Core/proto/EnWorld.c" declline="397" declcolumn="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

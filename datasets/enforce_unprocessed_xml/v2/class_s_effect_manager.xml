@@ -1,0 +1,1359 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_s_effect_manager" kind="class" language="C++" prot="public">
+    <compoundname>SEffectManager</compoundname>
+      <sectiondef kind="user-defined">
+      <header>Generic playback</header>
+      <description><para>Methods for playing Effect <simplesect kind="note"><para>Since 1.15, these should work on <ref refid="class_effect_sound" kindref="compound">EffectSound</ref> as well </para>
+</simplesect>
+</para>
+</description>
+      <memberdef kind="function" id="class_s_effect_manager_1a55793cc8dce509edd95cb4a9938fb1dd" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static int SEffectManager::PlayInWorld</definition>
+        <argsstring>(notnull Effect eff, vector pos)</argsstring>
+        <name>PlayInWorld</name>
+        <qualifiedname>SEffectManager::PlayInWorld</qualifiedname>
+        <param>
+          <type>notnull <ref refid="_effect_8c_1aa9753a60bcd32e2d28e6641973c8bc4e" kindref="member">Effect</ref></type>
+          <declname>eff</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Play an Effect. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>As the Effect is automatically registered, it will not be freed automatically (because of the ref) Unless &apos;SetAutodestroy(true)&apos; is called on the created &apos;Effect&apos;, which will clean it up when the sound stop Alternatively, <ref refid="class_s_effect_manager_1aec7ef95de317ab1011f04c6c5c496248" kindref="member">SEffectManager.DestroyEffect</ref> can be called manually, which will also unregister and cleanup </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>Effect</computeroutput> The Effect to play </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> The position to play the Effect </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> The registered ID of the Effect </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="43" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="43" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_effect_manager_1a5b958d77fa6a4f6a9e14af65c7bd5e08" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static int SEffectManager::PlayOnObject</definition>
+        <argsstring>(notnull Effect eff, Object obj, vector local_pos=&quot;0 0 0&quot;, vector local_ori=&quot;0 0 0&quot;, bool force_rotation_relative_to_world=false)</argsstring>
+        <name>PlayOnObject</name>
+        <qualifiedname>SEffectManager::PlayOnObject</qualifiedname>
+        <param>
+          <type>notnull <ref refid="_effect_8c_1aa9753a60bcd32e2d28e6641973c8bc4e" kindref="member">Effect</ref></type>
+          <declname>eff</declname>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_pos</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>local_ori</declname>
+          <defval>&quot;0 0 0&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>force_rotation_relative_to_world</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Play an Effect. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Read PlayInWorld warning </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>eff</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>Effect</computeroutput> The Effect to play </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_object" kindref="compound">Object</ref></computeroutput> The parent of the Effect </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> The local position to play the Effect in relation to the parent (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>local_ori</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> The local orientation to play the Effect in relation to the parent (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>force_rotation_relative_to_world</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Whether to force the orientation to stay in WS (Optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> The registered ID of the Effect </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="66" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="66" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_effect_manager_1a80df7d51f40b67ad60f46a1417cbcb75" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SEffectManager::Stop</definition>
+        <argsstring>(int effect_id)</argsstring>
+        <name>Stop</name>
+        <qualifiedname>SEffectManager::Stop</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>effect_id</declname>
+        </param>
+        <briefdescription>
+<para>Stops the Effect. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>effect_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The ID of the Effect to Stop </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="106" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="106" bodyend="118"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Create/Play sound</header>
+      <description><para>Methods for playing/creating sound </para>
+</description>
+      <memberdef kind="function" id="class_s_effect_manager_1ac4f0c5ccedc2602bc229693c2a613aff" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_effect_sound" kindref="compound">EffectSound</ref></type>
+        <definition>static EffectSound SEffectManager::CreateSound</definition>
+        <argsstring>(string sound_set, vector position, float play_fade_in=0, float stop_fade_out=0, bool loop=false, bool enviroment=false)</argsstring>
+        <name>CreateSound</name>
+        <qualifiedname>SEffectManager::CreateSound</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>sound_set</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>play_fade_in</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>stop_fade_out</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>loop</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>enviroment</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Create an <ref refid="class_effect_sound" kindref="compound">EffectSound</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Read PlayInWorld warning </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sound_set</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> The sound set name of the sound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> The position to play the sound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>play_fade_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The fade in duration of the sound (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stop_fade_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The fade out duration of the sound (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>loop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Whether the sound should loop (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enviroment</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Whether to set environment variables (Optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_effect_sound" kindref="compound">EffectSound</ref></computeroutput> The created <ref refid="class_effect_sound" kindref="compound">EffectSound</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="140" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="140" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_effect_manager_1aa05a7b24ec51456db8c32cf2e4b099ef" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_effect_sound" kindref="compound">EffectSound</ref></type>
+        <definition>static EffectSound SEffectManager::PlaySound</definition>
+        <argsstring>(string sound_set, vector position, float play_fade_in=0, float stop_fade_out=0, bool loop=false)</argsstring>
+        <name>PlaySound</name>
+        <qualifiedname>SEffectManager::PlaySound</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>sound_set</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>play_fade_in</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>stop_fade_out</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>loop</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Create and play an <ref refid="class_effect_sound" kindref="compound">EffectSound</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Calls CreateSound, read CreateSound warning </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sound_set</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> The sound set name of the sound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> The position to play the sound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>play_fade_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The fade in duration of the sound (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stop_fade_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The fade out duration of the sound (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>loop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Whether the sound should loop (Optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_effect_sound" kindref="compound">EffectSound</ref></computeroutput> The created <ref refid="class_effect_sound" kindref="compound">EffectSound</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="165" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="165" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_effect_manager_1a2a8a6ff519e18fdecea9d2c9a54b413b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_effect_sound" kindref="compound">EffectSound</ref></type>
+        <definition>static EffectSound SEffectManager::PlaySoundParams</definition>
+        <argsstring>(notnull SoundParams params, vector position, float play_fade_in=0, float stop_fade_out=0, bool loop=false)</argsstring>
+        <name>PlaySoundParams</name>
+        <qualifiedname>SEffectManager::PlaySoundParams</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_sound_params" kindref="compound">SoundParams</ref></type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>play_fade_in</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>stop_fade_out</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>loop</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Create and play an <ref refid="class_effect_sound" kindref="compound">EffectSound</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Calls CreateSound, read CreateSound warning </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_sound_params" kindref="compound">SoundParams</ref></computeroutput> Params to create the sound with </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> The position to play the sound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>play_fade_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The fade in duration of the sound (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stop_fade_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The fade out duration of the sound (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>loop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Whether the sound should loop (Optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_effect_sound" kindref="compound">EffectSound</ref></computeroutput> The created <ref refid="class_effect_sound" kindref="compound">EffectSound</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="184" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="184" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_effect_manager_1a3882d74eac0fead0627eaef591a78990" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_effect_sound" kindref="compound">EffectSound</ref></type>
+        <definition>static EffectSound SEffectManager::PlaySoundCachedParams</definition>
+        <argsstring>(string sound_set, vector position, float play_fade_in=0, float stop_fade_out=0, bool loop=false)</argsstring>
+        <name>PlaySoundCachedParams</name>
+        <qualifiedname>SEffectManager::PlaySoundCachedParams</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>sound_set</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>play_fade_in</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>stop_fade_out</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>loop</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Create and play an <ref refid="class_effect_sound" kindref="compound">EffectSound</ref>, using or creating cached <ref refid="class_sound_params" kindref="compound">SoundParams</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Calls CreateSound, read CreateSound warning </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sound_set</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> The sound set name of the sound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> The position to play the sound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>play_fade_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The fade in duration of the sound (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stop_fade_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The fade out duration of the sound (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>loop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Whether the sound should loop (Optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_effect_sound" kindref="compound">EffectSound</ref></computeroutput> The created <ref refid="class_effect_sound" kindref="compound">EffectSound</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="203" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="203" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_effect_manager_1a0d3128b8934177ace943d7ddbc27a36d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_effect_sound" kindref="compound">EffectSound</ref></type>
+        <definition>static EffectSound SEffectManager::PlaySoundEnviroment</definition>
+        <argsstring>(string sound_set, vector position, float play_fade_in=0, float stop_fade_out=0, bool loop=false)</argsstring>
+        <name>PlaySoundEnviroment</name>
+        <qualifiedname>SEffectManager::PlaySoundEnviroment</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>sound_set</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>play_fade_in</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>stop_fade_out</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>loop</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Create and play an <ref refid="class_effect_sound" kindref="compound">EffectSound</ref>, updating environment variables. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Calls CreateSound, read CreateSound warning </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sound_set</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> The sound set name of the sound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>vector</computeroutput> The position to play the sound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>play_fade_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The fade in duration of the sound (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stop_fade_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The fade out duration of the sound (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>loop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Whether the sound should loop (Optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_effect_sound" kindref="compound">EffectSound</ref></computeroutput> The created <ref refid="class_effect_sound" kindref="compound">EffectSound</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="224" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="224" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_effect_manager_1a62121261c750c6174099a4879ac2f781" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_effect_sound" kindref="compound">EffectSound</ref></type>
+        <definition>static EffectSound SEffectManager::PlaySoundOnObject</definition>
+        <argsstring>(string sound_set, Object parent_object, float play_fade_in=0, float stop_fade_out=0, bool loop=false)</argsstring>
+        <name>PlaySoundOnObject</name>
+        <qualifiedname>SEffectManager::PlaySoundOnObject</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>sound_set</declname>
+        </param>
+        <param>
+          <type><ref refid="class_object" kindref="compound">Object</ref></type>
+          <declname>parent_object</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>play_fade_in</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>stop_fade_out</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>loop</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Create and play an <ref refid="class_effect_sound" kindref="compound">EffectSound</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Calls CreateSound, read CreateSound warning </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sound_set</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> The sound set name of the sound </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parent_object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_object" kindref="compound">Object</ref></computeroutput> The parent <ref refid="class_object" kindref="compound">Object</ref> for the sound to follow </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>play_fade_in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The fade in duration of the sound (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stop_fade_out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> The fade out duration of the sound (Optional) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>loop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>bool</computeroutput> Whether the sound should loop (Optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_effect_sound" kindref="compound">EffectSound</ref></computeroutput> The created <ref refid="class_effect_sound" kindref="compound">EffectSound</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="243" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="243" bodyend="252"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Generic API</header>
+      <description><para>General methods used for <ref refid="class_s_effect_manager" kindref="compound">SEffectManager</ref> </para>
+</description>
+      <memberdef kind="function" id="class_s_effect_manager_1aec7ef95de317ab1011f04c6c5c496248" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SEffectManager::DestroyEffect</definition>
+        <argsstring>(Effect effect)</argsstring>
+        <name>DestroyEffect</name>
+        <qualifiedname>SEffectManager::DestroyEffect</qualifiedname>
+        <param>
+          <type><ref refid="_effect_8c_1aa9753a60bcd32e2d28e6641973c8bc4e" kindref="member">Effect</ref></type>
+          <declname>effect</declname>
+        </param>
+        <briefdescription>
+<para>Unregisters, stops and frees the Effect. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>effect_sound</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_effect_sound" kindref="compound">EffectSound</ref></computeroutput> The <ref refid="class_effect_sound" kindref="compound">EffectSound</ref> to free </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="267" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="267" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_effect_manager_1aaf0f00c7e9b1a36c0d21e6d7fe2e806b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static bool SEffectManager::IsEffectExist</definition>
+        <argsstring>(int effect_id)</argsstring>
+        <name>IsEffectExist</name>
+        <qualifiedname>SEffectManager::IsEffectExist</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>effect_id</declname>
+        </param>
+        <briefdescription>
+<para>Checks whether an Effect ID is registered in <ref refid="class_s_effect_manager" kindref="compound">SEffectManager</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>effect_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The Effect ID to check </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> Whether there is an Effect registered for this ID </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="281" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="281" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_effect_manager_1a619a71dd514070eb0f5d4db92d93d250" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_effect_8c_1aa9753a60bcd32e2d28e6641973c8bc4e" kindref="member">Effect</ref></type>
+        <definition>static Effect SEffectManager::GetEffectByID</definition>
+        <argsstring>(int effect_id)</argsstring>
+        <name>GetEffectByID</name>
+        <qualifiedname>SEffectManager::GetEffectByID</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>effect_id</declname>
+        </param>
+        <briefdescription>
+<para>Gets the Effect with the given registered Effect ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>effect_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The Effect ID </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>Effect</computeroutput> The Effect registered to the ID or null </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="294" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="294" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_effect_manager_1ae5e33fc5ba263406da3d1ab94307b70d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static int SEffectManager::EffectRegister</definition>
+        <argsstring>(Effect effect)</argsstring>
+        <name>EffectRegister</name>
+        <qualifiedname>SEffectManager::EffectRegister</qualifiedname>
+        <param>
+          <type><ref refid="_effect_8c_1aa9753a60bcd32e2d28e6641973c8bc4e" kindref="member">Effect</ref></type>
+          <declname>effect</declname>
+        </param>
+        <briefdescription>
+<para>Registers Effect in <ref refid="class_s_effect_manager" kindref="compound">SEffectManager</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Already handled in <ref refid="class_s_effect_manager" kindref="compound">SEffectManager</ref> Create/Play methods </para>
+</simplesect>
+<simplesect kind="note"><para>This will make <ref refid="class_s_effect_manager" kindref="compound">SEffectManager</ref> hold a strong ref for the Effect </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>effect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>Effect</computeroutput> The Effect to register </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>int</computeroutput> The Effect ID </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="309" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="309" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_effect_manager_1a1633fd23cd0d812ad407cf136ae23288" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SEffectManager::EffectUnregister</definition>
+        <argsstring>(int id)</argsstring>
+        <name>EffectUnregister</name>
+        <qualifiedname>SEffectManager::EffectUnregister</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+<para>Unregisters Effect in <ref refid="class_s_effect_manager" kindref="compound">SEffectManager</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Will automatically occur on stop when the Effect is AutoDestroy </para>
+</simplesect>
+<simplesect kind="note"><para>ID can be gotten from the Effect by calling Effect.GetID </para>
+</simplesect>
+<simplesect kind="note"><para>Generic Play methods will also return the ID </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>int</computeroutput> The ID of the Effect to unregister </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="338" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="338" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_effect_manager_1aba858ca9a94d20d2b935a07e354f7dc3" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SEffectManager::EffectUnregisterEx</definition>
+        <argsstring>(Effect effect)</argsstring>
+        <name>EffectUnregisterEx</name>
+        <qualifiedname>SEffectManager::EffectUnregisterEx</qualifiedname>
+        <param>
+          <type><ref refid="_effect_8c_1aa9753a60bcd32e2d28e6641973c8bc4e" kindref="member">Effect</ref></type>
+          <declname>effect</declname>
+        </param>
+        <briefdescription>
+<para>Unregisters Effect in <ref refid="class_s_effect_manager" kindref="compound">SEffectManager</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>effect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>Effect</computeroutput> The Effect to unregister </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="360" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="360" bodyend="363"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_effect_manager_1a66d39b09236e05eff266405bc698b86c" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static protected int SEffectManager::GetFreeEffectID</definition>
+        <argsstring>()</argsstring>
+        <name>GetFreeEffectID</name>
+        <qualifiedname>SEffectManager::GetFreeEffectID</qualifiedname>
+        <briefdescription>
+<para>Helper function for EffectRegister to decide an Effect ID. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>int</computeroutput> A currently unused Effect ID </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="369" column="22" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="369" bodyend="385"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Sound helpers</header>
+      <description><para>Sound specific helper methods </para>
+</description>
+      <memberdef kind="function" id="class_s_effect_manager_1ab9b9018b8954d3f573f0765eb4f54d4b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static bool SEffectManager::DestroySound</definition>
+        <argsstring>(EffectSound sound_effect)</argsstring>
+        <name>DestroySound</name>
+        <qualifiedname>SEffectManager::DestroySound</qualifiedname>
+        <param>
+          <type><ref refid="class_effect_sound" kindref="compound">EffectSound</ref></type>
+          <declname>sound_effect</declname>
+        </param>
+        <briefdescription>
+<para>Legacy, backwards compatibility. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sound_effect</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_effect_sound" kindref="compound">EffectSound</ref></computeroutput> The <ref refid="class_effect_sound" kindref="compound">EffectSound</ref> to free </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>bool</computeroutput> A bool which is always true </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="401" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="401" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_effect_manager_1a8cc13b04b6c0e6736b3fce53eb135c03" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_sound_params" kindref="compound">SoundParams</ref></type>
+        <definition>static SoundParams SEffectManager::GetCachedSoundParam</definition>
+        <argsstring>(string soundset)</argsstring>
+        <name>GetCachedSoundParam</name>
+        <qualifiedname>SEffectManager::GetCachedSoundParam</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>soundset</declname>
+        </param>
+        <briefdescription>
+<para>Get or create a cached <ref refid="class_sound_params" kindref="compound">SoundParams</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>soundset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>string</computeroutput> The sound set name of the sound </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput><ref refid="class_sound_params" kindref="compound">SoundParams</ref></computeroutput> The cached <ref refid="class_sound_params" kindref="compound">SoundParams</ref> for the given soundset </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="412" column="20" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="412" bodyend="421"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Events</header>
+      <description><para>Various events that can be overriden for custom behaviour </para>
+</description>
+      <memberdef kind="function" id="class_s_effect_manager_1a0a2d37b29a95cda6d7736ec978135f37" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SEffectManager::Event_OnSoundWaveEnded</definition>
+        <argsstring>(EffectSound effect_sound)</argsstring>
+        <name>Event_OnSoundWaveEnded</name>
+        <qualifiedname>SEffectManager::Event_OnSoundWaveEnded</qualifiedname>
+        <param>
+          <type><ref refid="class_effect_sound" kindref="compound">EffectSound</ref></type>
+          <declname>effect_sound</declname>
+        </param>
+        <briefdescription>
+<para>Event called from <ref refid="class_effect_sound_1af1945b07e3edf0f1c2874517db37dba7" kindref="member">EffectSound.Event_OnSoundWaveEnded</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Every registered sound is registered to call this </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>effect_sound</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput><ref refid="class_effect_sound" kindref="compound">EffectSound</ref></computeroutput> The <ref refid="class_effect_sound" kindref="compound">EffectSound</ref> calling the event </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="437" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="437" bodyend="440"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_effect_manager_1af4da3082532b79a039e556afee9cae7c" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SEffectManager::Event_OnFrameUpdate</definition>
+        <argsstring>(float time_delta)</argsstring>
+        <name>Event_OnFrameUpdate</name>
+        <qualifiedname>SEffectManager::Event_OnFrameUpdate</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>time_delta</declname>
+        </param>
+        <briefdescription>
+<para>Event called on frame. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Called from MissionGameplay.OnUpdate </para>
+</simplesect>
+<simplesect kind="note"><para>Effects register themselves by Effect.SetEnableEventFrame(true) </para>
+</simplesect>
+<simplesect kind="note"><para><ref refid="class_effect_sound" kindref="compound">EffectSound</ref> is automatically registered </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time_delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><computeroutput>float</computeroutput> Time passed since the previous frame </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="449" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="449" bodyend="452"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Lifetime</header>
+      <description><para>Creation and cleanup </para>
+</description>
+      <memberdef kind="function" id="class_s_effect_manager_1a76bd805bdc56fbe5179fbe90b533b090" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SEffectManager::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>SEffectManager::Init</qualifiedname>
+        <briefdescription>
+<para>Initialize the containers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This is done this way, to have these not exist on server </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="467" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="467" bodyend="475"/>
+      </memberdef>
+      <memberdef kind="function" id="class_s_effect_manager_1a186965564915ac64f197c04a1a67e66b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SEffectManager::Cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>Cleanup</name>
+        <qualifiedname>SEffectManager::Cleanup</qualifiedname>
+        <briefdescription>
+<para>Cleanup method to properly clean up the static data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Will be called when <ref refid="class_mission_base" kindref="compound">MissionBase</ref> is destroyed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="481" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="481" bodyend="529"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_s_effect_manager_1af257b655dbdb02998923a174c9618ffe" prot="private" static="yes" mutable="no">
+        <type>protected ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>, ref <ref refid="_effect_8c_1aa9753a60bcd32e2d28e6641973c8bc4e" kindref="member">Effect</ref> &gt;</type>
+        <definition>protected ref map&lt;int, ref Effect&gt; SEffectManager::m_EffectsMap</definition>
+        <argsstring></argsstring>
+        <name>m_EffectsMap</name>
+        <qualifiedname>SEffectManager::m_EffectsMap</qualifiedname>
+        <briefdescription>
+<para><ref refid="class_static" kindref="compound">Static</ref> map of all registered effects &lt;id, Effect&gt; </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="8" column="26" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_effect_manager_1a2a538d63367dc14a0b334a8a50368c5f" prot="private" static="yes" mutable="no">
+        <type>protected ref <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt;</type>
+        <definition>protected ref array&lt;int&gt; SEffectManager::m_FreeEffectIDs</definition>
+        <argsstring></argsstring>
+        <name>m_FreeEffectIDs</name>
+        <qualifiedname>SEffectManager::m_FreeEffectIDs</qualifiedname>
+        <briefdescription>
+<para><ref refid="class_static" kindref="compound">Static</ref> array of IDs that were previously used, but freed up by unregistering. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="10" column="28" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_effect_manager_1a609066115ec7bd48774306e6bbefee0d" prot="private" static="yes" mutable="no">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected int SEffectManager::m_HighestFreeEffectID</definition>
+        <argsstring></argsstring>
+        <name>m_HighestFreeEffectID</name>
+        <qualifiedname>SEffectManager::m_HighestFreeEffectID</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>Counter for quickly getting the next ID if FreeEffectIDs array is empty. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="12" column="22" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_effect_manager_1a533ee911e6a1dce97bb7b7ee72ea202c" prot="private" static="yes" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int SEffectManager::INVALID_ID</definition>
+        <argsstring></argsstring>
+        <name>INVALID_ID</name>
+        <qualifiedname>SEffectManager::INVALID_ID</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>As the counter starts at 1, Effect ID can never be 0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="14" column="18" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_effect_manager_1a636e628ee341160585921397c2b582da" prot="private" static="yes" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool SEffectManager::m_IsCleanup</definition>
+        <argsstring></argsstring>
+        <name>m_IsCleanup</name>
+        <qualifiedname>SEffectManager::m_IsCleanup</qualifiedname>
+        <briefdescription>
+<para>Bool to check whether Cleanup is happening, which means that the maps should no longer be accessed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="16" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_effect_manager_1a7f9592c18664c2db207d14ca5b692a79" prot="private" static="yes" mutable="no">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool SEffectManager::m_IsInitialized</definition>
+        <argsstring></argsstring>
+        <name>m_IsInitialized</name>
+        <qualifiedname>SEffectManager::m_IsInitialized</qualifiedname>
+        <briefdescription>
+<para>Bool to check whether Init was called. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="18" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_effect_manager_1a9ca13a7d37f5335214a861bcf2e25b2f" prot="private" static="yes" mutable="no">
+        <type>protected ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="classstring" kindref="compound">string</ref>, ref <ref refid="class_sound_params" kindref="compound">SoundParams</ref> &gt;</type>
+        <definition>protected ref map&lt;string, ref SoundParams&gt; SEffectManager::m_ParamsMap</definition>
+        <argsstring></argsstring>
+        <name>m_ParamsMap</name>
+        <qualifiedname>SEffectManager::m_ParamsMap</qualifiedname>
+        <briefdescription>
+<para><ref refid="class_static" kindref="compound">Static</ref> map of cached sound params, to prevent having to recreate them. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="21" column="26" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_s_effect_manager_1a570eb64072d36f3fc8c37a51211bd54c" prot="private" static="yes" mutable="no">
+        <type>ref <ref refid="class_script_invoker" kindref="compound">ScriptInvoker</ref></type>
+        <definition>ref ScriptInvoker SEffectManager::Event_OnFrameUpdate</definition>
+        <argsstring></argsstring>
+        <name>Event_OnFrameUpdate</name>
+        <qualifiedname>SEffectManager::Event_OnFrameUpdate</qualifiedname>
+        <briefdescription>
+<para><ref refid="class_static" kindref="compound">Static</ref> invoker for the <ref refid="class_s_effect_manager_1a570eb64072d36f3fc8c37a51211bd54c" kindref="member">SEffectManager.Event_OnFrameUpdate</ref> called form MissionGameplay.OnUpdate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="24" column="26" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Manager class for managing Effect (<ref refid="class_effect_particle" kindref="compound">EffectParticle</ref>, <ref refid="class_effect_sound" kindref="compound">EffectSound</ref>) </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="warning"><para>Keeps a ref to any Effect registered (Created/Played), make sure to perform the necessary cleanup </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5">
+        <label>Class</label>
+        <link refid="class_class"/>
+      </node>
+      <node id="3">
+        <label>Object</label>
+        <link refid="class_object"/>
+      </node>
+      <node id="1">
+        <label>SEffectManager</label>
+        <link refid="class_s_effect_manager"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_FreeEffectIDs</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_IsCleanup</edgelabel>
+          <edgelabel>m_IsInitialized</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>Event_OnFrameUpdate</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ScriptInvoker</label>
+        <link refid="class_script_invoker"/>
+      </node>
+      <node id="7">
+        <label>Widget</label>
+        <link refid="class_widget"/>
+      </node>
+      <node id="4">
+        <label>array</label>
+        <link refid="classarray"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>array&lt; Widget &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>array&lt; int &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>bool</label>
+        <link refid="classbool"/>
+      </node>
+      <node id="6">
+        <label>string</label>
+        <link refid="classstring"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>Empty</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" line="5" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/EffectManager.c" bodystart="6" bodyend="532"/>
+    <listofallmembers>
+      <member refid="class_s_effect_manager_1a186965564915ac64f197c04a1a67e66b" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>Cleanup</name></member>
+      <member refid="class_s_effect_manager_1ac4f0c5ccedc2602bc229693c2a613aff" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>CreateSound</name></member>
+      <member refid="class_s_effect_manager_1aec7ef95de317ab1011f04c6c5c496248" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>DestroyEffect</name></member>
+      <member refid="class_s_effect_manager_1ab9b9018b8954d3f573f0765eb4f54d4b" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>DestroySound</name></member>
+      <member refid="class_s_effect_manager_1ae5e33fc5ba263406da3d1ab94307b70d" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>EffectRegister</name></member>
+      <member refid="class_s_effect_manager_1a1633fd23cd0d812ad407cf136ae23288" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>EffectUnregister</name></member>
+      <member refid="class_s_effect_manager_1aba858ca9a94d20d2b935a07e354f7dc3" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>EffectUnregisterEx</name></member>
+      <member refid="class_s_effect_manager_1a570eb64072d36f3fc8c37a51211bd54c" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>Event_OnFrameUpdate</name></member>
+      <member refid="class_s_effect_manager_1af4da3082532b79a039e556afee9cae7c" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>Event_OnFrameUpdate</name></member>
+      <member refid="class_s_effect_manager_1a0a2d37b29a95cda6d7736ec978135f37" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>Event_OnSoundWaveEnded</name></member>
+      <member refid="class_s_effect_manager_1a8cc13b04b6c0e6736b3fce53eb135c03" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>GetCachedSoundParam</name></member>
+      <member refid="class_s_effect_manager_1a619a71dd514070eb0f5d4db92d93d250" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>GetEffectByID</name></member>
+      <member refid="class_s_effect_manager_1a66d39b09236e05eff266405bc698b86c" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>GetFreeEffectID</name></member>
+      <member refid="class_s_effect_manager_1a76bd805bdc56fbe5179fbe90b533b090" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>Init</name></member>
+      <member refid="class_s_effect_manager_1a533ee911e6a1dce97bb7b7ee72ea202c" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>INVALID_ID</name></member>
+      <member refid="class_s_effect_manager_1aaf0f00c7e9b1a36c0d21e6d7fe2e806b" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>IsEffectExist</name></member>
+      <member refid="class_s_effect_manager_1af257b655dbdb02998923a174c9618ffe" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>m_EffectsMap</name></member>
+      <member refid="class_s_effect_manager_1a2a538d63367dc14a0b334a8a50368c5f" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>m_FreeEffectIDs</name></member>
+      <member refid="class_s_effect_manager_1a609066115ec7bd48774306e6bbefee0d" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>m_HighestFreeEffectID</name></member>
+      <member refid="class_s_effect_manager_1a636e628ee341160585921397c2b582da" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>m_IsCleanup</name></member>
+      <member refid="class_s_effect_manager_1a7f9592c18664c2db207d14ca5b692a79" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>m_IsInitialized</name></member>
+      <member refid="class_s_effect_manager_1a9ca13a7d37f5335214a861bcf2e25b2f" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>m_ParamsMap</name></member>
+      <member refid="class_s_effect_manager_1a55793cc8dce509edd95cb4a9938fb1dd" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>PlayInWorld</name></member>
+      <member refid="class_s_effect_manager_1a5b958d77fa6a4f6a9e14af65c7bd5e08" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>PlayOnObject</name></member>
+      <member refid="class_s_effect_manager_1aa05a7b24ec51456db8c32cf2e4b099ef" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>PlaySound</name></member>
+      <member refid="class_s_effect_manager_1a3882d74eac0fead0627eaef591a78990" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>PlaySoundCachedParams</name></member>
+      <member refid="class_s_effect_manager_1a0d3128b8934177ace943d7ddbc27a36d" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>PlaySoundEnviroment</name></member>
+      <member refid="class_s_effect_manager_1a62121261c750c6174099a4879ac2f781" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>PlaySoundOnObject</name></member>
+      <member refid="class_s_effect_manager_1a2a8a6ff519e18fdecea9d2c9a54b413b" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>PlaySoundParams</name></member>
+      <member refid="class_s_effect_manager_1a80df7d51f40b67ad60f46a1417cbcb75" prot="private" virt="non-virtual"><scope>SEffectManager</scope><name>Stop</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

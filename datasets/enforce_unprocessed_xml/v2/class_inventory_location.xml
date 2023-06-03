@@ -1,0 +1,970 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_inventory_location" kind="class" language="C++" prot="public">
+    <compoundname>InventoryLocation</compoundname>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_inventory_location_1acfa0092e6f4914c0deb330385c4ad77a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>InventoryLocation::IsValid</definition>
+        <argsstring>()</argsstring>
+        <name>IsValid</name>
+        <qualifiedname>InventoryLocation::IsValid</qualifiedname>
+        <briefdescription>
+<para>verify current set inventory location </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if valid, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="34" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1af47a618941989bcedd7ee33dd3c45721" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>InventoryLocation::GetType</definition>
+        <argsstring>()</argsstring>
+        <name>GetType</name>
+        <qualifiedname>InventoryLocation::GetType</qualifiedname>
+        <briefdescription>
+<para>returns type of <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="_inventory_location_8c_1ad09049fb2b99c763369bfe6228aa81b3" kindref="member">InventoryLocationType</ref> for known types of inventory locations </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="41" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a99b6490f5adbcfdc8f2a2bf5c7e28688" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+        <definition>InventoryLocation::GetParent</definition>
+        <argsstring>()</argsstring>
+        <name>GetParent</name>
+        <qualifiedname>InventoryLocation::GetParent</qualifiedname>
+        <briefdescription>
+<para>returns parent of current inventory location </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Parent entity can be null if item is on ground.</para>
+<para><simplesect kind="return"><para>parent entity, null otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="50" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a5ce93afd1437186219acc3cc59df26f9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+        <definition>InventoryLocation::GetItem</definition>
+        <argsstring>()</argsstring>
+        <name>GetItem</name>
+        <qualifiedname>InventoryLocation::GetItem</qualifiedname>
+        <briefdescription>
+<para>returns item of current inventory location </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Item can be null if and only if this is a query for location of item that is about to be created (new spawn).</para>
+<para><simplesect kind="return"><para>item </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="60" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a50993cb28f32ef7e6a03988d9752cda4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>InventoryLocation::GetSlot</definition>
+        <argsstring>()</argsstring>
+        <name>GetSlot</name>
+        <qualifiedname>InventoryLocation::GetSlot</qualifiedname>
+        <briefdescription>
+<para>returns slot id if current type is Attachment </para>
+        </briefdescription>
+        <detaileddescription>
+<para>@NOTE: slot id is related to order of entries in DZ/data/config.cpp secton <ref refid="class_cfg_slots" kindref="compound">CfgSlots</ref></para>
+<para><simplesect kind="return"><para>slot id if attachment, -1 otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="69" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a795e39aac13eea5fd5d5db5c75c4186f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>InventoryLocation::GetIdx</definition>
+        <argsstring>()</argsstring>
+        <name>GetIdx</name>
+        <qualifiedname>InventoryLocation::GetIdx</qualifiedname>
+        <briefdescription>
+<para>returns index of cargo if current type is Cargo / ProxyCargo </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>index or -1 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="75" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1ac647a5a610d4af7201b6203799a23bc9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>InventoryLocation::GetRow</definition>
+        <argsstring>()</argsstring>
+        <name>GetRow</name>
+        <qualifiedname>InventoryLocation::GetRow</qualifiedname>
+        <briefdescription>
+<para>returns row of cargo if current type is Cargo / ProxyCargo </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>row or -1 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="81" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a989c31ee57fd761f170b17331c126f59" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>InventoryLocation::GetCol</definition>
+        <argsstring>()</argsstring>
+        <name>GetCol</name>
+        <qualifiedname>InventoryLocation::GetCol</qualifiedname>
+        <briefdescription>
+<para>returns column of cargo if current type is Cargo / ProxyCargo </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>index or -1 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="87" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a994edb8d75366e1e07eb8523690320a5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>InventoryLocation::GetFlip</definition>
+        <argsstring>()</argsstring>
+        <name>GetFlip</name>
+        <qualifiedname>InventoryLocation::GetFlip</qualifiedname>
+        <briefdescription>
+<para>returns flip status of cargo </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true/false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="93" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a906d41375601475af387e1baf82b7872" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>InventoryLocation::GetPos</definition>
+        <argsstring>()</argsstring>
+        <name>GetPos</name>
+        <qualifiedname>InventoryLocation::GetPos</qualifiedname>
+        <briefdescription>
+<para>returns position of item in world if type is Ground </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="99" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1af70ee9b17c9d4bf0a017c084f44ed2e2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>InventoryLocation::GetDir</definition>
+        <argsstring>(out float dir[4])</argsstring>
+        <name>GetDir</name>
+        <qualifiedname>InventoryLocation::GetDir</qualifiedname>
+        <param>
+          <type>out <ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>dir</declname>
+          <array>[4]</array>
+        </param>
+        <briefdescription>
+<para>returns direction of item in world if type is Ground </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="105" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1aaa08a01038297771eba7c209c882d551" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>InventoryLocation::SetGround</definition>
+        <argsstring>(EntityAI e, vector mat[4])</argsstring>
+        <name>SetGround</name>
+        <qualifiedname>InventoryLocation::SetGround</qualifiedname>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>mat</declname>
+          <array>[4]</array>
+        </param>
+        <briefdescription>
+<para>sets current inventory location type to Ground with transformation mat </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entity with this inventory location (null for new spawns) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>transformation matrix </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="113" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a29a2cfba56bdc6e5e907d5887ecaa02c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>InventoryLocation::SetGroundEx</definition>
+        <argsstring>(EntityAI e, vector pos, float dir[4])</argsstring>
+        <name>SetGroundEx</name>
+        <qualifiedname>InventoryLocation::SetGroundEx</qualifiedname>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>dir</declname>
+          <array>[4]</array>
+        </param>
+        <briefdescription>
+<para>sets current inventory location type to Ground with transformation mat </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entity with this inventory location (null for new spawns) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position vector </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>direction quat </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="121" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a844f213574a12ef6d95e269feeb35cef" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>InventoryLocation::SetAttachment</definition>
+        <argsstring>(notnull EntityAI parent, EntityAI e, int slotId)</argsstring>
+        <name>SetAttachment</name>
+        <qualifiedname>InventoryLocation::SetAttachment</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>slotId</declname>
+        </param>
+        <briefdescription>
+<para>sets current inventory location type to Attachment with slot id set to &lt;slotId&gt; </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parent entity the item &lt;e&gt; will be attached to </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entity with this inventory location (null for new spawns) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">slotId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>slot id where the item will be attached </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="129" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1abc565abec207aede12d14efb7718967d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>InventoryLocation::SetCargoAuto</definition>
+        <argsstring>(notnull CargoBase cargo, EntityAI e, int row, int col, bool flip)</argsstring>
+        <name>SetCargoAuto</name>
+        <qualifiedname>InventoryLocation::SetCargoAuto</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_cargo_base" kindref="compound">CargoBase</ref></type>
+          <declname>cargo</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>flip</declname>
+        </param>
+        <briefdescription>
+<para>based on Cargo.IsProxyCargo uses SetProxyCargo or SetCargo respectively </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">cargo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>cargo that will receive item &lt;e&gt; into cargo </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entity with this inventory location (null for new spawns) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>row of the cargo </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>column of the cargo </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="139" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a6e08b8d91fd3bc6a1ea00dea52a0b92e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>InventoryLocation::SetCargo</definition>
+        <argsstring>(notnull EntityAI parent, EntityAI e, int idx, int row, int col, bool flip)</argsstring>
+        <name>SetCargo</name>
+        <qualifiedname>InventoryLocation::SetCargo</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>flip</declname>
+        </param>
+        <briefdescription>
+<para>sets current inventory location type to Cargo with coordinates (idx, row, col) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parent entity that will receive item &lt;e&gt; into cargo </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entity with this inventory location (null for new spawns) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of cargo </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>row of the cargo </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>column of the cargo </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="150" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1afd7b11a0e517fe7d58685549dde0904b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>InventoryLocation::SetProxyCargo</definition>
+        <argsstring>(notnull EntityAI parent, EntityAI e, int idx, int row, int col, bool flip)</argsstring>
+        <name>SetProxyCargo</name>
+        <qualifiedname>InventoryLocation::SetProxyCargo</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>col</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>flip</declname>
+        </param>
+        <briefdescription>
+<para>sets current inventory location type to ProxyCargo with coordinates (idx, row, col) @NOTE: typical usage is in building-like dummy structures, where furniture with cargo is part of the model, and is not a physical entity (like person or bag). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parent entity that will receive item &lt;e&gt; into proxy cargo </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entity with this inventory location (null for new spawns) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>index of cargo </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>row of the cargo </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>column of the cargo </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="163" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1af5b971f773deb968c54cfb6ca66df780" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>InventoryLocation::SetHands</definition>
+        <argsstring>(notnull EntityAI parent, EntityAI e)</argsstring>
+        <name>SetHands</name>
+        <qualifiedname>InventoryLocation::SetHands</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>parent</declname>
+        </param>
+        <param>
+          <type><ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>sets current inventory location type to Hands </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>parent entity the item &lt;e&gt; will be attached to. this&apos;d better be inherited from Person </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>entity with this inventory location (null for new spawns) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="170" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a6c9db08c00bcec193b458afc4f238cee" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>InventoryLocation::SetParent</definition>
+        <argsstring>(notnull EntityAI parent)</argsstring>
+        <name>SetParent</name>
+        <qualifiedname>InventoryLocation::SetParent</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>parent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>brief sets current inventory location&apos;s GetParent </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="176" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1ab6a8248f71da0556ba9fb36d0ba00cc0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>InventoryLocation::SetItem</definition>
+        <argsstring>(notnull EntityAI item)</argsstring>
+        <name>SetItem</name>
+        <qualifiedname>InventoryLocation::SetItem</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_entity_a_i" kindref="compound">EntityAI</ref></type>
+          <declname>item</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>brief sets current inventory location&apos;s item </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="181" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a2872dbbbe2c64bbbee91b8f923dcd637" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void InventoryLocation::SetSlot</definition>
+        <argsstring>(int slotId)</argsstring>
+        <name>SetSlot</name>
+        <qualifiedname>InventoryLocation::SetSlot</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>slotId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="184" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a133e14fa273d43a72a89521d9bf103e1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void InventoryLocation::SetIndex</definition>
+        <argsstring>(int idx)</argsstring>
+        <name>SetIndex</name>
+        <qualifiedname>InventoryLocation::SetIndex</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="185" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a4e30e0c0961e67f55d02c25e93af066b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void InventoryLocation::SetRow</definition>
+        <argsstring>(int row)</argsstring>
+        <name>SetRow</name>
+        <qualifiedname>InventoryLocation::SetRow</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>row</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="186" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a0b9722cde1c1ed2dabca5ca93ca0f3fe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void InventoryLocation::SetCol</definition>
+        <argsstring>(int col)</argsstring>
+        <name>SetCol</name>
+        <qualifiedname>InventoryLocation::SetCol</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="187" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a8a8d09b0529d00a20b7aba324dd2370e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void InventoryLocation::SetFlip</definition>
+        <argsstring>(bool flip)</argsstring>
+        <name>SetFlip</name>
+        <qualifiedname>InventoryLocation::SetFlip</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>flip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="188" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1ad1bf4127066f99fb86be0ad0d4694a0a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>InventoryLocation::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <qualifiedname>InventoryLocation::Reset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="193" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1aab9dddfd28df99bf804c751d5f1af0b6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool InventoryLocation::CompareLocationOnly</definition>
+        <argsstring>(notnull InventoryLocation other)</argsstring>
+        <name>CompareLocationOnly</name>
+        <qualifiedname>InventoryLocation::CompareLocationOnly</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="195" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a3d76550d868b93b3cda2d9b614f37026" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>InventoryLocation::CollidesWith</definition>
+        <argsstring>(notnull InventoryLocation rhs)</argsstring>
+        <name>CollidesWith</name>
+        <qualifiedname>InventoryLocation::CollidesWith</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>checks if inventory locations collides each with other </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="201" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1a9ce83b1d502ec70e454d6c7a670e4199" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+        <definition>InventoryLocation::Copy</definition>
+        <argsstring>(notnull InventoryLocation rhs)</argsstring>
+        <name>Copy</name>
+        <qualifiedname>InventoryLocation::Copy</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>copies location data to another location </para>
+        </briefdescription>
+        <detaileddescription>
+<para>@NOTE it copies all data (except enforce internal data) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="209" column="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1ac60e6f81003325ccbac08805c7ffd3c9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+        <definition>InventoryLocation::CopyLocationFrom</definition>
+        <argsstring>(notnull InventoryLocation rhs, bool copyFlip)</argsstring>
+        <name>CopyLocationFrom</name>
+        <qualifiedname>InventoryLocation::CopyLocationFrom</qualifiedname>
+        <param>
+          <type>notnull <ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>copyFlip</declname>
+        </param>
+        <briefdescription>
+<para>copies location to another location without m_item member </para>
+        </briefdescription>
+        <detaileddescription>
+<para>@NOTE it does NOT do a copy of m_item member! </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="216" column="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1ae6e0792c2508f75cb3c15d5f7e7a2b8e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>string InventoryLocation::DumpToString</definition>
+        <argsstring>()</argsstring>
+        <name>DumpToString</name>
+        <qualifiedname>InventoryLocation::DumpToString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="225" column="8" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" bodystart="225" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1ac6f09b61441880e1d0c5af7e2a94f988" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool InventoryLocation::ReadFromContext</definition>
+        <argsstring>(ParamsReadContext ctx)</argsstring>
+        <name>ReadFromContext</name>
+        <qualifiedname>InventoryLocation::ReadFromContext</qualifiedname>
+        <param>
+          <type><ref refid="gameplay_8c_1a4ff67286551fc6c18504752a277c8bc1" kindref="member">ParamsReadContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="281" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" bodystart="281" bodyend="395"/>
+      </memberdef>
+      <memberdef kind="function" id="class_inventory_location_1aa82e1dd9b53ffdf8da4b60c6e06e04be" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool InventoryLocation::WriteToContext</definition>
+        <argsstring>(ParamsWriteContext ctx)</argsstring>
+        <name>WriteToContext</name>
+        <qualifiedname>InventoryLocation::WriteToContext</qualifiedname>
+        <param>
+          <type><ref refid="gameplay_8c_1af1d1033fca2ebd02f4ba61051b6341c4" kindref="member">ParamsWriteContext</ref></type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="397" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" bodystart="397" bodyend="545"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_inventory_location_1a1f3b481a816f2bae9fc880483ffca408" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>static string InventoryLocation::DumpToStringNullSafe</definition>
+        <argsstring>(InventoryLocation loc)</argsstring>
+        <name>DumpToStringNullSafe</name>
+        <qualifiedname>InventoryLocation::DumpToStringNullSafe</qualifiedname>
+        <param>
+          <type><ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref></type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="218" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" bodystart="218" bodyend="223"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_inventory_location" kindref="compound">InventoryLocation</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" line="27" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/InventoryLocation.c" bodystart="28" bodyend="546"/>
+    <listofallmembers>
+      <member refid="class_inventory_location_1a3d76550d868b93b3cda2d9b614f37026" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>CollidesWith</name></member>
+      <member refid="class_inventory_location_1aab9dddfd28df99bf804c751d5f1af0b6" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>CompareLocationOnly</name></member>
+      <member refid="class_inventory_location_1a9ce83b1d502ec70e454d6c7a670e4199" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>Copy</name></member>
+      <member refid="class_inventory_location_1ac60e6f81003325ccbac08805c7ffd3c9" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>CopyLocationFrom</name></member>
+      <member refid="class_inventory_location_1ae6e0792c2508f75cb3c15d5f7e7a2b8e" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>DumpToString</name></member>
+      <member refid="class_inventory_location_1a1f3b481a816f2bae9fc880483ffca408" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>DumpToStringNullSafe</name></member>
+      <member refid="class_inventory_location_1a989c31ee57fd761f170b17331c126f59" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>GetCol</name></member>
+      <member refid="class_inventory_location_1af70ee9b17c9d4bf0a017c084f44ed2e2" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>GetDir</name></member>
+      <member refid="class_inventory_location_1a994edb8d75366e1e07eb8523690320a5" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>GetFlip</name></member>
+      <member refid="class_inventory_location_1a795e39aac13eea5fd5d5db5c75c4186f" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>GetIdx</name></member>
+      <member refid="class_inventory_location_1a5ce93afd1437186219acc3cc59df26f9" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>GetItem</name></member>
+      <member refid="class_inventory_location_1a99b6490f5adbcfdc8f2a2bf5c7e28688" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>GetParent</name></member>
+      <member refid="class_inventory_location_1a906d41375601475af387e1baf82b7872" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>GetPos</name></member>
+      <member refid="class_inventory_location_1ac647a5a610d4af7201b6203799a23bc9" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>GetRow</name></member>
+      <member refid="class_inventory_location_1a50993cb28f32ef7e6a03988d9752cda4" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>GetSlot</name></member>
+      <member refid="class_inventory_location_1af47a618941989bcedd7ee33dd3c45721" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>GetType</name></member>
+      <member refid="class_inventory_location_1acfa0092e6f4914c0deb330385c4ad77a" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>IsValid</name></member>
+      <member refid="class_inventory_location_1ac6f09b61441880e1d0c5af7e2a94f988" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>ReadFromContext</name></member>
+      <member refid="class_inventory_location_1ad1bf4127066f99fb86be0ad0d4694a0a" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>Reset</name></member>
+      <member refid="class_inventory_location_1a844f213574a12ef6d95e269feeb35cef" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>SetAttachment</name></member>
+      <member refid="class_inventory_location_1a6e08b8d91fd3bc6a1ea00dea52a0b92e" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>SetCargo</name></member>
+      <member refid="class_inventory_location_1abc565abec207aede12d14efb7718967d" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>SetCargoAuto</name></member>
+      <member refid="class_inventory_location_1a0b9722cde1c1ed2dabca5ca93ca0f3fe" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>SetCol</name></member>
+      <member refid="class_inventory_location_1a8a8d09b0529d00a20b7aba324dd2370e" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>SetFlip</name></member>
+      <member refid="class_inventory_location_1aaa08a01038297771eba7c209c882d551" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>SetGround</name></member>
+      <member refid="class_inventory_location_1a29a2cfba56bdc6e5e907d5887ecaa02c" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>SetGroundEx</name></member>
+      <member refid="class_inventory_location_1af5b971f773deb968c54cfb6ca66df780" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>SetHands</name></member>
+      <member refid="class_inventory_location_1a133e14fa273d43a72a89521d9bf103e1" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>SetIndex</name></member>
+      <member refid="class_inventory_location_1ab6a8248f71da0556ba9fb36d0ba00cc0" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>SetItem</name></member>
+      <member refid="class_inventory_location_1a6c9db08c00bcec193b458afc4f238cee" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>SetParent</name></member>
+      <member refid="class_inventory_location_1afd7b11a0e517fe7d58685549dde0904b" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>SetProxyCargo</name></member>
+      <member refid="class_inventory_location_1a4e30e0c0961e67f55d02c25e93af066b" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>SetRow</name></member>
+      <member refid="class_inventory_location_1a2872dbbbe2c64bbbee91b8f923dcd637" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>SetSlot</name></member>
+      <member refid="class_inventory_location_1aa82e1dd9b53ffdf8da4b60c6e06e04be" prot="private" virt="non-virtual"><scope>InventoryLocation</scope><name>WriteToContext</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_human_input_controller" kind="class" language="C++" prot="public">
+    <compoundname>HumanInputController</compoundname>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_human_input_controller_1a19f0b2e5c04eb53d9f81cf9b5c42930e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInputController::SetDisabled</definition>
+        <argsstring>(bool pState)</argsstring>
+        <name>SetDisabled</name>
+        <qualifiedname>HumanInputController::SetDisabled</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pState</declname>
+        </param>
+        <briefdescription>
+<para>disables input controller </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="19" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a273611336783beea53066784079ce273" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto void</type>
+        <definition>proto void HumanInputController::GetMovement</definition>
+        <argsstring>(out float pSpeed, out vector pLocalDirection)</argsstring>
+        <name>GetMovement</name>
+        <qualifiedname>HumanInputController::GetMovement</qualifiedname>
+        <param>
+          <type>out <ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pSpeed</declname>
+        </param>
+        <param>
+          <type>out <ref refid="classvector" kindref="compound">vector</ref></type>
+          <declname>pLocalDirection</declname>
+        </param>
+        <briefdescription>
+<para>returns pSpeed 0,1..2..3 (idle, walk, run, sprint), local normalized direction vector </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="22" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1ae9b604e4a7ef153e34516942e0120a45" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>proto native float HumanInputController::GetHeadingAngle</definition>
+        <argsstring>()</argsstring>
+        <name>GetHeadingAngle</name>
+        <qualifiedname>HumanInputController::GetHeadingAngle</qualifiedname>
+        <briefdescription>
+<para>returns main heading angle (in radians) -PI .. PI (this is world Y angle player is actualy pointing the camera) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="25" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a4ee8fb45ca6611bf66868e8d4347c37b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>proto native vector HumanInputController::GetAimChange</definition>
+        <argsstring>()</argsstring>
+        <name>GetAimChange</name>
+        <qualifiedname>HumanInputController::GetAimChange</qualifiedname>
+        <briefdescription>
+<para>returns per tick aim change (in radians) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="28" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1ae6a6eba08ccd6005475cf45bfd91392c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>proto native vector HumanInputController::GetAimDelta</definition>
+        <argsstring>(float dt)</argsstring>
+        <name>GetAimDelta</name>
+        <qualifiedname>HumanInputController::GetAimDelta</qualifiedname>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>returns aim change (in radians) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="31" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a8f6d9c5a886bfa08e7c6f1b664068a45" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classvector" kindref="compound">vector</ref></type>
+        <definition>proto native vector HumanInputController::GetTracking</definition>
+        <argsstring>()</argsstring>
+        <name>GetTracking</name>
+        <qualifiedname>HumanInputController::GetTracking</qualifiedname>
+        <briefdescription>
+<para>returns absolute tracking change (in radians) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="34" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a5e4c8e0ec73975e13be4f299320d5745" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::CameraViewChanged</definition>
+        <argsstring>()</argsstring>
+        <name>CameraViewChanged</name>
+        <qualifiedname>HumanInputController::CameraViewChanged</qualifiedname>
+        <briefdescription>
+<para>1st/3rd person camera view </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="37" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a17501da6e8e6fd1b0d4f09a753fa2f0b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::CameraIsFreeLook</definition>
+        <argsstring>()</argsstring>
+        <name>CameraIsFreeLook</name>
+        <qualifiedname>HumanInputController::CameraIsFreeLook</qualifiedname>
+        <briefdescription>
+<para>returns true if freelook is active </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="40" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a2e37d3623996bd4b7f93f4211958a139" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInputController::ResetFreeLookToggle</definition>
+        <argsstring>()</argsstring>
+        <name>ResetFreeLookToggle</name>
+        <qualifiedname>HumanInputController::ResetFreeLookToggle</qualifiedname>
+        <briefdescription>
+<para>reset freelook toggle </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="43" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a82ac2612dfc60859fb469917ed784b18" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::CameraIsTracking</definition>
+        <argsstring>()</argsstring>
+        <name>CameraIsTracking</name>
+        <qualifiedname>HumanInputController::CameraIsTracking</qualifiedname>
+        <briefdescription>
+<para>returns if camera is tracking (using IR device) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="46" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a7eea73bbe69269e5b01d6970bd849464" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::Camera3rdIsRightShoulder</definition>
+        <argsstring>()</argsstring>
+        <name>Camera3rdIsRightShoulder</name>
+        <qualifiedname>HumanInputController::Camera3rdIsRightShoulder</qualifiedname>
+        <briefdescription>
+<para>returns true if camera is on right/ false-left shoulder </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="49" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1ac82a640ebfa05598dd7e94955c55faa2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsJumpClimb</definition>
+        <argsstring>()</argsstring>
+        <name>IsJumpClimb</name>
+        <qualifiedname>HumanInputController::IsJumpClimb</qualifiedname>
+        <briefdescription>
+<para>jump/climb action was pressed </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="54" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a688d36d47842790e1bce0ef06328b6e7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsMeleeEvade</definition>
+        <argsstring>()</argsstring>
+        <name>IsMeleeEvade</name>
+        <qualifiedname>HumanInputController::IsMeleeEvade</qualifiedname>
+        <briefdescription>
+<para>returns pressed SHIFT (melee evade) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="60" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1afb146893a93bb3c50d79e7ed38e12b99" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsMeleeFastAttackModifier</definition>
+        <argsstring>()</argsstring>
+        <name>IsMeleeFastAttackModifier</name>
+        <qualifiedname>HumanInputController::IsMeleeFastAttackModifier</qualifiedname>
+        <briefdescription>
+<para>returns SHIFT down (melee fast/heavy) attack modifier </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="63" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a106e1e8236cf99341cf0fa288d8add74" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int HumanInputController::IsMeleeLREvade</definition>
+        <argsstring>()</argsstring>
+        <name>IsMeleeLREvade</name>
+        <qualifiedname>HumanInputController::IsMeleeLREvade</qualifiedname>
+        <briefdescription>
+<para>returns 0,1,2 = none,left,right </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="66" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1abf901404cd1a67c208178a028c06d3e7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsMeleeWeaponAttack</definition>
+        <argsstring>()</argsstring>
+        <name>IsMeleeWeaponAttack</name>
+        <qualifiedname>HumanInputController::IsMeleeWeaponAttack</qualifiedname>
+        <briefdescription>
+<para>return weapon melee attack modifier </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="69" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a2be73383077ec14f0ac91d2accad6398" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::WeaponWasRaiseClick</definition>
+        <argsstring>()</argsstring>
+        <name>WeaponWasRaiseClick</name>
+        <qualifiedname>HumanInputController::WeaponWasRaiseClick</qualifiedname>
+        <briefdescription>
+<para>returns true if weapon click perfomed recently (before raise specifically) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="74" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a99b032bd165792643fd5bf3968925135" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsWeaponRaised</definition>
+        <argsstring>()</argsstring>
+        <name>IsWeaponRaised</name>
+        <qualifiedname>HumanInputController::IsWeaponRaised</qualifiedname>
+        <briefdescription>
+<para>returns true if weapon is raised </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="77" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a0e46b01678756312196dd79006e9c1f6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::WeaponADS</definition>
+        <argsstring>()</argsstring>
+        <name>WeaponADS</name>
+        <qualifiedname>HumanInputController::WeaponADS</qualifiedname>
+        <briefdescription>
+<para>returns true if weapon ADS mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="80" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1ad40c9eba922bace4a0595f6ba8b361d2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInputController::ResetADS</definition>
+        <argsstring>()</argsstring>
+        <name>ResetADS</name>
+        <qualifiedname>HumanInputController::ResetADS</qualifiedname>
+        <briefdescription>
+<para>resets ADS mode to default </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="83" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a56a7d54e2968b3dedcb985b33485637e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsThrowingModeChange</definition>
+        <argsstring>()</argsstring>
+        <name>IsThrowingModeChange</name>
+        <qualifiedname>HumanInputController::IsThrowingModeChange</qualifiedname>
+        <briefdescription>
+<para>returns true if change of throwing mode has been requested </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="86" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1aa5a63be6a131246a444338f0ee448ac6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInputController::ResetThrowingMode</definition>
+        <argsstring>()</argsstring>
+        <name>ResetThrowingMode</name>
+        <qualifiedname>HumanInputController::ResetThrowingMode</qualifiedname>
+        <briefdescription>
+<para>resets Throwing mode </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="89" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a6a75b9f29f397c8119da9df6fbbbb8db" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsWalkToggled</definition>
+        <argsstring>()</argsstring>
+        <name>IsWalkToggled</name>
+        <qualifiedname>HumanInputController::IsWalkToggled</qualifiedname>
+        <briefdescription>
+<para>returns true if Walk set to toggle </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="92" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a3013dbfd5f3b8d97e49802d118cbe47f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsUseButton</definition>
+        <argsstring>()</argsstring>
+        <name>IsUseButton</name>
+        <qualifiedname>HumanInputController::IsUseButton</qualifiedname>
+        <briefdescription>
+<para>Deprecated; returns true if Use/Attack button is pressed (== true for multiple ticks). Synced. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Returns state of both &apos;UADefaultAction&apos; and &apos;UAFire&apos; input actions. Those are now separated in the methods below. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="100" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1aecf268c2e797cb72bb5342826ef5e0b5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsUseButtonDown</definition>
+        <argsstring>()</argsstring>
+        <name>IsUseButtonDown</name>
+        <qualifiedname>HumanInputController::IsUseButtonDown</qualifiedname>
+        <briefdescription>
+<para>Deprecated; returns true if Use/Attack button has just been pressed (== true for 1 tick only). Synced. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Returns state of both &apos;UADefaultAction&apos; and &apos;UAFire&apos; input actions. Those are now separated in the methods below. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="106" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a16429957e548b4abaf976e99ce0ea612" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsUseItemButton</definition>
+        <argsstring>()</argsstring>
+        <name>IsUseItemButton</name>
+        <qualifiedname>HumanInputController::IsUseItemButton</qualifiedname>
+        <briefdescription>
+<para>returns true if &apos;UADefaultAction&apos; button is pressed (== true for multiple ticks). Synced. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="109" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a0816454c95382869c1babc8ee05e7431" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsUseItemButtonDown</definition>
+        <argsstring>()</argsstring>
+        <name>IsUseItemButtonDown</name>
+        <qualifiedname>HumanInputController::IsUseItemButtonDown</qualifiedname>
+        <briefdescription>
+<para>returns true if &apos;UADefaultAction&apos; button has just been pressed (== true for 1 tick only). Synced. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="111" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a446e067c1abb9ed0d4567747967e442a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsAttackButton</definition>
+        <argsstring>()</argsstring>
+        <name>IsAttackButton</name>
+        <qualifiedname>HumanInputController::IsAttackButton</qualifiedname>
+        <briefdescription>
+<para>returns true if &apos;UAFire&apos; button is pressed (== true for multiple ticks). Synced. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="114" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1af3e509afbf3a7e513be95823dcc6dc2f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsAttackButtonDown</definition>
+        <argsstring>()</argsstring>
+        <name>IsAttackButtonDown</name>
+        <qualifiedname>HumanInputController::IsAttackButtonDown</qualifiedname>
+        <briefdescription>
+<para>returns true if &apos;UAFire&apos; button has just been pressed (== true for 1 tick only). Synced. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="116" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1aa60e95b8d96a9f4740caa37ca318c2fe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsSingleUse</definition>
+        <argsstring>()</argsstring>
+        <name>IsSingleUse</name>
+        <qualifiedname>HumanInputController::IsSingleUse</qualifiedname>
+        <briefdescription>
+<para>single &apos;UADefaultAction&apos; (== true for 1 tick only) + not raised </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="119" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a7eaac02caa468adb379fdd4649bbd2a8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsContinuousUse</definition>
+        <argsstring>()</argsstring>
+        <name>IsContinuousUse</name>
+        <qualifiedname>HumanInputController::IsContinuousUse</qualifiedname>
+        <briefdescription>
+<para>Long click &apos;UADefaultAction&apos; (== true for multiple ticks) + not raised. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="122" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1aee3f170b9d31c72ff5306d75e56319c6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsContinuousUseStart</definition>
+        <argsstring>()</argsstring>
+        <name>IsContinuousUseStart</name>
+        <qualifiedname>HumanInputController::IsContinuousUseStart</qualifiedname>
+        <briefdescription>
+<para>is start of cont. &apos;UADefaultAction&apos; (== true for 1 tick only) + not raised </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="125" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a8b53452d7bcdcff6ad46188a89322369" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsContinuousUseEnd</definition>
+        <argsstring>()</argsstring>
+        <name>IsContinuousUseEnd</name>
+        <qualifiedname>HumanInputController::IsContinuousUseEnd</qualifiedname>
+        <briefdescription>
+<para>is end of cont. &apos;UADefaultAction&apos; (== true for 1 tick only) + not raised </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="128" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a312fd1d7e54c6fa7803c4139d228b480" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsImmediateAction</definition>
+        <argsstring>()</argsstring>
+        <name>IsImmediateAction</name>
+        <qualifiedname>HumanInputController::IsImmediateAction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>is immediate action triggered - 1 tick only Middle Button + not raised ! </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="132" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a2145d3903025e512add8f52c54a442d1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsReloadOrMechanismSingleUse</definition>
+        <argsstring>()</argsstring>
+        <name>IsReloadOrMechanismSingleUse</name>
+        <qualifiedname>HumanInputController::IsReloadOrMechanismSingleUse</qualifiedname>
+        <briefdescription>
+<para>weapon handling </para>
+        </briefdescription>
+        <detaileddescription>
+<para>R - reloading / bolting (== true for 1 tick only) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="138" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1af5a3fb25de63a0ca1eedde26a724a226" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsReloadOrMechanismContinuousUse</definition>
+        <argsstring>()</argsstring>
+        <name>IsReloadOrMechanismContinuousUse</name>
+        <qualifiedname>HumanInputController::IsReloadOrMechanismContinuousUse</qualifiedname>
+        <briefdescription>
+<para>R - reloading / bolting - long press (== true for multiple ticks) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="141" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a4315b5f452225f88505ccc50e01c743b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsReloadOrMechanismContinuousUseStart</definition>
+        <argsstring>()</argsstring>
+        <name>IsReloadOrMechanismContinuousUseStart</name>
+        <qualifiedname>HumanInputController::IsReloadOrMechanismContinuousUseStart</qualifiedname>
+        <briefdescription>
+<para>R - reloading / bolting (== true for 1 tick only) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="144" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1ad6c2b6172b219756952f48df2da60a0e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsReloadOrMechanismContinuousUseEnd</definition>
+        <argsstring>()</argsstring>
+        <name>IsReloadOrMechanismContinuousUseEnd</name>
+        <qualifiedname>HumanInputController::IsReloadOrMechanismContinuousUseEnd</qualifiedname>
+        <briefdescription>
+<para>R - reloading / bolting - long press (== true for multiple ticks) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="147" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1aa8a75a74e7b0d2e5d4725264e0b6e5ff" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsZoom</definition>
+        <argsstring>()</argsstring>
+        <name>IsZoom</name>
+        <qualifiedname>HumanInputController::IsZoom</qualifiedname>
+        <briefdescription>
+<para>zooming </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="150" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a9f32fc1b21b58f3e557b8166911fc76e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsZoomToggle</definition>
+        <argsstring>()</argsstring>
+        <name>IsZoomToggle</name>
+        <qualifiedname>HumanInputController::IsZoomToggle</qualifiedname>
+        <briefdescription>
+<para>zooming toggle </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="153" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1ad7ac917705725dd33e3a5f13cbe44de9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInputController::ResetZoomToggle</definition>
+        <argsstring>()</argsstring>
+        <name>ResetZoomToggle</name>
+        <qualifiedname>HumanInputController::ResetZoomToggle</qualifiedname>
+        <briefdescription>
+<para>reset zoom toggle </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="156" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1ac35855eb8f7999320f2b718c7b85f47b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsSightChange</definition>
+        <argsstring>()</argsstring>
+        <name>IsSightChange</name>
+        <qualifiedname>HumanInputController::IsSightChange</qualifiedname>
+        <briefdescription>
+<para>sight has been changed (in/out ironsights) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="159" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a0643f26b26e4e42653b5d7e2bd2f87e0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsZoomIn</definition>
+        <argsstring>()</argsstring>
+        <name>IsZoomIn</name>
+        <qualifiedname>HumanInputController::IsZoomIn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="162" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1ab9900fc718f442775345717e0bf8fe43" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsZoomOut</definition>
+        <argsstring>()</argsstring>
+        <name>IsZoomOut</name>
+        <qualifiedname>HumanInputController::IsZoomOut</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="165" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a84b08808fe62fe7c542078708e7b8e78" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsFireModeChange</definition>
+        <argsstring>()</argsstring>
+        <name>IsFireModeChange</name>
+        <qualifiedname>HumanInputController::IsFireModeChange</qualifiedname>
+        <briefdescription>
+<para>fire mode has changed </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="168" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1ae350c3aa22f6da4ad6ba18f3da84550f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsZeroingUp</definition>
+        <argsstring>()</argsstring>
+        <name>IsZeroingUp</name>
+        <qualifiedname>HumanInputController::IsZeroingUp</qualifiedname>
+        <briefdescription>
+<para>zeroing up </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="171" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a1a395260adbcb017da0cfcae2230c24b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsZeroingDown</definition>
+        <argsstring>()</argsstring>
+        <name>IsZeroingDown</name>
+        <qualifiedname>HumanInputController::IsZeroingDown</qualifiedname>
+        <briefdescription>
+<para>zeroing down </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="174" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a470a2d34ff7d2865408f445d908ada26" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsHoldBreath</definition>
+        <argsstring>()</argsstring>
+        <name>IsHoldBreath</name>
+        <qualifiedname>HumanInputController::IsHoldBreath</qualifiedname>
+        <briefdescription>
+<para>holding breath </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="177" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a49c5f95df3577cefa738ad89e1fd9280" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInputController::ResetHoldBreath</definition>
+        <argsstring>()</argsstring>
+        <name>ResetHoldBreath</name>
+        <qualifiedname>HumanInputController::ResetHoldBreath</qualifiedname>
+        <briefdescription>
+<para>reset hold breath toggle </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="180" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a01561912fbbefc57f79e97a3426cdf1d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int HumanInputController::IsGestureSlot</definition>
+        <argsstring>()</argsstring>
+        <name>IsGestureSlot</name>
+        <qualifiedname>HumanInputController::IsGestureSlot</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>returns 1..12 if F1 - F12 us pressed, 0 otherwise Deprecated; slots no longer used, bindable input actions instead </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="186" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a5021c5da411e5c6b77b9295339595953" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsOtherController</definition>
+        <argsstring>()</argsstring>
+        <name>IsOtherController</name>
+        <qualifiedname>HumanInputController::IsOtherController</qualifiedname>
+        <briefdescription>
+<para>returns true, if player controls other entity (vehicle for example) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="189" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1ae76955adde394dcc0277e39b87b78842" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>proto native int HumanInputController::IsQuickBarSlot</definition>
+        <argsstring>()</argsstring>
+        <name>IsQuickBarSlot</name>
+        <qualifiedname>HumanInputController::IsQuickBarSlot</qualifiedname>
+        <briefdescription>
+<para>returns 1..10 if some quickbar slot is used, 0 otherwise </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="194" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1aeb537280897419f7ab5899d58a1256b7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsQuickBarSingleUse</definition>
+        <argsstring>()</argsstring>
+        <name>IsQuickBarSingleUse</name>
+        <qualifiedname>HumanInputController::IsQuickBarSingleUse</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>single use (== true for 1 tick only) quickbar + not raised ! </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="198" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a0eb77966f3ec409434f0c6271a4e2fc2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsQuickBarContinuousUse</definition>
+        <argsstring>()</argsstring>
+        <name>IsQuickBarContinuousUse</name>
+        <qualifiedname>HumanInputController::IsQuickBarContinuousUse</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Long click use (== true for multiple ticks) long quickbar + not raised ! </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="202" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a9430e844c6f55f997acc4a01b1ac9646" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsQuickBarContinuousUseStart</definition>
+        <argsstring>()</argsstring>
+        <name>IsQuickBarContinuousUseStart</name>
+        <qualifiedname>HumanInputController::IsQuickBarContinuousUseStart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>is start of cont use (== true for 1 tick only) long quickbar + not raised ! </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="206" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1aee3e79a89846e3a4abc65e38f21e62ac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::IsQuickBarContinuousUseEnd</definition>
+        <argsstring>()</argsstring>
+        <name>IsQuickBarContinuousUseEnd</name>
+        <qualifiedname>HumanInputController::IsQuickBarContinuousUseEnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>is end of cont use (== true for 1 tick only) long quickbar + not raised ! <linebreak/>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="210" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a229d647e4495288b9d852f9d1394b377" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInputController::LimitsDisableSprint</definition>
+        <argsstring>(bool pDisable)</argsstring>
+        <name>LimitsDisableSprint</name>
+        <qualifiedname>HumanInputController::LimitsDisableSprint</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pDisable</declname>
+        </param>
+        <briefdescription>
+<para>this disables sprint </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="218" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a14765ea72b21e41ba5ac3799a9abcba9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>proto native bool HumanInputController::LimitsIsSprintDisabled</definition>
+        <argsstring>()</argsstring>
+        <name>LimitsIsSprintDisabled</name>
+        <qualifiedname>HumanInputController::LimitsIsSprintDisabled</qualifiedname>
+        <briefdescription>
+<para>is sprint disabled </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="221" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1afde44e925cec305a405e8316dd14fc4d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInputController::OverrideMovementSpeed</definition>
+        <argsstring>(bool pOverride, float pVal)</argsstring>
+        <name>OverrideMovementSpeed</name>
+        <qualifiedname>HumanInputController::OverrideMovementSpeed</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pOverride</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pVal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="228" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1abbe67057bf3e59f46affdf68c19bcfe6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInputController::OverrideMovementAngle</definition>
+        <argsstring>(bool pOverride, float pVal)</argsstring>
+        <name>OverrideMovementAngle</name>
+        <qualifiedname>HumanInputController::OverrideMovementAngle</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pOverride</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pVal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="231" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a5986a079fb743e477f8aba519a4b52ed" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInputController::OverrideAimChangeX</definition>
+        <argsstring>(bool pOverride, float pVal)</argsstring>
+        <name>OverrideAimChangeX</name>
+        <qualifiedname>HumanInputController::OverrideAimChangeX</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pOverride</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pVal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="234" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a4bed2b0cf997a00f19616f7de378cc50" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInputController::OverrideAimChangeY</definition>
+        <argsstring>(bool pOverride, float pVal)</argsstring>
+        <name>OverrideAimChangeY</name>
+        <qualifiedname>HumanInputController::OverrideAimChangeY</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pOverride</declname>
+        </param>
+        <param>
+          <type><ref refid="classfloat" kindref="compound">float</ref></type>
+          <declname>pVal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="237" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a3b51c9a05346acc88b1df70824a7fa54" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInputController::OverrideMeleeEvade</definition>
+        <argsstring>(bool pOverride, bool pValue)</argsstring>
+        <name>OverrideMeleeEvade</name>
+        <qualifiedname>HumanInputController::OverrideMeleeEvade</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pOverride</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="240" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a7e0f9272f985c40c6ccdb09d1abb4673" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInputController::OverrideRaise</definition>
+        <argsstring>(bool pOverride, bool pValue)</argsstring>
+        <name>OverrideRaise</name>
+        <qualifiedname>HumanInputController::OverrideRaise</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pOverride</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="243" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1ac9028a3a4fd21ea10705b8ef528d3039" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>proto native void</type>
+        <definition>proto native void HumanInputController::Override3rdIsRightShoulder</definition>
+        <argsstring>(bool pOverride, bool pValue)</argsstring>
+        <name>Override3rdIsRightShoulder</name>
+        <qualifiedname>HumanInputController::Override3rdIsRightShoulder</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pOverride</declname>
+        </param>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>pValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="246" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a15105929b5b35cbc9859ca1cdf34f2ed" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void HumanInputController::HumanInputController</definition>
+        <argsstring>()</argsstring>
+        <name>HumanInputController</name>
+        <qualifiedname>HumanInputController::HumanInputController</qualifiedname>
+        <briefdescription>
+<para>never created by script </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="252" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" bodystart="252" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="class_human_input_controller_1a9ee6987f4680956cc653e86d9f196302" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>private void</type>
+        <definition>private void HumanInputController::~HumanInputController</definition>
+        <argsstring>()</argsstring>
+        <name>~HumanInputController</name>
+        <qualifiedname>HumanInputController::~HumanInputController</qualifiedname>
+        <briefdescription>
+<para>never created by script </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="257" column="14" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" bodystart="257" bodyend="259"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" line="14" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/human.c" bodystart="15" bodyend="260"/>
+    <listofallmembers>
+      <member refid="class_human_input_controller_1a7eea73bbe69269e5b01d6970bd849464" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>Camera3rdIsRightShoulder</name></member>
+      <member refid="class_human_input_controller_1a17501da6e8e6fd1b0d4f09a753fa2f0b" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>CameraIsFreeLook</name></member>
+      <member refid="class_human_input_controller_1a82ac2612dfc60859fb469917ed784b18" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>CameraIsTracking</name></member>
+      <member refid="class_human_input_controller_1a5e4c8e0ec73975e13be4f299320d5745" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>CameraViewChanged</name></member>
+      <member refid="class_human_input_controller_1a4ee8fb45ca6611bf66868e8d4347c37b" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>GetAimChange</name></member>
+      <member refid="class_human_input_controller_1ae6a6eba08ccd6005475cf45bfd91392c" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>GetAimDelta</name></member>
+      <member refid="class_human_input_controller_1ae9b604e4a7ef153e34516942e0120a45" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>GetHeadingAngle</name></member>
+      <member refid="class_human_input_controller_1a273611336783beea53066784079ce273" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>GetMovement</name></member>
+      <member refid="class_human_input_controller_1a8f6d9c5a886bfa08e7c6f1b664068a45" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>GetTracking</name></member>
+      <member refid="class_human_input_controller_1a15105929b5b35cbc9859ca1cdf34f2ed" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>HumanInputController</name></member>
+      <member refid="class_human_input_controller_1a446e067c1abb9ed0d4567747967e442a" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsAttackButton</name></member>
+      <member refid="class_human_input_controller_1af3e509afbf3a7e513be95823dcc6dc2f" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsAttackButtonDown</name></member>
+      <member refid="class_human_input_controller_1a7eaac02caa468adb379fdd4649bbd2a8" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsContinuousUse</name></member>
+      <member refid="class_human_input_controller_1a8b53452d7bcdcff6ad46188a89322369" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsContinuousUseEnd</name></member>
+      <member refid="class_human_input_controller_1aee3f170b9d31c72ff5306d75e56319c6" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsContinuousUseStart</name></member>
+      <member refid="class_human_input_controller_1a84b08808fe62fe7c542078708e7b8e78" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsFireModeChange</name></member>
+      <member refid="class_human_input_controller_1a01561912fbbefc57f79e97a3426cdf1d" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsGestureSlot</name></member>
+      <member refid="class_human_input_controller_1a470a2d34ff7d2865408f445d908ada26" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsHoldBreath</name></member>
+      <member refid="class_human_input_controller_1a312fd1d7e54c6fa7803c4139d228b480" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsImmediateAction</name></member>
+      <member refid="class_human_input_controller_1ac82a640ebfa05598dd7e94955c55faa2" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsJumpClimb</name></member>
+      <member refid="class_human_input_controller_1a688d36d47842790e1bce0ef06328b6e7" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsMeleeEvade</name></member>
+      <member refid="class_human_input_controller_1afb146893a93bb3c50d79e7ed38e12b99" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsMeleeFastAttackModifier</name></member>
+      <member refid="class_human_input_controller_1a106e1e8236cf99341cf0fa288d8add74" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsMeleeLREvade</name></member>
+      <member refid="class_human_input_controller_1abf901404cd1a67c208178a028c06d3e7" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsMeleeWeaponAttack</name></member>
+      <member refid="class_human_input_controller_1a5021c5da411e5c6b77b9295339595953" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsOtherController</name></member>
+      <member refid="class_human_input_controller_1a0eb77966f3ec409434f0c6271a4e2fc2" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsQuickBarContinuousUse</name></member>
+      <member refid="class_human_input_controller_1aee3e79a89846e3a4abc65e38f21e62ac" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsQuickBarContinuousUseEnd</name></member>
+      <member refid="class_human_input_controller_1a9430e844c6f55f997acc4a01b1ac9646" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsQuickBarContinuousUseStart</name></member>
+      <member refid="class_human_input_controller_1aeb537280897419f7ab5899d58a1256b7" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsQuickBarSingleUse</name></member>
+      <member refid="class_human_input_controller_1ae76955adde394dcc0277e39b87b78842" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsQuickBarSlot</name></member>
+      <member refid="class_human_input_controller_1af5a3fb25de63a0ca1eedde26a724a226" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsReloadOrMechanismContinuousUse</name></member>
+      <member refid="class_human_input_controller_1ad6c2b6172b219756952f48df2da60a0e" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsReloadOrMechanismContinuousUseEnd</name></member>
+      <member refid="class_human_input_controller_1a4315b5f452225f88505ccc50e01c743b" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsReloadOrMechanismContinuousUseStart</name></member>
+      <member refid="class_human_input_controller_1a2145d3903025e512add8f52c54a442d1" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsReloadOrMechanismSingleUse</name></member>
+      <member refid="class_human_input_controller_1ac35855eb8f7999320f2b718c7b85f47b" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsSightChange</name></member>
+      <member refid="class_human_input_controller_1aa60e95b8d96a9f4740caa37ca318c2fe" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsSingleUse</name></member>
+      <member refid="class_human_input_controller_1a56a7d54e2968b3dedcb985b33485637e" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsThrowingModeChange</name></member>
+      <member refid="class_human_input_controller_1a3013dbfd5f3b8d97e49802d118cbe47f" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsUseButton</name></member>
+      <member refid="class_human_input_controller_1aecf268c2e797cb72bb5342826ef5e0b5" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsUseButtonDown</name></member>
+      <member refid="class_human_input_controller_1a16429957e548b4abaf976e99ce0ea612" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsUseItemButton</name></member>
+      <member refid="class_human_input_controller_1a0816454c95382869c1babc8ee05e7431" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsUseItemButtonDown</name></member>
+      <member refid="class_human_input_controller_1a6a75b9f29f397c8119da9df6fbbbb8db" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsWalkToggled</name></member>
+      <member refid="class_human_input_controller_1a99b032bd165792643fd5bf3968925135" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsWeaponRaised</name></member>
+      <member refid="class_human_input_controller_1a1a395260adbcb017da0cfcae2230c24b" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsZeroingDown</name></member>
+      <member refid="class_human_input_controller_1ae350c3aa22f6da4ad6ba18f3da84550f" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsZeroingUp</name></member>
+      <member refid="class_human_input_controller_1aa8a75a74e7b0d2e5d4725264e0b6e5ff" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsZoom</name></member>
+      <member refid="class_human_input_controller_1a0643f26b26e4e42653b5d7e2bd2f87e0" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsZoomIn</name></member>
+      <member refid="class_human_input_controller_1ab9900fc718f442775345717e0bf8fe43" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsZoomOut</name></member>
+      <member refid="class_human_input_controller_1a9f32fc1b21b58f3e557b8166911fc76e" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>IsZoomToggle</name></member>
+      <member refid="class_human_input_controller_1a229d647e4495288b9d852f9d1394b377" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>LimitsDisableSprint</name></member>
+      <member refid="class_human_input_controller_1a14765ea72b21e41ba5ac3799a9abcba9" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>LimitsIsSprintDisabled</name></member>
+      <member refid="class_human_input_controller_1ac9028a3a4fd21ea10705b8ef528d3039" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>Override3rdIsRightShoulder</name></member>
+      <member refid="class_human_input_controller_1a5986a079fb743e477f8aba519a4b52ed" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>OverrideAimChangeX</name></member>
+      <member refid="class_human_input_controller_1a4bed2b0cf997a00f19616f7de378cc50" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>OverrideAimChangeY</name></member>
+      <member refid="class_human_input_controller_1a3b51c9a05346acc88b1df70824a7fa54" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>OverrideMeleeEvade</name></member>
+      <member refid="class_human_input_controller_1abbe67057bf3e59f46affdf68c19bcfe6" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>OverrideMovementAngle</name></member>
+      <member refid="class_human_input_controller_1afde44e925cec305a405e8316dd14fc4d" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>OverrideMovementSpeed</name></member>
+      <member refid="class_human_input_controller_1a7e0f9272f985c40c6ccdb09d1abb4673" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>OverrideRaise</name></member>
+      <member refid="class_human_input_controller_1ad40c9eba922bace4a0595f6ba8b361d2" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>ResetADS</name></member>
+      <member refid="class_human_input_controller_1a2e37d3623996bd4b7f93f4211958a139" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>ResetFreeLookToggle</name></member>
+      <member refid="class_human_input_controller_1a49c5f95df3577cefa738ad89e1fd9280" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>ResetHoldBreath</name></member>
+      <member refid="class_human_input_controller_1aa5a63be6a131246a444338f0ee448ac6" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>ResetThrowingMode</name></member>
+      <member refid="class_human_input_controller_1ad7ac917705725dd33e3a5f13cbe44de9" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>ResetZoomToggle</name></member>
+      <member refid="class_human_input_controller_1a19f0b2e5c04eb53d9f81cf9b5c42930e" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>SetDisabled</name></member>
+      <member refid="class_human_input_controller_1a0e46b01678756312196dd79006e9c1f6" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>WeaponADS</name></member>
+      <member refid="class_human_input_controller_1a2be73383077ec14f0ac91d2accad6398" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>WeaponWasRaiseClick</name></member>
+      <member refid="class_human_input_controller_1a9ee6987f4680956cc653e86d9f196302" prot="private" virt="non-virtual"><scope>HumanInputController</scope><name>~HumanInputController</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

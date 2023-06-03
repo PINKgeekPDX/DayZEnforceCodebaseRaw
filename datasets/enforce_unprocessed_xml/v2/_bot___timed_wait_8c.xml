@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_bot___timed_wait_8c" kind="file" language="C++">
+    <compoundname>Bot_TimedWait.c</compoundname>
+    <innerclass refid="class_bot_event_wait_timeout" prot="public">BotEventWaitTimeout</innerclass>
+    <innerclass refid="class_bot_state_base" prot="public">BotStateBase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="class_bot_event_wait_timeout" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_bot_event_wait_timeout" kindref="compound">BotEventWaitTimeout</ref><sp/>:<sp/><ref refid="class_bot_event_base" kindref="compound">BotEventBase</ref><sp/>{<sp/>};</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">BotTimedWait<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_bot_state_base" kindref="compound">BotStateBase</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6" refid="class_bot_state_base_1a664df0abff4cfeb8e4125923cee24806" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_weapon_fire_8c_1a126e3ea2e23a8fededbff9547ad0ccb4" kindref="member">m_dtAccumulator</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="7" refid="class_bot_state_base_1a4e13db33d69e4733f9e10cffcda7d514" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>m_Timeout<sp/>=<sp/>3.0;</highlight></codeline>
+<codeline lineno="8" refid="class_bot_state_base_1a0c15acdaf052a20ed5001d2b676f3711" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_Periodic<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_bot_state_base_1a222da4a54e7d019bd0521b4f188173bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bot_state_base_1a222da4a54e7d019bd0521b4f188173bf" kindref="member">BotTimedWait</ref><sp/>(<ref refid="class_bot" kindref="compound">Bot</ref><sp/>bot<sp/>=<sp/>NULL,<sp/><ref refid="class_bot_state_base" kindref="compound">BotStateBase</ref><sp/>parent<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timeout<sp/>=<sp/>3.0)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Timeout<sp/>=<sp/>timeout;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_bot_state_base_1a71c560e9a695082f63741f6c6839b5b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bot_state_base_1a71c560e9a695082f63741f6c6839b5b4" kindref="member">OnEntry</ref><sp/>(<ref refid="class_bot_event_base" kindref="compound">BotEventBase</ref><sp/>e)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_weapon_fire_8c_1a126e3ea2e23a8fededbff9547ad0ccb4" kindref="member">m_dtAccumulator</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.<ref refid="class_weapon_fire_1a28fb759c1a43b0ee59abd3a856303abc" kindref="member">OnEntry</ref>(e);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_bot_state_base_1aa86fa14cbf4a61eab0626061a7504253" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bot_state_base_1aa86fa14cbf4a61eab0626061a7504253" kindref="member">OnExit</ref><sp/>(<ref refid="class_bot_event_base" kindref="compound">BotEventBase</ref><sp/>e)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_weapon_fire_8c_1a126e3ea2e23a8fededbff9547ad0ccb4" kindref="member">m_dtAccumulator</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnExit(e);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_bot_state_base_1a5c1a678175d5b3bb5f37bb7b6af368bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bot_state_base_1a5c1a678175d5b3bb5f37bb7b6af368bb" kindref="member">OnUpdate</ref><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnUpdate(dt);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_weapon_fire_8c_1a126e3ea2e23a8fededbff9547ad0ccb4" kindref="member">m_dtAccumulator</ref><sp/>+=<sp/>dt;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rescanTime<sp/>=<sp/><ref refid="class_bot_state_base_1a4e13db33d69e4733f9e10cffcda7d514" kindref="member">m_Timeout</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_weapon_fire_8c_1a126e3ea2e23a8fededbff9547ad0ccb4" kindref="member">m_dtAccumulator</ref><sp/>&gt;=<sp/>rescanTime)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_bot_state_base_1a0d76e85f1a42842fb12db5a317855cfc" kindref="member">OnTimeout</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(m_Periodic)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_weapon_fire_8c_1a126e3ea2e23a8fededbff9547ad0ccb4" kindref="member">m_dtAccumulator</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_weapon_fire_8c_1a126e3ea2e23a8fededbff9547ad0ccb4" kindref="member">m_dtAccumulator</ref><sp/>=<sp/>-1.0;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="class_bot_state_base_1a0d76e85f1a42842fb12db5a317855cfc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bot_state_base_1a0d76e85f1a42842fb12db5a317855cfc" kindref="member">OnTimeout</ref><sp/>()</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_bot_8c_1a28d5d7d6fb28048af5ba4e06653d5ec4" kindref="member">botDebugSpam</ref>(</highlight><highlight class="stringliteral">&quot;[bot]<sp/>+<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="_object_8c_1a2d7c5b2ffc3b0281528e413d4d59534e" kindref="member">m_Owner</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>BotTimedWait::OnTimeout&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_Bot.ProcessEvent(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_bot_event_wait_timeout" kindref="compound">BotEventWaitTimeout</ref>(<ref refid="_object_8c_1a2d7c5b2ffc3b0281528e413d4d59534e" kindref="member">m_Owner</ref>));</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Systems/Bot/Bot_TimedWait.c"/>
+  </compounddef>
+</doxygen>

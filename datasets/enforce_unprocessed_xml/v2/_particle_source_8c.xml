@@ -1,0 +1,795 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_particle_source_8c" kind="file" language="C++">
+    <compoundname>ParticleSource.c</compoundname>
+    <innerclass refid="classarray" prot="public">array</innerclass>
+    <innerclass refid="class_particle_source" prot="public">ParticleSource</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88" prot="public" static="no" strong="no">
+        <type></type>
+        <name>ParticleAutoDestroyFlags</name>
+        <enumvalue id="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88a0d32432a8ce206fee4c57623e467b3c1" prot="public">
+          <name>ON_END</name>
+          <briefdescription>
+<para>Destroy when the <ref refid="class_particle" kindref="compound">Particle</ref> ends (looping particle never ends) </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88a31ad96289abc58c8b98620da7baa5210" prot="public">
+          <name>ON_STOP</name>
+          <briefdescription>
+<para>Destroy when particle stops. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88ab1d5eac4b1dca480c8056eaea7663b7a" prot="public">
+          <name>ALL</name>
+          <briefdescription>
+<para>ON_END | ON_STOP. </para>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flags to pass to <ref refid="class_particle_source_1aa2734a10ecf17415ecced3075ef803a1" kindref="member">ParticleSource.SetParticleAutoDestroyFlags</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="2" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="3" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_particle_source_8c_1a8251c681967c4cffc7492e2a8f7ad107" prot="public" static="no">
+        <type><ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="class_particle_source" kindref="compound">ParticleSource</ref> &gt;</type>
+        <definition>typedef array&lt;ParticleSource&gt; ParticleSourceArray</definition>
+        <argsstring></argsstring>
+        <name>ParticleSourceArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="103" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_particle_source_8c_1ac157bdf0b85a40d2619cbc8bc1ae5fe2" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88" kindref="member">ParticleAutoDestroyFlags</ref></type>
+        <definition>@ NONE</definition>
+        <argsstring></argsstring>
+        <name>NONE</name>
+        <briefdescription>
+<para>Flags to pass to <ref refid="class_particle_source_1a8b95d16fede2eb4703370e063b0cae35" kindref="member">ParticleSource.PlayParticleEx</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>No automatic destroying.</para>
+<para>Flags to pass to <ref refid="class_particle_source_1a28b58f26c4487d1f79a4edd2d7821713" kindref="member">ParticleSource.StopParticle</ref>.</para>
+<para>No flags </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="18" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_particle_source_8c_1aa6a00fe32fe3146b2a5f2a9969e57314" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88" kindref="member">ParticleAutoDestroyFlags</ref></type>
+        <definition>enum ParticleAutoDestroyFlags RESET</definition>
+        <argsstring></argsstring>
+        <name>RESET</name>
+        <briefdescription>
+<para>Reset state after stopping. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="28" column="6"/>
+      </memberdef>
+      <memberdef kind="variable" id="_particle_source_8c_1a14177d9fee1367ccb155682c7ebc0c47" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88" kindref="member">ParticleAutoDestroyFlags</ref></type>
+        <definition>enum ParticleAutoDestroyFlags IMMEDIATE</definition>
+        <argsstring></argsstring>
+        <name>IMMEDIATE</name>
+        <briefdescription>
+<para>Flag will make the particle stop immediately, taking it out of simulation and clearing VISIBLE flag. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>By default the particle will gradually fade </para>
+</simplesect>
+<simplesect kind="note"><para>Note that when using IMMEDIATE, it is possible to call PlayParticle and it will resume from the moment it stopped Which is not possible by default, as the gradual fade is accomplished by nulling the lifetime </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="35" column="10"/>
+      </memberdef>
+      <memberdef kind="variable" id="_particle_source_8c_1a18aaad85683d468960eebb2966d8550c" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88" kindref="member">ParticleAutoDestroyFlags</ref></type>
+        <definition>enum ParticleAutoDestroyFlags VISIBLE</definition>
+        <argsstring></argsstring>
+        <name>VISIBLE</name>
+        <briefdescription>
+<para>Is default behaviour, but can be used in conjuction with IMMEDIATE which hides it when this flag is not present. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="37" column="8"/>
+      </memberdef>
+      <memberdef kind="variable" id="_particle_source_8c_1a62dbf23a00423bb2c5637b6df6736914" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88" kindref="member">ParticleAutoDestroyFlags</ref></type>
+        <definition>enum ParticleAutoDestroyFlags PAUSE</definition>
+        <argsstring></argsstring>
+        <name>PAUSE</name>
+        <briefdescription>
+<para>(SPF_IMMEDIATE | SPF_VISIBLE) &quot;Freezes&quot; the particle while keeping it visible </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="39" column="6"/>
+      </memberdef>
+      <memberdef kind="variable" id="_particle_source_8c_1a712cead1dbb8d7f6e0274fccc3e04096" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88" kindref="member">ParticleAutoDestroyFlags</ref></type>
+        <definition>enum ParticleAutoDestroyFlags FULL</definition>
+        <argsstring></argsstring>
+        <name>FULL</name>
+        <briefdescription>
+<para>Mode for GetParticle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Full path with ext (&quot;graphics/particles/smoking_barrel_small.ptc&quot;) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="46" column="5"/>
+      </memberdef>
+      <memberdef kind="variable" id="_particle_source_8c_1aac1c31ea04a4600e0cb295a5576afd72" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88" kindref="member">ParticleAutoDestroyFlags</ref></type>
+        <definition>enum ParticleAutoDestroyFlags NO_EXT</definition>
+        <argsstring></argsstring>
+        <name>NO_EXT</name>
+        <briefdescription>
+<para>Full path without ext (&quot;graphics/particles/smoking_barrel_small&quot;) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="48" column="7"/>
+      </memberdef>
+      <memberdef kind="variable" id="_particle_source_8c_1a315d50e8cc1109eee34384deb978fa27" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88" kindref="member">ParticleAutoDestroyFlags</ref></type>
+        <definition>enum ParticleAutoDestroyFlags FILE</definition>
+        <argsstring></argsstring>
+        <name>FILE</name>
+        <briefdescription>
+<para>Filename only (&quot;smoking_barrel_small&quot;) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="50" column="5"/>
+      </memberdef>
+      <memberdef kind="variable" id="_particle_source_8c_1a30775db6e2e7b979f1ea92c5c2101e47" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88" kindref="member">ParticleAutoDestroyFlags</ref></type>
+        <definition>enum ParticleAutoDestroyFlags PLAY_ON_CREATION</definition>
+        <argsstring></argsstring>
+        <name>PLAY_ON_CREATION</name>
+        <briefdescription>
+<para>Makes the particle start playing immediately after being created. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="57" column="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="_particle_source_8c_1af211ac9e81caf78faa6d872a10a62505" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88" kindref="member">ParticleAutoDestroyFlags</ref></type>
+        <definition>enum ParticleAutoDestroyFlags FORCE_WORLD_ROT</definition>
+        <argsstring></argsstring>
+        <name>FORCE_WORLD_ROT</name>
+        <briefdescription>
+<para>Only applicable when there is a parent, this will force the localOri to be in world space instead of local. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="59" column="16"/>
+      </memberdef>
+      <memberdef kind="variable" id="_particle_source_8c_1ae30d917a01ed02f70beafc1bd4d2bc38" prot="public" static="no" mutable="no">
+        <type>enum <ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88" kindref="member">ParticleAutoDestroyFlags</ref></type>
+        <definition>enum ParticleAutoDestroyFlags KEEP_PARENT_ON_END</definition>
+        <argsstring></argsstring>
+        <name>KEEP_PARENT_ON_END</name>
+        <briefdescription>
+<para>By default, a particle unparents when it ends, this disables this behaviour. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c" line="61" column="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88" kindref="member">ParticleAutoDestroyFlags</ref></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5" refid="_particle_source_8c_1ac157bdf0b85a40d2619cbc8bc1ae5fe2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_source_8c_1ac157bdf0b85a40d2619cbc8bc1ae5fe2" kindref="member">NONE</ref>,</highlight></codeline>
+<codeline lineno="7" refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88a0d32432a8ce206fee4c57623e467b3c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88a0d32432a8ce206fee4c57623e467b3c1" kindref="member">ON_END</ref>,</highlight></codeline>
+<codeline lineno="9" refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88a31ad96289abc58c8b98620da7baa5210" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88a31ad96289abc58c8b98620da7baa5210" kindref="member">ON_STOP</ref>,</highlight></codeline>
+<codeline lineno="11" refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88ab1d5eac4b1dca480c8056eaea7663b7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88ab1d5eac4b1dca480c8056eaea7663b7a" kindref="member">ALL</ref>,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>PlayParticleFlags</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_source_8c_1ac157bdf0b85a40d2619cbc8bc1ae5fe2" kindref="member">NONE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Is<sp/>just<sp/>a<sp/>placeholder<sp/>for<sp/>now</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>StopParticleFlags</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_source_8c_1ac157bdf0b85a40d2619cbc8bc1ae5fe2" kindref="member">NONE</ref>,</highlight></codeline>
+<codeline lineno="28" refid="_particle_source_8c_1aa6a00fe32fe3146b2a5f2a9969e57314" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_source_8c_1aa6a00fe32fe3146b2a5f2a9969e57314" kindref="member">RESET</ref>,</highlight></codeline>
+<codeline lineno="35" refid="_particle_source_8c_1a14177d9fee1367ccb155682c7ebc0c47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_source_8c_1a14177d9fee1367ccb155682c7ebc0c47" kindref="member">IMMEDIATE</ref>,</highlight></codeline>
+<codeline lineno="37" refid="_particle_source_8c_1a18aaad85683d468960eebb2966d8550c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_source_8c_1a18aaad85683d468960eebb2966d8550c" kindref="member">VISIBLE</ref>,</highlight></codeline>
+<codeline lineno="39" refid="_particle_source_8c_1a62dbf23a00423bb2c5637b6df6736914" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_source_8c_1a62dbf23a00423bb2c5637b6df6736914" kindref="member">PAUSE</ref>,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>EGetParticleMode</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46" refid="_particle_source_8c_1a712cead1dbb8d7f6e0274fccc3e04096" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_source_8c_1a712cead1dbb8d7f6e0274fccc3e04096" kindref="member">FULL</ref>,</highlight></codeline>
+<codeline lineno="48" refid="_particle_source_8c_1aac1c31ea04a4600e0cb295a5576afd72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_source_8c_1aac1c31ea04a4600e0cb295a5576afd72" kindref="member">NO_EXT</ref>,</highlight></codeline>
+<codeline lineno="50" refid="_particle_source_8c_1a315d50e8cc1109eee34384deb978fa27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_source_8c_1a315d50e8cc1109eee34384deb978fa27" kindref="member">FILE</ref>,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>ParticlePropertiesFlags</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_source_8c_1ac157bdf0b85a40d2619cbc8bc1ae5fe2" kindref="member">NONE</ref>,</highlight></codeline>
+<codeline lineno="57" refid="_particle_source_8c_1a30775db6e2e7b979f1ea92c5c2101e47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_source_8c_1a30775db6e2e7b979f1ea92c5c2101e47" kindref="member">PLAY_ON_CREATION</ref>,</highlight></codeline>
+<codeline lineno="59" refid="_particle_source_8c_1af211ac9e81caf78faa6d872a10a62505" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_source_8c_1af211ac9e81caf78faa6d872a10a62505" kindref="member">FORCE_WORLD_ROT</ref>,</highlight></codeline>
+<codeline lineno="61" refid="_particle_source_8c_1ae30d917a01ed02f70beafc1bd4d2bc38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_particle_source_8c_1ae30d917a01ed02f70beafc1bd4d2bc38" kindref="member">KEEP_PARENT_ON_END</ref>,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="keyword">class<sp/></highlight><highlight class="normal">ParticleProperties</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78" refid="classarray_1af6706cf6074dd57baabb12390dd1a590" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classarray_1af6706cf6074dd57baabb12390dd1a590" kindref="member">ParticleProperties</ref>(<ref refid="classvector" kindref="compound">vector</ref><sp/>localPos,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>parent<sp/>=<sp/>null,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>localOri<sp/>=<sp/><ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1a6f6d5246e38b34f79fa2741a7e72d7e7" kindref="member">Zero</ref>,<sp/><ref refid="class_class" kindref="compound">Class</ref><sp/>owner<sp/>=<sp/>null)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83" refid="classarray_1a40988cd1d04a4fc66cb106a8366aa2c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classarray_1a40988cd1d04a4fc66cb106a8366aa2c2" kindref="member">~ParticleProperties</ref>()</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91" refid="classarray_1a28ca8bd0c399f5de7524afc92bfeb54e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/><ref refid="classarray_1a28ca8bd0c399f5de7524afc92bfeb54e" kindref="member">GetParent</ref>();</highlight></codeline>
+<codeline lineno="92" refid="classarray_1ace72ab543c1d6ca0793bf4421dd7d7e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/><ref refid="class_class" kindref="compound">Class</ref><sp/><ref refid="classarray_1ace72ab543c1d6ca0793bf4421dd7d7e3" kindref="member">GetOwner</ref>();</highlight></codeline>
+<codeline lineno="93" refid="classarray_1a2104a706d7bcfb3839f5ceb3f6fc5e22" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/><ref refid="classarray_1a2104a706d7bcfb3839f5ceb3f6fc5e22" kindref="member">GetLocalPos</ref>();</highlight></codeline>
+<codeline lineno="94" refid="classarray_1a24d009b04f48c1102baacd4c633c26a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/><ref refid="classarray_1a24d009b04f48c1102baacd4c633c26a7" kindref="member">GetLocalOri</ref>();</highlight></codeline>
+<codeline lineno="95" refid="classarray_1ae7822cd8339eac91d6da88fd05c44900" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classarray_1ae7822cd8339eac91d6da88fd05c44900" kindref="member">GetPPFlags</ref>();</highlight></codeline>
+<codeline lineno="96" refid="classarray_1afa21248fc8dbd8511e1db5c00f900545" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classarray_1afa21248fc8dbd8511e1db5c00f900545" kindref="member">IsPlayOnCreation</ref>();</highlight></codeline>
+<codeline lineno="97" refid="classarray_1afe7c972ee6c77a684bd9d88d13c58a64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classarray_1afe7c972ee6c77a684bd9d88d13c58a64" kindref="member">IsForceWorldRotation</ref>();<sp/><sp/></highlight></codeline>
+<codeline lineno="98" refid="classarray_1a92b04aaa0e627ae9e3bea4f7b60be33e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classarray_1a92b04aaa0e627ae9e3bea4f7b60be33e" kindref="member">IsKeepParentOnEnd</ref>();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ref ParticleProperties&gt;</ref><sp/>ParticlePropertiesArray;</highlight></codeline>
+<codeline lineno="103" refid="_particle_source_8c_1a8251c681967c4cffc7492e2a8f7ad107" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classarray" kindref="compound">array&lt;ParticleSource&gt;</ref><sp/><ref refid="_particle_source_8c_1a8251c681967c4cffc7492e2a8f7ad107" kindref="member">ParticleSourceArray</ref>;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123" refid="class_particle_source" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/>:<sp/><ref refid="class_particle" kindref="compound">Particle</ref></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="126" refid="class_particle_source_1a0aca44893bee659eb9940747f17b8879" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a0aca44893bee659eb9940747f17b8879" kindref="member">ParticleSource</ref>()</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_1a69bc3028d8138b490171821b11e09c61" kindref="member">m_ParticleEffect</ref><sp/>=<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="132" refid="class_particle_source_1a944b20732efacb73523375139ee86a00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a944b20732efacb73523375139ee86a00" kindref="member">~ParticleSource</ref>()</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="137" refid="class_particle_source_1aaf7f58753fa8d840fc80539d9a55a234" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1aaf7f58753fa8d840fc80539d9a55a234" kindref="member">ParticleInit</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="146" refid="class_particle_source_1aa2734a10ecf17415ecced3075ef803a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1aa2734a10ecf17415ecced3075ef803a1" kindref="member">SetParticleAutoDestroyFlags</ref>(<ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88" kindref="member">ParticleAutoDestroyFlags</ref><sp/>flags);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151" refid="class_particle_source_1ab98cffb50758099be2621201ce3d5492" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1ab98cffb50758099be2621201ce3d5492" kindref="member">DisableAutoDestroy</ref>()</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_source_1aa2734a10ecf17415ecced3075ef803a1" kindref="member">SetParticleAutoDestroyFlags</ref>(<ref refid="_particle_source_8c_1a3cbb817973cac071ec1fdff5e849ab88" kindref="member">ParticleAutoDestroyFlags</ref>.NONE);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="160" refid="class_particle_source_1a964b74c27c4d4237d49939c0425486a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a964b74c27c4d4237d49939c0425486a1" kindref="member">GetParticleAutoDestroyFlags</ref>();</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="178" refid="class_particle_source_1a39f04fa3ee5a66c48638ee86cf37e81e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="class_particle_source_1a39f04fa3ee5a66c48638ee86cf37e81e" kindref="member">CreateParticle</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>pos,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>playOnCreation<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>parent<sp/>=<sp/>null,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>ori<sp/>=<sp/><ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1a6f6d5246e38b34f79fa2741a7e72d7e7" kindref="member">Zero</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>forceWorldRotation<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/><ref refid="class_class" kindref="compound">Class</ref><sp/>owner<sp/>=<sp/>null<sp/>)</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/>ParticlePropertiesFlags.NONE;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(playOnCreation)</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flags<sp/>=<sp/>flags<sp/>|<sp/>ParticlePropertiesFlags.PLAY_ON_CREATION;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(forceWorldRotation)</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flags<sp/>=<sp/>flags<sp/>|<sp/>ParticlePropertiesFlags.FORCE_WORLD_ROT;</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a1ff42fd8c4bf826ca13e791d73057bb6" kindref="member">CreateParticleEx</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>pos,<sp/>flags,<sp/>parent,<sp/>ori,<sp/>owner);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="205" refid="class_particle_source_1a1ff42fd8c4bf826ca13e791d73057bb6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="class_particle_source_1a1ff42fd8c4bf826ca13e791d73057bb6" kindref="member">CreateParticleEx</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>pos,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/>ParticlePropertiesFlags.NONE,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>parent<sp/>=<sp/>null,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>ori<sp/>=<sp/><ref refid="classvector" kindref="compound">vector</ref>.<ref refid="classvector_1a6f6d5246e38b34f79fa2741a7e72d7e7" kindref="member">Zero</ref>,<sp/><ref refid="class_class" kindref="compound">Class</ref><sp/>owner<sp/>=<sp/>null<sp/>)</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>particlePath<sp/>=<sp/><ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a5e8368fe145ca144b377295e12dbdea4" kindref="member">GetParticleFullPath</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(particlePath<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="comment">//<sp/>There<sp/>is<sp/>already<sp/>an<sp/>error<sp/>inside<sp/>of<sp/>ParticleList<sp/>signaling<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___debug_shape_1ga30f13400906443efe9fb79540dc674b5" kindref="member">ErrorEx</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">.Format(</highlight><highlight class="stringliteral">&quot;Could<sp/>not<sp/>create<sp/>ParticleSource<sp/>as<sp/>particle<sp/>id<sp/>%1<sp/>is<sp/>invalid.&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>null;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>localPos<sp/>=<sp/>pos;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(parent)</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pos<sp/>=<sp/>parent.GetPosition();</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/>p<sp/>=<sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref>.Cast(<sp/><ref refid="gameplay_8c_1aebb1fa6632d513bc849994e7b6c9c93d" kindref="member">GetGame</ref>().CreateObjectEx(</highlight><highlight class="stringliteral">&quot;ParticleSource&quot;</highlight><highlight class="normal">,<sp/>pos,<sp/><ref refid="_central_economy_8c_1a3ccbd5dade671e8d228329395ec78ec2" kindref="member">ECE_LOCAL</ref>)<sp/>);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="class_particle_source_1abc9a5c9b15998add37e9911bf0b8321b" kindref="member">SetParticle</ref>(particlePath);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ParticleProperties<sp/>props<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ParticleProperties(localPos,<sp/>flags,<sp/>parent,<sp/>ori,<sp/>owner);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p.<ref refid="class_particle_source_1a797565b90125292d40ae3bf5ed2a446c" kindref="member">ApplyProperties</ref>(props);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="236" refid="class_particle_source_1aace89ceb87cc07e2ae3e46a9d6b53cd7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_particle" kindref="compound">Particle</ref><sp/><ref refid="class_particle_source_1aace89ceb87cc07e2ae3e46a9d6b53cd7" kindref="member">CreateOnObject</ref>(</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>parent_obj,</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_pos<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_ori<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>force_world_rotation<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1aa613c8a80fc89086d77fa356df549ba0" kindref="member">CreateParticle</ref>(<ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/>local_pos,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>parent_obj,<sp/>local_ori,<sp/>force_world_rotation);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="249" refid="class_particle_source_1a6ee21688c50c446d531cbe016cd43438" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_particle" kindref="compound">Particle</ref><sp/><ref refid="class_particle_source_1a6ee21688c50c446d531cbe016cd43438" kindref="member">Create</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>parent_obj,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_pos<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_ori<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1aace89ceb87cc07e2ae3e46a9d6b53cd7" kindref="member">CreateOnObject</ref>(<sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/>parent_obj,<sp/>local_pos,<sp/>local_ori);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="262" refid="class_particle_source_1a124a5cd8bd47456baf2237a36e054723" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_particle" kindref="compound">Particle</ref><sp/><ref refid="class_particle_source_1a124a5cd8bd47456baf2237a36e054723" kindref="member">CreateInWorld</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>global_pos,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>global_ori<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>force_world_rotation<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1aa613c8a80fc89086d77fa356df549ba0" kindref="member">CreateParticle</ref>(<ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/>global_pos,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>null,<sp/>global_ori,<sp/>force_world_rotation);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="270" refid="class_particle_source_1a8d4bd474c42838b47f96e6ca96f0a2c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_particle_source" kindref="compound">ParticleSource</ref><sp/><ref refid="class_particle_source_1a8d4bd474c42838b47f96e6ca96f0a2c7" kindref="member">Create</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>global_pos,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>global_ori<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a124a5cd8bd47456baf2237a36e054723" kindref="member">CreateInWorld</ref>(<sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/>global_pos,<sp/>global_ori<sp/>);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="293" refid="class_particle_source_1a1f78e662eeed54b90ebb682fa1525353" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_particle" kindref="compound">Particle</ref><sp/><ref refid="class_particle_source_1a1f78e662eeed54b90ebb682fa1525353" kindref="member">PlayOnObject</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>parent_obj,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_pos<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_ori<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>force_world_rotation<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1aa613c8a80fc89086d77fa356df549ba0" kindref="member">CreateParticle</ref>(<ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/>local_pos,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>parent_obj,<sp/>local_ori,<sp/>force_world_rotation);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="301" refid="class_particle_source_1a01baa8036b977aab4110239610ef0e3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_particle" kindref="compound">Particle</ref><sp/><ref refid="class_particle_source_1a01baa8036b977aab4110239610ef0e3a" kindref="member">Play</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/><ref refid="class_object" kindref="compound">Object</ref><sp/>parent_obj,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_pos<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_ori<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a1f78e662eeed54b90ebb682fa1525353" kindref="member">PlayOnObject</ref>(<sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/>parent_obj,<sp/>local_pos,<sp/>local_ori);</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="312" refid="class_particle_source_1a4e5b7116e835b7a9295890bd05b6433c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_particle" kindref="compound">Particle</ref><sp/><ref refid="class_particle_source_1a4e5b7116e835b7a9295890bd05b6433c" kindref="member">PlayInWorld</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>global_pos)</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1aa613c8a80fc89086d77fa356df549ba0" kindref="member">CreateParticle</ref>(<ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/>global_pos,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320" refid="class_particle_source_1a764a42860969ebb52abd1d03ad0d2413" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_particle" kindref="compound">Particle</ref><sp/><ref refid="class_particle_source_1a764a42860969ebb52abd1d03ad0d2413" kindref="member">Play</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>global_pos)</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a4e5b7116e835b7a9295890bd05b6433c" kindref="member">PlayInWorld</ref>(<sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>,<sp/>global_pos);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="339" refid="class_particle_source_1a749b1febbc82aaa446a7aaa26d4d3c36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>proto<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a749b1febbc82aaa446a7aaa26d4d3c36" kindref="member">PlayParticleNative</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="346" refid="class_particle_source_1a8b95d16fede2eb4703370e063b0cae35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a8b95d16fede2eb4703370e063b0cae35" kindref="member">PlayParticleEx</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref><sp/>=<sp/>-1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/>0)</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref><sp/>&gt;<sp/>-1<sp/>)</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Here<sp/>we<sp/>can<sp/>just<sp/>do<sp/>it<sp/>directly</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>While<sp/>with<sp/>the<sp/>old<sp/>system<sp/>it<sp/>will<sp/>not<sp/>work<sp/>when<sp/>the<sp/>particle<sp/>is<sp/>already<sp/>created</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_source_1a5bb7c9465bece1298ae61c26d9d5b3ed" kindref="member">SetParticleByID</ref>(<ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>);</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a749b1febbc82aaa446a7aaa26d4d3c36" kindref="member">PlayParticleNative</ref>(flags);</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="365" refid="class_particle_source_1a6e5b006b6a66d96e9f845dcdcdf00b1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>proto<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a6e5b006b6a66d96e9f845dcdcdf00b1f" kindref="member">StopParticleNative</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags);</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="372" refid="class_particle_source_1a28b58f26c4487d1f79a4edd2d7821713" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a28b58f26c4487d1f79a4edd2d7821713" kindref="member">StopParticle</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/>0)</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a6e5b006b6a66d96e9f845dcdcdf00b1f" kindref="member">StopParticleNative</ref>(flags);</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="381" refid="class_particle_source_1a0a5dc7cedb5531b267edc488665a7948" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a0a5dc7cedb5531b267edc488665a7948" kindref="member">ResetParticleNative</ref>();</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="387" refid="class_particle_source_1afadce8e68b323cf1dd60a8a99e5a5f3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1afadce8e68b323cf1dd60a8a99e5a5f3a" kindref="member">ResetParticle</ref>()</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a0a5dc7cedb5531b267edc488665a7948" kindref="member">ResetParticleNative</ref>();</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="396" refid="class_particle_source_1a08e52dc72858081562e67b9d59f3a48d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a08e52dc72858081562e67b9d59f3a48d" kindref="member">RestartParticleNative</ref>();</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="402" refid="class_particle_source_1aabbedfcf76812c59e65d9737c6d5f636" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1aabbedfcf76812c59e65d9737c6d5f636" kindref="member">RestartParticle</ref>()</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a08e52dc72858081562e67b9d59f3a48d" kindref="member">RestartParticleNative</ref>();</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="411" refid="class_particle_source_1a50d2e20d6d2bd7707bc438cc2405665b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>proto<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a50d2e20d6d2bd7707bc438cc2405665b" kindref="member">IsParticlePlayingNative</ref>();</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="417" refid="class_particle_source_1a3b9ca243f4cfcc90df1c6af4f773ae93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a3b9ca243f4cfcc90df1c6af4f773ae93" kindref="member">IsParticlePlaying</ref>()</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a50d2e20d6d2bd7707bc438cc2405665b" kindref="member">IsParticlePlayingNative</ref>();</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="436" refid="class_particle_source_1a5e72927e761ec18b16f3d43422856b33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a5e72927e761ec18b16f3d43422856b33" kindref="member">SetParticleNative</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>);</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="444" refid="class_particle_source_1abc9a5c9b15998add37e9911bf0b8321b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1abc9a5c9b15998add37e9911bf0b8321b" kindref="member">SetParticle</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>)</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="446"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a5e72927e761ec18b16f3d43422856b33" kindref="member">SetParticleNative</ref>(<ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>);</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="448"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="454" refid="class_particle_source_1a5bb7c9465bece1298ae61c26d9d5b3ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a5bb7c9465bece1298ae61c26d9d5b3ed" kindref="member">SetParticleByID</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1abc9a5c9b15998add37e9911bf0b8321b" kindref="member">SetParticle</ref>(<ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a5e8368fe145ca144b377295e12dbdea4" kindref="member">GetParticleFullPath</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="464" refid="class_particle_source_1a89b4caf047f5b99947240e40fb54dbb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a89b4caf047f5b99947240e40fb54dbb5" kindref="member">SetSource</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>)</highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_source_1a5bb7c9465bece1298ae61c26d9d5b3ed" kindref="member">SetParticleByID</ref>(<ref refid="_smoke_simulation_8c_1a7ccc29a80f5e39e2fa08fabc79bca587" kindref="member">particle_id</ref>);</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="470"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="484" refid="class_particle_source_1a0db8b0eba12da4628ffd258dbb038574" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>proto<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a0db8b0eba12da4628ffd258dbb038574" kindref="member">GetParticleNative</ref>(out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>,<sp/>EGetParticleMode<sp/>mode);</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="492" refid="class_particle_source_1a35f24ecec7504b94dff16c8ca1b07352" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a35f24ecec7504b94dff16c8ca1b07352" kindref="member">GetParticle</ref>(out<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>,<sp/>EGetParticleMode<sp/>mode)</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a0db8b0eba12da4628ffd258dbb038574" kindref="member">GetParticleNative</ref>(<ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>,<sp/>mode);</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="501" refid="class_particle_source_1abe25b74aac8751c287a47a0bf7837311" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1abe25b74aac8751c287a47a0bf7837311" kindref="member">GetParticleID</ref>()</highlight></codeline>
+<codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>;</highlight></codeline>
+<codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_particle_source_1a35f24ecec7504b94dff16c8ca1b07352" kindref="member">GetParticle</ref>(<ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>,<sp/>EGetParticleMode.FILE))</highlight></codeline>
+<codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a37518839c27f1e35d7d6a95b17c95101" kindref="member">GetParticleIDByName</ref>(<ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>);</highlight></codeline>
+<codeline lineno="506"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="516" refid="class_particle_source_1a5cf89dfc75ae2b294d1762df1654f686" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a5cf89dfc75ae2b294d1762df1654f686" kindref="member">GetParticleIDLegacy</ref>()</highlight></codeline>
+<codeline lineno="517"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>;</highlight></codeline>
+<codeline lineno="519"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_particle_source_1a35f24ecec7504b94dff16c8ca1b07352" kindref="member">GetParticle</ref>(<ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>,<sp/>EGetParticleMode.NO_EXT))</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_list" kindref="compound">ParticleList</ref>.<ref refid="class_particle_list_1a8d9bcf5982a41265d149d84481e7013a" kindref="member">GetParticleID</ref>(<ref refid="_option_selector_multistate_8c_1a46c20eb2a26abeb1e934cd66e1dd6484" kindref="member">path</ref>);</highlight></codeline>
+<codeline lineno="521"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="522"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-1;</highlight></codeline>
+<codeline lineno="523"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="524"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="527"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="528"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="533"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="540" refid="class_particle_source_1afcae9920d4f38415b3f89a0d24076e26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1afcae9920d4f38415b3f89a0d24076e26" kindref="member">ApplyPropertiesNative</ref>(ParticleProperties<sp/>properties);</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="547" refid="class_particle_source_1a797565b90125292d40ae3bf5ed2a446c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a797565b90125292d40ae3bf5ed2a446c" kindref="member">ApplyProperties</ref>(ParticleProperties<sp/>properties)</highlight></codeline>
+<codeline lineno="548"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="549"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1afcae9920d4f38415b3f89a0d24076e26" kindref="member">ApplyPropertiesNative</ref>(properties);</highlight></codeline>
+<codeline lineno="550"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="553"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="554"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="555"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="560"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="566" refid="class_particle_source_1aac11d3734638dbac213c490831f8cebb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/><ref refid="class_object" kindref="compound">Object</ref><sp/><ref refid="class_particle_source_1aac11d3734638dbac213c490831f8cebb" kindref="member">GetDirectParticleEffect</ref>()</highlight></codeline>
+<codeline lineno="567"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="568"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="569"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="570"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="575" refid="class_particle_source_1a7fdd86734755f44c7bf80e60829be78d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/><ref refid="class_object" kindref="compound">Object</ref><sp/><ref refid="class_particle_source_1a7fdd86734755f44c7bf80e60829be78d" kindref="member">GetParticleParent</ref>()</highlight></codeline>
+<codeline lineno="576"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="577"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_object" kindref="compound">Object</ref>.Cast(<ref refid="group___widget_a_p_i_1ga1d63886deac2f225cc139143f9d79141" kindref="member">GetParent</ref>());</highlight></codeline>
+<codeline lineno="578"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="579"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="584" refid="class_particle_source_1ac8d03ede8aadce1da4d08d3ad47d9566" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>proto<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1ac8d03ede8aadce1da4d08d3ad47d9566" kindref="member">HasActiveParticleNative</ref>();</highlight></codeline>
+<codeline lineno="585"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="590" refid="class_particle_source_1a977275ac2144431ebcba12f4936cead1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a977275ac2144431ebcba12f4936cead1" kindref="member">HasActiveParticle</ref>()</highlight></codeline>
+<codeline lineno="591"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="592"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1ac8d03ede8aadce1da4d08d3ad47d9566" kindref="member">HasActiveParticleNative</ref>();</highlight></codeline>
+<codeline lineno="593"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="600" refid="class_particle_source_1a1eefd2537e1c5309bc4c98ef14ccd245" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>proto<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a1eefd2537e1c5309bc4c98ef14ccd245" kindref="member">GetParticleCountNative</ref>();</highlight></codeline>
+<codeline lineno="601"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="607" refid="class_particle_source_1a1a58e738560ce5bfa676a0319fa8a78b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a1a58e738560ce5bfa676a0319fa8a78b" kindref="member">GetParticleCount</ref>()</highlight></codeline>
+<codeline lineno="608"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="609"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a1eefd2537e1c5309bc4c98ef14ccd245" kindref="member">GetParticleCountNative</ref>();</highlight></codeline>
+<codeline lineno="610"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="611"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="616" refid="class_particle_source_1abcc153b423030b3631e27d483b88af26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>proto<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1abcc153b423030b3631e27d483b88af26" kindref="member">IsRepeatNative</ref>();</highlight></codeline>
+<codeline lineno="617"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="622" refid="class_particle_source_1ab1e5c8421398922f70affb5785b93a85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1ab1e5c8421398922f70affb5785b93a85" kindref="member">IsRepeat</ref>()</highlight></codeline>
+<codeline lineno="623"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="624"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1abcc153b423030b3631e27d483b88af26" kindref="member">IsRepeatNative</ref>();</highlight></codeline>
+<codeline lineno="625"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="626"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="631" refid="class_particle_source_1a9b0fb677f644b96a3256256c29016660" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>proto<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a9b0fb677f644b96a3256256c29016660" kindref="member">GetMaxLifetimeNative</ref>();</highlight></codeline>
+<codeline lineno="632"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="637" refid="class_particle_source_1a1ca8f1efc22ac4e8bea15069ca87d284" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a1ca8f1efc22ac4e8bea15069ca87d284" kindref="member">GetMaxLifetime</ref>()</highlight></codeline>
+<codeline lineno="638"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="639"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a9b0fb677f644b96a3256256c29016660" kindref="member">GetMaxLifetimeNative</ref>();</highlight></codeline>
+<codeline lineno="640"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="641"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="646" refid="class_particle_source_1a83ca67ddc49d95bac4b45d15808946cd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/><ref refid="class_class" kindref="compound">Class</ref><sp/><ref refid="class_particle_source_1a83ca67ddc49d95bac4b45d15808946cd" kindref="member">GetOwner</ref>();</highlight></codeline>
+<codeline lineno="647"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="652" refid="class_particle_source_1a9389522123fbe128cd6aafc9e0b272a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a9389522123fbe128cd6aafc9e0b272a8" kindref="member">SetOwner</ref>(<ref refid="class_class" kindref="compound">Class</ref><sp/>owner);</highlight></codeline>
+<codeline lineno="653"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="657" refid="class_particle_source_1abdfe0d79d3bfbbdbd4671b2b16e1e6de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1abdfe0d79d3bfbbdbd4671b2b16e1e6de" kindref="member">Orphan</ref>();</highlight></codeline>
+<codeline lineno="658"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="660"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="661"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="662"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="667"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="672" refid="class_particle_source_1ade85c2160d62182a3e1c0050ec44b4ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/><ref refid="_particle_manager_8c_1a93ef360e8fc315d276eb8cc256dc3ef8" kindref="member">ParticleManager</ref><sp/><ref refid="class_particle_source_1ade85c2160d62182a3e1c0050ec44b4ea" kindref="member">GetParticleManager</ref>();</highlight></codeline>
+<codeline lineno="673"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="678" refid="class_particle_source_1a2cc90784951842c4946a3918523453f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a2cc90784951842c4946a3918523453f8" kindref="member">GetIndex</ref>();</highlight></codeline>
+<codeline lineno="679"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="681"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="682"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="683"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="688"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="694" refid="class_particle_source_1a0724dd74f8169bb3d7679bbac8d44f7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a0724dd74f8169bb3d7679bbac8d44f7d" kindref="member">GetCountID</ref>();</highlight></codeline>
+<codeline lineno="695"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="700" refid="class_particle_source_1aceb4f9e4b5d659eaac859488b1e5a0a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1aceb4f9e4b5d659eaac859488b1e5a0a2" kindref="member">GetStaticCount</ref>();</highlight></codeline>
+<codeline lineno="701"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="706" refid="class_particle_source_1a94a8bccf8be772f774ad26043ff001e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>proto<sp/>native<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a94a8bccf8be772f774ad26043ff001e7" kindref="member">GetStaticActiveCount</ref>();</highlight></codeline>
+<codeline lineno="707"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="709"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="710"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="711"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="718"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="722" refid="class_particle_source_1a8a04640e11ce7172f1d197fa1479bb5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a8a04640e11ce7172f1d197fa1479bb5d" kindref="member">OnParticleParented</ref>(<ref refid="class_i_entity" kindref="compound">IEntity</ref><sp/>parent)</highlight></codeline>
+<codeline lineno="723"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="724"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_1a774f593efed4c45f331ce4e2bafa814a" kindref="member">m_ParentObject</ref><sp/>=<sp/><ref refid="class_object" kindref="compound">Object</ref>.Cast(parent);</highlight></codeline>
+<codeline lineno="725"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="726"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnParticleParented(parent);</highlight></codeline>
+<codeline lineno="727"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="728"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="732" refid="class_particle_source_1a19567275a717e4f48b7878bbfb3e6412" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a19567275a717e4f48b7878bbfb3e6412" kindref="member">OnParticleUnParented</ref>(<ref refid="class_i_entity" kindref="compound">IEntity</ref><sp/>parent)</highlight></codeline>
+<codeline lineno="733"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="734"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_1a774f593efed4c45f331ce4e2bafa814a" kindref="member">m_ParentObject</ref><sp/>=<sp/>null;</highlight></codeline>
+<codeline lineno="735"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="736"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Since<sp/>we<sp/>have<sp/>lost<sp/>the<sp/>parent,<sp/>we<sp/>will<sp/>need<sp/>to<sp/>refresh<sp/>the<sp/>wiggle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="737"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>As<sp/>it<sp/>uses<sp/>a<sp/>cached<sp/>local<sp/>position,<sp/>which<sp/>is<sp/>now<sp/>no<sp/>longer<sp/>correct</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="738"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_particle_1a733b7fcacc372111977b89b4e151b2b2" kindref="member">m_WiggleProcessing</ref><sp/>&amp;&amp;<sp/><ref refid="class_particle_1afdd8a5e2ccb094ff06ebf2a52440c8d2" kindref="member">IsWiggling</ref>())</highlight></codeline>
+<codeline lineno="739"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="740"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>randomAngle<sp/>=<sp/><ref refid="class_particle_1ad658ab8afa78b9591af1cecb56ba0845" kindref="member">m_MaxOriWiggle</ref>;</highlight></codeline>
+<codeline lineno="741"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>randomInterval<sp/>=<sp/><ref refid="class_particle_1ada3488041094b2b81abb568afee17164" kindref="member">m_MaxOriInterval</ref>;</highlight></codeline>
+<codeline lineno="742"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_1a1a8166ddbba5008431c06249f105dd68" kindref="member">m_DefaultPos</ref><sp/>=<sp/><ref refid="class_particle_1a88c05af7a702e6746302f4ec53672645" kindref="member">m_DefaultWorldPos</ref>;</highlight></codeline>
+<codeline lineno="743"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_1a4383ab618b84352b1fe82343f7408e66" kindref="member">m_DefaultOri</ref><sp/>=<sp/><ref refid="class_particle_1a37ddd5c12e1bc548478ff43ea799570d" kindref="member">m_DefaultWorldOri</ref>;</highlight></codeline>
+<codeline lineno="744"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="745"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_source_1a6dac4749922a2f38db03023b68a6e571" kindref="member">StopWiggle</ref>();</highlight></codeline>
+<codeline lineno="746"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_source_1aa4e5bddf362f77e96b076a697dadd405" kindref="member">SetWiggle</ref>(randomAngle,<sp/>randomInterval);</highlight></codeline>
+<codeline lineno="747"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="748"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="749"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnParticleUnParented(parent);</highlight></codeline>
+<codeline lineno="750"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="751"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="755" refid="class_particle_source_1ac7c889faf7e06e345f43586bd81cdd21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1ac7c889faf7e06e345f43586bd81cdd21" kindref="member">OnParticleStop</ref>()</highlight></codeline>
+<codeline lineno="756"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="757"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_particle_1afdd8a5e2ccb094ff06ebf2a52440c8d2" kindref="member">IsWiggling</ref>())</highlight></codeline>
+<codeline lineno="758"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="759"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_source_1a6dac4749922a2f38db03023b68a6e571" kindref="member">StopWiggle</ref>();</highlight></codeline>
+<codeline lineno="760"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/><ref refid="class_particle_1af826cdee8e8cff69617645615154ba42" kindref="member">m_RandomizeOri</ref>;</highlight></codeline>
+<codeline lineno="761"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="762"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="763"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnParticleStop();</highlight></codeline>
+<codeline lineno="764"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="765"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="767"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="768"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="769"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="774"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="783" refid="class_particle_source_1a3e2caff10995021ef9e9fdb09e38f6f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a3e2caff10995021ef9e9fdb09e38f6f9" kindref="member">AddAsChild</ref>(<ref refid="class_object" kindref="compound">Object</ref><sp/>parent,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_pos<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>local_ori<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;0<sp/>0<sp/>0&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>force_rotation_to_world<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="784"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="785"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/>ParticlePropertiesFlags.NONE;</highlight></codeline>
+<codeline lineno="786"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="787"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(force_rotation_to_world)</highlight></codeline>
+<codeline lineno="788"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flags<sp/>=<sp/>ParticlePropertiesFlags.FORCE_WORLD_ROT;</highlight></codeline>
+<codeline lineno="789"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="790"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ParticleProperties<sp/>props<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ParticleProperties(local_pos,<sp/>flags,<sp/>parent,<sp/>local_ori);</highlight></codeline>
+<codeline lineno="791"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_source_1a797565b90125292d40ae3bf5ed2a446c" kindref="member">ApplyProperties</ref>(props);</highlight></codeline>
+<codeline lineno="792"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="793"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="795"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="796"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="797"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="802"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="808" refid="class_particle_source_1afe03c6403d0192470bdc7c7042a8e57b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1afe03c6403d0192470bdc7c7042a8e57b" kindref="member">SetParticleParam</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>parameter_id,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value<sp/>)</highlight></codeline>
+<codeline lineno="809"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="810"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___particle_effect_1ga0f558e6f6131c3ea48fe470c95dd6e5f" kindref="member">SetParticleParm</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>-1,<sp/>parameter_id,<sp/>value);</highlight></codeline>
+<codeline lineno="811"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="812"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="819" refid="class_particle_source_1a49cf246aca77de943da2799b517ad68b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a49cf246aca77de943da2799b517ad68b" kindref="member">SetParameter</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>emitter,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>parameter,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value)</highlight></codeline>
+<codeline lineno="820"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="821"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___particle_effect_1ga0f558e6f6131c3ea48fe470c95dd6e5f" kindref="member">SetParticleParm</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>emitter,<sp/>parameter,<sp/>value);</highlight></codeline>
+<codeline lineno="822"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="823"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="830" refid="class_particle_source_1aed9f03fc3ce2a76e98a2bde4c55ceff6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1aed9f03fc3ce2a76e98a2bde4c55ceff6" kindref="member">GetParameter</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>emitter,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>parameter,<sp/>out<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value)</highlight></codeline>
+<codeline lineno="831"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="832"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___particle_effect_1gaf8b8d0a62c36697a8e34fc9ef2c492e3" kindref="member">GetParticleParm</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>emitter,<sp/>parameter,<sp/>value);</highlight></codeline>
+<codeline lineno="833"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="834"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="841" refid="class_particle_source_1a902f89667524a56a945dbfb1a4855078" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a902f89667524a56a945dbfb1a4855078" kindref="member">GetParameterEx</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>emitter,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>parameter)</highlight></codeline>
+<codeline lineno="842"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="843"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="844"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___particle_effect_1gaf8b8d0a62c36697a8e34fc9ef2c492e3" kindref="member">GetParticleParm</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>emitter,<sp/>parameter,<sp/>value);</highlight></codeline>
+<codeline lineno="845"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="846"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="847"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="853" refid="class_particle_source_1a07a6c429b4433c87ff18384a5ec7bb3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a07a6c429b4433c87ff18384a5ec7bb3a" kindref="member">ScaleParticleParamFromOriginal</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>parameter_id,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>coef<sp/>)</highlight></codeline>
+<codeline lineno="854"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="855"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>emitors<sp/>=<sp/><ref refid="group___particle_effect_1gaaf48f6e9cee7070941c9c8a1fd42563d" kindref="member">GetParticleEmitorCount</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="856"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>emitors;<sp/>++i)</highlight></codeline>
+<codeline lineno="857"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="858"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="859"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___particle_effect_1ga7cf9b540067b188149be7512b29ceb60" kindref="member">GetParticleParmOriginal</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>i,<sp/>parameter_id,<sp/>value);</highlight></codeline>
+<codeline lineno="860"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___particle_effect_1ga0f558e6f6131c3ea48fe470c95dd6e5f" kindref="member">SetParticleParm</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>i,<sp/>parameter_id,<sp/>value<sp/>*<sp/>coef);</highlight></codeline>
+<codeline lineno="861"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="862"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="863"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="869" refid="class_particle_source_1aeb0eeebdefd9dea929373d8e99610011" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1aeb0eeebdefd9dea929373d8e99610011" kindref="member">ScaleParticleParam</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>parameter_id,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>coef<sp/>)</highlight></codeline>
+<codeline lineno="870"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="871"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>emitors<sp/>=<sp/><ref refid="group___particle_effect_1gaaf48f6e9cee7070941c9c8a1fd42563d" kindref="member">GetParticleEmitorCount</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="872"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>emitors;<sp/>++i)</highlight></codeline>
+<codeline lineno="873"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="874"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="875"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___particle_effect_1gaf8b8d0a62c36697a8e34fc9ef2c492e3" kindref="member">GetParticleParm</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>i,<sp/>parameter_id,<sp/>value);</highlight></codeline>
+<codeline lineno="876"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___particle_effect_1ga0f558e6f6131c3ea48fe470c95dd6e5f" kindref="member">SetParticleParm</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>i,<sp/>parameter_id,<sp/>value<sp/>*<sp/>coef);</highlight></codeline>
+<codeline lineno="877"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="878"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="879"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="886" refid="class_particle_source_1a76bbe02ccfc654ebfc31bfb140dbc83a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a76bbe02ccfc654ebfc31bfb140dbc83a" kindref="member">IncrementParticleParamFromOriginal</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>parameter_id,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value<sp/>)</highlight></codeline>
+<codeline lineno="887"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="888"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>emitors<sp/>=<sp/><ref refid="group___particle_effect_1gaaf48f6e9cee7070941c9c8a1fd42563d" kindref="member">GetParticleEmitorCount</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="889"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>emitors;<sp/>++i)</highlight></codeline>
+<codeline lineno="890"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="891"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param;</highlight></codeline>
+<codeline lineno="892"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___particle_effect_1ga7cf9b540067b188149be7512b29ceb60" kindref="member">GetParticleParmOriginal</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>i,<sp/>parameter_id,<sp/>param);</highlight></codeline>
+<codeline lineno="893"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___particle_effect_1ga0f558e6f6131c3ea48fe470c95dd6e5f" kindref="member">SetParticleParm</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>i,<sp/>parameter_id,<sp/>param<sp/>+<sp/>value);</highlight></codeline>
+<codeline lineno="894"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="895"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="896"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="903" refid="class_particle_source_1a01498271b3835816f4a261dab5009253" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a01498271b3835816f4a261dab5009253" kindref="member">IncrementParticleParam</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>parameter_id,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value<sp/>)</highlight></codeline>
+<codeline lineno="904"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="905"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>emitors<sp/>=<sp/><ref refid="group___particle_effect_1gaaf48f6e9cee7070941c9c8a1fd42563d" kindref="member">GetParticleEmitorCount</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="906"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>emitors;<sp/>++i)</highlight></codeline>
+<codeline lineno="907"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="908"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>param;</highlight></codeline>
+<codeline lineno="909"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___particle_effect_1gaf8b8d0a62c36697a8e34fc9ef2c492e3" kindref="member">GetParticleParm</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>i,<sp/>parameter_id,<sp/>param);</highlight></codeline>
+<codeline lineno="910"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___particle_effect_1ga0f558e6f6131c3ea48fe470c95dd6e5f" kindref="member">SetParticleParm</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>i,<sp/>parameter_id,<sp/>param<sp/>+<sp/>value);</highlight></codeline>
+<codeline lineno="911"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="912"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="913"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="915"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="916"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="917"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="922"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="929" refid="class_particle_source_1aa4e5bddf362f77e96b076a697dadd405" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1aa4e5bddf362f77e96b076a697dadd405" kindref="member">SetWiggle</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>random_angle,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>random_interval)</highlight></codeline>
+<codeline lineno="930"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="931"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(random_angle<sp/>!=<sp/>0<sp/>||<sp/>random_interval<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="932"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="933"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_particle_1afdd8a5e2ccb094ff06ebf2a52440c8d2" kindref="member">IsWiggling</ref>())</highlight></codeline>
+<codeline lineno="934"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="935"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_1ad658ab8afa78b9591af1cecb56ba0845" kindref="member">m_MaxOriWiggle</ref><sp/>=<sp/>random_angle;</highlight></codeline>
+<codeline lineno="936"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_1ada3488041094b2b81abb568afee17164" kindref="member">m_MaxOriInterval</ref><sp/>=<sp/>random_interval;</highlight></codeline>
+<codeline lineno="937"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="938"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="939"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="940"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>need<sp/>the<sp/>position<sp/>to<sp/>be<sp/>accurate<sp/>before<sp/>storing<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="941"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___widget_a_p_i_1ga70ac517aa5d3b3af95f61a2d560d811f" kindref="member">Update</ref>();</highlight></codeline>
+<codeline lineno="942"><highlight class="normal"></highlight></codeline>
+<codeline lineno="943"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>These<sp/>are<sp/>only<sp/>ever<sp/>used<sp/>within<sp/>the<sp/>Wiggle<sp/>API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="944"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>To<sp/>restore<sp/>the<sp/>properties<sp/>after<sp/>wiggling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="945"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>So<sp/>let&apos;s<sp/>only<sp/>set<sp/>them<sp/>within<sp/>the<sp/>Wiggle<sp/>API<sp/>c:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="946"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="947"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_1a1a8166ddbba5008431c06249f105dd68" kindref="member">m_DefaultPos</ref><sp/>=<sp/><ref refid="_effect_8c_1a92e1636e54e0654531f52b036e7842b5" kindref="member">GetLocalPosition</ref>();</highlight></codeline>
+<codeline lineno="948"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_1a4383ab618b84352b1fe82343f7408e66" kindref="member">m_DefaultOri</ref><sp/>=<sp/>GetLocalYawPitchRoll();</highlight></codeline>
+<codeline lineno="949"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_1a88c05af7a702e6746302f4ec53672645" kindref="member">m_DefaultWorldPos</ref><sp/>=<sp/>GetWorldPosition();</highlight></codeline>
+<codeline lineno="950"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_1a37ddd5c12e1bc548478ff43ea799570d" kindref="member">m_DefaultWorldOri</ref><sp/>=<sp/>GetYawPitchRoll();<sp/><sp/></highlight></codeline>
+<codeline lineno="951"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_1a5169480d2be6a38b63b7e22956929fdb" kindref="member">m_ForceOrientationRelativeToWorld</ref><sp/>=<sp/>IsHierarchyPositionOnly();</highlight></codeline>
+<codeline lineno="952"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="953"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="954"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.SetWiggle(random_angle,<sp/>random_interval);</highlight></codeline>
+<codeline lineno="955"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="956"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="960" refid="class_particle_source_1a6dac4749922a2f38db03023b68a6e571" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a6dac4749922a2f38db03023b68a6e571" kindref="member">StopWiggle</ref>()</highlight></codeline>
+<codeline lineno="961"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="962"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>wiggling<sp/>=<sp/><ref refid="class_particle_1afdd8a5e2ccb094ff06ebf2a52440c8d2" kindref="member">IsWiggling</ref>();</highlight></codeline>
+<codeline lineno="963"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="964"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.StopWiggle();</highlight></codeline>
+<codeline lineno="965"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="966"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(wiggling)</highlight></codeline>
+<codeline lineno="967"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="968"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Restore<sp/>pre-wiggle<sp/>orientation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="969"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/>ParticlePropertiesFlags.NONE;</highlight></codeline>
+<codeline lineno="970"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="971"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_particle_1a5169480d2be6a38b63b7e22956929fdb" kindref="member">m_ForceOrientationRelativeToWorld</ref>)</highlight></codeline>
+<codeline lineno="972"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flags<sp/>=<sp/>ParticlePropertiesFlags.FORCE_WORLD_ROT;</highlight></codeline>
+<codeline lineno="973"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="974"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ParticleProperties<sp/>prop<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ParticleProperties(<ref refid="class_particle_1a1a8166ddbba5008431c06249f105dd68" kindref="member">m_DefaultPos</ref>,<sp/>flags,<sp/><ref refid="class_particle_source_1a7fdd86734755f44c7bf80e60829be78d" kindref="member">GetParticleParent</ref>(),<sp/><ref refid="class_particle_1a4383ab618b84352b1fe82343f7408e66" kindref="member">m_DefaultOri</ref>,<sp/><ref refid="class_particle_source_1a83ca67ddc49d95bac4b45d15808946cd" kindref="member">GetOwner</ref>());</highlight></codeline>
+<codeline lineno="975"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_source_1a797565b90125292d40ae3bf5ed2a446c" kindref="member">ApplyProperties</ref>(prop);</highlight></codeline>
+<codeline lineno="976"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="977"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="978"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="982" refid="class_particle_source_1a849286407b5cf711d132ec35cb8c16e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a849286407b5cf711d132ec35cb8c16e9" kindref="member">RandomizeOrientation</ref>()</highlight></codeline>
+<codeline lineno="983"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="984"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ToDelete())</highlight></codeline>
+<codeline lineno="985"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="986"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="987"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_1a733b7fcacc372111977b89b4e151b2b2" kindref="member">m_WiggleProcessing</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="988"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="989"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!<ref refid="class_particle_1af826cdee8e8cff69617645615154ba42" kindref="member">m_RandomizeOri</ref>.IsRunning()<sp/>)</highlight></codeline>
+<codeline lineno="990"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_1af826cdee8e8cff69617645615154ba42" kindref="member">m_RandomizeOri</ref>.Run(<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga892ecb1375c9b373969273223a5841f3" kindref="member">RandomFloat</ref>(0,<sp/><ref refid="class_particle_1ada3488041094b2b81abb568afee17164" kindref="member">m_MaxOriInterval</ref>)<sp/>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;RandomizeOrientation&quot;</highlight><highlight class="normal">,<sp/>null,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="991"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="992"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flags<sp/>=<sp/>ParticlePropertiesFlags.NONE;</highlight></codeline>
+<codeline lineno="993"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="994"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_particle_1a5169480d2be6a38b63b7e22956929fdb" kindref="member">m_ForceOrientationRelativeToWorld</ref>)</highlight></codeline>
+<codeline lineno="995"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>flags<sp/>=<sp/>ParticlePropertiesFlags.FORCE_WORLD_ROT;</highlight></codeline>
+<codeline lineno="996"><highlight class="normal"></highlight></codeline>
+<codeline lineno="997"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ParticleProperties<sp/>prop<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ParticleProperties(<ref refid="class_particle_1a1a8166ddbba5008431c06249f105dd68" kindref="member">m_DefaultPos</ref>,<sp/>flags,<sp/><ref refid="class_particle_source_1a7fdd86734755f44c7bf80e60829be78d" kindref="member">GetParticleParent</ref>(),<sp/><ref refid="class_particle_1a4383ab618b84352b1fe82343f7408e66" kindref="member">m_DefaultOri</ref><sp/>+<sp/><ref refid="class_particle_1a83739fdd66dbebcee473daecc8fa3dff" kindref="member">RandWiggleVector</ref>(),<sp/><ref refid="class_particle_source_1a83ca67ddc49d95bac4b45d15808946cd" kindref="member">GetOwner</ref>());</highlight></codeline>
+<codeline lineno="998"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_source_1a797565b90125292d40ae3bf5ed2a446c" kindref="member">ApplyProperties</ref>(prop);</highlight></codeline>
+<codeline lineno="999"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="1000"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_particle_1a733b7fcacc372111977b89b4e151b2b2" kindref="member">m_WiggleProcessing</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="1001"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="1002"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="1004"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="1005"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="1006"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="1011"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="1013" refid="class_particle_source_1a469c1578432fbfcf0ebac40d4ca0e25e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a469c1578432fbfcf0ebac40d4ca0e25e" kindref="member">UpdateState</ref>()<sp/>{<sp/><ref refid="group___debug_shape_1ga30f13400906443efe9fb79540dc674b5" kindref="member">ErrorEx</ref>(</highlight><highlight class="stringliteral">&quot;Should<sp/>not<sp/>be<sp/>in<sp/>use<sp/>on<sp/>ParticleSource.&quot;</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="1014"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="1016" refid="class_particle_source_1a925d11462545e642a19764ebd5ea329c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a925d11462545e642a19764ebd5ea329c" kindref="member">DestroyParticleEffect</ref>()<sp/>{<sp/><ref refid="group___debug_shape_1ga30f13400906443efe9fb79540dc674b5" kindref="member">ErrorEx</ref>(</highlight><highlight class="stringliteral">&quot;Should<sp/>not<sp/>be<sp/>in<sp/>use<sp/>on<sp/>ParticleSource.&quot;</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="1017"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1019" refid="class_particle_source_1a4b94bb5a0b5e5824ce831f5954ade379" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a4b94bb5a0b5e5824ce831f5954ade379" kindref="member">CreateParticleEffect</ref>()<sp/>{<sp/><ref refid="group___debug_shape_1ga30f13400906443efe9fb79540dc674b5" kindref="member">ErrorEx</ref>(</highlight><highlight class="stringliteral">&quot;Should<sp/>not<sp/>be<sp/>in<sp/>use<sp/>on<sp/>ParticleSource.&quot;</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="1020"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="1022" refid="class_particle_source_1a637f45d2ffa6980f969397d547f187d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a637f45d2ffa6980f969397d547f187d2" kindref="member">EOnFrame</ref>(<ref refid="class_i_entity" kindref="compound">IEntity</ref><sp/>other,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timeSlice)<sp/>{<sp/><ref refid="group___debug_shape_1ga30f13400906443efe9fb79540dc674b5" kindref="member">ErrorEx</ref>(</highlight><highlight class="stringliteral">&quot;Should<sp/>not<sp/>be<sp/>in<sp/>use<sp/>on<sp/>ParticleSource.&quot;</highlight><highlight class="normal">);<sp/>}<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="1023"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="1025" refid="class_particle_source_1aebb9ce479a151f84c881546d1c7061c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1aebb9ce479a151f84c881546d1c7061c5" kindref="member">OnCheckAutoDelete</ref>()<sp/>{<sp/><ref refid="group___debug_shape_1ga30f13400906443efe9fb79540dc674b5" kindref="member">ErrorEx</ref>(</highlight><highlight class="stringliteral">&quot;Should<sp/>not<sp/>be<sp/>in<sp/>use<sp/>on<sp/>ParticleSource.&quot;</highlight><highlight class="normal">);<sp/>}<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="1026"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="1028" refid="class_particle_source_1a8fa32e6ec437ef9f60f10c0e65536d8a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_particle_source_1a8fa32e6ec437ef9f60f10c0e65536d8a" kindref="member">OnToDelete</ref>()<sp/>{<sp/><ref refid="group___debug_shape_1ga30f13400906443efe9fb79540dc674b5" kindref="member">ErrorEx</ref>(</highlight><highlight class="stringliteral">&quot;Should<sp/>not<sp/>be<sp/>in<sp/>use<sp/>on<sp/>ParticleSource.&quot;</highlight><highlight class="normal">);<sp/>}</highlight></codeline>
+<codeline lineno="1029"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="1031"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Particles/ParticleManager/ParticleSource.c"/>
+  </compounddef>
+</doxygen>

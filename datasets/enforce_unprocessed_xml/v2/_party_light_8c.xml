@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_party_light_8c" kind="file" language="C++">
+    <compoundname>PartyLight.c</compoundname>
+    <innerclass refid="class_point_light_base" prot="public">PointLightBase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">class<sp/></highlight><highlight class="normal">PartyLight<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_point_light_base" kindref="compound">PointLightBase</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_day_z_game_8c_1ade208a99b4d0ba9d762ce532f7e5d709" kindref="member">m_Timer</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="5" refid="class_point_light_base_1a82524d7daaad38f131188d461b89792e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_light_base_1a82524d7daaad38f131188d461b89792e" kindref="member">PartyLight</ref>()</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetVisibleDuringDaylight(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetRadiusTo(<sp/>30<sp/>);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetBrightnessTo(1.0);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetCastShadow(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//SetLifetime(600);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetFadeOutTime(1);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15" refid="class_point_light_base_1a12a5f2e7491184a4eb313d155d95230d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_point_light_base_1a12a5f2e7491184a4eb313d155d95230d" kindref="member">OnFrameLightSource</ref>(<ref refid="class_i_entity" kindref="compound">IEntity</ref><sp/>other,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timeSlice)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>valS<sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gadf8820d46eee5033af2e12212c22b16e" kindref="member">AbsFloat</ref>(<ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga94eedd3910334f450ef989d69ab4e4fd" kindref="member">Sin</ref>(<ref refid="_day_z_game_8c_1ade208a99b4d0ba9d762ce532f7e5d709" kindref="member">m_Timer</ref><sp/>*<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga0582b8db17669551eef122dd64ca26be" kindref="member">PI2</ref>));</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>valC<sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gadf8820d46eee5033af2e12212c22b16e" kindref="member">AbsFloat</ref>(<ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga59a832dc3ede05300c969625f9c012d6" kindref="member">Cos</ref>(<ref refid="_day_z_game_8c_1ade208a99b4d0ba9d762ce532f7e5d709" kindref="member">m_Timer</ref><sp/>*<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga0582b8db17669551eef122dd64ca26be" kindref="member">PI2</ref>));</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>valT<sp/>=<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1gadf8820d46eee5033af2e12212c22b16e" kindref="member">AbsFloat</ref>(<ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga5e7cfa6eb9adaec1bb0ee6314bd32c2c" kindref="member">Tan</ref>(<ref refid="_day_z_game_8c_1ade208a99b4d0ba9d762ce532f7e5d709" kindref="member">m_Timer</ref><sp/>*<sp/><ref refid="class_math" kindref="compound">Math</ref>.<ref refid="group___math_1ga0582b8db17669551eef122dd64ca26be" kindref="member">PI2</ref>));</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetDiffuseColor(valS,<sp/>valC,<sp/>valT);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SetAmbientColor(valS,<sp/>valC,<sp/>valT);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_day_z_game_8c_1ade208a99b4d0ba9d762ce532f7e5d709" kindref="member">m_Timer</ref><sp/>+=<sp/>timeSlice;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedLightBase/PointLightBase/PartyLight.c"/>
+  </compounddef>
+</doxygen>

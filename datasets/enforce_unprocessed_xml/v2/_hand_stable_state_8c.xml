@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_hand_stable_state_8c" kind="file" language="C++">
+    <compoundname>HandStableState.c</compoundname>
+    <innerclass refid="class_hand_state_base" prot="public">HandStateBase</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="class_hand_stable_state" refkind="compound"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_hand_stable_state" kindref="compound">HandStableState</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base" kindref="compound">HandStateBase</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6" refid="class_hand_state_base_1af2bca7da1b1b5f60c2a96c386ee70669" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base_1af2bca7da1b1b5f60c2a96c386ee70669" kindref="member">m_AnimState</ref>;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="class_hand_state_base_1a786fbd84abab1ffb8fcc2463ccfd17e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base_1a786fbd84abab1ffb8fcc2463ccfd17e8" kindref="member">HandStableState</ref><sp/>(Man<sp/>player<sp/>=<sp/>NULL,<sp/><ref refid="class_hand_state_base" kindref="compound">HandStateBase</ref><sp/>parent<sp/>=<sp/>NULL,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>anim_state<sp/>=<sp/>-1)<sp/>{<sp/>m_AnimState<sp/>=<sp/>anim_state;<sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="class_hand_state_base_1a6e99808ed928201431db14dac56dcbf9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base_1a6e99808ed928201431db14dac56dcbf9" kindref="member">SyncAnimState</ref><sp/>()<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_hand_state_base_1a25901bba506525c68e8ce3dc24951dfa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base_1a25901bba506525c68e8ce3dc24951dfa" kindref="member">OnEntry</ref><sp/>(<ref refid="class_hand_event_base" kindref="compound">HandEventBase</ref><sp/>e)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnEntry(e);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_weapon_stable_state_8c_1a47014499e6555065de53646aac9821f9" kindref="member">SyncAnimState</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//m_weapon.OnStableStateEntry();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19" refid="class_hand_state_base_1a93568143b3e3b9028c29221b6d1bb5bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base_1a93568143b3e3b9028c29221b6d1bb5bc" kindref="member">OnUpdate</ref><sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnUpdate(dt);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_weapon_stable_state_8c_1a47014499e6555065de53646aac9821f9" kindref="member">SyncAnimState</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24" refid="class_hand_state_base_1ace52a1cbadf14159675e7f07dac94fbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base_1ace52a1cbadf14159675e7f07dac94fbf" kindref="member">OnAbort</ref><sp/>(<ref refid="class_hand_event_base" kindref="compound">HandEventBase</ref><sp/>e)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnAbort(e);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28" refid="class_hand_state_base_1a0d62c16ce9a8651b693296fb4438c1ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base_1a0d62c16ce9a8651b693296fb4438c1ac" kindref="member">OnExit</ref><sp/>(<ref refid="class_hand_event_base" kindref="compound">HandEventBase</ref><sp/>e)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//m_weapon.ResetWeaponAnimState();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.OnExit(e);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_hand_state_base_1ad9033e2bd35f9640346bc02e2a8b01dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base_1ad9033e2bd35f9640346bc02e2a8b01dc" kindref="member">IsIdle</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_hand_state_base_1aedf6c9808abe5c8b870d027a0584bc5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base_1aedf6c9808abe5c8b870d027a0584bc5a" kindref="member">GetCurrentStateID</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="class_hand_state_base_1ab45e89c6df3374df1690bdc357bfafe4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_hand_state_base_1ab45e89c6df3374df1690bdc357bfafe4" kindref="member">HasEntityInHands</ref><sp/>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/Systems/Inventory/HandStableState.c"/>
+  </compounddef>
+</doxygen>

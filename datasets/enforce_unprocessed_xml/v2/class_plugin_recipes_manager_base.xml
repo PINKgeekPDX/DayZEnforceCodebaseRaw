@@ -1,0 +1,1687 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_plugin_recipes_manager_base" kind="class" language="C++" prot="public">
+    <compoundname>PluginRecipesManagerBase</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a2e499bd45e54f04da27065021f725927" prot="private" static="yes" mutable="no">
+        <type>ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="classstring" kindref="compound">string</ref>, ref <ref refid="_cache_object_8c_1a63b0fa68ad4ea3b06a459eced6c76a36" kindref="member">CacheObject</ref> &gt;</type>
+        <definition>ref map&lt;string,ref CacheObject &gt; PluginRecipesManagerBase::m_RecipeCache</definition>
+        <argsstring></argsstring>
+        <name>m_RecipeCache</name>
+        <qualifiedname>PluginRecipesManagerBase::m_RecipeCache</qualifiedname>
+        <initializer>= new <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt;<ref refid="classstring" kindref="compound">string</ref>,ref <ref refid="_cache_object_8c_1a63b0fa68ad4ea3b06a459eced6c76a36" kindref="member">CacheObject</ref> &gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="14" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a1e0fd496b586248f0a7d3913df2020ac" prot="private" static="yes" mutable="no">
+        <type>ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="classtypename" kindref="compound">typename</ref>, <ref refid="classbool" kindref="compound">bool</ref> &gt;</type>
+        <definition>ref map&lt;typename, bool&gt; PluginRecipesManagerBase::m_RecipesInitializedItem</definition>
+        <argsstring></argsstring>
+        <name>m_RecipesInitializedItem</name>
+        <qualifiedname>PluginRecipesManagerBase::m_RecipesInitializedItem</qualifiedname>
+        <initializer>= new ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt;<ref refid="classtypename" kindref="compound">typename</ref>, <ref refid="classbool" kindref="compound">bool</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="15" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a9472e62ed19d7a4506e1050f6c1932b9" prot="private" static="yes" mutable="no">
+        <type>ref <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt; <ref refid="classstring" kindref="compound">string</ref>, <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt;</type>
+        <definition>ref map&lt;string, int&gt; PluginRecipesManagerBase::m_RecipeNamesList</definition>
+        <argsstring></argsstring>
+        <name>m_RecipeNamesList</name>
+        <qualifiedname>PluginRecipesManagerBase::m_RecipeNamesList</qualifiedname>
+        <initializer>= new <ref refid="_controls_xbox_new_8c_1a9ec9dda576db2a36c42c1c3af155d07c" kindref="member">map</ref>&lt;<ref refid="classstring" kindref="compound">string</ref>, <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="43" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a7534553d0655a4ed963bcf35ac11576a" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="class_timer" kindref="compound">Timer</ref></type>
+        <definition>ref Timer PluginRecipesManagerBase::m_TestTimer</definition>
+        <argsstring></argsstring>
+        <name>m_TestTimer</name>
+        <qualifiedname>PluginRecipesManagerBase::m_TestTimer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="18" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a2148790975d514257894af72ccf3c6cb" prot="private" static="no" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int PluginRecipesManagerBase::MAX_NUMBER_OF_RECIPES</definition>
+        <argsstring></argsstring>
+        <name>MAX_NUMBER_OF_RECIPES</name>
+        <qualifiedname>PluginRecipesManagerBase::MAX_NUMBER_OF_RECIPES</qualifiedname>
+        <initializer>= <ref refid="class_plugin_recipes_manager_base_1a632f60122455491a8449a1ba2ec6b5db" kindref="member">GetMaxNumberOfRecipes</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="19" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a451fa9d2ff4e3daa1b777a83de9548d4" prot="private" static="no" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int PluginRecipesManagerBase::MAX_CONCURENT_RECIPES</definition>
+        <argsstring></argsstring>
+        <name>MAX_CONCURENT_RECIPES</name>
+        <qualifiedname>PluginRecipesManagerBase::MAX_CONCURENT_RECIPES</qualifiedname>
+        <initializer>= 128</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="20" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a47b250de33567a655c72903629346e5e" prot="private" static="no" mutable="no">
+        <type>const <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>const int PluginRecipesManagerBase::MAX_INGREDIENTS</definition>
+        <argsstring></argsstring>
+        <name>MAX_INGREDIENTS</name>
+        <qualifiedname>PluginRecipesManagerBase::MAX_INGREDIENTS</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="21" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1afda5f76e5fa685e7f34fb1d796a60e02" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int PluginRecipesManagerBase::m_RegRecipeIndex</definition>
+        <argsstring></argsstring>
+        <name>m_RegRecipeIndex</name>
+        <qualifiedname>PluginRecipesManagerBase::m_RegRecipeIndex</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="23" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a560330f4646198e41c8cb2b3891887a8" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int PluginRecipesManagerBase::m_ResolvedRecipes[MAX_CONCURENT_RECIPES]</definition>
+        <argsstring>[MAX_CONCURENT_RECIPES]</argsstring>
+        <name>m_ResolvedRecipes</name>
+        <qualifiedname>PluginRecipesManagerBase::m_ResolvedRecipes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="24" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a83c206e2a73b7c05351e715a3a4298f0" prot="private" static="no" mutable="no">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool PluginRecipesManagerBase::m_EnableDebugCrafting</definition>
+        <argsstring></argsstring>
+        <name>m_EnableDebugCrafting</name>
+        <qualifiedname>PluginRecipesManagerBase::m_EnableDebugCrafting</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="26" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1ad0b7262f1d43c79bcd54a9b0724b525c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+        <definition>ItemBase PluginRecipesManagerBase::m_Ingredients[MAX_INGREDIENTS]</definition>
+        <argsstring>[MAX_INGREDIENTS]</argsstring>
+        <name>m_Ingredients</name>
+        <qualifiedname>PluginRecipesManagerBase::m_Ingredients</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="27" column="10" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1acc5666f85b5774997f8da8b931ab8386" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int PluginRecipesManagerBase::m_IngredientBitMask[MAX_INGREDIENTS]</definition>
+        <argsstring>[MAX_INGREDIENTS]</argsstring>
+        <name>m_IngredientBitMask</name>
+        <qualifiedname>PluginRecipesManagerBase::m_IngredientBitMask</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="28" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a6133e6618f0f96adb477f4f75799f704" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int PluginRecipesManagerBase::m_IngredientBitMaskSize[MAX_INGREDIENTS]</definition>
+        <argsstring>[MAX_INGREDIENTS]</argsstring>
+        <name>m_IngredientBitMaskSize</name>
+        <qualifiedname>PluginRecipesManagerBase::m_IngredientBitMaskSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="29" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1aaff16c72b8c37396a20521a480b1f179" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int PluginRecipesManagerBase::m_BitsResults[MAX_INGREDIENTS]</definition>
+        <argsstring>[MAX_INGREDIENTS]</argsstring>
+        <name>m_BitsResults</name>
+        <qualifiedname>PluginRecipesManagerBase::m_BitsResults</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="31" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a1f841bcb1ff0a6910bfb652ac041af12" prot="private" static="no" mutable="no">
+        <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+        <definition>ItemBase PluginRecipesManagerBase::m_ingredient1[MAX_CONCURENT_RECIPES]</definition>
+        <argsstring>[MAX_CONCURENT_RECIPES]</argsstring>
+        <name>m_ingredient1</name>
+        <qualifiedname>PluginRecipesManagerBase::m_ingredient1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="33" column="10" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1ac6b9493d5c5b7aab8284015d8cb76a57" prot="private" static="no" mutable="no">
+        <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+        <definition>ItemBase PluginRecipesManagerBase::m_ingredient2[MAX_CONCURENT_RECIPES]</definition>
+        <argsstring>[MAX_CONCURENT_RECIPES]</argsstring>
+        <name>m_ingredient2</name>
+        <qualifiedname>PluginRecipesManagerBase::m_ingredient2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="34" column="10" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a9f34986a2d78301e0c45ce77ad452107" prot="private" static="no" mutable="no">
+        <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+        <definition>ItemBase PluginRecipesManagerBase::m_ingredient3[MAX_CONCURENT_RECIPES]</definition>
+        <argsstring>[MAX_CONCURENT_RECIPES]</argsstring>
+        <name>m_ingredient3</name>
+        <qualifiedname>PluginRecipesManagerBase::m_ingredient3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="35" column="10" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a161433454dd3200a8d067e6df1245cef" prot="private" static="no" mutable="no">
+        <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+        <definition>ItemBase PluginRecipesManagerBase::m_sortedIngredients[MAX_NUMBER_OF_INGREDIENTS]</definition>
+        <argsstring>[MAX_NUMBER_OF_INGREDIENTS]</argsstring>
+        <name>m_sortedIngredients</name>
+        <qualifiedname>PluginRecipesManagerBase::m_sortedIngredients</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="37" column="10" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1aae1a749d1eff8c1f188724c7d03eca43" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt;</type>
+        <definition>ref array&lt;int&gt; PluginRecipesManagerBase::m_RecipesMatched</definition>
+        <argsstring></argsstring>
+        <name>m_RecipesMatched</name>
+        <qualifiedname>PluginRecipesManagerBase::m_RecipesMatched</qualifiedname>
+        <initializer>= new <ref refid="classarray" kindref="compound">array</ref>&lt;<ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="39" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1ab06ef8622c615ae19f204c79787e90e2" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="classstring" kindref="compound">string</ref> &gt;</type>
+        <definition>ref array&lt;string&gt; PluginRecipesManagerBase::m_CachedItems</definition>
+        <argsstring></argsstring>
+        <name>m_CachedItems</name>
+        <qualifiedname>PluginRecipesManagerBase::m_CachedItems</qualifiedname>
+        <initializer>= new <ref refid="classarray" kindref="compound">array</ref>&lt;<ref refid="classstring" kindref="compound">string</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="40" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a467db2f2d8b674b2bcf05d6833beb6a7" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="classarray" kindref="compound">array</ref>&lt; ref <ref refid="class_recipe_base" kindref="compound">RecipeBase</ref> &gt;</type>
+        <definition>ref array&lt;ref RecipeBase&gt; PluginRecipesManagerBase::m_RecipeList</definition>
+        <argsstring></argsstring>
+        <name>m_RecipeList</name>
+        <qualifiedname>PluginRecipesManagerBase::m_RecipeList</qualifiedname>
+        <initializer>= new <ref refid="classarray" kindref="compound">array</ref>&lt;ref <ref refid="class_recipe_base" kindref="compound">RecipeBase</ref>&gt;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="42" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a68c39dcc06e14197df3302012f015fb2" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="class_timer" kindref="compound">Timer</ref></type>
+        <definition>ref Timer PluginRecipesManagerBase::myTimer1</definition>
+        <argsstring></argsstring>
+        <name>myTimer1</name>
+        <qualifiedname>PluginRecipesManagerBase::myTimer1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="45" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a2c6d148903625b0940aa8f54fdf082b8" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt;</type>
+        <definition>ref array&lt;int&gt; PluginRecipesManagerBase::m_RcpsArray</definition>
+        <argsstring></argsstring>
+        <name>m_RcpsArray</name>
+        <qualifiedname>PluginRecipesManagerBase::m_RcpsArray</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="239" column="11" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a1a68aecd93a0178bc998c07f05fb58b2" prot="private" static="no" mutable="no">
+        <type><ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>string PluginRecipesManagerBase::m_BaseName</definition>
+        <argsstring></argsstring>
+        <name>m_BaseName</name>
+        <qualifiedname>PluginRecipesManagerBase::m_BaseName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="240" column="8" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1aba28000aa2c82f38d52d8d84c4c935e8" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int PluginRecipesManagerBase::m_RecipeID</definition>
+        <argsstring></argsstring>
+        <name>m_RecipeID</name>
+        <qualifiedname>PluginRecipesManagerBase::m_RecipeID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="241" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a80f518097ff3b5954a5257d2ee64d952" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int PluginRecipesManagerBase::item_mask</definition>
+        <argsstring></argsstring>
+        <name>item_mask</name>
+        <qualifiedname>PluginRecipesManagerBase::item_mask</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="242" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a8b2d4f394c7596e953d363e839e591db" prot="private" static="no" mutable="no">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int PluginRecipesManagerBase::m_BaseMask</definition>
+        <argsstring></argsstring>
+        <name>m_BaseMask</name>
+        <qualifiedname>PluginRecipesManagerBase::m_BaseMask</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="243" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1af41606570f2c2d5566cbf5a745d44cb6" prot="private" static="no" mutable="no">
+        <type><ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>string PluginRecipesManagerBase::m_ItemName</definition>
+        <argsstring></argsstring>
+        <name>m_ItemName</name>
+        <qualifiedname>PluginRecipesManagerBase::m_ItemName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="244" column="8" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a9854640acb679251323ee7638de30182" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="_cache_object_8c_1a63b0fa68ad4ea3b06a459eced6c76a36" kindref="member">CacheObject</ref></type>
+        <definition>ref CacheObject PluginRecipesManagerBase::m_CoItem</definition>
+        <argsstring></argsstring>
+        <name>m_CoItem</name>
+        <qualifiedname>PluginRecipesManagerBase::m_CoItem</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="245" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_plugin_recipes_manager_base_1a0145cf0ca8c36f17807cf474a1017a49" prot="private" static="no" mutable="no">
+        <type>ref <ref refid="_cache_object_8c_1a63b0fa68ad4ea3b06a459eced6c76a36" kindref="member">CacheObject</ref></type>
+        <definition>ref CacheObject PluginRecipesManagerBase::m_CoBase</definition>
+        <argsstring></argsstring>
+        <name>m_CoBase</name>
+        <qualifiedname>PluginRecipesManagerBase::m_CoBase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="246" column="17" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a632f60122455491a8449a1ba2ec6b5db" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static int PluginRecipesManagerBase::GetMaxNumberOfRecipes</definition>
+        <argsstring>()</argsstring>
+        <name>GetMaxNumberOfRecipes</name>
+        <qualifiedname>PluginRecipesManagerBase::GetMaxNumberOfRecipes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="47" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a00c10355720bed567ecfbedda5ba6042" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>static int PluginRecipesManagerBase::RecipeIDFromClassname</definition>
+        <argsstring>(string classname)</argsstring>
+        <name>RecipeIDFromClassname</name>
+        <qualifiedname>PluginRecipesManagerBase::RecipeIDFromClassname</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>classname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="409" column="12" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="409" bodyend="414"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a0b0391ef8c904cbc307b4ca4173d0402" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PluginRecipesManagerBase::PluginRecipesManager</definition>
+        <argsstring>()</argsstring>
+        <name>PluginRecipesManager</name>
+        <qualifiedname>PluginRecipesManagerBase::PluginRecipesManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="52" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="52" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a2dbee61996e0ef447f72635030e168f1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PluginRecipesManagerBase::~PluginRecipesManager</definition>
+        <argsstring>()</argsstring>
+        <name>~PluginRecipesManager</name>
+        <qualifiedname>PluginRecipesManagerBase::~PluginRecipesManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="61" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="61" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a0ec795424cbcfc6d9f213276cbcf05fe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool PluginRecipesManagerBase::IsEnableDebugCrafting</definition>
+        <argsstring>()</argsstring>
+        <name>IsEnableDebugCrafting</name>
+        <qualifiedname>PluginRecipesManagerBase::IsEnableDebugCrafting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="66" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a886a1c8128b8c5192f25e8dba5dc3724" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PluginRecipesManagerBase::SetEnableDebugCrafting</definition>
+        <argsstring>(bool enable)</argsstring>
+        <name>SetEnableDebugCrafting</name>
+        <qualifiedname>PluginRecipesManagerBase::SetEnableDebugCrafting</qualifiedname>
+        <param>
+          <type><ref refid="classbool" kindref="compound">bool</ref></type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="71" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1ad6c2006257b3bf7f52af40301df9381a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>string PluginRecipesManagerBase::GetRecipeName</definition>
+        <argsstring>(int recipe_id)</argsstring>
+        <name>GetRecipeName</name>
+        <qualifiedname>PluginRecipesManagerBase::GetRecipeName</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>recipe_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="77" column="8" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="77" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1afba67f286769280e0893e870a3629987" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int PluginRecipesManagerBase::GetValidRecipes</definition>
+        <argsstring>(ItemBase item1, ItemBase item2, array&lt; int &gt; ids, PlayerBase player)</argsstring>
+        <name>GetValidRecipes</name>
+        <qualifiedname>PluginRecipesManagerBase::GetValidRecipes</qualifiedname>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>item1</declname>
+        </param>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>item2</declname>
+        </param>
+        <param>
+          <type><ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="85" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="85" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1aad9a356cf0194e4001df21e0b4982c10" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>int PluginRecipesManagerBase::GetValidRecipesProper</definition>
+        <argsstring>(int num_of_items, ItemBase items[], array&lt; int &gt; ids, PlayerBase player)</argsstring>
+        <name>GetValidRecipesProper</name>
+        <qualifiedname>PluginRecipesManagerBase::GetValidRecipesProper</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>num_of_items</declname>
+        </param>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>items</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="classarray" kindref="compound">array</ref>&lt; <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref> &gt;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="104" column="5" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="104" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1ab9ee537089f32870b7649d626a5d04d9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float PluginRecipesManagerBase::GetRecipeLengthInSecs</definition>
+        <argsstring>(int recipe_id)</argsstring>
+        <name>GetRecipeLengthInSecs</name>
+        <qualifiedname>PluginRecipesManagerBase::GetRecipeLengthInSecs</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>recipe_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="132" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="132" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a9bb9af54ae13501cd55a24d333854e6e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classfloat" kindref="compound">float</ref></type>
+        <definition>float PluginRecipesManagerBase::GetRecipeSpecialty</definition>
+        <argsstring>(int recipe_id)</argsstring>
+        <name>GetRecipeSpecialty</name>
+        <qualifiedname>PluginRecipesManagerBase::GetRecipeSpecialty</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>recipe_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="138" column="7" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="138" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a996eea4ed1501766980ecf808ed84fc6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>bool PluginRecipesManagerBase::GetIsInstaRecipe</definition>
+        <argsstring>(int recipe_id)</argsstring>
+        <name>GetIsInstaRecipe</name>
+        <qualifiedname>PluginRecipesManagerBase::GetIsInstaRecipe</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>recipe_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="144" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="144" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1aa48497be012fde03117137207feeb3ee" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void PluginRecipesManagerBase::OnInit</definition>
+        <argsstring>()</argsstring>
+        <name>OnInit</name>
+        <qualifiedname>PluginRecipesManagerBase::OnInit</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="150" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="150" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a3b094f3a3955b7db28ef44737230ad21" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PluginRecipesManagerBase::CallbackGenerateCache</definition>
+        <argsstring>()</argsstring>
+        <name>CallbackGenerateCache</name>
+        <qualifiedname>PluginRecipesManagerBase::CallbackGenerateCache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="158" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="158" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a1c236ba33b0b9da6e7d8acfffeca8fac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void PluginRecipesManagerBase::GenerateRecipeCache</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateRecipeCache</name>
+        <qualifiedname>PluginRecipesManagerBase::GenerateRecipeCache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="166" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="166" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1af98a24851c7a5f829b80f07ebe1db93a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PluginRecipesManagerBase::WalkRecipes</definition>
+        <argsstring>()</argsstring>
+        <name>WalkRecipes</name>
+        <qualifiedname>PluginRecipesManagerBase::WalkRecipes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="205" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="205" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a8c5aa4c2d8644992d822c88115e98fa1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void PluginRecipesManagerBase::MatchItems</definition>
+        <argsstring>(TStringArray full_path)</argsstring>
+        <name>MatchItems</name>
+        <qualifiedname>PluginRecipesManagerBase::MatchItems</qualifiedname>
+        <param>
+          <type><ref refid="group___enforce_1ga28845e68ed8329715e29aded7542ca15" kindref="member">TStringArray</ref></type>
+          <declname>full_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="249" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="249" bodyend="280"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a8c2ec8e7342d6dd6274505aa1a0a4c82" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PluginRecipesManagerBase::PerformRecipeServer</definition>
+        <argsstring>(int id, ItemBase item_a, ItemBase item_b, PlayerBase player)</argsstring>
+        <name>PerformRecipeServer</name>
+        <qualifiedname>PluginRecipesManagerBase::PerformRecipeServer</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>item_a</declname>
+        </param>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>item_b</declname>
+        </param>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="282" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="282" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a644c6b4454d0ca6b81d0dc153da89a8b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PluginRecipesManagerBase::GenerateHumanReadableRecipeList</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateHumanReadableRecipeList</name>
+        <qualifiedname>PluginRecipesManagerBase::GenerateHumanReadableRecipeList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="314" column="6" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="314" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a8b01e921bd37371e912fa41f2846aa00" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool PluginRecipesManagerBase::RecipeSanityCheck</definition>
+        <argsstring>(int num_of_ingredients, InventoryItemBase items[], PlayerBase player)</argsstring>
+        <name>RecipeSanityCheck</name>
+        <qualifiedname>PluginRecipesManagerBase::RecipeSanityCheck</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>num_of_ingredients</declname>
+        </param>
+        <param>
+          <type><ref refid="4___world_2_entities_2_game_2_super_2_inventory_item_8c_1aa5a8dcd70bcb27177833139b82b94899" kindref="member">InventoryItemBase</ref></type>
+          <declname>items</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="346" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="346" bodyend="380"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1aa40a44e4f638468480f33e299e49704c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void PluginRecipesManagerBase::RegisterRecipe</definition>
+        <argsstring>(RecipeBase recipe)</argsstring>
+        <name>RegisterRecipe</name>
+        <qualifiedname>PluginRecipesManagerBase::RegisterRecipe</qualifiedname>
+        <param>
+          <type><ref refid="class_recipe_base" kindref="compound">RecipeBase</ref></type>
+          <declname>recipe</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="382" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="382" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a152149f742d3b52e1aed3a1d685c4ac8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override protected void</type>
+        <definition>override protected void PluginRecipesManagerBase::UnregisterRecipe</definition>
+        <argsstring>(string clasname)</argsstring>
+        <name>UnregisterRecipe</name>
+        <qualifiedname>PluginRecipesManagerBase::UnregisterRecipe</qualifiedname>
+        <param>
+          <type><ref refid="classstring" kindref="compound">string</ref></type>
+          <declname>clasname</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="396" column="25" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="396" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a224c58f773473420d32522edd16ea309" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool PluginRecipesManagerBase::CheckRecipe</definition>
+        <argsstring>(int id, ItemBase item1, ItemBase item2, PlayerBase player)</argsstring>
+        <name>CheckRecipe</name>
+        <qualifiedname>PluginRecipesManagerBase::CheckRecipe</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>item1</declname>
+        </param>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>item2</declname>
+        </param>
+        <param>
+          <type><ref refid="class_player_base" kindref="compound">PlayerBase</ref></type>
+          <declname>player</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="416" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="416" bodyend="420"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1afbfd7c9578d96a988387a5d3157eda8f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void PluginRecipesManagerBase::PrintCache</definition>
+        <argsstring>()</argsstring>
+        <name>PrintCache</name>
+        <qualifiedname>PluginRecipesManagerBase::PrintCache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="422" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="422" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a14ee8268608174d00f2f4bd7abf979a8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool PluginRecipesManagerBase::SortIngredientsInRecipe</definition>
+        <argsstring>(int id, int num_of_ingredients, ItemBase ingredients_unsorted[], ItemBase ingredients_sorted[])</argsstring>
+        <name>SortIngredientsInRecipe</name>
+        <qualifiedname>PluginRecipesManagerBase::SortIngredientsInRecipe</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>num_of_ingredients</declname>
+        </param>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>ingredients_unsorted</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>ingredients_sorted</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>sorts ingredients correctly as either first or second ingredient based on their masks </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="435" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="435" bodyend="458"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1aa7a996435c8094c75779b823c399e9a6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void PluginRecipesManagerBase::ClearResults</definition>
+        <argsstring>()</argsstring>
+        <name>ClearResults</name>
+        <qualifiedname>PluginRecipesManagerBase::ClearResults</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="460" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="460" bodyend="467"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a558778ff7e66844e43a3b0a12ea6d4db" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>protected bool PluginRecipesManagerBase::ResolveIngredients</definition>
+        <argsstring>(int num_of_ingredients, int passes=0)</argsstring>
+        <name>ResolveIngredients</name>
+        <qualifiedname>PluginRecipesManagerBase::ResolveIngredients</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>num_of_ingredients</declname>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>passes</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="469" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="469" bodyend="517"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a7314d8423df3d2c9e6c7e1e3ef3c16a9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void PluginRecipesManagerBase::PrintResultMasks</definition>
+        <argsstring>(int num)</argsstring>
+        <name>PrintResultMasks</name>
+        <qualifiedname>PluginRecipesManagerBase::PrintResultMasks</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="520" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="520" bodyend="526"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a7d6f90bdcfc5ca6fbdf82ff1cbb8c640" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected int PluginRecipesManagerBase::GetRecipeIntersection</definition>
+        <argsstring>(int num_of_ingredients, ItemBase items[])</argsstring>
+        <name>GetRecipeIntersection</name>
+        <qualifiedname>PluginRecipesManagerBase::GetRecipeIntersection</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>num_of_ingredients</declname>
+        </param>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>items</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>fills an array with recipe IDs which &apos;item_a&apos; and &apos;item_b&apos; share </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="529" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="529" bodyend="577"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a9d570da1c61f710282b8d90bf29d3807" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected <ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+        <definition>protected int PluginRecipesManagerBase::SortIngredients</definition>
+        <argsstring>(int num_of_ingredients, ItemBase items_unsorted[], int resolved_recipes[])</argsstring>
+        <name>SortIngredients</name>
+        <qualifiedname>PluginRecipesManagerBase::SortIngredients</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>num_of_ingredients</declname>
+        </param>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>items_unsorted</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>resolved_recipes</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="579" column="15" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="579" bodyend="596"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1a9320ce22dcfd9bbae68f1329dc7da1c0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>protected void</type>
+        <definition>protected void PluginRecipesManagerBase::CreateAllRecipes</definition>
+        <argsstring>()</argsstring>
+        <name>CreateAllRecipes</name>
+        <qualifiedname>PluginRecipesManagerBase::CreateAllRecipes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="599" column="16" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="599" bodyend="602"/>
+      </memberdef>
+      <memberdef kind="function" id="class_plugin_recipes_manager_base_1ae10a2109fcd8e0cd748a6f6a973fe19c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classstring" kindref="compound">string</ref></type>
+        <definition>string PluginRecipesManagerBase::GetSoundCategory</definition>
+        <argsstring>(int recipeID, ItemBase item1, ItemBase item2)</argsstring>
+        <name>GetSoundCategory</name>
+        <qualifiedname>PluginRecipesManagerBase::GetSoundCategory</qualifiedname>
+        <param>
+          <type><ref refid="_cache_object_8c_1a2dd3d4ba19a58e86cd16f281a6b82c8e" kindref="member">int</ref></type>
+          <declname>recipeID</declname>
+        </param>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>item1</declname>
+        </param>
+        <param>
+          <type><ref refid="class_item_base" kindref="compound">ItemBase</ref></type>
+          <declname>item2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="605" column="8" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="605" bodyend="624"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="19">
+        <label>AbstractWave</label>
+        <link refid="class_abstract_wave"/>
+      </node>
+      <node id="21">
+        <label>BlowtorchLight</label>
+        <link refid="class_blowtorch_light"/>
+        <childnode refid="22" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Class</label>
+        <link refid="class_class"/>
+      </node>
+      <node id="15">
+        <label>Effect</label>
+      </node>
+      <node id="14">
+        <label>EffectSound</label>
+        <link refid="class_effect_sound"/>
+        <childnode refid="15" relation="private-inheritance">
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>Event_OnSoundFadeInStopped</edgelabel>
+          <edgelabel>Event_OnSoundFadeOutStarted</edgelabel>
+          <edgelabel>Event_OnSoundWaveEnded</edgelabel>
+          <edgelabel>Event_OnSoundWaveStarted</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>m_SoundParams</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>m_SoundObjectBuilder</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>m_SoundWaveObject</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_SoundParent</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_SoundSetName</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_SetEnvVariables</edgelabel>
+          <edgelabel>m_SoundAutodestroy</edgelabel>
+          <edgelabel>m_SoundLoop</edgelabel>
+          <edgelabel>m_SoundWaveIsPlaying</edgelabel>
+          <edgelabel>m_SoundWaveStarting</edgelabel>
+          <edgelabel>m_SoundWaveStopping</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_SoundFadeInDuration</edgelabel>
+          <edgelabel>m_SoundFadeOutDuration</edgelabel>
+          <edgelabel>m_SoundFadeOutInitVolume</edgelabel>
+          <edgelabel>m_SoundFadeOutStartTime</edgelabel>
+          <edgelabel>m_SoundWaveLenght</edgelabel>
+          <edgelabel>m_SoundWaveTime</edgelabel>
+          <edgelabel>m_SoundWaveVolume</edgelabel>
+          <edgelabel>m_SoundWaveVolumeMax</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>EntityAI</label>
+        <link refid="class_entity_a_i"/>
+        <childnode refid="30" relation="usage">
+          <edgelabel>m_ContinuousActions</edgelabel>
+          <edgelabel>m_InteractActions</edgelabel>
+          <edgelabel>m_SingleUseActions</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>SOUND_CONTACT_SKIP</edgelabel>
+          <edgelabel>m_SoundContactTickTime</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>m_SoundImpactTable</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_ActionsInitialize</edgelabel>
+          <edgelabel>m_IsMeleeWeapon</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>m_OnItemAddedToHands</edgelabel>
+          <edgelabel>m_OnItemRemovedFromHands</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>GardenBase</label>
+        <link refid="class_garden_base"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_ClutterCutter</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ItemBase</label>
+        <link refid="class_item_base"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>MAX_PLACEMENT_HEIGHT_DIFF</edgelabel>
+          <edgelabel>PARAM_COOKING_EQUIP_MAX_TEMP</edgelabel>
+          <edgelabel>PARAM_COOKING_EQUIP_TEMP_INCREASE</edgelabel>
+          <edgelabel>PARAM_COOKING_TEMP_THRESHOLD</edgelabel>
+          <edgelabel>PARAM_COOKING_TIME_INC_COEF</edgelabel>
+          <edgelabel>RANDOM_SPARK_INTERVAL</edgelabel>
+          <edgelabel>SPOIL_AFTER_MATURITY_TIME</edgelabel>
+          <edgelabel>m_BaitCatchProb</edgelabel>
+          <edgelabel>m_BlinkingStatusLightInterval</edgelabel>
+          <edgelabel>m_ChargeEnergyPerSecond</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>ANIMATION_DEPLOYED</edgelabel>
+          <edgelabel>ANIM_PHASE_FLAME</edgelabel>
+          <edgelabel>ATTACHED_CLIPS_STATES</edgelabel>
+          <edgelabel>CHARGED_AND_READY_SOUND</edgelabel>
+          <edgelabel>CHARGING_SOUND</edgelabel>
+          <edgelabel>DEFAULT_MATERIAL</edgelabel>
+          <edgelabel>DIRECT_COOKING_SLOT_NAME</edgelabel>
+          <edgelabel>FLAME_BUTANE_OFF</edgelabel>
+          <edgelabel>FLAME_BUTANE_ON</edgelabel>
+          <edgelabel>GAS_LIGHT_MATERIAL_OFF</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_Slots</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_AlignCatchTimer</edgelabel>
+          <edgelabel>m_ChargingTimer</edgelabel>
+          <edgelabel>m_CheckRainTimer</edgelabel>
+          <edgelabel>m_DeleteDryPlantTimer</edgelabel>
+          <edgelabel>m_GrowthTimer</edgelabel>
+          <edgelabel>m_InfestationTimer</edgelabel>
+          <edgelabel>m_PrevTimer</edgelabel>
+          <edgelabel>m_SoundLoopStartTimer</edgelabel>
+          <edgelabel>m_SparkEvent</edgelabel>
+          <edgelabel>m_SpoilAfterFullMaturityTimer</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_BaitNeeded</edgelabel>
+          <edgelabel>m_BlinkingStatusLightIsOn</edgelabel>
+          <edgelabel>m_CanCatch</edgelabel>
+          <edgelabel>m_DeployedRegularly</edgelabel>
+          <edgelabel>m_EvaluateDeployment</edgelabel>
+          <edgelabel>m_ForceIntoHands</edgelabel>
+          <edgelabel>m_HasBase</edgelabel>
+          <edgelabel>m_HasCrops</edgelabel>
+          <edgelabel>m_IsActive</edgelabel>
+          <edgelabel>m_IsBeingPacked</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>m_GardenBase</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_ChargedAlarm</edgelabel>
+          <edgelabel>m_ChargingSound</edgelabel>
+          <edgelabel>m_DeployLoopSound</edgelabel>
+          <edgelabel>m_EngineLoop</edgelabel>
+          <edgelabel>m_EngineStart</edgelabel>
+          <edgelabel>m_EngineStop</edgelabel>
+          <edgelabel>m_MountSound</edgelabel>
+          <edgelabel>m_Sound</edgelabel>
+          <edgelabel>m_SoundBurningLoop</edgelabel>
+          <edgelabel>m_SoundEffectCooking</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>m_HybridAttachments</edgelabel>
+          <edgelabel>m_Mountables</edgelabel>
+          <edgelabel>m_ShowAnimationsWhenPacked</edgelabel>
+          <edgelabel>m_ShowAnimationsWhenPitched</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>m_Light</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>m_NoteContents</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>m_Particle</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_Catch</edgelabel>
+          <edgelabel>m_CookingEquipment</edgelabel>
+          <edgelabel>m_SparkPlug</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>m_UTSource</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>m_UTSSettings</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>m_UTSLEngine</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>m_HalfExtents</edgelabel>
+          <edgelabel>m_LightLocalOrientation</edgelabel>
+          <edgelabel>m_LightLocalPosition</edgelabel>
+          <edgelabel>m_PreyPos</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_ClutterCutter</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>m_Bait</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Object</label>
+        <link refid="class_object"/>
+      </node>
+      <node id="24">
+        <label>Particle</label>
+        <link refid="class_particle"/>
+        <childnode refid="25" relation="private-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Lifetime</edgelabel>
+          <edgelabel>m_MaxOriInterval</edgelabel>
+          <edgelabel>m_MaxOriWiggle</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_ForceOrientationRelativeToWorld</edgelabel>
+          <edgelabel>m_IsRepeat</edgelabel>
+          <edgelabel>m_MarkedForDeletion</edgelabel>
+          <edgelabel>m_WiggleProcessing</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>m_DefaultOri</edgelabel>
+          <edgelabel>m_DefaultPos</edgelabel>
+          <edgelabel>m_DefaultWorldOri</edgelabel>
+          <edgelabel>m_DefaultWorldPos</edgelabel>
+          <edgelabel>m_GlobalPosPreviousFrame</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_RandomizeOri</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_ParentObject</edgelabel>
+          <edgelabel>m_ParticleEffect</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>ParticleBase</label>
+      </node>
+      <node id="1">
+        <label>PluginRecipesManagerBase</label>
+        <link refid="class_plugin_recipes_manager_base"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_TestTimer</edgelabel>
+          <edgelabel>myTimer1</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_EnableDebugCrafting</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_Ingredients</edgelabel>
+          <edgelabel>m_ingredient1</edgelabel>
+          <edgelabel>m_ingredient2</edgelabel>
+          <edgelabel>m_ingredient3</edgelabel>
+          <edgelabel>m_sortedIngredients</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>m_RcpsArray</edgelabel>
+          <edgelabel>m_RecipesMatched</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>m_CachedItems</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>m_RecipeList</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_BaseName</edgelabel>
+          <edgelabel>m_ItemName</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>PointLightBase</label>
+        <link refid="class_point_light_base"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_DefaultBrightness</edgelabel>
+          <edgelabel>m_DefaultRadius</edgelabel>
+          <edgelabel>m_FireBrightness</edgelabel>
+          <edgelabel>m_FireRadius</edgelabel>
+          <edgelabel>m_FireplaceBrightness</edgelabel>
+          <edgelabel>m_FireplaceRadius</edgelabel>
+          <edgelabel>m_FlareBrightness</edgelabel>
+          <edgelabel>m_FlareRadius</edgelabel>
+          <edgelabel>m_Lifetime</edgelabel>
+          <edgelabel>m_RoadflareBrightness</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_MemoryPoint</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>ScriptInvoker</label>
+        <link refid="class_script_invoker"/>
+      </node>
+      <node id="31">
+        <label>SoundLookupTable</label>
+        <link refid="class_sound_lookup_table"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_parameterName</edgelabel>
+          <edgelabel>m_tableCategoryName</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>SoundObjectBuilder</label>
+        <link refid="class_sound_object_builder"/>
+      </node>
+      <node id="17">
+        <label>SoundParams</label>
+        <link refid="class_sound_params"/>
+      </node>
+      <node id="2">
+        <label>Timer</label>
+        <link refid="class_timer"/>
+      </node>
+      <node id="27">
+        <label>UniversalTemperatureSource</label>
+        <link refid="class_universal_temperature_source"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>UniversalTemperatureSourceLambdaBase</label>
+        <link refid="class_universal_temperature_source_lambda_base"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>HEAT_THROUGH_AIR_COEF</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>UniversalTemperatureSourceLambdaEngine</label>
+        <link refid="class_universal_temperature_source_lambda_engine"/>
+        <childnode refid="33" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>UniversalTemperatureSourceSettings</label>
+        <link refid="class_universal_temperature_source_settings"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_RangeFull</edgelabel>
+          <edgelabel>m_RangeMax</edgelabel>
+          <edgelabel>m_TemperatureCap</edgelabel>
+          <edgelabel>m_TemperatureMax</edgelabel>
+          <edgelabel>m_TemperatureMin</edgelabel>
+          <edgelabel>m_UpdateInterval</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_AffectStat</edgelabel>
+          <edgelabel>m_ManualUpdate</edgelabel>
+          <edgelabel>m_Updateable</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>m_Position</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>m_Parent</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Widget</label>
+        <link refid="class_widget"/>
+      </node>
+      <node id="23">
+        <label>WrittenNoteData</label>
+        <link refid="class_written_note_data"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_Paper</edgelabel>
+          <edgelabel>m_WritingImplement</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_SimpleText</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>array</label>
+        <link refid="classarray"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>array&lt; Widget &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>array&lt; int &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+      </node>
+      <node id="34">
+        <label>array&lt; ref RecipeBase &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>array&lt; ref Slot &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>array&lt; string &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>bool</label>
+        <link refid="classbool"/>
+      </node>
+      <node id="5">
+        <label>float</label>
+        <link refid="classfloat"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>LOWEST</edgelabel>
+          <edgelabel>MAX</edgelabel>
+          <edgelabel>MIN</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>string</label>
+        <link refid="classstring"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>Empty</edgelabel>
+        </childnode>
+      </node>
+      <node id="26">
+        <label>vector</label>
+        <link refid="classvector"/>
+        <childnode refid="26" relation="usage">
+          <edgelabel>Aside</edgelabel>
+          <edgelabel>Forward</edgelabel>
+          <edgelabel>Up</edgelabel>
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" line="12" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Plugins/PluginBase/PluginRecipesManager.c" bodystart="13" bodyend="628"/>
+    <listofallmembers>
+      <member refid="class_plugin_recipes_manager_base_1a3b094f3a3955b7db28ef44737230ad21" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>CallbackGenerateCache</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a224c58f773473420d32522edd16ea309" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>CheckRecipe</name></member>
+      <member refid="class_plugin_recipes_manager_base_1aa7a996435c8094c75779b823c399e9a6" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>ClearResults</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a9320ce22dcfd9bbae68f1329dc7da1c0" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>CreateAllRecipes</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a644c6b4454d0ca6b81d0dc153da89a8b" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>GenerateHumanReadableRecipeList</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a1c236ba33b0b9da6e7d8acfffeca8fac" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>GenerateRecipeCache</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a996eea4ed1501766980ecf808ed84fc6" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>GetIsInstaRecipe</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a632f60122455491a8449a1ba2ec6b5db" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>GetMaxNumberOfRecipes</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a7d6f90bdcfc5ca6fbdf82ff1cbb8c640" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>GetRecipeIntersection</name></member>
+      <member refid="class_plugin_recipes_manager_base_1ab9ee537089f32870b7649d626a5d04d9" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>GetRecipeLengthInSecs</name></member>
+      <member refid="class_plugin_recipes_manager_base_1ad6c2006257b3bf7f52af40301df9381a" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>GetRecipeName</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a9bb9af54ae13501cd55a24d333854e6e" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>GetRecipeSpecialty</name></member>
+      <member refid="class_plugin_recipes_manager_base_1ae10a2109fcd8e0cd748a6f6a973fe19c" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>GetSoundCategory</name></member>
+      <member refid="class_plugin_recipes_manager_base_1afba67f286769280e0893e870a3629987" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>GetValidRecipes</name></member>
+      <member refid="class_plugin_recipes_manager_base_1aad9a356cf0194e4001df21e0b4982c10" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>GetValidRecipesProper</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a0ec795424cbcfc6d9f213276cbcf05fe" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>IsEnableDebugCrafting</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a80f518097ff3b5954a5257d2ee64d952" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>item_mask</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a8b2d4f394c7596e953d363e839e591db" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_BaseMask</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a1a68aecd93a0178bc998c07f05fb58b2" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_BaseName</name></member>
+      <member refid="class_plugin_recipes_manager_base_1aaff16c72b8c37396a20521a480b1f179" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_BitsResults</name></member>
+      <member refid="class_plugin_recipes_manager_base_1ab06ef8622c615ae19f204c79787e90e2" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_CachedItems</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a0145cf0ca8c36f17807cf474a1017a49" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_CoBase</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a9854640acb679251323ee7638de30182" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_CoItem</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a83c206e2a73b7c05351e715a3a4298f0" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_EnableDebugCrafting</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a1f841bcb1ff0a6910bfb652ac041af12" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_ingredient1</name></member>
+      <member refid="class_plugin_recipes_manager_base_1ac6b9493d5c5b7aab8284015d8cb76a57" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_ingredient2</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a9f34986a2d78301e0c45ce77ad452107" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_ingredient3</name></member>
+      <member refid="class_plugin_recipes_manager_base_1acc5666f85b5774997f8da8b931ab8386" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_IngredientBitMask</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a6133e6618f0f96adb477f4f75799f704" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_IngredientBitMaskSize</name></member>
+      <member refid="class_plugin_recipes_manager_base_1ad0b7262f1d43c79bcd54a9b0724b525c" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_Ingredients</name></member>
+      <member refid="class_plugin_recipes_manager_base_1af41606570f2c2d5566cbf5a745d44cb6" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_ItemName</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a2c6d148903625b0940aa8f54fdf082b8" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_RcpsArray</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a2e499bd45e54f04da27065021f725927" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_RecipeCache</name></member>
+      <member refid="class_plugin_recipes_manager_base_1aba28000aa2c82f38d52d8d84c4c935e8" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_RecipeID</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a467db2f2d8b674b2bcf05d6833beb6a7" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_RecipeList</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a9472e62ed19d7a4506e1050f6c1932b9" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_RecipeNamesList</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a1e0fd496b586248f0a7d3913df2020ac" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_RecipesInitializedItem</name></member>
+      <member refid="class_plugin_recipes_manager_base_1aae1a749d1eff8c1f188724c7d03eca43" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_RecipesMatched</name></member>
+      <member refid="class_plugin_recipes_manager_base_1afda5f76e5fa685e7f34fb1d796a60e02" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_RegRecipeIndex</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a560330f4646198e41c8cb2b3891887a8" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_ResolvedRecipes</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a161433454dd3200a8d067e6df1245cef" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_sortedIngredients</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a7534553d0655a4ed963bcf35ac11576a" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>m_TestTimer</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a8c5aa4c2d8644992d822c88115e98fa1" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>MatchItems</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a451fa9d2ff4e3daa1b777a83de9548d4" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>MAX_CONCURENT_RECIPES</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a47b250de33567a655c72903629346e5e" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>MAX_INGREDIENTS</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a2148790975d514257894af72ccf3c6cb" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>MAX_NUMBER_OF_RECIPES</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a68c39dcc06e14197df3302012f015fb2" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>myTimer1</name></member>
+      <member refid="class_plugin_recipes_manager_base_1aa48497be012fde03117137207feeb3ee" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>OnInit</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a8c2ec8e7342d6dd6274505aa1a0a4c82" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>PerformRecipeServer</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a0b0391ef8c904cbc307b4ca4173d0402" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>PluginRecipesManager</name></member>
+      <member refid="class_plugin_recipes_manager_base_1afbfd7c9578d96a988387a5d3157eda8f" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>PrintCache</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a7314d8423df3d2c9e6c7e1e3ef3c16a9" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>PrintResultMasks</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a00c10355720bed567ecfbedda5ba6042" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>RecipeIDFromClassname</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a8b01e921bd37371e912fa41f2846aa00" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>RecipeSanityCheck</name></member>
+      <member refid="class_plugin_recipes_manager_base_1aa40a44e4f638468480f33e299e49704c" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>RegisterRecipe</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a558778ff7e66844e43a3b0a12ea6d4db" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>ResolveIngredients</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a886a1c8128b8c5192f25e8dba5dc3724" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>SetEnableDebugCrafting</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a9d570da1c61f710282b8d90bf29d3807" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>SortIngredients</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a14ee8268608174d00f2f4bd7abf979a8" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>SortIngredientsInRecipe</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a152149f742d3b52e1aed3a1d685c4ac8" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>UnregisterRecipe</name></member>
+      <member refid="class_plugin_recipes_manager_base_1af98a24851c7a5f829b80f07ebe1db93a" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>WalkRecipes</name></member>
+      <member refid="class_plugin_recipes_manager_base_1a2dbee61996e0ef447f72635030e168f1" prot="private" virt="non-virtual"><scope>PluginRecipesManagerBase</scope><name>~PluginRecipesManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

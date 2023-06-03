@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_v_o_n_manager" kind="class" language="C++" prot="public">
+    <compoundname>VONManager</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_v_o_n_manager_1a50711c5fb2b50222c52bf5f67dbf6809" prot="private" static="yes" mutable="no">
+        <type>private ref <ref refid="class_v_o_n_manager_base" kindref="compound">VONManagerBase</ref></type>
+        <definition>private ref VONManagerBase VONManager::m_VONManager</definition>
+        <argsstring></argsstring>
+        <name>m_VONManager</name>
+        <qualifiedname>VONManager::m_VONManager</qualifiedname>
+        <initializer>= new <ref refid="class_v_o_n_manager_base" kindref="compound">VONManagerBase</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/VONManager.c" line="302" column="35" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/VONManager.c" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_v_o_n_manager_1a3950353d469b51197cc079a0ab36996a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_v_o_n_manager_base" kindref="compound">VONManagerBase</ref></type>
+        <definition>static VONManagerBase VONManager::GetInstance</definition>
+        <argsstring>()</argsstring>
+        <name>GetInstance</name>
+        <qualifiedname>VONManager::GetInstance</qualifiedname>
+        <briefdescription>
+<para>Main way to access <ref refid="class_v_o_n_manager" kindref="compound">VONManager</ref> functionality from script. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>Instance</computeroutput> of VONManagerImplementation if logged on to server, or <ref refid="class_v_o_n_manager_base" kindref="compound">VONManagerBase</ref> otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/VONManager.c" line="308" column="23" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/VONManager.c" bodystart="308" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="class_v_o_n_manager_1ad0289a543c5ed75205b56bdb71f1d1e7" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void VONManager::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>VONManager::Init</qualifiedname>
+        <briefdescription>
+<para>Initializes <ref refid="class_v_o_n_manager" kindref="compound">VONManager</ref>, runs when user first connects to a server. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/VONManager.c" line="316" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/VONManager.c" bodystart="316" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="class_v_o_n_manager_1a7b7857e936ecb1dd185372249757647d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void VONManager::CleanupInstance</definition>
+        <argsstring>()</argsstring>
+        <name>CleanupInstance</name>
+        <qualifiedname>VONManager::CleanupInstance</qualifiedname>
+        <briefdescription>
+<para>Uninitializes <ref refid="class_v_o_n_manager" kindref="compound">VONManager</ref>, runs when user disconnects from server. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/VONManager.c" line="325" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/VONManager.c" bodystart="325" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="class_v_o_n_manager_1a3126a02a9423a072d666a7164b6e5741" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static bool VONManager::IsVONToggled</definition>
+        <argsstring>()</argsstring>
+        <name>IsVONToggled</name>
+        <qualifiedname>VONManager::IsVONToggled</qualifiedname>
+        <briefdescription>
+<para>Specifies whether VON mode is toggled or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>True</computeroutput> if in Voice Activation mode, False if in Push-to-Talk mode </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/VONManager.c" line="335" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/VONManager.c" bodystart="335" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="function" id="class_v_o_n_manager_1ad1b1c96249c41ea555afba9b44be0a6d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classbool" kindref="compound">bool</ref></type>
+        <definition>static bool VONManager::IsVoiceThresholdMinimum</definition>
+        <argsstring>()</argsstring>
+        <name>IsVoiceThresholdMinimum</name>
+        <qualifiedname>VONManager::IsVoiceThresholdMinimum</qualifiedname>
+        <briefdescription>
+<para>Specifies whether user&apos;s voice activation threshold value is equal to the minimum voice activation threshold value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><computeroutput>True</computeroutput> if threshold minimum, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/VONManager.c" line="344" column="13" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/VONManager.c" bodystart="344" bodyend="351"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Manager class which handles Voice-over-network functionality while player is connected to a server. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="13">
+        <label>Class</label>
+        <link refid="class_class"/>
+      </node>
+      <node id="3">
+        <label>Managed</label>
+        <link refid="class_managed"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_EndNow</edgelabel>
+          <edgelabel>m_Fullbody</edgelabel>
+          <edgelabel>m_HasSource</edgelabel>
+          <edgelabel>m_InitialSyncSent</edgelabel>
+          <edgelabel>m_Initialized</edgelabel>
+          <edgelabel>m_IsRunning</edgelabel>
+          <edgelabel>m_Terminating</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_CharacterType</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>m_CharacterDta</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_CharacterObj</edgelabel>
+          <edgelabel>m_Player</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>m_BasePosition</edgelabel>
+          <edgelabel>m_CharacterPos</edgelabel>
+          <edgelabel>m_CharacterRot</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_CharGenderList</edgelabel>
+          <edgelabel>m_CharPantsList</edgelabel>
+          <edgelabel>m_CharShirtList</edgelabel>
+          <edgelabel>m_CharShoesList</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>SENSITIVTY_PERCENTAGE</edgelabel>
+          <edgelabel>VALUE_CHECK_INTERVAL</edgelabel>
+          <edgelabel>m_AverageFrequency</edgelabel>
+          <edgelabel>m_BloodClient</edgelabel>
+          <edgelabel>m_BloodMaxValue</edgelabel>
+          <edgelabel>m_DropSpawnMaxDelay</edgelabel>
+          <edgelabel>m_DropSpawnMinDelay</edgelabel>
+          <edgelabel>m_HealthClient</edgelabel>
+          <edgelabel>m_HealthDamage</edgelabel>
+          <edgelabel>m_HealthMaxValue</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>m_DropProbabilityArray</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>m_WidgetArray</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_LayoutRoot</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>MenuData</label>
+        <link refid="class_menu_data"/>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Object</label>
+        <link refid="class_object"/>
+      </node>
+      <node id="7">
+        <label>PlayerBase</label>
+        <link refid="class_player_base"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>m_PersonalLight</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_PersonalLightDisabledByDebug</edgelabel>
+          <edgelabel>m_PersonalLightEnabledOnCurrentServer</edgelabel>
+          <edgelabel>m_PersonalLightIsSwitchedOn</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>ScriptInvoker</label>
+        <link refid="class_script_invoker"/>
+      </node>
+      <node id="8">
+        <label>ScriptedLightBase</label>
+        <link refid="class_scripted_light_base"/>
+      </node>
+      <node id="1">
+        <label>VONManager</label>
+        <link refid="class_v_o_n_manager"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_VONManager</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>VONManagerBase</label>
+        <link refid="class_v_o_n_manager_base"/>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>m_VoNToggled</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>m_OnPartyChatChangedEvent</edgelabel>
+          <edgelabel>m_OnVonStateEvent</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Widget</label>
+        <link refid="class_widget"/>
+      </node>
+      <node id="12">
+        <label>array</label>
+        <link refid="classarray"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>array&lt; Widget &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>m_Subgroups</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>array&lt; float &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>array&lt; ref Widget &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>array&lt; string &gt;</label>
+        <link refid="classarray"/>
+        <childnode refid="11" relation="usage">
+          <edgelabel>obj</edgelabel>
+          <edgelabel>parent</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>proxyInfo</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>m_Instance</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>m_Test</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>m_Root</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>bool</label>
+        <link refid="classbool"/>
+      </node>
+      <node id="16">
+        <label>float</label>
+        <link refid="classfloat"/>
+        <childnode refid="16" relation="usage">
+          <edgelabel>LOWEST</edgelabel>
+          <edgelabel>MAX</edgelabel>
+          <edgelabel>MIN</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>string</label>
+        <link refid="classstring"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>Empty</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>vector</label>
+        <link refid="classvector"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>Aside</edgelabel>
+          <edgelabel>Forward</edgelabel>
+          <edgelabel>Up</edgelabel>
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/VONManager.c" line="300" column="1" bodyfile="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/3_Game/VONManager.c" bodystart="301" bodyend="352"/>
+    <listofallmembers>
+      <member refid="class_v_o_n_manager_1a7b7857e936ecb1dd185372249757647d" prot="private" virt="non-virtual"><scope>VONManager</scope><name>CleanupInstance</name></member>
+      <member refid="class_v_o_n_manager_1a3950353d469b51197cc079a0ab36996a" prot="private" virt="non-virtual"><scope>VONManager</scope><name>GetInstance</name></member>
+      <member refid="class_v_o_n_manager_1ad0289a543c5ed75205b56bdb71f1d1e7" prot="private" virt="non-virtual"><scope>VONManager</scope><name>Init</name></member>
+      <member refid="class_v_o_n_manager_1ad1b1c96249c41ea555afba9b44be0a6d" prot="private" virt="non-virtual"><scope>VONManager</scope><name>IsVoiceThresholdMinimum</name></member>
+      <member refid="class_v_o_n_manager_1a3126a02a9423a072d666a7164b6e5741" prot="private" virt="non-virtual"><scope>VONManager</scope><name>IsVONToggled</name></member>
+      <member refid="class_v_o_n_manager_1a50711c5fb2b50222c52bf5f67dbf6809" prot="private" virt="non-virtual"><scope>VONManager</scope><name>m_VONManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

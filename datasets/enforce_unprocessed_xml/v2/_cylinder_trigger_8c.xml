@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_cylinder_trigger_8c" kind="file" language="C++">
+    <compoundname>CylinderTrigger.c</compoundname>
+    <innerclass refid="class_cylinder_trigger" prot="public">CylinderTrigger</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="class_cylinder_trigger" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cylinder_trigger" kindref="compound">CylinderTrigger</ref><sp/>:<sp/><ref refid="class_trigger" kindref="compound">Trigger</ref></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="4" refid="class_cylinder_trigger_1adda715755e50893f383dae13d16490b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cylinder_trigger_1adda715755e50893f383dae13d16490b8" kindref="member">EOnInit</ref>(<ref refid="class_i_entity" kindref="compound">IEntity</ref><sp/>other,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>extra)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_scripted_entity_8c_1a209da0fff45d7cf5441f5b7eafe42326" kindref="member">SetCollisionCylinder</ref>(1,<sp/>0.5);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>DEVELOPER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/><ref refid="group___diag_menu_1ga6eaf263a07e0b8a8895ed494afceed7d" kindref="member">Shape</ref><sp/><ref refid="4___world_2_classes_2_bleeding_sources_2_bleeding_source_8c_1a1542e258ae97cc8fc674c739001c7c2b" kindref="member">DrawDebugShape</ref>(<ref refid="classvector" kindref="compound">vector</ref><sp/>pos,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>min,<sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>max,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>radius,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>color)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>height<sp/>=<sp/>max[1];</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group___diag_menu_1ga6eaf263a07e0b8a8895ed494afceed7d" kindref="member">Shape</ref><sp/>dbgShape<sp/>=<sp/><ref refid="class_debug" kindref="compound">Debug</ref>.<ref refid="class_debug_1a44d028d904f8ebe5541877102c3f640a" kindref="member">DrawCylinder</ref>(<ref refid="group___math3_d_a_p_i_1ga5bd1deb1c96276d94eeec6fe40955c41" kindref="member">Vector</ref>(0,<sp/>height<sp/>*<sp/>0.5,<sp/>0),<sp/>radius,<sp/>height,<sp/>color,<sp/><ref refid="group___debug_shape_1gae99018d13c3c8a3cc164600046082d04" kindref="member">ShapeFlags</ref>.TRANSP|<ref refid="group___debug_shape_1gae99018d13c3c8a3cc164600046082d04" kindref="member">ShapeFlags</ref>.NOZWRITE|<ref refid="group___debug_shape_1gae99018d13c3c8a3cc164600046082d04" kindref="member">ShapeFlags</ref>.DOUBLESIDE);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classvector" kindref="compound">vector</ref><sp/>mat[4];</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GetTransform(<sp/>mat<sp/>);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dbgShape.CreateMatrix(<sp/>mat<sp/>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dbgShape.SetMatrix(<sp/>mat<sp/>);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dbgTargets.Insert(<sp/>dbgShape<sp/>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dbgShape;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="J:/SavageModding/AI/ENFORCE_TRAINING/WORKSPACE/DOXYGEN/raw/scripts/4_World/Entities/ScriptedEntities/Triggers/CylinderTrigger.c"/>
+  </compounddef>
+</doxygen>
