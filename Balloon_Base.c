@@ -1,103 +1,46 @@
 class Balloon_Base extends CarScript
 {
-// ---------- ERROR HANDLIMG -----------
+    // ERROR HANDLE
 
-    // ERROR HANDLE 
     bool m_IsError;
-    bool m_IsDebug;
-    bool m_IsDisconnected;
+    bool isBalloon = true;
+    bool m_IsInputDebug;
+    bool m_IsFlightDebug;
+    bool m_IsDamageDebug;
 
-// ----------- MECHANICS --------------
+// -----------------------------------
+    // variables
 
-	int m_balloon_state = 0;
     bool m_IsPlayerInside;
 
-    // weather and wind related
-    float m_WindSpeed;
-    float m_WindDirection;
-    float m_WindIntensity;
+    bool m_IsLanded;
+    bool m_IsFlying;
 
-    // fuel - gas
+    float m_GasTimer;
     float m_GasLevel;
-    float fuelLevel;
     bool m_IsGasOn;
+    bool m_IsIgniting;
     bool m_IsBurnerOn;
     bool m_IsCompressorOn;
 
-    // pointless? 
-    bool m_IsReversing;
+    bool m_IsInflating;
+    bool m_IsDeflating;
 
-// ----------- INPUT VARIABLES --------------
-
-    //float m_Weight;
-    bool m_IsLanded;
-    bool m_IsGrounded;
-    float m_Altitude;
-    bool m_IsFlying;
     bool m_IsDescending;
-    bool m_IsDescendingFast;
-    bool m_IsDescendingSlow;
+    bool m_IsAscending;
+    float m_BalloonMass = dBodyGetMass(this);
+    vector m_BallonWorldPosition;
 
-    // rotax input 
-    bool m_IsAirbrake;
+    // rotax addon
+    float m_FuelTimer;
+    float m_ThrottleLevel
+    bool m_IsRotaxOn;
+    bool m_IsRotaxAttached;
     bool m_IsForwardFlight;
     bool m_IsSteeringLeft;
     bool m_IsSteeringRight;
 
-    // rotax add on  
-    bool m_IsRotaxOn;
-    bool m_IsRotaxAttached;
-	int m_RotaxEngine;
-	int m_FireParticles;
-
-    // keypress
-    int m_igniter_press = 0;
-    int m_emergency_shutoff_press = 0;
-    int m_gas_switch_toggle_press = 0;
-    int m_compressor_toggle_press = 0;
-
-    // ^ v
-    int m_heat_increase_press = 0;
-    int m_heat_decrease_press = 0;
-
-    // rotax forward thrust
-    int m_rotax_increase_press = 0;
-    int m_rotax_decrease_press = 0;
-
-    // rotax turning
-    int m_rotax_left_press = 0;
-    int m_rotax_right_press = 0;
-	
-	int m_heat_level = 0;
-	int m_throttle_level = 0;
-
-// ------------ CONFIG / CONSTANTS -------------
-
-    // ! TODO: Eventually make these settings store 
-    // and fetch from server side config
-
-    const float GAS_CONSUMPTION_RATE = 1.0;
-    const float MAXIMUM_GAS_LEVEL = 100.0;
-    const float MINIMUM_GAS_LEVEL = 0.0;
-    const float GAS_START_LEVEL = 50.0;
-    const float MAXIMUM_WEIGHT = 1000.0;
-    const float MINIMUM_WEIGHT = 100.0;
-
-    const float MAXIMUM_ALTITUDE = 1000.0;
-    const float MINIMUM_ALTITUDE = 0.0;
-    const float MAXIMUM_WIND_SPEED = 20.0;
-    const float MINIMUM_WIND_SPEED = 0.0;
-    const float WIND_DIRECTION_MAX = 360.0;
-    const float WIND_DIRECTION_MIN = 0.0;
-
-    const float ROTAX_SPEED_MAX = 100.0;
-    const float ROTAX_SPEED_MIN = 0.0;
-    const float FORWARD_SPEED_MAX = 20.0;
-    const float FORWARD_SPEED_MIN = 0.0;
-    const float STEERING_SPEED_MAX = 20.0;
-    const float STEERING_SPEED_MIN = 0.0;
-
-// ------------- SOUND AND PARTICLE EFFECTS ----------------
+    bool m_CollisionDamage; 
 
     ref Effect m_FireEffect, m_FireEffect2;
     ref EffVehicleSmoke m_blaster1Fx, m_blaster2Fx;
@@ -105,123 +48,164 @@ class Balloon_Base extends CarScript
     vector m_blaster1PtcPos, m_blaster2PtcPos;
     vector m_blaster1PtcDir, m_blaster2PtcDir;
 
-    ref SoundParams m_SoundParams;
-    ref SoundObjectBuilder m_SoundBuilder;
+    float SoundTimer;
+
     ref SoundObject m_CompressorSound;
     ref SoundObject m_GasFlowSound;
     ref SoundObject m_IgniterSound;
-    ref SoundObject m_LowGasSound;
     ref SoundObject m_GasBlowOffSound;
     ref SoundObject m_InFlightSound;
     ref SoundObject m_WindSound;
     ref SoundObject m_BurnerFireSound;
 
+    ref SoundObjectBuilder m_CompressorSoundBuilder;
+    ref SoundObjectBuilder m_GasFlowSoundBuilder;
+    ref SoundObjectBuilder m_IgniterSoundSoundBuilder;
+    ref SoundObjectBuilder m_GasBlowOffSoundSoundBuilder;
+    ref SoundObjectBuilder m_InFlightSoundSoundBuilder;
+    ref SoundObjectBuilder m_WindSoundSoundBuilder;
+    ref SoundObjectBuilder m_BurnerFireSoundSoundBuilder;
 
-	
-    bool m_LandingLights;
-    static const int SELECTION_ID_LANDING_LIGHTS = 10;
-    PointLightBase m_landing_light_0;
-    vector m_landing_light_0_PtcPos;
-    bool m_InteriorLights;
-    static const int SELECTION_ID_INTERIOR_LIGHT = 9;
-    PointLightBase m_landing_light_3;
-    vector m_landing_light_3_PtcPos;
-    static string m_landing_light_3_point = "landing_light_rear";
+    AbstractWave m_CompressorSoundWave;
+    AbstractWave m_GasFlowSoundWave;
+    AbstractWave m_IgniterSoundWave;
+    AbstractWave m_GasBlowOffSoundWave;
+    AbstractWave m_InFlightSoundWave;
+    AbstractWave m_WindSoundWave;
+    AbstractWave m_BurnerFireSoundWave;
 
-// --------------------------------------------
-// -------------- BASE CLASS ------------------
-// --------------------------------------------
+	string COMPRESSOR_SOUNDSET = "Balloon_Compressor_SoundSet";
+	string GASFLOW_SOUNDSET = "Balloon_GasFlow_SoundSet";
+	string IGNITER_SOUNDSET = "Balloon_Igniter_SoundSet";
+	string GASBLOWOFF_SOUNDSET = "Balloon_GasBlowOff_SoundSet";
+	string INFLIGHT_SOUNDSET = "Balloon_InFlight_SoundSet";
+	string WIND_SOUNDSET = "Balloon_Wind_SoundSet";
+	string BURNER_SOUNDSET = "Balloon_Burner_SoundSet";
 
+    float m_WindSpeedWorld;
+    vector m_WindDirectionWorld;
+
+    int m_CompressorSoundPlay = 0;
+    int m_GasFlowSoundPlay = 0;
+    int m_IgniterSoundPlay = 0;
+    int m_GasBlowOffSoundPlay = 0;
+    int m_InFlightSoundPlay = 0;
+    int m_WindSoundPlay = 0;
+    int m_BurnerFireSoundPlay = 0;
+
+    int m_BalloonState = 0;    //0= balloon NOT operational, 1 = inflate sequence, 2 = balloon IS operational,  3 = deflate sequence
+    int m_gas_level = 0;
+    int m_throttle_level = 0;
+
+// --------------------------------
+
+    // input keypress
+    int m_igniter_press = 0;
+    int m_emergency_shutoff_press = 0;
+    int m_gas_switch_toggle_press = 0;
+    int m_compressor_toggle_press = 0;
+    int m_heat_increase_press = 0;
+    int m_heat_decrease_press = 0;
+
+    // rotax
+    int m_rotax_increase_press = 0;
+    int m_rotax_decrease_press = 0;
+    int m_rotax_left_press = 0;
+    int m_rotax_right_press = 0;
+
+// -----------------------------------
+
+    // constants
+
+    bool WEAPON_DANAGE = false;
+    bool COLLISION_DANAGE = false;    
+    float COLLISION_DAMAGE_MULTIPLIER = 0.060;
+
+    float GAS_CONSUMPTION_RATE = 0.050;
+    float GAS_MAX_CAPACITY = 100.0;
+    float FLIGHT_CEILING = 2000.0;      // max altitude in meters
+    float FLIGHT_ASCENT_RATE = 0.02000;
+    float FLIGHT_DESCENT_RATE = 0.02000;
+    float WIND_INFLUENCE = 0.30;    // how much influence the wind forces play on the balloon, higher value makes the Rotax addon have less control factor over the flight control
+    float WIND_INTENSITY_MULTIPLIER = 0.9;     // wind intensity and turbulance at higher altitude
+    float AERODYNAMIC_DRAG = 0.20;
+    
+    float ROTAX_AIRSPEED_MAX = 50.0;
+    float ROTAX_FUEL_CAPACITY = 20.0;
+    float ROTAX_FUEL_RATE = 0.020833;
+    float ROTAX_FORWARD_THRUST_RATE = 0.20;
+    float ROTAX_STEERING_RATE = 0.1;
+
+    float BALLOON_INFLATE_TIME = 40000.0    // time in miliseconds for inflation process (this is how long the compressor needs to run)
+    float BALLOON_DEFLATE_TIME = 80000.0    // time in miliseconds for delation process
+
+// -----------------------------------
+    
+    // flight telemetry
+    float m_BalloonAltitude; // meters
+    float m_BalloonAGLAltitude; // agl meters
+    float m_BalloonAirSpeedKPH; // kph
+    float m_BalloonAirSpeed; // knotts
+    vector m_BalloonOrientation; // agl meters
+
+// -----------------------------------
 
     void Balloon_Base()
     {
-        //IsBalloon();
+        SetEventMask( EntityEvent.CONTACT | EntityEvent.SIMULATE | EntityEvent.POSTSIMULATE | EntityEvent.POSTFRAME );
 
-        // debug
-        m_IsError = false;
-        m_IsDisconnected = false;
-        m_IsDebug = false;
-
-        // weather
-        m_WindSpeed = MINIMUM_WIND_SPEED;
-        m_WindDirection = WIND_DIRECTION_MIN;
-
-
-        // fuel
-        m_GasLevel = GAS_START_LEVEL;
-        m_IsGasOn = false;
-        m_IsBurnerOn = false;
-
-        // rotax input
-        m_IsForwardFlight = false;
-        m_IsAirbrake = false;
-        m_IsSteeringLeft = false;
-        m_IsSteeringRight = false;
-
-        // rotax
-        m_IsRotaxAttached = false;
-        m_IsRotaxOn = false;
-
-        // simulation
-        m_Weight = MINIMUM_WEIGHT;
-        m_IsFlying = false;
-        m_IsLanded = true;
-        m_IsGrounded = true;
-        m_Altitude = MINIMUM_ALTITUDE;
-        m_IsDescending = false;
-        m_IsDescendingFast = false;
-        m_IsDescendingSlow = false;
-        // !!
-        m_IsReversing = false;
-        m_RotaxEngine = 0;
-        m_FireParticles = 0;
-        m_WindIntensity = 0;
-        m_IsCompressorOn = false;
-
-		SetEventMask( EntityEvent.CONTACT | EntityEvent.SIMULATE | EntityEvent.POSTSIMULATE | EntityEvent.POSTFRAME );
-	
-    	//dBodyActive( this, ActiveState.ACTIVE );
-		dBodyActive( this, ActiveState.ALWAYS_ACTIVE );
-		dBodyDynamic( this, true );
-
-        // build sounds
         m_CarDoorOpenSound = "offroad_door_open_SoundSet";
-        m_CarDoorCloseSound = "offroad_door_close_SoundSet";    
-        m_SoundParams = new SoundParams("HotAirBalloon");
-        m_SoundBuilder = new SoundObjectBuilder(m_SoundParams);
+        m_CarDoorCloseSound = "offroad_door_close_SoundSet";
 
-        RegisterNetSyncVariableBool("m_isBalloon");
-        RegisterNetSyncVariableBool("m_IsError");
-        RegisterNetSyncVariableBool("m_IsDebug");
-        RegisterNetSyncVariableBool("m_IsDisconnected");
-        RegisterNetSyncVariableBool("m_IsCompressorOn");
-        RegisterNetSyncVariableBool("m_IsGasOn");
-        RegisterNetSyncVariableBool("m_IsBurnerOn");
-        RegisterNetSyncVariableBool("m_IsRotaxOn");
-        RegisterNetSyncVariableBool("m_IsRotaxEngineAttached");
-        RegisterNetSyncVariableBool("m_IsLanding");
-        RegisterNetSyncVariableBool("m_IsPlayerInside");
-        RegisterNetSyncVariableBool("m_IsReversing");
-        RegisterNetSyncVariableBool("m_IsLanded");
-        RegisterNetSyncVariableBool("m_IsGrounded");
-        RegisterNetSyncVariableBool("m_IsFlying");
-        RegisterNetSyncVariableBool("m_IsDescending");
-        RegisterNetSyncVariableBool("m_IsDescendingFast");
-        RegisterNetSyncVariableBool("m_IsDescendingSlow");
-        RegisterNetSyncVariableBool("m_IsAirbrake");
-        RegisterNetSyncVariableBool("m_IsForwardFlight");
-        RegisterNetSyncVariableBool("m_IsSteeringLeft");
-        RegisterNetSyncVariableBool("m_IsSteeringRight");
+		RegisterNetSyncVariableBool("m_IsInputDebug");
+		RegisterNetSyncVariableBool("m_IsFlightDebug");
+		RegisterNetSyncVariableBool("m_IsDamageDebug");
+
+		RegisterNetSyncVariableBool("m_IsBalloon");
+		RegisterNetSyncVariableInt("m_BalloonState", 0, 4);
+		RegisterNetSyncVariableBool("m_IsPlayerInside");
+
+		RegisterNetSyncVariableFloat("m_BalloonAltitude");
+		RegisterNetSyncVariableFloat("m_BalloonAGLAltitude");
+		RegisterNetSyncVariableFloat("m_BalloonAirSpeed");
+
+		RegisterNetSyncVariableBool("m_IsLanded");
+		RegisterNetSyncVariableBool("m_IsFlying");
+		RegisterNetSyncVariableBool("m_IsAscending");
+    	RegisterNetSyncVariableBool("m_IsDescending");
+
 		RegisterNetSyncVariableFloat("m_GasLevel");
-		RegisterNetSyncVariableFloat("m_Altitude");
-		RegisterNetSyncVariableFloat("m_WindIntensity");
-		RegisterNetSyncVariableFloat("m_WindSpeed");
-		RegisterNetSyncVariableFloat("m_WindDirection");
-		RegisterNetSyncVariableFloat("m_Weight");
-		RegisterNetSyncVariableInt("m_balloon_state");
+		RegisterNetSyncVariableInt("m_gas_level");
+
+		RegisterNetSyncVariableFloat("m_ThrottleLevel");
+		RegisterNetSyncVariableInt("m_throttle_level");
+
+		RegisterNetSyncVariableBool("m_IsIgniting");
+		RegisterNetSyncVariableBool("m_IsGasOn");
+		RegisterNetSyncVariableBool("m_IsBurnerOn");
+		RegisterNetSyncVariableBool("m_IsCompressorOn");
+
+		RegisterNetSyncVariableBool("m_IsRotaxOn");
+		RegisterNetSyncVariableBool("m_IsRotaxAttached");
+		RegisterNetSyncVariableBool("m_IsForwardFlight");
+		RegisterNetSyncVariableBool("m_IsSteeringLeft");
+		RegisterNetSyncVariableBool("m_IsSteeringRight");
+
+    	RegisterNetSyncVariableInt("m_igniter_press");
+		RegisterNetSyncVariableInt("m_emergency_shutoff_press");
+		RegisterNetSyncVariableInt("m_gas_switch_toggle_press");
+		RegisterNetSyncVariableInt("m_compressor_toggle_press");
 		RegisterNetSyncVariableInt("m_heat_increase_press");
 		RegisterNetSyncVariableInt("m_heat_decrease_press");
 
+		RegisterNetSyncVariableInt("m_CompressorSoundPlay");
+		RegisterNetSyncVariableInt("m_GasFlowSoundPlay");
+		RegisterNetSyncVariableInt("m_IgniterSoundPlay");
+		RegisterNetSyncVariableInt("m_GasBlowOffSoundPlay");
+		RegisterNetSyncVariableInt("m_InFlightSoundPlay");
+		RegisterNetSyncVariableInt("m_WindSoundPlay");
+		RegisterNetSyncVariableInt("m_BurnerFireSoundPlay");
+	
         if (MemoryPointExists("ptc_fire_1_end"))
         {
             m_blaster1PtcPos = GetMemoryPointPos("ptc_fire_1_end");
@@ -251,952 +235,436 @@ class Balloon_Base extends CarScript
         }
     }
 
-	/*
     void ~Ballon_Base()
     {
-        if (m_blaster1PtcFx && SEffectManager.IsEffectExist(m_blaster1PtcFx)) 
-			SEffectManager.Stop(m_blaster1PtcFx);
+        if (m_blaster1PtcFx && SEffectManager.IsEffectExist(m_blaster1PtcFx))
+    		SEffectManager.Stop(m_blaster1PtcFx);
 
-        if (m_blaster2PtcFx && SEffectManager.IsEffectExist(m_blaster2PtcFx)) 
-			SEffectManager.Stop(m_blaster2PtcFx);
-    } 
-	*/ 
+        if (m_blaster2PtcFx && SEffectManager.IsEffectExist(m_blaster2PtcFx))
+    		SEffectManager.Stop(m_blaster2PtcFx);
+    }
 
-// ---------------- CONFIG -----------------
-
-
-    /*
-	void LoadBalloonConfiguration(string balloon_type, Hot_Air_Balloon_Config_Data m_HotAirBalloonConfigData )
-	{
-		float p_fuel_cap = m_HotAirBalloonConfigData.GetConfigData(balloon_type).getFuelCap();
-		float p_fuel_rate = m_HotAirBalloonConfigData.GetConfigData(balloon_type).getFuelRate() / 60;
-		float p_airspeed_max = m_HotAirBalloonConfigData.GetConfigData(balloon_type).getAirspeedMax();
-		float p_MAXIMUM_ALTITUDE = m_HotAirBalloonConfigData.GetConfigData(balloon_type).getAltitudeMax();
-		float p_climb_max = m_HotAirBalloonConfigData.GetConfigData(balloon_type).getClimbMax()/60;
-		float p_aero_drag = (m_HotAirBalloonConfigData.GetConfigData(balloon_type).getAeroDrag() / 100) * 0.02;
-		float p_heat_rate = (m_HotAirBalloonConfigData.GetConfigData(balloon_type).getBlasterHeatRate() / 100) * 0.47;
-	}
-    */
-
-// ---------------- EFFECTS -----------------------
-
-  override int GetAnimInstance()
+    override int GetAnimInstance()
     {
         return VehicleAnimInstances.S120;
     }
 
-    // rpc related sound
-    void PlaySound(ERPCs rpc)
-    {
-        if (!m_IsError && !m_IsDisconnected)
-        {
-            GetGame().RPCSingleParam(this, rpc, null, true);
-        }
-    }
-
-		/*
-    override void OnRPC(PlayerIdentity sender, int rpc_type, ParamsReadContext ctx)
-    {
-        super.OnRPC(sender, rpc_type, ctx);
-
-        if (rpc_type == ExpansionHotAirBalloonRPCEnum.RPC_EXPANSION_HOT_AIR_BALLOON_ROTAX_ENGINE_SPEED)
-        {
-            float rotaxEngineSpeed = 0;
-            ctx.Read(rotaxEngineSpeed);
-
-            if (m_RotaxEngine)
-            {
-                m_RotaxEngine.SetAnimationPhase("rotax_engine_propeller", rotaxEngineSpeed);
-            }
-        }
-	
-
-        switch (rpc_type)
-        {
-            case RPC_INIT_HOT_AIR_BALLOON:
-                OnRPCInitHotAirBalloon();
-                break;
-
-            case RPC_START_COMPRESSOR:
-                OnRPCStartCompressor();
-                break;
-
-            case RPC_TURN_ON_GAS:
-                OnRPCTurnOnGas();
-                break;
-
-            case RPC_IGNITE_BURNERS:
-                OnRPCIgniteBurners();
-                break;
-
-            case RPC_TURN_LEFT:
-                OnRPCTurnLeft();
-                break;
-
-            case RPC_TURN_RIGHT:
-                OnRPCTurnRight();
-                break;
-
-            case RPC_MOVE_FORWARD:
-                OnRPCMoveForward();
-                break;
-
-            case RPC_MOVE_BACKWARD:
-                OnRPCMoveBackward();
-                break;
-        }
-    }	
-		*/
-    void OnRPCInitHotAirBalloon()
-    {
-        // Activate air generator and trigger compressor sound
-       // m_CompressorSound = GetGame().CreateSoundOnObject(this, "HotAirBalloonCompressor", 20, true);
-        //m_CompressorSound.Play();
-    }
-
-    void OnRPCStartCompressor()
-    {
-        // Ensure smooth progression of balloon inflation and operation
-        GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(StartGasFlow, 2000);
-    }
-
-    void StartGasFlow()
-    {
-       // m_CompressorSound.Stop();
-       // m_GasFlowSound = GetGame().CreateSoundOnObject(this, "HotAirBalloonGasFlow", 20, true);
-        //m_GasFlowSound.Play();
-        GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(StartInflation, 2000);
-    }
-
-    void StartInflation()
-    {
-        SetAnimationPhase("source_balloonempty", 5);
-        
-        GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(WaitForPlayerAction, 5000);
-    }
-
-
-    private void WaitForPlayerAction()
-    {
-        // Wait for player action when the animation phase reaches 5
-    }
-
-    private void OnRPCTurnOnGas()
-    {
-        // Use another input key to turn on/open the gas line
-        m_IsGasOn = true;
-
-        // Trigger gas flow sound and gradually consume vehicle's fuel level
-      //  m_GasFlowSound.Stop();
-      //  m_LowGasSound = GetGame().CreateSoundOnObject(this, "HotAirBalloonLowGas", 20, true);
-
-       // m_LowGasSound.Play();
-        GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(ConsumeFuel, 1000);
-    }
-
-    private void ConsumeFuel()
-    {
-        if (m_IsGasOn && m_GasLevel > MINIMUM_GAS_LEVEL)
-        {
-            m_GasLevel -= GAS_CONSUMPTION_RATE;
-
-            GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(ConsumeFuel, 1000);
-        }
-        else
-        {
-            m_IsGasOn = false;
-           // m_LowGasSound.Stop();
-
-            //m_GasBlowOffSound = GetGame().CreateSoundOnObject(this, "HotAirBalloonGasBlowOff", 20, true);
-           // m_GasBlowOffSound.Play();
-        }
-    }
-
-    private void OnRPCIgniteBurners()
-    {
-        // Use an additional input key to ignite the gas burners
-        m_IsBurnerOn = true;
-
-        // Play player igniter sound briefly and activate fire particles in the burners
-      // m_IgniterSound = GetGame().CreateSoundOnObject(this, "HotAirBalloonIgniter", 20, true);
-       // m_IgniterSound.Play();
-      //  m_FireEffect = GetGame().CreateEffect("FireParticles", this, "", true);
-
-        GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(StartFlight, 500);
-    }
-
-    private void StartFlight()
-    {
-        // Set animation phases
-        SetAnimationPhase("source_balloonempty", 1);
-        SetAnimationPhase("source_hideballoonhalf", 0);
-        SetAnimationPhase("source_balloonhalf", 0);
-        
-        GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(ContinueFlight, 5000);
-    }
-
-    private void ContinueFlight()
-    {
-        SetAnimationPhase("source_hideballoonhalf", 1);
-        SetAnimationPhase("source_hideballoonfull", 0);
-        SetAnimationPhase("source_balloonempty", 0);
-    }
+// -----------------------------------
 
     void StartCompressor()
     {
         m_IsCompressorOn = true;
 
-        if (GetGame().IsServer())
-        {
-           // GetGame().RPCSingleParam(this, ExpansionHotAirBalloonRPCEnum.RPC_EXPANSION_HOT_AIR_BALLOON_START_COMPRESSOR, NULL, true);
-        }
     }
 
     void StopCompressor()
     {
         m_IsCompressorOn = false;
 
-        if (GetGame().IsServer())
-        {
-           // GetGame().RPCSingleParam(this, ExpansionHotAirBalloonRPCEnum.RPC_EXPANSION_HOT_AIR_BALLOON_STOP_COMPRESSOR, NULL, true);
-        }
     }
 
-    void StartGas()
+    void StartGasFlow()
     {
         m_IsGasOn = true;
 
-        if (GetGame().IsServer())
-        {
-          //  GetGame().RPCSingleParam(this, ExpansionHotAirBalloonRPCEnum.RPC_EXPANSION_HOT_AIR_BALLOON_START_GAS, NULL, true);
-        }
     }
 
-    void StopGas()
+
+    void StopGasFlow()
     {
         m_IsGasOn = false;
 
-        if (GetGame().IsServer())
-        {
-          //  GetGame().RPCSingleParam(this, ExpansionHotAirBalloonRPCEnum.RPC_EXPANSION_HOT_AIR_BALLOON_STOP_GAS, NULL, true);
-        }
     }
 
-    void StartBurner()
+    void StartGasBurner()
     {
         m_IsBurnerOn = true;
 
-        if (GetGame().IsServer())
-        {
-          //  GetGame().RPCSingleParam(this, ExpansionHotAirBalloonRPCEnum.RPC_EXPANSION_HOT_AIR_BALLOON_START_BURNER, NULL, true);
-        }
     }
 
-    void StopBurner()
+    void StopGasBurner()
     {
         m_IsBurnerOn = false;
 
-        if (GetGame().IsServer())
-        {
-          //  GetGame().RPCSingleParam(this, ExpansionHotAirBalloonRPCEnum.RPC_EXPANSION_HOT_AIR_BALLOON_STOP_BURNER, NULL, true);
-        }
     }
 
-		/*
-    void AttachRotaxEngine(Object rotaxEngine)
+    void StartInflation()
     {
-        m_RotaxEngine = rotaxEngine;
-        m_IsRotaxEngineAttached = true;
+        m_IsInflating = true;
 
-        if (GetGame().IsServer())
-        {
-           // GetGame().RPCSingleParam(this, ExpansionHotAirBalloonRPCEnum.RPC_EXPANSION_HOT_AIR_BALLOON_ATTACH_ROTAX_ENGINE, NULL, true);
-        }
     }
 
-    void DetachRotaxEngine()
+    void StartDeflation()
     {
-        m_RotaxEngine = NULL;
-        m_IsRotaxEngineAttached = false;
+        m_IsInflating = false;
 
-        if (GetGame().IsServer())
-        {
-          //  GetGame().RPCSingleParam(this, ExpansionHotAirBalloonRPCEnum.RPC_EXPANSION_HOT_AIR_BALLOON_DETACH_ROTAX_ENGINE, NULL, true);
-        }
     }
-*/
-    void SetGasLevel(float gasLevel)
+
+    void HandleIgnite()
     {
-        m_GasLevel = gasLevel;
-
-        if (m_GasLevel < 0)
+        if(m_igniter_press == 0)
         {
-            m_GasLevel = 0;
+             m_IsIgniting = false;
         }
-
-        if (m_GasLevel > 1)
+        else
         {
-            m_GasLevel = 1;
-        }
-
-        if (GetGame().IsServer())
-        {
-          //  GetGame().RPCSingleParam(this, ExpansionHotAirBalloonRPCEnum.RPC_EXPANSION_HOT_AIR_BALLOON_SET_GAS_LEVEL, new Param1<float>(m_GasLevel), true);
+             m_IsIgniting = true;
         }
     }
 
-    void SetAltitude(float altitude)
+    void Igniter()
     {
-        m_Altitude = altitude;
-
-        if (m_Altitude < 0)
+        if (!m_IsIgniting)
         {
-            m_Altitude = 0;
-        }
-
-        if (GetGame().IsServer())
-        {
-           // GetGame().RPCSingleParam(this, ExpansionHotAirBalloonRPCEnum.RPC_EXPANSION_HOT_AIR_BALLOON_SET_ALTITUDE, new Param1<float>(m_Altitude), true);
+            m_IsIgniting = true;
+            m_IgniterSoundPlay = 1;
+            m_IgniterSoundWave = PlaySound(m_IgniterSound, m_IgniterSoundBuilder);
         }
     }
 
-// ----------------- INPUT -----------------------
-
-	void ProcessPlayerInput()
-	{
-		PlayerBase playerGame = PlayerBase.Cast(GetGame().GetPlayer());
-
-		if (playerGame && playerGame.GetCommand_Vehicle() && playerGame.GetCommand_Vehicle().GetTransport() == this)
-		{
-			PlayerBase crewMember = PlayerBase.Cast(CrewMember(0));
-
-			if (crewMember == playerGame)
-			{
-				UAInterface input_source = playerGame.GetInputInterface();
-
-				if (input_source)
-				{
-					ProcessInputCommands(input_source);
-				}
-			}
-		}
-	}
-
-	void ProcessInputCommands(UAInterface input_source)
-	{
-		float calc_input = input_source.SyncedValue("UAHeatBlasterUp");
-		ProcessHeatBlasterUp(calc_input);
-		calc_input = input_source.SyncedValue("UAHeatBlasterDown");
-		ProcessHeatBlasterDown(calc_input);
-		calc_input = input_source.SyncedValue("UARotaxThrottleUp");
-		ProcessRotaxUp(calc_input);
-		calc_input = input_source.SyncedValue("UARotaxThrottleDown");
-		ProcessRotaxDown(calc_input);
-		calc_input = input_source.SyncedValue("UARotaxLeftTurn");
-		ProcessRotaxLeft(calc_input);
-		calc_input = input_source.SyncedValue("UARotaxRightTurn");
-		ProcessRotaxRight(calc_input);
-		calc_input = input_source.SyncedValue("UATiggleCompressor");
-		ProcessToggleCompressor(calc_input);
-		calc_input = input_source.SyncedValue("UAToggleGasValve");
-		ProcessToggleFuel(calc_input);
-		calc_input = input_source.SyncedValue("UAPressIgniter");
-		ProcessPressIgniter(calc_input);	
+    void EmergencyShutoff()
+    {
+        m_IsGasOn = false;
+        m_IsIgniting = false;
+        m_IsBurnerOn = false;
+        m_IsCompressorOn = false;
     }
 
-	void ProcessHeatBlasterUp(float calc_input)
-	{
-		if (calc_input > 0.5)
-		{
-			if (m_heat_increase_press == 0)
-			{
-				m_heat_level = Math.Clamp((m_heat_level + 1), 0, 20);
-				SetSynchDirty();
-			}
-			m_heat_increase_press += 1;
+// -----------------------------------
 
-			if (m_heat_increase_press > 5)
-			{
-				m_heat_increase_press = 0;
-			}
+    void ToggleInflation() 
+    {
+        if (m_IsFlying) 
+        {
+            return; // can't inflate or deflate while in flight
+        }
+        if (m_IsInflating || m_IsDeflating) 
+        {
+            return; // already inflating or deflating
+        }
+        if (m_BalloonState != 0) 
+        {
+            return; // can't inflate or deflate if already operational
+        }
+        if (m_GasLevel <= 0) 
+        {
+            return; // can't inflate without gas
+        }
+        m_IsInflating = true;
+        m_CompressorSoundPlay = 1;
+        m_CompressorSoundWave = GetGame().CreateSoundObject(COMPRESSOR_SOUNDSET, GetPosition());
+        m_CompressorSoundWave.SetPosition(GetPosition());
+        m_CompressorSoundWave.Play();
+        GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(OnInflationComplete, BALLOON_INFLATE_TIME);
+    }
+
+    void ToggleDeflation() 
+    {
+        if (m_IsFlying) 
+        {
+            return; // can't inflate or deflate while in flight
+        }
+        if (m_IsInflating || m_IsDeflating) 
+        {
+            return; // already inflating or deflating
+        }
+        if (m_BalloonState == 0) 
+        {
+            return; // can't deflate if not operational
+        }
+        m_IsDeflating = true;
+        m_CompressorSoundPlay = 1;
+        m_CompressorSoundWave = GetGame().CreateSoundObject(COMPRESSOR_SOUNDSET, GetPosition());
+        m_CompressorSoundWave.SetPosition(GetPosition());
+        m_CompressorSoundWave.Play();
+        GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(OnDeflationComplete, BALLOON_DEFLATE_TIME);
+    }
+
+    void OnInflationComplete() 
+    {
+        m_IsInflating = false;
+        m_CompressorSoundPlay = 0;
+        m_CompressorSoundWave.Stop();
+        m_BalloonState = 2; // balloon is now operational
+    }
+
+    void OnDeflationComplete() 
+    {
+        m_IsDeflating = false;
+        m_CompressorSoundPlay = 0;
+        m_CompressorSoundWave.Stop();
+        m_BalloonState = 0; // balloon is no longer operational
+    }
+
+// ---------------------------------------
+
+	void ConsumeGas(float tick)		
+	{
+		if (tick - m_GasTimer > 1000)
+		{	
+			Leak(CarFluid.FUEL, GAS_CONSUMPTION_RATE);
+			m_GasTimer = tick;
+		}		
+	}
+
+	void ConsumeFuel(float tick)		
+	{
+		if (tick - m_FuelTimer > 1000)
+		{	
+			Leak(CarFluid.USER1, ROTAX_FUEL_RATE);
+			m_FuelTimer = tick;
+		}		
+	}
+
+// -----------------------------------
+
+    override void EOnInit(IEntity other, int extra)
+    {
+        //SetNeededParts();
+
+    }
+
+	override void EEInit()
+	{
+		super.EEInit();
+
+        m_IsPlayerInside = false;
+        m_IsLanded = true;
+        m_IsFlying = false;
+        m_GasTimer = 0.0;
+        m_GasLevel = 0.0;
+        m_IsGasOn = false;
+        m_IsCompressorOn = false;
+        m_IsDescending = false;
+        m_IsAscending = false;
+        m_IsRotaxOn = false;
+        m_IsRotaxAttached = false;
+        m_IsForwardFlight = false;
+        m_IsSteeringLeft = false;
+        m_IsSteeringRight = false;
+        m_CollisionDamage = false; 
+        m_BalloonAltitude = 0.0;
+        m_BalloonAGLAltitude = 0.0;
+        m_BalloonAirSpeed = 0.0;
+
+		dBodyActive( this, ActiveState.ACTIVE);
+		dBodyApplyImpulse( this, "0 1 0");
+
+		UpdateFlightTelemetry();
+
+		if (GetGame().IsServer() )
+		{		
+			m_dmgContactCoef = COLLISION_DAMAGE_MULTIPLIER;
 		}
 		else
 		{
-			m_heat_increase_press = 0;
+			vector balloon_position = GetPosition();
+			m_CompressorSoundBuilder = BuildSoundObjectConfig(COMPRESSOR_SOUNDSET);
+			m_CompressorSound = BuildSoundObject(m_CompressorSoundBuilder, balloon_position);
+			m_GasFlowSoundBuilder = BuildSoundObjectConfig(GASFLOW_SOUNDSET);
+			m_GasFlowSound = BuildSoundObject(m_GasFlowSoundBuilder, balloon_position);
+			m_IgniterSoundSoundBuilder = BuildSoundObjectConfig(IGNITER_SOUNDSET);
+			m_IgniterSound = BuildSoundObject(m_IgniterSoundSoundBuilder, balloon_position);
+			m_GasBlowOffSoundSoundBuilder = BuildSoundObjectConfig(GASBLOWOFF_SOUNDSET);
+			m_GasBlowOffSound = BuildSoundObject(m_GasBlowOffSoundSoundBuilder, balloon_position);
+			m_InFlightSoundSoundBuilder = BuildSoundObjectConfig(INFLIGHT_SOUNDSET);
+			m_InFlightSound = BuildSoundObject(m_InFlightSoundSoundBuilder, balloon_position);
+			m_WindSoundSoundBuilder = BuildSoundObjectConfig(WIND_SOUNDSET);
+			m_WindSound = BuildSoundObject(m_WindSoundSoundBuilder, balloon_position);
+			m_BurnerFireSoundSoundBuilder = BuildSoundObjectConfig(BURNER_SOUNDSET);
+			m_BurnerFireSound = BuildSoundObject(m_BurnerFireSoundSoundBuilder, balloon_position);
 		}
 	}
 
-	void ProcessHeatBlasterDown(float calc_input)
-	{
-		if (calc_input > 0.5)
-		{
-			if (m_heat_decrease_press == 0)
-			{
-				m_heat_level = Math.Clamp((m_heat_level - 1), 0, 20);
-				SetSynchDirty();
-			}
-			m_heat_decrease_press += 1;
+// -------------------------------
 
-			if (m_heat_decrease_press > 5)
+    SoundObjectBuilder BuildSoundObjectConfig (string TargetSoundSet)
+	{
+		SoundObjectBuilder soundObjectBuildConfig;
+		SoundParams SoundParameters = new SoundParams(TargetSoundSet);
+		soundObjectBuildConfig = new SoundObjectBuilder(SoundParameters);	
+
+		return soundObjectBuildConfig;
+	}
+	SoundObject BuildSoundObject(SoundObjectBuilder SoundObjectBuildConfig, vector balloon_position)
+	{
+		ref SoundObject NoiseObject;
+		if (SoundObjectBuildConfig) 
+		{
+			NoiseObject = SoundObjectBuildConfig.BuildSoundObject();
+			NoiseObject.SetPosition(balloon_position);
+			return NoiseObject;
+		}
+		return NoiseObject;
+	}
+	AbstractWave BuildSoundWaveObject(SoundObjectBuilder SoundObjectBuildConfig, SoundObject NoiseObject, vector balloon_position, float start_sound, float ChickenVolume, bool looping)
+	{
+		AbstractWave ChickenWave;
+		if(NoiseObject)	
+		{
+			ChickenWave = GetGame().GetSoundScene().Play3D(NoiseObject, SoundObjectBuildConfig); 
+			if(ChickenWave)
 			{
-				m_heat_decrease_press = 0;
+				ChickenWave.SetPosition(balloon_position);			
+				ChickenWave.SetVolume(ChickenVolume);
+				ChickenWave.Loop(looping);	
+				ChickenWave.SetStartOffset(start_sound);
+				return ChickenWave;
 			}
 		}
-		else
-		{
-			m_heat_decrease_press = 0;
-		}
+		return ChickenWave;
 	}
 
-	void ProcessRotaxUp(float calc_input)
+// ------------------------------
+
+    void UpdateFlightTelemetry()		
 	{
-		if (calc_input > 0.5)
-		{
-			if (m_rotax_increase_press == 0)
-			{
-                if (m_IsFlying)
-                {
-                    m_IsForwardFlight = true;
-                }
-
-				m_throttle_level = Math.Clamp((m_throttle_level + 1), 0, 20);
-				SetSynchDirty();
-			}
-			m_rotax_increase_press += 1;
-
-			if (m_rotax_increase_press > 5)
-			{
-				m_rotax_increase_press = 0;
-                m_IsForwardFlight = false;
-			}
-		}
-		else
-		{
-			m_rotax_increase_press = 0;
-                m_IsForwardFlight = false;
-		}
+		vector BalPosition = GetPosition();
+		m_BalloonAltitude = BalPosition[1];
+		m_BalloonAGLAltitude = GetBalloonAGL();
+		m_BalloonAirSpeedKPH = (GetBalloonAirspeed() * 60 * 60) / 1000;
+		m_BalloonAirSpeed = m_BalloonAirSpeedKPH * 0.539957;
+		vector BalOrient = GetOrientation();
+		m_BalloonOrientation = Math.NormalizeAngle(BalOrient[0]);
+		SetSynchDirty();
 	}
 
-	void ProcessRotaxDown(float calc_input)
+	float GetBalloonAGL()		
 	{
-		if (calc_input > 0.5)
-		{
-			if (m_rotax_decrease_press == 0)
-			{
-                if (m_IsFlying)
-                {
-                    m_IsAirbrake = true;
-                }
-
-				m_throttle_level = Math.Clamp((m_throttle_level - 1), 0, 20);
-				SetSynchDirty();
-			}
-			m_rotax_decrease_press += 1;
-
-			if (m_rotax_decrease_press > 5)
-			{
-				m_rotax_decrease_press = 0;
-                m_IsAirbrake = false;
-			}
-		}
-		else
-		{
-			m_rotax_decrease_press = 0;
-                m_IsAirbrake = false;
-		}
+		return vector.Distance(GetPosition(), FindSolidSurface(GetPosition()));	
 	}
 
-	void ProcessRotaxLeft(float calc_input)
+	float GetBalloonAirspeed()		
 	{
-		if (calc_input > 0.5)
-		{
-			if (m_rotax_left_press == 0)
-			{
-                if (m_IsRotaxAttached && m_IsFlying)
-                {
-                    m_IsSteeringLeft = true;
-                }
-				SetSynchDirty();
-			}
-			m_rotax_left_press += 1;
+		vector calc_velocity = GetVelocity(this);
+		return(Math.Sqrt(Math.Pow(calc_velocity[0],2) + Math.Pow(calc_velocity[1],2) + Math.Pow(calc_velocity[2],2)));		
+	}
 
-			if (m_rotax_left_press > 5)
-			{
-				m_rotax_left_press = 0;
-                m_IsSteeringLeft = false;
-			}
-		}
-		else
-		{
-			m_rotax_left_press = 0;
+// ------------------------------
+
+    void HandlePlayerInput()
+    {
+        // Igniter press
+        if (m_igniter_press > 0)
+        {
+            m_IsIgniting = !m_IsIgniting;
+            m_igniter_press = 0;
+        }
+
+        // Emergency shutoff press
+        if (m_emergency_shutoff_press > 0)
+        {
+            m_IsGasOn = false;
+            m_IsBurnerOn = false;
+            m_IsCompressorOn = false;
+            m_IsRotaxOn = false;
+            m_emergency_shutoff_press = 0;
+        }
+
+        // Gas switch toggle press
+        if (m_gas_switch_toggle_press > 0)
+        {
+            m_IsGasOn = !m_IsGasOn;
+            m_gas_switch_toggle_press = 0;
+        }
+
+        // Compressor toggle press
+        if (m_compressor_toggle_press > 0)
+        {
+            m_IsCompressorOn = !m_IsCompressorOn;
+            m_compressor_toggle_press = 0;
+        }
+
+        // Heat increase/decrease press
+        if (m_heat_increase_press > 0)
+        {
+            m_GasLevel = Math.Clamp(m_GasLevel + GAS_CONSUMPTION_RATE, 0, GAS_MAX_CAPACITY);
+            m_heat_increase_press = 0;
+        }
+        if (m_heat_decrease_press > 0)
+        {
+            m_GasLevel = Math.Clamp(m_GasLevel - GAS_CONSUMPTION_RATE, 0, GAS_MAX_CAPACITY);
+            m_heat_decrease_press = 0;
+        }
+
+        // Rotax increase/decrease press
+        if (m_rotax_increase_press > 0)
+        {
+            m_ThrottleLevel = Math.Clamp(m_ThrottleLevel + ROTAX_FUEL_RATE, 0, ROTAX_FUEL_CAPACITY);
+            m_rotax_increase_press = 0;
+        }
+        if (m_rotax_decrease_press > 0)
+        {
+            m_ThrottleLevel = Math.Clamp(m_ThrottleLevel - ROTAX_FUEL_RATE, 0, ROTAX_FUEL_CAPACITY);
+            m_rotax_decrease_press = 0;
+        }
+
+        // Rotax left/right press
+        if (m_rotax_left_press > 0)
+        {
+            m_IsSteeringLeft = true;
+            m_rotax_left_press = 0;
+        }
+        else
+        {
             m_IsSteeringLeft = false;
-		}
-	}
-
-	void ProcessRotaxRight(float calc_input)
-	{
-		if (calc_input > 0.5)
-		{
-			if (m_rotax_right_press == 0)
-			{
-                if (m_IsRotaxAttached && m_IsFlying)
-                {
-                    m_IsSteeringRight = true;
-                }
-				SetSynchDirty();
-			}
-			m_rotax_right_press += 1;
-
-			if (m_rotax_right_press > 5)
-			{
-				m_rotax_right_press = 0;
-                m_IsSteeringRight = false;
-			}
-		}
-		else
-		{
-			m_rotax_right_press = 0;
+        }
+        if (m_rotax_right_press > 0)
+        {
+            m_IsSteeringRight = true;
+            m_rotax_right_press = 0;
+        }
+        else
+        {
             m_IsSteeringRight = false;
-		}
-	}
+        }
+    }
 
-	void ProcessToggleCompressor(float calc_input)
+// ------------------------------
+
+    static void DisablePhysics(Object ent)
+    {
+        SetVelocity( ent, Vector( 0, 0, 0 ) );
+        dBodySetAngularVelocity( ent, Vector( 0, 0, 0 ) );
+        dBodyActive( ent, ActiveState.INACTIVE );
+        dBodyDynamic( ent, false );
+    }
+
+    static void EnablePhysics(Object ent)
+    {
+        SetVelocity( ent, Vector( 0, 0, 0 ) );
+        dBodySetAngularVelocity( ent, Vector( 0, 0, 0 ) );
+        dBodyActive( ent, ActiveState.ALWAYS_ACTIVE );
+        dBodyDynamic( ent, true );
+    }
+
+// ------------------------------
+
+	override void OnUpdate( float dt ) 			
 	{
-		if (calc_input > 0.5)
-		{
-			if (m_compressor_toggle_press == 0)
-			{
-                if (m_IsLanded && !m_IsFlying)
-                {
-                    m_IsLanded = false;
-                    m_IsFlying = true;
-                    //GetGame().RPCSingleParam(this, ERPCs.RPC_SOUND_BALLOON_AIR_GENERATOR, null, true);
-                    //GetGame().RPCSingleParam(this, ERPCs.RPC_SOUND_BALLOON_COMPRESSOR, null, true);
-                   // GetGame().RPCSingleParam(this, ERPCs.RPC_ANIMATION_BALLOON_LOW, null, true);
-                }
-			}
-			m_compressor_toggle_press += 1;
-			if (m_compressor_toggle_press > 5)
-			{
-				m_compressor_toggle_press = 0;
-            	//GetGame().RPCSingleParam(this, ERPCs.RPC_SOUND_BALLOON_AIR_GENERATOR, null, false);
-			}
-		}
-		else
-		{
-			m_compressor_toggle_press = 0;
-            //GetGame().RPCSingleParam(this, ERPCs.RPC_SOUND_BALLOON_AIR_GENERATOR, null, false);
-		}
-		SetSynchDirty();
-	}
+		super.OnUpdate(dt);
 
-	void ProcessToggleFuel(float calc_input)
+        if (GetGame().IsServer())
+        {
+            m_WindDirectionWorld = GetGame().GetWeather().GetWindDirection();
+            m_WindSpeedWorld = GetGame().GetWeather().GetWindSpeed();
+        }
+
+    
+    }
+
+	override protected void EOnSimulate( IEntity owner, float dt)
 	{
-		if (calc_input > 0.5)
-		{
-			if (m_gas_switch_toggle_press == 0)
-			{
-                if (m_IsGasOn && m_GasLevel > MINIMUM_GAS_LEVEL)
-                {
-                    m_IsBurnerOn = !m_IsBurnerOn;
-                    if (m_IsBurnerOn)
-                    {
-                     //   GetGame().RPCSingleParam(this, ERPCs.RPC_PARTICLE_BALLOON_BURNER_FIRE, null, true);
-                    }
-                }
-			}
-			m_gas_switch_toggle_press += 1;
-			if (m_gas_switch_toggle_press > 5)
-			{
-				m_gas_switch_toggle_press = 0;
-            	//GetGame().RPCSingleParam(this, ERPCs.RPC_SOUND_BALLOON_AIR_GENERATOR, null, false);
-			}
+        MapFallFix();
+        ProcessPlayerInput();
+
+		if ( GetGame().IsServer())
+		{	
+			m_gas_level = this.GetFluidFraction( CarFluid.FUEL );
+			m_fuel_level = this.GetFluidFraction( CarFluid.USER1 );			
 		}
-		else
-		{
-			m_gas_switch_toggle_press = 0;
-           // GetGame().RPCSingleParam(this, ERPCs.RPC_SOUND_BALLOON_AIR_GENERATOR, null, false);
-		}
-		SetSynchDirty();
-	}
 
-	void ProcessPressIgniter(float calc_input)
-	{
-		if (calc_input > 0.5)
-		{
-			if (m_IsGasOn && m_GasLevel > MINIMUM_GAS_LEVEL)
-			{
-				if(!m_IsBurnerOn)
-				{
-	                if (m_IsRotaxAttached && !m_IsRotaxOn)
-	                {
-	                    m_IsRotaxOn = true;
-	                 //   GetGame().RPCSingleParam(this, ERPCs.RPC_SOUND_BALLOON_ROTAX_START, null, true);
-	                }
-				}
-				
-				m_IsBurnerOn = !m_IsBurnerOn;
-				
-				if (m_IsBurnerOn)
-				{
-					//GetGame().RPCSingleParam(this, ERPCs.RPC_SOUND_BALLOON_BURNER_IGNITE, null, true);
-					//GetGame().RPCSingleParam(this, ERPCs.RPC_PARTICLE_BALLOON_BURNER_FIRE, null, true);
-				}
-			}
-			m_igniter_press += 1;
-			if (m_igniter_press > 5)
-			{
-				m_igniter_press = 0;
-            	//GetGame().RPCSingleParam(this, ERPCs.RPC_SOUND_BALLOON_BURNER_IGNITE, null, false);
-            	//GetGame().RPCSingleParam(this, ERPCs.RPC_PARTICLE_BALLOON_BURNER_FIRE, null, false);
-			}
-		}
-		else
-		{
-			m_igniter_press = 0;
-           // GetGame().RPCSingleParam(this, ERPCs.RPC_SOUND_BALLOON_BURNER_IGNITE, null, false);
-            //GetGame().RPCSingleParam(this, ERPCs.RPC_PARTICLE_BALLOON_BURNER_FIRE, null, false);
-		}
-		SetSynchDirty();
-	}
-
- // ---------------------- MATH ---------------------------
-
-    void SetWindDirection(float windDirection)
-    {
-        m_WindDirection = windDirection;
     }
-
-    void SetWindSpeed(float windSpeed)
-    {
-        m_WindSpeed = windSpeed;
-    }
-
-    // Implement a function that calculates the altitude gain of the balloon based on the gas level variable
-    float CalculateAltitudeGain(float gasLevel, float weight, float windSpeed, float windDirection)
-    {
-        float altitudeGain = 0.0;
-
-        if (gasLevel > MINIMUM_GAS_LEVEL)
-        {
-            float gasPower = gasLevel / MAXIMUM_GAS_LEVEL;
-            float weightPower = weight / MAXIMUM_WEIGHT;
-            float windPower = windSpeed / MAXIMUM_WIND_SPEED;
-            float windDirectionPower = (windDirection / WIND_DIRECTION_MAX) * 2 * Math.PI;
-
-            float upwardForce = gasPower * weightPower;
-            float horizontalForce = windPower * Math.Cos(windDirectionPower);
-            float verticalForce = windPower * Math.Sin(windDirectionPower);
-
-            altitudeGain = upwardForce - verticalForce;
-        }
-
-        return altitudeGain;
-    }
-
-    // Consider wind conditions as a crucial factor in determining the flight path of the balloon
-    void CalculateWindEffect(float windSpeed, float windDirection)
-    {
-        if (m_IsFlying)
-        {
-            float windPower = windSpeed / MAXIMUM_WIND_SPEED;
-            float windDirectionPower = (windDirection / WIND_DIRECTION_MAX) * 2 * Math.PI;
-
-            float horizontalForce = windPower * Math.Cos(windDirectionPower);
-            float verticalForce = windPower * Math.Sin(windDirectionPower);
-
-            m_Altitude += verticalForce;
-            m_WindDirection += horizontalForce;
-        }
-    }
-
-// ------------------- TASK FUNCTIONS --------------------
-
-
-   private void HandleGasLevel()
-    {
-        // Handle gas level
-
-        if (m_IsGasOn && m_GasLevel < MAXIMUM_GAS_LEVEL)
-        {
-            m_GasLevel += 0.01;
-        }
-        else if (!m_IsGasOn && m_GasLevel > MINIMUM_GAS_LEVEL)
-        {
-            m_GasLevel -= 0.01;
-        }
-    }
-
-    private void HandleAltitude()
-    {
-        // Handle altitude
-        
-        if (m_GasLevel > MINIMUM_GAS_LEVEL && m_Altitude < MAXIMUM_ALTITUDE)
-        {
-            m_Altitude += m_GasLevel * 10.0;
-        }
-        else if (m_Altitude > MINIMUM_ALTITUDE)
-        {
-            m_Altitude -= 1.0;
-        }
-    }
-
-    void InflateBalloon()
-    {
-        if (m_Altitude < MAXIMUM_ALTITUDE)
-        {
-            float altitudeGain = CalculateAltitudeGain(m_GasLevel, m_Weight, m_WindSpeed, m_WindDirection);
-            m_Altitude += altitudeGain;
-
-            if (m_Altitude > MAXIMUM_ALTITUDE)
-            {
-                m_Altitude = MAXIMUM_ALTITUDE;
-            }
-        }
-
-        if (m_Altitude >= MAXIMUM_ALTITUDE && m_IsFlying)
-        {
-         //   PlaySound(ERPCs.RPC_SOUND_BALLOON_INFLATE);
-         //   GetGame().RPCSingleParam(this, ERPCs.RPC_ANIMATION_BALLOON_LOW_HIDE, null, true);
-        //    GetGame().RPCSingleParam(this, ERPCs.RPC_ANIMATION_BALLOON_HALF_SHOW, null, true);
-        }
-    }
-
-
-	static void DisablePhysics(Object ent)
-	{
-		SetVelocity( ent, Vector( 0, 0, 0 ) );
-		dBodySetAngularVelocity( ent, Vector( 0, 0, 0 ) );
-		dBodyActive( ent, ActiveState.INACTIVE );
-		dBodyDynamic( ent, false );
-	}
-
-	static void EnablePhysics(Object ent)
-	{
-		SetVelocity( ent, Vector( 0, 0, 0 ) );
-		dBodySetAngularVelocity( ent, Vector( 0, 0, 0 ) );
-		dBodyActive( ent, ActiveState.ALWAYS_ACTIVE );
-		dBodyDynamic( ent, true );
-	}
-
-// ---------------- PRE - UPDATE -----------------------
-
-    override void OnVariablesSynchronized()
-    {
-        super.OnVariablesSynchronized();
-
-        string attachedItem;
-/*
-        if (GetGame().IsServer() && !GetGame().IsMultiplayer()) 
-        {
-            if (m_Vehicle.GetInventory().FindAttachment(ATTACHMENT_NAME) != NULL) 
-            {
-                attachedItem = ATTACHMENT_NAME;
-            }
-        }
-	*/
-
-        if (m_IsCompressorOn)
-        {
-            if (!m_CompressorSound.IsSoundPlaying())
-            {
-                m_CompressorSound.SetSoundAutodestroy(false);
-                m_CompressorSound.SetSoundLoop(true);
-                m_CompressorSound.Play();
-            }
-        }
-        else
-        {
-            if (m_CompressorSound.IsSoundPlaying())
-            {
-                m_CompressorSound.Stop();
-            }
-        }
-
-        if (m_IsGasOn)
-        {
-            if (!m_GasFlowSound.IsSoundPlaying())
-            {
-                m_GasFlowSound.SetSoundAutodestroy(false);
-                m_GasFlowSound.SetSoundLoop(true);
-                m_GasFlowSound.Play();
-            }
-        }
-        else
-        {
-            if (m_GasFlowSound.IsSoundPlaying())
-            {
-                m_GasFlowSound.Stop();
-            }
-        }
-
-        if (m_IsBurnerOn)
-        {
-            if (!m_IgniterSound.IsSoundPlaying())
-            {
-                m_IgniterSound.SetSoundAutodestroy(false);
-                m_IgniterSound.SetSoundLoop(false);
-                m_IgniterSound.Play();
-            }
-
-            if (m_FireParticles)
-            {
-                m_FireParticles.Play();
-            }
-        }
-        else
-        {
-            if (m_IgniterSound.IsSoundPlaying())
-            {
-                m_IgniterSound.Stop();
-            }
-
-            if (m_FireParticles)
-            {
-                m_FireParticles.Stop();
-            }
-        }
-
-        if (m_IsLanding)
-        {
-            if (GetAnimationPhase("source_balloonfull") > 0)
-            {
-                SetAnimationPhase("source_balloonfull", GetAnimationPhase("source_balloonfull") - 0.01);
-            }
-
-            if (GetAnimationPhase("source_hideballoonfull") < 1)
-            {
-                SetAnimationPhase("source_hideballoonfull", GetAnimationPhase("source_hideballoonfull") + 0.01);
-            }
-
-            if (GetAnimationPhase("source_balloonhalf") > 0)
-            {
-                SetAnimationPhase("source_balloonhalf", GetAnimationPhase("source_balloonhalf") - 0.01);
-            }
-
-            if (GetAnimationPhase("source_hideballoonhalf") < 1)
-            {
-                SetAnimationPhase("source_hideballoonhalf", GetAnimationPhase("source_hideballoonhalf") + 0.01);
-            }
-
-            if (GetAnimationPhase("source_balloonempty") > 0)
-            {
-                SetAnimationPhase("source_balloonempty", GetAnimationPhase("source_balloonempty") - 0.01);
-            }
-
-            if (GetAnimationPhase("source_hideballoonempty") < 1)
-            {
-                SetAnimationPhase("source_hideballoonempty", GetAnimationPhase("source_hideballoonempty") + 0.01);
-            }
-
-            if (m_CompressorSound.IsSoundPlaying())
-            {
-                m_CompressorSound.Stop();
-            }
-
-            if (m_GasFlowSound.IsSoundPlaying())
-            {
-                m_GasFlowSound.Stop();
-            }
-
-            if (m_IgniterSound.IsSoundPlaying())
-            {
-                m_IgniterSound.Stop();
-            }
-
-            if (m_LowGasSound.IsSoundPlaying())
-            {
-                m_LowGasSound.Stop();
-            }
-
-            if (m_GasBlowOffSound.IsSoundPlaying())
-            {
-                m_GasBlowOffSound.Stop();
-            }
-        }
-    }
-
-    void UpdateRotaxInput(float deltaTime)
-    {
-        if (m_IsRotaxEngineAttached)
-        {
-            if (GetGame().IsServer())
-            {
-                if (m_RotaxEngine)
-                {
-                    float rotaxEngineSpeed = 0;
-
-                    if (GetGame().IsMultiplayer() && GetGame().IsServer())
-                    {
-                        rotaxEngineSpeed = GetRPCFloat();
-                    }
-                    else
-                    {
-                        if (GetGame().GetInput().LocalValue("UAExpansionUAHotAirBalloonEngineForward"))
-                        {
-                            rotaxEngineSpeed += 0.1;
-                        }
-
-                        if (GetGame().GetInput().LocalValue("UAExpansionUAHotAirBalloonEngineBackward"))
-                        {
-                            rotaxEngineSpeed -= 0.1;
-                        }
-
-                        if (rotaxEngineSpeed > 1)
-                        {
-                            rotaxEngineSpeed = 1;
-                        }
-
-                        if (rotaxEngineSpeed < -1)
-                        {
-                            rotaxEngineSpeed = -1;
-                        }
-
-                        SetRPCFloat(rotaxEngineSpeed);
-                    }
-
-                    m_RotaxEngine.SetAnimationPhase("rotax_engine_propeller", rotaxEngineSpeed);
-                }
-            }
-        }
-    }
- 
- // ------------------ ON UPDATE -----------------------
-
-   override void OnUpdate(float deltaTime)
-    {
-        super.OnUpdate(deltaTime);
-
-        HandleGasLevel(); 
-        HandleAltitude(); 
-        HandleWind(); 
-        HandleAnimations(); 
-        HandleSounds();
-
-        UpdateRotaxInput(deltaTime)
-
-        m_IsLanded = IsLanded();
-        m_IsPlayerInside = IsPlayerInside();
-        m_IsDisconnecting = IsDisconnecting();
-
-        if (m_IsDisconnecting || !m_IsPlayerInside || m_IsLanded)
-        {
-            StopSounds();
-            ResetVariables();
-            return;
-        }
-    }
-
- // ---------------------- ON SIMULATION -----------------------
- 
-    override void EOnSimulate(IEntity owner, float dt)
-    {
-		MapFallFix();
-
-		ProcessPlayerInput();
-    }
-
- // ------------------ ON - POSTSIMULATION -----------------------
 
     override void EOnPostSimulate(IEntity other, float timeSlice)
     {
@@ -1205,74 +673,276 @@ class Balloon_Base extends CarScript
         if ((GetGame().IsClient() || !GetGame().IsMultiplayer()))
         {
 
-		}
+        }
+
+        UpdateFlight(dt);
+        UpdateSounds(dt);
     }
 
-// ------------------------ MAP - FIX ------------------------------
+    void UpdateFlight(float dt)
+    {
+        m_WindDirectionWorld = GetGame().GetWindDirection();
+        m_WindSpeedWorld = GetGame().GetWindSpeed();
+        m_BallonWorldPosition = GetPosition();
+        m_BalloonOrientation = GetOrientation();
+
+        if (m_IsGasOn && m_GasLevel > 0)
+        {
+            m_GasLevel -= GAS_CONSUMPTION_RATE * dt;
+            m_IsAscending = true;
+        }
+        else
+        {
+            m_IsAscending = false;
+        }
+
+        if (m_IsAscending)
+        {
+            vector upForce = Vector(0, FLIGHT_ASCENT_RATE * m_GasLevel, 0);
+            dBodyApplyForce(this, upForce);
+        }
+        else
+        {
+            vector downForce = Vector(0, -FLIGHT_DESCENT_RATE * m_BalloonMass, 0);
+            dBodyApplyForce(this, downForce);
+        }
+
+        if (m_IsRotaxOn && m_ThrottleLevel > 0)
+        {
+            m_ThrottleLevel -= ROTAX_FUEL_RATE * dt;
+
+            if (m_IsForwardFlight)
+            {
+                vector forwardForce = Vector(ROTAX_FORWARD_THRUST_RATE * m_ThrottleLevel, 0, 0);
+                dBodyApplyForce(this, forwardForce);
+            }
+
+            if (m_IsSteeringLeft)
+            {
+                vector leftForce = Vector(0, 0, -ROTAX_STEERING_RATE * m_ThrottleLevel);
+                dBodyApplyForce(this, leftForce);
+            }
+
+            if (m_IsSteeringRight)
+            {
+                vector rightForce = Vector(0, 0, ROTAX_STEERING_RATE * m_ThrottleLevel);
+                dBodyApplyForce(this, rightForce);
+            }
+        }
+
+        vector windForce = m_WindDirectionWorld * m_WindSpeedWorld * WIND_INFLUENCE;
+        dBodyApplyForce(this, windForce);
+
+        vector airResistance = -GetVelocity(this) * AERODYNAMIC_DRAG;
+        dBodyApplyForce(this, airResistance);
+
+        UpdateTelemetry();
+    }
+
+
+// -----------------------------
+
+   void UpdateBalloonState(float dt)
+    {
+        switch (m_BalloonState)
+        {
+            case 0: // Balloon NOT operational
+            {
+                if (m_IsBalloon && IsInflated())
+                {
+                    m_BalloonState = 2;
+                }
+
+                break;
+            }
+
+            case 1: // Inflate sequence
+            {
+                if (IsInflationComplete())
+                {
+                    m_BalloonState = 2;
+                }
+
+                break;
+            }
+
+            case 2: // Balloon IS operational
+            {
+                if (!m_IsBalloon || !IsInflated())
+                {
+                    m_BalloonState = 3;
+                }
+
+                if (!m_IsGasOn)
+                {
+                    TurnGasOn();
+                }
+
+                if (!m_IsBurnerOn)
+                {
+                    TurnBurnerOn();
+                }
+
+                if (!m_IsRotaxAttached)
+                {
+                    AttachRotaxAddon();
+                }
+
+                break;
+            }
+
+            case 3: // Deflate sequence
+            {
+                if (IsDeflationComplete())
+                {
+                    m_BalloonState = 0;
+                }
+
+                break;
+            }
+        }
+    }
+
+    void UpdateSoundEffects()
+    {
+        if (m_igniter_press == 1)
+        {
+            PlayIgniterSound();
+        }
+
+        if (m_emergency_shutoff_press == 1)
+        {
+            PlayGasBlowOffSound();
+        }
+
+        if (m_gas_switch_toggle_press == 1)
+        {
+            PlayGasFlowSound();
+        }
+
+        if (m_compressor_toggle_press == 1)
+        {
+            PlayCompressorSound();
+        }
+
+        if (m_heat_increase_press == 1 || m_heat_decrease_press == 1)
+        {
+            PlayInFlightSound();
+        }
+    }
+
+    // -----------------------------------
+
+    void PlayIgniterSound()
+    {
+        SoundParams params = new SoundParams("balloon_igniter_loop");
+        params.SetPosition(this.GetPosition());
+        params.SetSoundWaveKind(WaveKind.LOOP);
+        params.SetVolume(0.5);
+        params.SetLoop(true);
+
+        SoundObject sound = SEffectManager.PlaySound(params);
+        sound.SetPosition(GetPosition());
+    }
+
+    // -----------------------------------
+
+    void PlayGasBlowOffSound()
+    {
+        SoundParams params = new SoundParams("balloon_gas_blowoff");
+        params.SetPosition(this.GetPosition());
+
+        SoundObject sound = SEffectManager.PlaySound(params);
+        sound.SetPosition(GetPosition());
+    }
+
+    // -----------------------------------
+
+    void PlayGasFlowSound()
+    {
+        SoundParams params = new SoundParams("balloon_gas_flow_loop");
+        params.SetPosition(this.GetPosition());
+        params.SetSoundWaveKind(WaveKind.LOOP);
+        params.SetVolume(0.5);
+        params.SetLoop(true);
+
+        SoundObject sound = SEffectManager.PlaySound(params);
+        sound.SetPosition(GetPosition());
+    }
+
+    // -----------------------------------
+
+    void PlayCompressorSound()
+    {
+        SoundParams params = new SoundParams("balloon_compressor_loop");
+        params.SetPosition(this.GetPosition());
+        params.SetSoundWaveKind(WaveKind.LOOP);
+        params.SetVolume(0.5);
+        params.SetLoop(true);
+
+        SoundObject sound = SEffectManager.PlaySound(params);
+        sound.SetPosition(GetPosition());
+    }
+
+    // -----------------------------------
+
+    void PlayInFlightSound()
+    {
+        SoundParams params = new SoundParams("balloon_inflight_loop");
+        params.SetPosition(this.GetPosition());
+        params.SetSoundWaveKind(WaveKind.LOOP);
+        params.SetVolume(0.5);
+        params.SetLoop(true);
+
+        SoundObject sound = SEffectManager.PlaySound(params);
+        sound.SetPosition(GetPosition());
+    }
+
+    void UpdateSounds(float dt)
+    {
+        if (m_IsCompressorOn && m_CompressorSoundPlay == 0)
+        {
+            m_CompressorSoundPlay = 1;
+            m_CompressorSound = PlaySound(COMPRESSOR_SOUNDSET, 1);
+        }
+        else if (!m_IsCompressorOn && m_CompressorSoundPlay == 1)
+        {
+            m_CompressorSoundPlay = 0;
+            m_CompressorSound.Stop();
+        }
+
+    }
+
+    void updatePosition(string memoryPointName)
+    {
+        if (MemoryPointExists(memoryPointName))
+        {
+            vector point = GetMemoryPointPos(memoryPointName);
+            vector world = ModelToWorld(point);
+            vector ground = world;
+
+            ground[1] = GetGame().SurfaceY(ground[0], ground[2]);
+
+            float undermap = vector.Distance(world, ground);
+
+            if (world[1] < (ground[1] - 0.20))
+            {
+                vector newPosition = GetPosition();
+                newPosition[1] = newPosition[1] + undermap;
+                SetPosition(newPosition);
+            }
+        }
+    }
 
     void MapFallFix()
     {
         if (GetGame().IsServer())
         {
-            vector calc_breakthrough = GetPosition();
-            vector calc_ground = calc_breakthrough;
-            calc_ground[1] = GetGame().SurfaceY(calc_ground[0], calc_ground[2]);
-            float calc_undermap = vector.Distance(calc_breakthrough, calc_ground);
-            if (calc_breakthrough[1] < (calc_ground[1] - 1.75))
-            {
-                vector calc_PtcPosition = GetPosition();
-                calc_PtcPosition[1] = calc_PtcPosition[1] + calc_undermap;
-                SetPosition(calc_PtcPosition);
-            }
-
-            if (MemoryPointExists("map_break_front"))
-            {
-                vector nose_point = GetMemoryPointPos("map_break_front");
-                vector nose_world = ModelToWorld(nose_point);
-                vector nose_ground = nose_world;
-                nose_ground[1] = GetGame().SurfaceY(nose_ground[0], nose_ground[2]);
-                calc_undermap = vector.Distance(nose_world, nose_ground);
-                if (nose_world[1] < (nose_ground[1] - 0.20))
-                {
-                    calc_PtcPosition = GetPosition();
-                    calc_PtcPosition[1] = calc_PtcPosition[1] + calc_undermap;
-                    SetPosition(calc_PtcPosition);
-                }
-            }
-
-            if (MemoryPointExists("map_break_left"))
-            {
-                vector left_tail_point = GetMemoryPointPos("map_break_left");
-                vector left_tail_world = ModelToWorld(left_tail_point);
-                vector left_tail_ground = left_tail_world;
-                left_tail_ground[1] = GetGame().SurfaceY(left_tail_ground[0], left_tail_ground[2]);
-                calc_undermap = vector.Distance(left_tail_world, left_tail_ground);
-                if (left_tail_world[1] < (left_tail_ground[1] - 0.20))
-                {
-                    calc_PtcPosition = GetPosition();
-                    calc_PtcPosition[1] = calc_PtcPosition[1] + calc_undermap;
-                    SetPosition(calc_PtcPosition);
-                }
-            }
-
-            if (MemoryPointExists("map_break_right"))
-            {
-                vector right_tail_point = GetMemoryPointPos("map_break_right");
-                vector right_tail_world = ModelToWorld(right_tail_point);
-                vector right_tail_ground = right_tail_world;
-                right_tail_ground[1] = GetGame().SurfaceY(right_tail_ground[0], right_tail_ground[2]);
-                calc_undermap = vector.Distance(right_tail_world, right_tail_ground);
-                if (right_tail_world[1] < (right_tail_ground[1] - 0.20))
-                {
-                    calc_PtcPosition = GetPosition();
-                    calc_PtcPosition[1] = calc_PtcPosition[1] + calc_undermap;
-                    SetPosition(calc_PtcPosition);
-                }
-            }
+            updatePosition("map_break_front");
+            updatePosition("map_break_left");
+            updatePosition("map_break_right");
         }
     }
-
- // ------------------ ENGINE STARTED -----------------------
 
     override void OnEngineStart()
     {
@@ -1280,28 +950,9 @@ class Balloon_Base extends CarScript
 
         if(IsBalloon())
         {
-            m_BlasterSoundFX = true;
-
-			if ((GetGame().IsClient() || !GetGame().IsMultiplayer()))
-			{
-				if (EngineIsOn())
-				{
-					if (!SEffectManager.IsEffectExist(m_blaster1PtcFx) || !SEffectManager.IsEffectExist(m_blaster2PtcFx))
-					{
-						m_blaster1Fx = new EffExhaustSmoke();
-						m_blaster1PtcFx = SEffectManager.PlayOnObject(m_blaster1Fx, this, m_blaster1PtcPos, m_blaster1PtcDir);
-						m_blaster1Fx.SetParticleStateLight();
-						m_blaster2Fx = new EffExhaustSmoke();
-						m_blaster2PtcFx = SEffectManager.PlayOnObject(m_blaster2Fx, this, m_blaster2PtcPos, m_blaster2PtcDir);
-						m_blaster2Fx.SetParticleStateLight();
-					}
-				}
-			}
-		}
         
+        }
     }
-
- // ------------------ ENGINE OFF -----------------------
 
     override void OnEngineStop()
     {
@@ -1309,103 +960,11 @@ class Balloon_Base extends CarScript
 
         if(IsBalloon())
         {
-            m_heat_level = 0;
-            m_BlasterSoundFX = false;
-
-            if ((GetGame().IsClient() || !GetGame().IsMultiplayer()))
-            {
-				if (m_blaster1PtcFx && SEffectManager.IsEffectExist(m_blaster1PtcFx)) 
-					SEffectManager.Stop(m_blaster1PtcFx);
-				if (m_blaster2PtcFx && SEffectManager.IsEffectExist(m_blaster2PtcFx)) 
-					SEffectManager.Stop(m_blaster2PtcFx);
-            }
-			
-            if (m_IsRotaxAttached && m_IsRotaxOn)
-            {
-                m_IsRotaxOn = false;
-                GetGame().RPCSingleParam(this, ERPCs.RPC_SOUND_BALLOON_ROTAX_STOP, null, true);
-            }
+        
         }
     }
 
- // ------------------ ON - TICK -----------------------
-
-    void OnTick()
-    {
-        super.OnTick();
-
-        if (GetGame().IsServer())
-        {
-            m_Weather = GetGame().GetWeather();
-            m_WindDirection = m_Weather.GetWindDirection();
-            m_WindSpeed = m_Weather.GetWindSpeed();
-        }
-    }
-
- // ------------------ ON - CONTACT -----------------------
-
-
-
-
- // ------------------ ON - STARTS -----------------------
-
-    override void EOnInit(IEntity other, int extra)
-    {   
-        m_FireEffect = new Effect;
-        SetNeededParts();
-    }
-
-	override void EEInit()
-	{
-		super.EEInit();
-
-        m_GasLevel = 0.0;
-        m_Altitude = 0.0;
-        m_WindSpeed = 0.0;
-        m_WindDirection = "0 0 0";
-        m_IsPlayerInside = false;
-        m_IsGasOn = false;
-        m_IsBurnerOn = false;
-        m_IsLanded = true;
-        m_IsDisconnecting = false;
-
-        m_CompressorSound = m_SoundBuilder.BuildSoundObject();
-        m_GasFlowSound = m_SoundBuilder.BuildSoundObject();
-        m_IgniterSound = m_SoundBuilder.BuildSoundObject();
-        m_LowGasSound = m_SoundBuilder.BuildSoundObject();
-        m_GasBlowOffSound = m_SoundBuilder.BuildSoundObject();
-        m_InFlightSound = m_SoundBuilder.BuildSoundObject();
-        m_WindSound = m_SoundBuilder.BuildSoundObject();
-        m_BurnerFireSound = m_SoundBuilder.BuildSoundObject();
-
-        GetGame().RPCSingleParam(this, RPC_INIT_HOT_AIR_BALLOON, null, true);
-
-		if ( GetGame().IsServer())
-		{
-            m_dmgContactCoef = 0.001;
-
-            m_HotAirBalloonConfigData = new Hot_Air_Balloon_Config_Data("Balloon_Base", FuelCap, FuelRate, AirspeedMax, AltitudeMax, ClimbMax, AeroDrag, Blaster_Heat_Rate);
-            LoadBalloonConfiguration("Balloon_Base", m_HotAirBalloonConfigData);
-		}
-	}
-
-    void SetNeededParts()
-    {
-        GetInventory().CreateAttachment("smalldummywheel");
-        GetInventory().CreateAttachment("smalldummywheel");
-        GetInventory().CreateAttachment("smalldummywheel");
-        GetInventory().CreateAttachment("smalldummywheel");
-        GetInventory().CreateAttachment("CarBattery");
-        GetInventory().CreateAttachment("SparkPlug");
-        GetInventory().CreateAttachment("CarRadiator");
-        SetSynchDirty();
-    }
-
- // --------------------- LIGHTINGS -----------------------
-
-    // !! TODO: ADD LIGHTING CONFIG AT SOME POINT !!
-
-// ---------------------- SOUNDS -----------------------
+// ------------------------------
 
     override float OnSound(CarSoundCtrl ctrl, float oldValue)
     {
@@ -1421,26 +980,10 @@ class Balloon_Base extends CarScript
             return newValue;
             break;
         }
-
         return oldValue;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- // ---------------- CREW - ATTACHMENTS - CARGO ----------------
+// ------------------------------
 
     override bool CanDisplayCargo()
     {
@@ -1642,7 +1185,7 @@ class Balloon_Base extends CarScript
         return 0;
     }
 
-// -------------------- VITALS ------------------------
+// ------------------------------
 
     override float GetTransportCameraDistance()
     {
@@ -1684,107 +1227,7 @@ class Balloon_Base extends CarScript
         return false;
     }
 
-// ------------------------ DEBUG ---------------------------
-
-    void CheckPlayerDisconnect()
-    {
-        if (!GetGame().IsMultiplayer() || GetGame().IsClient() || GetGame().IsServer())
-        {
-            return;
-        }
-        
-        PlayerBase player = PlayerBase.Cast(GetGame().GetPlayer());
-        
-        if (!player)
-        {
-            BringBalloonToGround();
-        }
-    }
-
-    void BringBalloonToGround()
-    {
-        while (m_Altitude > 0)
-        {
-            m_Altitude -= 1;
-            SetPosition(GetPosition() + Vector(0, -1, 0));
-            Sleep(1000);
-        }
-        StopAllSounds();
-    }
-
-		/*
-    override void OnDisconnect()
-    {
-        super.OnDisconnect();
-        
-        BringBalloonToGround();
-    }
-	*/
-
-    override void OnStoreSave(ParamsWriteContext ctx)
-    {
-        // Save the gas level
-        ctx.Write(m_GasLevel);
-
-        // Save the position
-        vector position = GetPosition();
-        ctx.Write(position[0]);
-        ctx.Write(position[2]);
-
-        // Save any attached objects
-        if (m_AttachedObject)
-        {
-            ctx.Write(true);
-            ctx.Write(m_AttachedObject.GetType());
-            m_AttachedObject.OnStoreSave(ctx);
-        }
-        else
-        {
-            ctx.Write(false);
-        }
-    }
-
-    override bool OnStoreLoad(ParamsReadContext ctx, int version)
-    {
-        // Load the gas level
-        if (!ctx.Read(m_GasLevel))
-            return false;
-
-        // Load the position
-        float x, z;
-
-        if (!ctx.Read(x) || !ctx.Read(z))
-            return false;
-
-        SetPosition(Vector(x, 0, z));
-
-        // Load any attached objects
-        bool hasAttachedObject;
-
-        if (!ctx.Read(hasAttachedObject))
-            return false;
-
-        if (hasAttachedObject)
-        {
-            string objectType;
-            if (!ctx.Read(objectType))
-                return false;
-
-            m_AttachedObject = ItemBase.Cast(GetGame().CreateObject(objectType, "0 0 0"));
-
-            if (!m_AttachedObject)
-                return false;
-
-            if (!m_AttachedObject.OnStoreLoad(ctx, version))
-                return false;
-        }
-        else
-        {
-            m_AttachedObject = NULL;
-        }
-
-        return true;
-    }
+// ------------------------------
 
     override void OnDebugSpawn()
     {
@@ -1806,107 +1249,4 @@ class Balloon_Base extends CarScript
     }
 };
 
-// ------------------- TESTING - DAMAGE PARTS --------------------
-/*
-class HotAirBalloonDAM_Base: Balloon_Base
-{
-    private float fuelLevel;
-    private float gasLevel;
-    private float balloonCondition;
-    private float timer;
-    private float burnerDamage;
-    private float envelopeDamage;
-    private float basketDamage;
-    private float fuelTankDamage;
-    private float gasTankDamage;
-
-    void HotAirBalloonMaintenance()
-    {
-        fuelLevel = 100;
-        gasLevel = 100;
-        balloonCondition = 100;
-        timer = 0;
-        burnerDamage = 0;
-        envelopeDamage = 0;
-        basketDamage = 0;
-        fuelTankDamage = 0;
-        gasTankDamage = 0;
-    }
-
-   void RepairComponent(string component)
-    {
-        if (component == "burner") burnerDamage = 0;
-        else if (component == "envelope") envelopeDamage = 0;
-        else if (component == "basket") basketDamage = 0;
-        else if (component == "fuel tank") fuelTankDamage = 0;
-        else if (component == "gas tank") gasTankDamage = 0;
-    }
-
-    void CheckCondition()
-    {
-        if (burnerDamage > 50 || envelopeDamage > 50 || basketDamage > 50 || fuelTankDamage > 50 || gasTankDamage > 50)
-        {
-            NotificationSystem.Notify("Hot air balloon needs repairs.");
-        }
-
-        else if (timer > 1000)
-        {
-            NotificationSystem.Notify("Hot air balloon needs maintenance.");
-        }
-   }
-
-    void ReplaceComponent(string component)
-    {
-        if (component == "burner")
-        {
-            burnerDamage = 0;
-            Inventory.Consume("burner repair kit", 1);
-        }
-        else if (component == "envelope")
-        {
-            envelopeDamage = 0;
-            Inventory.Consume("envelope repair kit", 1);
-        }
-        else if (component == "basket")
-        {
-            basketDamage = 0;
-            Inventory.Consume("basket repair kit", 1);
-        }
-        else if (component == "fuel tank")
-        {
-            fuelTankDamage = 0;
-            Inventory.Consume("fuel tank repair kit", 1);
-        }
-        else if (component == "gas tank")
-        {
-            gasTankDamage = 0;
-            Inventory.Consume("gas tank repair kit", 1);
-        }
-    }
-
-    override void OnUpdate(float deltaTime)
-    {
-        timer += deltaTime;
-
-        if (timer > 1000)
-        {
-            burnerDamage += 10;
-            envelopeDamage += 5;
-            basketDamage += 2;
-            fuelTankDamage += 1;
-            gasTankDamage += 1;
-            timer = 0;
-        }
-
-        CheckCondition();
-
-        if (GetGame().IsServer())
-        {
-            GetGame().GetCallQueue(CALL_CATEGORY_SYSTEM).CallLater(CheckPlayerDisconnect, 5000, true);
-        }
-    }
-};
-*/
-// ------------------- INHERITED --------------------
-
-class HotAirBalloon: Balloon_Base{};
+class HotAirBalloon: Balloon_Base {};
