@@ -15,6 +15,7 @@ class Balloon_Base extends CarScript
 
     bool m_IsLanded;
     bool m_IsFlying;
+	bool m_IsGrounded;
 
     float m_GasTimer;
     float m_GasLevel;
@@ -235,7 +236,7 @@ class Balloon_Base extends CarScript
         }
     }
 
-    void ~Ballon_Base()
+    void ~Balloon_Base()
     {
         if (m_blaster1PtcFx && SEffectManager.IsEffectExist(m_blaster1PtcFx))
     		SEffectManager.Stop(m_blaster1PtcFx);
@@ -311,14 +312,14 @@ class Balloon_Base extends CarScript
              m_IsIgniting = true;
         }
     }
-
+	
     void Igniter()
     {
         if (!m_IsIgniting)
         {
             m_IsIgniting = true;
-            m_IgniterSoundPlay = 1;
-            m_IgniterSoundWave = PlaySound(m_IgniterSound, m_IgniterSoundBuilder);
+            m_IgniterSoundWave = BuildSoundWaveObject(m_IgniterSoundSoundBuilder, m_IgniterSound, GetPosition(), 0, 1.0, false);
+			m_IgniterSoundPlay = 1;
         }
     }
 
@@ -351,10 +352,8 @@ class Balloon_Base extends CarScript
             return; // can't inflate without gas
         }
         m_IsInflating = true;
+        m_CompressorSoundWave = BuildSoundWaveObject(m_CompressorSoundBuilder, m_CompressorSound, GetPosition(), 0, 1.0, false);
         m_CompressorSoundPlay = 1;
-        m_CompressorSoundWave = GetGame().CreateSoundObject(COMPRESSOR_SOUNDSET, GetPosition());
-        m_CompressorSoundWave.SetPosition(GetPosition());
-        m_CompressorSoundWave.Play();
         GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(OnInflationComplete, BALLOON_INFLATE_TIME);
     }
 
@@ -373,10 +372,8 @@ class Balloon_Base extends CarScript
             return; // can't deflate if not operational
         }
         m_IsDeflating = true;
+        m_CompressorSoundWave = BuildSoundWaveObject(m_CompressorSoundBuilder, m_CompressorSound, GetPosition(), 0, 1.0, false);
         m_CompressorSoundPlay = 1;
-        m_CompressorSoundWave = GetGame().CreateSoundObject(COMPRESSOR_SOUNDSET, GetPosition());
-        m_CompressorSoundWave.SetPosition(GetPosition());
-        m_CompressorSoundWave.Play();
         GetGame().GetCallQueue(CALL_CATEGORY_GAMEPLAY).CallLater(OnDeflationComplete, BALLOON_DEFLATE_TIME);
     }
 
@@ -525,7 +522,7 @@ class Balloon_Base extends CarScript
 		m_BalloonAirSpeedKPH = (GetBalloonAirspeed() * 60 * 60) / 1000;
 		m_BalloonAirSpeed = m_BalloonAirSpeedKPH * 0.539957;
 		vector BalOrient = GetOrientation();
-		m_BalloonOrientation = Math.NormalizeAngle(BalOrient[0]);
+		m_BalloonOrientation = GetOrientation();
 		SetSynchDirty();
 	}
 
@@ -538,6 +535,23 @@ class Balloon_Base extends CarScript
 	{
 		vector calc_velocity = GetVelocity(this);
 		return(Math.Sqrt(Math.Pow(calc_velocity[0],2) + Math.Pow(calc_velocity[1],2) + Math.Pow(calc_velocity[2],2)));		
+	}
+	
+	vector FindSolidSurface(vector position)
+	{
+        vector contact_pos;
+        vector contact_dir;
+		vector endPointPos = position - "0 1000 0";
+        int contactComponent;
+		DayZPhysics.RaycastRV( position, endPointPos,contact_pos,contact_dir,contactComponent,NULL,NULL,NULL,false,false,ObjIntersectGeom,0);
+
+		if (contactComponent==0)
+		{
+			contact_pos = position;
+			contact_pos[1] = GetGame().SurfaceY(contact_pos[0], contact_pos[2]);
+		}
+
+		return contact_pos;
 	}
 
 // ------------------------------
@@ -656,7 +670,7 @@ class Balloon_Base extends CarScript
 	override protected void EOnSimulate( IEntity owner, float dt)
 	{
         MapFallFix();
-        ProcessPlayerInput();
+        HandlePlayerInput();
 
 		if ( GetGame().IsServer())
 		{	
