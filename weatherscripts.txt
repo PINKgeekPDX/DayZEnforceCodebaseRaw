@@ -1,0 +1,147 @@
+Private Member Function possibilities that can be used:
+
+
+proto native float 	GetActual ()
+ 	Returns actual value of phenomenon in range <0, 1>. More...
+ 
+proto native float 	GetForecast ()
+ 	Returns a forecast value the phenomenon is heading towards. More...
+ 
+proto void 	GetForecastChangeLimits (out float fcMin, out float fcMax)
+ 	Reads limits of change when forecast is computed. More...
+ 
+proto void 	GetForecastTimeLimits (out float ftMin, out float ftMax)
+ 	Reads time range in which next forecast can be computed. More...
+ 
+proto void 	GetLimits (out float fnMin, out float fnMax)
+ 	Reads limits of this phenomenon. More...
+ 
+proto native float 	GetNextChange ()
+ 	Reads the time in seconds when the next forecast will be computed. More...
+ 
+proto native EWeatherPhenomenon 	GetType ()
+ 	Returns type of this phenomenon. More...
+ 
+bool 	OnBeforeChange (float change, float time)
+ 	Is called every time the Phenomenon computes new forecast. More...
+ 
+proto native void 	Set (float forecast, float time=0, float minDuration=0)
+ 	Sets the forecast. More...
+ 
+proto native void 	SetForecastChangeLimits (float fcMin, float fcMax)
+ 	Sets limits of change when forecast is computed. More...
+ 
+proto native void 	SetForecastTimeLimits (float ftMin, float ftMax)
+ 	Sets time range in which next forecast can be computed. More...
+ 
+proto native void 	SetLimits (float fnMin, float fnMax)
+ 	Sets limits of this phenomenon. More...
+ 
+proto native void 	SetNextChange (float time)
+ 	Sets the time in seconds when the next forecast will be computed. More...
+
+---------------------------------
+
+
+ enum EWeatherPhenomenon
+ {
+  OVERCAST,
+  FOG,
+  RAIN
+ };
+  
+  
+ //-----------------------------------------------------------------------------
+ class WeatherPhenomenon
+ {
+  proto native EWeatherPhenomenon GetType();
+  
+  proto native float GetActual();
+  
+  proto native float GetForecast();
+  
+  proto native void Set( float forecast, float time = 0, float minDuration = 0 );
+  
+  proto native float GetNextChange();
+  proto native void SetNextChange( float time );
+  
+  proto void GetLimits( out float fnMin, out float fnMax );
+  proto native void SetLimits( float fnMin, float fnMax );
+  
+  proto void GetForecastChangeLimits( out float fcMin, out float fcMax );
+  proto native void SetForecastChangeLimits( float fcMin, float fcMax );
+  
+  proto void GetForecastTimeLimits( out float ftMin, out float ftMax );
+  proto native void SetForecastTimeLimits( float ftMin, float ftMax );
+  
+  bool OnBeforeChange( float change, float time )
+  {
+  // check if mission forces use of custom weather
+  Weather weather = g_Game.GetWeather();
+  
+  if ( weather.GetMissionWeather() )
+  return false;
+  
+  // check for active worlddata with custom onbeforechange behaviour
+  Mission currentMission = g_Game.GetMission();
+  
+  if ( currentMission )
+  {
+  WorldData worldData = currentMission.GetWorldData();
+  if ( worldData )
+  {
+  return worldData.WeatherOnBeforeChange( GetType(), GetActual(), change, time );
+  }
+  }
+  
+  return false;
+  }
+ };
+  
+  
+ typedef WeatherPhenomenon Overcast;
+ typedef WeatherPhenomenon Fog;
+ typedef WeatherPhenomenon Rain;
+
+ //-----------------------------------------------------------------------------
+ class Weather
+ {
+  protected bool m_missionWeather;
+  
+  void Weather()
+  {
+  m_missionWeather = false;
+  }
+  
+  proto native float GetTime();
+  
+  proto native Overcast GetOvercast();
+  
+  proto native Fog GetFog();
+  
+  proto native Rain GetRain();
+  
+  proto native void SetStorm( float density, float threshold, float timeOut );
+  
+  proto native vector GetWind();
+  proto native void SetWind( vector wind );
+  proto native float GetWindSpeed();
+  proto native void SetWindSpeed( float speed );
+  proto native float GetWindMaximumSpeed();
+  proto native void SetWindMaximumSpeed( float maxSpeed );
+  proto void GetWindFunctionParams( out float fnMin, out float fnMax, out float fnSpeed );
+  proto native void SetWindFunctionParams( float fnMin, float fnMax, float fnSpeed );
+  
+  proto native void SetRainThresholds( float tMin, float tMax, float tTime );
+  
+  void MissionWeather( bool use )
+  {
+  m_missionWeather = use;
+  }
+  
+  bool GetMissionWeather()
+  {
+  return m_missionWeather;
+  }
+  
+ };
